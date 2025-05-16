@@ -1,0 +1,263 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Integration with an SMS service</title>
+    <meta name="generator" content="Help+Manual" />
+    <meta name="keywords" content="" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Modules of integration with SMS-sending services are needed to inform customers and employees about any events occurring in the course of the business process. For example,..." />
+    <meta name="picture" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Full documentation for BRIX365 platform. Low-code developer guide. User guide. Admin guide. Developer guide." />
+    <meta property="og:url" content="https://brix365.com/en/help" />
+    <meta property="og:image" content="" />                                                              
+    <link rel="icon" href="favicon.png" type="image/png" />
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./jquery-ui.css" />
+    <link rel="stylesheet" href="default.css" />
+    <link rel="stylesheet" href="./search-yandex.css" />
+    <link rel="stylesheet" href="./article.css" />
+    <link rel="stylesheet" href="./glossary.css" />
+    <link rel="stylesheet" href="./theme.css" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+
+<body>
+    
+    <script>!function(e,t,c,n,r,a,m){e.ym=e.ym||function(){(e.ym.a=e.ym.a||[]).push(arguments)},e.ym.l=1*new Date;for(var s=0;s<document.scripts.length;s++)if(document.scripts[s].src===n)return;a=t.createElement(c),m=t.getElementsByTagName(c)[0],a.async=1,a.src=n,m.parentNode.insertBefore(a,m)}(window,document,"script","https://mc.yandex.ru/metrika/tag.js"),ym(83179930,"init",{clickmap:!0,trackLinks:!0,accurateTrackBounce:!0,webvisor:!0})</script><noscript><div><img alt=""src=https://mc.yandex.ru/watch/83179930 style=position:absolute;left:-9999px></div></noscript> 
+    
+    ﻿<header class="header elma-365">
+  <div class="container">
+    <a class="header__logo" href="https://brix365.com/en/help">
+      <img src="./logo-en.svg">
+    </a>
+ <!-- <div class="hero__search-form" id="search-panel">
+   <form class="search-form" onsubmit="ym(83180416,'reachGoal','poisk')">
+     <label class="search-form__label">
+       <span id="reset-search" class="search__icon"></span>
+       <input class="search-form__input" type="text">
+     </label>
+     <input class="search-form__submit" type="submit" value="Submit">
+   </form>
+  </div>       -->
+  
+     <div class="hero__search-form" id="search-panel"> <form class="search-form"> <label class="search-form__label"> <span id="reset-search" class="search__icon"></span> <input class="search-form__input" type="text"> </label> <input class="search-form__submit" type="submit" value="Submit"> </form> </div> 
+  <div class="hero__search">
+      <a href="#" id="search-icon" class="hero__search-icon">
+        <img src="search-icon-white.svg" alt="search string">
+      </a>
+      <a href="#" id="side-menu-icon" class="hero__side-icon">
+        <img src="side_menu.svg" alt="side menu">
+      </a>
+    </div>  
+  <div class="header__navi">
+        
+        <ul class="header__list"><li><span class="solution-select"><span class="solution-select__selected"></span><svg width="7" height="4" viewBox="0 0 7 4" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L3.5 3.5L6 1" stroke="white" stroke-linecap="round" stroke-linejoin="round"/></svg><ul class="solution-select__list"><li><a class="project-link" href="https://brix365.com/en/help/platform/get-trial.html">Platform</a></li><li><a class="project-link" href="https://brix365.com/en/help/ecm/ecm-functions.html">ECM</a></li><li><a class="project-link" href="https://brix365.com/en/help/crm/crm_overview.html">CRM</a></li><li><a class="project-link" href="https://brix365.com/en/help/service/service-functions.html">Service</a></li><li><a class="project-link" href="https://brix365.com/en/help/projects/projects-functions.html">Projects</a></li><li><a class="project-link" href="https://brix365.com/en/help/business_solutions/-elma365-store.html">Business Solutions</a></li></ul></span></li><li><a href="https://api.brix365.com/en/" target="_blank">API</a></li><li><a href="https://tssdk.brix365.com/" target="_blank">SDK</a></li></ul>
+        
+        
+   </div>
+  </div>
+
+</header>
+
+
+
+    
+    <main class="main container">
+
+        <aside class="sidebar" id="sidebar">
+        <div class="sidebar__header">
+                 <a class="header__logo" href="https://brix365.com/en/help">
+                    <img src="./logo-light-en.svg">
+                 </a>
+                    <span class="sidebar__close elma-365-close" id="close"></span>
+            </div>
+            <div class="sidebar__wrapper" id="side-menu">
+                
+            </div>
+        </aside>
+
+        <article class="article" id="article">
+            <div class="article-inner">           
+                <div class="content">
+                    <header class="article__header">
+                        
+                            <div class="topic__breadcrumbs">
+                                <p><a href="360024498352.html">Modules</a> &gt; Examples of BRIX integration modules / Integration with an SMS service</p>
+                            </div>
+                        
+                        <div class="topic__title"><h1 class="p_Heading1"><span class="f_Heading1">Integration with an SMS service</span></h1>
+</div>
+                    
+</header>
+                    <section class="article__content">
+                        <div class="scroll-top-inner">
+                            <a href="#h1-article" class="scroll-top"></a>
+                        </div>
+                        <!-- Placeholder for topic body. -->
+                        <p class="p_Normal">Modules of integration with SMS-sending services are needed to inform customers and employees about any events occurring in the course of the business process. For example, using the <a href="360013409220.html" class="topiclink">Send SMS</a> activity, you can set up automatic sending of SMS with order status data for customers or with information about setting important tasks for your co-workers.</p>
+<p class="p_Normal">Also, such modules can be used when setting up <a href="security_settings.html#authorization" class="topiclink">two-factor authentication</a> or <a href="security_settings.html#mobile" class="topiclink">logging into the system</a> with phone number and one-time codes.</p>
+<h2 class="p_Heading2"><span class="f_Heading2">Create and set up the integration module </span></h2>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;внимание</span></p>
+<p class="p_Normal">Only users included in the <a href="360006871932.html#administrators" class="topiclink">Administrators</a> group can create and set up modules.</p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;внимание</span></p>
+<p class="p_Normal">To <a href="create-extention.html" class="topiclink">create a module</a> for integration with an SMS sender, follow the steps below: </p>
+<ol style="list-style-type:upper-roman">
+<li value="1" class="p_Normal">Go to <span style="font-weight: bold;">Administration</span> &gt; <span style="font-weight: bold;">Modules</span>. </li><li value="2" class="p_Normal">In the upper right corner, click <span style="font-weight: bold;">+Module</span> and in the window that opens, select the <span style="font-weight: bold;">Create</span> option.</li><li value="3" class="p_Normal">Enter a name and description for the module and click <span style="font-weight: bold;">Create</span>.</li><li value="4" class="p_Normal">In the module settings, go to the <a href="extention-api.html" class="topiclink">API Methods</a> tab and click the <span style="font-weight: bold;">Edit</span> button. The method editor will open.</li><li value="5" class="p_Normal">Go to the <span style="font-weight: bold;">Scripts</span> tab and connect the following interfaces:</li></ol>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">//&nbsp;Data&nbsp;structure&nbsp;for&nbsp;storing&nbsp;the&nbsp;connection&nbsp;check&nbsp;response</span><br />
+<span class="f_CodeExample" style="font-weight: bold;">interface</span><span class="f_CodeExample">&nbsp;SMSTestConnectionResult&nbsp;{</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;success:&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">boolean</span><span class="f_CodeExample">;</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;failReason:&nbsp;string;</span><br />
+<span class="f_CodeExample">}</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample">//&nbsp;Data&nbsp;structure&nbsp;for&nbsp;storing&nbsp;SMS&nbsp;sending&nbsp;a&nbsp;response&nbsp;to&nbsp;a&nbsp;phone&nbsp;number.</span><br />
+<span class="f_CodeExample" style="font-weight: bold;">interface</span><span class="f_CodeExample">&nbsp;SMSSendError&nbsp;{</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;phone:&nbsp;string;</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;statusCode?:&nbsp;number;</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;statusText?:&nbsp;string;</span><br />
+<span class="f_CodeExample">}</span></p>
+<ol style="list-style-type:upper-roman">
+<li value="6" class="p_Normal">Implement the SMS sending function: </li></ol>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">async&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">function</span><span class="f_CodeExample">&nbsp;SMS_SendSMS(phones:&nbsp;string[],&nbsp;msg:&nbsp;string):&nbsp;Promise&lt;SMSSendError[]&gt;&nbsp;{</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;function&nbsp;content</span><br />
+<span class="f_CodeExample">}</span></p>
+<ol style="list-style-type:upper-roman">
+<li value="7" class="p_Normal">Save and publish the script.</li></ol>
+<p class="p_Normal">After that, the enabled module can be used to send SMS notifications during the business process or for authorization in the system. </p>
+<h2 class="p_Heading2"><span class="f_Heading2">Integration example </span></h2>
+<p style="line-height: 1.20; margin: 10px 0 16px 0;"><span style="font-family: 'Times New Roman',Times,Georgia,serif; color: #394149;">Let us take a closer look at module creation using the example of integration with the SMS Aero service. In order to integrate with this service, you need to additionally specify the e-mail to which your SMS Aero account is registered, as well as the API key. These fields should be placed on the module settings page. To do this:</span></p>
+<ol style="list-style-type:upper-roman">
+<li value="1" style="line-height: 1.20; margin-top: 10px; margin-right: 0; margin-bottom: 16px;"><span style="font-family: 'Times New Roman',Times,Georgia,serif; color: #394149;">Go to the </span><span style="font-family: 'Times New Roman',Times,Georgia,serif; font-weight: bold; color: #394149;">Administration &gt; Modules</span><span style="font-family: 'Times New Roman',Times,Georgia,serif; color: #394149;"> page. In the upper right corner, click </span><span style="font-family: 'Times New Roman',Times,Georgia,serif; font-weight: bold; color: #394149;">+Module</span><span style="font-family: 'Times New Roman',Times,Georgia,serif; color: #394149;">, and then click </span><span style="font-family: 'Times New Roman',Times,Georgia,serif; font-weight: bold; color: #394149;">Create</span><span style="font-family: 'Times New Roman',Times,Georgia,serif; color: #394149;">. Specify the name of the module and a brief description.</span></li><li value="2" style="line-height: 1.20; margin-top: 10px; margin-right: 0; margin-bottom: 16px;"><span style="font-family: 'Times New Roman',Times,Georgia,serif; color: #394149;">Open the </span><span style="font-family: 'Times New Roman',Times,Georgia,serif; font-weight: bold; color: #394149;">Settings</span><span style="font-family: 'Times New Roman',Times,Georgia,serif; color: #394149;"> tab and create two string fields that will store the settings for connecting to SMS Aero on the module side:</span></li></ol>
+<ul style="list-style-type:disc">
+<li class="p_Normal"><span style="font-weight: bold;">API key</span>. API key for connecting the module and the SMS Aero service; </li><li class="p_Normal"><span style="font-weight: bold;">email</span>. The email to which the SMS Aero account is registered. Used for authorization in the service. </li></ul>
+<p class="p_Normal" style="margin: 0 0 0 36px;"><img alt="sms_integtration 01" width="1153" height="441" style="margin:0;width:1153px;height:441px;border:none" src="hmfile_hash_f3e2dc3a.png"/></p>
+<ol style="list-style-type:upper-roman" start="3">
+<li value="3" class="p_Normal">Return to the module page. The fields added in the previous step will appear on it: </li></ol>
+<p class="p_Normal" style="margin: 0 0 0 36px;"><img alt="sms_integtration 02" width="897" height="350" style="margin:0;width:897px;height:350px;border:none" src="hmfile_hash_54a2d1c2.png"/></p>
+<ol style="list-style-type:upper-roman" start="4">
+<li value="4" class="p_Normal"><span style="font-size: 15px; color: #394149;">Go to the script editor: </span><span style="font-size: 15px; font-weight: bold; color: #394149;">Module Settings &gt; API Methods &gt; Scripts</span><span style="font-size: 15px; color: #394149;"> and add the following code to the file</span>: </li></ol>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">//&nbsp;Data&nbsp;structure&nbsp;for&nbsp;storing&nbsp;the&nbsp;connection&nbsp;check&nbsp;response.</span><br />
+<span class="f_CodeExample" style="font-weight: bold;">interface</span><span class="f_CodeExample"> SMSTestConnectionResult {</span><br />
+<span style="width:48px;display:inline-block">&nbsp;</span><span class="f_CodeExample">success: </span><span class="f_CodeExample" style="font-weight: bold;">boolean</span><span class="f_CodeExample">;</span><br />
+<span style="width:48px;display:inline-block">&nbsp;</span><span class="f_CodeExample">failReason: string;</span><br />
+<span class="f_CodeExample">}</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample">//&nbsp;Data&nbsp;structure&nbsp;for&nbsp;storing&nbsp;SMS&nbsp;sending&nbsp;a&nbsp;response&nbsp;to&nbsp;a&nbsp;number.</span><br />
+<span class="f_CodeExample" style="font-weight: bold;">interface</span><span class="f_CodeExample"> SMSSendError {</span><br />
+<span style="width:48px;display:inline-block">&nbsp;</span><span class="f_CodeExample">phone: string;</span><br />
+<span style="width:48px;display:inline-block">&nbsp;</span><span class="f_CodeExample">statusCode?: number;</span><br />
+<span style="width:48px;display:inline-block">&nbsp;</span><span class="f_CodeExample">statusText?: string;</span><br />
+<span class="f_CodeExample">}</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample" style="font-weight: bold;">const</span><span class="f_CodeExample"> api_key&nbsp;= Namespace.params.data.api_key</span><br />
+<span class="f_CodeExample" style="font-weight: bold;">const</span><span class="f_CodeExample"> email&nbsp;= Namespace.params.data.email</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample">//&nbsp;Send&nbsp;SMS&nbsp;to&nbsp;phone&nbsp;numbers.</span><br />
+<span class="f_CodeExample">async </span><span class="f_CodeExample" style="font-weight: bold;">function</span><span class="f_CodeExample"> SMS_sendSMS(phones: string[],&nbsp;msg: string): Promise&lt;SMSSendError[]&gt;&nbsp;{</span><br />
+<span style="width:48px;display:inline-block">&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">const</span><span class="f_CodeExample"> smsErrs: SMSSendError[]&nbsp;=&nbsp;[]</span><br />
+<span style="width:48px;display:inline-block">&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">const</span><span class="f_CodeExample"> authSuccess&nbsp;= await tryAuth()</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span style="width:48px;display:inline-block">&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">if</span><span class="f_CodeExample"> (!authSuccess)&nbsp;{</span><br />
+<span style="width:48px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">smsErrs.push({&nbsp;phone: '',&nbsp;statusCode: 401,&nbsp;statusText: 'Unauthorized' })</span><br />
+<span style="width:48px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample" style="font-weight: bold;">return</span><span class="f_CodeExample"> smsErrs</span><br />
+<span class="f_CodeExample">}&nbsp;</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span style="width:48px;display:inline-block">&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">const</span><span class="f_CodeExample"> phoneListString&nbsp;=&nbsp;phones.join('&amp;numbers[]=')</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span style="width:48px;display:inline-block">&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">const</span><span class="f_CodeExample"> res&nbsp;= await fetch(`https://${email}:${api_key}@gate.smsaero.ru/v2/sms/send?numbers[]=${phoneListString}&amp;text=${msg}&amp;sign=SMS&nbsp;Aero`)</span><br />
+<span style="width:48px;display:inline-block">&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">if</span><span class="f_CodeExample"> (!res.ok)&nbsp;{</span><br />
+<span style="width:48px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">//&nbsp;smsErrs&nbsp;allows&nbsp;you&nbsp;to&nbsp;write&nbsp;separate&nbsp;processing&nbsp;for&nbsp;each&nbsp;phone&nbsp;number</span><br />
+<span style="width:48px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">smsErrs.push({phone: '',&nbsp;statusCode:&nbsp;res.status,&nbsp;statusText:&nbsp;res.statusText})</span><br />
+<span style="width:48px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample" style="font-weight: bold;">return</span><span class="f_CodeExample"> smsErrs</span><br />
+<span style="width:48px;display:inline-block">&nbsp;</span><span class="f_CodeExample">}</span><br />
+<span style="width:48px;display:inline-block">&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">return</span><span class="f_CodeExample"> smsErrs</span><br />
+<span class="f_CodeExample">}</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample">async </span><span class="f_CodeExample" style="font-weight: bold;">function</span><span class="f_CodeExample"> tryAuth(): Promise&lt;</span><span class="f_CodeExample" style="font-weight: bold;">boolean</span><span class="f_CodeExample">&gt;&nbsp;{</span><br />
+<span style="width:48px;display:inline-block">&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">const</span><span class="f_CodeExample"> res&nbsp;= await fetch(`https://${email}:${api_key}@gate.smsaero.ru/v2/auth`)</span><br />
+<span style="width:48px;display:inline-block">&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">if</span><span class="f_CodeExample"> (!res.ok)&nbsp;{</span><br />
+<span style="width:48px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample" style="font-weight: bold;">return</span><span class="f_CodeExample"> </span><span class="f_CodeExample" style="font-weight: bold;">false</span><br />
+<span style="width:48px;display:inline-block">&nbsp;</span><span class="f_CodeExample">}</span><br />
+<span style="width:48px;display:inline-block">&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">return</span><span class="f_CodeExample"> </span><span class="f_CodeExample" style="font-weight: bold;">true</span><br />
+<span class="f_CodeExample">}</span></p>
+<ol style="list-style-type:upper-roman" start="5">
+<li value="5" class="p_Normal">Save and publish the scripts.</li></ol>
+<p class="p_Normal">After enabling the module and filling in its parameters, you will be able to choose integration with SMS Aero service when configuring <a href="security_settings.html#authorization" class="topiclink">two-factor authentication</a>, <a href="security_settings.html#mobile" class="topiclink">logging in</a> with phone number and one-time codes or the <a href="360013409220.html" class="topiclink">Send SMS</a> activity . </p>
+
+                        <div class="bottom-nav">
+                            
+                                <a id="prev-link" class="topic__navi_prev" href="two-factor-integration.html">
+                                    <span class="bottom-nav__arrow bottom-nav__arrow--prev"></span> <span
+                                        class="bottom-nav__link">two-factor-integration.html</span>
+                                </a>
+                            
+                            
+                                <a id="next-link" class="topic__navi_next" href="360003861992.html">
+                                    <span class="bottom-nav__link">360003861992.html</span> <span
+                                        class="bottom-nav__arrow bottom-nav__arrow--next"></span>
+                                </a>
+                            
+                        </div>
+                        <!-- добавляет на страницу строку блок Была ли статья полезной?  -->
+                          <div class="feedback" id="feedback"><span><b>Was this helpful?</b></span><form action="" method="POST" class="feedback-form" id="feedback-form"><div class="feedback__popup feedback__popup-response" id="feedback__popup_thx" style="display: none;">Thanks for your feedback!</div><div class="feedback__popup" id="feedback__popup_why" style="display: none;"><div class="feedback__popup-header">Please specify why:</div><input type="radio" name="category" id="bad_recommendation" value="bad_recommendation"><label for="bad_recommendation">Recommendations did not help me</label><input type="radio" name="category" id="difficult_text" value="difficult_text"><label for="difficult_text">Article is hard to understand</label><input type="radio" name="category" id="no_answer" value="no_answer"><label for="no_answer">Didn’t answer my question</label><input type="radio" name="category" id="bad_header" value="bad_header"><label for="bad_header">Content does not match the topic</label><input type="radio" name="category" id="other_reason" value="other_reason"><label for="other_reason">Other</label></div><div class="feedback__popup" id="feedback__popup-other" style="display: none;"><div class="feedback__popup-header">How can we improve the article?</div><textarea class="feedback__textarea" name="other" id=""></textarea><input type="submit" class="feedback__other-btn" value="Submit"></div><div class="feedback-form__btn-group"><input type="radio" name="useful" id="feedback__useful_yes" value="true"><label for="feedback__useful_yes"><img src="like.svg" class="small-img"><spanclass="feedback-form__btn-group_yes-btn">Yes</spanclass="feedback-form__btn-group_yes-btn"></label><input type="radio" name="useful" id="feedback__useful_no" value="false"><label for="feedback__useful_no"><img src="dislike.svg" class="small-img"><spanclass="feedback-form__btn-group_no-btn">No</spanclass="feedback-form__btn-group_no-btn"></label></div><select name="category"><option disabled="">Please specify why</option><option value="bad_recommendation" selected="">Recommendations did not help me</option><option value="difficult_text">Article is hard to understand</option><option value="no_answer">Didn’t answer my question</option><option value="bad_header">Content does not match the topic</option><option value="other_reason">Other</option></select><input type="submit"></form></div>
+                           
+                    </section>
+                </div>
+                <aside class="article__sidebar" style="display:none">
+                    <input type="checkbox" />
+                    <div class="article__arrow"></div>
+                    <div class="table-of-contents elma365-right" id="toc2Content">
+                        <h3 class="h3-toc">In this topic</h3>
+                        <nav id="toc2"></nav>
+                    </div>
+                </aside>
+            </div>
+        </article>
+    </main>               
+    <footer class="footer">
+        <div class="footer-container">
+  <div class="footer-mobile">
+    
+    <ul class="footer-mobile__list"><li><a href="https://brix365.com/en/" target="_blank">BRIX</a></li><li><a href="https://tssdk.brix365.com/en/latest/" target="_blank">SDK</a></li><li><a href="https://api.brix365.com/en/" target="_blank">API</a></li></ul><ul class="footer-mobile__list"><li><a href="https://brix365.com/en/help/platform/get-trial.html">Platform</a></li><li><a href="https://brix365.com/en/help/ecm/ecm-functions.html">ECM</a></li><li><a href="https://brix365.com/en/help/service/service-functions.html">Service</a></li><li><a href="https://brix365.com/en/help/projects/projects-functions.html">Projects</a></li></ul>
+    
+    
+  </div>
+  <div class="footer-wrap">
+    
+      <div><span class="mobile-question-popup">Send feedback</span><form method="POST" action class="question__popup question-xs" id="question__popup"><div class="question-wrap"><span class="close"></span><span class="title">Ask a question</span><label for="help_question" style="display: none;"></label><textarea name="help_question" id="help_question"></textarea><input type="submit" value="Send"></div></form><div class="hidden fade-in question-success-xs">Sent</div></div>
+    
+    <div class="footer-flex-b">
+      <span class="footer-copy">&copy; 2025 BRIX</span>
+      <ul class="footer-list">
+        
+        <li class="footer-item">
+            <a href="#" class="arrow-top" style="display: block;"></a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+ 
+    </footer>
+    <iframe name="hmnavigation" style="display:none!important"></iframe>
+    <script src="./jquery-ui.js"></script>
+    <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
+    <script src="./jquery.tocify.min.js"></script>
+    <script src="./TypoReporter.min.js"></script>
+    <script src="./google-search.js"></script>
+    <script src="./main.js"></script>
+</body>
+
+</html>

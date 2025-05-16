@@ -1,0 +1,358 @@
+﻿.footer {
+  position: relative;
+  background: #F8F8F8;
+  padding-top: 23px;
+  padding-bottom: 24px;
+  flex: 0 0 auto;
+  padding-right: 15px;
+  padding-left: 35px;
+}
+.feedback-wrap {
+  height: 150px;
+}
+.feedback {
+  /*position: absolute;*/
+  /*top: -150px;*/
+  /*left: 35px;*/
+}
+
+.fb-container {
+  position: relative;
+  /*left: 0;*/
+  /*top: -150px;*/
+  width: 100%;
+  max-width: 1600px;
+  display: flex;
+  margin: 0 auto;
+  padding-left: 10px;
+}
+
+.fb-aside {
+  width: 25%;
+  max-width: 360px;
+}
+
+.fb-inner {
+  width: 75%;
+  position: relative;
+  padding-left: 30px;
+}
+
+/*@media (max-width: 1660px) {*/
+/*  .fb-inner {*/
+/*    width: 550px;*/
+/*    flex-shrink: 0;*/
+/*  }*/
+
+/*  .fb-aside {*/
+/*    width: calc(25% - 42px);*/
+/*  }*/
+/*}*/
+
+@media (min-width:1471px) and (max-width:1660px) {
+  .fb-container {
+    position: absolute;
+  }
+
+  .fb-aside {
+    width: 360px;
+  }
+}
+
+@media (max-width: 1470px) {
+  .fb-aside {
+    width: calc(25% - 15px);
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .feedback {
+    left: 0;
+  }
+  .fb-container {
+    padding-left: 0;
+  }
+  .fb-aside {
+    width: 0;
+  }
+  .fb-inner {
+    width: 100%;
+    padding-left: 0;
+  }
+}
+.footer-container {
+  max-width: auto;
+  display: block;
+}
+.footer-wrap {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1600px;
+  margin: 0 auto;
+
+}
+.footer-mobile {
+  display: none;
+}
+.footer-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.footer-list .footer-item:first-child {
+  margin-right: 20px;
+}
+.footer-list .footer-item:first-child a {
+  color: #0D4A75;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+.footer-list .footer-item:first-child a img {
+  margin-right: 4px;
+}
+.footer-list .footer-item:not(:first-child) {
+  margin-right: 5px;
+}
+.footer-list .footer-item:last-child {
+  margin-right: 0;
+}
+.footer__inner, .footer__copy-inner {
+  margin: 0 auto;
+  max-width: 1660px;
+  padding: 0 17px;
+}
+.footer__inner {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 38px;
+}
+.footer__nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.footer__nav li {
+  display: inline-block;
+}
+.footer__nav li + li {
+  margin-left: 30px;
+}
+.footer__nav a {
+  font-size: 17px;
+  line-height: 21px;
+  color: #FAFAFA;
+  text-decoration: none;
+}
+.footer__nav a:hover {
+  text-decoration: underline;
+}
+.footer__copy {
+  background: #101010;
+  padding-top: 20px;
+  padding-bottom: 25px;
+}
+
+.footer-flex-b {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100%;
+}
+
+@media (max-width: 900px) {
+  .footer__nav {
+    display: flex;
+    flex-direction: column;
+  }
+  .footer__nav li + li {
+    margin-left: 0;
+  }
+  .footer-mobile {
+    display: flex;
+  }
+  .footer-mobile__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    min-width: 140px;
+    padding: 0;
+    margin: 0 0 32px;
+  }
+  .footer-mobile__list a {
+    font-size: 14px;
+    line-height: 30px;
+    color: #367EB2;
+    text-decoration: none!important;
+  }
+  .footer-mobile__list a:hover {
+    text-decoration: underline;
+  }
+}
+
+.footer-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.mobile-question-popup {
+  display: none;
+}
+
+.question-xs {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .mobile-question-popup {
+    display: block;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 42px;
+    color: #0D4A75;
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 750px) {
+  .footer__inner {
+    align-items: flex-start;
+  }
+
+  .footer-wrap {
+    display: block;
+    border-top: 1px solid #E1E1E1;
+    padding-top: 12px;
+    position: relative;
+  }
+
+  .question__popup.question-xs {
+    position: absolute;
+  }
+
+  .question__popup {
+    top: -310px;
+    left: 0;
+    height: 290px;
+    width: 100%;
+    cursor: default;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    z-index: 22;
+  }
+
+  .question__popup .question-wrap .close {
+    position: absolute;
+    top: 22px;
+    right: 15px;
+    cursor: pointer;
+    width: 11px;
+    height: 11px;
+  }
+
+  .question__popup .close::after {
+    content: '';
+    height: 2px;
+    width: 13px;
+    background: #C6C6C6;
+    transform: rotate(45deg);
+    display: block;
+    position: absolute;
+  }
+
+  .question__popup .close::before {
+    content: '';
+    height: 2px;
+    width: 13px;
+    background: #C6C6C6;
+    transform: rotate(-45deg);
+    display: block;
+    position: absolute;
+  }
+
+  .question-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 22px 25px;
+  }
+
+  .question-wrap .title {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    color: #3A4149;
+    margin-bottom: 15px;
+  }
+
+  .question-wrap textarea {
+    background: #FFFFFF;
+    border: 1px solid #E2E2E2;
+    border-radius: 3px;
+    width: 100%;
+    height: 164px;
+    resize: none;
+    margin-bottom: 14px;
+  }
+
+  .question-wrap input[type='submit'] {
+    background: #367EB2;
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    display: block;
+    border: none;
+    padding: 8px 21px;
+    cursor: pointer;
+  }
+}
+@media (max-width: 550px) {
+  .footer__copy-inner {
+    font-size: 12px;
+    line-height: 120%;
+    color: #A5ADB2;
+    padding-left: 17px;
+    padding-right: 17px;
+  }
+  .footer__nav {
+    width: 50%;
+  }
+  .footer__nav li {
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 330px) {
+  .footer__inner {
+    flex-direction: column;
+  }
+  .footer__nav {
+    margin-bottom: 40px;
+  }
+}
+
+.footer-copy{
+opacity: 1 !important;
+}
+
+@media (max-width: 900px) {
+
+  .sidebar__wrapper{
+
+    position: static !important;
+
+  }
+
+}

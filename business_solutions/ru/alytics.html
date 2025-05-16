@@ -1,0 +1,332 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>Модуль интеграции с Alytics</title>
+    <meta name="generator" content="Help+Manual" />
+    <meta name="keywords" content="" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Модуль для интеграции с системой сквозной аналитики Alytics. Позволяет построить сквозную аналитику на основе данных о лидах и сделках из раздела CRM. С её помощью вы сможете..." />
+    <meta name="picture" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Cправка по Low-code платформе ELMA365" />
+    <meta property="og:url" content="https://elma365.com/ru/help" />
+    <meta property="og:image" content="" />
+    <meta property="og:site_name" content="ELMA365" />                                                              
+    <link rel="icon" href="favicon.png" type="image/png" />
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./jquery-ui.css" />
+    <link rel="stylesheet" href="default.css" />
+    <link rel="stylesheet" href="./search-yandex.css" />
+    <link rel="stylesheet" href="./article.css" />
+    <link rel="stylesheet" href="./glossary.css" />
+    <link rel="stylesheet" href="./theme.css" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+
+<body>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-M6ETBEC1R9"></script><script>window.dataLayer=window.dataLayer || []; function gtag(){dataLayer.push(arguments);}gtag('js', new Date()); gtag('config', 'G-M6ETBEC1R9');</script>
+    <script>!function(e,t,c,n,r,a,m){e.ym=e.ym||function(){(e.ym.a=e.ym.a||[]).push(arguments)},e.ym.l=1*new Date;for(var s=0;s<document.scripts.length;s++)if(document.scripts[s].src===n)return;a=t.createElement(c),m=t.getElementsByTagName(c)[0],a.async=1,a.src=n,m.parentNode.insertBefore(a,m)}(window,document,"script","https://mc.yandex.ru/metrika/tag.js"),ym(83179930,"init",{clickmap:!0,trackLinks:!0,accurateTrackBounce:!0,webvisor:!0})</script><noscript><div><img alt=""src=https://mc.yandex.ru/watch/83179930 style=position:absolute;left:-9999px></div></noscript> 
+    
+    ﻿<header class="header elma-365">
+  <div class="container">
+    <a class="header__logo" href="https://elma365.com/ru/help">
+      <img src="./logo.svg">
+    </a>
+ <!-- <div class="hero__search-form" id="search-panel">
+   <form class="search-form" onsubmit="ym(83179930,'reachGoal','poisk')">
+     <label class="search-form__label">
+       <span id="reset-search" class="search__icon"></span>
+       <input class="search-form__input" type="text">
+     </label>
+     <input class="search-form__submit" type="submit" value="Submit">
+   </form>
+  </div>       -->
+  
+     <div class="hero__search-form" id="search-panel"> <form class="search-form"> <label class="search-form__label"> <span id="reset-search" class="search__icon"></span> <input class="search-form__input" type="text"> </label> <input class="search-form__submit" type="submit" value="Submit"> </form> </div> 
+  <div class="hero__search">
+      <a href="#" id="search-icon" class="hero__search-icon">
+        <img src="search-icon-white.svg" alt="search string">
+      </a>
+      <a href="#" id="side-menu-icon" class="hero__side-icon">
+        <img src="side_menu.svg" alt="side menu">
+      </a>
+    </div>  
+  <div class="header__navi">
+        
+        <ul class="header__list"><li><span class="solution-select"><span class="solution-select__selected"></span><svg width="7" height="4" viewBox="0 0 7 4" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L3.5 3.5L6 1" stroke="white" stroke-linecap="round" stroke-linejoin="round"/></svg><ul class="solution-select__list"><li><a class="project-link" href="https://elma365.com/ru/help/platform/get-trial.html">Платформа</a></li><li><a class="project-link" href="https://elma365.com/ru/help/ecm/ecm-functions.html">ECM</a></li><li><a class="project-link" href="https://elma365.com/ru/help/crm/crm_overview.html">CRM</a></li><li><a class="project-link" href="https://elma365.com/ru/help/service/service-functions.html">Service</a></li><li><a class="project-link" href="https://elma365.com/ru/help/projects/projects-functions.html">Проекты</a></li><li><a class="project-link" href="https://elma365.com/ru/help/business_solutions/-elma365-store.html">Бизнес-решения</a></li></ul></span></li><li><a href="https://api.elma365.com/ru/"target="_blank">API</a></li><li><a href="https://tssdk.elma365.com/"target="_blank">SDK</a></li><li><a href="https://community.elma365.com/" target="_blank">Community</a></li><li><a href="https://elma-academy.com/ru/" target="_blank">Академия</a></li><li><a href="https://elma365.com/ru/" target="_blank">Сайт ELMA365</a></li></ul> 
+        
+        
+   </div>
+  </div>
+
+</header>
+
+
+
+    
+    <main class="main container">
+
+        <aside class="sidebar" id="sidebar">
+        <div class="sidebar__header">
+                 <a class="header__logo" href="https://elma365.com/ru/help">
+                    <img src="./logo-light.svg">
+                 </a>
+                    <span class="sidebar__close elma-365-close" id="close"></span>
+            </div>
+            <div class="sidebar__wrapper" id="side-menu">
+                
+            </div>
+        </aside>
+
+        <article class="article" id="article">
+            <div class="article-inner">           
+                <div class="content">
+                    <header class="article__header">
+                        
+                        <div class="topic__title"><h1 class="p_Heading1"><span class="f_Heading1">Модуль интеграции с Alytics</span></h1>
+</div>
+                    
+</header>
+                    <section class="article__content">
+                        <div class="scroll-top-inner">
+                            <a href="#h1-article" class="scroll-top"></a>
+                        </div>
+                        <!-- Placeholder for topic body. -->
+                        <p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px;">Модуль для интеграции с системой сквозной аналитики Alytics. Позволяет построить сквозную аналитику на основе данных о лидах и сделках из раздела <a href="https://elma365.com/ru/products/crm/" target="_blank" class="weblink">CRM</a>. С её помощью вы сможете отследить качество лидов, оценить окупаемость, а также проанализировать эффективность рекламных компаний.</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;внимание</span></p>
+<p class="p_Normal">Настраивать модули могут только пользователи, входящие в группу <a href="360006871932.html#administrators" class="topiclink">Администраторы</a>.</p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;внимание</span></p>
+<h2 class="p_Heading2"><span class="f_Heading2">Настроить модуль в ELMA365</span></h2>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px;">Чтобы подключить модуль:</span></p>
+<ol style="list-style-type:upper-roman">
+<li value="1" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-size: 15px;">Перейдите в раздел </span><span style="font-size: 15px; font-weight: bold;">Администрирование &gt; Модули &gt; Alytics</span><span style="font-size: 15px;">.</span></li><li value="2" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-size: 15px;">Нажмите кнопку </span><span style="font-size: 15px; font-weight: bold;">Включить</span><span style="font-size: 15px;">.</span></li><li value="3" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-size: 15px;">В появившемся окне </span><span style="font-size: 15px; font-weight: bold;">Настройка интеграции </span><span style="font-size: 15px;">укажите логин и пароль, которые будут использоваться в дальнейшем при добавлении проекта в системе Alytics.</span></li></ol>
+<p style="line-height: 1.28; margin: 0 0 11px 36px;"><img alt="alytics-1" width="807" height="592" style="margin:0;width:807px;height:592px;border:none" src="alytics-1.png"/></p>
+<ol style="list-style-type:upper-roman">
+<li value="4" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-size: 15px;">Создайте проект для отслеживания в системе Alytics. Для этого нажмите кнопку </span><span style="font-size: 15px; font-weight: bold;">Добавить проект</span><span style="font-size: 15px;">. В появившемся окне укажите название, например, </span><span style="font-size: 15px; font-weight: bold;">Филиал Нижний Новгород</span><span style="font-size: 15px;">, и нажмите </span><span style="font-size: 15px; font-weight: bold;">Сохранить</span><span style="font-size: 15px;">. В поле </span><span style="font-size: 15px; font-weight: bold;">URL для интеграции</span><span style="font-size: 15px;"> сформируется ссылка, которую в дальнейшем необходимо использовать при добавлении проекта в системе Alytics.</span></li></ol>
+<p style="line-height: 1.28; margin: 0 0 11px 36px;"><img alt="alytics-2" width="581" height="367" style="margin:0;width:581px;height:367px;border:none" src="alytics-2.png"/></p>
+<ol style="list-style-type:upper-roman">
+<li value="5" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-size: 15px;">Нажмите кнопку </span><span style="font-size: 15px; font-weight: bold;">Добавить цель</span><span style="font-size: 15px;">, чтобы задать приложение и параметры, по которым будет построен отчёт в системе Alytics. </span></li><li value="6" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-size: 15px;">В открывшемся окне настройте выборку данных: </span></li></ol>
+<p style="line-height: 1.28; margin: 0 0 11px 37px;"><img alt="alytics-3" width="757" height="432" style="margin:0;width:757px;height:432px;border:none" src="alytics-3.png"/></p>
+<ol style="list-style-type:decimal">
+<li value="1" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-size: 15px;">Заполните поля:</span></li></ol>
+<ul style="list-style-type:disc">
+<li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-size: 15px; font-weight: bold;">Название</span><span style="font-size: 15px; color: #ff0000;">* </span><span style="font-size: 15px;">— задайте название цели;</span></li><li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-size: 15px; font-weight: bold;">Приложение</span><span style="font-size: 15px; color: #ff0000;">*</span><span style="font-size: 15px;"> — выберите приложение, по данным которого будет построен отчёт в системе Alytics;</span></li><li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-size: 15px; font-weight: bold;">Описание</span><span style="font-size: 15px;"> — добавьте описание цели.</span></li></ul>
+<ol style="list-style-type:decimal" start="2">
+<li value="2" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-size: 15px;">Настройте блок </span><span style="font-size: 15px; font-weight: bold;">Фильтр</span><span style="font-size: 15px;"> — укажите, по каким параметрам элементы приложения будут передаваться в Alytics:</span></li></ol>
+<ul style="list-style-type:disc">
+<li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-size: 13px; font-weight: bold;">Связка</span><span style="font-size: 13px;"> — заполняется, если необходимо задать несколько условий, по которым будут отобраны элементы приложения. Можно выбрать один из двух вариантов:</span><ul style="list-style-type:circle">
+<li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-size: 13px; font-weight: bold;">И</span><span style="font-size: 13px;"> — отбираться будут элементы приложения, которые соответствуют каждому из заданных параметров;</span></li><li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-size: 13px; font-weight: bold;">ИЛИ</span><span style="font-size: 13px;"> — отобранные элементы будут соответствовать одному из заданных параметров. </span></li></ul></li></ul>
+<ul style="list-style-type:disc">
+<li style="margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-size: 13px; font-weight: bold;">Поле из приложения </span><span style="font-size: 13px;">— поля приложения, по которым необходимо отобрать элементы; </span></li></ul>
+<ul style="list-style-type:disc">
+<li style="margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-size: 13px; font-weight: bold;">Операция </span><span style="font-size: 13px;">— оператор сопоставления для проверки каждого условия:</span><ul style="list-style-type:circle">
+<li style="margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-size: 13px; font-weight: bold;">Знак = </span><span style="font-size: 13px;">— элемент попадает в выборку, если поле приложения, заданное в столбце </span><span style="font-size: 13px; font-weight: bold;">Поле из приложения</span><span style="font-size: 13px;">, полностью соответствует значению из столбца </span><span style="font-size: 13px; font-weight: bold;">Значение поля</span><span style="font-size: 13px;">;</span></li><li style="margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-size: 13px; font-weight: bold;">Знак ≠</span><span style="font-size: 13px;"> — элемент попадает в выборку, если поле приложения, заданное в столбце </span><span style="font-size: 13px; font-weight: bold;">Поле из приложения</span><span style="font-size: 13px;">, не соответствует значению из столбца </span><span style="font-size: 13px; font-weight: bold;">Значение поля</span><span style="font-size: 13px;">; </span></li></ul></li></ul>
+<ul style="list-style-type:disc">
+<li style="margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-size: 13px; font-weight: bold;">Значение поля </span><span style="font-size: 13px;">— значения для полей приложения из столбца </span><span style="font-size: 13px; font-weight: bold;">Поле из приложения</span><span style="font-size: 13px;">. В этом столбце вы можете указать конкретное значение полей или ввести значение вручную. </span></li></ul>
+<ol style="list-style-type:decimal" start="3">
+<li value="3" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-size: 15px;">Настройте блок </span><span style="font-size: 15px; font-weight: bold;">Ответ </span><span style="font-size: 15px;">— сопоставьте свойства из системы Alytics с полями приложения для выгрузки данных: </span></li></ol>
+<ul style="list-style-type:disc">
+<li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-size: 15px; font-weight: bold;">Свойства ответа</span><span style="font-size: 15px;"> — поля, предусмотренные в системе Alytics. В таблице приведены значения свойств ответа: </span></li></ul>
+<div style="text-align: left; line-height: 1.28; padding: 0 0 0 0; margin: 0 0 11px 31px;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; width:201px; padding:0; border:none"><p class="p_Normal"><span style="font-weight: bold;">utm_source</span></p>
+</td>
+<td style="vertical-align:top; width:252px; padding:0; border:none"><p class="p_Normal">рекламный источник</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:201px; padding:0; border:none"><p class="p_Normal"><span style="font-weight: bold;">utm_medium</span></p>
+</td>
+<td style="vertical-align:top; width:252px; padding:0; border:none"><p class="p_Normal">рекламный канал</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:201px; padding:0; border:none"><p class="p_Normal"><span style="font-weight: bold;">utm_content</span></p>
+</td>
+<td style="vertical-align:top; width:252px; padding:0; border:none"><p class="p_Normal">содержание рекламного объявления</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:201px; padding:0; border:none"><p class="p_Normal"><span style="font-weight: bold;">utm_campaign</span></p>
+</td>
+<td style="vertical-align:top; width:252px; padding:0; border:none"><p class="p_Normal">название и id кампании </p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:201px; padding:0; border:none"><p class="p_Normal"><span style="font-weight: bold;">utm_term</span></p>
+</td>
+<td style="vertical-align:top; width:252px; padding:0; border:none"><p class="p_Normal">ключевое слово</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:201px; padding:0; border:none"><p class="p_Normal"><span style="font-weight: bold;">client_id</span></p>
+</td>
+<td style="vertical-align:top; width:252px; padding:0; border:none"><p class="p_Normal">id клиента</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:201px; padding:0; border:none"><p class="p_Normal"><span style="font-weight: bold;">client_id_date</span></p>
+</td>
+<td style="vertical-align:top; width:252px; padding:0; border:none"><p class="p_Normal">дата первой покупки клиента</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:201px; padding:0; border:none"><p class="p_Normal"><span style="font-weight: bold;">number</span></p>
+</td>
+<td style="vertical-align:top; width:252px; padding:0; border:none"><p class="p_Normal">номер транзакции</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:201px; padding:0; border:none"><p class="p_Normal"><span style="font-weight: bold;">creation_date</span></p>
+</td>
+<td style="vertical-align:top; width:252px; padding:0; border:none"><p class="p_Normal">дата и время создания элемента</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:201px; padding:0; border:none"><p class="p_Normal"><span style="font-weight: bold;">revenue</span></p>
+</td>
+<td style="vertical-align:top; width:252px; padding:0; border:none"><p class="p_Normal">выручка</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:201px; padding:0; border:none"><p class="p_Normal"><span style="font-weight: bold;">profit</span></p>
+</td>
+<td style="vertical-align:top; width:252px; padding:0; border:none"><p class="p_Normal">прибыль</p>
+</td>
+</tr>
+</table>
+</div>
+<ul style="list-style-type:disc">
+<li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-size: 15px; font-weight: bold;">Свойства приложения</span><span style="font-size: 15px;"> — поля приложения, которые будут передаваться в систему Alytics. </span></li></ul>
+<ol style="list-style-type:decimal" start="4">
+<li value="4" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-size: 15px;">Заполните поле </span><span style="font-size: 15px; font-weight: bold;">URL цели</span><span style="font-size: 15px;">, указав ID цели в Alytics. Обратите внимание, чтобы интеграция настроилась корректно, id целей в ELMA365 и в системе Alytics должны совпадать. </span>Для первой цели в проекте используйте значение <span style="font-weight: bold;">-1</span>, для второй — <span style="font-weight: bold;">1</span>. Id третьей и последующих целей указывайте по порядку.<span style="font-size: 15px; font-family: 'Times New Roman',Times,Georgia,serif;"> </span><span style="font-size: 15px;">Ссылка в поле URL цели формируется автоматически.</span></li></ol>
+<p style="line-height: 1.28; margin: 0 0 11px 13px;"><span style="font-size: 15px;">Так может выглядеть окно добавления цели для выборки лидов, заинтересованных в конкретном продукте и квалифицированных с добавлением сделки:</span></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><img alt="alytics-4" width="771" height="650" style="margin:0;width:771px;height:650px;border:none" src="alytics-4.png"/></p>
+<ol style="list-style-type:upper-roman" start="7">
+<li value="7" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-size: 15px;">Сохраните настройки. </span></li></ol>
+<p style="line-height: 1.28; margin: 0 0 11px 0;">Для одного проекта можно добавлять несколько целей. Например, вы можете создать отдельные проекты для статистики по лидам и по сделкам в разных статусах.</p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;">При необходимости цель можно редактировать, нажав на значок карандаша напротив её названия, или удалить, нажав на значок корзины.</p>
+<h2 class="p_Heading2"><span class="f_Heading2">Настроить интеграцию в системе Alytics</span></h2>
+<p style="line-height: 1.28; margin: 0 0 11px 0;">После того как вы настроили модуль в ELMA365, необходимо добавить созданные проект и цели в систему Alytics. </p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;">Для этого:</p>
+<ol style="list-style-type:upper-roman">
+<li value="1" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;">Зайдите в аккаунт Alytics.</li><li value="2" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;">В верхнем меню перейдите в <span style="font-weight: bold;">Настройки &gt; Настройка целей</span>.</li><li value="3" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;">На открывшейся странице в блоке <span style="font-weight: bold;">Данные из CRM</span> нажмите на значок <span style="font-weight: bold;">+</span>.</li></ol>
+<p style="line-height: 1.28; margin: 0 0 11px 36px;"><img alt="Alytics-5" width="811" height="520" style="margin:0;width:811px;height:520px;border:none" src="alytics-5.png"/></p>
+<p style="line-height: 1.28; margin: 0 0 11px 35px;">Откроется окно подключения CRM.</p>
+<p style="line-height: 1.28; margin: 0 0 11px 36px;"><img alt="alytics-6" width="550" height="525" style="margin:0;width:550px;height:525px;border:none" src="alytics-6.png"/></p>
+<ol style="list-style-type:upper-roman">
+<li value="4" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;">Перейдите в настройки модуля Alytics в ELMA365 и скопируйте URL проекта из поля <span style="font-weight: bold;">URL для интеграции</span>.</li><li value="5" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;">В окне подключения CRM в Alytics вставьте скопированную ссылку в поле <span style="font-weight: bold;">URL</span>. Затем укажите логин и пароль, заданные в <span style="font-size: 15px;">настройках интеграции в ELMA365, и нажмите кнопку </span><span style="font-size: 15px; font-weight: bold;">Применить</span><span style="font-size: 15px;">. </span>Проект добавится в Alytics.</li><li value="6" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;">В блоке <span style="font-weight: bold;">Данные из CRM</span> нажмите кнопку <span style="font-weight: bold;">Создать цель</span>. В открывшемся окне введите название цели и нажмите <span style="font-weight: bold;">Подключить</span>.</li></ol>
+<p style="line-height: 1.28; margin: 0 0 11px 36px;"><img alt="alytics-7" width="497" height="400" style="margin:0;width:497px;height:400px;border:none" src="alytics-7.png"/></p>
+<ol style="list-style-type:upper-roman">
+<li value="7" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;">После того как все цели добавлены, и интеграция настроена, обратитесь в поддержку Alytics по адресу <a href="mailto:support@alytics.ru" target="_blank" class="weblink">support@alytics.ru</a> для включения дополнительных настроек. В письме укажите номер проекта.</li></ol>
+<p style="line-height: 1.28; margin: 0 0 11px 0;">Если интеграция настроена верно, данные из ELMA365 появятся в проекте Alytics на следующий день после обращения на почту поддержи. </p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;">Более подробно об интеграции и работе с сервисом читайте в <a href="https://wiki.alytics.ru/index.php?title=%D0%98%D0%BD%D1%82%D0%B5%D0%B3%D1%80%D0%B0%D1%86%D0%B8%D1%8F_%D1%81%D0%BE_%D1%81%D1%82%D0%BE%D1%80%D0%BE%D0%BD%D0%BD%D0%B8%D0%BC%D0%B8_%D1%81%D0%B5%D1%80%D0%B2%D0%B8%D1%81%D0%B0%D0%BC%D0%B8" target="_blank" class="weblink">Инструкции Alytics</a>.</p>
+
+                        <div class="bottom-nav">
+                            
+                                <a id="prev-link" class="topic__navi_prev" href="smsru.html">
+                                    <span class="bottom-nav__arrow bottom-nav__arrow--prev"></span> <span
+                                        class="bottom-nav__link">smsru.html</span>
+                                </a>
+                            
+                            
+                                <a id="next-link" class="topic__navi_next" href="jivo.html">
+                                    <span class="bottom-nav__link">jivo.html</span> <span
+                                        class="bottom-nav__arrow bottom-nav__arrow--next"></span>
+                                </a>
+                            
+                        </div>
+                        <!-- добавляет на страницу строку блок Была ли статья полезной?  -->
+                          <div class="feedback-wrap"><div class="feedback" id="feedback"><span><b>Была ли статья полезной?</b></span><form action="" method="POST" class="feedback-form" id="feedback-form"><div class="feedback__popup feedback__popup-response" id="feedback__popup_thx">Спасибо за ваш отзыв!</div><div id="feedback-success-popup"><div class="wrap"><button type="button" class="feedback-popup-close">×</button><svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_212_2187)"><path d="M22 0.6875C10.2294 0.6875 0.6875 10.2294 0.6875 22C0.6875 33.7706 10.2294 43.3125 22 43.3125C33.7706 43.3125 43.3125 33.7706 43.3125 22C43.3125 10.2294 33.7706 0.6875 22 0.6875ZM22 40.5625C11.8023 40.5625 3.4375 32.3078 3.4375 22C3.4375 11.8024 11.6922 3.4375 22 3.4375C32.1977 3.4375 40.5625 11.6922 40.5625 22C40.5625 32.1976 32.3078 40.5625 22 40.5625ZM34.1713 16.933L18.6613 32.3186C18.257 32.7197 17.604 32.7171 17.203 32.3128L9.82283 24.873C9.42176 24.4686 9.42434 23.8157 9.82867 23.4146L10.5609 22.6884C10.9652 22.2873 11.6181 22.2899 12.0192 22.6942L17.9468 28.6697L31.9926 14.7366C32.3969 14.3356 33.0498 14.3382 33.4509 14.7425L34.1772 15.4747C34.5783 15.879 34.5757 16.532 34.1713 16.933Z" fill="#27AE60"></path></g><defs><clipPath id="clip0_212_2187"><rect width="44" height="44" fill="white"></rect></clipPath></defs></svg><p>Ваш отзыв успешно отправлен!</p><span>Спасибо за обратную связь.</span></div></div><div class="feedback__popup" id="feedback__popup_why"><button type="button" class="feedback-popup-close">×</button><div class="feedback__popup-header">Уточните, почему:</div><input type="radio" name="category" id="bad_recommendation" value="bad_recommendation"><label for="bad_recommendation">Рекомендации не помогли</label><input type="radio" name="category" id="difficult_text" value="difficult_text"><label for="difficult_text">Текст трудно понять</label><input type="radio" name="category" id="no_answer" value="no_answer"><label for="no_answer">Нет ответа на мой вопрос</label><input type="radio" name="category" id="bad_header" value="bad_header"><label for="bad_header">Содержание статьи не соответствует заголовку</label><input type="radio" name="category" id="other_reason" value="other_reason"><label for="other_reason">Другая причина</label></div><div class="feedback__popup" id="feedback__popup-other"><button type="button" class="feedback-popup-close">×</button>   <div class="feedback__popup-header">Расскажите, что вам не понравилось в статье:</div><textarea class="feedback__textarea" name="other" id=""></textarea><input type="submit" class="feedback__other-btn" value="Отправить"></div><div class="feedback-form__btn-group"><input type="radio" name="useful" id="feedback__useful_yes" value="true"><label for="feedback__useful_yes"><img src="like.svg"/><span class="feedback-form__btn-group_yes-btn">Да</span></label><input type="radio" name="useful" id="feedback__useful_no" value="false"><label for="feedback__useful_no"><img src="dislike.svg"/><span class="feedback-form__btn-group_no-btn">Нет</span></label></div><select name="category"><option disabled>Выберите вариант</option><option value="bad_recommendation" selected>Рекомендации не помогли</option><option value="difficult_text">Текст трудно понять</option><option value="no_answer">Нет ответа на мой вопрос</option><option value="bad_header">Содержание статьи не соответствует заголовку</option><option value="other_reason">Другая причина</option></select><input type="submit"></form></div></div>
+                           
+                    </section>
+                </div>
+                <aside class="article__sidebar" style="display:none">
+                    <input type="checkbox" />
+                    <div class="article__arrow"></div>
+                    <div class="table-of-contents elma365-right" id="toc2Content">
+                        <h3 class="h3-toc">В этой статье</h3>
+                        <nav id="toc2"></nav>
+                    </div>
+                </aside>
+            </div>
+        </article>
+    </main>               
+    <footer class="footer">
+        <div class="footer-container">
+  <div class="footer-mobile">
+    
+      <ul class="footer-mobile__list"><li><a href="https://api.elma365.com/ru/" target="_blank">API</a></li><li><a href="https://tssdk.elma365.com/" target="_blank">TS SDK</a></li><li><a href="https://community.elma365.com/" target="_blank">Community</a></li><li><a href="https://elma-academy.com/ru/elma365" target="_blank">Академия</a></li></ul><ul class="footer-mobile__list"><li><a href="https://elma365.com/ru/help/platform/get-trial.html">Платформа</a></li><li><a href="https://elma365.com/ru/help/ecm/ecm-functions.html">ECM</a></li><li><a href="https://elma365.com/ru/help/service/service-functions.html">Service</a></li><li><a href="https://elma365.com/ru/help/projects/projects-functions.html">Проекты</a></li></ul>
+    
+    
+  </div>
+  <div class="container">
+    <div class="footer-wrap">
+      
+        <div><span class="mobile-question-popup">Отправить фидбэк</span><form method="POST" action class="question__popup question-xs" id="question__popup"><div class="question-wrap"><span class="close"></span><span class="title">Задать вопрос</span><label for="help_question" style="display: none;"></label><textarea name="help_question" id="help_question"></textarea><input type="submit" value="Отправить"></div></form><div class="hidden fade-in question-success-xs">Ваш фидбэк отправлен.</div></div>
+      
+      <div class="footer-flex-b">
+        <div class="footer-top">
+          <span class="footer-copy">&copy; 2025 
+              ELMA365
+            
+            
+          </span>
+          
+            <a href="https://navigator.sk.ru/orn/1122971" target="_blank">
+              <img src="sk-resident.svg" alt="sk icon" class="footer-img" width="117" height="34">
+            </a>
+            
+        </div>
+        <div class="footer-line">
+          
+            <div class="footer-line-copy">
+              <span class="footer-copy">&copy; 2025 
+                  ELMA365
+                
+                
+              </span>
+            </div>
+            
+              <ul class="footer-list">
+                
+                  <li class="footer-item"><a href="https://elma365.com/ru/" target="_blank" class="footer-link" style="color: #0D4A75;"><img src="browse.svg" alt="browse icon" class="footer-img">elma365.com</a></li><li class="footer-item"><a href="https://www.youtube.com/user/ELMABPM" target="_blank" class="footer-link"><img src="yt.svg" alt="youtube icon" class="footer-img"></a></li><li class="footer-item"><a href="https://vk.com/elma_bpm" target="_blank" class="footer-link"><img src="vk.svg" alt="vk icon" class="footer-img"></a></li><li class="footer-item"><a href="https://t.me/elmaday" target="_blank" class="footer-link"><img src="tg.svg" alt="telegram icon" class="footer-img"></a></li><li class="footer-item"><a href="https://dzen.ru/elma" target="_blank" class="footer-link"><img src="dzen.svg" alt="dzen icon" class="footer-img"></a></li>
+                
+                
+                  <li class="footer-item">
+                    <a href="https://navigator.sk.ru/orn/1122971" target="_blank">
+                      <img src="sk-resident.svg" alt="sk icon" class="footer-img" width="117" height="34">
+                    </a>
+                  </li>
+                
+                
+              </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a href="#" class="arrow-top"></a>
+</div>
+ 
+    </footer>
+    <iframe name="hmnavigation" style="display:none!important"></iframe>
+    <script src="./jquery-ui.js"></script>
+    <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
+    <script src="./jquery.tocify.min.js"></script>
+    <script src="./TypoReporter.min.js"></script>
+    <script src="./google-search.js"></script>
+    <script src="./main.js"></script>
+</body>
+
+</html>

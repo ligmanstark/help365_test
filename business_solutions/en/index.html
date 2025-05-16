@@ -1,0 +1,796 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head itemscope itemtype="http://schema.org/WPHeader">
+    <title itemprop="headline">Full documentation for BRIX365 platform. Low-code developer guide. User guide. Admin guide. Developer guide.</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta itemprop="name" content="Full documentation for BRIX365 platform. Low-code developer guide. User guide. Admin guide. Developer guide." />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Full documentation for BRIX365 platform. Low-code developer guide. User guide. Admin guide. Developer guide." />
+    <meta property="og:description" content="<%TVAR_PAGE_DESCRIPTION%>" />
+    <meta property="og:url" content="https://brix365.com/en/help" />
+    <meta property="og:image" content="https://brix365.com/en/help/favicon.png" />
+    <link rel="icon" href="favicon.png" type="image/png" />
+    <!--link href="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.css" rel="stylesheet" /-->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./jquery-ui.css" />
+    <link rel="stylesheet" href="default.css" />
+    <link rel="stylesheet" href="./search-yandex.css" />
+    <link rel="stylesheet" href="./article.css" />
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="./glossary.css" />
+    <link rel="stylesheet" href="./theme.css" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_navigation.js"></script>
+   <script type="text/javascript">
+     function loadicons() { var icons = new Array(); for (i=0; i<arguments.length; i++) { icons[i] = new Image(); icons[i].src = arguments[i]; } }
+     function loadtoc() { loadstate(document.getElementById("toc")); }
+     function savetoc() { savestate(document.getElementById("toc")); }
+     function clicked(node, event) { deselect(); hmNodeClicked(node, event); }
+     function dblclicked(node) { hmNodeDblclicked(node); }
+     function deselect() { if (window.getSelection) window.getSelection().removeAllRanges(); else if (document.selection) document.selection.empty(); }
+     $(document).ready(function(){
+       loadtoc();
+       $(window).onunload = savetoc;
+     });
+   </script>
+</head>
+<body class="index-page">  
+    
+    ﻿<header class="header elma-365">
+  <div class="container">
+    <a class="header__logo" href="https://brix365.com/en/help">
+      <img src="./logo-en.svg">
+    </a>
+ <!-- <div class="hero__search-form" id="search-panel">
+   <form class="search-form" onsubmit="ym(83180416,'reachGoal','poisk')">
+     <label class="search-form__label">
+       <span id="reset-search" class="search__icon"></span>
+       <input class="search-form__input" type="text">
+     </label>
+     <input class="search-form__submit" type="submit" value="Submit">
+   </form>
+  </div>       -->
+  
+     <div class="hero__search-form" id="search-panel"> <form class="search-form"> <label class="search-form__label"> <span id="reset-search" class="search__icon"></span> <input class="search-form__input" type="text"> </label> <input class="search-form__submit" type="submit" value="Submit"> </form> </div> 
+  <div class="hero__search">
+      <a href="#" id="search-icon" class="hero__search-icon">
+        <img src="search-icon-white.svg" alt="search string">
+      </a>
+      <a href="#" id="side-menu-icon" class="hero__side-icon">
+        <img src="side_menu.svg" alt="side menu">
+      </a>
+    </div>  
+  <div class="header__navi">
+        
+        <ul class="header__list"><li><span class="solution-select"><span class="solution-select__selected"></span><svg width="7" height="4" viewBox="0 0 7 4" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L3.5 3.5L6 1" stroke="white" stroke-linecap="round" stroke-linejoin="round"/></svg><ul class="solution-select__list"><li><a class="project-link" href="https://brix365.com/en/help/platform/get-trial.html">Platform</a></li><li><a class="project-link" href="https://brix365.com/en/help/ecm/ecm-functions.html">ECM</a></li><li><a class="project-link" href="https://brix365.com/en/help/crm/crm_overview.html">CRM</a></li><li><a class="project-link" href="https://brix365.com/en/help/service/service-functions.html">Service</a></li><li><a class="project-link" href="https://brix365.com/en/help/projects/projects-functions.html">Projects</a></li><li><a class="project-link" href="https://brix365.com/en/help/business_solutions/-elma365-store.html">Business Solutions</a></li></ul></span></li><li><a href="https://api.brix365.com/en/" target="_blank">API</a></li><li><a href="https://tssdk.brix365.com/" target="_blank">SDK</a></li></ul>
+        
+        
+   </div>
+  </div>
+   <script type="text/javascript">
+     function loadicons() { var icons = new Array(); for (i=0; i<arguments.length; i++) { icons[i] = new Image(); icons[i].src = arguments[i]; } }
+     function loadtoc() { loadstate(document.getElementById("toc")); }
+     function savetoc() { savestate(document.getElementById("toc")); }
+     function clicked(node, event) { deselect(); hmNodeClicked(node, event); }
+     function dblclicked(node) { hmNodeDblclicked(node); }
+     function deselect() { if (window.getSelection) window.getSelection().removeAllRanges(); else if (document.selection) document.selection.empty(); }
+     $(document).ready(function(){
+       loadtoc();
+       $(window).onunload = savetoc;
+     });
+   </script>
+</header>
+
+
+
+                   
+    <!-- Place holder for the TOC - this variable is REQUIRED! -->
+    <main class="main container">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar__header">
+                <a class="header__logo" href="https://brix365.com/en/help">
+                    <img src="./logo-light-en.svg">
+                </a>
+                <span class="sidebar__close elma-365-close" id="close"></span>
+            </div>
+            <div class="sidebar__wrapper" id="side-menu">
+                <!--HMINCLUDE:index.html-->
+               <ul id="toc" style="list-style-type:none;display:block;padding-left:0;margin:0">
+<li class="heading1" id="i1" data-bg="expanded-plus.png;collapsed-minus.png" style="background:url(collapsed-minus.png) no-repeat;cursor:pointer;margin-top:2px;margin-left:0;padding-left:12px" onclick="return clicked(this,event)"><a class="heading1" id="a1" href="-elma365-store.html"><span class="heading1" id="s1" ondblclick="return dblclicked(this)">BRIX Store solutions</span></a>
+<ul id="ul1" style="list-style-type:none;margin-left:8px;padding:0">
+<li class="heading2" id="i1.1" data-bg="expanded-plus.png;collapsed-minus.png" style="background:url(collapsed-minus.png) no-repeat;cursor:pointer;margin-top:2px;margin-left:0;padding-left:12px" onclick="return clicked(this,event)"><a class="heading2" id="a1.1" href="compliance-management.html"><span class="heading2" id="s1.1" ondblclick="return dblclicked(this)">Compliance Management</span></a>
+<ul id="ul1.1" style="list-style-type:none;margin-left:8px;padding:0">
+<li class="heading3" id="i1.1.1" style="background:url() no-repeat;margin-top:2px;margin-left:0;padding-left:0px" onclick="return clicked(this,event)"><a class="heading3" id="a1.1.1" href="work-with-onboarding-compliance.html"><span class="heading3" id="s1.1.1">Working with the Onboarding compliance app</span></a>
+</li>
+<li class="heading3" id="i1.1.2" style="background:url() no-repeat;margin-top:2px;margin-left:0;padding-left:0px" onclick="return clicked(this,event)"><a class="heading3" id="a1.1.2" href="work-with-document-compliance.html"><span class="heading3" id="s1.1.2">Working with the Document compliance app</span></a>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i1.2" style="background:url() no-repeat;margin-top:2px;margin-left:0;padding-left:0px" onclick="return clicked(this,event)"><a class="heading2" id="a1.2" href="marketing_approval.html"><span class="heading2" id="s1.2">Marketing</span></a>
+</li>
+<li class="heading2" id="i1.3" style="background:url() no-repeat;margin-top:2px;margin-left:0;padding-left:0px" onclick="return clicked(this,event)"><a class="heading2" id="a1.3" href="leave_management.html"><span class="heading2" id="s1.3">Leave Management</span></a>
+</li>
+<li class="heading2" id="i1.4" data-bg="expanded-plus.png;collapsed-minus.png" style="background:url(collapsed-minus.png) no-repeat;cursor:pointer;margin-top:2px;margin-left:0;padding-left:12px" onclick="return clicked(this,event)"><a class="heading2" id="a1.4" href="employee-engagement.html"><span class="heading2" id="s1.4" ondblclick="return dblclicked(this)">Employee Engagement</span></a>
+<ul id="ul1.4" style="list-style-type:none;margin-left:8px;padding:0">
+<li class="heading3" id="i1.4.1" style="background:url() no-repeat;margin-top:2px;margin-left:0;padding-left:0px" onclick="return clicked(this,event)"><a class="heading3" id="a1.4.1" href="work-with-employee-engagement-surveys.html"><span class="heading3" id="s1.4.1">Working with surveys</span></a>
+</li>
+<li class="heading3" id="i1.4.2" style="background:url() no-repeat;margin-top:2px;margin-left:0;padding-left:0px" onclick="return clicked(this,event)"><a class="heading3" id="a1.4.2" href="work-with-employee-engagement-recognition.html"><span class="heading3" id="s1.4.2">Working with recognition tools</span></a>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i1.5" style="background:url() no-repeat;margin-top:2px;margin-left:0;padding-left:0px" onclick="return clicked(this,event)"><a class="heading2" id="a1.5" href="electronic-signature.html"><span class="heading2" id="s1.5">Digital signature providers (CryptoPro, NCA)</span></a>
+</li>
+<li class="heading2" id="i1.6" style="background:url() no-repeat;margin-top:2px;margin-left:0;padding-left:0px" onclick="return clicked(this,event)"><a class="heading2" id="a1.6" href="ses.html"><span class="heading2" id="s1.6">Simple electronic signature</span></a>
+</li>
+<li class="heading2" id="i1.7" style="background:url() no-repeat;margin-top:2px;margin-left:0;padding-left:0px" onclick="return clicked(this,event)"><a class="heading2" id="a1.7" href="telephony-sipnet.html"><span class="heading2" id="s1.7">SIPNET IP telephony</span></a>
+</li>
+<li class="heading2" id="i1.8" style="background:url() no-repeat;margin-top:2px;margin-left:0;padding-left:0px" onclick="return clicked(this,event)"><a class="heading2" id="a1.8" href="telephony-zadarma.html"><span class="heading2" id="s1.8">Zadarma IP telephony</span></a>
+</li>
+<li class="heading2" id="i1.9" data-bg="expanded-plus.png;collapsed-minus.png" style="background:url(collapsed-minus.png) no-repeat;cursor:pointer;margin-top:2px;margin-left:0;padding-left:12px" onclick="return clicked(this,event)"><a class="heading2" id="a1.9" href="audit_service.html"><span class="heading2" id="s1.9" ondblclick="return dblclicked(this)">Security Audit</span></a>
+<ul id="ul1.9" style="list-style-type:none;margin-left:8px;padding:0">
+<li class="heading3" id="i1.9.1" style="background:url() no-repeat;margin-top:2px;margin-left:0;padding-left:0px" onclick="return clicked(this,event)"><a class="heading3" id="a1.9.1" href="audit_extension.html"><span class="heading3" id="s1.9.1">Security Audit report</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<script type="text/javascript">loadicons('collapsed-minus.png','expanded-plus.png');</script>
+            </div>
+        </aside>
+
+        <article class="article" id="article">
+            <section class="article-inner">
+                
+                    ﻿<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+    <symbol viewBox="0 0 17 10" id="arrow-icon">
+        <rect x="0.000366211" y="4" width="15.0005" height="2" />
+        <rect x="12.9996" y="2" width="2.00006" height="2" />
+        <rect x="10.9999" width="2.00006" height="2" />
+        <rect x="15.0007" y="4" width="2.00006" height="2" />
+        <rect x="12.9996" y="6" width="2.00006" height="2" />
+        <rect x="10.9999" y="8" width="2.00006" height="2" />
+    </symbol>
+    <symbol viewBox="0 0 24 24" id="academy-icon">
+        <path
+            d="M3.51563 5.90625L3.78125 5.98438V7.45313C3.50781 7.61719 3.3125 7.90234 3.3125 8.24609C3.3125 8.57422 3.49219 8.84766 3.74609 9.01563L3.13672 11.4531C3.07031 11.7227 3.21875 12 3.43359 12H5.06641C5.28125 12 5.42969 11.7227 5.36328 11.4531L4.75391 9.01953C5.00781 8.85156 5.1875 8.57812 5.1875 8.25C5.1875 7.90625 4.99219 7.62109 4.71875 7.45703V6.26562L6.53906 6.80469C6.28125 7.44531 6.125 8.14063 6.125 8.875C6.125 11.9805 8.64453 14.5 11.75 14.5C14.8555 14.5 17.375 11.9805 17.375 8.875C17.375 8.14063 17.2187 7.44531 16.9609 6.80469L19.9844 5.90625C20.6719 5.70313 20.6719 4.54687 19.9844 4.34375L12.4102 2.09766C12.1914 2.03125 11.9727 2 11.75 2C11.5273 2 11.3086 2.03125 11.0898 2.09766L3.51563 4.34375C2.82813 4.54687 2.82813 5.70313 3.51563 5.90625ZM11.75 12.625C9.68359 12.625 8 10.9414 8 8.875C8 8.32422 8.12891 7.80859 8.34375 7.33984L11.0937 8.15625C11.6719 8.32813 12.1563 8.23438 12.4141 8.15625L15.1641 7.33984C15.3789 7.80859 15.5078 8.32812 15.5078 8.875C15.5 10.9414 13.8164 12.625 11.75 12.625ZM11.625 3.89453C11.6641 3.88281 11.7539 3.85938 11.8789 3.89453L16.0273 5.125L11.875 6.35547C11.793 6.37891 11.7109 6.38281 11.6211 6.35547L7.47266 5.125L11.625 3.89453ZM15.4766 14.5234L11.75 17.625L8.02344 14.5234C5.23047 14.6445 3 16.9297 3 19.75V20.125C3 21.1602 3.83984 22 4.875 22H18.625C19.6602 22 20.5 21.1602 20.5 20.125V19.75C20.5 16.9297 18.2695 14.6445 15.4766 14.5234V14.5234ZM10.8125 20.125H4.875V19.75C4.875 18.1719 5.96484 16.8437 7.45312 16.4883L10.8125 19.2852V20.125ZM18.625 20.125H12.6875V19.2852L16.0469 16.4883C17.5352 16.8437 18.625 18.1719 18.625 19.75V20.125Z" />
+    </symbol>
+    <symbol viewBox="0 0 24 24" id="kb-icon">
+        <path
+            d="M8 7.9375V6.6875C8 6.51562 8.14062 6.375 8.3125 6.375H16.4375C16.6094 6.375 16.75 6.51562 16.75 6.6875V7.9375C16.75 8.10938 16.6094 8.25 16.4375 8.25H8.3125C8.14062 8.25 8 8.10938 8 7.9375ZM8.3125 11.375H16.4375C16.6094 11.375 16.75 11.2344 16.75 11.0625V9.8125C16.75 9.64062 16.6094 9.5 16.4375 9.5H8.3125C8.14062 9.5 8 9.64062 8 9.8125V11.0625C8 11.2344 8.14062 11.375 8.3125 11.375ZM19.9961 17.6133C19.832 18.1211 19.832 19.6289 19.9961 20.1367C20.2812 20.1914 20.5 20.4453 20.5 20.75V21.375C20.5 21.7188 20.2188 22 19.875 22H6.125C4.39844 22 3 20.6016 3 18.875V5.125C3 3.39844 4.39844 2 6.125 2H19.875C20.2188 2 20.5 2.28125 20.5 2.625V17C20.5 17.3047 20.2852 17.5547 19.9961 17.6133ZM18.3906 17.625H6.125C5.4375 17.625 4.875 18.1875 4.875 18.875C4.875 19.5664 5.43359 20.125 6.125 20.125H18.3906C18.2852 19.4492 18.2852 18.3008 18.3906 17.625ZM18.625 3.875H6.125C5.43359 3.875 4.875 4.43359 4.875 5.125V16.0117C5.25781 15.8438 5.67969 15.75 6.125 15.75H18.625V3.875Z" />
+    </symbol>
+    <symbol viewBox="0 0 24 24" id="forum-icon">
+        <path
+            d="M21 8.25H17.25V4.5C17.25 3.12109 16.1289 2 14.75 2H3.5C2.12109 2 1 3.12109 1 4.5V10.75C1 12.1289 2.12109 13.25 3.5 13.25H4.75V15.2812C4.75 15.5586 4.97656 15.75 5.21875 15.75C5.3125 15.75 5.41016 15.7227 5.49609 15.6562L8.5 13.957V17C8.5 18.3789 9.62109 19.5 11 19.5H14.75L19.0039 21.9062C19.0898 21.9688 19.1875 22 19.2812 22C19.5234 22 19.75 21.8086 19.75 21.5312V19.5H21C22.3789 19.5 23.5 18.3789 23.5 17V10.75C23.5 9.37109 22.3789 8.25 21 8.25ZM4.75 11.375H3.5C3.15625 11.375 2.875 11.0938 2.875 10.75V4.5C2.875 4.15625 3.15625 3.875 3.5 3.875H14.75C15.0937 3.875 15.375 4.15625 15.375 4.5V10.75C15.375 11.0938 15.0937 11.375 14.75 11.375H9.25781L8.82812 11.6172L6.625 12.8633V11.375H4.75ZM21.625 17C21.625 17.3438 21.3437 17.625 21 17.625H17.875V19.1133L15.6719 17.8672L15.2422 17.625H11C10.6562 17.625 10.375 17.3438 10.375 17V13.25H14.75C16.1289 13.25 17.25 12.1289 17.25 10.75V10.125H21C21.3437 10.125 21.625 10.4062 21.625 10.75V17Z" />
+    </symbol>
+    <symbol viewBox="0 0 24 24" id="sdk-icon">
+        <path
+            d="M22.8 14.6H20.4V5.3C20.4 3.4805 18.9199 2 17.1 2H3C1.3455 2 0 3.34588 0 5V7.4C0 8.0615 0.53775 8.6 1.2 8.6H4.2V17.129C4.2 19.208 5.76338 21.0838 7.89975 21.1903V21.2H19.5997C22.0267 21.2 24 19.226 24 16.8001V15.8C24 15.1385 23.4623 14.6 22.8 14.6ZM1.8 6.8V5C1.8 4.3385 2.33775 3.8 3 3.8C3.66225 3.8 4.2 4.3385 4.2 5V6.8H1.8ZM6 17.129V5C6 4.57325 5.91075 4.1675 5.74913 3.8H17.1C17.9273 3.8 18.6 4.47275 18.6 5.3V14.6H11.4C10.7378 14.6 10.2 15.1385 10.2 15.8V17.3C10.2 19.9993 6 20.2276 6 17.129ZM22.2 16.8001C22.2 18.2338 21.0341 19.4 19.5997 19.4H11.3666C11.7667 18.7768 12 18.053 12 17.3V16.4H22.2V16.8001Z"
+            fill="currentColor" />
+        <path d="M8.63989 6.79999L16.3199 6.79999" stroke="currentColor" stroke-width="2" />
+        <path d="M8.63989 9.67999L16.3199 9.67999" stroke="currentColor" stroke-width="2" />
+    </symbol>
+    <symbol viewBox="0 0 58 56" id="crm-icon">
+        <path d="M21.6505 1H1V19.0148H21.6505V1Z" stroke="currentColor" stroke-miterlimit="10" />
+        <path d="M19.6207 19.0142H3.03125V23.1045H19.6207V19.0142Z" stroke="currentColor" stroke-miterlimit="10" />
+        <path d="M17.3892 23.1572H5.26172V26.7591H17.3892V23.1572Z" stroke="currentColor" stroke-miterlimit="10" />
+        <path d="M21.6514 10.3833H34.9733" stroke="currentColor" stroke-miterlimit="10" stroke-linejoin="round" />
+        <path d="M29.8047 5.88379L35.1797 10.3828L29.8047 14.8819" stroke="currentColor" stroke-miterlimit="10"
+            stroke-linejoin="bevel" />
+        <path d="M33.2905 11.9537L35.1803 10.4302L33.2666 8.85352L33.2905 11.9537Z" fill="currentColor" />
+        <path
+            d="M11.3239 54.9719C17.0234 54.9719 21.6438 50.3515 21.6438 44.652C21.6438 38.9524 17.0234 34.332 11.3239 34.332C5.62431 34.332 1.00391 38.9524 1.00391 44.652C1.00391 50.3515 5.62431 54.9719 11.3239 54.9719Z"
+            stroke="currentColor" stroke-miterlimit="10" />
+        <path d="M16.1372 41.064L10.2977 48.0395L6.5127 43.5192" stroke="currentColor" stroke-miterlimit="10"
+            stroke-linejoin="bevel" />
+        <path d="M8.97559 46.1814L10.2576 47.7926L11.5848 46.1602L8.97559 46.1814Z" fill="currentColor" />
+        <path d="M47.2566 1.56201L37.5498 10.4035L47.2566 19.245L56.9634 10.4035L47.2566 1.56201Z" stroke="currentColor"
+            stroke-miterlimit="10" />
+        <path
+            d="M46.0891 2.62695L38.5986 9.44853C38.5986 10.2103 38.5986 10.5978 38.5986 11.3623L46.0891 18.1839C46.9836 18.1839 47.5277 18.1839 48.4222 18.1839L55.9127 11.3623C55.9127 10.6005 55.9127 10.213 55.9127 9.44853L48.4222 2.62695C47.5277 2.62695 46.9836 2.62695 46.0891 2.62695Z"
+            stroke="currentColor" stroke-miterlimit="10" />
+        <path d="M47.2549 18.5684V36.6601" stroke="currentColor" stroke-miterlimit="10" />
+        <path d="M55.248 52.6473V36.6631H39.2638V52.6473H55.248Z" stroke="currentColor" stroke-miterlimit="10" />
+        <path
+            d="M39.2646 50.8696V38.4395C39.9574 37.7467 40.3476 37.3566 41.043 36.6611H53.4732C54.1659 37.3539 54.5561 37.7441 55.2515 38.4395V50.8696C54.5588 51.5624 54.1686 51.9526 53.4732 52.648H41.043C40.3476 51.9526 39.9574 51.5624 39.2646 50.8696Z"
+            stroke="currentColor" stroke-miterlimit="10" />
+        <path d="M43.377 46.8418H48.2343" stroke="currentColor" stroke-miterlimit="10" />
+        <path d="M43.377 42.4653H51.1302" stroke="currentColor" stroke-miterlimit="10" />
+        <path d="M39.2548 44.6523H24.8711" stroke="currentColor" stroke-miterlimit="10" stroke-linejoin="round" />
+        <path d="M30.039 49.1514L24.6641 44.6524L30.039 40.1533" stroke="currentColor" stroke-miterlimit="10"
+            stroke-linejoin="bevel" />
+        <path d="M26.5539 43.0811L24.6641 44.6046L26.5778 46.1839L26.5539 43.0811Z" fill="currentColor" />
+        <path d="M5.39941 15.7414L5.68077 14.7089C6.29922 12.4447 8.29792 10.8813 10.57 10.8813H10.6072"
+            stroke="currentColor" stroke-miterlimit="10" stroke-linejoin="round" />
+        <path d="M17.2495 15.7414L16.9681 14.7089C16.3497 12.4447 14.351 10.8813 12.0789 10.8813H12.0391"
+            stroke="currentColor" stroke-miterlimit="10" stroke-linejoin="round" />
+        <path
+            d="M10.6096 10.5948H10.5353C9.14441 10.2418 8.11719 8.98365 8.11719 7.48396C8.11719 5.71088 9.55317 4.2749 11.3262 4.2749C13.0993 4.2749 14.5353 5.71088 14.5353 7.48396C14.5353 8.98365 13.5054 10.2444 12.1146 10.5975H12.0403"
+            stroke="currentColor" stroke-miterlimit="10" stroke-linejoin="round" />
+        <path d="M43.8638 11.8833L45.3428 10.4043L43.8638 8.92533L42.3848 10.4043L43.8638 11.8833Z"
+            fill="currentColor" />
+        <path d="M50.6548 11.8833L52.1338 10.4043L50.6548 8.92533L49.1759 10.4043L50.6548 11.8833Z"
+            fill="currentColor" />
+        <path d="M36.2861 33.8257L39.1926 36.7322" stroke="currentColor" stroke-miterlimit="10" />
+        <path
+            d="M31.2398 35.5324C35.2917 35.5324 38.5763 32.2477 38.5763 28.1959C38.5763 24.144 35.2917 20.8594 31.2398 20.8594C27.188 20.8594 23.9033 24.144 23.9033 28.1959C23.9033 32.2477 27.188 35.5324 31.2398 35.5324Z"
+            stroke="currentColor" stroke-miterlimit="10" />
+        <path d="M27.373 28.1978H35.1103" stroke="currentColor" stroke-miterlimit="10" />
+        <path d="M31.2412 32.0676V24.3276" stroke="currentColor" stroke-miterlimit="10" />
+        <path d="M31.2408 29.6757L32.7197 28.1968L31.2408 26.7178L29.7618 28.1968L31.2408 29.6757Z"
+            fill="currentColor" />
+        <path d="M39.2646 52.6449V50.8691L41.0404 52.6449H39.2646Z" fill="currentColor" />
+        <path d="M39.2646 36.6606H41.0404L39.2646 38.439V36.6606Z" fill="currentColor" />
+        <path d="M55.2501 36.6606V38.439L53.4717 36.6606H55.2501Z" fill="currentColor" />
+        <path d="M55.2501 52.6449H53.4717L55.2501 50.8691V52.6449Z" fill="currentColor" />
+        <path d="M38.7185 9.52295L37.6436 10.3883L38.7318 11.2854L38.7185 9.52295Z" fill="currentColor" />
+        <path d="M55.9244 11.2854L56.9994 10.4201L55.9111 9.52295L55.9244 11.2854Z" fill="currentColor" />
+        <path d="M48.1384 2.53447L47.2731 1.45947L46.376 2.54774L48.1384 2.53447Z" fill="currentColor" />
+        <path d="M46.376 18.2418L47.2413 19.2451L48.1384 18.2285L46.376 18.2418Z" fill="currentColor" />
+    </symbol>
+    <symbol viewBox="0 0 60 56" id="ecm-icon">
+        <path d="M8.41113 23.3615V5.80029H48.3669L48.3669 10.9559M8.41113 44.6283V50.5894H20.0112" stroke="currentColor"
+            stroke-miterlimit="10" />
+        <path d="M8.41113 5.80029V8.05586L10.6667 5.80029H8.41113Z" fill="currentColor" />
+        <path d="M8.41113 50.5896H10.6667L8.41113 48.334V50.5896Z" fill="currentColor" />
+        <path d="M48.3669 5.80029H46.1113L48.3669 8.05586V5.80029Z" fill="currentColor" />
+        <path d="M20.0117 23.3611V18.4922C21.8215 16.68 22.8348 15.6653 24.6422 13.8555H41.1174" stroke="currentColor"
+            stroke-miterlimit="10" />
+        <path
+            d="M19.8501 26.2936C17.8577 24.1772 15.0529 22.8594 11.9458 22.8594C5.90058 22.8594 1 27.8475 1 34.0006C1 40.1537 5.90058 45.1418 11.9458 45.1418C15.0529 45.1418 17.8577 43.824 19.8501 41.7076"
+            stroke="currentColor" stroke-miterlimit="10" />
+        <path d="M18.6833 8.63846L17.0605 10.2612L18.6833 11.884L20.3061 10.2612L18.6833 8.63846Z"
+            fill="currentColor" />
+        <path d="M23.7907 8.63651L22.168 10.2593L23.7907 11.882L25.4135 10.2593L23.7907 8.63651Z" fill="currentColor" />
+        <path d="M13.5749 8.63651L11.9521 10.2593L13.5749 11.882L15.1977 10.2593L13.5749 8.63651Z"
+            fill="currentColor" />
+        <path d="M48.3674 32.545V55.4229H20.0117V23.0757C21.8286 21.2591 22.8489 20.2389 24.6658 18.4224H38.0562"
+            stroke="currentColor" stroke-miterlimit="10" />
+        <path d="M24.5225 23.8447H37.7336" stroke="currentColor" stroke-miterlimit="10" />
+        <path d="M24.5225 28.356H39.667" stroke="currentColor" stroke-miterlimit="10" />
+        <path d="M24.5225 32.5449H42.8892" stroke="currentColor" stroke-miterlimit="10" />
+        <path d="M24.5225 37.0562L42.8892 37.0545" stroke="currentColor" stroke-miterlimit="10" />
+        <path d="M24.5225 41.2446H31.4034" stroke="currentColor" stroke-miterlimit="10" />
+        <path
+            d="M27.582 49.2973C29.5904 49.1711 33.3669 46.7817 35.0754 43.9692L30.6422 51.3967H30.7588C30.7588 51.3967 33.0504 47.607 35.9963 47.1441C38.9447 46.6835 37.2361 50.008 35.5276 50.4709C33.819 50.9338 36.5341 46.728 44.3916 48.5188"
+            stroke="currentColor" stroke-miterlimit="10" />
+        <path d="M11.9541 55.5031V29.3896" stroke="currentColor" stroke-miterlimit="10" stroke-linejoin="round" />
+        <path d="M7.69238 37.0439L11.9541 29.1934L16.2159 37.0439" stroke="currentColor" stroke-miterlimit="10"
+            stroke-linejoin="bevel" />
+        <path d="M11.9538 29.3188L13.4059 31.8216H10.4521L11.9538 29.3188Z" fill="currentColor" />
+        <path
+            d="M48.254 32.4988C54.1885 32.4988 58.9993 27.688 58.9993 21.7536C58.9993 15.8191 54.1885 11.0083 48.254 11.0083C42.3196 11.0083 37.5088 15.8191 37.5088 21.7536C37.5088 27.688 42.3196 32.4988 48.254 32.4988Z"
+            stroke="currentColor" stroke-miterlimit="10" />
+        <path d="M48.3623 0L48.3623 26.8656" stroke="currentColor" stroke-miterlimit="10" stroke-linejoin="round" />
+        <path d="M52.7026 19.7207L48.4385 27.1486L44.1768 19.7207" stroke="currentColor" stroke-miterlimit="10"
+            stroke-linejoin="bevel" />
+        <path d="M48.439 27.0301L46.9893 24.6621H49.9406L48.439 27.0301Z" fill="currentColor" />
+        <path d="M20.0117 55.4226H22.2673L20.0117 53.167V55.4226Z" fill="currentColor" />
+        <path d="M48.3669 55.4226V53.167L46.1113 55.4226H48.3669Z" fill="currentColor" />
+        <path
+            d="M35.2687 50.6121C36.8623 50.6986 37.3553 48.6602 37.3553 48.6602C37.3553 48.6602 34.0827 50.5472 35.2687 50.6121Z"
+            fill="currentColor" />
+    </symbol>
+    <symbol id="start-icon" viewBox="0 0 58 58">
+        <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M32.175 26.646a4.084 4.084 0 005.74 0 3.996 3.996 0 000-5.688 4.084 4.084 0 00-5.74 0 3.996 3.996 0 000 5.688zm-.82.812a5.251 5.251 0 007.38 0 5.137 5.137 0 000-7.312 5.251 5.251 0 00-7.38 0 5.137 5.137 0 000 7.312z"
+            fill="currentColor" />
+        <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M51.442 7.553a.573.573 0 01.164.32c1.17 6.167-.411 11.744-2.842 16.192-2.43 4.448-5.724 7.8-8.04 9.538l-.016.011-13.937 9.75a.583.583 0 01-.335.105c-.156 0-.339-.04-.521-.097a6.157 6.157 0 01-.723-.28c-.575-.26-1.353-.682-2.357-1.344-1.976-1.306-3.052-2.197-3.367-2.509-.314-.312-1.214-1.379-2.532-3.337-.669-.995-1.095-1.767-1.357-2.336a6.037 6.037 0 01-.283-.716 1.835 1.835 0 01-.097-.517.57.57 0 01.106-.331l9.838-13.812.012-.016c1.754-2.294 5.136-5.56 9.624-7.967 4.489-2.41 10.117-3.977 16.34-2.816a.583.583 0 01.323.162zm-.91.901c-5.748-.971-10.97.493-15.2 2.763-4.328 2.322-7.584 5.47-9.247 7.643L16.392 32.47l.013.043c.042.136.114.327.23.578.23.5.623 1.218 1.266 2.174 1.304 1.938 2.153 2.93 2.387 3.162M50.532 8.454c.98 5.697-.498 10.872-2.788 15.064-2.343 4.288-5.52 7.515-7.713 9.163l-13.733 9.606a5.012 5.012 0 01-.627-.24c-.505-.229-1.229-.618-2.193-1.256-1.956-1.292-2.958-2.134-3.191-2.365"
+            fill="currentColor" />
+        <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M23.694 21.556a.57.57 0 01-.06.542l-7.38 10.562a.583.583 0 01-.774.166L7.281 27.95a.574.574 0 01-.076-.931l5.33-4.469a.58.58 0 01.075-.054c2.18-1.296 5.608-2.29 10.66-1.29.192.039.351.17.424.349zm-10.447 1.903l-4.675 3.92 7.039 4.184 6.556-9.384c-4.264-.668-7.118.22-8.92 1.28zM37.312 35.05a.584.584 0 00-.547.06l-10.658 7.312a.571.571 0 00-.167.768l4.919 8.125a.58.58 0 00.94.075l4.508-5.28a.562.562 0 00.055-.076c1.308-2.16 2.312-5.557 1.301-10.564a.575.575 0 00-.351-.42zm-1.92 10.353l-3.956 4.633-4.223-6.975 9.47-6.498c.674 4.226-.222 7.054-1.291 8.84zM41.15 15.427c-1.932-2.403-2.92-5.054-2.995-6.628l1.158-.054c.061 1.27.919 3.696 2.744 5.965 1.81 2.25 4.525 4.287 8.246 4.869l-.181 1.135c-4.068-.637-7.024-2.866-8.972-5.287zM13.73 37.614a.57.57 0 010 .812l-5.74 5.687a.583.583 0 01-.82 0 .57.57 0 010-.812l5.74-5.687a.583.583 0 01.82 0zM21.516 45.332a.57.57 0 010 .813l-5.739 5.687a.583.583 0 01-.82 0 .57.57 0 010-.813l5.74-5.687a.583.583 0 01.82 0zM14.14 45.332a.57.57 0 010 .813L8.4 51.831a.583.583 0 01-.82 0 .57.57 0 010-.813l5.74-5.687a.583.583 0 01.82 0zM25.616 33.145a1.75 1.75 0 002.46 0c.678-.673.678-1.764 0-2.437a1.75 1.75 0 00-2.46 0 1.712 1.712 0 000 2.437zm-.82.813a2.917 2.917 0 004.1 0 2.854 2.854 0 000-4.063 2.917 2.917 0 00-4.1 0 2.854 2.854 0 000 4.063z"
+            fill="currentColor" />
+        <path
+            d="M51.44 11.615l-4.098-4.062 3.689.406.41 3.656zM9.63 28.677v-2.438l-2.05 1.22 2.05 1.218zM30.125 48.988h2.46l-1.23 2.031-1.23-2.03z"
+            fill="currentColor" />
+    </symbol>
+    <symbol id="bpm-icon" viewBox="0 0 53 61">
+        <path d="M4.10159 60.0001H2.11719V58.0284L4.10159 60.0001Z" fill="currentColor" />
+        <path d="M10.1602 60.0001H8.17578V58.0284L10.1602 60.0001Z" fill="currentColor" />
+        <path d="M47.7012 60.0001H49.6826V58.0284L47.7012 60.0001Z" fill="currentColor" />
+        <path d="M43.7578 26.7611H45.7392V28.7328L43.7578 26.7611Z" fill="currentColor" />
+        <path d="M20.4395 19.0487H22.4208V21.0204L20.4395 19.0487Z" fill="currentColor" />
+        <path d="M47.7012 39.5315H49.6826V41.5032L47.7012 39.5315Z" fill="currentColor" />
+        <path d="M25.4375 28.7328V26.7611H27.4219L25.4375 28.7328Z" fill="currentColor" />
+        <path d="M8.17578 41.5032V39.5315H10.1602L8.17578 41.5032Z" fill="currentColor" />
+        <path d="M2.22852 21.0204V19.0487H4.20989L2.22852 21.0204Z" fill="currentColor" />
+        <path d="M35.612 31.6185L33.3848 33.8356L35.6127 36.0519L37.8399 33.8348L35.612 31.6185Z" fill="currentColor" />
+        <path d="M2.22719 9.27535L0 11.4924L2.22797 13.7087L4.45515 11.4917L2.22719 9.27535Z" fill="currentColor" />
+        <path d="M49.679 39.5826H8.17578V59.9849H49.679V39.5826Z" stroke="currentColor" stroke-linejoin="round" />
+        <path d="M22.2132 39.49V19.0757H1.97656V39.49V59.9524H22.2132" stroke="currentColor" stroke-linejoin="round" />
+        <path d="M45.7737 39.5135V26.8898H25.5371V39.5135" stroke="currentColor" stroke-linejoin="round" />
+        <path
+            d="M16.2377 53.4659C18.3462 53.4659 20.0555 51.765 20.0555 49.6668C20.0555 47.5686 18.3462 45.8677 16.2377 45.8677C14.1292 45.8677 12.4199 47.5686 12.4199 49.6668C12.4199 51.765 14.1292 53.4659 16.2377 53.4659Z"
+            stroke="currentColor" stroke-miterlimit="10" />
+        <path d="M29.5923 49.6675H25.4453" stroke="currentColor" stroke-miterlimit="10" />
+        <path d="M27.5176 51.7312V47.6014" stroke="currentColor" stroke-miterlimit="10" />
+        <path d="M19.7988 49.7329H22.5172" stroke="currentColor" stroke-miterlimit="10" />
+        <path d="M32.4824 49.7329H34.8987" stroke="currentColor" stroke-miterlimit="10" />
+        <path d="M27.5166 44.5614L22.3887 49.6643L27.5166 54.7672L32.6445 49.6643L27.5166 44.5614Z"
+            stroke="currentColor" stroke-miterlimit="10" />
+        <path d="M45.4407 46.2916H34.7969V53.0423H45.4407V46.2916Z" stroke="currentColor" stroke-miterlimit="10" />
+        <path d="M26.3427 49.6671L27.5195 50.8381L28.6963 49.6671L27.5195 48.4961L26.3427 49.6671Z"
+            fill="currentColor" />
+        <path
+            d="M27.5256 6.09929C26.63 6.26224 25.7891 6.64362 25.0779 7.20929C24.3668 7.77496 23.8077 8.50728 23.4507 9.34068C23.0937 10.1741 22.95 11.0826 23.0323 11.9848C23.1147 12.8871 23.4206 13.7549 23.9226 14.5107C24.4246 15.2664 25.1071 15.8865 25.909 16.3155C26.7109 16.7444 27.6072 16.9688 28.5176 16.9685M44.2629 9.10574H43.3568V8.42647C43.3546 6.66729 42.7256 4.96589 41.5818 3.6246C40.4379 2.2833 38.8532 1.389 37.1093 1.10061C35.3655 0.812226 33.5753 1.14843 32.057 2.04948C30.5387 2.95053 29.3905 4.35806 28.8166 6.02196H28.5146C27.0992 6.07018 25.757 6.65953 24.7672 7.66742C23.7773 8.67531 23.216 10.0241 23.2001 11.4333C23.1841 12.8425 23.7147 14.2036 24.6815 15.2334C25.6483 16.2633 26.9768 16.8826 28.3908 16.9625H29.025H44.2539C45.3033 16.9625 46.3097 16.5477 47.0517 15.8093C47.7937 15.0708 48.2106 14.0694 48.2106 13.0251C48.2106 11.9808 47.7937 10.9793 47.0517 10.2409C46.3097 9.50254 45.3033 9.08771 44.2539 9.08771L44.2629 9.10574Z"
+            stroke="currentColor" stroke-miterlimit="10" />
+        <path d="M35.6152 33.8393V6.79456" stroke="currentColor" stroke-linejoin="round" />
+        <path d="M30.3223 14.7534L35.617 6.61108L40.9148 14.7534" stroke="currentColor" stroke-linejoin="bevel" />
+        <path d="M35.6252 6.61108L37.078 8.87132H34.1543L35.6252 6.61108Z" fill="currentColor" />
+        <path d="M2.22852 11.4924H20.3418" stroke="currentColor" stroke-linejoin="round" />
+        <path d="M12.3457 6.22034L20.5279 11.4922L12.3457 16.7611" stroke="currentColor" stroke-linejoin="bevel" />
+        <path d="M20.5291 11.4982L18.2578 12.9439V10.0344L20.5291 11.4982Z" fill="currentColor" />
+        <path
+            d="M5.86719 24.7109H10.0595M5.86719 32.8502H10.0595H5.86719ZM5.86719 32.8502H7.41665H5.86719ZM5.86719 28.7806H10.0595H5.86719Z"
+            stroke="currentColor" stroke-linejoin="round" />
+        <path
+            d="M14.127 24.7109H18.3193M14.127 32.8502H18.3193H14.127ZM14.127 32.8502H15.6764H14.127ZM14.127 28.7806H18.3193H14.127Z"
+            stroke="currentColor" stroke-linejoin="round" />
+        <path
+            d="M39.2793 27.1395C39.2793 26.7598 39.3544 26.3838 39.5005 26.033C39.6465 25.6822 39.8605 25.3634 40.1303 25.0949C40.4001 24.8264 40.7205 24.6135 41.073 24.4681C41.4255 24.3228 41.8033 24.248 42.1849 24.248H48.9808C49.7517 24.248 50.4911 24.5526 51.0364 25.0947C51.5818 25.6369 51.8886 26.3723 51.8894 27.1395V27.1395C51.8894 27.9071 51.583 28.6433 51.0375 29.1861C50.492 29.729 49.7522 30.0339 48.9808 30.0339H45.7731"
+            stroke="currentColor" stroke-linejoin="round" />
+    </symbol>
+</svg>
+
+<div class="index-help">
+    <h1 class="vis-hidden">Functions</h1>
+    <article itemscope itemtype="https://schema.org/WebSite" class="card-stack-50">
+        <div class="card-stack__item">
+            <section class="item-card item-card--flat item-card--revert-title">
+                <header class="item-card__header">
+                    <h2 class="item-card__title">
+                        <a href="how_to_create_an_app.html">
+                            <span itemprop="name" class="text-marker">Getting Started</span>
+                        </a>
+                    </h2>
+                    <svg class="icon-1x">
+                        <use xlink:href="#start-icon">
+                    </svg>
+                   <script type="text/javascript">
+     function loadicons() { var icons = new Array(); for (i=0; i<arguments.length; i++) { icons[i] = new Image(); icons[i].src = arguments[i]; } }
+     function loadtoc() { loadstate(document.getElementById("toc")); }
+     function savetoc() { savestate(document.getElementById("toc")); }
+     function clicked(node, event) { deselect(); hmNodeClicked(node, event); }
+     function dblclicked(node) { hmNodeDblclicked(node); }
+     function deselect() { if (window.getSelection) window.getSelection().removeAllRanges(); else if (document.selection) document.selection.empty(); }
+     $(document).ready(function(){
+       loadtoc();
+       $(window).onunload = savetoc;
+     });
+   </script>
+</header>
+                <div class="item-card__body">
+                    <p itemprop="description">Creating your first app. Basic business process settings. Overview of tools for monitoring and reporting.</p>
+                </div>
+            </section>
+        </div>
+        <div class="card-stack__item">
+            <section class="item-card item-card--flat item-card--revert-title">
+                <header class="item-card__header">
+                    <h2 class="item-card__title">
+                        <a itemprop="name" href="360008121732.html">Business Processes</a>
+                    </h2>
+                    <svg class="icon-1x">
+                        <use xlink:href="#bpm-icon">
+                    </svg>
+                   <script type="text/javascript">
+     function loadicons() { var icons = new Array(); for (i=0; i<arguments.length; i++) { icons[i] = new Image(); icons[i].src = arguments[i]; } }
+     function loadtoc() { loadstate(document.getElementById("toc")); }
+     function savetoc() { savestate(document.getElementById("toc")); }
+     function clicked(node, event) { deselect(); hmNodeClicked(node, event); }
+     function dblclicked(node) { hmNodeDblclicked(node); }
+     function deselect() { if (window.getSelection) window.getSelection().removeAllRanges(); else if (document.selection) document.selection.empty(); }
+     $(document).ready(function(){
+       loadtoc();
+       $(window).onunload = savetoc;
+     });
+   </script>
+</header>
+                <div class="item-card__body">
+                    <p itemprop="description">Modeling business processes in the low-code designer. Sequence diagrams and BPMN processes. Debugging tools. Process monitoring.</p>
+                </div>
+            </section>
+        </div>
+        <div class="card-stack__item">
+            <section class="item-card item-card--flat item-card--revert-title">
+                <header class="item-card__header">
+                    <h2 class="item-card__title">
+                        <a itemprop="name" href="360012584940.html">CRM</a>
+                    </h2>
+                    <svg class="icon-1x">
+                        <use xlink:href="#crm-icon">
+                    </svg>
+                   <script type="text/javascript">
+     function loadicons() { var icons = new Array(); for (i=0; i<arguments.length; i++) { icons[i] = new Image(); icons[i].src = arguments[i]; } }
+     function loadtoc() { loadstate(document.getElementById("toc")); }
+     function savetoc() { savestate(document.getElementById("toc")); }
+     function clicked(node, event) { deselect(); hmNodeClicked(node, event); }
+     function dblclicked(node) { hmNodeDblclicked(node); }
+     function deselect() { if (window.getSelection) window.getSelection().removeAllRanges(); else if (document.selection) document.selection.empty(); }
+     $(document).ready(function(){
+       loadtoc();
+       $(window).onunload = savetoc;
+     });
+   </script>
+</header>
+                <div class="item-card__body">
+                    <p itemprop="description">Deal management, sales pipelines, reports, deal dynamics, and revenue forecast. Customer and contact databases. Sales activities. Granular access permissions.</p>
+                </div>
+            </section>
+        </div>
+        <div class="card-stack__item">
+            <section class="item-card item-card--flat item-card--revert-title">
+                <header class="item-card__header">
+                    <h2 class="item-card__title">
+                        <a itemprop="name" href="document_management.html">Electronic Document Management</a>
+                    </h2>
+                    <svg class="icon-1x">
+                        <use xlink:href="#ecm-icon">
+                    </svg>
+                   <script type="text/javascript">
+     function loadicons() { var icons = new Array(); for (i=0; i<arguments.length; i++) { icons[i] = new Image(); icons[i].src = arguments[i]; } }
+     function loadtoc() { loadstate(document.getElementById("toc")); }
+     function savetoc() { savestate(document.getElementById("toc")); }
+     function clicked(node, event) { deselect(); hmNodeClicked(node, event); }
+     function dblclicked(node) { hmNodeDblclicked(node); }
+     function deselect() { if (window.getSelection) window.getSelection().removeAllRanges(); else if (document.selection) document.selection.empty(); }
+     $(document).ready(function(){
+       loadtoc();
+       $(window).onunload = savetoc;
+     });
+   </script>
+</header>
+                <div class="item-card__body">
+                    <p itemprop="description">Document Type Apps. Categorization and registration. Ready-made document routes.
+                        Document template. Digital signature. Access settings.
+                    </p>
+                </div>
+            </section>
+        </div>
+    </article>
+    <h2>Roles</h2>
+    <article class="card-stack-50">
+        <div class="card-stack__item">
+            <section class="item-card">
+                <header class="item-card__header">
+                    <h2 class="item-card__title">Low-Code developer</h2>
+                   <script type="text/javascript">
+     function loadicons() { var icons = new Array(); for (i=0; i<arguments.length; i++) { icons[i] = new Image(); icons[i].src = arguments[i]; } }
+     function loadtoc() { loadstate(document.getElementById("toc")); }
+     function savetoc() { savestate(document.getElementById("toc")); }
+     function clicked(node, event) { deselect(); hmNodeClicked(node, event); }
+     function dblclicked(node) { hmNodeDblclicked(node); }
+     function deselect() { if (window.getSelection) window.getSelection().removeAllRanges(); else if (document.selection) document.selection.empty(); }
+     $(document).ready(function(){
+       loadtoc();
+       $(window).onunload = savetoc;
+     });
+   </script>
+</header>
+                <div class="item-card__body">
+                    <ul itemscope itemtype="http://schema.org/SiteNavigationElement">
+                        <li>
+                            <h3><a itemprop="url" href="360006963072.html">Apps</a></h3>
+                            <p><a href="360006963072.html">Creating and configuring apps. App items.  
+                                Access settings, app views, and statuses. Data export and import. System objects.
+                            </a></p>
+                        </li>
+                        <li>
+                            <h3><a itemprop="url" href="360008121732.html">Business Processes</a></h3>
+                            <p><a href="360008121732.html">Modeling processes, adding context variables, creating form templates, debugging.</a></p>
+                        </li>
+                        <li>
+                            <h3><a itemprop="url" href="interface_settings.html">Interfaces</a></h3>
+                            <p><a href="interface_settings.html">Interface designer. Widgets and pages. Context types. Scripts.</a></p>
+                        </li>
+                        <li>
+                            <h3><a itemprop="url" href="create_form.html">Forms</a></h3>
+                            <p><a href="create_form.html">Basic settings and advanced mode. Calculated fields, dynamic forms, and templates.</a></p>
+                        </li>
+                    </ul>
+                </div>
+                <footer class="item-card__footer">
+                    <a class="arrow-link" href="interface_settings.html">More articles<svg class="icon-1x">
+                            <use xlink:href="#arrow-icon">
+                        </svg></a>
+                </footer>
+            </section>
+        </div>
+        <div class="card-stack__item">
+            <section class="item-card">
+                <header class="item-card__header">
+                    <h2 class="item-card__title">User</h2>
+                   <script type="text/javascript">
+     function loadicons() { var icons = new Array(); for (i=0; i<arguments.length; i++) { icons[i] = new Image(); icons[i].src = arguments[i]; } }
+     function loadtoc() { loadstate(document.getElementById("toc")); }
+     function savetoc() { savestate(document.getElementById("toc")); }
+     function clicked(node, event) { deselect(); hmNodeClicked(node, event); }
+     function dblclicked(node) { hmNodeDblclicked(node); }
+     function deselect() { if (window.getSelection) window.getSelection().removeAllRanges(); else if (document.selection) document.selection.empty(); }
+     $(document).ready(function(){
+       loadtoc();
+       $(window).onunload = savetoc;
+     });
+   </script>
+</header>
+                <div class="item-card__body">
+                    <ul itemscope itemtype="http://schema.org/SiteNavigationElement">
+                        <li>
+                            <h3><a itemprop="url" href="360014351011.html">Tasks</a></h3>
+                            <p><a href="360014351011.html">Creating and reassigning tasks, task deadlines, task tracking, task search.</a></p>
+                        </li>
+                        <li>
+                            <h3><a itemprop="url" href="360014162972.html">Messages</a></h3>
+                            <p><a href="360014162972.html">Activity stream, chats, and channels. Mentions, notifications, and sharing files.</a></p>
+                        </li>
+                        <li>
+                            <h3><a itemprop="url" href="360028290132.html">Calendar</a></h3>
+                            <p><a href="360028290132.html">Personal calendar. Workspace calendar, events, and event statuses.</a></p>
+                        </li>
+                        <li>
+                            <h3><a itemprop="url" href="360016398552.html">User Profile</a></h3>
+                            <p><a href="360016398552.html">User profile settings. Company, My department, schedule compliance. Mobile and desktop apps.</a></p>
+                        </li>
+                    </ul>
+                </div>
+                <footer class="item-card__footer">
+                    <a class="arrow-link" href="360028290132.html">More articles
+                        <svg class="icon-1x">
+                            <use xlink:href="#arrow-icon">
+                        </svg></a>
+                </footer>
+            </section>
+        </div>
+        <div class="card-stack__item">
+            <section class="item-card">
+                <header class="item-card__header">
+                    <h2 class="item-card__title">Developer</h2>
+                   <script type="text/javascript">
+     function loadicons() { var icons = new Array(); for (i=0; i<arguments.length; i++) { icons[i] = new Image(); icons[i].src = arguments[i]; } }
+     function loadtoc() { loadstate(document.getElementById("toc")); }
+     function savetoc() { savestate(document.getElementById("toc")); }
+     function clicked(node, event) { deselect(); hmNodeClicked(node, event); }
+     function dblclicked(node) { hmNodeDblclicked(node); }
+     function deselect() { if (window.getSelection) window.getSelection().removeAllRanges(); else if (document.selection) document.selection.empty(); }
+     $(document).ready(function(){
+       loadtoc();
+       $(window).onunload = savetoc;
+     });
+   </script>
+</header>
+                <div class="item-card__body">
+                    <ul itemscope itemtype="http://schema.org/SiteNavigationElement">
+                        <li>
+                            <h3><a itemprop="url" href="extentions.html">Modules</a></h3>
+                            <p><a href="extentions.html">Creating and configuring custom modules. Widgets, API, and business processes in custom modules. Custom modules export. Standard modules.</a></p>
+                        </li>
+                        <li>
+                            <h3><a itemprop="url" href="360009707032.html">Data Types</a></h3>
+                            <p><a href="360009707032.html">Description of data types.</a></p>
+                        </li>
+                        <li>
+                            <h3><a itemprop="url" href="360013707832.html">API</a></h3>
+                            <p><a href="360013707832.html">Introduction to Web API. Methods description. Scripts written on TypeScript.</a></p>
+                        </li>
+                        <li>
+                            <h3><a itemprop="url" href="https://tssdk.elma365.com/en/index.html">TS SDK</a></h3>
+                            <p><a href="https://tssdk.elma365.com/en/index.html">Object interfaces available via user scripts. Common data types.</a></p>
+                        </li>
+                    </ul>
+                </div>
+                <footer class="item-card__footer">
+                    <a class="arrow-link" href="extentions.html">More articles
+                        <svg class="icon-1x">
+                            <use xlink:href="#arrow-icon">
+                        </svg>
+                    </a>
+                </footer>
+            </section>
+        </div>
+        <div class="card-stack__item">
+            <section class="item-card">
+                <header class="item-card__header">
+                    <h2 class="item-card__title">Administrator</h2>
+                   <script type="text/javascript">
+     function loadicons() { var icons = new Array(); for (i=0; i<arguments.length; i++) { icons[i] = new Image(); icons[i].src = arguments[i]; } }
+     function loadtoc() { loadstate(document.getElementById("toc")); }
+     function savetoc() { savestate(document.getElementById("toc")); }
+     function clicked(node, event) { deselect(); hmNodeClicked(node, event); }
+     function dblclicked(node) { hmNodeDblclicked(node); }
+     function deselect() { if (window.getSelection) window.getSelection().removeAllRanges(); else if (document.selection) document.selection.empty(); }
+     $(document).ready(function(){
+       loadtoc();
+       $(window).onunload = savetoc;
+     });
+   </script>
+</header>
+                <div class="item-card__body">
+                    <ul itemscope itemtype="http://schema.org/SiteNavigationElement">
+                        <li>
+                            <h3><a itemprop="url" href="architecture.html">Architecture</a></h3>
+                            <p><a href="architecture.html">ELMA365 architecture. Leveraging ELMA365.</a></p>
+                        </li>
+                        <li>
+                            <h3><a itemprop="url" href="elma365-on-premises.html">ELMA365 On-Premises</a></h3>
+                            <p><a href="install_on_premise.html">Installing, updating, and activating ELMA365. Configuring SMTP and base URL. Logging.</a></p>
+                        </li>
+                        <li>
+                            <h3><a itemprop="url" href="elma365-standard-on-premises.html">System requirements</a></h3>
+                            <p><a href="elma365-standard-on-premises.html">ELMA365 Standard and ELMA365 Enterprise system requirements. End-user requirements.</a></p>
+                        </li>
+                        <li>
+                            <h3><a itemprop="url" href="licences.html">Licensing</a></h3>
+                            <p><a href="licences.html">License types. License activation and management. </a>
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                <footer class="item-card__footer">
+                    <a class="arrow-link" href="architecture.html">More articles
+                        <svg class="icon-1x">
+                            <use xlink:href="#arrow-icon">
+                        </svg></a>
+                </footer>
+            </section>
+        </div>
+    </article>
+<!--    <h2>Other resources</h2>
+    <article class="card-stack-25">
+        <div class="card-stack__item">
+            <section class="item-card item-card--flat">
+                <header class="item-card__header">
+                    <h2 class="item-card__title">
+                        <a href="https://elma-academy.com/ru/elma365">ELMA365 Academy</a>
+                    </h2>
+                    <svg class="icon-1x">
+                        <use xlink:href="#academy-icon">
+                    </svg>
+                   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_navigation.js"></script>
+   <script type="text/javascript">
+     function loadicons() { var icons = new Array(); for (i=0; i<arguments.length; i++) { icons[i] = new Image(); icons[i].src = arguments[i]; } }
+     function loadtoc() { loadstate(document.getElementById("toc")); }
+     function savetoc() { savestate(document.getElementById("toc")); }
+     function clicked(node, event) { deselect(); hmNodeClicked(node, event); }
+     function dblclicked(node) { hmNodeDblclicked(node); }
+     function deselect() { if (window.getSelection) window.getSelection().removeAllRanges(); else if (document.selection) document.selection.empty(); }
+     $(document).ready(function(){
+       loadtoc();
+       $(window).onunload = savetoc;
+     });
+   </script>
+</header>
+                <div class="item-card__body">
+                    <p>Join ELMA Academy and take online courses, get certificates, and master the ELMA365 low-code platform.</p>
+                </div>
+            </section>
+        </div>
+        <div class="card-stack__item">
+            <section class="item-card item-card--flat">
+                <header class="item-card__header">
+                    <h2 class="item-card__title">
+                        <a href="https://elma365.com/ru/kb/">Knowledge Base</a>
+                    </h2>
+                    <svg class="icon-1x">
+                        <use xlink:href="#kb-icon">
+                    </svg>
+                   <script type="text/javascript">
+     function loadicons() { var icons = new Array(); for (i=0; i<arguments.length; i++) { icons[i] = new Image(); icons[i].src = arguments[i]; } }
+     function loadtoc() { loadstate(document.getElementById("toc")); }
+     function savetoc() { savestate(document.getElementById("toc")); }
+     function clicked(node, event) { deselect(); hmNodeClicked(node, event); }
+     function dblclicked(node) { hmNodeDblclicked(node); }
+     function deselect() { if (window.getSelection) window.getSelection().removeAllRanges(); else if (document.selection) document.selection.empty(); }
+     $(document).ready(function(){
+       loadtoc();
+       $(window).onunload = savetoc;
+     });
+   </script>
+</header>
+                <div class="item-card__body">
+                    <p>Find examples on how to write scripts and use low-code designer to solve specific business tasks. Get the latest release news.</p>
+                </div>
+            </section>
+        </div>
+        <div class="card-stack__item">
+            <section class="item-card item-card--flat">
+                <header class="item-card__header">
+                    <h2 class="item-card__title">
+                        <a href="https://elma365.com/ru/forum/">Forum</a>
+                    </h2>
+                    <svg class="icon-1x">
+                        <use xlink:href="#forum-icon">
+                    </svg>
+                   <script type="text/javascript">
+     function loadicons() { var icons = new Array(); for (i=0; i<arguments.length; i++) { icons[i] = new Image(); icons[i].src = arguments[i]; } }
+     function loadtoc() { loadstate(document.getElementById("toc")); }
+     function savetoc() { savestate(document.getElementById("toc")); }
+     function clicked(node, event) { deselect(); hmNodeClicked(node, event); }
+     function dblclicked(node) { hmNodeDblclicked(node); }
+     function deselect() { if (window.getSelection) window.getSelection().removeAllRanges(); else if (document.selection) document.selection.empty(); }
+     $(document).ready(function(){
+       loadtoc();
+       $(window).onunload = savetoc;
+     });
+   </script>
+</header>
+                <div class="item-card__body">
+                    <p>Ask questions, connect with peers, discuss issues and solutions. Share your experience, ideas, and projects with the community.</p>
+                </div>
+            </section>
+        </div>
+        <div class="card-stack__item">
+            <section class="item-card item-card--flat">
+                <header class="item-card__header">
+                    <h2 class="item-card__title">
+                        <a href="https://tssdk.elma365.com/">TS SDK</a>
+                    </h2>
+                    <svg class="icon-1x">
+                        <use xlink:href="#sdk-icon">
+                    </svg>
+                   <script type="text/javascript">
+     function loadicons() { var icons = new Array(); for (i=0; i<arguments.length; i++) { icons[i] = new Image(); icons[i].src = arguments[i]; } }
+     function loadtoc() { loadstate(document.getElementById("toc")); }
+     function savetoc() { savestate(document.getElementById("toc")); }
+     function clicked(node, event) { deselect(); hmNodeClicked(node, event); }
+     function dblclicked(node) { hmNodeDblclicked(node); }
+     function deselect() { if (window.getSelection) window.getSelection().removeAllRanges(); else if (document.selection) document.selection.empty(); }
+     $(document).ready(function(){
+       loadtoc();
+       $(window).onunload = savetoc;
+     });
+   </script>
+</header>
+                <div class="item-card__body">
+                    <p>Study object interfaces, common data types, and global constants. Learn how to work with system objects.</p>
+                </div>
+            </section>
+        </div>
+    </article>    -->
+</div>
+                
+                
+            </section>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+             <div class="footer-mobile">
+                  <ul class="footer-mobile__list"><li><a href="https://brix365.com/">BRIX 365</a></li></ul>
+                  
+             </div>
+             <div class="footer-wrap">
+                  <span class="footer-copy">&copy; 2025 BRIX</span>
+                  <ul class="footer-list">
+                      
+                      
+                  </ul>
+             </div>
+        </div>                              
+    </footer>
+
+    <iframe name="hmnavigation" style="display:none!important"></iframe>
+
+    <script src="./jquery-ui.js"></script>
+    <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
+    <script src="./jquery.tocify.min.js"></script>
+    <script src="./TypoReporter.min.js"></script>
+    <script src="./main.js"></script>
+
+    <!--
+    
+        <script src="./index-page.js"></script>
+    
+    
+    -->
+
+</body>
+
+</html>

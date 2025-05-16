@@ -1,0 +1,123 @@
+﻿.glossary-abc__nav-wrap {
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+    background: #fff;
+    margin-bottom: 10px;
+    padding: 1rem 0 0.5rem;
+}
+
+.glossary-abc__nav li:first-child {
+    margin-top: .75rem !important;
+}
+
+.glossary-abc__nav-wrap-inner {
+    overflow: hidden;
+    overflow-x: auto;
+}
+
+.glossary-abc__nav {
+    display: flex;
+    margin: 0;
+    padding: 0 0 0.3em;
+    list-style: none;
+}
+
+.glossary-abc__nav li {
+    margin-top: 0 !important;
+    padding: 0 10px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.glossary-abc__nav li a {
+    color: #9a9a9a;
+    text-decoration: none !important;
+    border-bottom: 1px solid transparent;
+}
+
+.glossary-abc__nav li a.--active,
+.glossary-abc__nav li a:hover {
+    border-bottom-color: inherit;
+    color: #040404 !important;
+}
+
+.glossary-abc__table-wrapper {
+    overflow: auto;
+    max-width: 100%;
+}
+
+.glossary-abc__table caption {
+    margin: 20px 0 40px;
+    padding: 0.3rem 10px;
+    background-color: #DFE9F1;
+    text-align: left;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.glossary-abc__table tbody tr>th,
+.glossary-abc__table td {
+    padding: 0.5rem 0 !important;
+    vertical-align: top;
+    text-align: left;
+    font-size: 12px;
+    line-height: 22px;
+}
+
+
+.glossary-abc__table tbody tr>th,
+.glossary-abc__table td:not(:last-child) {
+    font-weight: 700;
+}
+
+.glossary-abc__table td {
+    border: 0 !important;
+    min-width: 180px;
+    padding-left: 40px !important;
+}
+
+table.glossary-abc__table {
+    width: 100% !important;
+}
+
+.glossary-abc__table tbody tr>th {
+    min-width: 32px;
+}
+
+.glossary-abc__table td:nth-child(2),
+.glossary-abc__table td:nth-child(3) {
+    width: 196px;
+}
+
+.glossary-abc__table td:last-child {
+    width: 470px;
+}
+
+@media (max-width: 1200px) {
+    .glossary-abc__table td:nth-child(3) {
+        width: 180px;
+    }
+    .glossary-abc__table td {
+        border: 0 !important;
+        min-width: 150px;
+        padding-left: 30px !important;
+    }
+}
+
+.glossary-abc__table tbody tr:not(:first-child)>th {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.glossary-abc__table tbody tr:first-child>th,
+.glossary-abc__table tbody tr:first-child>td {
+    padding-top: 40px !important;
+}
+
+.glossary-abc__table tbody tr>th {
+    color: #0D4A75;
+    font-size: 30px;
+    line-height: 1;
+}

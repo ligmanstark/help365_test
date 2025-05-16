@@ -1,0 +1,213 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>EQL search widget</title>
+    <meta name="generator" content="Help+Manual" />
+    <meta name="keywords" content="" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The EQL search widget is placed on app forms and pages and enables search queries in EQL365 (BRIX Query Language). Users will be able to apply operations and functions of the..." />
+    <meta name="picture" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Full documentation for BRIX365 platform. Low-code developer guide. User guide. Admin guide. Developer guide." />
+    <meta property="og:url" content="https://brix365.com/en/help" />
+    <meta property="og:image" content="" />                                                              
+    <link rel="icon" href="favicon.png" type="image/png" />
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./jquery-ui.css" />
+    <link rel="stylesheet" href="default.css" />
+    <link rel="stylesheet" href="./search-yandex.css" />
+    <link rel="stylesheet" href="./article.css" />
+    <link rel="stylesheet" href="./glossary.css" />
+    <link rel="stylesheet" href="./theme.css" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+
+<body>
+    
+    <script>!function(e,t,c,n,r,a,m){e.ym=e.ym||function(){(e.ym.a=e.ym.a||[]).push(arguments)},e.ym.l=1*new Date;for(var s=0;s<document.scripts.length;s++)if(document.scripts[s].src===n)return;a=t.createElement(c),m=t.getElementsByTagName(c)[0],a.async=1,a.src=n,m.parentNode.insertBefore(a,m)}(window,document,"script","https://mc.yandex.ru/metrika/tag.js"),ym(83179930,"init",{clickmap:!0,trackLinks:!0,accurateTrackBounce:!0,webvisor:!0})</script><noscript><div><img alt=""src=https://mc.yandex.ru/watch/83179930 style=position:absolute;left:-9999px></div></noscript> 
+    
+    ﻿<header class="header elma-365">
+  <div class="container">
+    <a class="header__logo" href="https://brix365.com/en/help">
+      <img src="./logo-en.svg">
+    </a>
+ <!-- <div class="hero__search-form" id="search-panel">
+   <form class="search-form" onsubmit="ym(83180416,'reachGoal','poisk')">
+     <label class="search-form__label">
+       <span id="reset-search" class="search__icon"></span>
+       <input class="search-form__input" type="text">
+     </label>
+     <input class="search-form__submit" type="submit" value="Submit">
+   </form>
+  </div>       -->
+  
+     <div class="hero__search-form" id="search-panel"> <form class="search-form"> <label class="search-form__label"> <span id="reset-search" class="search__icon"></span> <input class="search-form__input" type="text"> </label> <input class="search-form__submit" type="submit" value="Submit"> </form> </div> 
+  <div class="hero__search">
+      <a href="#" id="search-icon" class="hero__search-icon">
+        <img src="search-icon-white.svg" alt="search string">
+      </a>
+      <a href="#" id="side-menu-icon" class="hero__side-icon">
+        <img src="side_menu.svg" alt="side menu">
+      </a>
+    </div>  
+  <div class="header__navi">
+        
+        <ul class="header__list"><li><span class="solution-select"><span class="solution-select__selected"></span><svg width="7" height="4" viewBox="0 0 7 4" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L3.5 3.5L6 1" stroke="white" stroke-linecap="round" stroke-linejoin="round"/></svg><ul class="solution-select__list"><li><a class="project-link" href="https://brix365.com/en/help/platform/get-trial.html">Platform</a></li><li><a class="project-link" href="https://brix365.com/en/help/ecm/ecm-functions.html">ECM</a></li><li><a class="project-link" href="https://brix365.com/en/help/crm/crm_overview.html">CRM</a></li><li><a class="project-link" href="https://brix365.com/en/help/service/service-functions.html">Service</a></li><li><a class="project-link" href="https://brix365.com/en/help/projects/projects-functions.html">Projects</a></li><li><a class="project-link" href="https://brix365.com/en/help/business_solutions/-elma365-store.html">Business Solutions</a></li></ul></span></li><li><a href="https://api.brix365.com/en/" target="_blank">API</a></li><li><a href="https://tssdk.brix365.com/" target="_blank">SDK</a></li></ul>
+        
+        
+   </div>
+  </div>
+
+</header>
+
+
+
+    
+    <main class="main container">
+
+        <aside class="sidebar" id="sidebar">
+        <div class="sidebar__header">
+                 <a class="header__logo" href="https://brix365.com/en/help">
+                    <img src="./logo-light-en.svg">
+                 </a>
+                    <span class="sidebar__close elma-365-close" id="close"></span>
+            </div>
+            <div class="sidebar__wrapper" id="side-menu">
+                
+            </div>
+        </aside>
+
+        <article class="article" id="article">
+            <div class="article-inner">           
+                <div class="content">
+                    <header class="article__header">
+                        
+                            <div class="topic__breadcrumbs">
+                                <p>Low-code designer &gt; <a href="interface_settings.html">Set up interfaces</a> &gt; Widget types &gt; Data widgets / EQL search widget</p>
+                            </div>
+                        
+                        <div class="topic__title"><h1 class="p_Heading1"><span class="f_Heading1">EQL search widget</span></h1>
+</div>
+                    
+</header>
+                    <section class="article__content">
+                        <div class="scroll-top-inner">
+                            <a href="#h1-article" class="scroll-top"></a>
+                        </div>
+                        <!-- Placeholder for topic body. -->
+                        <p style="line-height: 1.20; margin: 7px 0 7px 0;">The <span style="font-weight: bold;">EQL search</span> widget is placed on app forms and pages and enables <span style="color: #0000ff;"><a href="eql365-search.html" class="topiclink">search queries in EQL365</a></span> (BRIX Query Language). Users will be able to apply operations and functions of the developed syntax, set complex data selection with multiple conditions, and search by parameters of any app of the system.</p>
+<h2 class="p_Heading2"><span class="f_Heading2">Configure EQL search using a widget</span></h2>
+<p style="text-align: justify; line-height: 1.20; margin: 7px 0 7px 0;">The <span style="font-weight: bold;">EQL search</span> widget is a search bar where users specify an EQL query. The query is searched using a script that is created in the interface designer. The user runs it on a page or form, for example, by clicking on a customized button. The search result is displayed in a special added variable.</p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;">Let<span style="color: #202122; background-color: #ffffff;">’</span>s take a closer look at setting up an EQL search in a widget. For example, let<span style="color: #202122; background-color: #ffffff;">’</span>s place the widget on a separate <span style="font-weight: bold;">Deal Conversion</span> page, where the chart of item status change is displayed. Let’s configure the search on the page by the parameters of the <span style="font-weight: bold;">Deals</span> app.</p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><img alt="eql-search-widget-1" width="692" height="414" style="margin:0;width:692px;height:414px;border:none" src="eql-search-widget-1.png"/></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Step 1. Add context variables</span></h3>
+<p style="text-align: justify; line-height: 1.20; margin: 7px 0 7px 0;">To configure the <span style="font-weight: bold;">EQL search</span> widget, create special context variables in the interface designer. They are used for mapping to the widget settings, as well as for displaying search results.</p>
+<ol style="list-style-type:decimal">
+<li value="1" style="line-height: 1.20; margin-top: 8px; margin-right: 0; margin-bottom: 8px;">In the interface designer, go to the <span style="font-weight: bold;">Context</span> tab.</li><li value="2" style="line-height: 1.20; margin-top: 8px; margin-right: 0; margin-bottom: 8px;">Add properties. The names and codes of the variables are given for example. The data types must be the same as those specified:</li></ol>
+<p style="line-height: 1.20; margin: 8px 0 8px 34px;"><img alt="eql-search-widget-2" width="715" height="235" style="margin:0;width:715px;height:235px;border:none" src="eql-search-widget-2.png"/></p>
+<ul style="list-style-type:disc">
+<li style="text-align: justify; line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold;">EQL query string</span> (<code><b>eql</b></code>). <span style="color: #0000ff;"><a href="360009707032.html#string" class="topiclink">String</a></span> type property. It is specified in the widget settings and is used to enter EQL query.</li><li style="text-align: justify; line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold;">EQL search parameters </span>(<code><b>parameters</b></code>). <span style="color: #0000ff;"><a href="360009707032.html#arbitrary-type" class="topiclink">Arbitrary type</a></span> property. It is specified in the widget settings and used to pass the request from the widget to the script that processes it.</li><li style="text-align: justify; line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold;">EQL search result </span>(<code><b>appItems</b></code>). <span style="color: #0000ff;"><a href="360009707032.html#app" class="topiclink">App (Many)</a></span> type property specifying the app whose parameters will be searched. In our example, we use the <span style="font-weight: bold;">Deals</span> app. The property is added to the modeling canvas to display all items that match the conditions of the EQL query entered by the user.</li></ul>
+<h3 class="p_Heading3"><span class="f_Heading3">Step 2. Place and configure the EQL search widget</span></h3>
+<p style="line-height: 1.20; margin: 7px 0 7px 0;">The next step is to configure the EQL search widget. To do this:</p>
+<ol style="list-style-type:decimal">
+<li value="1" style="line-height: 1.20; margin-top: 8px; margin-right: 0; margin-bottom: 8px;">Go to the <span style="font-weight: bold;">Template</span> tab and drag the widget from the right panel of the interface designer to the canvas where you want to place the search bar.</li><li value="2" style="line-height: 1.20; margin-top: 8px; margin-right: 0; margin-bottom: 8px;">In the opened window, on the <span style="font-weight: bold;">Main</span> tab, specify the widget settings:</li></ol>
+<p style="line-height: 1.20; margin: 8px 0 8px 34px;"><img alt="eql-search-widget-3" width="526" height="291" style="margin:0;width:526px;height:291px;border:none" src="eql-search-widget-3.png"/></p>
+<ul style="list-style-type:disc">
+<li style="text-align: justify; line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-weight: bold;">EQL string</span>. Map the option to the variable of the <span style="font-weight: bold;">String</span> type added in step 1. Click <span style="font-weight: bold;">&lt;Not defined&gt;</span> and select a property from the list. In our example, it is <span style="font-weight: bold;">EQL query string</span>.</li><li style="text-align: justify; line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-weight: bold;">EQL parameters</span>. Map the option to the <span style="font-weight: bold;">Arbitrary type</span> variable added in step 1. Click <span style="font-weight: bold;">&lt;Not defined&gt;</span> and select a property from the list, such as <span style="font-weight: bold;">EQL</span> <span style="font-weight: bold;">search parameters</span>.</li><li style="text-align: justify; line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-weight: bold;">App</span><span style="font-weight: bold; color: #ff0000;">*</span>. Select the app whose the parameters will be searched based the conditions of the specified EQL queries. In our example, it is the <span style="font-weight: bold;">Deals</span> app.</li></ul>
+<ol style="list-style-type:decimal" start="3">
+<li value="3" style="text-align: justify; line-height: 1.20; margin-top: 8px; margin-right: 0; margin-bottom: 8px;">On the <span style="font-weight: bold;">Events</span> and <span style="font-weight: bold;">System</span> tabs, you can set system settings that are the same for all widgets. They allow you to control widget visibility and access, customize hover behavior, etc. Read more about it in the <span style="color: #0000ff;"><a href="common_widget_settings.html" class="topiclink">System widget settings</a></span> article.</li><li value="4" style="text-align: justify; line-height: 1.20; margin-top: 8px; margin-right: 0; margin-bottom: 8px;">Save the parameters set in the widget.</li></ol>
+<h3 class="p_Heading3"><span class="f_Heading3">Step 3. Set up the EQL query processing script</span></h3>
+<p style="text-align: justify; line-height: 1.20; margin: 0 0 11px 0;">The search by the EQL query composed by the user is performed using a script. You need to prepare its execution and processing in the interface designer. For example, users can click on a button to load an EQL query and view the search results.</p>
+<p style="text-align: justify; line-height: 1.20; margin: 0 0 11px 0;">To set this up, follow the steps below:</p>
+<ol style="list-style-type:decimal">
+<li value="1" style="text-align: justify; line-height: 1.20; margin-top: 8px; margin-right: 0; margin-bottom: 8px;">On the <span style="font-weight: bold;">Widgets</span> tab on the right panel of the interface designer, find the <span style="color: #0000ff;"><a href="button_widget.html" class="topiclink">Button</a></span> widget. Drag it to the canvas, for example, place the button under the EQL search bar.</li><li value="2" style="text-align: justify; line-height: 1.20; margin-top: 8px; margin-right: 0; margin-bottom: 8px;">In the opened window, customize the display of the button and set its name, for example, <span style="font-weight: bold;">Search</span>.</li><li value="3" style="text-align: justify; line-height: 1.20; margin-top: 8px; margin-right: 0; margin-bottom: 8px;">In the <span style="font-weight: bold;">Executed script</span> field, click <span style="font-weight: bold;">New</span> and specify the name of the script that will be run when the button is clicked, for example, <span style="font-weight: bold;">Click</span>.</li><li value="4" style="text-align: justify; line-height: 1.20; margin-top: 8px; margin-right: 0; margin-bottom: 8px;">Click the <span style="font-weight: bold;">Open</span> button that appears in the field to go to the <span style="font-weight: bold;">Scripts </span>tab and specify the following command:</li></ol>
+<p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample">async</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">function</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">Click</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">():</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">Promise&lt;</span><span class="f_CodeExample" style="font-weight: bold;">void</span><span class="f_CodeExample">&gt;</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">{</span><br />
+<span class="f_CodeExample"> </span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample"> Context.data.appItems</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">=</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">await</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">Context.fields.appItems.app.search().where(Context.data.eql!,</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">Context.data.parameters).all();</span><br />
+<span class="f_CodeExample">}</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Step 4. Customize the search result display</span></h3>
+<p style="text-align: justify; line-height: 1.20; margin: 7px 0 7px 0;">According to the specified script, the app items found by the EQL query are written to the <span style="font-weight: bold;">EQL search result</span> variable created in step 1. It can be used in the interface designer. For example, let’s display the search result on the page. To do this:</p>
+<ol style="list-style-type:decimal">
+<li value="1" style="text-align: justify; line-height: 1.20; margin-top: 8px; margin-right: 0; margin-bottom: 8px;">Click the <span style="font-weight: bold;">Template</span> tab and on the right panel, click <span style="font-weight: bold;">Properties</span>.</li><li value="2" style="text-align: justify; line-height: 1.20; margin-top: 8px; margin-right: 0; margin-bottom: 8px;">Drag and drop the <span style="font-weight: bold;">EQL search result</span> property onto the canvas. For example, place it under the created <span style="font-weight: bold;">Search</span> button.</li><li value="3" style="text-align: justify; line-height: 1.20; margin-top: 8px; margin-right: 0; margin-bottom: 8px;">In the settings window that opens, in the <span style="font-weight: bold;">Read only </span>field, check <span style="font-weight: bold;">Yes</span> to allow users to only view the items displayed in the property.</li><li value="4" style="text-align: justify; line-height: 1.20; margin-top: 8px; margin-right: 0; margin-bottom: 8px;">Set other settings. For example, enable the <span style="font-weight: bold;">Hide if the field is empty</span> option to show the field with the found items only after the EQL query is processed.</li><li value="5" style="text-align: justify; line-height: 1.20; margin-top: 8px; margin-right: 0; margin-bottom: 8px;">Save the specified settings.</li></ol>
+<h3 class="p_Heading3"><span class="f_Heading3">Step 5. Publish the configured interface</span></h3>
+<p style="text-align: justify; line-height: 1.20; margin: 0 0 11px 0;">The page settings in the interface designer for our example page might look like this:</p>
+<p style="text-align: justify; line-height: 1.20; margin: 0 0 11px 0;"><img alt="eql-search-widget-4" width="758" height="493" style="margin:0;width:758px;height:493px;border:none" src="eql-search-widget-4.png"/></p>
+<p style="line-height: 1.20; margin: 7px 0 7px 0;">To make the page available to users, click <span style="font-weight: bold;">Save</span> and <span style="font-weight: bold;">Publish </span>in the top panel of the interface designer.</p>
+<p style="line-height: 1.20; margin: 7px 0 7px 0;">Users can now use EQL search to search for items in the <span style="font-weight: bold;">Deals</span> app.</p>
+
+                        <div class="bottom-nav">
+                            
+                                <a id="prev-link" class="topic__navi_prev" href="form_line_widget.html">
+                                    <span class="bottom-nav__arrow bottom-nav__arrow--prev"></span> <span
+                                        class="bottom-nav__link">form_line_widget.html</span>
+                                </a>
+                            
+                            
+                                <a id="next-link" class="topic__navi_next" href="side_panel_widget.html">
+                                    <span class="bottom-nav__link">side_panel_widget.html</span> <span
+                                        class="bottom-nav__arrow bottom-nav__arrow--next"></span>
+                                </a>
+                            
+                        </div>
+                        <!-- добавляет на страницу строку блок Была ли статья полезной?  -->
+                          <div class="feedback" id="feedback"><span><b>Was this helpful?</b></span><form action="" method="POST" class="feedback-form" id="feedback-form"><div class="feedback__popup feedback__popup-response" id="feedback__popup_thx" style="display: none;">Thanks for your feedback!</div><div class="feedback__popup" id="feedback__popup_why" style="display: none;"><div class="feedback__popup-header">Please specify why:</div><input type="radio" name="category" id="bad_recommendation" value="bad_recommendation"><label for="bad_recommendation">Recommendations did not help me</label><input type="radio" name="category" id="difficult_text" value="difficult_text"><label for="difficult_text">Article is hard to understand</label><input type="radio" name="category" id="no_answer" value="no_answer"><label for="no_answer">Didn’t answer my question</label><input type="radio" name="category" id="bad_header" value="bad_header"><label for="bad_header">Content does not match the topic</label><input type="radio" name="category" id="other_reason" value="other_reason"><label for="other_reason">Other</label></div><div class="feedback__popup" id="feedback__popup-other" style="display: none;"><div class="feedback__popup-header">How can we improve the article?</div><textarea class="feedback__textarea" name="other" id=""></textarea><input type="submit" class="feedback__other-btn" value="Submit"></div><div class="feedback-form__btn-group"><input type="radio" name="useful" id="feedback__useful_yes" value="true"><label for="feedback__useful_yes"><img src="like.svg" class="small-img"><spanclass="feedback-form__btn-group_yes-btn">Yes</spanclass="feedback-form__btn-group_yes-btn"></label><input type="radio" name="useful" id="feedback__useful_no" value="false"><label for="feedback__useful_no"><img src="dislike.svg" class="small-img"><spanclass="feedback-form__btn-group_no-btn">No</spanclass="feedback-form__btn-group_no-btn"></label></div><select name="category"><option disabled="">Please specify why</option><option value="bad_recommendation" selected="">Recommendations did not help me</option><option value="difficult_text">Article is hard to understand</option><option value="no_answer">Didn’t answer my question</option><option value="bad_header">Content does not match the topic</option><option value="other_reason">Other</option></select><input type="submit"></form></div>
+                           
+                    </section>
+                </div>
+                <aside class="article__sidebar" style="display:none">
+                    <input type="checkbox" />
+                    <div class="article__arrow"></div>
+                    <div class="table-of-contents elma365-right" id="toc2Content">
+                        <h3 class="h3-toc">In this topic</h3>
+                        <nav id="toc2"></nav>
+                    </div>
+                </aside>
+            </div>
+        </article>
+    </main>               
+    <footer class="footer">
+        <div class="footer-container">
+  <div class="footer-mobile">
+    
+    <ul class="footer-mobile__list"><li><a href="https://brix365.com/en/" target="_blank">BRIX</a></li><li><a href="https://tssdk.brix365.com/en/latest/" target="_blank">SDK</a></li><li><a href="https://api.brix365.com/en/" target="_blank">API</a></li></ul><ul class="footer-mobile__list"><li><a href="https://brix365.com/en/help/platform/get-trial.html">Platform</a></li><li><a href="https://brix365.com/en/help/ecm/ecm-functions.html">ECM</a></li><li><a href="https://brix365.com/en/help/service/service-functions.html">Service</a></li><li><a href="https://brix365.com/en/help/projects/projects-functions.html">Projects</a></li></ul>
+    
+    
+  </div>
+  <div class="footer-wrap">
+    
+      <div><span class="mobile-question-popup">Send feedback</span><form method="POST" action class="question__popup question-xs" id="question__popup"><div class="question-wrap"><span class="close"></span><span class="title">Ask a question</span><label for="help_question" style="display: none;"></label><textarea name="help_question" id="help_question"></textarea><input type="submit" value="Send"></div></form><div class="hidden fade-in question-success-xs">Sent</div></div>
+    
+    <div class="footer-flex-b">
+      <span class="footer-copy">&copy; 2025 BRIX</span>
+      <ul class="footer-list">
+        
+        <li class="footer-item">
+            <a href="#" class="arrow-top" style="display: block;"></a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+ 
+    </footer>
+    <iframe name="hmnavigation" style="display:none!important"></iframe>
+    <script src="./jquery-ui.js"></script>
+    <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
+    <script src="./jquery.tocify.min.js"></script>
+    <script src="./TypoReporter.min.js"></script>
+    <script src="./google-search.js"></script>
+    <script src="./main.js"></script>
+</body>
+
+</html>

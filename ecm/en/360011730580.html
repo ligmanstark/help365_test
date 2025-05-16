@@ -1,0 +1,249 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>How to configure a document route</title>
+    <meta name="generator" content="Help+Manual" />
+    <meta name="keywords" content="" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="All steps of a document lifecycle make up the document’s route. Any route can be automated by means of a business process. In a process, you can designate a person responsible..." />
+    <meta name="picture" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Full documentation for BRIX365 platform. Low-code developer guide. User guide. Admin guide. Developer guide." />
+    <meta property="og:url" content="https://brix365.com/en/help" />
+    <meta property="og:image" content="" />                                                              
+    <link rel="icon" href="favicon.png" type="image/png" />
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./jquery-ui.css" />
+    <link rel="stylesheet" href="default.css" />
+    <link rel="stylesheet" href="./search-yandex.css" />
+    <link rel="stylesheet" href="./article.css" />
+    <link rel="stylesheet" href="./glossary.css" />
+    <link rel="stylesheet" href="./theme.css" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+
+<body>
+    
+    <script>!function(e,t,c,n,r,a,m){e.ym=e.ym||function(){(e.ym.a=e.ym.a||[]).push(arguments)},e.ym.l=1*new Date;for(var s=0;s<document.scripts.length;s++)if(document.scripts[s].src===n)return;a=t.createElement(c),m=t.getElementsByTagName(c)[0],a.async=1,a.src=n,m.parentNode.insertBefore(a,m)}(window,document,"script","https://mc.yandex.ru/metrika/tag.js"),ym(83179930,"init",{clickmap:!0,trackLinks:!0,accurateTrackBounce:!0,webvisor:!0})</script><noscript><div><img alt=""src=https://mc.yandex.ru/watch/83179930 style=position:absolute;left:-9999px></div></noscript> 
+    
+    ﻿<header class="header elma-365">
+  <div class="container">
+    <a class="header__logo" href="https://brix365.com/en/help">
+      <img src="./logo-en.svg">
+    </a>
+ <!-- <div class="hero__search-form" id="search-panel">
+   <form class="search-form" onsubmit="ym(83180416,'reachGoal','poisk')">
+     <label class="search-form__label">
+       <span id="reset-search" class="search__icon"></span>
+       <input class="search-form__input" type="text">
+     </label>
+     <input class="search-form__submit" type="submit" value="Submit">
+   </form>
+  </div>       -->
+  
+     <div class="hero__search-form" id="search-panel"> <form class="search-form"> <label class="search-form__label"> <span id="reset-search" class="search__icon"></span> <input class="search-form__input" type="text"> </label> <input class="search-form__submit" type="submit" value="Submit"> </form> </div> 
+  <div class="hero__search">
+      <a href="#" id="search-icon" class="hero__search-icon">
+        <img src="search-icon-white.svg" alt="search string">
+      </a>
+      <a href="#" id="side-menu-icon" class="hero__side-icon">
+        <img src="side_menu.svg" alt="side menu">
+      </a>
+    </div>  
+  <div class="header__navi">
+        
+        <ul class="header__list"><li><span class="solution-select"><span class="solution-select__selected"></span><svg width="7" height="4" viewBox="0 0 7 4" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L3.5 3.5L6 1" stroke="white" stroke-linecap="round" stroke-linejoin="round"/></svg><ul class="solution-select__list"><li><a class="project-link" href="https://brix365.com/en/help/platform/get-trial.html">Platform</a></li><li><a class="project-link" href="https://brix365.com/en/help/ecm/ecm-functions.html">ECM</a></li><li><a class="project-link" href="https://brix365.com/en/help/crm/crm_overview.html">CRM</a></li><li><a class="project-link" href="https://brix365.com/en/help/service/service-functions.html">Service</a></li><li><a class="project-link" href="https://brix365.com/en/help/projects/projects-functions.html">Projects</a></li><li><a class="project-link" href="https://brix365.com/en/help/business_solutions/-elma365-store.html">Business Solutions</a></li></ul></span></li><li><a href="https://api.brix365.com/en/" target="_blank">API</a></li><li><a href="https://tssdk.brix365.com/" target="_blank">SDK</a></li></ul>
+        
+        
+   </div>
+  </div>
+
+</header>
+
+
+
+    
+    <main class="main container">
+
+        <aside class="sidebar" id="sidebar">
+        <div class="sidebar__header">
+                 <a class="header__logo" href="https://brix365.com/en/help">
+                    <img src="./logo-light-en.svg">
+                 </a>
+                    <span class="sidebar__close elma-365-close" id="close"></span>
+            </div>
+            <div class="sidebar__wrapper" id="side-menu">
+                
+            </div>
+        </aside>
+
+        <article class="article" id="article">
+            <div class="article-inner">           
+                <div class="content">
+                    <header class="article__header">
+                        
+                            <div class="topic__breadcrumbs">
+                                <p>Document routes / How to configure a document route</p>
+                            </div>
+                        
+                        <div class="topic__title"><h1 class="p_Heading1" style="text-align: center; line-height: 1.20; margin: 19px 0 19px 0;"><span class="f_Heading1" style="font-size: 32px;">How to configure a document route</span></h1>
+</div>
+                    
+</header>
+                    <section class="article__content">
+                        <div class="scroll-top-inner">
+                            <a href="#h1-article" class="scroll-top"></a>
+                        </div>
+                        <!-- Placeholder for topic body. -->
+                        <p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;">All steps of a document lifecycle make up the document<span style="font-family: Inter;">’</span>s route. Any route can be automated by means of a <a href="360012265552.html" class="topiclink">business process</a>. In a process, you can designate a person responsible for each stage, establish deadlines, and track the progress.</p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;">As a rule, a route is connected with a particular document type. Documents of the same type are created and stored in <a href="360009923631.html" class="topiclink">apps</a>, and similar apps are grouped in <span style="background-color: #ffffff;"><a href="360007990371.html" class="topiclink">workspaces</a></span>.</p>
+<p class="p_Normal"><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; color: #374151;">For example, you may create the </span><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; font-weight: bold; color: #374151;">Payment Documents</span><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; color: #374151;"> workspace for apps like </span><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; font-weight: bold; color: #374151;">Invoices</span><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; color: #374151;">, </span><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; font-weight: bold; color: #374151;">Service Provision Acts</span><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; color: #374151;">, </span><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; font-weight: bold; color: #374151;">Goods Delivery Notes</span><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; color: #374151;">, </span><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; font-weight: bold; color: #374151;">Payment Orders</span><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; color: #374151;">, </span><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; font-weight: bold; color: #374151;">Advance Reports</span><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; color: #374151;">, etc. Each app can have its own individual route set up.</span></p>
+<h2 class="p_Heading2"><span class="f_Heading2">Graphical elements for route configuration</span></h2>
+<p class="p_Normal" style="margin: 20px 0 0 0;"><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; color: #374151;">You can create a document package from files stored in different apps and set up a unique route for it. For example, you can create a document package that includes a contract, a supplementary agreement, a work completion act, an invoice, etc., and then send the package for information or approval. Read more in the <a href="package.html" class="topiclink">Create Document Package</a> article.</span></p>
+<p class="p_Normal" style="margin: 20px 0 0 0;"><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; color: #374151;">Additionally, the following graphical elements are designed for processing documents during a business process: <a href="360026720792.html" class="topiclink">Generate from Template</a>, <a href="generate-from-file.html" class="topiclink">Generate from File</a>, <a href="pdf-convert.html" class="topiclink">Convert to PDF</a>, <a href="watermark.html" class="topiclink">Insert Watermark</a>, <a href="360010385600.html" class="topiclink">Send Document/App Item</a>, <a href="360010366380.html" class="topiclink">Approval</a>, <a href="360011756780.html" class="topiclink">End Approval</a>, <a href="document_registration.html" class="topiclink">Register Document</a>.</span></p>
+<h2 class="p_Heading2" style="line-height: 1.20; margin: 19px 0 0 0;"><span class="f_Heading2" style="font-size: 24px;">Route example</span></h2>
+<p class="p_Normal"><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; color: #374151;">Let</span><span style="font-family: Inter;">’</span><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; color: #374151;">s say on the invoice creation form, an employee fills in details such as the amount, payment date, payment purpose, etc. After saving, the invoice is sent for approval to the CFO and then to the accounting department for payment.</span></p>
+<p class="p_Normal"><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; color: #374151;">Let’s look at how to set up such a workflow.</span></p>
+<h2 class="p_Heading2"><span class="f_Heading2">Step 1. Create a document</span></h2>
+<p class="p_Normal" style="margin: 20px 0 0 0;"><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; color: #374151;">Go to the <a href="360007990371.html" class="topiclink">workspace</a> and <a href="360009923631.html" class="topiclink">create a Document type app</a>.</span></p>
+<p class="p_Normal" style="margin: 20px 0 0 0;"><img alt="set-up-document-route-1" width="1156" height="598" style="margin:0;width:1156px;height:598px;border:none" src="set-up-document-route-1.gif"/></p>
+<p class="p_Normal" style="margin: 20px 0 0 0;"><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; color: #374151;">In the opened window, configure the app form: add fields that the employee will fill out when creating an invoice in the system. By default, a <a href="360009707032.html#file_type" class="topiclink">Files </a>type field for uploading the invoice is displayed on the form. Add fields such as </span><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; font-weight: bold; color: #374151;">Amount</span><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; color: #374151;"> of the <a href="360009707032.html#money" class="topiclink">Money </a>type, </span><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; font-weight: bold; color: #374151;">Payment Purpose</span><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; color: #374151;"> of the <a href="360009707032.html#string" class="topiclink">String </a>type, </span><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; font-weight: bold; color: #374151;">Desired Payment Date</span><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; color: #374151;"> of the <a href="360009707032.html#date-time" class="topiclink">Date/time</a> type, etc. Indicate which fields are required. Read more in the <a href="360007235031.html" class="topiclink">Creating an app</a> article.</span></p>
+<p class="p_Normal" style="margin: 20px 0 0 0;"><img alt="set-up-document-route-2" width="924" height="490" style="margin:0;width:924px;height:490px;border:none" src="set-up-document-route-2.png"/></p>
+<p class="p_Normal" style="margin: 20px 0 20px 0;"><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; color: #374151;">When you finish, click </span><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; font-weight: bold; color: #374151;">Save</span><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; color: #374151;">.</span> &nbsp;</p>
+<h2 class="p_Heading2"><span class="f_Heading2">Step 2. Create a business process</span></h2>
+<p class="p_Normal" style="margin: 20px 0 0 0;"><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; color: #374151;">After saving the form settings, you will see a window that allows you to immediately create a <a href="360009921431.html" class="topiclink">business process</a>.</span></p>
+<p class="p_Normal" style="margin: 20px 0 0 0;"><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; color: #374151;">If you closed the window, you can proceed to creating a business process by clicking the gear icon next to the app’s name and selecting </span><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; font-weight: bold; color: #374151;">Business Processes</span><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; color: #374151;">. On the opened page, click the </span><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; font-weight: bold; color: #374151;">+ Process</span><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; color: #374151;"> button. Specify the name and code of the process.</span></p>
+<p class="p_Normal" style="margin: 20px 0 0 0;"><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; color: #374151;">When you click </span><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; font-weight: bold; color: #374151;">Create</span><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; color: #374151;">, the modeling page will open. Drag and drop elements from the right panel and connect them with transition arrows to create the route diagram.</span></p>
+<p class="p_Normal" style="margin: 20px 0 0 0;"><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; color: #374151;">The first business process created within the app will be automatically linked to it. This means that the process will be initiated for each created item immediately after saving. Read more in the <a href="360009921131.html#start-process" class="topiclink">Business process associated with an app</a> article.</span></p>
+<h2 class="p_Heading2"><span class="f_Heading2">Step 3. Configure the route diagram</span></h2>
+<p class="p_Normal"><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; color: #374151;">When setting up a workflow, you use graphical elements: participants are marked on the diagram using swimlanes, while invoice processing stages are described using activities and linked with each other with connectors. For the invoice approval route, you can use activities like </span><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; font-weight: bold; color: #374151;">Approval</span><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; color: #374151;">, </span><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; font-weight: bold; color: #374151;">End approval</span><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; color: #374151;">, </span><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; font-weight: bold; color: #374151;">Notification</span><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; color: #374151;">, and </span><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; font-weight: bold; color: #374151;">Task</span><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; color: #374151;">. The diagram will look like this:</span></p>
+<p class="p_Normal"><img alt="set-up-document-route-3" width="776" height="528" style="margin:0;width:776px;height:528px;border:none" src="set-up-document-route-3.png"/></p>
+<p class="p_Normal" style="margin: 20px 0 0 0;"><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; color: #374151;">Let’s see how to configure each element of the route.</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Define participants of the document route</span></h3>
+<p class="p_Normal" style="margin: 20px 0 20px 0;"><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; color: #374151;">Add a <a href="360012263032.html" class="topiclink">swimlane</a> for each employee who plays a role in the process. The participants of the invoice approval route are the initiator, approver, and accountant. Therefore, you need to create three swimlanes.</span></p>
+<p class="p_Normal"><img alt="set-up-document-route-4" width="1078" height="612" style="margin:0;width:1078px;height:612px;border:none" src="set-up-document-route-4.png"/></p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;">Since we don’t know beforehand who exactly will be sending invoices for approval, the initiator<span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; color: #374151;">’</span>s swimlane must represent any employee of the company. Swimlanes of this type are called dynamic and are colored green. </p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;">The CFO and accountant are specific roles, and each is assigned to a separate swimlane. Such swimlanes are called static. In the settings of a static swimlane, you can select the executor from the <a href="360003861992.html" class="topiclink">org chart</a>. </p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;"><img alt="set-up-document-route-5" width="493" height="460" style="margin:0;width:493px;height:460px;border:none" src="set-up-document-route-5.png"/></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Add an approval task</span></h3>
+<p class="p_Normal" style="margin: 20px 0 0 0;"><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; color: #374151;">In the <a href="360010366380.html" class="topiclink">Approval</a> activity, on the </span><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; font-weight: bold; color: #374151;">General</span><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; color: #374151;"> tab, specify which document will be sent to the approver. In our example, it</span>’<span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; color: #374151;">s an invoice. It</span>’<span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; color: #374151;">s already added to the dropdown list since the business process is linked to the </span><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; font-weight: bold; color: #374151;">Invoices</span><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; color: #374151;"> app. Also, select the </span><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; font-weight: bold; color: #374151;">Manually</span><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; color: #374151;"> approval method.</span></p>
+<p class="p_Normal"><img alt="configure_route_01" width="983" height="615" style="margin:0;width:983px;height:615px;border:none" src="configure_route_01.png"/></p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;">If you want to set an approval due date, go to the <span style="font-weight: bold;">Deadline</span> tab and specify how many days, hours, and minutes an employee has to complete this task.</p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;"><img alt="set-up-document-route-7" width="663" height="335" style="margin:0;width:663px;height:335px;border:none" src="set-up-document-route-7.png"/></p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;">On the <span style="font-weight: bold;">Connectors </span>tab, mark one of the connectors as the default one.</p>
+<p class="p_Normal"><img alt="set-up-document-route-8" width="837" height="366" style="margin:0;width:837px;height:366px;border:none" src="set-up-document-route-8.png"/></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Specify approval conditions</span></h3>
+<p class="p_Normal" style="margin: 20px 0 0 0;"><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; color: #374151;">For the </span><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; font-weight: bold; color: #374151;">Approve</span><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; color: #374151;"> connector, you need to set conditions under which the document will be considered approved. Double-click on the arrow in the diagram to open the connector settings. Go to the </span><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; font-weight: bold; color: #374151;">Conditions</span><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; color: #374151;"> tab and set the approval percentage to 100.</span></p>
+<p class="p_Normal"><img alt="set-up-document-route-9" width="815" height="344" style="margin:0;width:815px;height:344px;border:none" src="set-up-document-route-9.png"/></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Notify employees about a document status</span></h3>
+<p class="p_Normal" style="line-height: 1.20; margin: 26px 0 0 0;"><a href="360012495791.html" class="topiclink">Notifications</a> are placed on the diagram to inform employees about important events in the process.</p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;">In a notification’s settings, specify its name on the diagram and the text of the message that will be sent to users. </p>
+<p class="p_Normal"><img alt="set-up-document-route-10" width="802" height="496" style="margin:0;width:802px;height:496px;border:none" src="set-up-document-route-10.png"/></p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;">Then go to the <span style="font-weight: bold;">Recipients</span> tab and specify who will receive this message. By default, it is sent to the person in the swimlane that stores the <span style="font-weight: bold;">Notification</span> activity. If you need to notify any others, click the <span style="font-weight: bold;">Add</span> button and specify the employees.</p>
+<p class="p_Normal" style="margin: 20px 0 0 0;"><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; color: #374151;">In our example, the approval notification should be sent to the process initiator, but the activity is in the approver’s swimlane. Therefore, add the context variable </span><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; font-weight: bold; color: #374151;">Initiator</span><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; color: #374151;"> to the recipient list.</span></p>
+<p class="p_Normal"><img alt="set-up-document-route-11" width="917" height="516" style="margin:0;width:917px;height:516px;border:none" src="set-up-document-route-11.png"/></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Generate a resolution on the document</span></h3>
+<p class="p_Normal" style="margin: 20px 0 0 0;"><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; color: #374151;">The <a href="360011756780.html" class="topiclink">End Approval</a> element is used as an auxiliary for the </span><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; font-weight: bold; color: #374151;">Approval</span><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; color: #374151;"> element. </span>It allows you to see the final decision on the document without having to wait for the process to finish.</p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;">Specify the document for which it is required to end the approval and set the <span style="font-weight: bold;">Decision</span><span style="font-weight: bold; color: #ff0000;">*</span> option to <span style="font-weight: bold;">Approved</span>.</p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;"><img alt="set-up-document-route-12" width="879" height="470" style="margin:0;width:879px;height:470px;border:none" src="set-up-document-route-12.png"/></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Add a task for paying the bill</span></h3>
+<p class="p_Normal" style="margin: 20px 0 0 0;"><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; color: #374151;">A <a href="360012495611.html" class="topiclink">task</a> is automatically assigned to the employee in whose swimlane it is placed. The task page should display all the information necessary for the employee to complete the work or make a decision.</span></p>
+<p class="p_Normal" style="margin: 20px 0 0 0;"><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; color: #374151;">To configure the task page for the </span><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; font-weight: bold; color: #374151;">Pay the bill and attach the payment order</span><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; color: #374151;"> task, open the task activity and go to the </span><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; font-weight: bold; color: #374151;">Form</span><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; color: #374151;"> tab. To display information about the invoice sent for approval, drag the </span><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; font-weight: bold; color: #374151;">Invoice</span><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; color: #374151;"> field to the </span><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; font-weight: bold; color: #374151;">Name on form</span><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; color: #374151;"> column and click on its name.</span></p>
+<p class="p_Normal" style="margin: 20px 0 0 0;"><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; color: #374151;">The field settings window will open. Go to the </span><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; font-weight: bold; color: #374151;">Properties</span><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; color: #374151;"> tab and drag the necessary app fields to the </span><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; font-weight: bold; color: #374151;">Name on form</span><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; color: #374151;"> column. These can be amount, purpose, date, etc. Make them read-only and click </span><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; font-weight: bold; color: #374151;">Save</span><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; color: #374151;">.</span></p>
+<p class="p_Normal" style="margin: 20px 0 0 0;"><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; color: #374151;">Also, add a <a href="360009707032.html#file_type" class="topiclink">Files</a> type field for the payment order to the process context and drag it onto the task form.</span></p>
+<p class="p_Normal"><img alt="set-up-document-route-13" width="892" height="572" style="margin:0;width:892px;height:572px;border:none" src="set-up-document-route-13.png"/></p>
+<p class="p_Normal" style="margin: 20px 0 0 0;"><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; color: #374151;">On the </span><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; font-weight: bold; color: #374151;">Deadline</span><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; color: #374151;"> tab, you can set the due date for the task completion, similar to the </span><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; font-weight: bold; color: #374151;">Approval</span><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; color: #374151;"> activity.</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Configure buttons for task completion</span></h3>
+<p class="p_Normal" style="margin: 20px 0 0 0;"><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; color: #374151;">Connectors determine which buttons the user will see on the task form. The connector label serves as the button name. In our example, two transitions go out of the </span><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; font-weight: bold; color: #374151;">Task</span><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; color: #374151;"> activity, so the accountant will see the buttons </span><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; font-weight: bold; color: #374151;">Bill Paid</span><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; color: #374151;"> and </span><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; font-weight: bold; color: #374151;">Refuse Payment</span><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; color: #374151;">.</span></p>
+<p class="p_Normal" style="margin: 20px 0 0 0;"><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; color: #374151;">Double-click on a connector in the diagram to change its settings. On the </span><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; font-weight: bold; color: #374151;">Transition Button</span><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; color: #374151;"> tab, you can choose the button color, set up data validation, or add a confirmation box.</span></p>
+<p class="p_Normal" style="margin: 20px 0 20px 0;"><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; color: #374151;">For example, for the </span><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; font-weight: bold; color: #374151;">Refused Payment</span><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; color: #374151;"> button, disable the required fields check, so that the accountant can complete the task without attaching the payment order. Also, add a confirmation box.</span></p>
+<p class="p_Normal"><img alt="set-up-document-route-14" width="813" height="480" style="margin:0;width:813px;height:480px;border:none" src="set-up-document-route-14.png"/></p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;">&nbsp;</p>
+<h2 class="p_Heading2"><span class="f_Heading2">Step 4. Publish the configured process</span></h2>
+<p class="p_Normal"><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; color: #374151;">Click the </span><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; font-weight: bold; color: #374151;">Publish</span><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; color: #374151;"> button on the business process designer toolbar.</span></p>
+<p class="p_Normal"><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; color: #374151;">When publishing, the route diagram is checked. If there are errors in the process, a warning window will appear at the bottom of the page. Non‑critical errors don’t prevent the process from being published.</span></p>
+<h2 class="p_Heading2"><span class="f_Heading2">Step 5. Run the document route</span></h2>
+<p class="p_Normal" style="margin: 20px 0 0 0;"><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; color: #374151;">To run the route, exit the business process designer, go to the </span><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; font-weight: bold; color: #374151;">Invoices</span><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; color: #374151;"> app, and add a new invoice. To do this, click the </span><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; font-weight: bold; color: #374151;">+ Invoice</span><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; color: #374151;"> button in the top right corner of the app page. The creation form will open.</span></p>
+<p class="p_Normal"><img alt="set-up-document-route-15" width="950" height="607" style="margin:0;width:950px;height:607px;border:none" src="set-up-document-route-15.png"/></p>
+<p class="p_Normal" style="margin: 20px 0 0 0;"><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; color: #374151;">Fill in the data and click </span><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; font-weight: bold; color: #374151;">Save</span><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; color: #374151;">.</span></p>
+<p class="p_Normal" style="margin: 20px 0 0 0;"><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; color: #374151;">The invoice item will appear on the app page. Opening it, you can see the invoice data, the approval list, and tasks assigned to users.</span></p>
+<p class="p_Normal" style="margin: 20px 0 0 0;"><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; color: #374151;">The invoice approval route will be automatically started for the new invoice, and the CFO will be assigned the </span><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; font-weight: bold; color: #374151;">Approval</span><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; color: #374151;"> task.</span></p>
+<p class="p_Normal" style="margin: 20px 0 0 0;"><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; color: #374151;">You can track how the document moves along the route using statuses. Read more about this in the <a href="360011855460.html" class="topiclink">Monitor documents by status</a> article.</span></p>
+
+                        <div class="bottom-nav">
+                            
+                                <a id="prev-link" class="topic__navi_prev" href="print-form-settings.html">
+                                    <span class="bottom-nav__arrow bottom-nav__arrow--prev"></span> <span
+                                        class="bottom-nav__link">print-form-settings.html</span>
+                                </a>
+                            
+                            
+                                <a id="next-link" class="topic__navi_next" href="360011855460.html">
+                                    <span class="bottom-nav__link">360011855460.html</span> <span
+                                        class="bottom-nav__arrow bottom-nav__arrow--next"></span>
+                                </a>
+                            
+                        </div>
+                        <!-- добавляет на страницу строку блок Была ли статья полезной?  -->
+                          <div class="feedback" id="feedback"><span><b>Was this helpful?</b></span><form action="" method="POST" class="feedback-form" id="feedback-form"><div class="feedback__popup feedback__popup-response" id="feedback__popup_thx" style="display: none;">Thanks for your feedback!</div><div class="feedback__popup" id="feedback__popup_why" style="display: none;"><div class="feedback__popup-header">Please specify why:</div><input type="radio" name="category" id="bad_recommendation" value="bad_recommendation"><label for="bad_recommendation">Recommendations did not help me</label><input type="radio" name="category" id="difficult_text" value="difficult_text"><label for="difficult_text">Article is hard to understand</label><input type="radio" name="category" id="no_answer" value="no_answer"><label for="no_answer">Didn’t answer my question</label><input type="radio" name="category" id="bad_header" value="bad_header"><label for="bad_header">Content does not match the topic</label><input type="radio" name="category" id="other_reason" value="other_reason"><label for="other_reason">Other</label></div><div class="feedback__popup" id="feedback__popup-other" style="display: none;"><div class="feedback__popup-header">How can we improve the article?</div><textarea class="feedback__textarea" name="other" id=""></textarea><input type="submit" class="feedback__other-btn" value="Submit"></div><div class="feedback-form__btn-group"><input type="radio" name="useful" id="feedback__useful_yes" value="true"><label for="feedback__useful_yes"><img src="like.svg" class="small-img"><spanclass="feedback-form__btn-group_yes-btn">Yes</spanclass="feedback-form__btn-group_yes-btn"></label><input type="radio" name="useful" id="feedback__useful_no" value="false"><label for="feedback__useful_no"><img src="dislike.svg" class="small-img"><spanclass="feedback-form__btn-group_no-btn">No</spanclass="feedback-form__btn-group_no-btn"></label></div><select name="category"><option disabled="">Please specify why</option><option value="bad_recommendation" selected="">Recommendations did not help me</option><option value="difficult_text">Article is hard to understand</option><option value="no_answer">Didn’t answer my question</option><option value="bad_header">Content does not match the topic</option><option value="other_reason">Other</option></select><input type="submit"></form></div>
+                           
+                    </section>
+                </div>
+                <aside class="article__sidebar" style="display:none">
+                    <input type="checkbox" />
+                    <div class="article__arrow"></div>
+                    <div class="table-of-contents elma365-right" id="toc2Content">
+                        <h3 class="h3-toc">In this topic</h3>
+                        <nav id="toc2"></nav>
+                    </div>
+                </aside>
+            </div>
+        </article>
+    </main>               
+    <footer class="footer">
+        <div class="footer-container">
+  <div class="footer-mobile">
+    
+    <ul class="footer-mobile__list"><li><a href="https://brix365.com/en/" target="_blank">BRIX</a></li><li><a href="https://tssdk.brix365.com/en/latest/" target="_blank">SDK</a></li><li><a href="https://api.brix365.com/en/" target="_blank">API</a></li></ul><ul class="footer-mobile__list"><li><a href="https://brix365.com/en/help/platform/get-trial.html">Platform</a></li><li><a href="https://brix365.com/en/help/ecm/ecm-functions.html">ECM</a></li><li><a href="https://brix365.com/en/help/service/service-functions.html">Service</a></li><li><a href="https://brix365.com/en/help/projects/projects-functions.html">Projects</a></li></ul>
+    
+    
+  </div>
+  <div class="footer-wrap">
+    
+      <div><span class="mobile-question-popup">Send feedback</span><form method="POST" action class="question__popup question-xs" id="question__popup"><div class="question-wrap"><span class="close"></span><span class="title">Ask a question</span><label for="help_question" style="display: none;"></label><textarea name="help_question" id="help_question"></textarea><input type="submit" value="Send"></div></form><div class="hidden fade-in question-success-xs">Sent</div></div>
+    
+    <div class="footer-flex-b">
+      <span class="footer-copy">&copy; 2025 BRIX</span>
+      <ul class="footer-list">
+        
+        <li class="footer-item">
+            <a href="#" class="arrow-top" style="display: block;"></a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+ 
+    </footer>
+    <iframe name="hmnavigation" style="display:none!important"></iframe>
+    <script src="./jquery-ui.js"></script>
+    <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
+    <script src="./jquery.tocify.min.js"></script>
+    <script src="./TypoReporter.min.js"></script>
+    <script src="./google-search.js"></script>
+    <script src="./main.js"></script>
+</body>
+
+</html>

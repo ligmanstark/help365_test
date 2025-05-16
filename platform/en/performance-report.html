@@ -1,0 +1,231 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Performance report</title>
+    <meta name="generator" content="Help+Manual" />
+    <meta name="keywords" content="" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="On the Performance Report page, users who are part of the Administrators group can generate a report containing diagnostic data on the system’s operation." />
+    <meta name="picture" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Full documentation for BRIX365 platform. Low-code developer guide. User guide. Admin guide. Developer guide." />
+    <meta property="og:url" content="https://brix365.com/en/help" />
+    <meta property="og:image" content="" />                                                              
+    <link rel="icon" href="favicon.png" type="image/png" />
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./jquery-ui.css" />
+    <link rel="stylesheet" href="default.css" />
+    <link rel="stylesheet" href="./search-yandex.css" />
+    <link rel="stylesheet" href="./article.css" />
+    <link rel="stylesheet" href="./glossary.css" />
+    <link rel="stylesheet" href="./theme.css" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+
+<body>
+    
+    <script>!function(e,t,c,n,r,a,m){e.ym=e.ym||function(){(e.ym.a=e.ym.a||[]).push(arguments)},e.ym.l=1*new Date;for(var s=0;s<document.scripts.length;s++)if(document.scripts[s].src===n)return;a=t.createElement(c),m=t.getElementsByTagName(c)[0],a.async=1,a.src=n,m.parentNode.insertBefore(a,m)}(window,document,"script","https://mc.yandex.ru/metrika/tag.js"),ym(83179930,"init",{clickmap:!0,trackLinks:!0,accurateTrackBounce:!0,webvisor:!0})</script><noscript><div><img alt=""src=https://mc.yandex.ru/watch/83179930 style=position:absolute;left:-9999px></div></noscript> 
+    
+    ﻿<header class="header elma-365">
+  <div class="container">
+    <a class="header__logo" href="https://brix365.com/en/help">
+      <img src="./logo-en.svg">
+    </a>
+ <!-- <div class="hero__search-form" id="search-panel">
+   <form class="search-form" onsubmit="ym(83180416,'reachGoal','poisk')">
+     <label class="search-form__label">
+       <span id="reset-search" class="search__icon"></span>
+       <input class="search-form__input" type="text">
+     </label>
+     <input class="search-form__submit" type="submit" value="Submit">
+   </form>
+  </div>       -->
+  
+     <div class="hero__search-form" id="search-panel"> <form class="search-form"> <label class="search-form__label"> <span id="reset-search" class="search__icon"></span> <input class="search-form__input" type="text"> </label> <input class="search-form__submit" type="submit" value="Submit"> </form> </div> 
+  <div class="hero__search">
+      <a href="#" id="search-icon" class="hero__search-icon">
+        <img src="search-icon-white.svg" alt="search string">
+      </a>
+      <a href="#" id="side-menu-icon" class="hero__side-icon">
+        <img src="side_menu.svg" alt="side menu">
+      </a>
+    </div>  
+  <div class="header__navi">
+        
+        <ul class="header__list"><li><span class="solution-select"><span class="solution-select__selected"></span><svg width="7" height="4" viewBox="0 0 7 4" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L3.5 3.5L6 1" stroke="white" stroke-linecap="round" stroke-linejoin="round"/></svg><ul class="solution-select__list"><li><a class="project-link" href="https://brix365.com/en/help/platform/get-trial.html">Platform</a></li><li><a class="project-link" href="https://brix365.com/en/help/ecm/ecm-functions.html">ECM</a></li><li><a class="project-link" href="https://brix365.com/en/help/crm/crm_overview.html">CRM</a></li><li><a class="project-link" href="https://brix365.com/en/help/service/service-functions.html">Service</a></li><li><a class="project-link" href="https://brix365.com/en/help/projects/projects-functions.html">Projects</a></li><li><a class="project-link" href="https://brix365.com/en/help/business_solutions/-elma365-store.html">Business Solutions</a></li></ul></span></li><li><a href="https://api.brix365.com/en/" target="_blank">API</a></li><li><a href="https://tssdk.brix365.com/" target="_blank">SDK</a></li></ul>
+        
+        
+   </div>
+  </div>
+
+</header>
+
+
+
+    
+    <main class="main container">
+
+        <aside class="sidebar" id="sidebar">
+        <div class="sidebar__header">
+                 <a class="header__logo" href="https://brix365.com/en/help">
+                    <img src="./logo-light-en.svg">
+                 </a>
+                    <span class="sidebar__close elma-365-close" id="close"></span>
+            </div>
+            <div class="sidebar__wrapper" id="side-menu">
+                
+            </div>
+        </aside>
+
+        <article class="article" id="article">
+            <div class="article-inner">           
+                <div class="content">
+                    <header class="article__header">
+                        
+                            <div class="topic__breadcrumbs">
+                                <p>System settings &gt; <a href="devtools.html">Developer tools</a> / Performance report</p>
+                            </div>
+                        
+                        <div class="topic__title"><h1 class="p_Heading1"><span class="f_Heading1">Performance report</span></h1>
+</div>
+                    
+</header>
+                    <section class="article__content">
+                        <div class="scroll-top-inner">
+                            <a href="#h1-article" class="scroll-top"></a>
+                        </div>
+                        <!-- Placeholder for topic body. -->
+                        <p class="p_Normal">On the <span style="font-weight: bold;">Performance Report</span> page, users who are part of the <a href="360006871932.html#administrator" class="topiclink">Administrators</a> group can generate a report containing diagnostic data on the system’s operation.</p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;внимание&nbsp;</span></p>
+<p class="p_Normal">Performance reports are available only in the <a href="elma365-on-premises.html" class="topiclink">BRIX On-Premises</a> edition. For SaaS Standard it is required to enable the <code><b>enableInternalTelemetry</b></code> feature flag. To do so, contact your BRIX rep. </p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;внимание&nbsp;</span></p>
+<p class="p_Normal" style="margin: 20px 0 0 0;">The report is an <span style="font-weight: bold;">.xlsx</span> file that is downloaded to the computer. It records data on the execution time of external and internal web requests and server script requests. For BRIX On-Premises, statistics on SQL queries are also available.</p>
+<p class="p_Normal" style="margin: 20px 0 0 0;">You can manually generate a report based on the data collected up to the current moment. Additionally, you can set up automatic report generation at specified intervals. In this case, the generated reports can be downloaded from the <span style="font-weight: bold;">Performance Report</span> page.</p>
+<p class="p_Normal">For the BRIX On-Premises Enterprise edition, you can configure the export of metrics tracking the execution time of web and SQL queries, as well as server scripts, to the Prometheus storage. This allows you to visualize diagnostic data using Grafana. Read more about it in the <a href="export-monitoring-enterprise.html" class="topiclink">Export BRIX Enterprise performance metrics into Prometheus storage</a> article.</p>
+<h2 class="p_Heading2"><span class="f_Heading2">Configure report generation</span></h2>
+<p class="p_Normal" style="margin: 16px 0 16px 0;">To enable manual and automatic report generation:</p>
+<ol style="list-style-type:upper-roman">
+<li value="1" class="p_Normal">Navigate to the <span style="font-weight: bold;">Administration</span> <span style="font-weight: bold;">&gt;</span> <span style="font-weight: bold;">Developer Tools</span> workspace.</li><li value="2" class="p_Normal"><a id="widgets-report-users" class="hmanchor"></a>If you want to monitor widget performance in the report, enable the collection of this data in the system. To do that, in the <span style="font-weight: bold;">Widget Debugging &gt; Sources for information about widget performance</span> section, select users, <a href="360007146071.html" class="topiclink">user groups</a>, or <a href="360003861992.html" class="topiclink">org chart items</a>.</li></ol>
+<p class="p_Normal" style="margin: 0 0 0 34px;">Data for all widgets in the system that the specified employees worked with will be recorded and saved in the report. You can select a specific employee who has encountered a problem with the widget display or a user group that analyzes performance. The more users are specified in the field, the more extensive the collected statistics of performance data will be.</p>
+<ol style="list-style-type:upper-roman">
+<li value="3" class="p_Normal">In the <span style="font-weight: bold;">Tools</span> section, click <span style="font-weight: bold;">Performance report</span>.<br />
+<img alt="perf_rep_1" width="706" height="306" style="margin:0;width:706px;height:306px;border:none" src="perf_rep_1.png"/></li><li value="4" class="p_Normal"><a id="settings" class="hmanchor"></a>On opened page, click the <span style="font-weight: bold;">Settings</span> button and set the data collection parameters:<br />
+<img alt="perf_rep_2" width="595" height="292" style="margin:0;width:595px;height:292px;border:none" src="perf_rep_2.png"/></li></ol>
+<ul style="list-style-type:disc">
+<li class="p_Normal"><span style="font-weight: bold;">Status</span><span style="font-size: 15px; color: #394149;">.</span> Enable<span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; color: #374151;"> </span>this option to start collecting data &nbsp;for reports. After this, the following options will become available:</li></ul>
+<ul style="list-style-type:disc"><ul style="list-style-type:circle">
+<li style="line-height: 1.20;"><a href="performance-report.html#generate-manually" class="topiclink">Manual report generation</a>. Performance data collected up to date.</li><li style="line-height: 1.20;">Automatic report generation within a time period.</li></ul>
+<li style="line-height: 1.20;"><span style="font-weight: bold;">Periodic reports</span>. Set<span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; color: #374151;"> </span>parameters to enable automatic report generation:<ul style="list-style-type:circle">
+<li style="line-height: 1.20;"><span style="font-weight: bold;">Status</span><span style="font-size: 15px; color: #394149;">. </span>Enable this option for the reports to be automatically generated at a specified frequency. You will be able to choose a report for a specific period and <a href="performance-report.html#download-generated" class="topiclink">download it to your computer</a>.</li><li style="line-height: 1.20;"><span style="font-weight: bold;">Interval</span><span style="font-size: 15px; color: #394149;">.</span><span style="font-size: 15px; color: #394149;"> </span>Select the report creation frequency: <span style="font-weight: bold;">Once every 30 minutes </span>or <span style="font-weight: bold;">Once an hour</span><span style="color: #394149;">.</span></li></ul></li></ul>
+<ol style="list-style-type:upper-roman">
+<li value="5" class="p_Normal">Click the <span style="font-weight: bold;">Save</span> button.</li></ol>
+<h2 class="p_Heading2"><span class="f_Heading2">Generate a report automatically</span></h2>
+<p class="p_Normal">If periodic reports generation is enabled in the settings, they are automatically generated at the specified frequency and saved in the system.</p>
+<p class="p_Normal">The records are displayed in the <span style="font-weight: bold;">Administration &gt; Developer Tools</span> workspace on the <span style="font-weight: bold;">Performance Report</span> page with the <span style="font-weight: bold;">Automatic</span> generation method.</p>
+<p class="p_Normal"><img alt="dev_report_01" width="1162" height="375" style="margin:0;width:1162px;height:375px;border:none" src="dev_report_01.png"/></p>
+<p class="p_Normal">To view the report data, <a href="performance-report.html#download-generated" class="topiclink">download it to your computer</a>.</p>
+<h2 class="p_Heading2"><a id="generate-manually" class="hmanchor"></a><span class="f_Heading2">Generate a report manually</span></h2>
+<p class="p_Normal">You can download current system performance data. The amount of data downloaded depends on the <a href="performance-report.html#settings" class="topiclink">report generation settings</a>:</p>
+<ul style="list-style-type:disc">
+<li style="line-height: 1.20;">If periodic report creation is enabled, the report will display data obtained since the last periodic report was created.</li><li style="line-height: 1.20;">If periodic report creation is disabled, the report will show all the information recorded since the data collection was enabled in the performance report settings.</li></ul>
+<p style="line-height: 1.20;">To generate a report, open the <span style="font-weight: bold;">Administration &gt; Developer Tools</span> workspace and go to the <span style="font-weight: bold;">Performance Report</span> page, then click on the <span style="font-weight: bold;">Generate Report</span> button.</p>
+<p style="line-height: 1.20;"><img alt="dev_report_02" width="987" height="386" style="margin:0;width:987px;height:386px;border:none" src="dev_report_02.png"/></p>
+<p class="p_Normal">In the opened window, you can download the report to your computer by clicking on the file name.</p>
+<p class="p_Normal"><img alt="dev_report_03" width="592" height="167" style="margin:0;width:592px;height:167px;border:none" src="dev_report_03.png"/></p>
+<p class="p_Normal">In addition, the report entry is saved in the general list on the <span style="font-weight: bold;">Performance report</span> page with the <span style="font-weight: bold;">When requested</span> generation method. You can download the generated report again.</p>
+<h2 class="p_Heading2"><a id="download-generated" class="hmanchor"></a><span class="f_Heading2">Download an automatically generated report</span></h2>
+<p class="p_Normal" style="margin: 20px 0 0 0;">To get a report file generated automatically or manually, open &nbsp;the <span style="font-weight: bold;">Administration &gt; Developer Tools</span> workspace and go to the <span style="font-weight: bold;">Performance Report</span> page. Select the entry for the required period from the list and click the<span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; color: #374151;"> </span><img alt="performance-report-5" title="performance-report-5" width="17" height="20" style="margin:0;width:17px;height:20px;border:none" src="performance-report-5.png"/><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; color: #374151;"> </span>button.</p>
+<p class="p_Normal"><img alt="dev_report_04" width="845" height="414" style="margin:0;width:845px;height:414px;border:none" src="dev_report_04.png"/></p>
+<p class="p_Normal" style="margin: 20px 0 20px 0;">When you disable performance data collection in the <span style="font-weight: bold;">Performance Report</span> settings, it becomes impossible to generate new reports. Previously generated reports are displayed on the page and are available for download.</p>
+<h2 class="p_Heading2"><a id="read-report" class="hmanchor"></a><span class="f_Heading2">How to read the report</span></h2>
+<p class="p_Normal">Open the downloaded report file. You can see how many times a method was called or a widget was opened, as well as the execution time of requests and functions in milliseconds. Information in the file is distributed across the following tabs:</p>
+<p class="p_Normal"><img alt="performance-report-6" width="922" height="271" style="margin:0;width:922px;height:271px;border:none" src="performance-report-6.png"/></p>
+<ul style="list-style-type:disc">
+<li class="p_Normal"><span style="font-weight: bold;">Web requests</span>. Data about requests generated by users through scripts or the system’s web interface.</li><li class="p_Normal"><span style="font-weight: bold;">Scripts</span>. Information about triggered server scripts. For them, you can see both the net execution time and the duration including waiting time in the queue.</li><li class="p_Normal"><span style="font-weight: bold;">SQL queries</span>. Statistics about queries received in the database with the name of the service where they were processed.</li><li class="p_Normal"><span style="font-weight: bold;">Widgets</span>. Summary statistics of widgets usage in the system by employees <a href="performance-report.html#widgets-report-users" class="topiclink">selected on the Developer Tools page</a>. Here you can see the widget path, frequency of its use, as well as the time of widget loading, initialization function execution, and scripts preparation. Having analyzed the statistics, you can go to the interface designer and optimize the performance of problematic widgets.</li></ul>
+<h2 class="p_Heading2"><span class="f_Heading2">Delete a report</span></h2>
+<p class="p_Normal">You can delete automatically generated reports from the system to free up <a href="360014165012.html" class="topiclink">disk space</a>. To do this:</p>
+<ol style="list-style-type:upper-roman">
+<li value="1" style="line-height: 1.20;">In the <span style="font-weight: bold;">Administration</span> workspace, go to the <span style="font-weight: bold;">Developer Tools &gt; Performance Report</span> page.</li><li value="2" style="line-height: 1.20;">Select the reports to be deleted. </li></ol>
+<p style="line-height: 1.20; margin: 0 0 0 34px;">If you need to choose all visible entries on the page, check the box in the top row of the list. To delete all generated reports, click <span style="font-weight: bold;">Select all</span>.</p>
+<p style="line-height: 1.20; margin: 0 0 0 34px;"><img alt="dev_report_05" width="1083" height="547" style="margin:0;width:1083px;height:547px;border:none" src="dev_report_05.png"/></p>
+<ol style="list-style-type:upper-roman">
+<li value="3" style="line-height: 1.20;">Click the <span style="font-weight: bold;">Delete</span> button and confirm the action.</li></ol>
+<p style="line-height: 1.20;">The selected reports will be removed from the system.</p>
+
+                        <div class="bottom-nav">
+                            
+                                <a id="prev-link" class="topic__navi_prev" href="download-logs.html">
+                                    <span class="bottom-nav__arrow bottom-nav__arrow--prev"></span> <span
+                                        class="bottom-nav__link">download-logs.html</span>
+                                </a>
+                            
+                            
+                                <a id="next-link" class="topic__navi_next" href="low-code-ci-cd.html">
+                                    <span class="bottom-nav__link">low-code-ci-cd.html</span> <span
+                                        class="bottom-nav__arrow bottom-nav__arrow--next"></span>
+                                </a>
+                            
+                        </div>
+                        <!-- добавляет на страницу строку блок Была ли статья полезной?  -->
+                          <div class="feedback" id="feedback"><span><b>Was this helpful?</b></span><form action="" method="POST" class="feedback-form" id="feedback-form"><div class="feedback__popup feedback__popup-response" id="feedback__popup_thx" style="display: none;">Thanks for your feedback!</div><div class="feedback__popup" id="feedback__popup_why" style="display: none;"><div class="feedback__popup-header">Please specify why:</div><input type="radio" name="category" id="bad_recommendation" value="bad_recommendation"><label for="bad_recommendation">Recommendations did not help me</label><input type="radio" name="category" id="difficult_text" value="difficult_text"><label for="difficult_text">Article is hard to understand</label><input type="radio" name="category" id="no_answer" value="no_answer"><label for="no_answer">Didn’t answer my question</label><input type="radio" name="category" id="bad_header" value="bad_header"><label for="bad_header">Content does not match the topic</label><input type="radio" name="category" id="other_reason" value="other_reason"><label for="other_reason">Other</label></div><div class="feedback__popup" id="feedback__popup-other" style="display: none;"><div class="feedback__popup-header">How can we improve the article?</div><textarea class="feedback__textarea" name="other" id=""></textarea><input type="submit" class="feedback__other-btn" value="Submit"></div><div class="feedback-form__btn-group"><input type="radio" name="useful" id="feedback__useful_yes" value="true"><label for="feedback__useful_yes"><img src="like.svg" class="small-img"><spanclass="feedback-form__btn-group_yes-btn">Yes</spanclass="feedback-form__btn-group_yes-btn"></label><input type="radio" name="useful" id="feedback__useful_no" value="false"><label for="feedback__useful_no"><img src="dislike.svg" class="small-img"><spanclass="feedback-form__btn-group_no-btn">No</spanclass="feedback-form__btn-group_no-btn"></label></div><select name="category"><option disabled="">Please specify why</option><option value="bad_recommendation" selected="">Recommendations did not help me</option><option value="difficult_text">Article is hard to understand</option><option value="no_answer">Didn’t answer my question</option><option value="bad_header">Content does not match the topic</option><option value="other_reason">Other</option></select><input type="submit"></form></div>
+                           
+                    </section>
+                </div>
+                <aside class="article__sidebar" style="display:none">
+                    <input type="checkbox" />
+                    <div class="article__arrow"></div>
+                    <div class="table-of-contents elma365-right" id="toc2Content">
+                        <h3 class="h3-toc">In this topic</h3>
+                        <nav id="toc2"></nav>
+                    </div>
+                </aside>
+            </div>
+        </article>
+    </main>               
+    <footer class="footer">
+        <div class="footer-container">
+  <div class="footer-mobile">
+    
+    <ul class="footer-mobile__list"><li><a href="https://brix365.com/en/" target="_blank">BRIX</a></li><li><a href="https://tssdk.brix365.com/en/latest/" target="_blank">SDK</a></li><li><a href="https://api.brix365.com/en/" target="_blank">API</a></li></ul><ul class="footer-mobile__list"><li><a href="https://brix365.com/en/help/platform/get-trial.html">Platform</a></li><li><a href="https://brix365.com/en/help/ecm/ecm-functions.html">ECM</a></li><li><a href="https://brix365.com/en/help/service/service-functions.html">Service</a></li><li><a href="https://brix365.com/en/help/projects/projects-functions.html">Projects</a></li></ul>
+    
+    
+  </div>
+  <div class="footer-wrap">
+    
+      <div><span class="mobile-question-popup">Send feedback</span><form method="POST" action class="question__popup question-xs" id="question__popup"><div class="question-wrap"><span class="close"></span><span class="title">Ask a question</span><label for="help_question" style="display: none;"></label><textarea name="help_question" id="help_question"></textarea><input type="submit" value="Send"></div></form><div class="hidden fade-in question-success-xs">Sent</div></div>
+    
+    <div class="footer-flex-b">
+      <span class="footer-copy">&copy; 2025 BRIX</span>
+      <ul class="footer-list">
+        
+        <li class="footer-item">
+            <a href="#" class="arrow-top" style="display: block;"></a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+ 
+    </footer>
+    <iframe name="hmnavigation" style="display:none!important"></iframe>
+    <script src="./jquery-ui.js"></script>
+    <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
+    <script src="./jquery.tocify.min.js"></script>
+    <script src="./TypoReporter.min.js"></script>
+    <script src="./google-search.js"></script>
+    <script src="./main.js"></script>
+</body>
+
+</html>

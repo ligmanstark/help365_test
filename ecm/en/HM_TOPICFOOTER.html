@@ -1,0 +1,23 @@
+<div class="footer-container">
+  <div class="footer-mobile">
+    <IFNOT_QUICKBPM>
+    <%FOOTER_LIST_MOB_DEFAULT%>
+    </IFNOT_QUICKBPM>
+    <IF_QUICKBPM><%FOOTER_MOBILE_LIST_QUICK%></IF_QUICKBPM>
+  </div>
+  <div class="footer-wrap">
+    <IFNOT_QUICKBPM>
+      <%FOOTER_QUESTION_POPUP%>
+    </IFNOT_QUICKBPM>
+    <div class="footer-flex-b">
+      <span class="footer-copy">&copy; <%YEAR%> <IFNOT_QUICKBPM><%AUTHOR%></IFNOT_QUICKBPM><IF_QUICKBPM><%AUTHOR_QUICK%></IF_QUICKBPM></span>
+      <ul class="footer-list">
+        <IFNOT_QUICKBPM><%HVAR_FOOTER_SOCIAL_LINKS%></IFNOT_QUICKBPM>
+        <li class="footer-item">
+            <a href="#" class="arrow-top" style="display: block;"></a>
+        </li>
+        <IF_QUICKBPM><%HVAR_FOOTER_SOCIAL_LINKS_QUICK%></IF_QUICKBPM>
+      </ul>
+    </div>
+  </div>
+</div>

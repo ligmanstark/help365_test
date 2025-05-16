@@ -1,0 +1,790 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Custom file viewing and editing module</title>
+    <meta name="generator" content="Help+Manual" />
+    <meta name="keywords" content="" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="You can use BRIX extension modules to view and edit files in formats that aren’t supported in the system by default.&nbsp;" />
+    <meta name="picture" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Full documentation for BRIX365 platform. Low-code developer guide. User guide. Admin guide. Developer guide." />
+    <meta property="og:url" content="https://brix365.com/en/help" />
+    <meta property="og:image" content="" />                                                              
+    <link rel="icon" href="favicon.png" type="image/png" />
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./jquery-ui.css" />
+    <link rel="stylesheet" href="default.css" />
+    <link rel="stylesheet" href="./search-yandex.css" />
+    <link rel="stylesheet" href="./article.css" />
+    <link rel="stylesheet" href="./glossary.css" />
+    <link rel="stylesheet" href="./theme.css" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+
+<body>
+    
+    <script>!function(e,t,c,n,r,a,m){e.ym=e.ym||function(){(e.ym.a=e.ym.a||[]).push(arguments)},e.ym.l=1*new Date;for(var s=0;s<document.scripts.length;s++)if(document.scripts[s].src===n)return;a=t.createElement(c),m=t.getElementsByTagName(c)[0],a.async=1,a.src=n,m.parentNode.insertBefore(a,m)}(window,document,"script","https://mc.yandex.ru/metrika/tag.js"),ym(83179930,"init",{clickmap:!0,trackLinks:!0,accurateTrackBounce:!0,webvisor:!0})</script><noscript><div><img alt=""src=https://mc.yandex.ru/watch/83179930 style=position:absolute;left:-9999px></div></noscript> 
+    
+    ﻿<header class="header elma-365">
+  <div class="container">
+    <a class="header__logo" href="https://brix365.com/en/help">
+      <img src="./logo-en.svg">
+    </a>
+ <!-- <div class="hero__search-form" id="search-panel">
+   <form class="search-form" onsubmit="ym(83180416,'reachGoal','poisk')">
+     <label class="search-form__label">
+       <span id="reset-search" class="search__icon"></span>
+       <input class="search-form__input" type="text">
+     </label>
+     <input class="search-form__submit" type="submit" value="Submit">
+   </form>
+  </div>       -->
+  
+     <div class="hero__search-form" id="search-panel"> <form class="search-form"> <label class="search-form__label"> <span id="reset-search" class="search__icon"></span> <input class="search-form__input" type="text"> </label> <input class="search-form__submit" type="submit" value="Submit"> </form> </div> 
+  <div class="hero__search">
+      <a href="#" id="search-icon" class="hero__search-icon">
+        <img src="search-icon-white.svg" alt="search string">
+      </a>
+      <a href="#" id="side-menu-icon" class="hero__side-icon">
+        <img src="side_menu.svg" alt="side menu">
+      </a>
+    </div>  
+  <div class="header__navi">
+        
+        <ul class="header__list"><li><span class="solution-select"><span class="solution-select__selected"></span><svg width="7" height="4" viewBox="0 0 7 4" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L3.5 3.5L6 1" stroke="white" stroke-linecap="round" stroke-linejoin="round"/></svg><ul class="solution-select__list"><li><a class="project-link" href="https://brix365.com/en/help/platform/get-trial.html">Platform</a></li><li><a class="project-link" href="https://brix365.com/en/help/ecm/ecm-functions.html">ECM</a></li><li><a class="project-link" href="https://brix365.com/en/help/crm/crm_overview.html">CRM</a></li><li><a class="project-link" href="https://brix365.com/en/help/service/service-functions.html">Service</a></li><li><a class="project-link" href="https://brix365.com/en/help/projects/projects-functions.html">Projects</a></li><li><a class="project-link" href="https://brix365.com/en/help/business_solutions/-elma365-store.html">Business Solutions</a></li></ul></span></li><li><a href="https://api.brix365.com/en/" target="_blank">API</a></li><li><a href="https://tssdk.brix365.com/" target="_blank">SDK</a></li></ul>
+        
+        
+   </div>
+  </div>
+
+</header>
+
+
+
+    
+    <main class="main container">
+
+        <aside class="sidebar" id="sidebar">
+        <div class="sidebar__header">
+                 <a class="header__logo" href="https://brix365.com/en/help">
+                    <img src="./logo-light-en.svg">
+                 </a>
+                    <span class="sidebar__close elma-365-close" id="close"></span>
+            </div>
+            <div class="sidebar__wrapper" id="side-menu">
+                
+            </div>
+        </aside>
+
+        <article class="article" id="article">
+            <div class="article-inner">           
+                <div class="content">
+                    <header class="article__header">
+                        
+                            <div class="topic__breadcrumbs">
+                                <p><a href="360024498352.html">Modules</a> &gt; Examples of BRIX integration modules / Custom file viewing and editing module</p>
+                            </div>
+                        
+                        <div class="topic__title"><h1 class="p_Heading1"><span class="f_Heading1">Custom file viewing and editing module</span></h1>
+</div>
+                    
+</header>
+                    <section class="article__content">
+                        <div class="scroll-top-inner">
+                            <a href="#h1-article" class="scroll-top"></a>
+                        </div>
+                        <!-- Placeholder for topic body. -->
+                        <p style="line-height: 1.20; margin: 0 0 11px 0;"><span style="font-family: Inter;">You can use BRIX extension modules to view and edit files in formats that aren’t supported in the system by default. </span></p>
+<p style="line-height: 1.20; margin: 0 0 11px 0;"><span style="font-family: Inter;">For example, you may want to make an order page that includes not only text descriptions but also equipment installation drawings in the </span><span style="font-family: Inter; font-weight: bold;">.djvu</span><span style="font-family: Inter;"> format. By default, you cannot view files in this format in the system, but you can create a <a href="extentions.html" class="topiclink">custom module</a> that allows you to do it.</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;внимание</span></p>
+<p style="line-height: 1.20; margin: 7px 0 7px 0;"><span style="font-family: Inter;">Only users included in the <a href="360006871932.html#administrator" class="topiclink">Administrators</a> group can create and configure modules.</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;внимание</span></p>
+<h2 class="p_Heading2"><span class="f_Heading2">Architecture</span></h2>
+<p style="line-height: 1.20; margin: 0 0 11px 0;"><span style="font-family: Inter;">The module consists of the following essential parts: configuration properties, the <a href="extension-zones.html#preview-page" class="topiclink">Preview page widget</a>, and <a href="extention-api.html" class="topiclink">API methods</a>.</span></p>
+<p style="line-height: 1.20; margin: 0 0 11px 0;"><span style="font-family: Inter;">Configuration properties determine a module’s overall behavior. These can be, for example, the supported file formats, the viewer server address, the interface language, etc.</span></p>
+<p style="line-height: 1.20; margin: 0 0 11px 0;"><span style="font-family: Inter;">The viewing and editing logic is determined in the </span><span style="font-family: Inter; font-weight: bold;">Preview page</span><span style="font-family: Inter;"> type widget using client and server <a href="client_server_scripts.html" class="topiclink">scripts</a>.</span></p>
+<p style="line-height: 1.20; margin: 0 0 11px 0;"><span style="font-family: Inter;">If an integration with an external application is set up within the module, API methods enable data exchange.</span></p>
+<h2 class="p_Heading2"><span class="f_Heading2">Create and configure the module</span></h2>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-family: Inter;">To create a new module, go to </span><span style="font-family: Inter; font-weight: bold;">Administration &gt; Modules</span><span style="font-family: Inter;"> and click </span><span style="font-family: Inter; font-weight: bold;">+Module</span><span style="font-family: Inter;">. In the window that opens, select </span><span style="font-family: Inter; font-weight: bold;">Create</span><span style="font-family: Inter;">. Enter information about the module and click the </span><span style="font-family: Inter; font-weight: bold;">Create</span><span style="font-family: Inter;"> button. Read more in <a href="create-extention.html" class="topiclink">Create a custom module</a>.</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Add configuration parameters</span></h3>
+<p class="p_Normal" style="margin: 20px 0 0 0;">On the <span style="font-weight: bold;">Settings</span> tab, you can create, edit, and delete the <a href="extention-settings.html" class="topiclink">general parameters</a> of the module which are filled in when it is enabled.</p>
+<p class="p_Normal" style="margin: 20px 0 20px 0;">These parameters are global: they apply to all files in the system that are viewed or edited using the module.</p>
+<p class="p_Normal" style="margin: 20px 0 20px 0;">To create a parameter, go to the <span style="font-weight: bold;">Settings</span> tab and click the <span style="font-weight: bold;">+Add</span> button.</p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><img alt="external_viewer_intergation-1" width="748" height="315" style="margin:0;width:748px;height:315px;border:none" src="external_viewer_intergation-1.png"/></p>
+<p class="p_Normal" style="margin: 20px 0 0 0;">In the opened window, fill in the fields and click the <span style="font-weight: bold;">Create</span> button.</p>
+<p class="p_Normal" style="margin: 20px 0 20px 0;">For a file viewing and editing module, a mandatory parameter is <code><b>SupportedFileTypes</b></code>. It stores the supported file formats. Use the following settings for the property:</p>
+<p class="p_Normal" style="margin: 20px 0 20px 0;"><img alt="external_viewer_intergation-SupportedFileTypes" width="631" height="542" style="margin:0;width:631px;height:542px;border:none" src="external_viewer_intergation-supportedfiletypes.png"/></p>
+<ul style="list-style-type:disc">
+<li style="line-height: 1.20;"><span style="font-weight: bold;">Display Name</span><span style="font-weight: bold; color: #ff0000;">*</span>. Specify the name of the field that will appear on the module connection page. It can be any name, for example, <span style="font-weight: bold;">Supported formats</span>.</li><li style="line-height: 1.20;"><span style="font-weight: bold;">Property Name</span><span style="font-weight: bold; color: #ff0000;">*</span>. Specify the value <code><b>SupportedFileTypes</b></code>. This property name is mandatory. It is used to search for modules that can open files with a specific extension.</li><li style="line-height: 1.20;"><span style="font-weight: bold;">Type</span><span style="font-weight: bold; color: #ff0000;">*</span>. Select <a href="360009707032.html#category" class="topiclink">Category</a>. To enable the module to support multiple file extensions, choose the <span style="font-weight: bold;">Multiple</span> type.</li><li style="line-height: 1.20;"><span style="font-weight: bold;">Values</span>. Add file formats that will be opened using the module, for example, <span style="font-weight: bold;">.doc</span>, <span style="font-weight: bold;">.docx</span>, and <span style="font-weight: bold;">.odt</span>.</li></ul>
+<p class="p_Normal" style="margin: 20px 0 0 0;">You can also add fields for switching the file opening mode, specifying the address of an external server, etc.</p>
+<p class="p_Normal" style="margin: 20px 0 0 0;">All added properties are displayed on the module connection page in the <span style="font-weight: bold;">Administration</span> workspace.</p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><img alt="external_viewer_intergation-2" width="750" height="391" style="margin:0;width:750px;height:391px;border:none" src="external_viewer_intergation-2.png"/></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-family: Inter;">If needed, you can change the standard form used to present the module settings, hide some fields. To do that, on the </span><span style="font-family: Inter; font-weight: bold;">Settings</span><span style="font-family: Inter;"> tab, click the </span><span style="font-family: Inter; font-weight: bold;">Change Form</span><span style="font-family: Inter;"> button. The interface designer will open. There you can set up the module connection page. Read more in <a href="extention-settings.html" class="topiclink">Module settings</a>.</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">API methods</span></h3>
+<p style="line-height: 1.20; margin: 0 0 11px 0;"><span style="font-family: Inter;">On the </span><span style="font-family: Inter; font-weight: bold;">API Methods</span><span style="font-family: Inter;"> tab, add <a href="extention-api.html" class="topiclink">methods</a> for data exchange with the external server. If data exchange is not required for the module you create, you don’t need to add methods.</span></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-family: Inter;">For example, you can create a </span><code><b>callback</b></code><span style="font-size: 13px;"> </span>POST request<span style="font-family: Inter;"> that will obtain the current status of the document from the server and add a new version to BRIX whenever it’s edited. The source code of the method can be found in the <a href="external_viewer_intergation.html#api" class="topiclink">Example of an integration with an external file viewing and editing service</a> section. </span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Viewing and editing widget</span></h3>
+<p style="line-height: 1.20; margin: 0 0 11px 0;"><span style="font-family: Inter;">The </span><span style="font-family: Inter; font-weight: bold;">Preview page</span><span style="font-family: Inter;"> type widget is the module’s main component. It provides data exchange between BRIX and the external application used for viewing documents. To create the widget, do the following:</span></p>
+<ol style="list-style-type:upper-roman">
+<li value="1" style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-family: Inter;">In the module settings, go to the </span><span style="font-family: Inter; font-weight: bold;">Widgets</span><span style="font-family: Inter;"> tab.</span></li><li value="2" style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-family: Inter;">Click the </span><span style="font-family: Inter; font-weight: bold;">+Widget</span><span style="font-family: Inter;"> button.</span></li><li value="3" style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-family: Inter;">In the opened window, specify the widget parameters:</span></li></ol>
+<ol style="list-style-type:decimal"><ul style="list-style-type:disc">
+<li style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-family: Inter; font-weight: bold;">Name</span><span style="font-family: Inter; font-weight: bold; color: #ff0000;">*</span><span style="font-family: Inter;">. Enter the widget’s name.</span></li><li style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-family: Inter; font-weight: bold;">Widget code</span><span style="font-family: Inter; font-weight: bold; color: #ff0000;">*</span><span style="font-family: Inter;">. Set the widget’s ID.</span></li><li style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-family: Inter; font-weight: bold;">Extension</span><span style="font-family: Inter;">. Select </span><span style="font-family: Inter; font-weight: bold;">File preview &gt;</span><span style="font-family: Inter;"> </span><span style="font-family: Inter; font-weight: bold;">Preview page</span><span style="font-family: Inter;">.</span></li></ul></li></ol>
+<p style="line-height: 1.20; margin: 0 0 11px 43px;"><img alt="external_viewer_intergation-3" width="449" height="379" style="margin:0;width:449px;height:379px;border:none" src="external_viewer_intergation-3.png"/></p>
+<ol style="list-style-type:upper-roman" start="4">
+<li value="4" style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-family: Inter;">Click </span><span style="font-family: Inter; font-weight: bold;">Save</span><span style="font-family: Inter;">.</span></li></ol>
+<p style="line-height: 1.20; margin: 0 0 11px 0;">The interface designer will open. Here you can set up the widget content.</p>
+<p style="line-height: 1.20; margin: 0 0 11px 0;">By default, the widget context includes the following properties:</p>
+<ul style="list-style-type:disc">
+<li style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold;">File</span>. A <a href="360009707032.html#file_type" class="topiclink">Files</a> type property. A document opened by the viewing and editing module.</li><li class="p_Normal"><span style="font-weight: bold;">ForFile</span>. A <a href="360009707032.html#file_type" class="topiclink">Files</a> type property. It is used when saving the result of comparing a document from the <span style="font-weight: bold;">File</span> field with another version of it or a different file. It is applied, for example, if the document is not yet saved in the system or a version needs to be added to another file. The property contains the document for which a version with the comparison result is created.</li><li style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold;">Action</span>. A <a href="360009707032.html#string" class="topiclink">String</a> type property. The mode in which the document opens: for viewing only or for view and editing. The possible values are <span style="font-weight: bold;">view</span> and <span style="font-weight: bold;">edit</span>.</li><li style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold;">Extension</span>. A <a href="360009707032.html#string" class="topiclink">String</a> type property. The extension of the document in the <span style="font-weight: bold;">File</span> property.</li></ul>
+<p style="line-height: 1.28; margin: 0 0 11px 0;">You can find these properties on the right-side panel of the interface designer, on the <span style="font-weight: bold;">Properties</span> tab.</p>
+<p style="line-height: 1.20; margin: 0 0 11px 0;"><img alt="external_viewer_intergation-4" width="907" height="485" style="margin:0;width:907px;height:485px;border:none" src="external_viewer_intergation-4.png"/></p>
+<p style="line-height: 1.20; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Inter;">Let’s consider an example of how a widget context can be used. You can create a method that checks whether the file preview module supports documents of a certain type. First, let’s get the file’s extension from the </span><span style="font-size: 15px; font-family: Inter; font-weight: bold;">Extension</span><span style="font-size: 15px; font-family: Inter;"> context variable of the widget:</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample" style="font-weight: bold;">function</span><span class="f_CodeExample"> getFileExtension() {</span><br />
+<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">if</span><span class="f_CodeExample"> (Context.data.extension){</span><br />
+<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">return</span><span class="f_CodeExample"> (Context.data.extension[0]);</span><br />
+<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;}</span><br />
+<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">else</span><span class="f_CodeExample"> {</span><br />
+<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">return</span><span class="f_CodeExample"> &quot;&quot;;</span><br />
+<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;}</span><br />
+<span class="f_CodeExample">}</span></p>
+<p style="line-height: 1.20; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Inter;">If the format is supported, the method will return </span><code><b>true</b></code><span style="font-size: 15px; font-family: Inter;">, otherwise </span><code><b>false</b></code><span style="font-size: 15px; font-family: Inter;">. In the following example, only </span><span style="font-size: 15px; font-family: Inter; font-weight: bold;">.xlsx</span><span style="font-size: 15px; font-family: Inter;"> files are supported:</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">async </span><span class="f_CodeExample" style="font-weight: bold;">function</span><span class="f_CodeExample"> canRender() {</span><br />
+<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;let fileType:string = getFileExtension(); &nbsp;&nbsp;</span><br />
+<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">if</span><span class="f_CodeExample"> (fileType == &quot;xlsx&quot;)</span><br />
+<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;{</span><br />
+<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">return</span><span class="f_CodeExample"> &nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">true</span><span class="f_CodeExample">;</span><br />
+<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;}</span><br />
+<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">else</span><br />
+<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;{</span><br />
+<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">return</span><span class="f_CodeExample"> &nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">false</span><span class="f_CodeExample">;</span><br />
+<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;}</span><br />
+<span class="f_CodeExample">}</span></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-weight: bold;">Note</span>:<span style="font-weight: bold;"> </span>To obtain document data, use the server scripts of the viewing and editing widget. The use of client scripts is not recommended, as the user may not have sufficient permissions to work with the app item or file.</p>
+<h2 class="p_Heading2"><span class="f_Heading2" style="font-size: 16px;">Example of a viewing module without integration with an external service</span></h2>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-family: Inter;">Let’s consider an example of creating a module for playing </span><span style="font-family: Inter; font-weight: bold;">.mp3</span><span style="font-family: Inter;"> files in BRIX. We’ll use standard HTML elements without integration with an external service.</span></p>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-family: Inter;">To create the module:</span></p>
+<ol style="list-style-type:upper-roman">
+<li value="1" style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 16px;"><span style="font-family: Inter;">Go to </span><span style="font-family: Inter; font-weight: bold;">Administration &gt; Modules</span><span style="font-family: Inter;">. In the upper right corner of the page, click </span><span style="font-family: Inter; font-weight: bold;">+Module</span><span style="font-family: Inter;"> and select </span><span style="font-family: Inter; font-weight: bold;">Create</span><span style="font-family: Inter;">. Specify the module’s name and description.</span></li><li value="2" class="p_Normal">Go to the <span style="font-weight: bold;">Settings</span> tab and add the mandatory property for specifying the file format. Specify an arbitrary display name. Use the <code><b>SupportedFileTypes</b></code> as the property name, select the <span style="font-weight: bold;">Category &gt; Single</span> type, and add the <span style="font-weight: bold;">mp3 </span>value.</li></ol>
+<ol style="list-style-type:upper-roman" start="3">
+<li value="3" style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-family: Inter;">Create a widget that will play </span><span style="font-family: Inter; font-weight: bold;">.mp3</span><span style="font-family: Inter;"> files. To do that, on the </span><span style="font-family: Inter; font-weight: bold;">Widgets</span><span style="font-family: Inter;"> tab, click </span><span style="font-family: Inter; font-weight: bold;">+Widget</span><span style="font-family: Inter;">. Enter any name and code for the widget, for example, </span><code><b>mp3 preview</b></code><span style="font-family: Inter;">. In the </span><span style="font-family: Inter; font-weight: bold;">Extension</span><span style="font-family: Inter;"> field, select </span><span style="font-family: Inter; font-weight: bold;">File preview &gt; Preview page</span><span style="font-family: Inter;">. Click </span><span style="font-family: Inter; font-weight: bold;">Save</span><span style="font-family: Inter;">.</span></li><li value="4" style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-family: Inter;">In the <a href="interface_designer.html" class="topiclink">interface designer</a>, go to the </span><span style="font-family: Inter; font-weight: bold;">Context</span><span style="font-family: Inter;"> tab.</span></li><li value="5" style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-family: Inter;">Create a variable that will store a link to the file that needs to be opened. To do that, click </span><span style="font-family: Inter; font-weight: bold;">+Add</span><span style="font-family: Inter;"> and set the following parameters:</span></li></ol>
+<ul style="list-style-type:disc">
+<li style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-family: Inter; font-weight: bold;">Display Name</span><span style="font-family: Inter; font-weight: bold; color: #ff0000;">*</span><span style="font-family: Inter;">. Enter </span><span style="font-family: Inter; font-weight: bold;">File link</span><span style="font-family: Inter;">.</span></li><li style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-family: Inter; font-weight: bold;">Property Name</span><span style="font-family: Inter; font-weight: bold; color: #ff0000;">*</span><span style="font-family: Inter;">. Enter </span><code><b>link</b></code><span style="font-family: Inter;">.</span></li><li style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-family: Inter; font-weight: bold;">Type</span><span style="font-family: Inter; font-weight: bold; color: #ff0000;">*</span><span style="font-family: Inter;">. Select </span><span style="font-family: Inter; font-weight: bold;">String</span><span style="font-family: Inter;">.</span></li></ul>
+<ol style="list-style-type:upper-roman" start="6">
+<li value="6" style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-family: Inter;">Go to the </span><span style="font-family: Inter; font-weight: bold;">Template</span><span style="font-family: Inter;"> tab. Add the <a href="code_widget.html" class="topiclink">Code</a> widget to the modeling canvas. In the window that opens, paste the following:</span></li></ol>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">&lt;% </span><span class="f_CodeExample" style="font-weight: bold;">if</span><span class="f_CodeExample"> (Context.data.link) { %&gt;</span><br />
+<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;&lt;audio controls&gt;</span><br />
+<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;source src=&quot;&lt;%= Context.data.link%&gt;&quot; type=&quot;audio/mp3&quot;&gt;</span><br />
+<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;your&nbsp;browser&nbsp;does&nbsp;not&nbsp;support&nbsp;the&nbsp;audio&nbsp;element. Try&nbsp;downloading&nbsp;the&nbsp;file</span><br />
+<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a href=&quot;&lt;%= Context.data.link%&gt;&quot; download&gt;here&lt;/a&gt;.</span><br />
+<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;&lt;/audio&gt;</span><br />
+<span class="f_CodeExample">&lt;% } %&gt;</span></p>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-family: Inter;">In this code, standard HTML elements are used to create a player for the audio file. The file source is the link specified in step 5.</span></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-family: Inter;">When you save the script, the player will appear on the modeling canvas:</span></p>
+<p style="line-height: 1.20; margin: 0 0 11px 0;"><img alt="external_viewer_intergation-6" width="809" height="263" style="margin:0;width:809px;height:263px;border:none" src="external_viewer_intergation-6.png"/></p>
+<ol style="list-style-type:upper-roman" start="7">
+<li value="7" style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-size: 15px; font-family: Inter;">Go to the </span><span style="font-size: 15px; font-family: Inter; font-weight: bold;">Scripts</span><span style="font-size: 15px; font-family: Inter;"> tab. In the upper right corner, click </span><span style="font-size: 15px; font-family: Inter; font-weight: bold;">Client</span><span style="font-size: 15px; font-family: Inter;">. Add a script that will initialize the widget:</span></li></ol>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">/** Event&nbsp;that&nbsp;occurs&nbsp;upon&nbsp;widget&nbsp;initialization */</span><br />
+<span class="f_CodeExample">async function onInit() {</span><br />
+<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;// Get&nbsp;the&nbsp;file&nbsp;download&nbsp;URL&nbsp;from&nbsp;the&nbsp;`file`&nbsp;context&nbsp;variable</span><br />
+<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;const file_link = await Context.data.file?.getDownloadUrl();</span><br />
+<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;// If&nbsp;no&nbsp;file&nbsp;is&nbsp;found,&nbsp;quit</span><br />
+<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;if (!file_link) {</span><br />
+<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return;</span><br />
+<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;}</span><br />
+<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;// Assign&nbsp;the&nbsp;`link`&nbsp;context&nbsp;variable&nbsp;to&nbsp;the&nbsp;file&nbsp;download&nbsp;URL</span><br />
+<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;Context.data.link = file_link;</span><br />
+<span class="f_CodeExample">}</span></p>
+<ol style="list-style-type:upper-roman" start="8">
+<li value="8" style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-family: Inter;"> In the upper left corner, click </span><span style="font-family: Inter; font-weight: bold;">Save</span><span style="font-family: Inter;">. Then click </span><span style="font-family: Inter; font-weight: bold;">Check </span><span style="font-family: Inter;">to make sure the widget doesn’t have errors. Then click </span><span style="font-family: Inter; font-weight: bold;">Publish</span><span style="font-family: Inter;">.</span></li></ol>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-family: Inter;">When this module is enabled, you can play </span><span style="font-family: Inter; font-weight: bold;">.mp3</span><span style="font-family: Inter;"> files in the BRIX interface when you add them to <a href="360009707032.html" class="topiclink">Files</a> type fields on app item pages.</span></p>
+<h2 class="p_Heading2"><a id="api" class="hmanchor"></a><span class="f_Heading2">Example of an integration with an external file viewing and editing service</span></h2>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-family: Inter;">Let’s see how to integrate a viewing and editing module with an external application using OnlyOffice as an example. In this integration, we are going to use JavaScript to send documents and parameters to an external service, receive the result, and display it in BRIX.</span></p>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-family: Inter;">To create the module, do the following</span><span style="font-size: 13px; font-family: Inter; color: #394149;">:</span></p>
+<ol style="list-style-type:upper-roman">
+<li value="1" style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 16px;"><span style="font-family: Inter;">Go to </span><span style="font-family: Inter; font-weight: bold;">Administration &gt; Modules</span><span style="font-family: Inter;">. In the upper right corner, click </span><span style="font-family: Inter; font-weight: bold;">+Module</span><span style="font-family: Inter;">, then click </span><span style="font-family: Inter; font-weight: bold;">Create</span><span style="font-family: Inter;">. Specify the module’s name and brief description.</span></li><li value="2" class="p_Normal">Go to the <span style="font-weight: bold;">Settings</span> tab and add a mandatory property to specify the file format. Specify an arbitrary display name. Use the <code><b>SupportedFileTypes</b></code> value as the property name, select the <span style="font-weight: bold;">Category &gt;</span> <span style="font-weight: bold;">Multiple</span> type, and in the <span style="font-weight: bold;">Values</span> field add the formats supported by the module: <span style="font-weight: bold;">.doc</span>, <span style="font-weight: bold;">.docx</span>, <span style="font-weight: bold;">.odt</span>, <span style="font-weight: bold;">.txt</span>, <span style="font-weight: bold;">.xls</span>, <span style="font-weight: bold;">.xlsx</span>, <span style="font-weight: bold;">.ods</span>, <span style="font-weight: bold;">.csv</span>, <span style="font-weight: bold;">.ppt</span>, <span style="font-weight: bold;">.pptx</span>, <span style="font-weight: bold;">.odp</span>.</li></ol>
+<ol style="list-style-type:upper-roman" start="3">
+<li value="3" style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 16px;"><span style="font-family: Inter;">In the same way, create two properties that will be used to connect to the external file viewer server. Set the following parameters:</span></li></ol>
+<ol style="list-style-type:upper-roman"><ul style="list-style-type:disc">
+<li style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 16px;"><span style="font-family: Inter; font-weight: bold;">Display Name</span><span style="font-family: Inter; font-weight: bold; color: #ff0000;">*</span><span style="font-family: Inter;">. Enter the property names: </span><span style="font-family: Inter; font-weight: bold;">BRIX server address</span><span style="font-family: Inter;"> and </span><span style="font-family: Inter; font-weight: bold;">OnlyOffice server address</span><span style="font-family: Inter;">.</span></li><li style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 16px;"><span style="font-family: Inter; font-weight: bold;">Property Name</span><span style="font-family: Inter; font-weight: bold; color: #ff0000;">*</span><span style="font-family: Inter;">. Enter the property unique code names: </span><code><b>brixServerAddress</b></code><span style="font-family: Inter;"> and </span><code><b>onlyOfficeServerAddress</b></code><span style="font-family: Inter;">.</span></li><li style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 16px;"><span style="font-family: Inter; font-weight: bold;">Type</span><span style="font-family: Inter; font-weight: bold; color: #ff0000;">*</span><span style="font-family: Inter;">. Select </span><span style="font-family: Inter; font-weight: bold;">String</span><span style="font-family: Inter;"> for both properties.</span></li></ul></li></ol>
+<ol style="list-style-type:upper-roman" start="4">
+<li value="4" style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 16px;"><span style="font-family: Inter;">Create a widget that will open files of the specified formats. To do that, on the </span><span style="font-family: Inter; font-weight: bold;">Widgets</span><span style="font-family: Inter;"> tab, click </span><span style="font-family: Inter; font-weight: bold;">+Widget</span><span style="font-family: Inter;">. Enter any </span><span style="font-family: Inter; font-weight: bold;">Name</span><span style="font-family: Inter; color: #ff0000;">*</span><span style="font-family: Inter;"> and </span><span style="font-family: Inter; font-weight: bold;">Widget code</span><span style="font-family: Inter; color: #ff0000;">*</span><span style="font-family: Inter;">, for example, </span><span style="font-family: Inter; font-weight: bold;">doc preview</span><span style="font-family: Inter;">. In the </span><span style="font-family: Inter; font-weight: bold;">Extension</span><span style="font-family: Inter;"> field, select </span><span style="font-family: Inter; font-weight: bold;">File preview &gt; Preview page</span><span style="font-family: Inter;">.</span></li></ol>
+<ol style="list-style-type:upper-roman" start="5">
+<li value="5" style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 16px;"><span style="font-family: Inter;">In the <a href="interface_designer.html" class="topiclink">interface designer</a>, go to the </span><span style="font-family: Inter; font-weight: bold;">Context</span><span style="font-family: Inter;"> tab.</span></li><li value="6" style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 16px;"><span style="font-family: Inter;">Create a context variable that will be used to pass parameters from the server to the client side. To do that, click </span><span style="font-family: Inter; font-weight: bold;">+Add</span><span style="font-family: Inter;"> and set the following values:</span></li></ol>
+<ol style="list-style-type:upper-roman"><ul style="list-style-type:disc">
+<li style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 16px;"><span style="font-family: Inter; font-weight: bold;">Display Name</span><span style="font-family: Inter; font-weight: bold; color: #ff0000;">*</span><span style="font-family: Inter; color: #394149;">. </span><span style="font-family: Inter;">Enter </span><span style="font-family: Inter; font-weight: bold;">Additional parameters</span><span style="font-family: Inter;">.</span></li><li style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 16px;"><span style="font-family: Inter; font-weight: bold;">Property Name</span><span style="font-family: Inter; font-weight: bold; color: #ff0000;">*</span><span style="font-family: Inter;">. Enter </span><code><b>ExtensionParameters</b></code><span style="font-family: Inter; color: #394149;">.</span></li><li style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 16px;"><span style="font-family: Inter; font-weight: bold;">Type</span><span style="font-family: Inter; font-weight: bold; color: #ff0000;">*</span><span style="font-family: Inter; color: #394149;">. </span><span style="font-family: Inter;">Select </span><span style="font-family: Inter; font-weight: bold;">String</span><span style="font-family: Inter;">.</span></li></ul></li></ol>
+<ol style="list-style-type:upper-roman" start="7">
+<li value="7" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-family: Inter;">Go to the </span><span style="font-family: Inter; font-weight: bold;">Template</span><span style="font-family: Inter;"> tab. Add the <a href="code_widget.html" class="topiclink">Code</a> widget to the modeling canvas. In the window that opens, enter the following:</span></li></ol>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-family: Inter;"><a class="dropdown-toggle" style="font-style: normal; font-weight: normal; color: #000000; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186A1')">Script</a></span></p>
+<div id="TOGGLE0186A1" class="dropdown-toggle-body" style="text-align: left; text-indent: 0; line-height: 1.28; padding: 0 0 0 0; margin: 0 0 11px 0;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">&lt;</span><span class="f_CodeExample">div&nbsp;style=&quot;height:&nbsp;100%;width:&nbsp;100%;display:&nbsp;flex;&quot;&gt;</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&lt;script&nbsp;type=&quot;text/javascript&quot;&nbsp;src=&quot;&lt;%=&nbsp;getServerAddress()&nbsp;%&gt;&quot;&gt;&lt;/script&gt;</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;id=&quot;&lt;%=&nbsp;getrandname()&nbsp;%&gt;&quot;&nbsp;style=&quot;height:&nbsp;100%&quot;&gt;&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&lt;script&nbsp;type=&quot;text/javascript&quot;&gt;</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;Function&nbsp;creating&nbsp;an&nbsp;OnlyOffice&nbsp;editing&nbsp;window</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(function()&nbsp;{&nbsp;function&nbsp;createEditor(data)&nbsp;{&nbsp;</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;Initialization&nbsp;of&nbsp;the&nbsp;editing&nbsp;window&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;docEditor&nbsp;=&nbsp;new&nbsp;DocsAPI.DocEditor(&quot;&lt;%=&nbsp;getrandname()&nbsp;%&gt;&quot;,</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;document&quot;:&nbsp;{</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;fileType&quot;:&nbsp;data.fileExtension,</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;key&quot;:&nbsp;data.fileKey,</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;title&quot;:&nbsp;data.fileName,</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;url&quot;:&nbsp;data.fileUrl,</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;permissions&quot;:&nbsp;{</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;download&quot;:&nbsp;false,</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;edit&quot;:&nbsp;true,</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;review&quot;:&nbsp;true,</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;reviewGroups&quot;:&nbsp;[&quot;&quot;]</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;documentType&quot;:&nbsp;data.fileType,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;height&quot;:&nbsp;&quot;100%&quot;,</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;width&quot;:&nbsp;&quot;100%&quot;,</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;editorConfig&quot;:&nbsp;{</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;customization&quot;:&nbsp;{</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;chat&quot;:&nbsp;data.chat,</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;comments&quot;:&nbsp;data.comments,</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;macros&quot;:&nbsp;data.macros,</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;macrosMode&quot;:&nbsp;data.macros&nbsp;?&nbsp;&quot;warn&quot;&nbsp;:&nbsp;&quot;disable&quot;,</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;plugins&quot;:&nbsp;data.plugins</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;callbackUrl&quot;:&nbsp;data.callbackUrl,</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;mode&quot;:&nbsp;data.mode,</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;lang&quot;:&nbsp;data.language,</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;user&quot;:&nbsp;{</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;id&quot;:&nbsp;data.userId,</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;name&quot;:&nbsp;data.userName</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;});</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;Retrieve&nbsp;the&nbsp;file&nbsp;and&nbsp;create&nbsp;the&nbsp;view/editing&nbsp;session&nbsp;</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let&nbsp;connections_ch&nbsp;=&nbsp;3;</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;function&nbsp;waitForDocsApi()&nbsp;{</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(window.DocsAPI)&nbsp;{</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let&nbsp;data&nbsp;=&nbsp;{</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;serverAddress:&nbsp;'&lt;%=&nbsp;getServerAddress()&nbsp;%&gt;',</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;callbackUrl:&nbsp;'&lt;%=&nbsp;getCallbackUrl()&nbsp;%&gt;',</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;userId:&nbsp;'&lt;%=&nbsp;getUserId()&nbsp;%&gt;',</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;userName:&nbsp;'&lt;%=&nbsp;getUserName()&nbsp;%&gt;',</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fileId:&nbsp;'&lt;%=&nbsp;getFileId()&nbsp;%&gt;',</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fileKey:&nbsp;'&lt;%=&nbsp;getFileKey()&nbsp;%&gt;',</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fileUrl:&nbsp;'&lt;%=&nbsp;getFileUrl()&nbsp;%&gt;',</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fileName:&nbsp;'&lt;%=&nbsp;getFileName()&nbsp;%&gt;',</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fileExtension:&nbsp;'&lt;%=&nbsp;getFileExtension()&nbsp;%&gt;',</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fileType:&nbsp;'&lt;%=&nbsp;getFileType()&nbsp;%&gt;',</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mode:&nbsp;'&lt;%=&nbsp;getMode()&nbsp;%&gt;',</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;language:&nbsp;'&lt;%=&nbsp;getLanguage()&nbsp;%&gt;',</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;chat:&nbsp;&lt;%=&nbsp;isChat()&nbsp;%&gt;,</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;comments:&nbsp;&lt;%=&nbsp;isComments()&nbsp;%&gt;,</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;macros:&nbsp;&lt;%=&nbsp;isMacros()&nbsp;%&gt;,</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;plugins:&nbsp;&lt;%=&nbsp;isPlugins()&nbsp;%&gt;,</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type:&nbsp;'&lt;%=&nbsp;getViewType()&nbsp;%&gt;',</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reviewDisplay:&nbsp;'&lt;%=&nbsp;getReviewDisplay()&nbsp;%&gt;',&nbsp;</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;trackChanges:&nbsp;&lt;%=&nbsp;isTrackChanges()&nbsp;%&gt;,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;};&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;Check&nbsp;whether&nbsp;document&nbsp;properties&nbsp;saved&nbsp;in&nbsp;the&nbsp;variable&nbsp;are&nbsp;correct</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(data.fileUrl&nbsp;==&nbsp;&quot;&quot;)&nbsp;{</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;thrownew&nbsp;Error('File&nbsp;path&nbsp;not&nbsp;found');</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;elseif&nbsp;(data.fileType&nbsp;==&nbsp;&quot;&quot;)&nbsp;{</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;thrownew&nbsp;Error('This&nbsp;file&nbsp;format&nbsp;is&nbsp;not&nbsp;supported&nbsp;by&nbsp;OnlyOffice');</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;elseif&nbsp;(data.mode&nbsp;==&nbsp;&quot;&quot;)&nbsp;{</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;thrownew&nbsp;Error('View/Editing&nbsp;mode&nbsp;parameter&nbsp;not&nbsp;found')</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let&nbsp;mode&nbsp;=&nbsp;checkDocAppEdit();</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(data.mode!=&quot;edit&quot;&nbsp;&amp;&amp;&nbsp;mode&nbsp;!==&nbsp;&quot;&quot;)&nbsp;{</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;data.mode&nbsp;=&nbsp;mode;</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;Create&nbsp;the&nbsp;view/editing&nbsp;window</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;createEditor(data);</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;elseif(connections_ch&nbsp;&gt;&nbsp;0)&nbsp;{</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;connections_ch&nbsp;--;</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;setTimeout(waitForDocsApi,500);</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else&nbsp;{</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;thrownew&nbsp;Error('OnlyOffice&nbsp;API&nbsp;server&nbsp;response&nbsp;error')</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;function&nbsp;checkDocAppEdit()&nbsp;{</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;url&nbsp;=&nbsp;window.location.href;</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;isEdit&nbsp;=&nbsp;url.includes('/edit)');</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;('&lt;%=&nbsp;isLegacyEnabled()&nbsp;%&gt;'&nbsp;!==&nbsp;'false')&nbsp;{</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(isEdit)&nbsp;{</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;'edit';</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;else&nbsp;{</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;'view';</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;else&nbsp;{</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;&quot;&quot;;</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;setTimeout(waitForDocsApi,1000);&nbsp;&nbsp;})();</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/script&gt;</span><br />
+<span class="f_CodeExample">&lt;/div&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<ol style="list-style-type:upper-roman" start="8">
+<li value="8" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-family: Inter;">The code above contains functions that need to be described on the </span><span style="font-family: Inter; font-weight: bold;">Scripts</span><span style="font-family: Inter;"> tab in the interface designer. Switch to this tab. In the upper right corner, click </span><span style="font-family: Inter; font-weight: bold;">Client</span><span style="font-family: Inter;">. Add the following:</span></li></ol>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-family: Inter;"><a class="dropdown-toggle" style="font-style: normal; font-weight: normal; color: #000000; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186A2')">Script</a></span></p>
+<div id="TOGGLE0186A2" class="dropdown-toggle-body" style="text-align: left; text-indent: 0; line-height: 1.28; padding: 0 0 0 0; margin: 0 0 11px 0;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample">/* window webAPI */</span><br />
+<span class="f_CodeExample">declare const window: any;</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample">/* Client scripts module */</span><br />
+<span class="f_CodeExample">let fileUrl: string = &quot;&quot;;</span><br />
+<span class="f_CodeExample">let file : FileItem;</span><br />
+<span class="f_CodeExample">let req: string;</span><br />
+<span class="f_CodeExample">let user: UserItem;</span><br />
+<span class="f_CodeExample">/* Extension settings */</span><br />
+<span class="f_CodeExample">let onlyOfficeServerAddress: any;</span><br />
+<span class="f_CodeExample">let brixServerAddress: any;</span><br />
+<span class="f_CodeExample">let enabledFileTypes: any;</span><br />
+<span class="f_CodeExample">let isLegacyMode: any;</span><br />
+<span class="f_CodeExample">let isChatEnabled: boolean;</span><br />
+<span class="f_CodeExample">let isCommentsEnabled: boolean;</span><br />
+<span class="f_CodeExample">let isMacrosEnabled: boolean;</span><br />
+<span class="f_CodeExample">let isPluginsEnabled: boolean;</span><br />
+<span class="f_CodeExample">let isTrackChangesEnabled: boolean;</span><br />
+<span class="f_CodeExample">let language: string;</span><br />
+<span class="f_CodeExample">let reviewDisplay: string;</span><br />
+<span class="f_CodeExample">let randname:string;</span><br />
+<span class="f_CodeExample">// Flag showing that the file is temporary, displayed on the creation form of a Document type app item</span><br />
+<span class="f_CodeExample">let isNewFilePreview: boolean = false;</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample">function getrandname() {</span><br />
+<span class="f_CodeExample"> &nbsp; if(randname)</span><br />
+<span class="f_CodeExample"> &nbsp; {</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; return randname;</span><br />
+<span class="f_CodeExample"> &nbsp; }</span><br />
+<span class="f_CodeExample"> &nbsp; else</span><br />
+<span class="f_CodeExample"> &nbsp; {</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; let id = getFileId().replace('-','');</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; let key = new Date().valueOf().toString();</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; randname = &quot;placeholder_&quot;+id+key;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; return randname;</span><br />
+<span class="f_CodeExample"> &nbsp; }</span><br />
+<span class="f_CodeExample">}</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample">async function onInit() {</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;if (Context) {</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;fileUrl = await getFileUrlInternal() as string;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;file = await getFileInternal() as FileItem; &nbsp; &nbsp;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;user = await getUserInternal();</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;// Check whether the file's extenstion is correct</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;const fileExtension = getFileExtension().toLowerCase();</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;const availableFileExtensions: Array&lt;string&gt; = [&quot;doc&quot;,&quot;docx&quot;,&quot;odt&quot;,&quot;txt&quot;, &quot;rtf&quot;, &quot;xls&quot;,&quot;xlsx&quot;,&quot;ods&quot;,&quot;csv&quot;, &quot;ppt&quot;,&quot;pptx&quot;,&quot;odp&quot;];</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;if (availableFileExtensions.indexOf(fileExtension) &lt;= -1) {</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;thrownew Error('This file format is not supported by OnlyOffice');</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;}</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;await Server.rpc.writeParametersToContext();</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;readParametersFromContext();</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;}</span><br />
+<span class="f_CodeExample">}</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample">function readParametersFromContext() {</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;if (Context.data.ExtensionParameters) {</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;let parameters = JSON.parse(Context.data.ExtensionParameters);</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;isLegacyMode = parameters.isLegacy;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;isChatEnabled = parameters.isChatEnabled ?? false;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;isCommentsEnabled = parameters.isCommentsEnabled ?? false;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;isMacrosEnabled = parameters.isMacrosEnabled;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;isPluginsEnabled = parameters.isPluginsEnabled;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;isTrackChangesEnabled = parameters.isTrackChangesEnabled;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;enabledFileTypes = parameters.enabledTypes;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;brixServerAddress = parameters.brixAddress;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;onlyOfficeServerAddress = parameters.onlyOfficeServerAddress;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;language = parameters.language as string;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;reviewDisplay = parameters.reviewDisplay as string;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;}</span><br />
+<span class="f_CodeExample">}</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample">async function canRender() {</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;const fileType = getFileType();</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;if (fileType !== &quot;&quot;) {</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;returntrue;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;}</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;else {</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;returnfalse;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;}</span><br />
+<span class="f_CodeExample">}</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample">/* Get server address from the extension's settings */</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample">function getServerAddress() {</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;const apiPath = &quot;/web-apps/apps/api/documents/api.js&quot;;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;if (onlyOfficeServerAddress !== &quot;&quot;) {</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;if (onlyOfficeServerAddress.includes(apiPath)) {</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;return onlyOfficeServerAddress;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;}</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;else {</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;return onlyOfficeServerAddress + apiPath;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;}</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;}</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;else {</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;}</span><br />
+<span class="f_CodeExample">}</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample">function getCallbackUrl() {</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;const callbackUrl = &quot;/api/extensions/00e82811-87d6-4d46-a5d4-e444ed8a857a/script/callback&quot;;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;return brixServerAddress+callbackUrl;</span><br />
+<span class="f_CodeExample">}</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample">/* Get links to download files from CDN */</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample">function getFileUrl(): any {</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;return fileUrl;</span><br />
+<span class="f_CodeExample">}</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample">async function getFileUrlInternal () {</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; if (Context.data.file) { &nbsp; &nbsp; &nbsp; &nbsp; </span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; const url = await Context.data.file.getDownloadUrl();</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; </span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; return url; &nbsp; &nbsp;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; }</span><br />
+<span class="f_CodeExample">}</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample">/* Get the file, its extension, and type */</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample">async function getFileInternal() { &nbsp; &nbsp;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;if (Context.data.file) {</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;try {</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;const file = await Context.data.file.fetch();</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;return file;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;} catch (ex) {</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;isNewFilePreview = true;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;return undefined;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;}</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;}</span><br />
+<span class="f_CodeExample">}</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample">function getFileName() {</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;if (file &amp;&amp; !isNewFilePreview) {</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;return file.data.__name;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;}</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;else {</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;return &quot; &quot;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;}</span><br />
+<span class="f_CodeExample">}</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample">function getFileExtension() {</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;if (file &amp;&amp; !isNewFilePreview) {</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;const fileExtension = file.data.__name.substr(file.data.__name.lastIndexOf('.') + 1);</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;return fileExtension;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;}</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;elseif (Context.data.extension) {</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;return Context.data.extension[0];</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;}</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;else {</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;return &quot;&quot;;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;}</span><br />
+<span class="f_CodeExample">}</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample">function getEnabled() {</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;return enabledFileTypes;</span><br />
+<span class="f_CodeExample">}</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample">function getLanguage() {</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;if (language &amp;&amp; language != &quot;&quot;) {</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;return language;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;} else {</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;return &quot;en&quot;;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;}</span><br />
+<span class="f_CodeExample">}</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample">function getFileType() {</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;let type: string = &quot;&quot;;</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;const fileExtension = getFileExtension().toLowerCase();</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;const documents: Array&lt;string&gt; = [&quot;doc&quot;,&quot;docx&quot;,&quot;odt&quot;,&quot;txt&quot;, &quot;rtf&quot;];</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;const spreadsheets: Array&lt;string&gt; = [&quot;xls&quot;,&quot;xlsx&quot;,&quot;ods&quot;,&quot;csv&quot;];</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;const presentations: Array&lt;string&gt; = [&quot;ppt&quot;,&quot;pptx&quot;,&quot;odp&quot;]</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;if(typeof enabledFileTypes === &quot;undefined&quot;) {</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;return type;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;}</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;if (enabledFileTypes.findIndex((i: { code: string; }) =&gt; i.code == fileExtension) !== -1) {</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;if (documents.indexOf(fileExtension) &gt; -1) {</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;type = &quot;word&quot;;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;} elseif (spreadsheets.indexOf(fileExtension) &gt; -1) {</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;type = &quot;cell&quot;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;} elseif (presentations.indexOf(fileExtension) &gt; -1) {</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;type = &quot;slide&quot;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;}</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;return type;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;}</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample">function getFileId(): any {</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;if (Context.data.file !== undefined) {</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;if (file !== undefined) {</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;return file.data.__id;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;}</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;else {</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;return Context.data.file.id;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;}</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;}</span><br />
+<span class="f_CodeExample">}</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample">function getFileKey(): any {</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;let key: string = &quot;&quot;;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;if (Context.data.file !== undefined) {</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;if (file !== undefined) {</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;let lastUpdatedUnix = file.data.__updatedAt.format(&quot;X&quot;);</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;key = getFileId() + &quot;.&quot; + lastUpdatedUnix;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;}</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;else {</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;key = new Date().valueOf().toString();</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;}</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;}</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;return key;</span><br />
+<span class="f_CodeExample">}</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample">function getMode(): any {</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;if (Context.data.action == &quot;edit&quot; || Context.data.action == &quot;editnew&quot;) {</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;return &quot;edit&quot;;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;} else {</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;return &quot;view&quot;;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;}</span><br />
+<span class="f_CodeExample">}</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample">async function getUserInternal() {</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;const user = await System.users.getCurrentUser();</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;return user;</span><br />
+<span class="f_CodeExample">}</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample">function getUserName(): string {</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;let userName = user.data.__name.replace('\'','');</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;return userName;</span><br />
+<span class="f_CodeExample">}</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample">function getUserId(): string {</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;return user.data.__id;</span><br />
+<span class="f_CodeExample">}</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample">function getViewType(): string {</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;if (window.innerWidth &lt;= 991) {</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;return &quot;mobile&quot;;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;}</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;return &quot;desktop&quot;;</span><br />
+<span class="f_CodeExample">}</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample">function isLegacyEnabled(): boolean {</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;return isLegacyMode;</span><br />
+<span class="f_CodeExample">}</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample">function isChat(): boolean {</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;return isChatEnabled;</span><br />
+<span class="f_CodeExample">}</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample">function isComments(): boolean {</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;return isCommentsEnabled;</span><br />
+<span class="f_CodeExample">}</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample">function isMacros(): boolean {</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;return isMacrosEnabled;</span><br />
+<span class="f_CodeExample">}</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample">function isPlugins(): boolean {</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;return isPluginsEnabled;</span><br />
+<span class="f_CodeExample">}</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample">function getReviewDisplay(): string {</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;return reviewDisplay</span><br />
+<span class="f_CodeExample">}</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample">function isTrackChanges(): boolean {</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;return isTrackChangesEnabled;</span><br />
+<span class="f_CodeExample">}</span></p>
+</td>
+</tr>
+</table>
+</div>
+<ol style="list-style-type:upper-roman" start="9">
+<li value="9" style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 16px;"><span style="font-family: Inter;">On the </span><span style="font-family: Inter; font-weight: bold;">Scripts</span><span style="font-family: Inter;"> tab, click </span><span style="font-family: Inter; font-weight: bold;">Server</span><span style="font-family: Inter;"> in the upper right corner. Enter the following:</span></li></ol>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-family: Inter;"><a class="dropdown-toggle" style="font-style: normal; font-weight: normal; color: #000000; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186A3')">Script</a></span></p>
+<div id="TOGGLE0186A3" class="dropdown-toggle-body" style="text-align: left; text-indent: 0; line-height: 1.28; padding: 0 0 0 0; margin: 0 0 11px 0;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample">/* Server scripts module */</span><br />
+<span class="f_CodeExample">async function writeParametersToContext(): Promise&lt;void&gt; {</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;let brixAddress = Namespace.params.data.brixServerAddress;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;let onlyOfficeAddress = Namespace.params.data.onlyOfficeServerAddress;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;let enabledTypes = Namespace.params.data.SupportedFileTypes;</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;let isLegacy = Namespace.params.data.LegacyModeDetectionEnabled;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;let isChatEnabled = Namespace.params.data.ChatEnabled;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;let isCommentsEnabled = Namespace.params.data.CommentsEnabled;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;let isMacrosEnabled = Namespace.params.data.MacrosEnabled;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;let isPluginsEnabled = Namespace.params.data.PluginsEnabled;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;let isTrackChangesEnabled = Namespace.params.data.TrackChangesEnabled;</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;let interfaceLanguage = Namespace.params.data.InterfaceLanguage;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;let language = interfaceLanguage.code;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;let reviewDisplayCategory = Namespace.params.data.ReviewDisplay;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;let reviewDisplay = reviewDisplayCategory?.code || &quot;original&quot;;</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;Context.data.ExtensionParameters = JSON.stringify({isLegacy, brixAddress, onlyOfficeAddress, enabledTypes, language, isChatEnabled, isCommentsEnabled, isMacrosEnabled, isPluginsEnabled, isTrackChangesEnabled, reviewDisplay});</span><br />
+<span class="f_CodeExample">}</span></p>
+</td>
+</tr>
+</table>
+</div>
+<ol style="list-style-type:upper-roman" start="10">
+<li value="10" style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 16px;"><span style="font-family: Inter;">In the upper left corner, in the toolbar, click </span><span style="font-family: Inter; font-weight: bold;">Save</span><span style="font-family: Inter;">. Then click </span><span style="font-family: Inter; font-weight: bold;">Check</span><span style="font-family: Inter;"> to make sure there are no errors in the widget. Finally, click </span><span style="font-family: Inter; font-weight: bold;">Publish</span><span style="font-family: Inter;">.</span></li></ol>
+<ol style="list-style-type:upper-roman" start="11">
+<li value="11" style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 16px;"><span style="font-family: Inter;">Close the interface designer. In module settings, switch to the </span><span style="font-family: Inter; font-weight: bold;">API Methods</span><span style="font-family: Inter;"> tab. Create a new <a href="extention-api.html" class="topiclink">method</a>. Add the following script to it:</span></li></ol>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-family: Inter;"><a class="dropdown-toggle" style="font-style: normal; font-weight: normal; color: #000000; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186A4')">Script</a></span></p>
+<div id="TOGGLE0186A4" class="dropdown-toggle-body" style="text-align: left; text-indent: 0; line-height: 1.28; padding: 0 0 0 0; margin: 0 0 11px 0;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample">async function callback(req: FetchRequest): Promise&lt;HttpResponse | void&gt; {</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;let responseCode = 0;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;if (!req.body) {</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;thrownew Error('Empty request body');</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;} &nbsp; &nbsp;</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;// Get the request body from OnlyOffice</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;let requestText = String(req.body);</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;if (!requestText) {</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;thrownew Error('Wrong request body');</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;}</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;// Transforming into an object</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;let parsedData = JSON.parse(requestText);</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;// Status 2 means that the document has been changed and closed, so it needs to be saved again as a new BRIX version</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;if (parsedData.status == 2) {</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;let fileId = parsedData.key.split('.').shift();</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;let url = parsedData.url;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;let file = await System.files.search().where(f =&gt; f.__id.eq(fileId)).first();</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;if (file &amp;&amp; url) {</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;const fetchedFile = await fetch(url);</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;if (!fetchedFile) {</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;responseCode = 1;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;} else {</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;const buf = await fetchedFile.arrayBuffer();</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;file.addVersion(file.data.__name, buf);</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;}</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;}</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;const resp = new HttpResponse();</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;resp.json({&quot;error&quot;:responseCode})</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;return resp;</span><br />
+<span class="f_CodeExample">}</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-family: Inter;">After that, when the module is enabled, you will be able to view files with formats specified in its settings directly in the BRIX interface.</span></p>
+
+                        <div class="bottom-nav">
+                            
+                                <a id="prev-link" class="topic__navi_prev" href="manage-extention.html">
+                                    <span class="bottom-nav__arrow bottom-nav__arrow--prev"></span> <span
+                                        class="bottom-nav__link">manage-extention.html</span>
+                                </a>
+                            
+                            
+                                <a id="next-link" class="topic__navi_next" href="360009906679.html">
+                                    <span class="bottom-nav__link">360009906679.html</span> <span
+                                        class="bottom-nav__arrow bottom-nav__arrow--next"></span>
+                                </a>
+                            
+                        </div>
+                        <!-- добавляет на страницу строку блок Была ли статья полезной?  -->
+                          <div class="feedback" id="feedback"><span><b>Was this helpful?</b></span><form action="" method="POST" class="feedback-form" id="feedback-form"><div class="feedback__popup feedback__popup-response" id="feedback__popup_thx" style="display: none;">Thanks for your feedback!</div><div class="feedback__popup" id="feedback__popup_why" style="display: none;"><div class="feedback__popup-header">Please specify why:</div><input type="radio" name="category" id="bad_recommendation" value="bad_recommendation"><label for="bad_recommendation">Recommendations did not help me</label><input type="radio" name="category" id="difficult_text" value="difficult_text"><label for="difficult_text">Article is hard to understand</label><input type="radio" name="category" id="no_answer" value="no_answer"><label for="no_answer">Didn’t answer my question</label><input type="radio" name="category" id="bad_header" value="bad_header"><label for="bad_header">Content does not match the topic</label><input type="radio" name="category" id="other_reason" value="other_reason"><label for="other_reason">Other</label></div><div class="feedback__popup" id="feedback__popup-other" style="display: none;"><div class="feedback__popup-header">How can we improve the article?</div><textarea class="feedback__textarea" name="other" id=""></textarea><input type="submit" class="feedback__other-btn" value="Submit"></div><div class="feedback-form__btn-group"><input type="radio" name="useful" id="feedback__useful_yes" value="true"><label for="feedback__useful_yes"><img src="like.svg" class="small-img"><spanclass="feedback-form__btn-group_yes-btn">Yes</spanclass="feedback-form__btn-group_yes-btn"></label><input type="radio" name="useful" id="feedback__useful_no" value="false"><label for="feedback__useful_no"><img src="dislike.svg" class="small-img"><spanclass="feedback-form__btn-group_no-btn">No</spanclass="feedback-form__btn-group_no-btn"></label></div><select name="category"><option disabled="">Please specify why</option><option value="bad_recommendation" selected="">Recommendations did not help me</option><option value="difficult_text">Article is hard to understand</option><option value="no_answer">Didn’t answer my question</option><option value="bad_header">Content does not match the topic</option><option value="other_reason">Other</option></select><input type="submit"></form></div>
+                           
+                    </section>
+                </div>
+                <aside class="article__sidebar" style="display:none">
+                    <input type="checkbox" />
+                    <div class="article__arrow"></div>
+                    <div class="table-of-contents elma365-right" id="toc2Content">
+                        <h3 class="h3-toc">In this topic</h3>
+                        <nav id="toc2"></nav>
+                    </div>
+                </aside>
+            </div>
+        </article>
+    </main>               
+    <footer class="footer">
+        <div class="footer-container">
+  <div class="footer-mobile">
+    
+    <ul class="footer-mobile__list"><li><a href="https://brix365.com/en/" target="_blank">BRIX</a></li><li><a href="https://tssdk.brix365.com/en/latest/" target="_blank">SDK</a></li><li><a href="https://api.brix365.com/en/" target="_blank">API</a></li></ul><ul class="footer-mobile__list"><li><a href="https://brix365.com/en/help/platform/get-trial.html">Platform</a></li><li><a href="https://brix365.com/en/help/ecm/ecm-functions.html">ECM</a></li><li><a href="https://brix365.com/en/help/service/service-functions.html">Service</a></li><li><a href="https://brix365.com/en/help/projects/projects-functions.html">Projects</a></li></ul>
+    
+    
+  </div>
+  <div class="footer-wrap">
+    
+      <div><span class="mobile-question-popup">Send feedback</span><form method="POST" action class="question__popup question-xs" id="question__popup"><div class="question-wrap"><span class="close"></span><span class="title">Ask a question</span><label for="help_question" style="display: none;"></label><textarea name="help_question" id="help_question"></textarea><input type="submit" value="Send"></div></form><div class="hidden fade-in question-success-xs">Sent</div></div>
+    
+    <div class="footer-flex-b">
+      <span class="footer-copy">&copy; 2025 BRIX</span>
+      <ul class="footer-list">
+        
+        <li class="footer-item">
+            <a href="#" class="arrow-top" style="display: block;"></a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+ 
+    </footer>
+    <iframe name="hmnavigation" style="display:none!important"></iframe>
+    <script src="./jquery-ui.js"></script>
+    <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
+    <script src="./jquery.tocify.min.js"></script>
+    <script src="./TypoReporter.min.js"></script>
+    <script src="./google-search.js"></script>
+    <script src="./main.js"></script>
+<script type="text/javascript">
+HMInitToggle('TOGGLE0186A1','hm.type','dropdown','hm.state','0');
+HMInitToggle('TOGGLE0186A2','hm.type','dropdown','hm.state','0');
+HMInitToggle('TOGGLE0186A3','hm.type','dropdown','hm.state','0');
+HMInitToggle('TOGGLE0186A4','hm.type','dropdown','hm.state','0');
+</script>
+</body>
+
+</html>

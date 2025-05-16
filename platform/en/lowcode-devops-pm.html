@@ -1,0 +1,639 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>CI/CD utility for low-code solutions</title>
+    <meta name="generator" content="Help+Manual" />
+    <meta name="keywords" content="" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Custom solutions can be developed in short iterations to maintain their integrity and versioning. This approach can be implemented using the Develop &gt; Test &gt; Production cycle...." />
+    <meta name="picture" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Full documentation for BRIX365 platform. Low-code developer guide. User guide. Admin guide. Developer guide." />
+    <meta property="og:url" content="https://brix365.com/en/help" />
+    <meta property="og:image" content="" />                                                              
+    <link rel="icon" href="favicon.png" type="image/png" />
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./jquery-ui.css" />
+    <link rel="stylesheet" href="default.css" />
+    <link rel="stylesheet" href="./search-yandex.css" />
+    <link rel="stylesheet" href="./article.css" />
+    <link rel="stylesheet" href="./glossary.css" />
+    <link rel="stylesheet" href="./theme.css" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+
+<body>
+    
+    <script>!function(e,t,c,n,r,a,m){e.ym=e.ym||function(){(e.ym.a=e.ym.a||[]).push(arguments)},e.ym.l=1*new Date;for(var s=0;s<document.scripts.length;s++)if(document.scripts[s].src===n)return;a=t.createElement(c),m=t.getElementsByTagName(c)[0],a.async=1,a.src=n,m.parentNode.insertBefore(a,m)}(window,document,"script","https://mc.yandex.ru/metrika/tag.js"),ym(83179930,"init",{clickmap:!0,trackLinks:!0,accurateTrackBounce:!0,webvisor:!0})</script><noscript><div><img alt=""src=https://mc.yandex.ru/watch/83179930 style=position:absolute;left:-9999px></div></noscript> 
+    
+    ﻿<header class="header elma-365">
+  <div class="container">
+    <a class="header__logo" href="https://brix365.com/en/help">
+      <img src="./logo-en.svg">
+    </a>
+ <!-- <div class="hero__search-form" id="search-panel">
+   <form class="search-form" onsubmit="ym(83180416,'reachGoal','poisk')">
+     <label class="search-form__label">
+       <span id="reset-search" class="search__icon"></span>
+       <input class="search-form__input" type="text">
+     </label>
+     <input class="search-form__submit" type="submit" value="Submit">
+   </form>
+  </div>       -->
+  
+     <div class="hero__search-form" id="search-panel"> <form class="search-form"> <label class="search-form__label"> <span id="reset-search" class="search__icon"></span> <input class="search-form__input" type="text"> </label> <input class="search-form__submit" type="submit" value="Submit"> </form> </div> 
+  <div class="hero__search">
+      <a href="#" id="search-icon" class="hero__search-icon">
+        <img src="search-icon-white.svg" alt="search string">
+      </a>
+      <a href="#" id="side-menu-icon" class="hero__side-icon">
+        <img src="side_menu.svg" alt="side menu">
+      </a>
+    </div>  
+  <div class="header__navi">
+        
+        <ul class="header__list"><li><span class="solution-select"><span class="solution-select__selected"></span><svg width="7" height="4" viewBox="0 0 7 4" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L3.5 3.5L6 1" stroke="white" stroke-linecap="round" stroke-linejoin="round"/></svg><ul class="solution-select__list"><li><a class="project-link" href="https://brix365.com/en/help/platform/get-trial.html">Platform</a></li><li><a class="project-link" href="https://brix365.com/en/help/ecm/ecm-functions.html">ECM</a></li><li><a class="project-link" href="https://brix365.com/en/help/crm/crm_overview.html">CRM</a></li><li><a class="project-link" href="https://brix365.com/en/help/service/service-functions.html">Service</a></li><li><a class="project-link" href="https://brix365.com/en/help/projects/projects-functions.html">Projects</a></li><li><a class="project-link" href="https://brix365.com/en/help/business_solutions/-elma365-store.html">Business Solutions</a></li></ul></span></li><li><a href="https://api.brix365.com/en/" target="_blank">API</a></li><li><a href="https://tssdk.brix365.com/" target="_blank">SDK</a></li></ul>
+        
+        
+   </div>
+  </div>
+
+</header>
+
+
+
+    
+    <main class="main container">
+
+        <aside class="sidebar" id="sidebar">
+        <div class="sidebar__header">
+                 <a class="header__logo" href="https://brix365.com/en/help">
+                    <img src="./logo-light-en.svg">
+                 </a>
+                    <span class="sidebar__close elma-365-close" id="close"></span>
+            </div>
+            <div class="sidebar__wrapper" id="side-menu">
+                
+            </div>
+        </aside>
+
+        <article class="article" id="article">
+            <div class="article-inner">           
+                <div class="content">
+                    <header class="article__header">
+                        
+                            <div class="topic__breadcrumbs">
+                                <p><a href="solutions-building.html">Build solutions in BRIX</a> / CI/CD utility for low-code solutions</p>
+                            </div>
+                        
+                        <div class="topic__title"><h1 class="p_Heading1"><span class="f_Heading1">CI/CD utility for low-code solutions</span></h1>
+</div>
+                    
+</header>
+                    <section class="article__content">
+                        <div class="scroll-top-inner">
+                            <a href="#h1-article" class="scroll-top"></a>
+                        </div>
+                        <!-- Placeholder for topic body. -->
+                        <p style="line-height: 1.20; margin: 7px 0 16px 0;">Custom solutions can be developed in short iterations to maintain their integrity and versioning. This approach can be implemented using the <span style="font-weight: bold;">Develop &gt; Test &gt; Production</span> cycle. In this cycle, the solution goes through three stages, each of which is performed in a separate company: the dev company is used for development, the test company is used for testing, and the prod company is used for the operation of the finished solution.</p>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;">This cycle is performed by using the principles of <span style="font-weight: bold;">Continuous integration</span> and <span style="font-weight: bold;">Continuous delivery and deploy</span> or CI/CD.</p>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;">BRIX provides several tools that can be used independently of each other to implement the CI/CD approach:</p>
+<ul style="list-style-type:disc">
+<li style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 16px;"><span style="font-weight: bold;">Low-code CI / CD)</span> tool provides the exchange of components between companies from different environments based on standard export and import processes. All configuration is done in the ELMA365 interface. Two companies should be bound to each other. Then an exchange profile is created: configuration components are selected, the type of operation is specified, etc. The profile is saved, which allows the exchange operation to be performed several times. You can also compare the configurations of the two companies and analyze the results of the operation. The exchange process is performed in the background. For more information about the tool, see the <a href="low-code-ci-cd.html" class="topiclink">Low-code CI/CD</a>;</li><li style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 16px;"><span style="font-weight: bold;">elma365pm utility</span> is an auxiliary independent command line utility used in conjunction with external version control and pipelines configuration services, such as GitLab. The utility allows you to export a company configuration component (workspace, module, or solution) to a file. The work is then performed in an external service, thus making it possible to use operations from high-code development. The component is updated to a new version, packed into a file, and imported into another company. </li></ul>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;">This article describes the main principle of working with the <span style="font-weight: bold;">elma365pm</span> utility and available commands.</p>
+<h2 class="p_Heading2"><a id="download" class="hmanchor"></a><span class="f_Heading2">Download utility</span></h2>
+<p style="line-height: 1.20; margin: 10px 0 0 0;">Use these links to download the <span style="font-weight: bold;">elma365pm</span> utility for various operating systems, compatible with BRIX SaaS deliveries and the latest version of BRIX On-Premises:</p>
+<ul style="list-style-type:disc">
+<li style="line-height: 1.50; margin-top: 0; margin-right: 0; margin-bottom: 0;"><a href="https://dl.elma365.com/elma365pm/latest/elma365pm.linux.amd64.zip" class="weblink">Linux</a>;</li><li style="line-height: 1.50; margin-top: 0; margin-right: 0; margin-bottom: 0;"><a href="https://dl.elma365.com/elma365pm/latest/elma365pm.windows.amd64.zip" class="weblink">Windows</a>;</li><li style="line-height: 1.50; margin-top: 0; margin-right: 0; margin-bottom: 0;"><a href="https://dl.elma365.com/elma365pm/latest/elma365pm.darwin.amd64.zip" class="weblink">macOS (Intel x64 architecture)</a>;</li><li style="line-height: 1.50; margin-top: 0; margin-right: 0; margin-bottom: 0;"><a href="https://dl.elma365.com/elma365pm/latest/elma365pm.darwin.arm64.zip" class="weblink">macOS (ARM x64 architecture), M1 processor)</a>.</li></ul>
+<p class="p_Normal">After downloading, unpack the <span style="font-weight: bold;">.exe </span>file.</p>
+<h2 class="p_Heading2"><a id="comands" class="hmanchor"></a><span class="f_Heading2">Available utility commands</span></h2>
+<p class="p_Normal">The <span style="font-weight: bold;">elma365pm</span> utility is operated by running commands on the command line. Commands can be used with available flags. They are written after the command name.</p>
+<p class="p_Normal">After downloading the utility, you can request help information by executing the command:</p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">elma365pm&nbsp;--help</span></p>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-size: 13px; font-family: Inter; color: #394149;">To get detailed instructions on each command, run the following:</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">elma365pm&nbsp;&lt;command&gt;&nbsp;--help</span></p>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-family: 'Times New Roman',Times,Georgia,serif;">The following features are currently available:</span></p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 7px 0 16px 0;"><table style="border:none; border-spacing:0;">
+<tr>
+<td colspan="2"  style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-family: 'Times New Roman',Times,Georgia,serif; font-weight: bold;">Command:</span></p>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><code><b>elma365pm unpack</b></code><span style="font-family: 'Times New Roman',Times,Georgia,serif;">. </span><span style="font-size: 15px; font-family: 'Times New Roman',Times,Georgia,serif;">Unpack the .</span><span style="font-size: 15px; font-family: 'Times New Roman',Times,Georgia,serif; font-weight: bold;">e365</span><span style="font-size: 15px; font-family: 'Times New Roman',Times,Georgia,serif;"> export package to the file system. The command specifies the path to the package and to the unpack folder.</span></p>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">Use:</span></p>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><code><b>elma365pm unpack --src=String --out=String</b></code></p>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-style: italic;">Flags:</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.20; margin: 7px 0 16px 0;"><code><b>--src=String</b></code></p>
+</td>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-family: 'Times New Roman',Times,Georgia,serif;">Path to the component.</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.20; margin: 7px 0 16px 0;"><code><b>--out=String</b></code></p>
+</td>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-size: 15px; font-family: 'Times New Roman',Times,Georgia,serif;">The file system directory where the package is unzipped to.</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.20; margin: 7px 0 16px 0;"><code><b>--experimental-restruct</b></code></p>
+</td>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_Normal">By default, the directory and file structure after unpacking an export package corresponds to the internal structure of this package.</p>
+<p class="p_Normal">Apply the flag to restructure the package for better visibility.</p>
+<p class="p_Normal">Then, when unpacking, a hierarchical structure of the solution will be formed. For example, the app description file will be located in the workspace directory, the workspace directory in the solution directory, descriptions of portable services or API methods in the module directory, etc.</p>
+<p class="p_Normal">The flag should be used with caution.</p>
+</td>
+</tr>
+<tr>
+<td colspan="2"  style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-family: 'Times New Roman',Times,Georgia,serif; font-weight: bold;">Command:</span></p>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><code><b>elma365pm pack</b></code><span style="font-size: 15px; font-family: 'Times New Roman',Times,Georgia,serif;">. Pack the directory into a .e365 package. The command specifies the path to the unpacked package and the file in which to pack the components. </span></p>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">Use:</span></p>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><code><b>elma365pm pack --src=String --out=String</b></code></p>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-style: italic;">Flags:</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.20; margin: 7px 0 16px 0;"><code><b>--src=String</b></code></p>
+</td>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-size: 15px; font-family: 'Times New Roman',Times,Georgia,serif;">The file system directory where the unpacked package is stored.</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.20; margin: 7px 0 16px 0;"><code><b>--out=String</b></code></p>
+</td>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-size: 15px; font-family: 'Times New Roman',Times,Georgia,serif;">The file where the package is packed into.</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.20; margin: 7px 0 16px 0;"><code><b>--version-up</b></code></p>
+</td>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-family: 'Times New Roman',Times,Georgia,serif;">Package version update.</span></p>
+</td>
+</tr>
+<tr>
+<td colspan="2"  style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-family: 'Times New Roman',Times,Georgia,serif; font-weight: bold;">Command:</span></p>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><code><b>elma365pm export</b></code><span style="font-family: 'Times New Roman',Times,Georgia,serif;">. Export the component from BRIX ino the file system directory</span><span style="font-size: 15px; font-family: 'Times New Roman',Times,Georgia,serif;">.</span></p>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">Use</span><span style="font-size: 15px; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">:</span></p>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><code><b>elma365pm export &lt;command&gt;</b></code></p>
+</td>
+</tr>
+<tr>
+<td colspan="2"  style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-family: 'Times New Roman',Times,Georgia,serif; font-weight: bold;">Subcommands (available export components):</span></p>
+</td>
+</tr>
+<tr>
+<td colspan="2"  style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.20; margin: 7px 0 16px 0;"><code><b>elma365pm export namespace</b></code><span style="font-family: 'Times New Roman',Times,Georgia,serif;">. Workspace export.</span></p>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">Use:</span></p>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><code><b>elma365pm export namespace (ns) --token=STRING --host=STRING --out=STRING</b></code></p>
+</td>
+</tr>
+<tr>
+<td colspan="2"  style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.20; margin: 7px 0 16px 0;"><code><b>elma365pm export solution</b></code><span style="font-family: 'Times New Roman',Times,Georgia,serif;">.</span><span style="font-size: 13px;"> </span><span style="font-family: 'Times New Roman',Times,Georgia,serif;">Solution export.</span></p>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">Use:</span></p>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><code><b>elma365pm export solution (sln) --token=STRING --host=STRING --out=STRING</b></code></p>
+</td>
+</tr>
+<tr>
+<td colspan="2"  style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.20; margin: 7px 0 16px 0;"><code><b>elma365pm export module</b></code><span style="font-family: 'Times New Roman',Times,Georgia,serif;">.</span><span style="font-size: 13px;"> </span><span style="font-family: 'Times New Roman',Times,Georgia,serif;">Module export.</span></p>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">Use:</span></p>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><code><b>elma365pm export module (mod) --token=STRING --host=STRING --out=STRING</b></code></p>
+</td>
+</tr>
+<tr>
+<td colspan="2"  style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.20; margin: 7px 0 16px 0;"><code><b>elma365pm export configuration</b></code><span style="font-family: 'Times New Roman',Times,Georgia,serif;">.</span><span style="font-size: 13px;"> </span><span style="font-family: 'Times New Roman',Times,Georgia,serif;">Configuration export. Available in BRIX On-premises 2022.11 and higher.</span></p>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">Use:</span></p>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><code><b>elma365pm export configuration (cfg) --token=STRING --host=STRING --out=STRING</b></code></p>
+</td>
+</tr>
+<tr>
+<td colspan="2"  style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-family: 'Times New Roman',Times,Georgia,serif; font-weight: bold;">Flags available for export subcommands:</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.20; margin: 7px 0 16px 0;"><code><b>--token=String</b></code></p>
+</td>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-family: 'Times New Roman',Times,Georgia,serif; color: #0000ff;"><a href="360016488452.html" class="topiclink">Authentication token</a> </span><span style="font-family: 'Times New Roman',Times,Georgia,serif;">created in BRIX in the </span><span style="font-family: 'Times New Roman',Times,Georgia,serif; font-weight: bold;">Administration</span><span style="font-family: 'Times New Roman',Times,Georgia,serif;"> workspace.</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.20; margin: 7px 0 16px 0;"><code><b>--host=String</b></code></p>
+</td>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-family: 'Times New Roman',Times,Georgia,serif;">BRIX host address.</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.20; margin: 7px 0 16px 0;"><code><b>--out=String</b></code></p>
+</td>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: 'Times New Roman',Times,Georgia,serif;">The file system directory to which the package is exported.</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.20; margin: 7px 0 16px 0;"><code><b>--code=String</b></code></p>
+</td>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-family: 'Times New Roman',Times,Georgia,serif;">The ID code of the exported component.</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.20; margin: 7px 0 16px 0;"><code><b>--dts</b></code></p>
+</td>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_Normal">This flag controls the generation of <span style="font-weight: bold;">d.ts</span> files that activate IDE tips for TypeScript language types in scripts. It is enabled by default.</p>
+<p class="p_Normal"><span style="font-weight: bold;">Important</span>: for packages with many components, generation may take a while.</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.20; margin: 7px 0 16px 0;"><code><b>--experimental-restruct</b></code></p>
+</td>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_Normal">Restructure the package to display a logical hierarchy of files. Use with caution.</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.20; margin: 7px 0 16px 0;"><code><b>--allow-deps=true/false</b></code></p>
+</td>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_Normal">This flag is used when exporting solutions. It allows you to export a solution with added links to components of another solution. For more details, see <a href="lowcode-devops-pm.html#export-use" class="topiclink">Utility features</a>.</p>
+</td>
+</tr>
+<tr>
+<td colspan="2"  style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-family: 'Times New Roman',Times,Georgia,serif; font-weight: bold;">Command:</span></p>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><code><b>elma365pm import</b></code><span style="font-family: 'Times New Roman',Times,Georgia,serif;">. </span><span style="font-size: 15px; font-family: 'Times New Roman',Times,Georgia,serif;">Import objects into BRIX.</span></p>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-size: 15px; font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">Use:</span></p>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><code><b>elma365pm import --token=STRING --host=STRING --src=STRING</b></code></p>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">Flags:</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.20; margin: 7px 0 16px 0;"><code><b>--token=String</b></code></p>
+</td>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-family: 'Times New Roman',Times,Georgia,serif; color: #0000ff;"><a href="360016488452.html" class="topiclink">Authentication token</a></span><span style="font-family: 'Times New Roman',Times,Georgia,serif;"> created in BRIX in the </span><span style="font-family: 'Times New Roman',Times,Georgia,serif; font-weight: bold;">Administration</span><span style="font-family: 'Times New Roman',Times,Georgia,serif;"> workspace.</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.20; margin: 7px 0 16px 0;"><code><b>--host=String</b></code></p>
+</td>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-family: 'Times New Roman',Times,Georgia,serif;">BRIX host address.</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.20; margin: 7px 0 16px 0;"><code><b>--src=String</b></code></p>
+</td>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-family: 'Times New Roman',Times,Georgia,serif;">File system directory for packing and importing.</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.20; margin: 7px 0 16px 0;"><code><b>--version-up</b></code></p>
+</td>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-family: 'Times New Roman',Times,Georgia,serif;">Package version update.</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.20; margin: 7px 0 16px 0;"><code><b>--replace-org-struct</b></code></p>
+</td>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-family: 'Times New Roman',Times,Georgia,serif;">Organizational chart replacement. It is used only when importing a company configuration.</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.20; margin: 7px 0 16px 0;"><code><b>--force</b></code></p>
+</td>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-family: 'Times New Roman',Times,Georgia,serif;">Forced import if there are conflicts. Use with caution, a conflict may mean that data on the target host is corrupted.</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.20; margin: 7px 0 16px 0;"><code><b>--fail-on-conflict</b></code></p>
+</td>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-family: 'Times New Roman',Times,Georgia,serif;">Output a non-zero error code in the exit code if there are conflicts during the forced import of a package. Use only with the </span><code><b>--force</b></code><span style="font-size: 13px;"> </span><span style="font-family: 'Times New Roman',Times,Georgia,serif;">flag.</span></p>
+</td>
+</tr>
+<tr>
+<td colspan="2"  style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-family: 'Times New Roman',Times,Georgia,serif; font-weight: bold;">Command:</span></p>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><code><b>elma365pm check</b></code><span style="font-family: 'Times New Roman',Times,Georgia,serif;">. Check the package for suitability for import.</span></p>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">Use:</span></p>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><code><b>elma365pm check --token=STRING --host=STRING --src=STRING</b></code></p>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">Flags:</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.20; margin: 7px 0 16px 0;"><code><b>--token=String</b></code></p>
+</td>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-family: 'Times New Roman',Times,Georgia,serif; color: #0000ff;"><a href="360016488452.html" class="topiclink">Authentication token</a></span><span style="font-family: 'Times New Roman',Times,Georgia,serif;"> created in BRIX in the </span><span style="font-family: 'Times New Roman',Times,Georgia,serif; font-weight: bold;">Administration</span><span style="font-family: 'Times New Roman',Times,Georgia,serif;"> workspace.</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.20; margin: 7px 0 16px 0;"><code><b>--host=String</b></code></p>
+</td>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-family: 'Times New Roman',Times,Georgia,serif;">BRIX host address.</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.20; margin: 7px 0 16px 0;"><code><b>--src=String</b></code></p>
+</td>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-family: 'Times New Roman',Times,Georgia,serif;">File system directory for packing and importing.</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.20; margin: 7px 0 16px 0;"><code><b>--version-up</b></code></p>
+</td>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-family: 'Times New Roman',Times,Georgia,serif;">Package version update.</span></p>
+</td>
+</tr>
+<tr>
+<td colspan="2"  style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-family: 'Times New Roman',Times,Georgia,serif; font-weight: bold;">Command:</span></p>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><code><b>elma365pm version</b></code><span style="font-family: 'Times New Roman',Times,Georgia,serif;">. Show utility version information.</span></p>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">Use:</span><span style="font-family: 'Times New Roman',Times,Georgia,serif; font-weight: bold;"> </span></p>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><code><b>elma365pm version</b></code></p>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-family: 'Times New Roman',Times,Georgia,serif; font-style: italic;">Flag:</span></p>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><code><b>--json</b></code><span style="font-family: 'Times New Roman',Times,Georgia,serif;">. JSON output.</span></p>
+</td>
+</tr>
+<tr>
+<td colspan="2"  style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-family: 'Times New Roman',Times,Georgia,serif; font-weight: bold;">Flags available for each command:</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.20; margin: 7px 0 16px 0;"><code><b>--help</b></code></p>
+</td>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-family: 'Times New Roman',Times,Georgia,serif;">Help information about the command.</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.20; margin: 7px 0 16px 0;"><code><b>--debug</b></code></p>
+</td>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-family: 'Times New Roman',Times,Georgia,serif;">Output detailed logs of the operation execution.</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.20; margin: 7px 0 16px 0;"><code><b>--timeout</b></code></p>
+</td>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.20;"><span style="font-family: 'Times New Roman',Times,Georgia,serif;">Waiting for the operation to be performed. The default value is 5 minutes. It is changed in case of bulk processing. For example: </span><code><b>elma365pm export solution –timeout=10m</b></code><span style="font-family: 'Times New Roman',Times,Georgia,serif;">.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h2 class="p_Heading2"><a id="export-use" class="hmanchor"></a><span class="f_Heading2">Utility features</span></h2>
+<p style="line-height: 1.28; margin: 0 0 11px 0;">Pay attention to the features of the <span style="font-weight: bold;">elma365pm</span> utility:</p>
+<ol style="list-style-type:decimal">
+<li value="1" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;">The utility cannot be used to export or import <span style="color: #0000ff;"><a href="solution.html" class="topiclink">paid system solutions</a></span>.</li><li value="2" style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 16px;">To export a solution with configured <span style="color: #0000ff;"><a href="export-solution-file.html#add-dependencies" class="topiclink">links to components of another solution</a></span>,the <code><b>--allow-deps</b></code> соparameter with the value <code><b>true</b></code><span style="font-size: 13px;"> </span>is applied in the export command:</li></ol>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">elma365pm export solution --token=TOKEN --host=https://dev-elma365.myorg</span><br />
+<span class="f_CodeExample">--out=my_solution&nbsp;--code=my_solution_code --allow-deps=true </span></p>
+<p style="line-height: 1.20; margin: 7px 0 16px 25px;">If you do not use the <code><b>--allow-deps</b></code> parameter or you set it to  <code><b>false</b></code>, the solution with associated components will not be exported.</p>
+<h2 class="p_Heading2"><a id="use-case" class="hmanchor"></a><span class="f_Heading2">Utility use example</span></h2>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;">For example, the GitLab service is used as a source code storage and continuous delivery infrastructure. This is the most popular product with the ability to deploy its server in a closed loop.</p>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;">Let’s consider the main stages of continuous delivery and deploy on the example of the <span style="font-weight: bold;">Memos </span>(<code><b>Internal_Documents</b></code>) solution.</p>
+<ol style="list-style-type:upper-roman">
+<li value="1" style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 16px;">The solution developer performs the work in the company with dev environment.</li><li value="2" style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 16px;">After development is complete, the solution must be uploaded to the repository folder in the file system. To do this, the following command is used:</li></ol>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">elma365pm&nbsp;export&nbsp;solution&nbsp;--token=TOKEN&nbsp;--host=https://dev15-elma365.myorg</span><br />
+<span class="f_CodeExample">--out=Internal_Documents&nbsp;--code=Internal_Documents</span></p>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;">The export and import token are created by the <a href="360006871932.html#administrators" class="topiclink">system administrator</a> in <span style="font-weight: bold;">Administration &gt; Tokens</span>.</p>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;">After executing this command, the<span style="font-weight: bold;"> /Internal_Documents</span> folder will contain the <span style="font-weight: bold;">Memos</span> solution files.</p>
+<ol style="list-style-type:upper-roman" start="3">
+<li value="3" style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 16px;">The developer then uses the git repository tools according to internal rules.</li></ol>
+<p style="line-height: 1.20; margin: 7px 0 16px 36px;">In our example, the developer commits the changes to a separate working branch &nbsp;and pushes them to a shared repository on the GitLab service. Next, a request is created on the server in the working repository to merge its branch into the common develop branch.</p>
+<ol style="list-style-type:upper-roman" start="3">
+<li value="4" style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 16px;">After the developer branch is checked and approved, the merge is performed. </li><li value="5" style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 16px;">In the process of automatic solution delivery on the develop branch, the following is performed:</li></ol>
+<ul style="list-style-type:disc">
+<li style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 16px;">packing the solution artefact into an .<span style="font-weight: bold;">e365</span> file for testing:</li></ul>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">elma365pm&nbsp;pack&nbsp;--src=procurement&nbsp;--out=dist/procurement.e365</span></p>
+<ul style="list-style-type:disc">
+<li style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 16px;">uploading the solution to a company with a test environment:</li></ul>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">elma365pm&nbsp;import&nbsp;--token=TEST-TOKEN&nbsp;--host=https://test-elma365.myorg</span><br />
+<span class="f_CodeExample">--src=Internal_Documents&nbsp;--version-up&nbsp;--force</span></p>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;">To ignore import errors and force an import, the <code><b>--force</b></code><span style="font-size: 13px;"> </span>flag is used in the example.</p>
+<ol style="list-style-type:upper-roman" start="6">
+<li value="6" style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 16px;">After testing, the solution is uploaded for operation in a prod environment company: </li></ol>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">elma365pm&nbsp;import&nbsp;--token=PRODUCTION-TOKEN&nbsp;--host=https://elma365.myorg</span><br />
+<span class="f_CodeExample">--src=Internal_Documents&nbsp;--version-up</span></p>
+<h2 class="p_Heading2"><a id="structure" class="hmanchor"></a><span class="f_Heading2">File structure of a solution</span></h2>
+<p class="p_Normal" style="line-height: 1.50; margin: 10px 0 0 0;"><span style="font-size: 15px;">When you unpack the solution into files by using the </span><code><b>elma365pm export</b></code><span style="font-size: 15px;"> command, you will see the structure of the solution in the target folder. As an example, we use the prebuilt business solution </span><span style="font-weight: bold;">Memos</span>.</p>
+<p class="p_Normal" style="line-height: 1.50; margin: 10px 0 0 0;"><span style="font-size: 15px;"><a class="dropdown-toggle" style="font-style: normal; font-weight: normal; color: #000000; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186A1')">File structure</a></span></p>
+<div id="TOGGLE0186A1" class="dropdown-toggle-body" style="text-align: left; text-indent: 0; line-height: 1.50; padding: 0 0 0 0; margin: 10px 0 0 0;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">PS&nbsp;InternalDocuments&gt;&nbsp;tree&nbsp;/F</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample">│&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">package</span><span class="f_CodeExample">.json</span><br />
+<span class="f_CodeExample">│</span><br />
+<span class="f_CodeExample">├───appViews</span><br />
+<span class="f_CodeExample">│&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;manifest.json</span><br />
+<span class="f_CodeExample">│&nbsp;&nbsp;&nbsp;│</span><br />
+<span class="f_CodeExample">│&nbsp;&nbsp;&nbsp;├───entities</span><br />
+<span class="f_CodeExample">│&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;└───InternalDocuments</span><br />
+<span class="f_CodeExample">│&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;document_type.json</span><br />
+<span class="f_CodeExample">│&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;serviceNote.json</span><br />
+<span class="f_CodeExample">│&nbsp;&nbsp;&nbsp;│</span><br />
+<span class="f_CodeExample">│&nbsp;&nbsp;&nbsp;└───resources</span><br />
+<span class="f_CodeExample">│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└───entities</span><br />
+<span class="f_CodeExample">│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└───InternalDocuments</span><br />
+<span class="f_CodeExample">│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;document_type.json.po</span><br />
+<span class="f_CodeExample">│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;serviceNote.json.po</span><br />
+<span class="f_CodeExample">│</span><br />
+<span class="f_CodeExample">├───groups</span><br />
+<span class="f_CodeExample">│&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;manifest.json</span><br />
+<span class="f_CodeExample">│&nbsp;&nbsp;&nbsp;│</span><br />
+<span class="f_CodeExample">│&nbsp;&nbsp;&nbsp;└───entities</span><br />
+<span class="f_CodeExample">│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└───InternalDocuments</span><br />
+<span class="f_CodeExample">│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;27b37284-0ab0-4d9e-8b39-893938770deb.json</span><br />
+<span class="f_CodeExample">│</span><br />
+<span class="f_CodeExample">├───pages</span><br />
+<span class="f_CodeExample">│&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;manifest.json</span><br />
+<span class="f_CodeExample">│&nbsp;&nbsp;&nbsp;│</span><br />
+<span class="f_CodeExample">│&nbsp;&nbsp;&nbsp;├───entities</span><br />
+<span class="f_CodeExample">│&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;├───global</span><br />
+<span class="f_CodeExample">│&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;InternalDocuments.json</span><br />
+<span class="f_CodeExample">│&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;│</span><br />
+<span class="f_CodeExample">│&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;└───InternalDocuments</span><br />
+<span class="f_CodeExample">│&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;document_type.json</span><br />
+<span class="f_CodeExample">│&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;link_9556a21b-ef8b-4dd6-ad43-2a6d81dd5fda.json</span><br />
+<span class="f_CodeExample">│&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sep_adab5a75-98bf-46f2-af6e-4a67866260a6.json</span><br />
+<span class="f_CodeExample">│&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sep_ffe43b88-2ee2-42b0-939a-d4f88a435c98.json</span><br />
+<span class="f_CodeExample">│&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;serviceNote.json</span><br />
+<span class="f_CodeExample">│&nbsp;&nbsp;&nbsp;│</span><br />
+<span class="f_CodeExample">│&nbsp;&nbsp;&nbsp;└───resources</span><br />
+<span class="f_CodeExample">│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├───global</span><br />
+<span class="f_CodeExample">│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;InternalDocuments.widgets.json</span><br />
+<span class="f_CodeExample">│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│</span><br />
+<span class="f_CodeExample">│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└───InternalDocuments</span><br />
+<span class="f_CodeExample">│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;document_type.widgets.json</span><br />
+<span class="f_CodeExample">│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;link_9556a21b-ef8b-4dd6-ad43-2a6d81dd5fda.widgets.json</span><br />
+<span class="f_CodeExample">│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sep_adab5a75-98bf-46f2-af6e-4a67866260a6.widgets.json</span><br />
+<span class="f_CodeExample">│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sep_ffe43b88-2ee2-42b0-939a-d4f88a435c98.widgets.json</span><br />
+<span class="f_CodeExample">│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;serviceNote.widgets.json</span><br />
+<span class="f_CodeExample">│</span><br />
+<span class="f_CodeExample">├───permissionsSettings</span><br />
+<span class="f_CodeExample">│&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;manifest.json</span><br />
+<span class="f_CodeExample">│&nbsp;&nbsp;&nbsp;│</span><br />
+<span class="f_CodeExample">│&nbsp;&nbsp;&nbsp;└───entities</span><br />
+<span class="f_CodeExample">│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├───global</span><br />
+<span class="f_CodeExample">│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;InternalDocuments.pagePermissions.json</span><br />
+<span class="f_CodeExample">│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│</span><br />
+<span class="f_CodeExample">│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└───InternalDocuments</span><br />
+<span class="f_CodeExample">│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;document_type.pagePermissions.json</span><br />
+<span class="f_CodeExample">│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;document_type.permissionSettings.json</span><br />
+<span class="f_CodeExample">│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;document_type@__directory.permissionSettings.json</span><br />
+<span class="f_CodeExample">│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;link_9556a21b-ef8b-4dd6-ad43-2a6d81dd5fda.pagePermissions.json</span><br />
+<span class="f_CodeExample">│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;sep_adab5a75-98bf-46f2-af6e-4a67866260a6.pagePermissions.json</span><br />
+<span class="f_CodeExample">│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;sep_ffe43b88-2ee2-42b0-939a-d4f88a435c98.pagePermissions.json</span><br />
+<span class="f_CodeExample">│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;serviceNote.pagePermissions.json</span><br />
+<span class="f_CodeExample">│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;serviceNote.permissionSettings.json</span><br />
+<span class="f_CodeExample">│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;serviceNote@__directory.permissionSettings.json</span><br />
+<span class="f_CodeExample">│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│</span><br />
+<span class="f_CodeExample">│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└───serviceNote</span><br />
+<span class="f_CodeExample">│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_process_serviceNoteProcessing.permissionSettings.json</span><br />
+<span class="f_CodeExample">│</span><br />
+<span class="f_CodeExample">├───processor</span><br />
+<span class="f_CodeExample">│&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;manifest.json</span><br />
+<span class="f_CodeExample">│&nbsp;&nbsp;&nbsp;│</span><br />
+<span class="f_CodeExample">│&nbsp;&nbsp;&nbsp;├───entities</span><br />
+<span class="f_CodeExample">│&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;└───InternalDocuments.serviceNote</span><br />
+<span class="f_CodeExample">│&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;serviceNoteProcessing.json</span><br />
+<span class="f_CodeExample">│&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;serviceNoteProcessing.ts</span><br />
+<span class="f_CodeExample">│&nbsp;&nbsp;&nbsp;│</span><br />
+<span class="f_CodeExample">│&nbsp;&nbsp;&nbsp;└───resources</span><br />
+<span class="f_CodeExample">│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└───InternalDocuments.serviceNote</span><br />
+<span class="f_CodeExample">│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;serviceNoteProcessing.po</span><br />
+<span class="f_CodeExample">│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;serviceNoteProcessing.runtime</span><br />
+<span class="f_CodeExample">│</span><br />
+<span class="f_CodeExample">├───templates</span><br />
+<span class="f_CodeExample">│&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;manifest.json</span><br />
+<span class="f_CodeExample">│&nbsp;&nbsp;&nbsp;│</span><br />
+<span class="f_CodeExample">│&nbsp;&nbsp;&nbsp;├───entities</span><br />
+<span class="f_CodeExample">│&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;└───InternalDocuments.serviceNote</span><br />
+<span class="f_CodeExample">│&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;accb6290-4c06-44c3-8ce1-fe0721fab4e2</span><br />
+<span class="f_CodeExample">│&nbsp;&nbsp;&nbsp;│</span><br />
+<span class="f_CodeExample">│&nbsp;&nbsp;&nbsp;└───resources</span><br />
+<span class="f_CodeExample">│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└───InternalDocuments.serviceNote</span><br />
+<span class="f_CodeExample">│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└───accb6290-4c06-44c3-8ce1-fe0721fab4e2</span><br />
+<span class="f_CodeExample">│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Memo.docx</span><br />
+<span class="f_CodeExample">│</span><br />
+<span class="f_CodeExample">└───widgets</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;manifest.json</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;│</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;├───entities</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;├───InternalDocuments.document_type</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_create</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_create.client.ts</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_create.server.ts</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;│</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;└───InternalDocuments.serviceNote</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;form_20d7fc9f-744b-4c5b-9e63-ad6cb52d8f73</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;form_20d7fc9f-744b-4c5b-9e63-ad6cb52d8f73.client.ts</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;form_20d7fc9f-744b-4c5b-9e63-ad6cb52d8f73.server.ts</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;form_bd63ceb5-914e-406a-90e3-d513b9258ed4</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;form_bd63ceb5-914e-406a-90e3-d513b9258ed4.client.ts</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;form_bd63ceb5-914e-406a-90e3-d513b9258ed4.server.ts</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;form_c4663ece-c7bb-4926-8cc0-1272029cb586</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;form_c4663ece-c7bb-4926-8cc0-1272029cb586.client.ts</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;form_c4663ece-c7bb-4926-8cc0-1272029cb586.server.ts</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;form_dd59c19d-84ff-45ef-b393-db8726a154a8</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;form_dd59c19d-84ff-45ef-b393-db8726a154a8.client.ts</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;form_dd59c19d-84ff-45ef-b393-db8726a154a8.server.ts</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;form_f51fd1ff-a3ce-4e1d-b7ca-5fd5e324e08b</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;form_f51fd1ff-a3ce-4e1d-b7ca-5fd5e324e08b.client.ts</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;form_f51fd1ff-a3ce-4e1d-b7ca-5fd5e324e08b.server.ts</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_create</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_create.client.ts</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_create.server.ts</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_view</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_view.client.ts</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_view.server.ts</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;│</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;└───resources</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├───InternalDocuments.document_type</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_create.po</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└───InternalDocuments.serviceNote</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;form_20d7fc9f-744b-4c5b-9e63-ad6cb52d8f73.po</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;form_bd63ceb5-914e-406a-90e3-d513b9258ed4.po</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;form_c4663ece-c7bb-4926-8cc0-1272029cb586.po</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;form_dd59c19d-84ff-45ef-b393-db8726a154a8.po</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;form_f51fd1ff-a3ce-4e1d-b7ca-5fd5e324e08b.po</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_create.po</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_view.po</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Comment"><span class="f_Comment">The top level consists of service folders, as the system architecture is microservice-based. Each service folder usually has the</span><span style="font-size: 15px;"> </span><code><b>manifest.json</b></code> file and 2 folders <code><b>entities</b></code> and <code><b>resources</b></code><span class="f_Comment">. The root also stores the <code><b>package.json</b></code> file that includes the main data of the exported solution or workspace.</span></p>
+<p class="p_Comment"><span class="f_Comment">Generally, there are three types of files in the structure:</span></p>
+<ol style="list-style-type:decimal">
+<li value="1" style="line-height: 1.50; margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-size: 15px; font-weight: bold;">Configuration files </span><span style="font-size: 15px;"> are .</span><span style="font-size: 15px; font-weight: bold;">json</span><span style="font-size: 15px;"> files or files with no extension (that are also .</span><span style="font-size: 15px; font-weight: bold;">json</span><span style="font-size: 15px;"> files). These files include information about apps’ fields and settings, as well as processes, widgets, and modules.</span></li><li value="2" style="line-height: 1.50; margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-size: 15px; font-weight: bold;">Script files</span><span style="font-size: 15px;"> are .</span><span style="font-size: 15px; font-weight: bold;">ts</span><span style="font-size: 15px;"> files that contain the code of scripts from processes, widgets, and modules.</span></li></ol>
+<p style="line-height: 1.50; margin: 0 0 0 17px;">Script files are unpacked only for easy viewing and code review. The content of these files is not included into the package when the solution is imported.</p>
+<p style="line-height: 1.50; margin: 0 0 0 17px;">Please note, that starting from version 2022.11 you can edit unpacked script files and use autocomplete files to make working in code editors more convenient.</p>
+<ol style="list-style-type:decimal">
+<li value="3" style="line-height: 1.50; margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-size: 15px; font-weight: bold;">Other resource and localization files </span><span style="font-size: 15px;">are usually stored in the </span><code><b>resources</b></code><span style="font-size: 13px;"> </span><span style="font-size: 15px;">folder. Solution package localization is going to be considerably reworked, so now localization files are used only once during the import of a package. You can make changes directly to these files. They will be used to form a new package that can be imported with the utility.</span></li></ol>
+
+                        <div class="bottom-nav">
+                            
+                                <a id="prev-link" class="topic__navi_prev" href="create-service.html">
+                                    <span class="bottom-nav__arrow bottom-nav__arrow--prev"></span> <span
+                                        class="bottom-nav__link">create-service.html</span>
+                                </a>
+                            
+                            
+                                <a id="next-link" class="topic__navi_next" href="npm-package.html">
+                                    <span class="bottom-nav__link">npm-package.html</span> <span
+                                        class="bottom-nav__arrow bottom-nav__arrow--next"></span>
+                                </a>
+                            
+                        </div>
+                        <!-- добавляет на страницу строку блок Была ли статья полезной?  -->
+                          <div class="feedback" id="feedback"><span><b>Was this helpful?</b></span><form action="" method="POST" class="feedback-form" id="feedback-form"><div class="feedback__popup feedback__popup-response" id="feedback__popup_thx" style="display: none;">Thanks for your feedback!</div><div class="feedback__popup" id="feedback__popup_why" style="display: none;"><div class="feedback__popup-header">Please specify why:</div><input type="radio" name="category" id="bad_recommendation" value="bad_recommendation"><label for="bad_recommendation">Recommendations did not help me</label><input type="radio" name="category" id="difficult_text" value="difficult_text"><label for="difficult_text">Article is hard to understand</label><input type="radio" name="category" id="no_answer" value="no_answer"><label for="no_answer">Didn’t answer my question</label><input type="radio" name="category" id="bad_header" value="bad_header"><label for="bad_header">Content does not match the topic</label><input type="radio" name="category" id="other_reason" value="other_reason"><label for="other_reason">Other</label></div><div class="feedback__popup" id="feedback__popup-other" style="display: none;"><div class="feedback__popup-header">How can we improve the article?</div><textarea class="feedback__textarea" name="other" id=""></textarea><input type="submit" class="feedback__other-btn" value="Submit"></div><div class="feedback-form__btn-group"><input type="radio" name="useful" id="feedback__useful_yes" value="true"><label for="feedback__useful_yes"><img src="like.svg" class="small-img"><spanclass="feedback-form__btn-group_yes-btn">Yes</spanclass="feedback-form__btn-group_yes-btn"></label><input type="radio" name="useful" id="feedback__useful_no" value="false"><label for="feedback__useful_no"><img src="dislike.svg" class="small-img"><spanclass="feedback-form__btn-group_no-btn">No</spanclass="feedback-form__btn-group_no-btn"></label></div><select name="category"><option disabled="">Please specify why</option><option value="bad_recommendation" selected="">Recommendations did not help me</option><option value="difficult_text">Article is hard to understand</option><option value="no_answer">Didn’t answer my question</option><option value="bad_header">Content does not match the topic</option><option value="other_reason">Other</option></select><input type="submit"></form></div>
+                           
+                    </section>
+                </div>
+                <aside class="article__sidebar" style="display:none">
+                    <input type="checkbox" />
+                    <div class="article__arrow"></div>
+                    <div class="table-of-contents elma365-right" id="toc2Content">
+                        <h3 class="h3-toc">In this topic</h3>
+                        <nav id="toc2"></nav>
+                    </div>
+                </aside>
+            </div>
+        </article>
+    </main>               
+    <footer class="footer">
+        <div class="footer-container">
+  <div class="footer-mobile">
+    
+    <ul class="footer-mobile__list"><li><a href="https://brix365.com/en/" target="_blank">BRIX</a></li><li><a href="https://tssdk.brix365.com/en/latest/" target="_blank">SDK</a></li><li><a href="https://api.brix365.com/en/" target="_blank">API</a></li></ul><ul class="footer-mobile__list"><li><a href="https://brix365.com/en/help/platform/get-trial.html">Platform</a></li><li><a href="https://brix365.com/en/help/ecm/ecm-functions.html">ECM</a></li><li><a href="https://brix365.com/en/help/service/service-functions.html">Service</a></li><li><a href="https://brix365.com/en/help/projects/projects-functions.html">Projects</a></li></ul>
+    
+    
+  </div>
+  <div class="footer-wrap">
+    
+      <div><span class="mobile-question-popup">Send feedback</span><form method="POST" action class="question__popup question-xs" id="question__popup"><div class="question-wrap"><span class="close"></span><span class="title">Ask a question</span><label for="help_question" style="display: none;"></label><textarea name="help_question" id="help_question"></textarea><input type="submit" value="Send"></div></form><div class="hidden fade-in question-success-xs">Sent</div></div>
+    
+    <div class="footer-flex-b">
+      <span class="footer-copy">&copy; 2025 BRIX</span>
+      <ul class="footer-list">
+        
+        <li class="footer-item">
+            <a href="#" class="arrow-top" style="display: block;"></a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+ 
+    </footer>
+    <iframe name="hmnavigation" style="display:none!important"></iframe>
+    <script src="./jquery-ui.js"></script>
+    <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
+    <script src="./jquery.tocify.min.js"></script>
+    <script src="./TypoReporter.min.js"></script>
+    <script src="./google-search.js"></script>
+    <script src="./main.js"></script>
+<script type="text/javascript">
+HMInitToggle('TOGGLE0186A1','hm.type','dropdown','hm.state','0');
+</script>
+</body>
+
+</html>

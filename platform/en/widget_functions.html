@@ -1,0 +1,265 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>System functions in widgets</title>
+    <meta name="generator" content="Help+Manual" />
+    <meta name="keywords" content="" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Client scripts in widgets support functions that are called automatically when displaying a widget or saving the form. Here is a&nbsp;list of&nbsp;system functions:" />
+    <meta name="picture" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Full documentation for BRIX365 platform. Low-code developer guide. User guide. Admin guide. Developer guide." />
+    <meta property="og:url" content="https://brix365.com/en/help" />
+    <meta property="og:image" content="" />                                                              
+    <link rel="icon" href="favicon.png" type="image/png" />
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./jquery-ui.css" />
+    <link rel="stylesheet" href="default.css" />
+    <link rel="stylesheet" href="./search-yandex.css" />
+    <link rel="stylesheet" href="./article.css" />
+    <link rel="stylesheet" href="./glossary.css" />
+    <link rel="stylesheet" href="./theme.css" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+
+<body>
+    
+    <script>!function(e,t,c,n,r,a,m){e.ym=e.ym||function(){(e.ym.a=e.ym.a||[]).push(arguments)},e.ym.l=1*new Date;for(var s=0;s<document.scripts.length;s++)if(document.scripts[s].src===n)return;a=t.createElement(c),m=t.getElementsByTagName(c)[0],a.async=1,a.src=n,m.parentNode.insertBefore(a,m)}(window,document,"script","https://mc.yandex.ru/metrika/tag.js"),ym(83179930,"init",{clickmap:!0,trackLinks:!0,accurateTrackBounce:!0,webvisor:!0})</script><noscript><div><img alt=""src=https://mc.yandex.ru/watch/83179930 style=position:absolute;left:-9999px></div></noscript> 
+    
+    ﻿<header class="header elma-365">
+  <div class="container">
+    <a class="header__logo" href="https://brix365.com/en/help">
+      <img src="./logo-en.svg">
+    </a>
+ <!-- <div class="hero__search-form" id="search-panel">
+   <form class="search-form" onsubmit="ym(83180416,'reachGoal','poisk')">
+     <label class="search-form__label">
+       <span id="reset-search" class="search__icon"></span>
+       <input class="search-form__input" type="text">
+     </label>
+     <input class="search-form__submit" type="submit" value="Submit">
+   </form>
+  </div>       -->
+  
+     <div class="hero__search-form" id="search-panel"> <form class="search-form"> <label class="search-form__label"> <span id="reset-search" class="search__icon"></span> <input class="search-form__input" type="text"> </label> <input class="search-form__submit" type="submit" value="Submit"> </form> </div> 
+  <div class="hero__search">
+      <a href="#" id="search-icon" class="hero__search-icon">
+        <img src="search-icon-white.svg" alt="search string">
+      </a>
+      <a href="#" id="side-menu-icon" class="hero__side-icon">
+        <img src="side_menu.svg" alt="side menu">
+      </a>
+    </div>  
+  <div class="header__navi">
+        
+        <ul class="header__list"><li><span class="solution-select"><span class="solution-select__selected"></span><svg width="7" height="4" viewBox="0 0 7 4" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L3.5 3.5L6 1" stroke="white" stroke-linecap="round" stroke-linejoin="round"/></svg><ul class="solution-select__list"><li><a class="project-link" href="https://brix365.com/en/help/platform/get-trial.html">Platform</a></li><li><a class="project-link" href="https://brix365.com/en/help/ecm/ecm-functions.html">ECM</a></li><li><a class="project-link" href="https://brix365.com/en/help/crm/crm_overview.html">CRM</a></li><li><a class="project-link" href="https://brix365.com/en/help/service/service-functions.html">Service</a></li><li><a class="project-link" href="https://brix365.com/en/help/projects/projects-functions.html">Projects</a></li><li><a class="project-link" href="https://brix365.com/en/help/business_solutions/-elma365-store.html">Business Solutions</a></li></ul></span></li><li><a href="https://api.brix365.com/en/" target="_blank">API</a></li><li><a href="https://tssdk.brix365.com/" target="_blank">SDK</a></li></ul>
+        
+        
+   </div>
+  </div>
+
+</header>
+
+
+
+    
+    <main class="main container">
+
+        <aside class="sidebar" id="sidebar">
+        <div class="sidebar__header">
+                 <a class="header__logo" href="https://brix365.com/en/help">
+                    <img src="./logo-light-en.svg">
+                 </a>
+                    <span class="sidebar__close elma-365-close" id="close"></span>
+            </div>
+            <div class="sidebar__wrapper" id="side-menu">
+                
+            </div>
+        </aside>
+
+        <article class="article" id="article">
+            <div class="article-inner">           
+                <div class="content">
+                    <header class="article__header">
+                        
+                            <div class="topic__breadcrumbs">
+                                <p>Low-code designer &gt; <a href="interface_settings.html">Set up interfaces</a> &gt; <a href="client_server_scripts.html">Scripts in widgets</a> / System functions in widgets</p>
+                            </div>
+                        
+                        <div class="topic__title"><h1 class="p_Heading1"><span class="f_Heading1">System functions in widgets</span></h1>
+</div>
+                    
+</header>
+                    <section class="article__content">
+                        <div class="scroll-top-inner">
+                            <a href="#h1-article" class="scroll-top"></a>
+                        </div>
+                        <!-- Placeholder for topic body. -->
+                        <p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-family: Inter;">Client scripts in widgets support functions that are called automatically when displaying a widget or saving the <a href="create_form.html" class="topiclink">form</a>. Here is a list of system functions:</span></p>
+<ul style="list-style-type:disc">
+<li style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-family: Inter;">The initialization function. This function is called as the widget is initialized, before the interface template is displayed.</span></li><li style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-family: Inter;">The function checking the widget’s display settings. This function is called after the initialization function. It returns </span><code><b>true</b></code><span style="font-family: Inter;"> if the widget should be displayed and </span><code><b>false</b></code><span style="font-family: Inter;"> if it shouldn’t.</span></li><li class="p_Normal" style="line-height: 2.10;"><a id="onload" class="hmanchor"></a>The rendering completion function. This function is called after the widget template is fully rendered in the browser. If the <a href="common_widget_settings.html#load-asynchronously" class="topiclink">Load the contents asynchronously</a> option is enabled in the widget settings, the function is called upon the completion of rendering the widget itself, but before its content is rendered.</li><li class="p_Normal" style="line-height: 2.10;">The destroy function. This function is called in order to end the widget<span style="font-family: Inter;">’s work</span> and free system resources from the data associated with its operation.</li><li style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-family: Inter;">The validation function. This function is called when the user tries to save the form. It checks whether the form’s fields are filled out correctly.</span></li></ul>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-family: Inter;">These functions are optional. You can use them in the scripts and select them on the <a href="designer-tabs.html#settings" class="topiclink">Settings</a> tab in the interface designer.</span></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-family: Inter;">By default, the following functions are called if they are defined in the script:</span></p>
+<ul style="list-style-type:disc">
+<li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><code><b>onInit()</b></code><span style="font-family: Inter;"> is called upon the widget’s initialization.</span></li><li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><code><b>canRender()</b></code><span style="font-family: Inter;"> is called when conditions for displaying the widget are checked.</span></li><li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><b><code>onLoad()</code></b><span style="font-family: Inter;"> is called when the widget’s rendering is completed.</span></li><li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><code><b>destroy()</b></code><span style="font-family: Inter;"> is called when the widget’s work ends.</span></li></ul>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-family: Inter;">There is no default validation function.</span></p>
+<h2 class="p_Heading2"><a id="oninit" class="hmanchor"></a><span class="f_Heading2">onInit()</span></h2>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-family: Inter;">By the time the execution of the function starts, the input data is loaded to the widget’s context, </span><code><b>Context.data.*</b></code><span style="font-family: Inter;">. You can add whatever data is missing to the function’s body, and it will be used to manage the way the widget is displayed or to execute custom functions. Also, in the function’s body you can call</span> <a href="extention-api.html" class="topiclink">API methods</a> or server functions.</p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">async&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">function</span><span class="f_CodeExample">&nbsp;onInit&nbsp;():&nbsp;Promise&lt;</span><span class="f_CodeExample" style="font-weight: bold;">void</span><span class="f_CodeExample">&gt;&nbsp;{</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-style: italic;">//&nbsp;Function's&nbsp;body</span><br />
+<span class="f_CodeExample">}</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Example</span></h3>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-family: Inter;">Let’s say you need to create a widget that will show a table displaying full names of users alongside with their dates of birth.</span></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-family: Inter;">Add the </span><code><b>users</b></code><span style="font-family: Inter;"> variable of the</span> <a href="360010201779.html" class="topiclink">Table</a> <span style="font-family: Inter;">type to the widget, as well as two </span><span style="font-family: Inter; color: #0000ff;"><a href="https://brix365.com/en/help/360009707032.html#string" target="_blank" class="weblink">String</a></span><span style="font-family: Inter;"> type variables that the table will include: </span><code><b>name</b></code><span style="font-family: Inter;"> and </span><code><b>birthDate</b></code><span style="font-family: Inter;">.</span></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-family: Inter;">Place the </span><code><b>users</b></code><span style="font-family: Inter;"> variable on the modeling canvas. In the client script, write the </span><code><b>onInit()</b></code><span style="font-family: Inter; font-weight: bold;"> </span><span style="font-family: Inter;">function:</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">async&nbsp;function&nbsp;onInit&nbsp;():&nbsp;Promise&lt;void&gt;&nbsp;{</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;const&nbsp;users&nbsp;=&nbsp;await&nbsp;System.users.search().size(100).sort('__name',&nbsp;true).all();</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;for&nbsp;(const&nbsp;user&nbsp;of&nbsp;users)&nbsp;{</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let&nbsp;item&nbsp;=&nbsp;Context.data.users!.insert();</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;item.name&nbsp;=&nbsp;user.data.__name;</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;item.birthDate&nbsp;=&nbsp;user.data.birthDate&nbsp;?&nbsp;user.data.birthDate.format('L')&nbsp;:&nbsp;'';</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;}</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;Context.data.users&nbsp;=&nbsp;Context.data.users;</span><br />
+<span class="f_CodeExample">}</span></p>
+<h2 class="p_Heading2"><a id="canrender" class="hmanchor"></a><span class="f_Heading2">canRender()</span></h2>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-family: Inter;">Use this function when you need to display a widget template only when a certain condition is met, for example, when certain input data is filled out in the context.</span> </p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">async&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">function</span><span class="f_CodeExample">&nbsp;canRender&nbsp;():&nbsp;Promise&lt;</span><span class="f_CodeExample" style="font-weight: bold;">boolean</span><span class="f_CodeExample">&gt;&nbsp;{</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-style: italic;">//&nbsp;Function's&nbsp;body&nbsp;(must&nbsp;return&nbsp;true/false)</span><br />
+<span class="f_CodeExample">}</span></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-family: Inter;">The </span><code><b>canRender()</b></code><span style="font-family: Inter;"> function is different from the</span> <a href="common_widget_settings.html" class="topiclink">Hide</a> <span style="font-family: Inter;">system field. If the value of the </span><span style="font-family: Inter; font-weight: bold;">Hide</span><span style="font-family: Inter;"> field evaluates to </span><code><b>true</b></code><span style="font-family: Inter;">, the widget template is still rendered, but it’s not visible to users because it is marked as hidden in the web element’s styles. When the </span><code><b>canRender()</b></code><span style="font-family: Inter;"> function returns </span><code><b>false</b></code><span style="font-family: Inter;">, the template isn’t rendered at all. This can be important, for instance, when you create complex widgets with required fields. In this case an error can occur if certain fields on a hidden template are left empty.</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Example</span></h3>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-family: Inter;">Let’s say you need to create a widget to display a brief overview of each item of the </span><span style="font-family: Inter; font-weight: bold;">Contracts</span><span style="font-family: Inter;"> app.</span></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-family: Inter;">Create two variables: one with the code </span><code><b>date</b></code><span style="font-family: Inter;">, of the</span> <a href="360009707032.html#date-time" class="topiclink">Date</a> <span style="font-family: Inter;">type, and one with the code </span><code><b>number</b></code><span style="font-family: Inter;">, of the</span> <a href="360009707032.html#number" class="topiclink">Number</a> type. <span style="font-family: Inter;">As an input parameter, specify the variable storing a</span> <a href="360009923631.html" class="topiclink">Document type app</a>. <span style="font-family: Inter;">In our case, it will be used to store an item of the </span><span style="font-family: Inter; font-weight: bold;">Contracts</span><span style="font-family: Inter;"> app. &nbsp;</span></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-family: Inter;">This widget will be reused in different business processes and on forms of different apps that have a</span> <a href="360009923631.html" class="topiclink">Document type app</a> <span style="font-family: Inter;">in the context. Another condition is that the widget’s template should not be displayed if the input field is empty.</span></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-family: Inter;">To make this possible, add an input variable with the code </span><code><b>app</b></code><span style="font-family: Inter;"> storing a</span> <a href="360009923631.html" class="topiclink">Document app</a>. <span style="font-family: Inter;">Also, create additional </span><code><b>date</b></code><span style="font-family: Inter;"> and </span><code><b>number</b></code><span style="font-family: Inter;"> variables. Their types must match the corresponding fields in the </span><span style="font-family: Inter; font-weight: bold;">Contracts</span><span style="font-family: Inter;"> app. Uncheck the </span><span style="font-family: Inter; font-weight: bold;">Input</span><span style="font-family: Inter;"> and </span><span style="font-family: Inter; font-weight: bold;">Output</span><span style="font-family: Inter;"> boxes for these variables.</span></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-family: Inter;">Place the </span><code><b>date</b></code><span style="font-family: Inter;"> and </span><code><b>number</b></code><span style="font-family: Inter;"> variables on the form and mark them as </span><span style="font-family: Inter; font-weight: bold;">Read only</span><span style="font-family: Inter;">. To make the widget stand out on the page, add a border to it. To do that, go to the </span><span style="font-family: Inter; font-weight: bold;">HTML styles</span><span style="font-family: Inter;"> field and enter the following:</span> </p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">border:&nbsp;1px&nbsp;solid&nbsp;gray;</span></p>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-family: Inter;">In the client script, write the </span><code><b>onInit()</b></code><span style="font-family: Inter;"> and </span><code><b>canRender()</b></code><span style="font-family: Inter; font-weight: bold;"> </span><span style="font-family: Inter;">functions:</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">async&nbsp;function&nbsp;onInit&nbsp;():&nbsp;Promise&lt;void&gt;&nbsp;{</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;if&nbsp;(!await&nbsp;canRender())&nbsp;{</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return;</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;}</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;const&nbsp;appItem&nbsp;=&nbsp;await&nbsp;Context.data.app!.fetch();</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;Context.data.date&nbsp;=&nbsp;appItem.date;</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;Context.data.number&nbsp;=&nbsp;appItem.number;</span><br />
+<span class="f_CodeExample">}</span><br />
+<span class="f_CodeExample">async&nbsp;function&nbsp;canRender&nbsp;():&nbsp;Promise&lt;boolean&gt;&nbsp;{</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">return</span><span class="f_CodeExample">&nbsp;!!Context.data.app;&nbsp;</span><span class="f_CodeExample" style="font-style: italic;">//&nbsp;Returns&nbsp;true&nbsp;if&nbsp;the&nbsp;app&nbsp;field&nbsp;is&nbsp;filled&nbsp;in</span><br />
+<span class="f_CodeExample">}</span></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-family: Inter;">After you publish the script, you can place the widget on the form of any other app that has a variable for a</span> <a href="360009923631.html" class="topiclink">Document type app</a> <span style="font-family: Inter;">and map this variable with the input field of the widget.</span></p>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-family: Inter;">Now, the widget will be displayed on pages of items that have this field filled out. If the field is empty, nothing will be shown, neither the border nor the hidden web elements of the widget.</span></p>
+<h2 class="p_Heading2"><a id="destroy" class="hmanchor"></a><span class="f_Heading2">Destroy function</span></h2>
+<p class="p_Normal">You can end the widget’s work using the destroy function The widget will stop performing its functionality, and the data created during its operation will be cleared.</p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">async function destroy():&nbsp;Promise&lt;</span><span class="f_CodeExample" style="font-weight: bold;">void</span><span class="f_CodeExample">&gt;</span><span class="f_CodeExample" style="color: #ffffff;">&nbsp;</span><span class="f_CodeExample">{</span><br />
+<span class="f_CodeExample"> </span><span class="f_CodeExample" style="color: #ffffff;">&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-style: italic;">// Function&nbsp;body</span><br />
+<span class="f_CodeExample">}</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Example</span></h3>
+<p class="p_Normal">For example, a page contains a report that displays data from different apps. A script for automatic refreshing for a certain period of time is configured for the report. When the user closes the page, the countdown to refresh continues and the data from apps is requested. If the user re-visits the page, a new time count starts, which causes an error on the server.</p>
+<p class="p_Normal">To avoid errors and prevent the system from overloading, you can apply the destroy function to the widget. Then when the page is closed, the time counting will stop and the data will not be updated.</p>
+<p class="p_Normal">Let<span style="font-family: Inter;">’</span>s write the <code><b>destroy()</b></code> function in the the widget client scripts:</p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">async&nbsp;function&nbsp;onInit():&nbsp;Promise&lt;</span><span class="f_CodeExample" style="font-weight: bold;">void</span><span class="f_CodeExample">&gt;&nbsp;{</span><br />
+<span class="f_CodeExample" style="color: #ffffff;">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-style: italic;">//&nbsp;await&nbsp;refresh();</span><br />
+<span class="f_CodeExample" style="color: #ffffff;">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample">setIntervalRefresh();</span><br />
+<span class="f_CodeExample">}</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample">let&nbsp;intervalID:&nbsp;number;</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample">declare&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">const&nbsp;</span><span class="f_CodeExample">window:&nbsp;{</span><br />
+<span class="f_CodeExample" style="color: #ffffff;">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample">setInterval:&nbsp;(fn:&nbsp;()&nbsp;=&gt;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">void</span><span class="f_CodeExample">,&nbsp;interval:&nbsp;number)&nbsp;=&gt;&nbsp;number;</span><br />
+<span class="f_CodeExample" style="color: #ffffff;">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample">clearInterval:&nbsp;(clearInterval:&nbsp;number)&nbsp;=&gt;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">void</span><span class="f_CodeExample">;</span><br />
+<span class="f_CodeExample">};</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample">async&nbsp;function&nbsp;setIntervalRefresh&nbsp;()&nbsp;{</span><br />
+<span class="f_CodeExample" style="color: #ffffff;">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample">intervalID&nbsp;=&nbsp;window.setInterval(()&nbsp;=&gt;&nbsp;{</span><br />
+<span class="f_CodeExample" style="color: #ffffff;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample">refresh();</span><br />
+<span class="f_CodeExample" style="color: #ffffff;">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample">},&nbsp;3000);</span><br />
+<span class="f_CodeExample">}</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample">async&nbsp;function&nbsp;destroy():&nbsp;Promise&lt;</span><span class="f_CodeExample" style="font-weight: bold;">void</span><span class="f_CodeExample">&gt;&nbsp;{</span><br />
+<span class="f_CodeExample" style="color: #ffffff;">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample">window.clearInterval(intervalID);</span><br />
+<span class="f_CodeExample">}</span></p>
+<h2 class="p_Heading2"><a id="customvalidation" class="hmanchor"></a><span class="f_Heading2">Custom validation function</span></h2>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-size: 13px; font-family: Inter;">You can create a function that will check whether a <a href="create_form.html" class="topiclink">form</a> is filled out correctly. In this function, you can add the necessary checks that you want to apply along with the existing standard ones when a user attempts to save the form. For example, you can set validation for field values.</span></p>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-size: 13px; font-family: Inter;">To apply the function, select it in the </span><span style="font-size: 13px; font-family: Inter; font-weight: bold;">Validation</span><span style="font-size: 13px; font-family: Inter;"> field on the <a href="designer-tabs.html#settings" class="topiclink">Settings</a> tab in the interface designer.</span></p>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-size: 13px; font-family: Inter;">Information about validation errors will be displayed under the fields with invalid information. Moreover, a list or all errors will be displayed at the top of the form. If at least one error is found during standard or custom validation, it is impossible to save the form.</span></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 13px; font-family: Inter;">If several custom widgets with a validation function are placed on one form, the <a href="https://tssdk.brix365.com/en/interfaces/_02_types_.validationresult.html" target="_blank" class="weblink">validation result</a> will be checked for each function.</span></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><img alt="user-validation-3" width="904" height="528" style="margin:0;width:904px;height:528px;border:none" src="user-validation-3.png"/></p>
+<p class="p_Normal"><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; color: #0d0d0d; background-color: #ffffff;">When describing the validation function, you can create additional checks for fields, customize error display, and manage the validation of hidden form fields. See more in the&nbsp;<a href="user-validation.html" class="topiclink">Set up custom validation</a>&nbsp;article.</span></p>
+
+                        <div class="bottom-nav">
+                            
+                                <a id="prev-link" class="topic__navi_prev" href="client_server_scripts.html">
+                                    <span class="bottom-nav__arrow bottom-nav__arrow--prev"></span> <span
+                                        class="bottom-nav__link">client_server_scripts.html</span>
+                                </a>
+                            
+                            
+                                <a id="next-link" class="topic__navi_next" href="user-validation.html">
+                                    <span class="bottom-nav__link">user-validation.html</span> <span
+                                        class="bottom-nav__arrow bottom-nav__arrow--next"></span>
+                                </a>
+                            
+                        </div>
+                        <!-- добавляет на страницу строку блок Была ли статья полезной?  -->
+                          <div class="feedback" id="feedback"><span><b>Was this helpful?</b></span><form action="" method="POST" class="feedback-form" id="feedback-form"><div class="feedback__popup feedback__popup-response" id="feedback__popup_thx" style="display: none;">Thanks for your feedback!</div><div class="feedback__popup" id="feedback__popup_why" style="display: none;"><div class="feedback__popup-header">Please specify why:</div><input type="radio" name="category" id="bad_recommendation" value="bad_recommendation"><label for="bad_recommendation">Recommendations did not help me</label><input type="radio" name="category" id="difficult_text" value="difficult_text"><label for="difficult_text">Article is hard to understand</label><input type="radio" name="category" id="no_answer" value="no_answer"><label for="no_answer">Didn’t answer my question</label><input type="radio" name="category" id="bad_header" value="bad_header"><label for="bad_header">Content does not match the topic</label><input type="radio" name="category" id="other_reason" value="other_reason"><label for="other_reason">Other</label></div><div class="feedback__popup" id="feedback__popup-other" style="display: none;"><div class="feedback__popup-header">How can we improve the article?</div><textarea class="feedback__textarea" name="other" id=""></textarea><input type="submit" class="feedback__other-btn" value="Submit"></div><div class="feedback-form__btn-group"><input type="radio" name="useful" id="feedback__useful_yes" value="true"><label for="feedback__useful_yes"><img src="like.svg" class="small-img"><spanclass="feedback-form__btn-group_yes-btn">Yes</spanclass="feedback-form__btn-group_yes-btn"></label><input type="radio" name="useful" id="feedback__useful_no" value="false"><label for="feedback__useful_no"><img src="dislike.svg" class="small-img"><spanclass="feedback-form__btn-group_no-btn">No</spanclass="feedback-form__btn-group_no-btn"></label></div><select name="category"><option disabled="">Please specify why</option><option value="bad_recommendation" selected="">Recommendations did not help me</option><option value="difficult_text">Article is hard to understand</option><option value="no_answer">Didn’t answer my question</option><option value="bad_header">Content does not match the topic</option><option value="other_reason">Other</option></select><input type="submit"></form></div>
+                           
+                    </section>
+                </div>
+                <aside class="article__sidebar" style="display:none">
+                    <input type="checkbox" />
+                    <div class="article__arrow"></div>
+                    <div class="table-of-contents elma365-right" id="toc2Content">
+                        <h3 class="h3-toc">In this topic</h3>
+                        <nav id="toc2"></nav>
+                    </div>
+                </aside>
+            </div>
+        </article>
+    </main>               
+    <footer class="footer">
+        <div class="footer-container">
+  <div class="footer-mobile">
+    
+    <ul class="footer-mobile__list"><li><a href="https://brix365.com/en/" target="_blank">BRIX</a></li><li><a href="https://tssdk.brix365.com/en/latest/" target="_blank">SDK</a></li><li><a href="https://api.brix365.com/en/" target="_blank">API</a></li></ul><ul class="footer-mobile__list"><li><a href="https://brix365.com/en/help/platform/get-trial.html">Platform</a></li><li><a href="https://brix365.com/en/help/ecm/ecm-functions.html">ECM</a></li><li><a href="https://brix365.com/en/help/service/service-functions.html">Service</a></li><li><a href="https://brix365.com/en/help/projects/projects-functions.html">Projects</a></li></ul>
+    
+    
+  </div>
+  <div class="footer-wrap">
+    
+      <div><span class="mobile-question-popup">Send feedback</span><form method="POST" action class="question__popup question-xs" id="question__popup"><div class="question-wrap"><span class="close"></span><span class="title">Ask a question</span><label for="help_question" style="display: none;"></label><textarea name="help_question" id="help_question"></textarea><input type="submit" value="Send"></div></form><div class="hidden fade-in question-success-xs">Sent</div></div>
+    
+    <div class="footer-flex-b">
+      <span class="footer-copy">&copy; 2025 BRIX</span>
+      <ul class="footer-list">
+        
+        <li class="footer-item">
+            <a href="#" class="arrow-top" style="display: block;"></a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+ 
+    </footer>
+    <iframe name="hmnavigation" style="display:none!important"></iframe>
+    <script src="./jquery-ui.js"></script>
+    <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
+    <script src="./jquery.tocify.min.js"></script>
+    <script src="./TypoReporter.min.js"></script>
+    <script src="./google-search.js"></script>
+    <script src="./main.js"></script>
+</body>
+
+</html>

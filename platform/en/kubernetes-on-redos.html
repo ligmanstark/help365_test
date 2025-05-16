@@ -1,0 +1,318 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Kubernetes cluster based on RedOS 8</title>
+    <meta name="generator" content="Help+Manual" />
+    <meta name="keywords" content="" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kubernetes is one of the most popular tools for managing containerized applications in modern development environments. In this article, you can find a step-by-step guide for..." />
+    <meta name="picture" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Full documentation for BRIX365 platform. Low-code developer guide. User guide. Admin guide. Developer guide." />
+    <meta property="og:url" content="https://brix365.com/en/help" />
+    <meta property="og:image" content="" />                                                              
+    <link rel="icon" href="favicon.png" type="image/png" />
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./jquery-ui.css" />
+    <link rel="stylesheet" href="default.css" />
+    <link rel="stylesheet" href="./search-yandex.css" />
+    <link rel="stylesheet" href="./article.css" />
+    <link rel="stylesheet" href="./glossary.css" />
+    <link rel="stylesheet" href="./theme.css" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+
+<body>
+    
+    <script>!function(e,t,c,n,r,a,m){e.ym=e.ym||function(){(e.ym.a=e.ym.a||[]).push(arguments)},e.ym.l=1*new Date;for(var s=0;s<document.scripts.length;s++)if(document.scripts[s].src===n)return;a=t.createElement(c),m=t.getElementsByTagName(c)[0],a.async=1,a.src=n,m.parentNode.insertBefore(a,m)}(window,document,"script","https://mc.yandex.ru/metrika/tag.js"),ym(83179930,"init",{clickmap:!0,trackLinks:!0,accurateTrackBounce:!0,webvisor:!0})</script><noscript><div><img alt=""src=https://mc.yandex.ru/watch/83179930 style=position:absolute;left:-9999px></div></noscript> 
+    
+    ﻿<header class="header elma-365">
+  <div class="container">
+    <a class="header__logo" href="https://brix365.com/en/help">
+      <img src="./logo-en.svg">
+    </a>
+ <!-- <div class="hero__search-form" id="search-panel">
+   <form class="search-form" onsubmit="ym(83180416,'reachGoal','poisk')">
+     <label class="search-form__label">
+       <span id="reset-search" class="search__icon"></span>
+       <input class="search-form__input" type="text">
+     </label>
+     <input class="search-form__submit" type="submit" value="Submit">
+   </form>
+  </div>       -->
+  
+     <div class="hero__search-form" id="search-panel"> <form class="search-form"> <label class="search-form__label"> <span id="reset-search" class="search__icon"></span> <input class="search-form__input" type="text"> </label> <input class="search-form__submit" type="submit" value="Submit"> </form> </div> 
+  <div class="hero__search">
+      <a href="#" id="search-icon" class="hero__search-icon">
+        <img src="search-icon-white.svg" alt="search string">
+      </a>
+      <a href="#" id="side-menu-icon" class="hero__side-icon">
+        <img src="side_menu.svg" alt="side menu">
+      </a>
+    </div>  
+  <div class="header__navi">
+        
+        <ul class="header__list"><li><span class="solution-select"><span class="solution-select__selected"></span><svg width="7" height="4" viewBox="0 0 7 4" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L3.5 3.5L6 1" stroke="white" stroke-linecap="round" stroke-linejoin="round"/></svg><ul class="solution-select__list"><li><a class="project-link" href="https://brix365.com/en/help/platform/get-trial.html">Platform</a></li><li><a class="project-link" href="https://brix365.com/en/help/ecm/ecm-functions.html">ECM</a></li><li><a class="project-link" href="https://brix365.com/en/help/crm/crm_overview.html">CRM</a></li><li><a class="project-link" href="https://brix365.com/en/help/service/service-functions.html">Service</a></li><li><a class="project-link" href="https://brix365.com/en/help/projects/projects-functions.html">Projects</a></li><li><a class="project-link" href="https://brix365.com/en/help/business_solutions/-elma365-store.html">Business Solutions</a></li></ul></span></li><li><a href="https://api.brix365.com/en/" target="_blank">API</a></li><li><a href="https://tssdk.brix365.com/" target="_blank">SDK</a></li></ul>
+        
+        
+   </div>
+  </div>
+
+</header>
+
+
+
+    
+    <main class="main container">
+
+        <aside class="sidebar" id="sidebar">
+        <div class="sidebar__header">
+                 <a class="header__logo" href="https://brix365.com/en/help">
+                    <img src="./logo-light-en.svg">
+                 </a>
+                    <span class="sidebar__close elma-365-close" id="close"></span>
+            </div>
+            <div class="sidebar__wrapper" id="side-menu">
+                
+            </div>
+        </aside>
+
+        <article class="article" id="article">
+            <div class="article-inner">           
+                <div class="content">
+                    <header class="article__header">
+                        
+                            <div class="topic__breadcrumbs">
+                                <p><a href="elma365-on-premises.html">BRIX On-Premises</a> &gt; Other / Kubernetes cluster based on RedOS 8</p>
+                            </div>
+                        
+                        <div class="topic__title"><h1 class="p_Heading1"><span class="f_Heading1">Kubernetes cluster based on RedOS 8</span></h1>
+</div>
+                    
+</header>
+                    <section class="article__content">
+                        <div class="scroll-top-inner">
+                            <a href="#h1-article" class="scroll-top"></a>
+                        </div>
+                        <!-- Placeholder for topic body. -->
+                        <p class="p_Normal">Kubernetes is one of the most popular tools for managing containerized applications in modern development environments. In this article, you can find a step-by-step guide for installing and configuring Kubernetes using kubeadm.</p>
+<p class="p_Normal">The main components of Kubernetes are:</p>
+<ul style="list-style-type:disc">
+<li class="p_Normal">A master node. It is a node that manages the entire cluster. It monitors other nodes and distributes the load using the controller manager and scheduler. To increase fault tolerance, we recommend having several master nodes.</li><li class="p_Normal">Worker nodes. These are nodes for launching containers. The more worker nodes you have, the more applications you can run. The number of nodes also affects the fault tolerance of the cluster. When one node fails, the load is redistributed to others.</li></ul>
+<p class="p_Normal">Below, you can find how to deploy a standard Kubernetes cluster that consists of a master node and a worker node.</p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;примера</span></p>
+<p class="p_Normal"><span style="font-weight: bold;">Note</span></p>
+<p class="p_Normal">This article helps you set up a standard Kubernetes cluster for development or testing environments. For the production environment, we recommend installing <a href="fail-safe-kubernetes-cluster.html" class="topiclink">Deckhouse</a>.</p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;примера</span></p>
+<p class="p_Normal">The installation of a Kubernetes cluster consists of four steps:</p>
+<ol style="list-style-type:decimal">
+<li value="1" class="p_Normal"><a href="kubernetes-on-redos.html#infrastructure" class="topiclink">Prepare the infrastructure</a>.</li><li value="2" class="p_Normal"><a href="kubernetes-on-redos.html#master-node" class="topiclink">Prepare the master node</a>.</li><li value="3" class="p_Normal"><a href="kubernetes-on-redos.html#worker-node" class="topiclink">Prepare the worker node</a>.</li><li value="4" class="p_Normal"><a href="kubernetes-on-redos.html#other" class="topiclink">Install additional components</a>.</li></ol>
+<h2 class="p_Heading2"><a id="infrastructure" class="hmanchor"></a><span class="f_Heading2">Step 1: Prepare the infrastructure</span></h2>
+<p class="p_Normal">To deploy a Kubernetes cluster, you need:</p>
+<ol style="list-style-type:decimal">
+<li value="1" class="p_Normal">A physical server or VM (virtual machine). It is the control node (master node) of the future cluster.<br />
+Minimum system requirements:</li></ol>
+<ul style="list-style-type:disc">
+<li class="p_Normal">Virtual processor (CPU) — 2</li><li class="p_Normal">Virtual memory (RAM) — 4 GB</li><li class="p_Normal">Virtual hard disk (Storage) — 36 GB</li></ul>
+<ol style="list-style-type:decimal" start="2">
+<li value="2" class="p_Normal">A physical server or VM (virtual machine). It is a worker node of the future cluster.<br />
+Minimum system requirements:</li></ol>
+<ul style="list-style-type:disc">
+<li class="p_Normal">Virtual processor (CPU) — 2</li><li class="p_Normal">Virtual memory (RAM) — 4 GB</li><li class="p_Normal">Virtual hard disk (Storage) — 36 GB</li></ul>
+<p class="p_Normal">Execute the following commands on all nodes on behalf of the <span style="font-weight: bold;">root</span> user:</p>
+<ol style="list-style-type:upper-roman">
+<li value="1" class="p_Normal">For kubelet operation, disable swap:</li></ol>
+<p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample">systemctl stop dev-zram0.swap</span><br />
+<span class="f_CodeExample">systemctl mask dev-zram0.swap</span><br />
+<span class="f_CodeExample">swapoff -a</span></p>
+<p class="p_Normal">Disable swap loading after reboot and comment out the swap entry in <code><b>/etc/fstab</b></code>:</p>
+<p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample">sed -i '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab</span></p>
+<ol style="list-style-type:upper-roman" start="2">
+<li value="2" class="p_Normal">Disable SELinux:</li></ol>
+<p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample">setenforce 0 &amp;&amp; sed -i --follow-symlinks</span><br />
+<span class="f_CodeExample">'s/SELINUX=enforcing/SELINUX=disabled/g' /etc/sysconfig/selinux</span></p>
+<ol style="list-style-type:upper-roman" start="3">
+<li value="3" class="p_Normal">Create a file to load the kernel modules required for containerd at boot:</li></ol>
+<p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample">cat &lt;&lt;EOF | tee /etc/modules-load.d/containerd.conf</span><br />
+<span class="f_CodeExample">overlay</span><br />
+<span class="f_CodeExample">br_netfilter</span><br />
+<span class="f_CodeExample">EOF</span></p>
+<p class="p_Normal">Load the modules into the kernel:</p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">modprobe&nbsp;overlay</span><br />
+<span class="f_CodeExample">modprobe&nbsp;br_netfilter</span></p>
+<ol style="list-style-type:upper-roman" start="4">
+<li value="4" class="p_Normal">Create a configuration file for the network inside kubernetes:</li></ol>
+<p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample">cat &lt;&lt;EOF | tee /etc/sysctl.d/99-kubernetes-cri.conf</span><br />
+<span class="f_CodeExample">net.bridge.bridge-nf-call-iptables = 1</span><br />
+<span class="f_CodeExample">net.bridge.bridge-nf-call-ip6tables = 1</span><br />
+<span class="f_CodeExample">net.ipv4.ip_forward = 1</span><br />
+<span class="f_CodeExample">EOF</span></p>
+<p class="p_Normal">Apply the parameters:</p>
+<p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample">sysctl --system</span></p>
+<ol style="list-style-type:upper-roman" start="5">
+<li value="5" class="p_Normal">Install the required packages:</li></ol>
+<ul style="list-style-type:disc">
+<li class="p_Normal">Add the Kubernetes repository:</li></ul>
+<p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample">cat &lt;&lt;EOF | sudo tee /etc/yum.repos.d/kubernetes.repo</span><br />
+<span class="f_CodeExample">[kubernetes]</span><br />
+<span class="f_CodeExample">name=Kubernetes</span><br />
+<span class="f_CodeExample">baseurl=https://pkgs.k8s.io/core:/stable:/v1.30/rpm/</span><br />
+<span class="f_CodeExample">enabled=1</span><br />
+<span class="f_CodeExample">gpgcheck=1</span><br />
+<span class="f_CodeExample">gpgkey=https://pkgs.k8s.io/core:/stable:/v1.30/rpm/repodata/repomd.xml.key</span><br />
+<span class="f_CodeExample">exclude=kubelet kubeadm kubectl cri-tools kubernetes-cni</span><br />
+<span class="f_CodeExample">EOF</span></p>
+<ul style="list-style-type:disc">
+<li class="p_Normal">Install kubelet, kubeadm, and kubectl:</li></ul>
+<p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample">sudo yum install -y cri-tools containerd</span><br />
+<span class="f_CodeExample">sudo yum install -y kubelet kubeadm kubectl --disableexcludes=kubernetes</span></p>
+<ol style="list-style-type:upper-roman" start="6">
+<li value="6" class="p_Normal">Configure port forwarding in iptables:</li></ol>
+<p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample">iptables -P FORWARD ACCEPT</span></p>
+<ol style="list-style-type:upper-roman" start="7">
+<li value="7" class="p_Normal">Set the default settings for the container configuration:</li></ol>
+<p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample">containerd config default | sudo tee /etc/containerd/config.toml</span></p>
+<ol style="list-style-type:upper-roman" start="8">
+<li value="8" class="p_Normal">To allow the use of cgroup, toggle the flag of the <code><b>systemdCgroup</b></code> parameter in the <code><b>/etc/containerd/config.toml</b></code> configuration file:</li></ol>
+<p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample">sed -i 's/SystemdCgroup \= false/SystemdCgroup \= true/g' /etc/containerd/config.toml</span></p>
+<ol style="list-style-type:upper-roman" start="9">
+<li value="9" class="p_Normal">Start the containerd service and enable it at boot:</li></ol>
+<p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample">systemctl enable --now containerd</span></p>
+<ol style="list-style-type:upper-roman" start="10">
+<li value="10" class="p_Normal">Enable the kubelet service at boot:</li></ol>
+<p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample">systemctl enable kubelet.service</span></p>
+<h2 class="p_Heading2"><a id="master-node" class="hmanchor"></a><span class="f_Heading2">Step 2: Prepare the master node</span></h2>
+<p class="p_Normal">Execute the following commands on the master node on behalf of the <span style="font-weight: bold;">root</span> user:</p>
+<ol style="list-style-type:upper-roman">
+<li value="1" class="p_Normal">Start the initialization of the master node. Use this command to perform the initial configuration and preparation of the main cluster node. The <code><b>--pod-network-cidr</b></code> key specifies the internal subnet address for the future cluster:</li></ol>
+<p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample">kubeadm init --pod-network-cidr=10.244.0.0/16</span></p>
+<ol style="list-style-type:upper-roman" start="2">
+<li value="2" class="p_Normal">After successful initialization, configure the cluster management parameters:</li></ol>
+<p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample">mkdir /home/$USER/.kube</span><br />
+<span class="f_CodeExample">cp -i /etc/kubernetes/admin.conf /home/$USER/.kube/config</span><br />
+<span class="f_CodeExample">chown $USER. /home/$USER/.kube /home/$USER/.kube/config</span></p>
+<ol style="list-style-type:upper-roman" start="3">
+<li value="3" class="p_Normal">Set the internal network configuration in the cluster:</li></ol>
+<p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample">kubectl apply -f https://raw.githubusercontent.com/projectcalico/calico/v3.27.0/manifests/calico.yaml</span></p>
+<ol style="list-style-type:upper-roman" start="3">
+<li value="4" class="p_Normal">To output the command to join the worker nodes to the cluster, use the following command:</li></ol>
+<p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample">kubeadm token create --print-join-command</span></p>
+<p class="p_Normal">As a result, you get the following command:</p>
+<p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample">kubeadm join 192.168.1.10:6443 --token c7nysv.vyt6wwx3df459ha5a --discovery-token-ca-cert-hash sha256:7cab98d22238e6240add52db9a25465d4668ac588fd70e8e3d9d3cbd4688c7</span></p>
+<h2 class="p_Heading2"><a id="worker-node" class="hmanchor"></a><span class="f_Heading2">Step 3: Prepare the worker node</span></h2>
+<p class="p_Normal">To connect to the master node, on the worker node on behalf of the <span style="font-weight: bold;">root</span> user, execute the command received in the previous step:</p>
+<p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample">kubeadm join 192.168.1.10:6443 --token c7nysv.vyt6wwx3df459ha5a --discovery-token-ca-cert-hash sha256:7cab98d22238e6240add52db9a25465d4668ac588fd70e8e3d9d3cbd4688c7</span></p>
+<h2 class="p_Heading2"><a id="other" class="hmanchor"></a><span class="f_Heading2">Step 4: Install additional components</span></h2>
+<p class="p_Normal">Execute the following commands on the master node on behalf of the <span style="font-weight: bold;">root</span> user:</p>
+<ol style="list-style-type:upper-roman">
+<li value="1" class="p_Normal">To install Helm, go to the <a href="https://github.com/helm/helm/releases" target="_blank" class="weblink">Helm </a>releases page and download the <code><b>helm-vX.Y.Z-linux-amd64.tar.gz</b></code> archive of the required version.</li></ol>
+<p class="p_Normal">To launch the installer via the internet, use the following command:</p>
+<p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample">wget https://get.helm.sh/helm-vX.Y.Z-linux-amd64.tar.gz</span></p>
+<p class="p_Normal"><a class="dropdown-toggle" style="font-style: normal; font-weight: normal; color: #000000; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186A1')">For offline installation without internet access</a></p>
+<div id="TOGGLE0186A1" class="dropdown-toggle-body" style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0 0 0 0;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><ol style="list-style-type:decimal">
+<li value="1" class="p_Normal">On a computer with internet access, go to the <a href="https://github.com/helm/helm/releases" target="_blank" class="weblink">Helm </a>releases page and download the <code><b>helm-vX.Y.Z-linux-amd64.tar.gz</b></code> archive of the desired version by executing the command:</li></ol>
+<p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample">wget https://get.helm.sh/helm-vX.Y.Z-linux-amd64.tar.gz</span></p>
+<ol style="list-style-type:decimal" start="2">
+<li value="2" class="p_Normal">Copy the downloaded archive to the master node.</li></ol>
+</td>
+</tr>
+</table>
+</div>
+<ol style="list-style-type:upper-roman" start="2">
+<li value="2" class="p_Normal">Unpack the archive and move the <span style="font-weight: bold;">helm</span> binary file:</li></ol>
+<p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample">tar -zxvf helm-vX.Y.Z-linux-amd64.tar.gz</span><br />
+<span class="f_CodeExample">mv linux-amd64/helm /usr/bin/helm</span></p>
+<ol style="list-style-type:upper-roman" start="3">
+<li value="3" class="p_Normal">Install the nginx controller:</li></ol>
+<p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample">kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.9.5/deploy/static/provider/cloud/deploy.yaml</span></p>
+<ol style="list-style-type:upper-roman" start="3">
+<li value="4" class="p_Normal">Update the Ingress Nginx Controller service type to LoadBalancer and add the specified external IP address to the list of those that can be used to access the service, where <code><b>host_ip</b></code> is the IP address of the worker node:</li></ol>
+<p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample">kubectl patch svc ingress-nginx-controller -n ingress-nginx -p '{&quot;spec&quot;: {&quot;type&quot;: &quot;LoadBalancer&quot;, &quot;externalIPs&quot;:[&quot;&lt;host_ip&gt;&quot;]}}'</span></p>
+<ol style="list-style-type:upper-roman" start="5">
+<li value="5" class="p_Normal">Install the Kubernetes HostPath tool for dynamical allocation of volumes:</li></ol>
+<p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample">helm repo add rimusz https://charts.rimusz.net</span><br />
+<span class="f_CodeExample">helm repo update</span><br />
+<span class="f_CodeExample">helm upgrade --install hostpath-provisioner --namespace kube-system rimusz/hostpath-provisioner</span></p>
+
+                        <div class="bottom-nav">
+                            
+                                <a id="prev-link" class="topic__navi_prev" href="preparing-optimized-kernel.html">
+                                    <span class="bottom-nav__arrow bottom-nav__arrow--prev"></span> <span
+                                        class="bottom-nav__link">preparing-optimized-kernel.html</span>
+                                </a>
+                            
+                            
+                                <a id="next-link" class="topic__navi_next" href="haproxy-external-portal.html">
+                                    <span class="bottom-nav__link">haproxy-external-portal.html</span> <span
+                                        class="bottom-nav__arrow bottom-nav__arrow--next"></span>
+                                </a>
+                            
+                        </div>
+                        <!-- добавляет на страницу строку блок Была ли статья полезной?  -->
+                          <div class="feedback" id="feedback"><span><b>Was this helpful?</b></span><form action="" method="POST" class="feedback-form" id="feedback-form"><div class="feedback__popup feedback__popup-response" id="feedback__popup_thx" style="display: none;">Thanks for your feedback!</div><div class="feedback__popup" id="feedback__popup_why" style="display: none;"><div class="feedback__popup-header">Please specify why:</div><input type="radio" name="category" id="bad_recommendation" value="bad_recommendation"><label for="bad_recommendation">Recommendations did not help me</label><input type="radio" name="category" id="difficult_text" value="difficult_text"><label for="difficult_text">Article is hard to understand</label><input type="radio" name="category" id="no_answer" value="no_answer"><label for="no_answer">Didn’t answer my question</label><input type="radio" name="category" id="bad_header" value="bad_header"><label for="bad_header">Content does not match the topic</label><input type="radio" name="category" id="other_reason" value="other_reason"><label for="other_reason">Other</label></div><div class="feedback__popup" id="feedback__popup-other" style="display: none;"><div class="feedback__popup-header">How can we improve the article?</div><textarea class="feedback__textarea" name="other" id=""></textarea><input type="submit" class="feedback__other-btn" value="Submit"></div><div class="feedback-form__btn-group"><input type="radio" name="useful" id="feedback__useful_yes" value="true"><label for="feedback__useful_yes"><img src="like.svg" class="small-img"><spanclass="feedback-form__btn-group_yes-btn">Yes</spanclass="feedback-form__btn-group_yes-btn"></label><input type="radio" name="useful" id="feedback__useful_no" value="false"><label for="feedback__useful_no"><img src="dislike.svg" class="small-img"><spanclass="feedback-form__btn-group_no-btn">No</spanclass="feedback-form__btn-group_no-btn"></label></div><select name="category"><option disabled="">Please specify why</option><option value="bad_recommendation" selected="">Recommendations did not help me</option><option value="difficult_text">Article is hard to understand</option><option value="no_answer">Didn’t answer my question</option><option value="bad_header">Content does not match the topic</option><option value="other_reason">Other</option></select><input type="submit"></form></div>
+                           
+                    </section>
+                </div>
+                <aside class="article__sidebar" style="display:none">
+                    <input type="checkbox" />
+                    <div class="article__arrow"></div>
+                    <div class="table-of-contents elma365-right" id="toc2Content">
+                        <h3 class="h3-toc">In this topic</h3>
+                        <nav id="toc2"></nav>
+                    </div>
+                </aside>
+            </div>
+        </article>
+    </main>               
+    <footer class="footer">
+        <div class="footer-container">
+  <div class="footer-mobile">
+    
+    <ul class="footer-mobile__list"><li><a href="https://brix365.com/en/" target="_blank">BRIX</a></li><li><a href="https://tssdk.brix365.com/en/latest/" target="_blank">SDK</a></li><li><a href="https://api.brix365.com/en/" target="_blank">API</a></li></ul><ul class="footer-mobile__list"><li><a href="https://brix365.com/en/help/platform/get-trial.html">Platform</a></li><li><a href="https://brix365.com/en/help/ecm/ecm-functions.html">ECM</a></li><li><a href="https://brix365.com/en/help/service/service-functions.html">Service</a></li><li><a href="https://brix365.com/en/help/projects/projects-functions.html">Projects</a></li></ul>
+    
+    
+  </div>
+  <div class="footer-wrap">
+    
+      <div><span class="mobile-question-popup">Send feedback</span><form method="POST" action class="question__popup question-xs" id="question__popup"><div class="question-wrap"><span class="close"></span><span class="title">Ask a question</span><label for="help_question" style="display: none;"></label><textarea name="help_question" id="help_question"></textarea><input type="submit" value="Send"></div></form><div class="hidden fade-in question-success-xs">Sent</div></div>
+    
+    <div class="footer-flex-b">
+      <span class="footer-copy">&copy; 2025 BRIX</span>
+      <ul class="footer-list">
+        
+        <li class="footer-item">
+            <a href="#" class="arrow-top" style="display: block;"></a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+ 
+    </footer>
+    <iframe name="hmnavigation" style="display:none!important"></iframe>
+    <script src="./jquery-ui.js"></script>
+    <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
+    <script src="./jquery.tocify.min.js"></script>
+    <script src="./TypoReporter.min.js"></script>
+    <script src="./google-search.js"></script>
+    <script src="./main.js"></script>
+<script type="text/javascript">
+HMInitToggle('TOGGLE0186A1','hm.type','dropdown','hm.state','0');
+</script>
+</body>
+
+</html>

@@ -1,0 +1,250 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Trace server scripts</title>
+    <meta name="generator" content="Help+Manual" />
+    <meta name="keywords" content="" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The Tracing tool helps analyze the execution of server scripts to identify the causes of delays and eliminate failures. This tool helps the system collect data about the order..." />
+    <meta name="picture" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Full documentation for BRIX365 platform. Low-code developer guide. User guide. Admin guide. Developer guide." />
+    <meta property="og:url" content="https://brix365.com/en/help" />
+    <meta property="og:image" content="" />                                                              
+    <link rel="icon" href="favicon.png" type="image/png" />
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./jquery-ui.css" />
+    <link rel="stylesheet" href="default.css" />
+    <link rel="stylesheet" href="./search-yandex.css" />
+    <link rel="stylesheet" href="./article.css" />
+    <link rel="stylesheet" href="./glossary.css" />
+    <link rel="stylesheet" href="./theme.css" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+
+<body>
+    
+    <script>!function(e,t,c,n,r,a,m){e.ym=e.ym||function(){(e.ym.a=e.ym.a||[]).push(arguments)},e.ym.l=1*new Date;for(var s=0;s<document.scripts.length;s++)if(document.scripts[s].src===n)return;a=t.createElement(c),m=t.getElementsByTagName(c)[0],a.async=1,a.src=n,m.parentNode.insertBefore(a,m)}(window,document,"script","https://mc.yandex.ru/metrika/tag.js"),ym(83179930,"init",{clickmap:!0,trackLinks:!0,accurateTrackBounce:!0,webvisor:!0})</script><noscript><div><img alt=""src=https://mc.yandex.ru/watch/83179930 style=position:absolute;left:-9999px></div></noscript> 
+    
+    ﻿<header class="header elma-365">
+  <div class="container">
+    <a class="header__logo" href="https://brix365.com/en/help">
+      <img src="./logo-en.svg">
+    </a>
+ <!-- <div class="hero__search-form" id="search-panel">
+   <form class="search-form" onsubmit="ym(83180416,'reachGoal','poisk')">
+     <label class="search-form__label">
+       <span id="reset-search" class="search__icon"></span>
+       <input class="search-form__input" type="text">
+     </label>
+     <input class="search-form__submit" type="submit" value="Submit">
+   </form>
+  </div>       -->
+  
+     <div class="hero__search-form" id="search-panel"> <form class="search-form"> <label class="search-form__label"> <span id="reset-search" class="search__icon"></span> <input class="search-form__input" type="text"> </label> <input class="search-form__submit" type="submit" value="Submit"> </form> </div> 
+  <div class="hero__search">
+      <a href="#" id="search-icon" class="hero__search-icon">
+        <img src="search-icon-white.svg" alt="search string">
+      </a>
+      <a href="#" id="side-menu-icon" class="hero__side-icon">
+        <img src="side_menu.svg" alt="side menu">
+      </a>
+    </div>  
+  <div class="header__navi">
+        
+        <ul class="header__list"><li><span class="solution-select"><span class="solution-select__selected"></span><svg width="7" height="4" viewBox="0 0 7 4" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L3.5 3.5L6 1" stroke="white" stroke-linecap="round" stroke-linejoin="round"/></svg><ul class="solution-select__list"><li><a class="project-link" href="https://brix365.com/en/help/platform/get-trial.html">Platform</a></li><li><a class="project-link" href="https://brix365.com/en/help/ecm/ecm-functions.html">ECM</a></li><li><a class="project-link" href="https://brix365.com/en/help/crm/crm_overview.html">CRM</a></li><li><a class="project-link" href="https://brix365.com/en/help/service/service-functions.html">Service</a></li><li><a class="project-link" href="https://brix365.com/en/help/projects/projects-functions.html">Projects</a></li><li><a class="project-link" href="https://brix365.com/en/help/business_solutions/-elma365-store.html">Business Solutions</a></li></ul></span></li><li><a href="https://api.brix365.com/en/" target="_blank">API</a></li><li><a href="https://tssdk.brix365.com/" target="_blank">SDK</a></li></ul>
+        
+        
+   </div>
+  </div>
+
+</header>
+
+
+
+    
+    <main class="main container">
+
+        <aside class="sidebar" id="sidebar">
+        <div class="sidebar__header">
+                 <a class="header__logo" href="https://brix365.com/en/help">
+                    <img src="./logo-light-en.svg">
+                 </a>
+                    <span class="sidebar__close elma-365-close" id="close"></span>
+            </div>
+            <div class="sidebar__wrapper" id="side-menu">
+                
+            </div>
+        </aside>
+
+        <article class="article" id="article">
+            <div class="article-inner">           
+                <div class="content">
+                    <header class="article__header">
+                        
+                            <div class="topic__breadcrumbs">
+                                <p>System settings &gt; <a href="devtools.html">Developer tools</a> / Trace server scripts</p>
+                            </div>
+                        
+                        <div class="topic__title"><h1 class="p_Heading1"><span class="f_Heading1">Trace server scripts</span></h1>
+</div>
+                    
+</header>
+                    <section class="article__content">
+                        <div class="scroll-top-inner">
+                            <a href="#h1-article" class="scroll-top"></a>
+                        </div>
+                        <!-- Placeholder for topic body. -->
+                        <p class="p_Normal">The <span style="font-weight: bold;">Tracing</span> tool helps analyze the execution of server scripts to identify the causes of delays and eliminate failures. This tool helps the system collect data about the order in which functions are called, the execution time of each activity, and errors occurred.</p>
+<p class="p_Normal">The data are saved in the form of traces. These are records where you can see the diagram of the user request and information about its each step.</p>
+<p class="p_Normal">All traces are saved in <span style="font-weight: bold;">Administration &gt; Developer Tools.</span> In addition, you can view the information in the component for which the trace is recorded.</p>
+<p class="p_Normal">Data collection is available for the following server scripts:</p>
+<ul style="list-style-type:disc">
+<li class="p_Normal">API methods in modules.</li><li class="p_Normal">Business process activities.</li><li class="p_Normal">Event handling.</li><li class="p_Normal">Business processes.</li><li class="p_Normal">Widgets.</li></ul>
+<p class="p_Normal">To optimize the data collection process, you can choose for which system components to enable tracing. For example, you can collect data only for the scripts of the solution you are currently working on.</p>
+<p class="p_Normal">Traces are stored in the system for a limited period. You can export them, e.g., to pass error information to another IT specialist. You can also reload the traces to BRIX for further review.</p>
+<h2 class="p_Heading2"><span class="f_Heading2">How to use tracing</span></h2>
+<p class="p_Normal">You can use tracing in the following cases:</p>
+<ul style="list-style-type:disc">
+<li class="p_Normal">To find out the details of the error and customize its handling.</li><li class="p_Normal">To eliminate the reasons for slow execution of certain script sections and optimize the work of users.</li><li class="p_Normal">To evaluate the effectiveness of changes after the solution has been improved.</li></ul>
+<p class="p_Normal">Let's see how to use tracing results on the example of optimizing scripts of a user business process:</p>
+<ol style="list-style-type:upper-roman">
+<li value="1" class="p_Normal">Enable tracing and add a business process to the list of traced components.</li><li value="2" class="p_Normal">Obtain data for analysis. To do this, you can use scripts that simulate user interaction with the process, or you can trace the actual work of employees.</li><li value="3" class="p_Normal">Analyze the trace data. Please pay attention to the steps that consistently take a long time to complete, as well as recurring errors. You can export the traces to return to analyze them later.</li><li value="4" class="p_Normal">Make improvements to the process scripts.</li><li value="5" class="p_Normal">Repeat steps 1-3 to check the speed of execution of the scripts and make sure the errors have been resolved.</li><li value="6" class="p_Normal">Once the optimization is complete, you can stop collecting data on the business process so that the traces do not take up <a href="360014165012.html" class="topiclink">disk space</a>. To do this, exclude the process from the list of objects to track.</li></ol>
+<h2 class="p_Heading2"><span class="f_Heading2">Enable and customize tracing</span></h2>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;внимание</span></p>
+<p class="p_Normal">Only users included in the <a href="360006871932.html#administrators" class="topiclink">Administrators</a> group can configure tracing.</p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;внимание</span></p>
+<p class="p_Normal">To use tracing:</p>
+<ol style="list-style-type:upper-roman">
+<li value="1" class="p_Normal">Go to <span style="font-weight: bold;">Administration &gt; Developer Tools</span> and in the <span style="font-weight: bold;">Tools</span> block, select <span style="font-weight: bold;">Tracing</span>.</li><li value="2" class="p_Normal">In the upper right corner of the page, click the gear icon.<br />
+<img alt="server-script-tracing-1" width="806" height="347" style="margin:0;width:806px;height:347px;border:none" src="server-script-tracing-1.png"/></li><li value="3" class="p_Normal">On the settings page, enable the tracing mode.<br />
+<img alt="server-script-tracing-2" width="509" height="323" style="margin:0;width:509px;height:323px;border:none" src="server-script-tracing-2.png"/></li><li value="4" class="p_Normal">Specify within which system objects you want to track the execution of server scripts: select solutions, modules, workspaces, as well as their separate objects: business processes, widgets, scripts, etc.</li></ol>
+<p class="p_Normal" style="margin: 0 0 0 22px;">To do this, in the <span style="font-weight: bold;">Save traces for objects</span> field, click the drop-down menu and check the box next to the objects in the list. You can:<br />
+<img alt="server-script-tracing-3" width="491" height="501" style="margin:0;width:491px;height:501px;border:none" src="server-script-tracing-3.png"/></p>
+<ul style="list-style-type:disc">
+<li class="p_Normal">Search by name.</li><li class="p_Normal">Perform following actions with nested objects:</li></ul>
+<ul style="list-style-type:disc"><ul style="list-style-type:circle">
+<li class="p_Normal"><img alt="server-script-tracing-4" width="31" height="27" style="margin:0;width:31px;height:27px;border:none" src="server-script-tracing-4.png"/>Select all objects.</li><li class="p_Normal"><img alt="server-script-tracing-5" width="31" height="27" style="margin:0;width:31px;height:27px;border:none" src="server-script-tracing-5.png"/> Cancel selection.</li><li class="p_Normal"><img alt="server-script-tracing-6" width="34" height="32" style="margin:0;width:34px;height:32px;border:none" src="server-script-tracing-6.png"/> Collapse the list of objects.</li><li class="p_Normal"><img alt="server-script-tracing-7" width="32" height="31" style="margin:0;width:32px;height:31px;border:none" src="server-script-tracing-7.png"/> Expand the list.</li></ul>
+<li class="p_Normal">Reset the list of selected objects.</li></ul>
+<ol style="list-style-type:upper-roman" start="5">
+<li value="5" class="p_Normal">After specifying the objects to trace, click <span style="font-weight: bold;">Apply</span>.</li><li value="6" class="p_Normal">On the settings page, in the <span style="font-weight: bold;">Retention policy</span> and <span style="font-weight: bold;">Error trace storage policy</span> fields specify the time period after which records are deleted from the system:</li></ol>
+<ul style="list-style-type:disc"><ul style="list-style-type:circle">
+<li class="p_Normal">For BRIX SaaS the time limit is set to 15 minutes. You cannot change it.</li><li class="p_Normal">For BRIX On-Premises the default time limit is 10 days. This is the maximum value. You can decrease it.</li></ul></li></ul>
+<ol style="list-style-type:upper-roman" start="5">
+<li value="7" class="p_Normal">On the settings page, you can also see the amount of saved data and free up disk space by clicking <span style="font-weight: bold;">Clear All Traces</span>.</li></ol>
+<p class="p_Normal">After enabling tracing, you will see:</p>
+<ul style="list-style-type:disc">
+<li class="p_Normal">All saved traces on the <span style="font-weight: bold;">Tracing</span> page.</li><li class="p_Normal">Traces for a specific object:</li></ul>
+<ul style="list-style-type:disc"><ul style="list-style-type:circle">
+<li class="p_Normal">By business process instance. On its <a href="360012498891.html#tracing" class="topiclink">page</a>, click the <img alt="server-script-tracing-13" width="26" height="23" style="margin:0;width:26px;height:23px;border:none" src="server-script-tracing-13.png"/> icon on the upper panel.</li><li class="p_Normal">By business process activity. Go to the <a href="script-activity.html#tracing" class="topiclink">Business Process Activities</a> tab on the module page and open the activity.</li><li class="p_Normal">By event handler. Click the <a href="events_processing.html#tracing" class="topiclink">Event Handling</a> tab on the module page and open the event handler.</li><li class="p_Normal">By API in the module. Go to the <a href="extention-api.html#tracing" class="topiclink">API Methods</a> tab on the module page and click the <img alt="server-script-tracing-14" width="25" height="23" style="margin:0;width:25px;height:23px;border:none" src="server-script-tracing-14.png"/> icon next to the method.</li><li class="p_Normal">By widget. On the <a href="devtools-report.html#tracing" class="topiclink">Developer Tools</a> report, click <span style="font-weight: bold;">Go to Trace</span>.</li></ul></li></ul>
+<p class="p_Normal">Please note, the trace is recorded in the system and is displayed with a delay of about one minute after the script is executed.</p>
+<h2 class="p_Heading2"><span class="f_Heading2">Work with the Tracing page</span></h2>
+<p class="p_Normal">In <span style="font-weight: bold;">Administration &gt; Developer Tools</span>, on the <span style="font-weight: bold;">Tracing</span> page, you can view traces and export them to return to analyze the data later.</p>
+<h3 class="p_Heading3"><span class="f_Heading3">Search for traces</span></h3>
+<p class="p_Normal">Use filters to find the records you need:</p>
+<p class="p_Normal"><img alt="server-script-tracing-8" width="889" height="445" style="margin:0;width:889px;height:445px;border:none" src="server-script-tracing-8.png"/></p>
+<ul style="list-style-type:disc">
+<li class="p_Normal"><span style="font-weight: bold;">Object types</span>. Specify by which types of components to display records: API methods, business process activities, event handlers, business processes, widgets.</li><li class="p_Normal"><span style="font-weight: bold;">Configuration objects</span>. Select specific system components for which you want to display traces.</li><li class="p_Normal"><span style="font-weight: bold;">Trace type</span>. Select which records should be displayed on the page: all or only those with errors.</li><li class="p_Normal"><span style="font-weight: bold;">Period</span>. Specify the time period to which the records belong. The list will display all traces in which at least one step was performed during the selected period.</li><li class="p_Normal"><span style="font-weight: bold;">Duration</span>. Specify the duration of the tracked activity in minutes, seconds, and milliseconds, e.g., not less than 30s and not more than 1m.</li></ul>
+<p class="p_Normal">To see records that match the specified conditions, click <span style="font-weight: bold;">Search</span>. Then click the name of the trace to view its data. See detailed information in the <a href="server-script-tracing.html#trace-content" class="topiclink">Trace content</a> section.</p>
+<h3 class="p_Heading3"><span class="f_Heading3">Export traces</span></h3>
+<p class="p_Normal">You can save traces to your PC to analyze a particular error later even if a record is deleted from the <span style="font-weight: bold;">Tracing</span> page or to give the data to another specialist.</p>
+<p class="p_Normal">You can export:</p>
+<ul style="list-style-type:disc">
+<li class="p_Normal">A particular trace by opening its page and clicking the <img alt="download-icon" width="26" height="28" style="margin:0;width:26px;height:28px;border:none" src="download-icon.png"/><span class="f_ImageCaption"> </span>icon.</li><li class="p_Normal">Several traces in one archive. To do this:</li></ul>
+<ol style="list-style-type:upper-roman">
+<li value="1" class="p_Normal">Open the <span style="font-weight: bold;">Tracing</span> page and select the check box next to the necessary records in the list.</li><li value="2" class="p_Normal">Click <span style="font-weight: bold;">Download Traces</span>.<br />
+<img alt="server-script-tracing-9" width="862" height="185" style="margin:0;width:862px;height:185px;border:none" src="server-script-tracing-9.png"/></li><li value="3" class="p_Normal">Save the generated <span style="font-weight: bold;">.zip</span> archive with the <span style="font-weight: bold;">.json</span> file of traces to your PC.</li></ol>
+<h3 class="p_Heading3"><span class="f_Heading3">Import traces</span></h3>
+<p class="p_Normal">Load the exported traces into BRIX to review them again. Please note, traces are imported for viewing only and are not saved in the system.</p>
+<p class="p_Normal">To download traces:</p>
+<ol style="list-style-type:upper-roman">
+<li value="1" class="p_Normal">On the<span style="font-weight: bold;"> Tracing</span> page click the <img alt="server-script-tracing-10" width="19" height="18" style="margin:0;width:19px;height:18px;border:none" src="server-script-tracing-10.png"/><span class="f_ImageCaption"> </span>icon in the upper right corner.</li><li value="2" class="p_Normal">In the opened window, select the <span style="font-weight: bold;">.zip</span> or <span style="font-weight: bold;">.json</span> file with the traces.</li></ol>
+<p class="p_Normal">This opens a list of records that looks similar to the <span style="font-weight: bold;">Tracing</span> page. To view the data of a trace, click its name.</p>
+<h2 class="p_Heading2"><a id="trace-content" class="hmanchor"></a><span class="f_Heading2">Trace page</span></h2>
+<p class="p_Normal">When you open a trace, you will see a diagram that shows the steps of the script execution. All actions and called functions are shown as colored segments with nesting preserved.</p>
+<p class="p_Normal">You can analyze the execution duration of each request and examine errors using the information on the page:</p>
+<p class="p_Normal"><img alt="server-script-tracing-11" width="559" height="289" style="margin:0;width:559px;height:289px;border:none" src="server-script-tracing-11.png"/></p>
+<ol style="list-style-type:upper-roman">
+<li value="1" class="p_Normal"><span style="font-weight: bold;">Search string</span>. You can search by all fields of the trace. For example, specify the name of a function to find out the duration of a request or enter the error text to find the step where the error occurred.</li><li value="2" class="p_Normal"><span style="font-weight: bold;">Start and Duration</span>. The date and time when the script started executing, and the duration of the execution in seconds.</li><li value="3" class="p_Normal"><span style="font-weight: bold;">Trace diagram</span>. Select the interval on the timeline so that only the activities included in it are displayed on the diagram. This will allow you to analyze a certain section of the script in detail.</li><li value="4" class="p_Normal"><span style="font-weight: bold;">Operations</span>. A tree of all performed activities. Click the step name to see detailed information: function attributes, events and errors occurred. The data will be displayed below the diagram and may look like this:<br />
+<img alt="server-script-tracing-12" width="859" height="228" style="margin:0;width:859px;height:228px;border:none" src="server-script-tracing-12.png"/></li></ol>
+<p class="p_Normal">On the trace page, you can:</p>
+<ul style="list-style-type:disc">
+<li class="p_Normal">Copy a link to a trace by clicking the <img alt="server-script-tracing-15" width="17" height="19" style="margin:0;width:17px;height:19px;border:none" src="server-script-tracing-15.png"/><span class="f_ImageCaption"> </span>icon next to its identifier. Any employee can open the record by the link, even if they are not a member of the <a href="360006871932.html#administrators" class="topiclink">Administrators</a> group.</li><li class="p_Normal">Save the trace to your PC as an archive with .json file by clicking the <img alt="download-icon" width="20" height="22" style="margin:0;width:20px;height:22px;border:none" src="download-icon.png"/> icon next to the search box. The record can then be imported into BRIX for reviewing, even if it is deleted from the system.</li></ul>
+
+                        <div class="bottom-nav">
+                            
+                                <a id="prev-link" class="topic__navi_prev" href="low-code-ci-cd.html">
+                                    <span class="bottom-nav__arrow bottom-nav__arrow--prev"></span> <span
+                                        class="bottom-nav__link">low-code-ci-cd.html</span>
+                                </a>
+                            
+                            
+                                <a id="next-link" class="topic__navi_next" href="licences.html">
+                                    <span class="bottom-nav__link">licences.html</span> <span
+                                        class="bottom-nav__arrow bottom-nav__arrow--next"></span>
+                                </a>
+                            
+                        </div>
+                        <!-- добавляет на страницу строку блок Была ли статья полезной?  -->
+                          <div class="feedback" id="feedback"><span><b>Was this helpful?</b></span><form action="" method="POST" class="feedback-form" id="feedback-form"><div class="feedback__popup feedback__popup-response" id="feedback__popup_thx" style="display: none;">Thanks for your feedback!</div><div class="feedback__popup" id="feedback__popup_why" style="display: none;"><div class="feedback__popup-header">Please specify why:</div><input type="radio" name="category" id="bad_recommendation" value="bad_recommendation"><label for="bad_recommendation">Recommendations did not help me</label><input type="radio" name="category" id="difficult_text" value="difficult_text"><label for="difficult_text">Article is hard to understand</label><input type="radio" name="category" id="no_answer" value="no_answer"><label for="no_answer">Didn’t answer my question</label><input type="radio" name="category" id="bad_header" value="bad_header"><label for="bad_header">Content does not match the topic</label><input type="radio" name="category" id="other_reason" value="other_reason"><label for="other_reason">Other</label></div><div class="feedback__popup" id="feedback__popup-other" style="display: none;"><div class="feedback__popup-header">How can we improve the article?</div><textarea class="feedback__textarea" name="other" id=""></textarea><input type="submit" class="feedback__other-btn" value="Submit"></div><div class="feedback-form__btn-group"><input type="radio" name="useful" id="feedback__useful_yes" value="true"><label for="feedback__useful_yes"><img src="like.svg" class="small-img"><spanclass="feedback-form__btn-group_yes-btn">Yes</spanclass="feedback-form__btn-group_yes-btn"></label><input type="radio" name="useful" id="feedback__useful_no" value="false"><label for="feedback__useful_no"><img src="dislike.svg" class="small-img"><spanclass="feedback-form__btn-group_no-btn">No</spanclass="feedback-form__btn-group_no-btn"></label></div><select name="category"><option disabled="">Please specify why</option><option value="bad_recommendation" selected="">Recommendations did not help me</option><option value="difficult_text">Article is hard to understand</option><option value="no_answer">Didn’t answer my question</option><option value="bad_header">Content does not match the topic</option><option value="other_reason">Other</option></select><input type="submit"></form></div>
+                           
+                    </section>
+                </div>
+                <aside class="article__sidebar" style="display:none">
+                    <input type="checkbox" />
+                    <div class="article__arrow"></div>
+                    <div class="table-of-contents elma365-right" id="toc2Content">
+                        <h3 class="h3-toc">In this topic</h3>
+                        <nav id="toc2"></nav>
+                    </div>
+                </aside>
+            </div>
+        </article>
+    </main>               
+    <footer class="footer">
+        <div class="footer-container">
+  <div class="footer-mobile">
+    
+    <ul class="footer-mobile__list"><li><a href="https://brix365.com/en/" target="_blank">BRIX</a></li><li><a href="https://tssdk.brix365.com/en/latest/" target="_blank">SDK</a></li><li><a href="https://api.brix365.com/en/" target="_blank">API</a></li></ul><ul class="footer-mobile__list"><li><a href="https://brix365.com/en/help/platform/get-trial.html">Platform</a></li><li><a href="https://brix365.com/en/help/ecm/ecm-functions.html">ECM</a></li><li><a href="https://brix365.com/en/help/service/service-functions.html">Service</a></li><li><a href="https://brix365.com/en/help/projects/projects-functions.html">Projects</a></li></ul>
+    
+    
+  </div>
+  <div class="footer-wrap">
+    
+      <div><span class="mobile-question-popup">Send feedback</span><form method="POST" action class="question__popup question-xs" id="question__popup"><div class="question-wrap"><span class="close"></span><span class="title">Ask a question</span><label for="help_question" style="display: none;"></label><textarea name="help_question" id="help_question"></textarea><input type="submit" value="Send"></div></form><div class="hidden fade-in question-success-xs">Sent</div></div>
+    
+    <div class="footer-flex-b">
+      <span class="footer-copy">&copy; 2025 BRIX</span>
+      <ul class="footer-list">
+        
+        <li class="footer-item">
+            <a href="#" class="arrow-top" style="display: block;"></a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+ 
+    </footer>
+    <iframe name="hmnavigation" style="display:none!important"></iframe>
+    <script src="./jquery-ui.js"></script>
+    <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
+    <script src="./jquery.tocify.min.js"></script>
+    <script src="./TypoReporter.min.js"></script>
+    <script src="./google-search.js"></script>
+    <script src="./main.js"></script>
+</body>
+
+</html>

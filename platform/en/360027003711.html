@@ -1,0 +1,711 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Template syntax</title>
+    <meta name="generator" content="Help+Manual" />
+    <meta name="keywords" content="" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Document templates that you use in the system can contain text, variables, functions, conditions, and loops. When adding a template to a business process, these components are..." />
+    <meta name="picture" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Full documentation for BRIX365 platform. Low-code developer guide. User guide. Admin guide. Developer guide." />
+    <meta property="og:url" content="https://brix365.com/en/help" />
+    <meta property="og:image" content="" />                                                              
+    <link rel="icon" href="favicon.png" type="image/png" />
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./jquery-ui.css" />
+    <link rel="stylesheet" href="default.css" />
+    <link rel="stylesheet" href="./search-yandex.css" />
+    <link rel="stylesheet" href="./article.css" />
+    <link rel="stylesheet" href="./glossary.css" />
+    <link rel="stylesheet" href="./theme.css" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+
+<body>
+    
+    <script>!function(e,t,c,n,r,a,m){e.ym=e.ym||function(){(e.ym.a=e.ym.a||[]).push(arguments)},e.ym.l=1*new Date;for(var s=0;s<document.scripts.length;s++)if(document.scripts[s].src===n)return;a=t.createElement(c),m=t.getElementsByTagName(c)[0],a.async=1,a.src=n,m.parentNode.insertBefore(a,m)}(window,document,"script","https://mc.yandex.ru/metrika/tag.js"),ym(83179930,"init",{clickmap:!0,trackLinks:!0,accurateTrackBounce:!0,webvisor:!0})</script><noscript><div><img alt=""src=https://mc.yandex.ru/watch/83179930 style=position:absolute;left:-9999px></div></noscript> 
+    
+    ﻿<header class="header elma-365">
+  <div class="container">
+    <a class="header__logo" href="https://brix365.com/en/help">
+      <img src="./logo-en.svg">
+    </a>
+ <!-- <div class="hero__search-form" id="search-panel">
+   <form class="search-form" onsubmit="ym(83180416,'reachGoal','poisk')">
+     <label class="search-form__label">
+       <span id="reset-search" class="search__icon"></span>
+       <input class="search-form__input" type="text">
+     </label>
+     <input class="search-form__submit" type="submit" value="Submit">
+   </form>
+  </div>       -->
+  
+     <div class="hero__search-form" id="search-panel"> <form class="search-form"> <label class="search-form__label"> <span id="reset-search" class="search__icon"></span> <input class="search-form__input" type="text"> </label> <input class="search-form__submit" type="submit" value="Submit"> </form> </div> 
+  <div class="hero__search">
+      <a href="#" id="search-icon" class="hero__search-icon">
+        <img src="search-icon-white.svg" alt="search string">
+      </a>
+      <a href="#" id="side-menu-icon" class="hero__side-icon">
+        <img src="side_menu.svg" alt="side menu">
+      </a>
+    </div>  
+  <div class="header__navi">
+        
+        <ul class="header__list"><li><span class="solution-select"><span class="solution-select__selected"></span><svg width="7" height="4" viewBox="0 0 7 4" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L3.5 3.5L6 1" stroke="white" stroke-linecap="round" stroke-linejoin="round"/></svg><ul class="solution-select__list"><li><a class="project-link" href="https://brix365.com/en/help/platform/get-trial.html">Platform</a></li><li><a class="project-link" href="https://brix365.com/en/help/ecm/ecm-functions.html">ECM</a></li><li><a class="project-link" href="https://brix365.com/en/help/crm/crm_overview.html">CRM</a></li><li><a class="project-link" href="https://brix365.com/en/help/service/service-functions.html">Service</a></li><li><a class="project-link" href="https://brix365.com/en/help/projects/projects-functions.html">Projects</a></li><li><a class="project-link" href="https://brix365.com/en/help/business_solutions/-elma365-store.html">Business Solutions</a></li></ul></span></li><li><a href="https://api.brix365.com/en/" target="_blank">API</a></li><li><a href="https://tssdk.brix365.com/" target="_blank">SDK</a></li></ul>
+        
+        
+   </div>
+  </div>
+
+</header>
+
+
+
+    
+    <main class="main container">
+
+        <aside class="sidebar" id="sidebar">
+        <div class="sidebar__header">
+                 <a class="header__logo" href="https://brix365.com/en/help">
+                    <img src="./logo-light-en.svg">
+                 </a>
+                    <span class="sidebar__close elma-365-close" id="close"></span>
+            </div>
+            <div class="sidebar__wrapper" id="side-menu">
+                
+            </div>
+        </aside>
+
+        <article class="article" id="article">
+            <div class="article-inner">           
+                <div class="content">
+                    <header class="article__header">
+                        
+                            <div class="topic__breadcrumbs">
+                                <p>Business process designer &gt; <a href="360026936731.html">Document templates</a> / Template syntax</p>
+                            </div>
+                        
+                        <div class="topic__title"><h1 class="p_Heading1" style="text-align: center; line-height: 1.20; margin: 19px 0 19px 0;"><span class="f_Heading1" style="font-size: 32px;">Template syntax</span></h1>
+</div>
+                    
+</header>
+                    <section class="article__content">
+                        <div class="scroll-top-inner">
+                            <a href="#h1-article" class="scroll-top"></a>
+                        </div>
+                        <!-- Placeholder for topic body. -->
+                        <p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;"><a href="360026936731.html" class="topiclink">Document templates</a> that you use in the system can contain text, variables, functions, conditions, and loops. When adding a template to a business process, these components are <a href="360026720792.html#bind_shablon" class="topiclink">bound</a> to process context variables so that the generated document is completed with process data.</p>
+<h2 class="p_Heading2" style="line-height: 1.20; margin: 19px 0 0 0;"><span class="f_Heading2" style="font-size: 24px;">Variables</span></h2>
+<p class="p_Normal" style="line-height: 1.20; margin: 19px 0 0 0;">All the variables in a template must be unique and have the following form: <code><b>{$variable_name}</b></code>. For example, you can use the <code><b>{$contractor}</b></code> variable to insert the contractor<span style="font-family: Inter;">’</span>s name in an agreement created within a <a href="360026720792.html" class="topiclink">business process</a>.</p>
+<p class="p_Normal" style="line-height: 1.20; margin: 19px 0 0 0;">In the template you can use field attributes from the app context, i.e. access nested variables. Available for fields of the <a href="360009707032.html#file_type" class="topiclink">Files</a>, <a href="360009707032.html#users" class="topiclink">Users</a>, <a href="360009707032.html#app" class="topiclink">App</a>, <a href="360009707032.html#arbitrary-app" class="topiclink">Arbitrary app</a>, etc. type.</p>
+<p class="p_Normal" style="line-height: 1.20; margin: 19px 0 0 0;">For example, an order has the <span style="font-weight: bold;">Contract</span> field (code <code><b>contract</b></code>), where the contract file is loaded, and the <span style="font-weight: bold;">Client</span> field (code <code><b>client</b></code>), where the <span style="font-weight: bold;">Contacts</span> app item is added. In the generated document you can display the file name or phone number of the client. To do this, the syntax of the template uses the code of the field from the source appl and the code of the nested variable separated by a dot: <code><b>{$contract.__name}</b></code> or <code><b>{$client.phone}</b></code>.</p>
+<p class="p_Normal" style="line-height: 1.20; margin: 19px 0 0 0;">When writing functions, arguments and variable values are enclosed in quotation marks. The following types of quotation marks are allowed: <span style="font-weight: bold;">&quot; &quot;, « », “ “, ” ”, ' '</span>.</p>
+<h2 class="p_Heading2" style="line-height: 1.20; margin: 19px 0 0 0;"><span class="f_Heading2" style="font-size: 24px;">Functions</span></h2>
+<h3 class="p_Heading3" style="line-height: 1.20; margin: 19px 0 0 0;"><span class="f_Heading3" style="font-size: 19px;">Functions for working with strings</span></h3>
+<p class="p_Normal" style="line-height: 1.20; margin: 19px 0 0 0;">These functions allow you to display text in different formats.</p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;">For illustration, we will use the <code><b>$string1</b></code> variable and the phrase <span style="font-weight: bold;">Order shipped</span> as its value.</p>
+<ol style="list-style-type:upper-roman">
+<li value="1" class="p_Normal" style="line-height: 1.20; margin-top: 14px; margin-right: 0; margin-bottom: 0;"><code><b>UpperCase(&lt;param1: string&gt;)</b></code>. Converts text to uppercase.</li></ol>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;примера</span></p>
+<p style="line-height: 1.20; margin: 14px 0 0 0;">Example</p>
+<p style="line-height: 1.20; margin: 14px 0 0 0;"><code><b>{UpperCase({$string1})}</b></code> —&gt; ORDER SHIPPED</p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;примера</span></p>
+<ol style="list-style-type:upper-roman" start="2">
+<li value="2" class="p_Normal" style="line-height: 1.20; margin-top: 14px; margin-right: 0; margin-bottom: 0;"><code><b>LowerCase(&lt;param1: string&gt;)</b></code>. Converts text to lowercase.</li></ol>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;примера</span></p>
+<p style="line-height: 1.20; margin: 14px 0 0 0;">Example</p>
+<p style="line-height: 1.20; margin: 14px 0 0 0;"><code><b>{LowerCase({$string1})}</b></code> —&gt; &nbsp;order shipped</p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;примера</span></p>
+<ol style="list-style-type:upper-roman" start="3">
+<li value="3" class="p_Normal" style="line-height: 1.20; margin-top: 14px; margin-right: 0; margin-bottom: 0;"><code><b>Capitalize(&lt;param1: string&gt;)</b></code>.<span style="font-weight: bold;"> </span>Capitalizes the first word in the text.</li></ol>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;примера</span></p>
+<p style="line-height: 1.20; margin: 14px 0 0 0;">Example</p>
+<p style="line-height: 1.20; margin: 14px 0 0 0;"><code><b>{Capitalize({$string1})}</b></code> —&gt; Order shipped </p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;примера</span></p>
+<ol style="list-style-type:upper-roman" start="4">
+<li value="4" class="p_Normal" style="line-height: 1.20; margin-top: 14px; margin-right: 0; margin-bottom: 0;"><code><b>Substr(&lt;param1: string&gt;, &lt;from: number&gt;, &lt;length: number&gt;)</b></code>.<span style="font-weight: bold;"> </span>Extracts a part of the text, starting with the specified character <code><b>&lt;from&gt;</b></code> and continuing for the specified number of characters <code><b>&lt;length&gt;</b></code>. </li></ol>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;">You can fill in only <code><b>&lt;from&gt;</b></code> to keep all the text after the specified character.</p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;примера</span></p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;">Examples</p>
+<ol style="list-style-type:decimal">
+<li value="1" style="line-height: 1.20; margin-top: 14px; margin-right: 0; margin-bottom: 0;"><code><b>{Substr({$string1}, 0, 3)}</b></code> —&gt; Ord.</li><li value="2" style="line-height: 1.20;"><code><b>{Substr({$string1}, 4)}</b></code> —&gt; r shipped.</li></ol>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;примера</span></p>
+<p class="p_Normal">&nbsp;</p>
+<h3 class="p_Heading3"><span class="f_Heading3">ToString() function</span></h3>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;">The <code><b>ToString</b></code> function allows you to insert the following data types into your document:</p>
+<ul style="list-style-type:disc">
+<li style="line-height: 1.20;"><a href="360027003711.html#number" class="topiclink">Number</a>.</li><li style="line-height: 1.20;"><a href="360027003711.html#string" class="topiclink">String</a>.</li><li style="line-height: 1.20;"><a href="360027003711.html#string" class="topiclink">Category</a>.</li><li style="line-height: 1.20;"><a href="360027003711.html#yes_no" class="topiclink">Yes/No switch</a>.</li><li style="line-height: 1.20;"><a href="360027003711.html#money" class="topiclink">Money</a>.</li><li style="line-height: 1.20;"><a href="360027003711.html#name" class="topiclink">Full name</a>.</li><li style="line-height: 1.20;"><a href="360027003711.html#phone" class="topiclink">Phone number</a>.</li><li style="line-height: 1.20;"><a href="360027003711.html#date_time" class="topiclink">Date/Time</a>.</li></ul>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;">You can read more about the types of data used in the system in the <span style="background-color: #ffffff;"><a href="360009707032.html" class="topiclink">System data types</a></span> article.</p>
+<h4 class="p_Heading4"><a id="number" class="hmanchor"></a><span class="f_Heading4">Number </span></h4>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;">Syntax:<span style="font-weight: bold;"> </span><code><b>ToString(param1: number, &lt;format: string&gt;, &lt;locale: string&gt;)</b></code></p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;">For illustration we will use the variable <code><b>$int1</b></code><span style="font-style: italic;"> </span>and its value 546.</p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;примера</span></p>
+<p style="line-height: 1.20; margin: 14px 0 0 0;">Example</p>
+<p style="line-height: 1.20; margin: 14px 0 0 0;"><code><b>{ToString({$int1})}</b></code> —&gt; 546</p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;примера</span></p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;">By default, the number is displayed as digits. Use the <code><b>astext</b></code> format to write it as text.</p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;внимание</span></p>
+<p style="line-height: 1.20; margin: 14px 0 0 0;">Please note that fractions cannot be displayed as text.</p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;внимание</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;примера</span></p>
+<p style="line-height: 1.20; margin: 14px 0 0 0;">Example</p>
+<p style="line-height: 1.20; margin: 14px 0 0 0;"><code><b>{ToString({$int1}, astext)}</b></code> —&gt; five hundred forty-six</p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;примера</span></p>
+<p class="p_Normal">You can specify a locale to output as text in another language. Available locales:</p>
+<ol style="list-style-type:decimal">
+<li value="1" class="p_Normal">English: <code><b>en-US</b></code> or <code><b>en</b></code></li><li value="2" class="p_Normal">Russian: <code><b>ru-RU</b></code> or <code><b>ru</b></code></li></ol>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;примера</span></p>
+<p style="line-height: 1.20; margin: 14px 0 0 0;">Example</p>
+<p style="line-height: 1.20; margin: 14px 0 0 0;"><code><b>{ToString({$int1}, astext, en–US)}</b></code> —&gt;five hundred forty-six</p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;примера</span></p>
+<p class="p_Normal">&nbsp;</p>
+<h4 class="p_Heading4"><a id="string" class="hmanchor"></a><span class="f_Heading4">String</span></h4>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;">Strings allow you to add text-based information to your document.</p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;">Syntax: <code><b>ToString(param1: string)</b></code>.</p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;">For illustration, we will use the variable <code><b>$str1</b></code> and its value <span style="font-weight: bold;">sent for approval</span>.</p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;примера</span></p>
+<p style="line-height: 1.20; margin: 14px 0 0 0;"><a id="category" class="hmanchor"></a>Example</p>
+<p style="line-height: 1.20; margin: 14px 0 0 0;"><code><b>{ToString({$str1})}</b></code> —&gt; sent for approval.</p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;примера</span></p>
+<h4 class="p_Heading4"><span class="f_Heading4">Category</span></h4>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;">The Category data type is used for selecting a value from a list, for example, when users choose the payment method: credit card or cash.</p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;">Syntax: <code><b>ToString(param1: category)</b></code>.</p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;">When a context variable of this type is created in a process, it is given a name and a code. Specify the code in the <code><b>ToString</b></code> function so that the name of the variable is added to the document.</p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;">For illustration, we will use the variable <code><b>$enum1</b></code> and payment with credit card as its value: <code><b>{ "code": "card"; "name": "credit card" }</b></code>.</p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;примера</span></p>
+<p style="line-height: 1.20; margin: 14px 0 0 0;">Example</p>
+<p style="line-height: 1.20; margin: 14px 0 0 0;">The selected payment method is <code><b>{ToString({$enum1})}</b></code> —&gt; The selected payment method is credit card.</p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;примера</span></p>
+<p class="p_Normal">Also, for the <span style="font-weight: bold;">Category</span> data type, you can output the category name and code to the template without using the <code><b>ToString</b></code> function.</p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;примера</span></p>
+<p class="p_Normal">Example</p>
+<ol style="list-style-type:decimal">
+<li value="1" class="p_Normal">The selected payment method is <code><b>{$enum1.name}</b></code> —&gt; &nbsp;The selected payment method is credit card.</li><li value="2" class="p_Normal">The selected payment method is  <code><b>{$enum1}</b></code> —&gt; The selected payment method is credit card.</li><li value="3" class="p_Normal">Code of the used category: <code><b>{$enum1.code}</b></code> —&gt; Code of the used category is card.</li></ol>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;примера</span></p>
+<p class="p_Normal">&nbsp;</p>
+<h4 class="p_Heading4"><a id="yes_no" class="hmanchor"></a><span class="f_Heading4">Yes/No switch </span></h4>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;">This data type has two variants: <span style="font-weight: bold;">Yes</span> and <span style="font-weight: bold;">No</span>. You can rename them, for example, to <span style="font-weight: bold;">Approved</span> and <span style="font-weight: bold;">Rejected</span>.</p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;">For illustration, we will use <code><b>$bool1 = true</b></code>. The <span style="font-weight: bold;">Yes</span> variant (<code><b>yesValue</b></code>) is renamed as <span style="font-weight: bold;">Approved</span>.</p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;примера</span></p>
+<p style="line-height: 1.20; margin: 14px 0 0 0;">Example</p>
+<p style="line-height: 1.20; margin: 14px 0 0 0;"><code><b>{ToString({$bool1})}</b></code> —&gt; Approved.</p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;примера</span></p>
+<h4 class="p_Heading4"><a id="money" class="hmanchor"></a><span class="f_Heading4">Money</span></h4>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;">You can convert an amount of money to text in various formats.</p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;">Syntax: <code><b>ToString(param1: money, &lt;format: string&gt;, &lt;locale: string&gt;)</b></code>.</p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;">The following format values are available:</p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;примера</span></p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;">Example</p>
+<p style="line-height: 1.20; margin: 14px 0 0 0;"><code><b>short</b></code> &nbsp;—&gt; 1,005.56 (separators depend on the locale)</p>
+<p style="line-height: 1.20;"><code><b>sign</b></code><span style="font-weight: bold;"> </span> —&gt; USD1,005.56</p>
+<p style="line-height: 1.20;"><code><b>full</b></code><span style="font-weight: bold;"> </span> —&gt; 1,005 US dollars 56 cents</p>
+<p style="line-height: 1.20;"><code><b>astext</b></code><span style="font-weight: bold;"> </span> —&gt; One thousand five US dollars 56 cents</p>
+<p style="line-height: 1.20;"><code><b>wildcard</b></code><span style="font-weight: bold;"> </span> —&gt; you can specify your custom format, for example, <code><b>{ToString({$money1}, "%i usd %f cents")}</b></code>. In this case the amount will be converted to text in the following manner: 1005 usd 56 cents (<code><b>%i</b></code> is the integer part, <code><b>%f</b></code> is the fractional part).</p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;примера</span></p>
+<h4 class="p_Heading4"><a id="name" class="hmanchor"></a><span class="f_Heading4">Full name</span></h4>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;">You can insert a person<span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">’</span>s full name into a document.</p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;">Syntax: <code><b>ToString(param1: full name, &lt;format: string&gt;, &lt;case: string&gt;)</b></code>.</p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;"><a class="dropdown-toggle" style="font-style: normal; font-weight: normal; color: #000000; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186A1')">Available format values</a></p>
+<div id="TOGGLE0186A1" class="dropdown-toggle-body" style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 14px 0 0 0;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_Normal" style="line-height: 1.20;"><code><b>long</b></code>. Use it to insert the last name, first name, and the middle name (Anna Maria Quan).</p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;"><code><b>short</b></code>.<span style="font-weight: bold;"> </span>Use it to insert the last name and the initials (A M. Quan).</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;"><a class="dropdown-toggle" style="font-style: normal; font-weight: normal; color: #000000; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186A2')">Available case values (for languages where they are applied)</a></p>
+<div id="TOGGLE0186A2" class="dropdown-toggle-body" style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 14px 0 0 0;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_Normal" style="line-height: 1.20;"><code><b>nominative</b></code>. Nominative.</p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;"><code><b>genitive</b></code>. Genitive.</p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;"><code><b>dative</b></code>. Dative.</p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;"><code><b>accusative</b></code>. Accusative.</p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;"><code><b>instrumental</b></code>. Instrumental.</p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;"><code><b>prepositional</b></code>. Prepositional.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Normal">If you want to specify a person<span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">’s first name, last name, or middle name by itself, use values from the </span><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif; font-weight: bold;">Full name</span><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> variable, for example, </span><code><b>{$executor.fullname.firstname}</b></code><span style="font-family: Inter; color: #394149;">, </span><code><b>{$executor.fullname.lastname}</b></code><span style="font-family: Inter; color: #394149;">, and </span><code><b>{$executor.fullname.middlename}</b></code><span style="font-family: Inter; color: #394149;">.</span></p>
+<h4 class="p_Heading4"><a id="phone" class="hmanchor"></a><span class="f_Heading4">Phone number</span></h4>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;">You can set up a mask for phone number input by using the following syntax: <code><b>ToString({$phone1}, "+1–XXX–XXX–XX–XX EEE")</b></code></p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;">The letters in the syntax represent the following:</p>
+<ul style="list-style-type:disc">
+<li class="p_Normal" style="line-height: 1.20; margin-top: 14px; margin-right: 0; margin-bottom: 0;"><span style="font-weight: bold;">X</span> is the main number.</li><li class="p_Normal" style="line-height: 1.20; margin-top: 14px; margin-right: 0; margin-bottom: 0;"><span style="font-weight: bold;">E</span> is the extension number.</li></ul>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;">If a user enters the phone number with less digits than the mask represents, the excessive X and E letters will not appear in the document.</p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;">The phone number is filled in with digits from left to right.</p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;примера</span></p>
+<ol style="list-style-type:decimal">
+<li value="1" style="line-height: 1.20; margin-top: 14px; margin-right: 0; margin-bottom: 0;"><code><b>{ToString({$phone1}, "+7—XXX—XXX—XX—XX")}</b></code> —&gt; +1-650-499-88-77.</li><li value="2" style="line-height: 1.20;"><code><b>{ToString({$phone1}, "X—XXX—XXX—XX—XX EEE")}</b></code> —&gt; 1-650-499-88-77 159.</li><li value="3" style="line-height: 1.20;"><code><b>{ToString({$phone1}, "XX—XX—XX E")}</b></code> —&gt; 99-88-77 3.</li></ol>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;примера</span></p>
+<h4 class="p_Heading4"><a id="date_time" class="hmanchor"></a><span class="f_Heading4">Date/Time</span></h4>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;">You can add a date and time to you template, for example, to specify the delivery date in a supply contract.</p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;">Syntax: <code><b>ToString(param1: date/time, &lt;format:&gt;, &lt;locale: string&gt;)</b></code></p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;">This data type has three options: <span style="font-weight: bold;">Date/Time</span>, <span style="font-weight: bold;">Date</span>, and <span style="font-weight: bold;">Time</span>.</p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;">Without specifying any additional arguments, the document displays the current date and time.</p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;примера</span></p>
+<p class="p_Normal">Example</p>
+<p class="p_Normal"><code><b>{ToString({$date1})} -></b></code></p>
+<ol style="list-style-type:decimal">
+<li value="1" class="p_Normal"><span style="font-weight: bold;">Date/Time</span>: <span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">8/24/22 1:30:00 pm</span></li><li value="2" class="p_Normal"><span style="font-weight: bold;">Date</span>: <span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">8/24/22 </span></li><li value="3" class="p_Normal"><span style="font-weight: bold;">Time</span>: <span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">1:30:00 pm</span></li></ol>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;примера</span></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Inter;">If you use the </span><span style="font-size: 15px; font-family: Inter; font-weight: bold;">short</span><span style="font-size: 15px; font-family: Inter;"> format in the function (</span><code><b>{ToString({$date1}, short)}</b></code><span style="font-size: 15px; font-family: Inter;">), seconds won’t be indicated.</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;примера</span></p>
+<p class="p_Normal">Example</p>
+<p class="p_Normal"><code><b>{ToString({$date1}, short)}-> </b></code></p>
+<ol style="list-style-type:decimal">
+<li value="1" class="p_Normal"><span style="font-weight: bold;">Date/Time</span>: <span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">8/24/22 1:30 pm</span></li><li value="2" class="p_Normal"><span style="font-weight: bold;">Date</span>: <span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">August 24, 2022</span></li><li value="3" class="p_Normal"><span style="font-weight: bold;">Time</span>: <span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">1:30 pm</span></li></ol>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;примера</span></p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;">When using the <code><b>long</b></code> format, the time will include seconds, and the date the month name:</p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;примера</span></p>
+<p class="p_Normal">Example</p>
+<p class="p_Normal"><code><b>{ToString({$date1}, long)}->  </b></code></p>
+<ol style="list-style-type:decimal">
+<li value="1" class="p_Normal"><span style="font-weight: bold;">Date/Time: </span>8/24/22 1:30:00 pm</li></ol>
+<ol style="list-style-type:decimal" start="2">
+<li value="2" class="p_Normal"><span style="font-weight: bold;">Date: </span>April 24, 2022</li></ol>
+<ol style="list-style-type:decimal" start="3">
+<li value="3" class="p_Normal"><span style="font-weight: bold;">Time:</span> 1:30:00 pm</li></ol>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;примера</span></p>
+<p class="p_Normal">You can specify a locale</p>
+<ol style="list-style-type:decimal">
+<li value="1" class="p_Normal">English: <code><b>en-US</b></code> or <code><b>en</b></code></li></ol>
+<ol style="list-style-type:decimal" start="2">
+<li value="2" class="p_Normal">Russian: <code><b>ru-RU</b></code> or <code><b>ru</b></code></li></ol>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;примера</span></p>
+<p class="p_Normal">Example</p>
+<p class="p_Normal"><code><b>{ToString({$date1}, short, en–US)} -> </b></code> &nbsp;8/24/22 1:30: pm</p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;примера</span></p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;">Please note that the <span style="font-weight: bold;">Date/Time</span> type takes into account the time zone of your company and shows the date accordingly. The <span style="font-weight: bold;">Date</span> and <span style="font-weight: bold;">Time</span> types show absolute values.</p>
+<p class="p_Normal"><a class="dropdown-toggle" style="font-style: normal; font-weight: normal; color: #000000; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186A3')">Example</a></p>
+<div id="TOGGLE0186A3" class="dropdown-toggle-body" style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 14px 0 0 0;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;">&nbsp;<br />
+To illustrate the use of the function in document templates, we created an agreement template and completed it with different variables and functions.</p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;">Then we <a href="360026720792.html" class="topiclink">added</a> it to a business process and bound the template variables to the process variables.</p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;"><img alt="sodt1" width="670" height="651" style="margin:0;width:670px;height:651px;border:none" src="sodt1.png"/></p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;">During process execution, users fill in the data, and once the process flow reaches the <a href="360026720792.html" class="topiclink">Generate from template</a> activity, the system automatically creates the agreement.</p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;"><img alt="8.PNG" title="8.PNG" width="812" height="582" style="margin:0;width:812px;height:582px;border:none" src="360031806772-8.png"/></p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;">Click <a href="Supply_Agreement_Template.docx" class="filelink">here</a> to download the template used in this example.</p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3"><a id="date_time_function" class="hmanchor"></a><span class="f_Heading3">DateTime() function</span></h3>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Inter;">The </span><code><b>DateTime()</b></code> <span style="font-size: 15px; font-family: Inter;">function is used to display date and time in any format. You can also specify the locale.</span></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 13px; font-family: Inter; color: #394149;">Syntax</span><span style="font-size: 15px; font-family: Inter;">:</span><code><b>DateTime(&lt;format:string&gt;,&lt;variable:date\time&gt;,&lt;locale&gt;)</b></code><span style="font-size: 15px; font-family: Inter;">.</span></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Inter;">For example, you can specify the date and time an app item was created.</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;примера</span></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Inter;">Example</span></p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;"><code><b>{DateTime(&laquo;YYYY–MM–DD hh:mm:ss&raquo;,{$__createdAt},"ru_RU")}</b></code> —&gt;<span style="font-size: 15px; font-family: Inter;"> 2021–01–21 08:30:56</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;примера</span></p>
+<p class="p_Normal"><span style="font-size: 15px; font-family: Inter;">The template supports the following quotation marks: </span><span style="font-size: 15px; font-family: Inter; font-weight: bold;">&quot; &quot;, « », “ “, ” ”, ' '</span><span style="font-size: 15px; font-family: Inter;">.</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;примера</span></p>
+<p class="p_Normal">Examples</p>
+<ol style="list-style-type:decimal">
+<li value="1" class="p_Normal"><code><b>{DateTime('"DD" MMMM YYYY',{$__createdAt},"en_US")}</b></code> —&gt; &quot;31&quot; August 2023;</li><li value="2" class="p_Normal"><code><b>{DateTime("&laquo;DD&raquo; MMMM YYYY",{$__createdAt},"en_US")}</b></code> —&gt; «31» August 2023;</li><li value="3" class="p_Normal"><code><b>{DateTime(&laquo;'DD' MMMM YYYY&raquo;,{$__createdAt},"en_US")}</b></code> —&gt; '31' August 2023.</li></ol>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;примера</span></p>
+<p class="p_Normal"><span style="font-weight: bold;"><a class="dropdown-toggle" style="font-style: normal; font-weight: bold; color: #000000; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186A4')">Data formats</a></span></p>
+<div id="TOGGLE0186A4" class="dropdown-toggle-body" style="text-align: left; text-indent: 0; line-height: 1.0; page-break-inside: avoid; padding: 0 0 0 0; margin: 0 0 0 0;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 13px; color: #000000;">&nbsp;</span><br />
+<span style="font-size: 15px; font-family: Inter; font-weight: bold;">Display options:</span></p>
+<p class="p_Normal"><code><b>M</b></code><span style="font-size: 15px; font-family: Inter;">: month (1)</span></p>
+<p class="p_Normal"><code><b>MM</b></code><span style="font-size: 15px; font-family: Inter;">: month (01)</span></p>
+<p class="p_Normal"><code><b>MMM</b></code><span style="font-size: 15px; font-family: Inter;">: month (Jan)</span></p>
+<p class="p_Normal"><code><b>MMMM</b></code><span style="font-size: 15px; font-family: Inter;">: (January)</span></p>
+<p class="p_Normal"><code><b>D</b></code><span style="font-size: 15px; font-family: Inter;">: day (2)</span></p>
+<p class="p_Normal"><code><b>DD</b></code><span style="font-size: 15px; font-family: Inter;">: day (02)</span></p>
+<p class="p_Normal"><code><b>DDD</b></code><span style="font-size: 15px; font-family: Inter;">: day (Mon) &nbsp;</span></p>
+<p class="p_Normal"><code><b>DDDD</b></code><span style="font-size: 15px; font-family: Inter;">: day (Monday)</span></p>
+<p class="p_Normal"><code><b>YY</b></code><span style="font-size: 15px; font-family: Inter;">: year (06)</span></p>
+<p class="p_Normal"><code><b>YYYY</b></code><span style="font-size: 15px; font-family: Inter;">: year (2006)</span></p>
+<p class="p_Normal"><code><b>hh</b></code><span style="font-size: 15px; font-family: Inter;">: hours (15)</span></p>
+<p class="p_Normal"><code><b>mm</b></code><span style="font-size: 15px; font-family: Inter;">: minutes (04)</span></p>
+<p class="p_Normal"><code><b>ss</b></code><span style="font-size: 15px; font-family: Inter;">: seconds (05)</span></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Inter; font-weight: bold;">Locales: &nbsp;</span></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Inter;">English (United States): </span><code><b>en_US</b></code></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Inter;">English (United Kingdom): </span><code><b>en_GB</b></code></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Inter;">German: </span><code><b>de_DE</b></code></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Inter;">French:</span><code><b>fr_FR</b></code></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Inter;">Russian:</span><code><b>ru_RU</b></code></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Inter;">Spanish: </span><code><b>es_ES</b></code></p>
+</td>
+</tr>
+</table>
+</div>
+<h3 class="p_Heading3" style="line-height: 1.20; margin: 19px 0 0 0;"><span class="f_Heading3" style="font-size: 19px;">Now() function</span></h3>
+<p class="p_Normal" style="line-height: 1.20; margin: 19px 0 0 0;">To add the current date and time with regard to your time zone, use the <code><b>Now</b></code> function.</p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;">Syntax: <code><b>Now(&lt;format: string&gt;, &lt;locale: string&gt;, &lt;timezone: string&gt;)</b></code></p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;">With each <code><b>format</b></code> value the date is displayed differently.</p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;"><a class="dropdown-toggle" style="font-style: normal; font-weight: normal; color: #000000; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186A5')">Available format values</a></p>
+<div id="TOGGLE0186A5" class="dropdown-toggle-body" style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 14px 0 0 0;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><ol style="list-style-type:decimal">
+<li value="1" style="line-height: 1.20; margin-top: 14px; margin-right: 0; margin-bottom: 0;"><code><b>date</b></code> —&gt; date (<span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">8/12/22</span>).</li><li value="2" style="line-height: 1.20;"><code><b>time</b></code><span style="font-weight: bold;"> </span>—&gt; 10:34 am.</li><li value="3" style="line-height: 1.20;"><code><b>timelong</b></code><span style="font-weight: bold;"> </span>—&gt; 10:34:22 am.</li><li value="4" style="line-height: 1.20;"><code><b>datelong</b></code><span style="font-weight: bold;"> </span>—&gt; April 13, 2019.</li><li value="5" style="line-height: 1.20;"><code><b>short</b></code> (default) —&gt; 8/12/22 10:52 am.</li></ol>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Normal">English language <code><b>en–US</b></code> and Russian <code><b>ru–RU</b></code> are available for <code><b>locale</b></code>.</p>
+<p class="p_Normal"><code><b>timezone</b></code> is set in the format America/Toronto.</p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;примера</span></p>
+<p class="p_Normal">Examples of function syntax</p>
+<ol style="list-style-type:decimal">
+<li value="1" style="line-height: 1.20; margin-top: 14px; margin-right: 0; margin-bottom: 0;"><code><b>{Now(datelong, en-US)}</b></code>. Long date, en-US.</li><li value="2" style="line-height: 1.20; margin-top: 14px; margin-right: 0; margin-bottom: 0;"><code><b>{Now(datelong, en)}</b></code>. Long date en.</li><li value="3" style="line-height: 1.20; margin-top: 14px; margin-right: 0; margin-bottom: 0;"><code><b>{Now(datelong, en)}</b></code>. Date only en.</li><li value="4" style="line-height: 1.20; margin-top: 14px; margin-right: 0; margin-bottom: 0;"><code><b>{Now(datelong, ru-RU)}</b></code>. Long date ru-RU.</li></ol>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;примера</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Count() function</span></h3>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;">It gets the number of items passed in a variable of the <a href="360009707032.html#table" class="topiclink">Table</a> or <a href="360009707032.html#app" class="topiclink">App</a> type. It can be the number of rows in a table or records in a linked app.</p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;">Using this function, you can:</p>
+<ul style="list-style-type:disc">
+<li class="p_Normal" style="line-height: 1.20; margin-top: 14px; margin-right: 0; margin-bottom: 0;">Display the total number of items to estimate the amount of data.</li><li class="p_Normal" style="line-height: 1.20; margin-top: 14px; margin-right: 0; margin-bottom: 0;">Check if there are any data in the variable.</li><li class="p_Normal" style="line-height: 1.20; margin-top: 14px; margin-right: 0; margin-bottom: 0;">Display only the number of records instead of the table.</li><li class="p_Normal" style="line-height: 1.20; margin-top: 14px; margin-right: 0; margin-bottom: 0;">Specify the number of records above a table or before a list of data, etc.</li></ul>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;">Syntax: <code><b>{Count({$variable})}</b></code>.</p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;примера</span></p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;">Example</p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;"><code><b>{Count({$report_table})}</b></code>. The number of rows in the report table.</p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;"><code><b>{Count({$app})}</b></code>. The number of items in the linked app.</p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;примера</span></p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;">You can also use the function with a <a href="360027003711.html#for" class="topiclink">for loop</a>.</p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;примера</span></p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;">Example</p>
+<ol style="list-style-type:decimal">
+<li value="1" class="p_Normal" style="line-height: 1.20; margin-top: 14px; margin-right: 0; margin-bottom: 0;">Show the number of rows of a table that is nested in the main report table:</li></ol>
+<p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample">{for row in {$report_table}}</span><br />
+<span class="f_CodeExample">Subrow count: {Count({$row.execution})}</span><br />
+<span class="f_CodeExample">{end}</span></p>
+<ol style="list-style-type:decimal" start="2">
+<li value="2" class="p_Normal" style="line-height: 1.20; margin-top: 14px; margin-right: 0; margin-bottom: 0;">Show the number of rows in the table, which is a property of the linked app:</li></ol>
+<p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample">{for row in {$app}}</span><br />
+<span class="f_CodeExample">Subrow count: {Count({$row.multi})}</span><br />
+<span class="f_CodeExample">{end}</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;примера</span></p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;">Where:</p>
+<ul style="list-style-type:disc">
+<li class="p_Normal" style="line-height: 1.20; margin-top: 14px; margin-right: 0; margin-bottom: 0;"><code><b>app</b></code> is the field that contains the link to another app.</li><li class="p_Normal" style="line-height: 1.20; margin-top: 14px; margin-right: 0; margin-bottom: 0;"><code><b>row.multi</b></code> is a field of the <span style="font-weight: bold;">Table</span> type in this app.</li></ul>
+<h3 class="p_Heading3"><span class="f_Heading3">Barcode function</span></h3>
+<p style="line-height: 1.20; margin: 14px 0 0 0;"><span style="font-size: 13px; font-family: Inter; color: #394149;">To encode a </span><span style="font-size: 13px; font-family: Inter; font-weight: bold; color: #394149;">String</span><span style="font-size: 13px; font-family: Inter; color: #394149;"> type field in an app and add it to a document as a barcode, use the </span><code><b>Barcode</b></code><span style="font-size: 13px; font-family: Inter; color: #394149;"> function. For instance, you can use it to generate a barcode for a contract’s registration number or another unique number assigned to a document. Later you can use this barcode to match the hard copy of a document with its digital version. </span></p>
+<p style="line-height: 1.20; margin: 14px 0 0 0;"><span style="font-size: 13px; font-family: Inter; color: #394149;">You can use barcode scanning software in BRIX if you configure an appropriate integration module. Read more about it in <a href="360024498352.html" class="topiclink">Standard modules</a> and <a href="https://api.brix365.com/en/public-api/guides/IntroWebAPI/" target="_blank" class="weblink">Introduction to Web API</a>.</span></p>
+<p style="line-height: 1.20; margin: 14px 0 0 0;"><span style="font-size: 13px; font-family: Inter; color: #394149;">The system allows you to generate barcodes for </span><span style="font-size: 13px; font-family: Inter; font-weight: bold; color: #394149;">Word</span><span style="font-size: 13px; font-family: Inter; color: #394149;"> and </span><span style="font-size: 13px; font-family: Inter; font-weight: bold; color: #394149;">Excel</span><span style="font-size: 13px; font-family: Inter; color: #394149;"> files.</span></p>
+<p style="line-height: 1.20; margin: 14px 0 0 0;"><span style="font-size: 13px; font-family: Inter; color: #394149;">Syntax: </span><code><b>GenerateBarcode(&lt;text: srting:1&gt;, &lt;format: code format:2&gt;, &lt;height of the generaed barcode in pixels&gt;)</b></code><span style="font-size: 13px; font-family: Inter; color: #394149;">. Specifying the height is optional.</span></p>
+<ul style="list-style-type:disc">
+<li style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 16px;"><span style="font-family: Inter; font-weight: bold;">[1]</span><span style="font-family: Inter;">: the content of the string depends on the format specified in the second parameter.</span></li><li style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 16px;"><span style="font-family: Inter; font-weight: bold;">[2]</span><span style="font-family: Inter;">: available barcode formats and requirements to the string:</span></li></ul>
+<ul style="list-style-type:disc"><ul style="list-style-type:circle">
+<li class="p_Normal" style="line-height: 1.20;"><span style="font-weight: bold;">QR Code</span>:<span style="font-weight: bold;"> </span>Any string. Resolution up to 300 DPI is supported.</li><li class="p_Normal"><span style="font-weight: bold;">EAN-8</span>: A string consisting either of 7 digits or of 8 digits (seven digits and a check digit).</li><li class="p_Normal"><span style="font-weight: bold;">EAN-13</span>: A string consisting either of 12 digits or of 13 digits (twelve digits and a check digit).</li></ul></li></ul>
+<ul style="list-style-type:disc">
+<li style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 16px;"><span style="font-family: Inter; font-weight: bold;">[3]</span><span style="font-family: Inter;">: barcode height in pixels is an optional parameter. For correct recognition, the height is specified based on the number of characters used.</span></li></ul>
+<p style="line-height: 1.20; margin: 14px 0 0 0;"><span style="font-size: 13px; font-family: Inter; color: #394149;">If you have system version 2023.11 or higher, you can specify the </span><span style="font-size: 13px; font-family: Inter; font-weight: bold; color: #394149;">EAN</span><span style="font-size: 13px; font-family: Inter; color: #394149;"> format without specifying the type. In this case, the barcode will be generated and its type will depend on the number of digits in the transmitted string.</span></p>
+<p style="line-height: 1.20; margin: 14px 0 0 0;"><span style="font-size: 13px; font-family: Inter; color: #394149;">If the template uses the same string to generate a QR code twice, but specifies a different size, a QR code of the same size will be generated in both cases.</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;внимание</span></p>
+<p style="line-height: 1.20; margin: 7px 0 7px 0;"><span style="font-size: 13px; font-family: Inter; color: #394149;">If no checksum was specified when using </span><span style="font-size: 13px; font-family: Inter; font-weight: bold; color: #394149;">EAN</span><span style="font-size: 13px; font-family: Inter; color: #394149;"> formats, it will be added automatically. For correct operation, the barcode scanner must be configured to work with these formats.</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;внимание</span></p>
+<p style="line-height: 1.20; margin: 7px 0 7px 0;"><span style="font-size: 13px; font-family: Inter; color: #394149;">It is recommended to use the </span><span style="font-size: 13px; font-family: Inter; font-weight: bold; color: #394149;">QR Code</span><span style="font-size: 13px; font-family: Inter; color: #394149;"> format, as it can be applied to a greater variety of data, while the </span><span style="font-size: 13px; font-family: Inter; font-weight: bold; color: #394149;">EAN</span><span style="font-size: 13px; font-family: Inter; color: #394149;"> formats are limited.</span></p>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-size: 13px; font-family: Inter; color: #394149;">For example, there is a variable </span><code><b>$numberstring</b></code><span style="font-size: 13px; font-family: Inter; color: #394149;">, and its value is </span><span style="font-size: 13px; font-family: Inter; font-weight: bold; color: #394149;">5901234123457</span><span style="font-size: 13px; font-family: Inter; color: #394149;">. From this string, a QR code or an EAN-13 can be generated.</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;примера</span></p>
+<p style="line-height: 1.20; margin: 14px 0 0 0;">Examples</p>
+<ol style="list-style-type:decimal">
+<li value="1" class="p_Normal"><code><b>{GenerateBarcode({$numberstring}, "QR Code", "125" )}</b></code>.</li><li value="2" class="p_Normal"><code><b>{GenerateBarcode({$numberstring}, "EAN-13", "125" )}</b></code>.</li></ol>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;примера</span></p>
+<p style="line-height: 1.20; margin: 14px 0 0 0;"><span style="font-size: 13px; font-family: Inter; color: #394149;">For an EAN-8, the string can only include 8 digits: </span><code><b>$numberstring = "59012341"</b></code><span style="font-size: 13px; font-family: Inter; color: #394149;">.</span></p>
+<p style="line-height: 1.20; margin: 14px 0 0 0;"><span style="font-size: 13px; font-family: Inter; color: #394149;">If a QR code is generated twice based on the same string in a template, but the size in pixels is different, the generated QR codes will be of the same size.</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">JobPosition() function</span></h3>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-size: 13px; font-family: Inter; color: #394149;">This function is used to get a user’s job position.</span></p>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-size: 13px; font-family: Inter; color: #394149;">Syntax: </span><code><b>JobPosition(&lt;param1:  user&gt;, &lt;format:string&gt;)</b></code></p>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-size: 13px; font-family: Inter; color: #394149;">You can use the </span><code><b>&laquo;first&raquo;</b></code><span style="font-size: 13px; font-family: Inter; color: #394149;"> variable to get only the first job position or the </span><code><b>"all"</b></code><span style="font-size: 13px; font-family: Inter; color: #394149;"> variable to get all job positions of a user.</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;примера</span></p>
+<p style="line-height: 1.20; background: #f7f7f7; margin: 7px 0 7px 0;"><span style="font-size: 13px; font-family: Inter; color: #394149;">Example</span></p>
+<p class="p_Normal"><code><b>{JobPosition({$__createdBy},"all")}</b></code> —&gt;<span style="font-size: 13px; font-family: Inter; color: #394149;"> The function will pass all job positions of the user specified as the app item’s </span><span style="font-size: 13px; font-family: Inter; font-weight: bold; color: #394149;">Author</span><span style="font-size: 13px; font-family: Inter; color: #394149;">.</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;примера</span></p>
+<p class="p_Normal">&nbsp;</p>
+<h3 class="p_Heading3"><span class="f_Heading3">PasteImage function</span></h3>
+<p class="p_Normal">To paste an image from a context variable into a document template, use the <code><b>PasteImage</b></code> function.</p>
+<p class="p_Normal">Syntax: <code><b>PasteImage(&lt;param1: image/file&gt;, &lt;width in pixels&gt;, &lt;height in pixels&gt;, &lt;crop instead of compression: true/false&gt;)</b></code></p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">Начало&nbsp;примера</span></p>
+<p class="p_Normal">Examples</p>
+<ol style="list-style-type:decimal">
+<li value="1" class="p_Normal"><code><b>{PasteImage({$image})}</b></code>. The image will be displayed with the original width and height values.</li><li value="2" class="p_Normal"><code><b>{PasteImage({$image}, 200)}</b></code>. The image will be displayed with a width of 200 pixels. The height value will change, the original proportions will be preserved.</li><li value="3" class="p_Normal"><code><b>{PasteImage({$image}, 200, 400)}</b></code>. The function scales the image to a strictly specified size.</li><li value="4" class="p_Normal"><code><b>{PasteImage({$image}, auto, 400)}</b></code>. The image from the variable will be displayed with a height of 400 pixels. The width value will be scaled, the original proportions will be preserved.</li><li value="5" class="p_Normal"><code><b>{PasteImage({$image}, 200, 400, true)}</b></code>. The function will crop the image to the specified size without taking into account the original proportions.</li></ol>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">Конец&nbsp;примера</span></p>
+<h3 class="p_Heading3"><a id="hyperlink" class="hmanchor"></a><span class="f_Heading3">HYPERLINK function for tables</span></h3>
+<p style="line-height: 1.28; margin: 0 0 11px 0;">When generating a template in a <span style="font-weight: bold;">.xls</span> and <span style="font-weight: bold;">.xlsx</span> file, you can use the  <code><b>HYPERLINK</b></code><span style="font-size: 13px;"> </span>function. This is a standard Excel function that allows you to convert a given value into a hyperlink.</p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;">You can use variables of type <a href="360009707032.html" class="topiclink">String</a> from the app context as arguments, as well as set values manually. For the function to work correctly, the full URL of the link is specified. &nbsp;</p>
+<p class="p_Normal">Syntax: <code><b>HYPERLINK("{$param1: string}" or "&lt;complete url adress&gt;";"{$param2: string}" or "&lt;hyperlink value&gt;")</b></code>.</p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;примера</span></p>
+<p class="p_Normal">Examples</p>
+<ol style="list-style-type:decimal">
+<li value="1" class="p_Normal"><code><b>=HYPERLINK("{$site}";"See the official site")</b></code>. The site address is specified as a string in the app item, the hyperlink value is set manually.</li><li value="2" class="p_Normal"><code><b>=HYPERLINK("https://elma365.com/en/";"{$__name}")</b></code>. The site address is specified manually, the hyperlink value is formed from a field in the app item. </li></ol>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;примера</span></p>
+<h3 class="p_Heading3"><a id="exttext" class="hmanchor"></a><span class="f_Heading3">ExtText function</span></h3>
+<p class="p_Normal">In case system functions are not enough to customize a template, you can create a custom <code><b>ExtText</b></code> function. The function allows you to call  <a href="extention-api.html" class="topiclink">API methods</a> described in custom modules and apply them to the generated template.</p>
+<p class="p_Normal">Syntax: <code><b>{ExtText("module id", "method address")}</b></code>: </p>
+<ul style="list-style-type:disc">
+<li class="p_Normal"><span style="font-weight: bold;">Module id</span>. Characters from the module URL coming after <span style="font-weight: bold;">/ext_</span>. For example, if the module URL is <span style="font-weight: bold;">mycompany.brix365.com/admin/extensions/ext_12ab-1212</span>, then <span style="font-weight: bold;">12ab-1212 </span>should be inserted into the function.</li><li class="p_Normal"><span style="font-weight: bold;">Method address</span>. The value of the <span style="font-weight: bold;">Address</span> field from the table located on the <span style="font-weight: bold;">API Methods</span> tab in the <a href="extention-api.html" class="topiclink">settings of the module</a>. </li><li class="p_Normal"><span style="font-weight: bold;">Additional parameters</span>. An optional parameter that is passed to the specified method, for example, an app property. In the request body the additional parameters are displayed as <span style="font-weight: bold;">p1</span>, <span style="font-weight: bold;">p2</span>, etc. The are passed in the <code><b>ExtText</b></code> function separated with a comma after the mandatory parameters. Please note, the values will be assigned to the parameters in the order in which they are declared in the method request body.</li></ul>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">Начало&nbsp;примера</span></p>
+<p class="p_Normal">Example</p>
+<p class="p_Normal">You can apply the <code><b>ExtText</b></code> function in naming app items. To do that:</p>
+<ol style="list-style-type:decimal">
+<li value="1" class="p_Normal">Create a module and set up an API method that will be used for generating app item names.</li><li value="2" class="p_Normal">Create a <a href="360007679591.html#name_template" class="topiclink">name template</a> by using the <code><b>ExtText</b></code> function.</li></ol>
+<p class="p_Normal" style="margin: 0 0 0 34px;">For example:</p>
+<p style="line-height: 1.28; margin: 0 0 11px 34px;"><code><b>{ExtText("4c34-822c", "name", "Example text", {$_index})}</b></code></p>
+<ol style="list-style-type:decimal">
+<li value="3" class="p_Normal">The function will trigger the method that will process the passed parameters. After the conditions specified in the method are executed, the result can be used as an app item name.</li></ol>
+<p class="p_Normal"><a class="dropdown-toggle" style="font-style: normal; font-weight: normal; color: #000000; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186A6')">Example of an API method script for creating app item names</a></p>
+<div id="TOGGLE0186A6" class="dropdown-toggle-body" style="text-align: left; text-indent: 0; line-height: 1.0; page-break-inside: avoid; padding: 0 0 0 0; margin: 0 0 0 0;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_CodeExample" style="white-space: normal; page-break-inside: auto;"><span class="f_CodeExample">async function name(req: HttpApiRequest): Promise&lt;HttpResponse | void&gt; {</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; const resp = new HttpResponse();</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; let result: string = &quot;&quot;;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; let bodystr: string = req!.body!.toString();</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; </span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; JSON.parse(bodystr, function (k, v) { // k and v - key and value</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; if (k != '') { // you can set your conditions</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; result += &quot;_key&quot;+k</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; result += &quot;_value&quot;+v</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; }</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample"> &nbsp; });</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; resp</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;.status(200)</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;.content(result)</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;.set('Content-Type', 'text/html')</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;return resp</span><br />
+<span class="f_CodeExample">}</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">Конец&nbsp;примера</span></p>
+<p class="p_Normal"><a id="feature-flag" class="hmanchor"></a>When using complex custom functions, you can change their processing mode to speed up the generation of template documents. All variables and functions will be processed in parallel instead of sequentially one after another.</p>
+<p class="p_Normal">For this purpose, you can enable the <code><b>enableConcurrencyTemplateMapper</b></code> flag in some system editions:</p>
+<ul style="list-style-type:disc">
+<li class="p_Normal">For<span style="font-weight: bold;"> BRIX On-premises Enterprise</span> in the <code><b>values-elma365.yaml</b></code> configuration file. For more details, see <a href="change-settings-enterprise.html#enable-feature-flag-enterpeise" class="topiclink">Modify BRIX Enterprise parameters</a>.</li></ul>
+<ul style="list-style-type:disc">
+<li class="p_Normal">For<span style="font-weight: bold;"> BRIX On-Premises Standard</span> in the <code><b>config-elma365.txt</b></code> configuration file. For more details, see <a href="change-elma365standard-parameters.html#enable-feature-flag-standard" class="topiclink">Modify BRIX Standard parameters</a>.</li></ul>
+<p class="p_Normal">After enabling the flag, you can set the number of parallel processing threads using <a href="change-settings-enterprise.html" class="topiclink">additional parameters</a>.</p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;примера</span></p>
+<p class="p_Normal">Example </p>
+<p class="p_Normal"><code><b>{ExtText("12ab-1212", "watermark", {$number}, "Example text")}</b></code> —&gt; -&gt; function will run the watermark method and pass to it the value of the <code><b>$number</b></code> variable from the business process in which the template is being configures, as well as the specified <span style="font-weight: bold;">Example</span> <span style="font-weight: bold;">text</span> string.</p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;примера</span></p>
+<h2 class="p_Heading2" style="line-height: 1.20; margin: 19px 0 0 0;"><a id="if" class="hmanchor"></a><span class="f_Heading2" style="font-size: 24px;">Conditions</span></h2>
+<p style="line-height: 1.20; margin: 19px 0 0 0;"><span style="font-family: Inter;">You can display certain text in your document depending on conditions.</span></p>
+<p style="line-height: 1.20; margin: 14px 0 0 0;"><span style="font-family: Inter;">A condition starts with</span><span style="font-size: 13px; font-family: Inter; color: #394149;"> </span><code><b>{if &lt;condition&gt;}</b></code><span style="font-size: 13px; font-family: Inter; color: #394149;"> </span><span style="font-family: Inter;">and ends with</span><span style="font-size: 13px; font-family: Inter; color: #394149;"> </span><code><b>{end}</b></code><span style="font-size: 13px; font-family: Inter; color: #394149;">. </span><code><b>&lt;condition&gt;</b></code> is any condition, for example, <code><b>{$variable_name} = "Yes"</b></code>.</p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;примера</span></p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;">Example 1</p>
+<p style="line-height: 1.20; margin: 14px 0 0 0;"><code><b>{if {$user_name} = "Jacky Jones"} Best regards, Jacky Jones {end}</b></code><span style="font-family: 'Courier New',Courier,monospace; font-weight: bold;"> </span>—&gt;<span style="font-family: 'Courier New',Courier,monospace; font-weight: bold;"> </span><span style="font-family: 'Courier New',Courier,monospace;">the function's condition checks the user's name. If the name coincides, the specified text is displayed</span><span style="color: #394149;">.</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;примера</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;примера</span></p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;">Example 2</p>
+<p class="p_Normal"><code><b>{if {$week.day} = "Friday"}</b></code></p>
+<p class="p_Normal"><code><b>Bye, have a great weekend!</b></code></p>
+<p class="p_Normal"><code><b>{else}</b></code></p>
+<p class="p_Normal"><code><b>Bye!</b></code></p>
+<p class="p_Normal"><code><b>{end}</b></code><span style="font-family: 'Courier New',Courier,monospace; font-weight: bold;"> </span>—&gt;<span style="font-family: 'Courier New',Courier,monospace;"> in this example, the current day of the week is checked. Depending on the day, one of the text options will be displayed</span><span style="color: #394149;">.</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;примера</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;внимание</span></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Inter;">When using multiline conditions for </span><span style="font-size: 15px; font-family: Inter; font-weight: bold;">.xlsx</span><span style="font-size: 15px; font-family: Inter;"> files, you should not place additional text in the lines with the </span><code><b>{if &lt;condition&gt;}</b></code><span style="font-size: 15px; font-family: Inter;">, </span><code><b>{else}</b></code><span style="font-size: 15px; font-family: Inter;"> and </span><code><b>{end}</b></code><span style="font-size: 15px; font-family: Inter;"> operators. It will be removed during document generation.</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;внимание</span></p>
+<p class="p_Normal" style="line-height: 1.20; margin: 19px 0 0 0;">Please note that for <a href="360009707032.html#yes-no-switch" class="topiclink">Yes/No switch</a> variables you need to specify options from the <span style="font-weight: bold;">Options</span> field. By default they are <span style="font-weight: bold;">Yes</span> and <span style="font-weight: bold;">No</span>.</p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">Начало&nbsp;примера</span></p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;">Example</p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><code><b>{if {$options} <> "No"} Example text {end}</b></code><span style="font-family: 'Courier New',Courier,monospace;"> </span>—&gt;<span style="font-family: 'Courier New',Courier,monospace;"> the text will be displayed only if the value is </span><span style="font-family: 'Courier New',Courier,monospace; font-weight: bold;">Yes</span><span style="color: #394149;">.</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">Конец&nbsp;примера</span></p>
+<p class="p_Normal">You can use a function to check if an app item's properties have values. If the field on the form is filled in, you can display its value.</p>
+<p class="p_Normal">For<span style="color: #394149;"> <a href="360009707032.html#app" class="topiclink">App</a> or <a href="360009707032.html#file_type" class="topiclink">Files</a> properties, the condition function is applied only if there is one value, e.i. the </span><span style="font-weight: bold; color: #394149;">One</span><span style="color: #394149;"> option is selected for the property. If the </span><span style="font-weight: bold; color: #394149;">Many</span><span style="color: #394149;"> option is selected, use the</span><span style="color: #394149;"> <a href="360027003711.html#for" class="topiclink">for loop</a>.</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">Начало&nbsp;примера</span></p>
+<p class="p_Normal">Example</p>
+<p style="line-height: 1.20; background: #f7f7f7; margin: 0 0 16px 0;"><code><b>{if {$document}} {$document} {end}</b></code><span style="font-family: 'Courier New',Courier,monospace; font-weight: bold;"> </span>—&gt;<span style="font-family: 'Courier New',Courier,monospace; font-weight: bold;"> </span><span style="font-family: 'Courier New',Courier,monospace;">if a document is uploaded to a File field, its name will be displayed n the generated file</span><span style="color: #394149;">.</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;примера</span></p>
+<h3 class="p_Heading3" style="line-height: 1.20; margin: 19px 0 0 0;"><span class="f_Heading3" style="font-size: 19px;">Operators</span></h3>
+<p class="p_Normal" style="line-height: 1.20; margin: 19px 0 0 0;">In conditions you can use the following operators:</p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;"><span style="font-weight: bold;">= </span>Equals</p>
+<p class="p_Normal" style="line-height: 1.20;"><span style="font-weight: bold;">&lt;&gt;</span> Not equal to</p>
+<p class="p_Normal" style="line-height: 1.20;"><span style="font-weight: bold;">&gt;</span> Greater than</p>
+<p class="p_Normal" style="line-height: 1.20;"><span style="font-weight: bold;">&gt;= </span>Greater than or equal</p>
+<p class="p_Normal" style="line-height: 1.20;"><span style="font-weight: bold;">&lt;</span> Less than</p>
+<p class="p_Normal" style="line-height: 1.20;"><span style="font-weight: bold;">&lt;=</span> Less than or equal</p>
+<p class="p_Normal" style="line-height: 1.20;">&nbsp;</p>
+<h3 class="p_Heading3"><span class="f_Heading3">OR and AND logical operators</span></h3>
+<p class="p_Normal">To create complex conditions, you can use the <code><b>OR</b></code> and <code><b>AND</b></code> operators, which allow you to specify multiple conditions as a single construction. </p>
+<p class="p_Normal">When using <code><b>OR</b></code>, it is sufficient that at least one of the specified conditions is met. </p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;примера</span></p>
+<p class="p_Normal">Example </p>
+<p class="p_Normal"><code><b>{if {$trip.location_type} = "Hotel" OR {$trip.location_type} = "Host apartment"}
+{$business_trip_request.city}
+{end}</b></code></p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;примера</span></p>
+<p class="p_Normal">When using <code><b>AND</b></code>, you need all of the above conditions to be met. </p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;примера</span></p>
+<p class="p_Normal">Example </p>
+<p class="p_Normal"><code><b>{if {$item.price} < 5000 AND {$item.isAvailable}}
+{$item.name}
+{end}</b></code></p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;примера</span></p>
+<p class="p_Normal">Conditions with the logical operators <code><b>OR</b></code> and <code><b>AND</b></code> can be combined using parentheses. </p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;примера</span></p>
+<p class="p_Normal">Example</p>
+<p class="p_Normal"><code><b>{if ({$business_trip_request.location_type} = "Hotel" OR {$ business_trip_request.location_type} = "Host apartment") AND ({$business_trip_request.price} < 5000)}
+{$business_trip_request.city}
+{end}</b></code></p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;примера</span></p>
+<h2 class="p_Heading2" style="line-height: 1.20; margin: 19px 0 0 0;"><a id="for" class="hmanchor"></a><span class="f_Heading2" style="font-size: 24px;">For loop</span></h2>
+<p class="p_Normal" style="line-height: 1.20; margin: 19px 0 0 0;">Use the <code><b>for</b></code> loop to display a list of items <span style="font-family: Inter;">in a document (for example, supplied goods listed one by one).</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;примера</span></p>
+<p style="line-height: 1.20;"><code><b>{for fr in {$goods} }</b></code></p>
+<p style="line-height: 1.20;"><code><b>ordered {$fr}</b></code></p>
+<p style="line-height: 1.20;"><code><b>{end}</b></code></p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;примера</span></p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;">When you <a href="360026936731.html" class="topiclink">upload your template to the system</a>, <span style="font-family: Inter;">and the</span><span style="font-size: 13px; font-family: Inter; color: #394149;"> </span><code><b>for</b></code><span style="font-size: 13px; font-family: Inter; color: #394149;"> </span><span style="font-family: Inter;">loop is extracted, the field assigned for it is marked as a </span><span style="font-family: Inter; font-weight: bold;">list</span><span style="font-family: Inter;">.</span></p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;"><img alt="sodt2" width="512" height="214" style="margin:0;width:512px;height:214px;border:none" src="sodt2.png"/></p>
+<h3 class="p_Heading3"><span class="f_Heading3">For loop in apps</span></h3>
+<p style="line-height: 1.20; margin: 19px 0 0 0;"><span style="font-family: Inter;">You can use the</span><span style="font-size: 13px; font-family: Inter; color: #394149;"> </span><code><b>for</b></code><span style="font-family: Inter;"> loop to display items in an app:</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;примера</span></p>
+<p style="line-height: 1.20; background: #f7f7f7; margin: 19px 0 0 0;"><span style="font-family: Inter;">Example</span></p>
+<p style="line-height: 1.20; background: #f7f7f7; margin: 5px 0 0 0;"><code><b>{for fr in {$appListField} }</b></code></p>
+<p style="line-height: 1.20; background: #f7f7f7; margin: 5px 0 0 0;"><code><b>Contract {$fr} with {$fr.__name} for {$fr.money}</b></code></p>
+<p style="line-height: 1.20; background: #f7f7f7; margin: 5px 0 0 0;"><code><b>{end}</b></code></p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;примера</span></p>
+<p style="line-height: 1.20; margin: 19px 0 0 0;"><span style="font-family: Inter;">A similar loop allows you to write data to a table.</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;внимание</span></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Inter;">For </span><span style="font-size: 15px; font-family: Inter; font-weight: bold;">.xlsx</span><span style="font-size: 15px; font-family: Inter;"> files, additional text should not be placed in lines with the </span><code><b>{for &lt;expression&gt;}</b></code><span style="font-size: 15px; font-family: Inter;"> and </span><code><b>{end}</b></code><span style="font-size: 15px; font-family: Inter;"> operators. It will be removed during document generation, except for text in <a href="360027003711.html#merged-cells" class="topiclink">merged cells</a>.</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;внимание</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;примера</span></p>
+<p style="line-height: 1.20; background: #f7f7f7; margin: 19px 0 0 0;"><span style="font-family: Inter;">Example</span></p>
+<p style="line-height: 1.20; background: #f7f7f7; margin: 5px 0 0 0;"><code><b>{for fr in {$appListField} }</b></code></p>
+<div style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0 0 0 0;"><table style="border:none; border-spacing:0; border-collapse:collapse;">
+<tr>
+<td style="vertical-align:top; width:138px; background-color:#FFFFFF; padding:1px; border:solid thin #000000;"><p style="line-height: 1.20; margin: 0 0 11px 0;"><code><b>{$fr}</b></code></p>
+</td>
+<td style="vertical-align:top; width:138px; background-color:#FFFFFF; padding:1px; border:solid thin #000000;"><p style="line-height: 1.20; margin: 0 0 11px 0;"><code><b>{$fr.__name}</b></code></p>
+</td>
+<td style="vertical-align:top; width:138px; background-color:#FFFFFF; padding:1px; border:solid thin #000000;"><p style="line-height: 1.20; margin: 0 0 11px 0;"><code><b>{$fr.money}</code></b></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="line-height: 1.20; background: #f7f7f7; margin: 5px 0 0 0;"><code><b>{end}</b></code></p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;примера</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;внимание</span></p>
+<p style="line-height: 1.20; margin: 7px 0 7px 0;"><span style="font-family: Inter;">In system versions 2023.12 and lower, specify field names in templates without the </span><code><b>data</b></code><span style="font-family: Inter;"> prefix when working with apps. Starting with 2024.1, generation will work correctly with the prefix.</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;внимание</span></p>
+<h3 class="p_Heading3"><a id="for_tables" class="hmanchor"></a><span class="f_Heading3">For loop in tables</span></h3>
+<p style="line-height: 1.20; margin: 7px 0 7px 0;"><span style="font-family: Inter;">To let the loop work correctly, when you <a href="360026936731.html#add_shablon" class="topiclink">add a template</a> to the system, specify the <a href="360009707032.html#table" class="topiclink">Table</a> data type for a variable in the loop.</span></p>
+<p style="line-height: 1.20; margin: 7px 0 7px 0;"><img alt="for_loop_tables" width="618" height="412" style="margin:0;width:618px;height:412px;border:none" src="for_loop_tables.png"/></p>
+<p style="line-height: 1.20; margin: 19px 0 0 0;"><span style="font-family: Inter;">If you need to extract data from a <a href="360010201779.html" class="topiclink">table</a> into a document, for example, a list of goods with their quantity and cost filled in during order processing, you can use a template in </span><span style="font-family: Inter; font-weight: bold;">.xlsx</span><span style="font-family: Inter;"> format.</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;внимание</span></p>
+<p class="p_Normal">In systems version 2023.12 and below, when working with tables, you should specify the <code><b>row.data</b></code> prefix before the field names in the template. Since version 2024.1, using <code><b>data</b></code> does not affect the correct generation of the file<span style="font-family: Inter; color: #394149;">.</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;внимание</span></p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;">When configuring the template, use a <code><b>for</b></code> loop and specify the process variable that stores the table data.</p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;">When creating a template in a <span style="font-weight: bold;">.xlsx</span> file, the <code><b>for</b></code> and <code><b>end</b></code> commands must be in the first column of the table, otherwise the entered text will not be displayed correctly. Next, you need to specify the codes of the corresponding app fields in the template.</p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;">For example, for the column where the price will be displayed, let’s specify <code><b>{$row.data.item_price}</b></code> or <code><b>{$row.item_price}</b></code>, in case you have version 2024.1 and higher.</p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;">In the <code><b>item_price</b></code> function, this is the code for the <span style="font-weight: bold;">Price</span> field. The prefix <code><b>row.data</b></code> or <code><b>row.</b></code> refers to the item in a loop and allows as many rows to be filled in the document as are filled in the table in BRIX.</p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;внимание</span></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;">In table rows with the <code><b>{for &lt;expression&gt;}</b></code> and <code><b>{end}</b></code> operators, additional text should not be placed. It will be removed during document generation, except for text in <a href="360027003711.html#merged-cells" class="topiclink">merged cells</a>.</p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;внимание</span></p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;">A <span style="font-weight: bold;">.xlsx</span> document template for a table that contains an item, its cost, quantity, and total amount payable may look like this:</p>
+<p class="p_Normal"><img alt="01.PNG" title="01.PNG" width="925" height="160" style="margin:0;width:925px;height:160px;border:none" src="360012748940-01.png"/></p>
+<p class="p_Normal">You can also add an <code><b>if</b></code> condition to the <code><b>for</b></code> loop. You can see an example in the <a href="ready-made-sheets-settings.html#app-file-template" class="topiclink">Templates for approval sheets and lists of informed users</a> article. Please note that for <span style="font-weight: bold;">.xlsx</span> files, you should not place any text in rows with the <code><b>{for &lt;expression&gt;}</b></code> and <code><b>{end}</b></code> operators, as this text is deleted during generation. The exception is vertically merged cells.</p>
+<h3 class="p_Heading3"><span class="f_Heading3">Template for a table in a .docx file</span></h3>
+<p class="p_Normal">To generate a table from a template in a <span style="font-weight: bold;">.docx</span> file:</p>
+<ol style="list-style-type:upper-roman">
+<li value="1" class="p_Normal">Separate the first row of the table using the <span style="font-weight: bold;">Split table</span> option.</li><li value="2" class="p_Normal">In the empty row that appears, declare a <code><b>for</b></code> loop.</li><li value="3" class="p_Normal">Configure the template in the table by specifying variables from the business process context.</li><li value="4" class="p_Normal">Under the table, close the loop with the <code><b>end</b></code> command.</li></ol>
+<p class="p_Normal">For example, the template for a table in a document might look like this:</p>
+<p class="p_Normal"><img alt="template_table_doc" width="736" height="140" style="margin:0;width:736px;height:140px;border:none" src="template_table_doc.png"/></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Nested tables</span></h3>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Inter;">The </span><code><b>for</b></code><span style="font-size: 15px; font-family: Inter;"> loop can be used to create a nested table. When referencing columns of a nested table, instead of prefix </span><code><b>row.data</b></code><span style="font-size: 15px; font-family: Inter;"> or </span><code><b>row</b></code><span style="font-size: 15px; font-family: Inter;"> use a different prefix. For example, </span><code><b>subrow.data</b></code><span style="font-size: 15px; font-family: Inter;"> in system versions 2023.11 and older or prefix </span><code><b>subrow</b></code><span style="font-size: 15px; font-family: Inter;"> for system versions 2024.1 and up.</span></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><img alt="for-brix-00" width="493" height="162" style="margin:0;width:493px;height:162px;border:none" src="for-brix-00.png"/></p>
+<p class="p_Normal"><a id="merged-cells" class="hmanchor"></a>Please note that is rows with operators <code><b>{for &lt;expression&gt;}</b></code> and <code><b>{end}</b></code> you cannot place any other text as it will be deleted during generation. Cells merged vertically are an exception. For example, when generating a document from such a templte, the value of variable <code><b>{$row.author}</b></code> will be shown in the table:</p>
+<p class="p_Normal"><img alt="for-brix-01" width="707" height="162" style="margin:0;width:707px;height:162px;border:none" src="for-brix-01.png"/></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 13px; color: #000000;">&nbsp;</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Show index number in tables</span></h3>
+<p class="p_Normal">You can use for for loop to add a row's index number to the table template.<span style="font-size: 15px; color: #394149;"> </span>This is done via the<span style="font-size: 15px; color: #394149;"> </span><code><b>row.data</b></code><span style="font-size: 15px; color: #394149;"> </span>prefix and the<span style="font-size: 15px; color: #394149;"> </span><code><b>__index</b></code><span style="font-size: 15px; color: #394149;"> </span>system property.</p>
+<p style="line-height: 1.20; margin: 16px 0 0 0;">For example, a table template with the row number, product name and product price may look like this:</p>
+<p class="p_Normal" style="margin: 16px 0 0 0;"><img alt="table-index" title="table-index" width="521" height="169" style="margin:0;width:521px;height:169px;border:none" src="table-index.png"/></p>
+
+                        <div class="bottom-nav">
+                            
+                                <a id="prev-link" class="topic__navi_prev" href="360026936731.html">
+                                    <span class="bottom-nav__arrow bottom-nav__arrow--prev"></span> <span
+                                        class="bottom-nav__link">360026936731.html</span>
+                                </a>
+                            
+                            
+                                <a id="next-link" class="topic__navi_next" href="360012267032.html">
+                                    <span class="bottom-nav__link">360012267032.html</span> <span
+                                        class="bottom-nav__arrow bottom-nav__arrow--next"></span>
+                                </a>
+                            
+                        </div>
+                        <!-- добавляет на страницу строку блок Была ли статья полезной?  -->
+                          <div class="feedback" id="feedback"><span><b>Was this helpful?</b></span><form action="" method="POST" class="feedback-form" id="feedback-form"><div class="feedback__popup feedback__popup-response" id="feedback__popup_thx" style="display: none;">Thanks for your feedback!</div><div class="feedback__popup" id="feedback__popup_why" style="display: none;"><div class="feedback__popup-header">Please specify why:</div><input type="radio" name="category" id="bad_recommendation" value="bad_recommendation"><label for="bad_recommendation">Recommendations did not help me</label><input type="radio" name="category" id="difficult_text" value="difficult_text"><label for="difficult_text">Article is hard to understand</label><input type="radio" name="category" id="no_answer" value="no_answer"><label for="no_answer">Didn’t answer my question</label><input type="radio" name="category" id="bad_header" value="bad_header"><label for="bad_header">Content does not match the topic</label><input type="radio" name="category" id="other_reason" value="other_reason"><label for="other_reason">Other</label></div><div class="feedback__popup" id="feedback__popup-other" style="display: none;"><div class="feedback__popup-header">How can we improve the article?</div><textarea class="feedback__textarea" name="other" id=""></textarea><input type="submit" class="feedback__other-btn" value="Submit"></div><div class="feedback-form__btn-group"><input type="radio" name="useful" id="feedback__useful_yes" value="true"><label for="feedback__useful_yes"><img src="like.svg" class="small-img"><spanclass="feedback-form__btn-group_yes-btn">Yes</spanclass="feedback-form__btn-group_yes-btn"></label><input type="radio" name="useful" id="feedback__useful_no" value="false"><label for="feedback__useful_no"><img src="dislike.svg" class="small-img"><spanclass="feedback-form__btn-group_no-btn">No</spanclass="feedback-form__btn-group_no-btn"></label></div><select name="category"><option disabled="">Please specify why</option><option value="bad_recommendation" selected="">Recommendations did not help me</option><option value="difficult_text">Article is hard to understand</option><option value="no_answer">Didn’t answer my question</option><option value="bad_header">Content does not match the topic</option><option value="other_reason">Other</option></select><input type="submit"></form></div>
+                           
+                    </section>
+                </div>
+                <aside class="article__sidebar" style="display:none">
+                    <input type="checkbox" />
+                    <div class="article__arrow"></div>
+                    <div class="table-of-contents elma365-right" id="toc2Content">
+                        <h3 class="h3-toc">In this topic</h3>
+                        <nav id="toc2"></nav>
+                    </div>
+                </aside>
+            </div>
+        </article>
+    </main>               
+    <footer class="footer">
+        <div class="footer-container">
+  <div class="footer-mobile">
+    
+    <ul class="footer-mobile__list"><li><a href="https://brix365.com/en/" target="_blank">BRIX</a></li><li><a href="https://tssdk.brix365.com/en/latest/" target="_blank">SDK</a></li><li><a href="https://api.brix365.com/en/" target="_blank">API</a></li></ul><ul class="footer-mobile__list"><li><a href="https://brix365.com/en/help/platform/get-trial.html">Platform</a></li><li><a href="https://brix365.com/en/help/ecm/ecm-functions.html">ECM</a></li><li><a href="https://brix365.com/en/help/service/service-functions.html">Service</a></li><li><a href="https://brix365.com/en/help/projects/projects-functions.html">Projects</a></li></ul>
+    
+    
+  </div>
+  <div class="footer-wrap">
+    
+      <div><span class="mobile-question-popup">Send feedback</span><form method="POST" action class="question__popup question-xs" id="question__popup"><div class="question-wrap"><span class="close"></span><span class="title">Ask a question</span><label for="help_question" style="display: none;"></label><textarea name="help_question" id="help_question"></textarea><input type="submit" value="Send"></div></form><div class="hidden fade-in question-success-xs">Sent</div></div>
+    
+    <div class="footer-flex-b">
+      <span class="footer-copy">&copy; 2025 BRIX</span>
+      <ul class="footer-list">
+        
+        <li class="footer-item">
+            <a href="#" class="arrow-top" style="display: block;"></a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+ 
+    </footer>
+    <iframe name="hmnavigation" style="display:none!important"></iframe>
+    <script src="./jquery-ui.js"></script>
+    <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
+    <script src="./jquery.tocify.min.js"></script>
+    <script src="./TypoReporter.min.js"></script>
+    <script src="./google-search.js"></script>
+    <script src="./main.js"></script>
+<script type="text/javascript">
+HMInitToggle('TOGGLE0186A1','hm.type','dropdown','hm.state','0');
+HMInitToggle('TOGGLE0186A2','hm.type','dropdown','hm.state','0');
+HMInitToggle('TOGGLE0186A3','hm.type','dropdown','hm.state','0');
+HMInitToggle('TOGGLE0186A4','hm.type','dropdown','hm.state','0');
+HMInitToggle('TOGGLE0186A5','hm.type','dropdown','hm.state','0');
+HMInitToggle('TOGGLE0186A6','hm.type','dropdown','hm.state','0');
+</script>
+</body>
+
+</html>

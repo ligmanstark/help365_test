@@ -1,0 +1,226 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Add sources and set up the report table</title>
+    <meta name="generator" content="Help+Manual" />
+    <meta name="keywords" content="" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A source is a system component whose data will be displayed on the report page in the form of a table. You can add multiple components to a report and link them to each other...." />
+    <meta name="picture" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Full documentation for BRIX365 platform. Low-code developer guide. User guide. Admin guide. Developer guide." />
+    <meta property="og:url" content="https://brix365.com/en/help" />
+    <meta property="og:image" content="" />                                                              
+    <link rel="icon" href="favicon.png" type="image/png" />
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./jquery-ui.css" />
+    <link rel="stylesheet" href="default.css" />
+    <link rel="stylesheet" href="./search-yandex.css" />
+    <link rel="stylesheet" href="./article.css" />
+    <link rel="stylesheet" href="./glossary.css" />
+    <link rel="stylesheet" href="./theme.css" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+
+<body>
+    
+    <script>!function(e,t,c,n,r,a,m){e.ym=e.ym||function(){(e.ym.a=e.ym.a||[]).push(arguments)},e.ym.l=1*new Date;for(var s=0;s<document.scripts.length;s++)if(document.scripts[s].src===n)return;a=t.createElement(c),m=t.getElementsByTagName(c)[0],a.async=1,a.src=n,m.parentNode.insertBefore(a,m)}(window,document,"script","https://mc.yandex.ru/metrika/tag.js"),ym(83179930,"init",{clickmap:!0,trackLinks:!0,accurateTrackBounce:!0,webvisor:!0})</script><noscript><div><img alt=""src=https://mc.yandex.ru/watch/83179930 style=position:absolute;left:-9999px></div></noscript> 
+    
+    ﻿<header class="header elma-365">
+  <div class="container">
+    <a class="header__logo" href="https://brix365.com/en/help">
+      <img src="./logo-en.svg">
+    </a>
+ <!-- <div class="hero__search-form" id="search-panel">
+   <form class="search-form" onsubmit="ym(83180416,'reachGoal','poisk')">
+     <label class="search-form__label">
+       <span id="reset-search" class="search__icon"></span>
+       <input class="search-form__input" type="text">
+     </label>
+     <input class="search-form__submit" type="submit" value="Submit">
+   </form>
+  </div>       -->
+  
+     <div class="hero__search-form" id="search-panel"> <form class="search-form"> <label class="search-form__label"> <span id="reset-search" class="search__icon"></span> <input class="search-form__input" type="text"> </label> <input class="search-form__submit" type="submit" value="Submit"> </form> </div> 
+  <div class="hero__search">
+      <a href="#" id="search-icon" class="hero__search-icon">
+        <img src="search-icon-white.svg" alt="search string">
+      </a>
+      <a href="#" id="side-menu-icon" class="hero__side-icon">
+        <img src="side_menu.svg" alt="side menu">
+      </a>
+    </div>  
+  <div class="header__navi">
+        
+        <ul class="header__list"><li><span class="solution-select"><span class="solution-select__selected"></span><svg width="7" height="4" viewBox="0 0 7 4" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L3.5 3.5L6 1" stroke="white" stroke-linecap="round" stroke-linejoin="round"/></svg><ul class="solution-select__list"><li><a class="project-link" href="https://brix365.com/en/help/platform/get-trial.html">Platform</a></li><li><a class="project-link" href="https://brix365.com/en/help/ecm/ecm-functions.html">ECM</a></li><li><a class="project-link" href="https://brix365.com/en/help/crm/crm_overview.html">CRM</a></li><li><a class="project-link" href="https://brix365.com/en/help/service/service-functions.html">Service</a></li><li><a class="project-link" href="https://brix365.com/en/help/projects/projects-functions.html">Projects</a></li><li><a class="project-link" href="https://brix365.com/en/help/business_solutions/-elma365-store.html">Business Solutions</a></li></ul></span></li><li><a href="https://api.brix365.com/en/" target="_blank">API</a></li><li><a href="https://tssdk.brix365.com/" target="_blank">SDK</a></li></ul>
+        
+        
+   </div>
+  </div>
+
+</header>
+
+
+
+    
+    <main class="main container">
+
+        <aside class="sidebar" id="sidebar">
+        <div class="sidebar__header">
+                 <a class="header__logo" href="https://brix365.com/en/help">
+                    <img src="./logo-light-en.svg">
+                 </a>
+                    <span class="sidebar__close elma-365-close" id="close"></span>
+            </div>
+            <div class="sidebar__wrapper" id="side-menu">
+                
+            </div>
+        </aside>
+
+        <article class="article" id="article">
+            <div class="article-inner">           
+                <div class="content">
+                    <header class="article__header">
+                        
+                            <div class="topic__breadcrumbs">
+                                <p>Low-code designer &gt; <a href="report.html">Report</a> / Add sources and set up the report table</p>
+                            </div>
+                        
+                        <div class="topic__title"><h1 class="p_Heading1"><span class="f_Heading1">Add sources and set up the report table</span></h1>
+</div>
+                    
+</header>
+                    <section class="article__content">
+                        <div class="scroll-top-inner">
+                            <a href="#h1-article" class="scroll-top"></a>
+                        </div>
+                        <!-- Placeholder for topic body. -->
+                        <p style="line-height: 1.20; margin: 0 0 11px 0;">A<span style="font-weight: bold;"> source</span> is a system component whose data will be displayed on the report page in the form of a table. You can add multiple components to a report and link them to each other. The sources can be:</p>
+<ul style="list-style-type:disc">
+<li style="text-align: justify; line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 11px;">System and custom apps of the <span style="color: #0000ff;"><a href="360006963072.html" class="topiclink">Standard</a></span>, <span style="color: #0000ff;"><a href="360028290132.html" class="topiclink">Event</a></span>, or <span style="color: #0000ff;"><a href="360009923631.html" class="topiclink">Document</a></span> types.</li><li style="text-align: justify; line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 11px;">System and custom business processes.</li></ul>
+<p style="text-align: justify; line-height: 1.20; margin: 0 0 11px 0;">A <a href="contract.html" class="topiclink">contract</a> cannot be used as a source. Using one report as a source for another is not available.</p>
+<p style="text-align: justify; line-height: 1.20; margin: 0 0 11px 0;">To combine data from multiple sources in the report, components should be linked to each other in pairs by a common field. You can configure the binding between sources by type:</p>
+<ul style="list-style-type:disc">
+<li style="text-align: justify; line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 11px;">App<span style="font-size: 15px; color: #1f1f1f; background-color: #ffffff;">—</span>app.</li><li style="text-align: justify; line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 11px;">Business process<span style="font-size: 15px; color: #1f1f1f; background-color: #ffffff;">—</span>app.</li><li style="text-align: justify; line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 11px;">Business process<span style="font-size: 15px; color: #1f1f1f; background-color: #ffffff;">—</span>business process.</li></ul>
+<p style="line-height: 1.28; margin: 0 0 11px 0;">Data binding from two components in a report is performed by using the fields for binding, which are selected from the source context.</p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;">Before adding sources to the report, define by which fields they will be linked. Create these fields in the source context and enable the <a href="360028941112.html#searchandsortbyfield" class="topiclink">search and sort</a> option for them.</p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;">The available ways of linking sources and types of fields for linking can be found in <a href="bind-report-apps.html" class="topiclink">Bind report source apps</a>.</p>
+<h2 class="p_Heading2"><a id="add-source" class="hmanchor"></a><span class="f_Heading2">Select sources</span></h2>
+<ol style="list-style-type:upper-roman">
+<li value="1" style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 11px;">Open the report and in the center of the page, click <span style="font-weight: bold;">Add Source</span>.</li><li value="2" style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 11px;">In the upper right corner of the page that opens, click <span style="font-weight: bold;">+Data Source</span>.</li><li value="3" style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 11px;">Specify the source name and select an app from any workspace in the system.</li></ol>
+<p style="line-height: 1.20; margin: 0 0 11px 36px;"><span style="font-size: 13px; color: #000000;">&nbsp;</span></p>
+<p style="line-height: 1.20; margin: 0 0 11px 36px;"><img alt="add_source" width="637" height="322" style="margin:0;width:637px;height:322px;border:none" src="add_source.png"/></p>
+<ul style="list-style-type:disc">
+<li style="text-align: justify; line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold;">Name</span><span style="font-size: 13px; font-weight: bold; color: #ff0000;">*</span>. Specify the name of the source to be displayed on the report settings page.</li><li style="text-align: justify; line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold;">Data source type</span>. Add a system component whose context will be displayed in the report: app or business process.</li><li style="text-align: justify; line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold;">Data source</span><span style="font-size: 13px; font-weight: bold; color: #ff0000;">*</span>. Select any app or process in the system.</li><li style="text-align: justify; line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold;">Link to app item</span>. The option is available for the <span style="font-weight: bold;">App</span> type source. When the option is enabled, the <span style="font-weight: bold;">Name</span> field can be added to the report table from the app context, and it will be displayed as a link to the item. By clicking on the link, users will be able to navigate to the page of the item added to the report.</li></ul>
+<ol style="list-style-type:upper-roman">
+<li value="4" style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 11px;">Click <span style="font-weight: bold;">Save</span>.</li><li value="5" style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 11px;">In this way, add all sources whose data you want to display in the report table.</li></ol>
+<p style="text-align: justify; line-height: 1.20; margin: 0 0 11px 0;">You can add more than two system components to a report. To correctly configure the report, at least one binding to another source is created for each source.</p>
+<p style="text-align: justify; line-height: 1.20; margin: 0 0 11px 0;">After you have specified all sources, customize the columns of the report table.</p>
+<h2 class="p_Heading2"><a id="set-table-columns" class="hmanchor"></a><span class="f_Heading2">Add table columns</span></h2>
+<p style="line-height: 1.28; margin: 0 0 11px 0;">Each table column in the report is an added property from the context of the specified source.</p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;">In the column, you can display the value of a property or set the aggregation of data for this property from several items. For example, if a contract contains several invoices, you can display the amount for all the items. </p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;">If the <a href="360028941112.html#searchandsortbyfield" class="topiclink">search and sort</a> option is enabled for a property added as a column, it can be used as a search filter on the report page.</p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;">To add data to the table, follow these steps: </p>
+<ol style="list-style-type:upper-roman">
+<li value="1" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;">Next to the source name, click <span style="font-weight: bold;">Add column</span>. </li></ol>
+<p style="line-height: 1.28; margin: 0 0 11px 25px;"><img alt="add_column" width="992" height="471" style="margin:0;width:992px;height:471px;border:none" src="add_column.png"/></p>
+<ol style="list-style-type:upper-roman">
+<li value="2" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;">Fill in the fields in the opened window:</li></ol>
+<p style="line-height: 1.28; margin: 0 0 11px 25px;"><img alt="report-source-brix-01" width="772" height="630" style="margin:0;width:772px;height:630px;border:none" src="report-source-brix-01.png"/></p>
+<ul style="list-style-type:disc">
+<li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold;">Data source</span>. The field displays the name of the selected source.</li><li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold;">Field</span>.<span style="font-weight: bold;"> </span>Select a property from the context of the app or process specified as the source.</li><li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold;">Field code</span>,<span style="font-weight: bold;"> Field type</span>. The values are filled in automatically according to the selected field from the source context.</li><li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold;">Column name</span><span style="font-weight: bold; color: #ff0000;">*</span>. Specify the name of the column to be displayed in the table.</li><li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold;">Column code</span><span style="font-weight: bold; color: #ff0000;">*</span>. The code is necessary for <a href="report-export.html" class="topiclink">exporting data from the column</a> and is used when creating a template for downloading the table. The field is filled automatically by the specified column name. The value can be changed manually to make the code of each column added to the report unique.</li><li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold;">Aggregation</span>. This option allows you to apply aggregation functions to the data from the source to create summary tables or statistics. You can select <span style="font-weight: bold;">Amount</span>, <span style="font-weight: bold;">Total</span>, <span style="font-weight: bold;">Average</span>, <span style="font-weight: bold;">Maximum</span>, or <span style="font-weight: bold;">Minimum</span>. The table column will display not the value specified on the item form, but the result of grouping reports from several items that meet the specified condition. For example, you can aggregate order data for each month or calculate total sales for a certain period. If you select <span style="font-weight: bold;">No</span>, the table will display the value specified in the source item page.</li><li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold;">Search by field</span>. This option, when selected, indicates that the property will be used as a filter to search for data on the report page. It is turned on automatically if the search and sort option is activated for the field in the source context or data aggregation is set for the column in the report.</li></ul>
+<ol style="list-style-type:upper-roman" start="3">
+<li value="3" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;">Save the added column. </li><li value="4" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;">Customize the table columns in the same way, specifying properties from all added sources.</li><li value="5" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;">You can edit the column name in the table and change the aggregation settings. To do this, click on the added property in the list.</li><li value="6" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;">To remove a column from the table, click <span style="font-weight: bold;">Delete</span> next to the property. If you get an error about the broken links between sources, you can add the property again and specify the code of the deleted column.</li></ol>
+<p style="line-height: 1.28; margin: 0 0 11px 0;">In the example, the <span style="font-weight: bold;">Orders</span>, <span style="font-weight: bold;">Contracts</span>, and <span style="font-weight: bold;">Invoices</span> source apps have been added to the report. The table shows the fields with the order name, contractor, contract name, and invoice amount. The settings on the page look as follows: </p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><img alt="report-source-brix-02" width="868" height="539" style="margin:0;width:868px;height:539px;border:none" src="report-source-brix-02.png"/></p>
+<h2 class="p_Heading2"><a id="additional-settings" class="hmanchor"></a><span class="f_Heading2">Set additional table settings</span></h2>
+<p style="line-height: 1.28; margin: 0 0 11px 0;">In the additional settings, you can set the order in which columns are displayed in the table, as well as the frequency of data updates in the table. To do this, open the advanced table settings:</p>
+<ol style="list-style-type:upper-roman">
+<li value="1" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;">Click the gear icon in the upper left corner of the <span style="font-weight: bold;">Source Settings</span> page. </li><li value="2" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;">In the opened window, specify the settings on the two available tabs: </li></ol>
+<ul style="list-style-type:disc">
+<li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold;">General</span>. In the <span style="font-weight: bold;">Time before data is refreshed (in minutes)</span> field, specify the time after which changes made to the sources can be displayed in the report. The default value is 5 minutes. If you navigate to the report page and then create source items, you can refresh the table and display the new data after 5 minutes. </li></ul>
+<p style="line-height: 1.28; margin: 0 0 11px 34px;">The minimum value is 1 minute. To refresh the table without delays, contact BRIX technical support to set the value <span style="font-weight: bold;">0</span> in this field. Please note that this option will cause additional load on the system.</p>
+<ul style="list-style-type:disc">
+<li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold;">Column Order</span>. Customize the order of columns in the report table. To do this, click the up or down arrow icon next to the column name. </li></ul>
+<p style="line-height: 1.28; margin: 0 0 11px 35px;"><img alt="report-source-brix-03" width="593" height="418" style="margin:0;width:593px;height:418px;border:none" src="report-source-brix-03.png"/></p>
+<ol style="list-style-type:upper-roman" start="3">
+<li value="3" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;">Save the additional table settings. </li></ol>
+<p style="line-height: 1.28; margin: 0 0 11px 0;">After selecting sources and their properties to display in the report, you have to <a href="bind-report-apps.html" class="topiclink">bind the sources</a>, i.e. combine different components, such as items from several apps, into a single data table. Without the binding, you will see an error message when you save the list of sources.</p>
+
+                        <div class="bottom-nav">
+                            
+                                <a id="prev-link" class="topic__navi_prev" href="create-report.html">
+                                    <span class="bottom-nav__arrow bottom-nav__arrow--prev"></span> <span
+                                        class="bottom-nav__link">create-report.html</span>
+                                </a>
+                            
+                            
+                                <a id="next-link" class="topic__navi_next" href="bind-report-apps.html">
+                                    <span class="bottom-nav__link">bind-report-apps.html</span> <span
+                                        class="bottom-nav__arrow bottom-nav__arrow--next"></span>
+                                </a>
+                            
+                        </div>
+                        <!-- добавляет на страницу строку блок Была ли статья полезной?  -->
+                          <div class="feedback" id="feedback"><span><b>Was this helpful?</b></span><form action="" method="POST" class="feedback-form" id="feedback-form"><div class="feedback__popup feedback__popup-response" id="feedback__popup_thx" style="display: none;">Thanks for your feedback!</div><div class="feedback__popup" id="feedback__popup_why" style="display: none;"><div class="feedback__popup-header">Please specify why:</div><input type="radio" name="category" id="bad_recommendation" value="bad_recommendation"><label for="bad_recommendation">Recommendations did not help me</label><input type="radio" name="category" id="difficult_text" value="difficult_text"><label for="difficult_text">Article is hard to understand</label><input type="radio" name="category" id="no_answer" value="no_answer"><label for="no_answer">Didn’t answer my question</label><input type="radio" name="category" id="bad_header" value="bad_header"><label for="bad_header">Content does not match the topic</label><input type="radio" name="category" id="other_reason" value="other_reason"><label for="other_reason">Other</label></div><div class="feedback__popup" id="feedback__popup-other" style="display: none;"><div class="feedback__popup-header">How can we improve the article?</div><textarea class="feedback__textarea" name="other" id=""></textarea><input type="submit" class="feedback__other-btn" value="Submit"></div><div class="feedback-form__btn-group"><input type="radio" name="useful" id="feedback__useful_yes" value="true"><label for="feedback__useful_yes"><img src="like.svg" class="small-img"><spanclass="feedback-form__btn-group_yes-btn">Yes</spanclass="feedback-form__btn-group_yes-btn"></label><input type="radio" name="useful" id="feedback__useful_no" value="false"><label for="feedback__useful_no"><img src="dislike.svg" class="small-img"><spanclass="feedback-form__btn-group_no-btn">No</spanclass="feedback-form__btn-group_no-btn"></label></div><select name="category"><option disabled="">Please specify why</option><option value="bad_recommendation" selected="">Recommendations did not help me</option><option value="difficult_text">Article is hard to understand</option><option value="no_answer">Didn’t answer my question</option><option value="bad_header">Content does not match the topic</option><option value="other_reason">Other</option></select><input type="submit"></form></div>
+                           
+                    </section>
+                </div>
+                <aside class="article__sidebar" style="display:none">
+                    <input type="checkbox" />
+                    <div class="article__arrow"></div>
+                    <div class="table-of-contents elma365-right" id="toc2Content">
+                        <h3 class="h3-toc">In this topic</h3>
+                        <nav id="toc2"></nav>
+                    </div>
+                </aside>
+            </div>
+        </article>
+    </main>               
+    <footer class="footer">
+        <div class="footer-container">
+  <div class="footer-mobile">
+    
+    <ul class="footer-mobile__list"><li><a href="https://brix365.com/en/" target="_blank">BRIX</a></li><li><a href="https://tssdk.brix365.com/en/latest/" target="_blank">SDK</a></li><li><a href="https://api.brix365.com/en/" target="_blank">API</a></li></ul><ul class="footer-mobile__list"><li><a href="https://brix365.com/en/help/platform/get-trial.html">Platform</a></li><li><a href="https://brix365.com/en/help/ecm/ecm-functions.html">ECM</a></li><li><a href="https://brix365.com/en/help/service/service-functions.html">Service</a></li><li><a href="https://brix365.com/en/help/projects/projects-functions.html">Projects</a></li></ul>
+    
+    
+  </div>
+  <div class="footer-wrap">
+    
+      <div><span class="mobile-question-popup">Send feedback</span><form method="POST" action class="question__popup question-xs" id="question__popup"><div class="question-wrap"><span class="close"></span><span class="title">Ask a question</span><label for="help_question" style="display: none;"></label><textarea name="help_question" id="help_question"></textarea><input type="submit" value="Send"></div></form><div class="hidden fade-in question-success-xs">Sent</div></div>
+    
+    <div class="footer-flex-b">
+      <span class="footer-copy">&copy; 2025 BRIX</span>
+      <ul class="footer-list">
+        
+        <li class="footer-item">
+            <a href="#" class="arrow-top" style="display: block;"></a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+ 
+    </footer>
+    <iframe name="hmnavigation" style="display:none!important"></iframe>
+    <script src="./jquery-ui.js"></script>
+    <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
+    <script src="./jquery.tocify.min.js"></script>
+    <script src="./TypoReporter.min.js"></script>
+    <script src="./google-search.js"></script>
+    <script src="./main.js"></script>
+</body>
+
+</html>

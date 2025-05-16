@@ -1,0 +1,214 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Context types</title>
+    <meta name="generator" content="Help+Manual" />
+    <meta name="keywords" content="" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Configuring interfaces and writing scripts requires the use of context variables. Variables determine specific values in widgets, for example, in counters. They are also used..." />
+    <meta name="picture" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Full documentation for BRIX365 platform. Low-code developer guide. User guide. Admin guide. Developer guide." />
+    <meta property="og:url" content="https://brix365.com/en/help" />
+    <meta property="og:image" content="" />                                                              
+    <link rel="icon" href="favicon.png" type="image/png" />
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./jquery-ui.css" />
+    <link rel="stylesheet" href="default.css" />
+    <link rel="stylesheet" href="./search-yandex.css" />
+    <link rel="stylesheet" href="./article.css" />
+    <link rel="stylesheet" href="./glossary.css" />
+    <link rel="stylesheet" href="./theme.css" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+
+<body>
+    
+    <script>!function(e,t,c,n,r,a,m){e.ym=e.ym||function(){(e.ym.a=e.ym.a||[]).push(arguments)},e.ym.l=1*new Date;for(var s=0;s<document.scripts.length;s++)if(document.scripts[s].src===n)return;a=t.createElement(c),m=t.getElementsByTagName(c)[0],a.async=1,a.src=n,m.parentNode.insertBefore(a,m)}(window,document,"script","https://mc.yandex.ru/metrika/tag.js"),ym(83179930,"init",{clickmap:!0,trackLinks:!0,accurateTrackBounce:!0,webvisor:!0})</script><noscript><div><img alt=""src=https://mc.yandex.ru/watch/83179930 style=position:absolute;left:-9999px></div></noscript> 
+    
+    ﻿<header class="header elma-365">
+  <div class="container">
+    <a class="header__logo" href="https://brix365.com/en/help">
+      <img src="./logo-en.svg">
+    </a>
+ <!-- <div class="hero__search-form" id="search-panel">
+   <form class="search-form" onsubmit="ym(83180416,'reachGoal','poisk')">
+     <label class="search-form__label">
+       <span id="reset-search" class="search__icon"></span>
+       <input class="search-form__input" type="text">
+     </label>
+     <input class="search-form__submit" type="submit" value="Submit">
+   </form>
+  </div>       -->
+  
+     <div class="hero__search-form" id="search-panel"> <form class="search-form"> <label class="search-form__label"> <span id="reset-search" class="search__icon"></span> <input class="search-form__input" type="text"> </label> <input class="search-form__submit" type="submit" value="Submit"> </form> </div> 
+  <div class="hero__search">
+      <a href="#" id="search-icon" class="hero__search-icon">
+        <img src="search-icon-white.svg" alt="search string">
+      </a>
+      <a href="#" id="side-menu-icon" class="hero__side-icon">
+        <img src="side_menu.svg" alt="side menu">
+      </a>
+    </div>  
+  <div class="header__navi">
+        
+        <ul class="header__list"><li><span class="solution-select"><span class="solution-select__selected"></span><svg width="7" height="4" viewBox="0 0 7 4" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L3.5 3.5L6 1" stroke="white" stroke-linecap="round" stroke-linejoin="round"/></svg><ul class="solution-select__list"><li><a class="project-link" href="https://brix365.com/en/help/platform/get-trial.html">Platform</a></li><li><a class="project-link" href="https://brix365.com/en/help/ecm/ecm-functions.html">ECM</a></li><li><a class="project-link" href="https://brix365.com/en/help/crm/crm_overview.html">CRM</a></li><li><a class="project-link" href="https://brix365.com/en/help/service/service-functions.html">Service</a></li><li><a class="project-link" href="https://brix365.com/en/help/projects/projects-functions.html">Projects</a></li><li><a class="project-link" href="https://brix365.com/en/help/business_solutions/-elma365-store.html">Business Solutions</a></li></ul></span></li><li><a href="https://api.brix365.com/en/" target="_blank">API</a></li><li><a href="https://tssdk.brix365.com/" target="_blank">SDK</a></li></ul>
+        
+        
+   </div>
+  </div>
+
+</header>
+
+
+
+    
+    <main class="main container">
+
+        <aside class="sidebar" id="sidebar">
+        <div class="sidebar__header">
+                 <a class="header__logo" href="https://brix365.com/en/help">
+                    <img src="./logo-light-en.svg">
+                 </a>
+                    <span class="sidebar__close elma-365-close" id="close"></span>
+            </div>
+            <div class="sidebar__wrapper" id="side-menu">
+                
+            </div>
+        </aside>
+
+        <article class="article" id="article">
+            <div class="article-inner">           
+                <div class="content">
+                    <header class="article__header">
+                        
+                            <div class="topic__breadcrumbs">
+                                <p>Low-code designer &gt; <a href="interface_settings.html">Set up interfaces</a> / Context types</p>
+                            </div>
+                        
+                        <div class="topic__title"><h1 class="p_Heading1"><span class="f_Heading1">Context types</span></h1>
+</div>
+                    
+</header>
+                    <section class="article__content">
+                        <div class="scroll-top-inner">
+                            <a href="#h1-article" class="scroll-top"></a>
+                        </div>
+                        <!-- Placeholder for topic body. -->
+                        <p style="line-height: 1.20; background: #ffffff; margin: 0 0 11px 0;">Configuring interfaces and writing scripts requires the use of context variables. Variables determine specific values in widgets, for example, in<span style="color: #394149;"> </span><a href="counter.html" class="topiclink">counters</a><span style="color: #394149;">. </span>They are also used to design the layout of fields, show or hide page components, etc. </p>
+<p style="line-height: 1.20; background: #ffffff; margin: 0 0 11px 0;">There are two types of contexts: widget context and app context.</p>
+<h2 class="p_Heading2"><a id="context" class="hmanchor"></a><span class="f_Heading2">Widget context</span></h2>
+<p style="line-height: 1.20; background: #ffffff; margin: 0 0 11px 0;">The widget context are service variables for widget configuration. They are used in scripts that define the widget’s behavior, as well as for fetching information from apps, uploaded files, etc.</p>
+<p style="line-height: 1.20; background: #ffffff; margin: 0 0 11px 0;">You can add such a variable in the<span style="color: #394149;"> </span><a href="interface_designer.html" class="topiclink">interface designer</a> on the <span style="font-weight: bold;">Context</span> tab.</p>
+<p style="text-indent: 2px; line-height: 1.20; background: #ffffff; margin: 0 0 11px 0;"><img alt="CT1" width="1111" height="386" style="margin:0;width:1111px;height:386px;border:none" src="ct1.png"/></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Add a variable to the context</span></h3>
+<p style="line-height: 1.20; background: #ffffff; margin: 0 0 11px 0;">Click <span style="font-weight: bold;">+ Add </span>and create the variable of the type you require. Read more about the types of variables available in the system in<span style="color: #394149;"> </span><a href="360009707032.html" class="topiclink">System data types</a><span style="color: #394149;">.</span></p>
+<p style="line-height: 1.20; background: #ffffff; margin: 0 0 11px 0;">When creating a variable: </p>
+<ol style="list-style-type:decimal">
+<li value="1" style="line-height: 1.20; background: #ffffff; margin-top: 0; margin-right: 0; margin-bottom: 11px;">You can only use English letters to set property names. We also recommend using meaningful names that are easy to understand: for example, <span style="font-weight: bold;">Username</span> instead of <span style="font-weight: bold;">Var123</span>.</li><li value="2" style="line-height: 1.20; background: #ffffff; margin-top: 0; margin-right: 0; margin-bottom: 11px;">You can enable the following additional options for all the variables, except for the property of the <span style="font-weight: bold;">Event</span> type:</li></ol>
+<ul style="list-style-type:disc">
+<li class="p_Normal"><span style="font-weight: bold;">Show only when the condition is met</span>. Specify the conditions under which the field on the <span style="font-weight: bold;">Template</span> tab will be displayed in the widget. In this way, you can configure the widget that adjusts to the user’s actions. For example, if an employee sets the <span style="font-weight: bold;">Yes/No</span> switch to <span style="font-weight: bold;">Yes</span>, an additional field will appear next to it.</li><li class="p_Normal"><a id="value-change-handler" class="hmanchor"></a><span style="font-weight: bold;">On value change handler</span>. Add a <a href="client_server_scripts.html" class="topiclink">function</a> that will run if the value of a variable changes. For example, if the discount is increased, the order amount will be automatically recalculated. This option allows you to use the variable as a service one, for example, for intermediate calculations. You don’t need to place such a variable on the <span style="font-weight: bold;">Template</span> tab.</li></ul>
+<p class="p_Normal"><img alt="context_02" width="724" height="613" style="margin:0;width:724px;height:613px;border:none" src="context_02.png"/></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Actions with a variable on the Context tab</span></h3>
+<p class="p_Normal">You can select a variable and then apply the available actions to it:</p>
+<ul style="list-style-type:disc">
+<li class="p_Normal"><span style="font-weight: bold;">Edit</span>. Click its name and change it.</li><li class="p_Normal"><span style="font-weight: bold;">Delete</span>. You can delete a variable if it is not used in <a href="360029250931.html#addingpropertytotheform" class="topiclink">the template of a form or a widget</a>.</li><li class="p_Normal"><span style="font-weight: bold;">Restore a deleted variable</span>. To do that, enable the <span style="font-weight: bold;">Show deleted variables</span> option, select the required string in the list that appears and click <span style="font-weight: bold;">Restore</span>. You can also permanently delete a variable from this list without the possibility of restoration.</li></ul>
+<p class="p_Normal"><img alt="context_tab_03" width="917" height="368" style="margin:0;width:917px;height:368px;border:none" src="context_tab_03.png"/></p>
+<p class="p_Normal">In a <a href="user_widgets.html" class="topiclink">custom widget</a>, the context includes additional options for flexible configuration. You can specify the input and output variables or edit the widget settings window. Read more about it in <a href="user-widgets-context.html" class="topiclink">Additional options in the context of custom widgets</a>.</p>
+<h3 class="p_Heading3"><span class="f_Heading3">Use context variables on the Template tab</span></h3>
+<p class="p_Normal">Variables added on the <span style="font-weight: bold;">Context</span> tab are also displayed in the right panel of the designer on the <span style="font-weight: bold;">Properties</span> tab. You can place them on the widget template. In this case, the list of nested fields is available for properties of the <span style="font-weight: bold;">App</span> and <span style="font-weight: bold;">Users</span> types with the <span style="font-weight: bold;">One</span> subtype. In addition, you can find the widget <a href="common_widget_settings.html" class="topiclink">system variables</a> on this tab.</p>
+<p style="text-indent: 2px; line-height: 1.20; background: #ffffff; margin: 0 0 11px 0;"><img alt="context_03" width="1025" height="400" style="margin:0;width:1025px;height:400px;border:none" src="context_03.png"/></p>
+<h2 class="p_Heading2"><span class="f_Heading2">Example of using widget variables</span></h2>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-family: Inter;">Let’s say</span><span style="color: #394149;"> </span>you want to add a column with payment instructions to the order form. These instructions have to be shown only if the sales rep selects <span style="font-weight: bold;">Full payment</span> as payment type when creating a new order. &nbsp;</p>
+<p style="text-indent: 2px; line-height: 1.20; background: #ffffff; margin: 0 0 11px 0;">In the <a href="interface_designer.html" class="topiclink">interface designer</a>, on the <span style="font-weight: bold;">Context</span> tab, create a <a href="360009707032.html#yes-no-switch" class="topiclink">Yes/No switch</a> variable. This variable allows users to select one of two options. You can customize their names. In our case, let<span style="font-family: Inter;">’</span>s use <span style="font-weight: bold;">Advanced payment</span> and <span style="font-weight: bold;">Full payment </span>instead of<span style="font-weight: bold;"> Yes </span>and<span style="font-weight: bold;"> No</span>.</p>
+<p style="text-indent: 2px; line-height: 1.20; background: #ffffff; margin: 0 0 11px 0;"><img alt="context_types_01" width="640" height="586" style="margin:0;width:640px;height:586px;border:none" src="context_types_01.png"/></p>
+<p style="text-indent: 2px; line-height: 1.20; background: #ffffff; margin: 0 0 11px 0;"><span style="font-size: 13px; color: #000000; background-color: #ffffff;">&nbsp;</span></p>
+<p class="p_Normal">Next, go to the <span style="font-weight: bold;">Template</span> tab and place the variable on the page so that users are able to select one of the payment options when creating a new order.</p>
+<p class="p_Normal" style="margin: 11px 0 0 0;">Add the<span style="color: #394149;"> </span><span style="color: #394149;"><a href="columns.html" class="topiclink">Column</a> </span>widget to the form. In its settings, click the <img alt="bind_table-icon" title="bind_table-icon" width="16" height="16" style="margin:0;width:16px;height:16px;border:none" src="bind_table-icon.png"/><span class="f_ImageCaption" style="font-size: 16px;"> </span>icon next to the <span style="font-weight: bold;">Hide</span> field. Then click the <span style="font-weight: bold;">&lt;Not defined&gt;</span> link and select the <span style="font-weight: bold;">Payment type</span> variable created earlier. Publish the widget to apply the changes.</p>
+<p class="p_Normal" style="margin: 11px 0 0 0;">Now, when a user selects the <span style="font-weight: bold;">Full payment</span> option as a payment method, the hidden column with the order processing instructions will appear.</p>
+<p style="line-height: 1.20; background: #ffffff; margin: 0 0 11px 0;">You can use the same variable in a script, for example, with the <span style="font-weight: bold;">On mouse enter handler</span> of the<span style="color: #394149;"> <a href="button_widget.html" class="topiclink">Button</a> </span>widget. Then the tab will appear the moment the user hovers the cursor over the button. Read more about it in<span style="color: #394149;"> <a href="client_server_scripts.html" class="topiclink">Scripts in widgets</a>.</span></p>
+<h2 class="p_Heading2"><a id="appcontext" class="hmanchor"></a><span class="f_Heading2">App context</span></h2>
+<p style="line-height: 1.20; background: #ffffff; margin: 0 0 11px 0;">The <span style="font-weight: bold;">App context</span> is the app fields that users fill in or view when working with app pages. For example, fields for entering the last name, order amount, file upload, etc.</p>
+<p style="line-height: 1.20; background: #ffffff; margin: 0 0 11px 0;">You can configure app properties in the<span style="color: #394149;"> </span><span style="color: #0000ff;"><a href="360009918011.html" class="topiclink">standard mode</a> </span>or<span style="color: #394149;"> </span><span style="color: #0000ff;"><a href="360028941032.html" class="topiclink">advanced mode</a></span><span style="color: #394149;"> </span>and in the<span style="color: #394149;"> </span><span style="color: #0000ff;"><a href="360029250931.html" class="topiclink">interface designer</a></span><span style="color: #394149;">.</span></p>
+<p style="line-height: 1.20; background: #ffffff; margin: 0 0 11px 0;">In the interface designer, app properties are listed on the right-side panel on the <span style="font-weight: bold;">Properties</span> tab. You can drag these properties to the canvas and place them in the appropriate order.</p>
+<p style="text-indent: 2px; line-height: 1.20; background: #ffffff; margin: 0 0 11px 0;"><img alt="CT4" width="1085" height="585" style="margin:0;width:1085px;height:585px;border:none" src="ct4.png"/></p>
+<p style="line-height: 1.20; background: #ffffff; margin: 0 0 11px 0;">Read more about forming properties in<span style="color: #394149;"> </span><span style="color: #0000ff;"><a href="360028941112.html" class="topiclink">Context tab</a></span><span style="color: #394149;">. </span></p>
+<p style="line-height: 1.20; background: #ffffff; margin: 0 0 11px 0;">To learn more about setting up forms in the interface designer, see<span style="color: #394149;"> </span><span style="color: #0000ff;"><a href="360029250931.html" class="topiclink">Form templates</a></span><span style="color: #394149;">. </span></p>
+
+                        <div class="bottom-nav">
+                            
+                                <a id="prev-link" class="topic__navi_prev" href="interface-debug.html">
+                                    <span class="bottom-nav__arrow bottom-nav__arrow--prev"></span> <span
+                                        class="bottom-nav__link">interface-debug.html</span>
+                                </a>
+                            
+                            
+                                <a id="next-link" class="topic__navi_next" href="user-widgets-context.html">
+                                    <span class="bottom-nav__link">user-widgets-context.html</span> <span
+                                        class="bottom-nav__arrow bottom-nav__arrow--next"></span>
+                                </a>
+                            
+                        </div>
+                        <!-- добавляет на страницу строку блок Была ли статья полезной?  -->
+                          <div class="feedback" id="feedback"><span><b>Was this helpful?</b></span><form action="" method="POST" class="feedback-form" id="feedback-form"><div class="feedback__popup feedback__popup-response" id="feedback__popup_thx" style="display: none;">Thanks for your feedback!</div><div class="feedback__popup" id="feedback__popup_why" style="display: none;"><div class="feedback__popup-header">Please specify why:</div><input type="radio" name="category" id="bad_recommendation" value="bad_recommendation"><label for="bad_recommendation">Recommendations did not help me</label><input type="radio" name="category" id="difficult_text" value="difficult_text"><label for="difficult_text">Article is hard to understand</label><input type="radio" name="category" id="no_answer" value="no_answer"><label for="no_answer">Didn’t answer my question</label><input type="radio" name="category" id="bad_header" value="bad_header"><label for="bad_header">Content does not match the topic</label><input type="radio" name="category" id="other_reason" value="other_reason"><label for="other_reason">Other</label></div><div class="feedback__popup" id="feedback__popup-other" style="display: none;"><div class="feedback__popup-header">How can we improve the article?</div><textarea class="feedback__textarea" name="other" id=""></textarea><input type="submit" class="feedback__other-btn" value="Submit"></div><div class="feedback-form__btn-group"><input type="radio" name="useful" id="feedback__useful_yes" value="true"><label for="feedback__useful_yes"><img src="like.svg" class="small-img"><spanclass="feedback-form__btn-group_yes-btn">Yes</spanclass="feedback-form__btn-group_yes-btn"></label><input type="radio" name="useful" id="feedback__useful_no" value="false"><label for="feedback__useful_no"><img src="dislike.svg" class="small-img"><spanclass="feedback-form__btn-group_no-btn">No</spanclass="feedback-form__btn-group_no-btn"></label></div><select name="category"><option disabled="">Please specify why</option><option value="bad_recommendation" selected="">Recommendations did not help me</option><option value="difficult_text">Article is hard to understand</option><option value="no_answer">Didn’t answer my question</option><option value="bad_header">Content does not match the topic</option><option value="other_reason">Other</option></select><input type="submit"></form></div>
+                           
+                    </section>
+                </div>
+                <aside class="article__sidebar" style="display:none">
+                    <input type="checkbox" />
+                    <div class="article__arrow"></div>
+                    <div class="table-of-contents elma365-right" id="toc2Content">
+                        <h3 class="h3-toc">In this topic</h3>
+                        <nav id="toc2"></nav>
+                    </div>
+                </aside>
+            </div>
+        </article>
+    </main>               
+    <footer class="footer">
+        <div class="footer-container">
+  <div class="footer-mobile">
+    
+    <ul class="footer-mobile__list"><li><a href="https://brix365.com/en/" target="_blank">BRIX</a></li><li><a href="https://tssdk.brix365.com/en/latest/" target="_blank">SDK</a></li><li><a href="https://api.brix365.com/en/" target="_blank">API</a></li></ul><ul class="footer-mobile__list"><li><a href="https://brix365.com/en/help/platform/get-trial.html">Platform</a></li><li><a href="https://brix365.com/en/help/ecm/ecm-functions.html">ECM</a></li><li><a href="https://brix365.com/en/help/service/service-functions.html">Service</a></li><li><a href="https://brix365.com/en/help/projects/projects-functions.html">Projects</a></li></ul>
+    
+    
+  </div>
+  <div class="footer-wrap">
+    
+      <div><span class="mobile-question-popup">Send feedback</span><form method="POST" action class="question__popup question-xs" id="question__popup"><div class="question-wrap"><span class="close"></span><span class="title">Ask a question</span><label for="help_question" style="display: none;"></label><textarea name="help_question" id="help_question"></textarea><input type="submit" value="Send"></div></form><div class="hidden fade-in question-success-xs">Sent</div></div>
+    
+    <div class="footer-flex-b">
+      <span class="footer-copy">&copy; 2025 BRIX</span>
+      <ul class="footer-list">
+        
+        <li class="footer-item">
+            <a href="#" class="arrow-top" style="display: block;"></a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+ 
+    </footer>
+    <iframe name="hmnavigation" style="display:none!important"></iframe>
+    <script src="./jquery-ui.js"></script>
+    <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
+    <script src="./jquery.tocify.min.js"></script>
+    <script src="./TypoReporter.min.js"></script>
+    <script src="./google-search.js"></script>
+    <script src="./main.js"></script>
+</body>
+
+</html>

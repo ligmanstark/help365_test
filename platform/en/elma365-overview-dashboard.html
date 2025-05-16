@@ -1,0 +1,239 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Analyze system performance with the overview dashboard</title>
+    <meta name="generator" content="Help+Manual" />
+    <meta name="keywords" content="" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="You can monitor key system metrics in real time using the ELMA365-Overview dashboard." />
+    <meta name="picture" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Full documentation for BRIX365 platform. Low-code developer guide. User guide. Admin guide. Developer guide." />
+    <meta property="og:url" content="https://brix365.com/en/help" />
+    <meta property="og:image" content="" />                                                              
+    <link rel="icon" href="favicon.png" type="image/png" />
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./jquery-ui.css" />
+    <link rel="stylesheet" href="default.css" />
+    <link rel="stylesheet" href="./search-yandex.css" />
+    <link rel="stylesheet" href="./article.css" />
+    <link rel="stylesheet" href="./glossary.css" />
+    <link rel="stylesheet" href="./theme.css" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+
+<body>
+    
+    <script>!function(e,t,c,n,r,a,m){e.ym=e.ym||function(){(e.ym.a=e.ym.a||[]).push(arguments)},e.ym.l=1*new Date;for(var s=0;s<document.scripts.length;s++)if(document.scripts[s].src===n)return;a=t.createElement(c),m=t.getElementsByTagName(c)[0],a.async=1,a.src=n,m.parentNode.insertBefore(a,m)}(window,document,"script","https://mc.yandex.ru/metrika/tag.js"),ym(83179930,"init",{clickmap:!0,trackLinks:!0,accurateTrackBounce:!0,webvisor:!0})</script><noscript><div><img alt=""src=https://mc.yandex.ru/watch/83179930 style=position:absolute;left:-9999px></div></noscript> 
+    
+    ﻿<header class="header elma-365">
+  <div class="container">
+    <a class="header__logo" href="https://brix365.com/en/help">
+      <img src="./logo-en.svg">
+    </a>
+ <!-- <div class="hero__search-form" id="search-panel">
+   <form class="search-form" onsubmit="ym(83180416,'reachGoal','poisk')">
+     <label class="search-form__label">
+       <span id="reset-search" class="search__icon"></span>
+       <input class="search-form__input" type="text">
+     </label>
+     <input class="search-form__submit" type="submit" value="Submit">
+   </form>
+  </div>       -->
+  
+     <div class="hero__search-form" id="search-panel"> <form class="search-form"> <label class="search-form__label"> <span id="reset-search" class="search__icon"></span> <input class="search-form__input" type="text"> </label> <input class="search-form__submit" type="submit" value="Submit"> </form> </div> 
+  <div class="hero__search">
+      <a href="#" id="search-icon" class="hero__search-icon">
+        <img src="search-icon-white.svg" alt="search string">
+      </a>
+      <a href="#" id="side-menu-icon" class="hero__side-icon">
+        <img src="side_menu.svg" alt="side menu">
+      </a>
+    </div>  
+  <div class="header__navi">
+        
+        <ul class="header__list"><li><span class="solution-select"><span class="solution-select__selected"></span><svg width="7" height="4" viewBox="0 0 7 4" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L3.5 3.5L6 1" stroke="white" stroke-linecap="round" stroke-linejoin="round"/></svg><ul class="solution-select__list"><li><a class="project-link" href="https://brix365.com/en/help/platform/get-trial.html">Platform</a></li><li><a class="project-link" href="https://brix365.com/en/help/ecm/ecm-functions.html">ECM</a></li><li><a class="project-link" href="https://brix365.com/en/help/crm/crm_overview.html">CRM</a></li><li><a class="project-link" href="https://brix365.com/en/help/service/service-functions.html">Service</a></li><li><a class="project-link" href="https://brix365.com/en/help/projects/projects-functions.html">Projects</a></li><li><a class="project-link" href="https://brix365.com/en/help/business_solutions/-elma365-store.html">Business Solutions</a></li></ul></span></li><li><a href="https://api.brix365.com/en/" target="_blank">API</a></li><li><a href="https://tssdk.brix365.com/" target="_blank">SDK</a></li></ul>
+        
+        
+   </div>
+  </div>
+
+</header>
+
+
+
+    
+    <main class="main container">
+
+        <aside class="sidebar" id="sidebar">
+        <div class="sidebar__header">
+                 <a class="header__logo" href="https://brix365.com/en/help">
+                    <img src="./logo-light-en.svg">
+                 </a>
+                    <span class="sidebar__close elma-365-close" id="close"></span>
+            </div>
+            <div class="sidebar__wrapper" id="side-menu">
+                
+            </div>
+        </aside>
+
+        <article class="article" id="article">
+            <div class="article-inner">           
+                <div class="content">
+                    <header class="article__header">
+                        
+                            <div class="topic__breadcrumbs">
+                                <p><a href="elma365-on-premises.html">BRIX On-Premises</a> &gt; <a href="elma365-enterprise.html">BRIX On-Premises Enterprise</a> &gt; Administering BRIX Enterprise / Analyze system performance with the overview dashboard</p>
+                            </div>
+                        
+                        <div class="topic__title"><h1 class="p_Heading1"><span class="f_Heading1">Analyze system performance with the overview dashboard</span></h1>
+</div>
+                    
+</header>
+                    <section class="article__content">
+                        <div class="scroll-top-inner">
+                            <a href="#h1-article" class="scroll-top"></a>
+                        </div>
+                        <!-- Placeholder for topic body. -->
+                        <p style="text-align: justify; line-height: 1.20; margin: 8px 0 8px 0;">You can monitor key system metrics in real time using the <span style="font-weight: bold;">ELMA365-Overview</span> dashboard.</p>
+<p style="text-align: justify; line-height: 1.20; margin: 8px 0 8px 0;">It consists of the following workspaces:</p>
+<ul style="">
+<li style="text-align: justify; line-height: 1.20; margin-top: 8px; margin-right: 0; margin-bottom: 8px;"><span style="color: #0000ff;"><a href="elma365-overview-dashboard.html#elma365-tab" class="topiclink">ELMA365</a></span>.</li><li style="text-align: justify; line-height: 1.20; margin-top: 8px; margin-right: 0; margin-bottom: 8px;"><span style="color: #0000ff;"><a href="elma365-overview-dashboard.html#elma365-telemetry-tab" class="topiclink">ELMA365 – Telemetry</a></span>.</li><li style="text-align: justify; line-height: 1.20; margin-top: 8px; margin-right: 0; margin-bottom: 8px;"><a href="elma365-overview-dashboard.html#cluster" class="topiclink">Kubernetes Cluster</a>.</li><li style="text-align: justify; line-height: 1.20; margin-top: 8px; margin-right: 0; margin-bottom: 8px;"><span style="color: #0000ff;"><a href="elma365-overview-dashboard.html#pods-info-tab" class="topiclink">Pods info</a></span>.</li><li style="text-align: justify; line-height: 1.20; margin-top: 8px; margin-right: 0; margin-bottom: 8px;"><span style="color: #0000ff;"><a href="elma365-overview-dashboard.html#nodes-info-tab" class="topiclink">Nodes info</a></span>.</li><li style="text-align: justify; line-height: 1.20; margin-top: 8px; margin-right: 0; margin-bottom: 8px;"><span style="color: #0000ff;"><a href="elma365-overview-dashboard.html#postgres-tab" class="topiclink">Postgres</a></span>.</li><li style="text-align: justify; line-height: 1.20; margin-top: 8px; margin-right: 0; margin-bottom: 8px;"><a href="elma365-overview-dashboard.html#rabbitmq-tab" class="topiclink">RabbitMQ</a>.</li><li style="text-align: justify; line-height: 1.20; margin-top: 8px; margin-right: 0; margin-bottom: 8px;"><span style="color: #0000ff;"><a href="elma365-overview-dashboard.html#mongodb-tab" class="topiclink">MongoDB</a></span>.</li><li style="text-align: justify; line-height: 1.20; margin-top: 8px; margin-right: 0; margin-bottom: 8px;"><span style="color: #0000ff;"><a href="elma365-overview-dashboard.html#redis-tab" class="topiclink">Redis</a></span>.</li><li style="text-align: justify; line-height: 1.20; margin-top: 8px; margin-right: 0; margin-bottom: 8px;"><span style="color: #0000ff;"><a href="elma365-overview-dashboard.html#ingress-tab" class="topiclink">Ingress</a></span>.</li><li style="text-align: justify; line-height: 1.20; margin-top: 8px; margin-right: 0; margin-bottom: 8px;"><span style="color: #0000ff;"><a href="elma365-overview-dashboard.html#logs-tab" class="topiclink">Logs</a></span>.</li><li style="text-align: justify; line-height: 1.20; margin-top: 8px; margin-right: 0; margin-bottom: 8px;"><span style="color: #0000ff;"><a href="elma365-overview-dashboard.html#linkerd-tab" class="topiclink">Linkerd</a></span>.</li><li style="text-align: justify; line-height: 1.20; margin-top: 8px; margin-right: 0; margin-bottom: 8px;"><span style="color: #0000ff;"><a href="elma365-overview-dashboard.html#kubernetes-event-stats-tab" class="topiclink">Kubernetes Events – Stats</a></span>.</li></ul>
+<p style="text-align: justify; line-height: 1.20; margin: 8px 0 8px 0;"><img alt="elma365-overview-dashboard-1" width="955" height="489" style="margin:0;width:955px;height:489px;border:none" src="elma365-overview-dashboard-1.png"/></p>
+<p style="text-align: justify; line-height: 1.20; margin: 8px 0 8px 0;">For correct operation of the dashboard, pre-install and configure the monitoring tools according to the following articles:</p>
+<ul style="">
+<li style="text-align: justify; line-height: 1.20; margin-top: 8px; margin-right: 0; margin-bottom: 8px;"><a href="install-monitoring-tools.html" class="topiclink">Install monitoring tools</a>.</li><li style="text-align: justify; line-height: 1.20; margin-top: 8px; margin-right: 0; margin-bottom: 8px;"><a href="monitoring-databases.html" class="topiclink">Monitoring of databases</a>.</li><li style="text-align: justify; line-height: 1.20; margin-top: 8px; margin-right: 0; margin-bottom: 8px;"><a href="business_process_monitoring.html" class="topiclink">Monitoring of business processes</a>.</li><li style="text-align: justify; line-height: 1.20; margin-top: 8px; margin-right: 0; margin-bottom: 8px;"><a href="event-monitoring.html" class="topiclink">Event monitoring</a>.</li><li style="text-align: justify; line-height: 1.20; margin-top: 8px; margin-right: 0; margin-bottom: 8px;"><a href="install-loki.html" class="topiclink">Install Loki</a>.</li><li style="text-align: justify; line-height: 1.20; margin-top: 8px; margin-right: 0; margin-bottom: 8px;"><a href="install-linkerd.html" class="topiclink">Install Linkerd</a> (optional).</li></ul>
+<p style="text-align: justify; line-height: 1.20; margin: 8px 0 8px 0;">Let’s take a closer look at the contents of the <span style="font-weight: bold;">ELMA365-Overview</span> workspaces.</p>
+<h2 class="p_Heading2"><a id="elma365-tab" class="hmanchor"></a><span class="f_Heading2">ELMA365 workspace</span></h2>
+<p style="text-align: justify; line-height: 1.20; margin: 8px 0 8px 0;">Here you can see charts showing the state of processes in the system: requests from Front API and their processing time, requests to Web API, as well as statistics of script execution.</p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;">If the values of indicators exceed the limits, scripts should be optimized.</p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><img alt="elma365-overview-dashboard-2" width="992" height="418" style="margin:0;width:992px;height:418px;border:none" src="elma365-overview-dashboard-2.png"/></p>
+<h2 class="p_Heading2"><a id="elma365-telemetry-tab" class="hmanchor"></a><span class="f_Heading2">ELMA365 – Telemetry workspace</span></h2>
+<p>The charts in this workspace will show you the performance of the scripts.</p>
+<p class="p_Normal"><img alt="elma365-overview-dashboard-3" width="983" height="302" style="margin:0;width:983px;height:302px;border:none" src="elma365-overview-dashboard-3.png"/></p>
+<h2 class="p_Heading2"><a id="cluster" class="hmanchor"></a><span class="f_Heading2">Kubernetes Cluster</span> </h2>
+<p class="p_Normal">On the charts in this section, you can see information about the Kubernetes cluster: the etcd database size, the number of requests that come to the API server of the Kubernetes-cluster, and the etcd request latency.</p>
+<p class="p_Normal"><img alt="elma365-overview-dashboard-15" width="1032" height="279" style="margin:0;width:1032px;height:279px;border:none" src="elma365-overview-dashboard-15.png"/></p>
+<h2 class="p_Heading2"><a id="pods-info-tab" class="hmanchor"></a><span class="f_Heading2">Pods info workspace</span></h2>
+<p>Note the CPU and memory consumption of pods, as well as the change of pods’ statuses for selected time intervals.</p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;">If there is a sharp increase in resource consumption and their shortage, increase the number of resources and replicas, as well as the limits for pods. Then examine the service logs to identify possible causes of problems and fix them.</p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><img alt="elma365-overview-dashboard-4" width="1083" height="492" style="margin:0;width:1083px;height:492px;border:none" src="elma365-overview-dashboard-4.png"/></p>
+<h2 class="p_Heading2"><a id="nodes-info-tab" class="hmanchor"></a><span class="f_Heading2">Nodes info workspace</span></h2>
+<p>This workspace provides information about the cluster status, including charts showing CPU and memory consumption, average load, network traffic, and available disk space on nodes. Based on this data, you can identify abnormal behavior and take corrective action. For example, if you need to increase missing resources, add additional nodes (8CPU, 16Mem).</p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;">If you have deployed a standard Kubernetes cluster, install a high-load <span style="color: #0000ff;"><a href="preparing-optimized-kernel.html" class="topiclink">Linux system</a></span> to ensure optimal cluster performance.</p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><img alt="elma365-overview-dashboard-5" width="1032" height="454" style="margin:0;width:1032px;height:454px;border:none" src="elma365-overview-dashboard-5.png"/></p>
+<p style="text-align: justify; line-height: 1.20; margin: 8px 0 8px 0;">The following workspaces provide information about database health monitoring: <span style="color: #0000ff;"><a href="postgresql.html" class="topiclink">Postgres</a></span>, <span style="color: #0000ff;"><a href="rabbitmq.html" class="topiclink">RabbitMQ</a></span>, <span style="color: #0000ff;"><a href="mongodb.html" class="topiclink">MongoDB</a></span>, and <span style="color: #0000ff;"><a href="redis.html" class="topiclink">Redis</a></span>.</p>
+<h2 class="p_Heading2"><a id="postgres-tab" class="hmanchor"></a><span class="f_Heading2">Postgres workspace</span></h2>
+<p style="line-height: 1.28; margin: 0 0 11px 0;">The most important chart in this workspace is <span style="font-weight: bold;">Stat activity</span>. It shows information about the current activity. If the chart value is close to the maximum (<span style="font-weight: bold;">Max Connections</span>), increase the <code><b>max_connections</b></code> parameter.</p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><img alt="elma365-overview-dashboard-6" width="1163" height="230" style="margin:0;width:1163px;height:230px;border:none" src="elma365-overview-dashboard-6.png"/></p>
+<h2 class="p_Heading2"><a id="rabbitmq-tab" class="hmanchor"></a><span class="f_Heading2">RabbitMQ workspace</span></h2>
+<p style="line-height: 1.28; margin: 0 0 11px 0;">The <span style="font-weight: bold;">Messages per Queue</span> chart shows the messages in the queue. You can use it to determine which microservice is accumulating messages. If the number of messages does not decrease, reboot the corresponding microservice and examine the service logs using <span style="color: #0000ff;"><a href="install-loki.html" class="topiclink">Loki</a></span>.</p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><img alt="elma365-overview-dashboard-7" width="1019" height="304" style="margin:0;width:1019px;height:304px;border:none" src="elma365-overview-dashboard-7.png"/></p>
+<h2 class="p_Heading2"><a id="mongodb-tab" class="hmanchor"></a><span class="f_Heading2">MongoDB workspace</span></h2>
+<p style="text-align: justify; line-height: 1.20; margin: 8px 0 8px 0;">In the charts in this workspace, you can observe open connections, memory load, and query operations.</p>
+<p style="line-height: 1.20; margin: 8px 0 8px 0;">To track database performance and efficiency, use the <span style="font-weight: bold;">Query Operations</span> chart. You can analyze various metrics related to query operations in <span style="color: #0000ff;"><a href="mongodb.html" class="topiclink">MongoDB</a></span>.</p>
+<p style="text-align: justify; line-height: 1.20; margin: 8px 0 8px 0;"><img alt="elma365-overview-dashboard-8" width="1116" height="183" style="margin:0;width:1116px;height:183px;border:none" src="elma365-overview-dashboard-8.png"/></p>
+<h2 class="p_Heading2"><a id="redis-tab" class="hmanchor"></a><span class="f_Heading2">Redis workspace</span></h2>
+<p style="text-align: justify; line-height: 1.20; margin: 8px 0 8px 0;">Note that the <span style="font-weight: bold;">Total Commands / sec</span> chart displays the total number of commands per second. It is used to monitor the performance and efficiency of the <span style="color: #0000ff;"><a href="redis.html" class="topiclink">Redis</a></span> cache. The chart also allows you to analyze various metrics related to command execution in Redis.</p>
+<p style="text-align: justify; line-height: 1.20; margin: 8px 0 8px 0;"><img alt="elma365-overview-dashboard-9" width="1109" height="178" style="margin:0;width:1109px;height:178px;border:none" src="elma365-overview-dashboard-9.png"/></p>
+<h2 class="p_Heading2"><a id="ingress-tab" class="hmanchor"></a><span class="f_Heading2">Ingress workspace</span></h2>
+<p style="text-align: justify; line-height: 1.20; margin: 8px 0 8px 0;">Here you can find out the remaining validity of certificates and the number of HTTP requests passing through <span style="color: #0000ff;"><a href="install-ingress-nginx.html" class="topiclink">Ingress</a></span>.</p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;">If the <span style="font-weight: bold;">HTTP Error</span> chart shows an increased number of errors, examine the Ingress Nginx logs to determine the cause.</p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><img alt="elma365-overview-dashboard-10" width="909" height="422" style="margin:0;width:909px;height:422px;border:none" src="elma365-overview-dashboard-10.png"/></p>
+<h2 class="p_Heading2"><a id="logs-tab" class="hmanchor"></a><span class="f_Heading2">Logs workspace</span></h2>
+<p style="line-height: 1.28; margin: 0 0 11px 0;">This workspace is used to quickly analyze logs. Here you can identify the service with the highest number of errors for a given period and examine the logs that that logged using Loki.</p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><img alt="elma365-overview-dashboard-11" width="1291" height="257" style="margin:0;width:1291px;height:257px;border:none" src="elma365-overview-dashboard-11.png"/></p>
+<h2 class="p_Heading2"><a id="linkerd-tab" class="hmanchor"></a><span class="f_Heading2">Linkerd workspace</span></h2>
+<p style="text-align: justify; line-height: 1.20; margin: 8px 0 8px 0;">If the <span style="color: #0000ff;"><a href="install-linkerd.html" class="topiclink">Linkerd service</a></span> is installed, this workspace allows you to monitor the status of mesh connections for a particular deployment. It is important to keep an eye on the <span style="font-weight: bold;">Successful rate</span> chart. If there are problems, the number of successful connections will decrease. In this case, analyze Linkerd’s performance, including checking the internal certificate and analyzing the service logs.</p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;">The chart below shows the moment of performance degradation. The following warning occurred: <code><b>level=warning msg=“unable to parse quantity’s suffix (config.linkerd.io/proxy-memory-limit)”</b></code><span style="font-family: 'Times New Roman',Times,Georgia,serif;">. </span>In this case, check the Linkerd configuration file and correct the errors in the<span style="font-family: 'Times New Roman',Times,Georgia,serif;"> </span><code><b>requests</b></code><span style="font-size: 13px; font-family: 'Times New Roman',Times,Georgia,serif;"> </span>and<span style="font-family: 'Times New Roman',Times,Georgia,serif;"> </span><code><b>limits</b></code><span style="font-size: 13px; font-family: 'Times New Roman',Times,Georgia,serif;"> </span>parameters.</p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><img alt="elma365-overview-dashboard-12" width="1183" height="181" style="margin:0;width:1183px;height:181px;border:none" src="elma365-overview-dashboard-12.png"/></p>
+<h2 class="p_Heading2"><a id="kubernetes-event-stats-tab" class="hmanchor"></a><span class="f_Heading2">Kubernetes Events – Stats workspace</span></h2>
+<p style="line-height: 1.28; margin: 0 0 11px 0;">The charts can be used to track various events in the cluster and provide information about the status of the pods.</p>
+<p style="text-align: justify; line-height: 1.20; margin: 8px 0 8px 0;"><img alt="elma365-overview-dashboard-13" width="1001" height="427" style="margin:0;width:1001px;height:427px;border:none" src="elma365-overview-dashboard-13.png"/></p>
+<p style="text-align: justify; line-height: 1.20; margin: 8px 0 8px 0;">Containers:</p>
+<ul style="">
+<li style="line-height: 1.20; margin-top: 8px; margin-right: 0; margin-bottom: 8px;"><span style="font-weight: bold;">Image Pull Failed</span>.<span style="font-weight: bold;"> </span>It is impossible to download a container image to run the pod, for example, if the container register is unavailable or the requested image is missing.</li><li style="line-height: 1.20; margin-top: 8px; margin-right: 0; margin-bottom: 8px;"><span style="font-weight: bold;">Liveness Probe Failed</span>.<span style="font-weight: bold;"> </span>This event occurs if communication between the pod and the liveness probe, which is used to check the correctness of the pod operation, is broken.</li><li style="line-height: 1.20; margin-top: 8px; margin-right: 0; margin-bottom: 8px;"><span style="font-weight: bold;">Volume Mount Failed. </span>Persistent volume or storage resource cannot be mounted. This behavior can occur if the storage is misconfigured or if there are network or permissions issues.</li><li style="line-height: 1.20; margin-top: 8px; margin-right: 0; margin-bottom: 8px;"><span style="font-weight: bold;">Container OOM Killed</span>.<span style="font-weight: bold;"> </span>The pod has terminated due to insufficient memory. This event occurs if the pod is consuming too much memory and the node cannot provide the required resources.</li><li style="line-height: 1.20; margin-top: 8px; margin-right: 0; margin-bottom: 8px;"><span style="font-weight: bold;">Container Crashed</span>.<span style="font-weight: bold;"> </span>The cause can be an error inside the container or its incorrect operation.</li><li style="line-height: 1.20; margin-top: 8px; margin-right: 0; margin-bottom: 8px;"><span style="font-weight: bold;">Pod Evicted</span>.<span style="font-weight: bold;"> </span>The pod has been removed due to a lack of memory or CPU. The event occurs if a node is overloaded or the pod consumes a large number of resources.</li></ul>
+<p style="text-align: justify; line-height: 1.20; margin: 8px 0 8px 0;">Scheduling events:</p>
+<ul style="list-style-type:disc">
+<li style="line-height: 1.20; margin-top: 8px; margin-right: 0; margin-bottom: 8px;"><span style="font-weight: bold;">Scheduling Failed</span>.<span style="font-weight: bold;"> </span>This event occurs when the Kubernetes scheduler is unable to place a pod on a node due to a lack of resources or other constraints.</li></ul>
+<p style="text-align: justify; line-height: 1.20; margin: 8px 0 8px 0;">System events:</p>
+<ul style="list-style-type:disc">
+<li style="line-height: 1.20; margin-top: 8px; margin-right: 0; margin-bottom: 8px;"><span style="font-weight: bold;">System OOM</span>.<span style="font-weight: bold;"> </span>This event is logged when there is insufficient memory at the system level, such as due to a high load on a node or insufficient system resources.</li></ul>
+
+                        <div class="bottom-nav">
+                            
+                                <a id="prev-link" class="topic__navi_prev" href="export-monitoring-enterprise.html">
+                                    <span class="bottom-nav__arrow bottom-nav__arrow--prev"></span> <span
+                                        class="bottom-nav__link">export-monitoring-enterprise.html</span>
+                                </a>
+                            
+                            
+                                <a id="next-link" class="topic__navi_next" href="deleting-chart-elma365.html">
+                                    <span class="bottom-nav__link">deleting-chart-elma365.html</span> <span
+                                        class="bottom-nav__arrow bottom-nav__arrow--next"></span>
+                                </a>
+                            
+                        </div>
+                        <!-- добавляет на страницу строку блок Была ли статья полезной?  -->
+                          <div class="feedback" id="feedback"><span><b>Was this helpful?</b></span><form action="" method="POST" class="feedback-form" id="feedback-form"><div class="feedback__popup feedback__popup-response" id="feedback__popup_thx" style="display: none;">Thanks for your feedback!</div><div class="feedback__popup" id="feedback__popup_why" style="display: none;"><div class="feedback__popup-header">Please specify why:</div><input type="radio" name="category" id="bad_recommendation" value="bad_recommendation"><label for="bad_recommendation">Recommendations did not help me</label><input type="radio" name="category" id="difficult_text" value="difficult_text"><label for="difficult_text">Article is hard to understand</label><input type="radio" name="category" id="no_answer" value="no_answer"><label for="no_answer">Didn’t answer my question</label><input type="radio" name="category" id="bad_header" value="bad_header"><label for="bad_header">Content does not match the topic</label><input type="radio" name="category" id="other_reason" value="other_reason"><label for="other_reason">Other</label></div><div class="feedback__popup" id="feedback__popup-other" style="display: none;"><div class="feedback__popup-header">How can we improve the article?</div><textarea class="feedback__textarea" name="other" id=""></textarea><input type="submit" class="feedback__other-btn" value="Submit"></div><div class="feedback-form__btn-group"><input type="radio" name="useful" id="feedback__useful_yes" value="true"><label for="feedback__useful_yes"><img src="like.svg" class="small-img"><spanclass="feedback-form__btn-group_yes-btn">Yes</spanclass="feedback-form__btn-group_yes-btn"></label><input type="radio" name="useful" id="feedback__useful_no" value="false"><label for="feedback__useful_no"><img src="dislike.svg" class="small-img"><spanclass="feedback-form__btn-group_no-btn">No</spanclass="feedback-form__btn-group_no-btn"></label></div><select name="category"><option disabled="">Please specify why</option><option value="bad_recommendation" selected="">Recommendations did not help me</option><option value="difficult_text">Article is hard to understand</option><option value="no_answer">Didn’t answer my question</option><option value="bad_header">Content does not match the topic</option><option value="other_reason">Other</option></select><input type="submit"></form></div>
+                           
+                    </section>
+                </div>
+                <aside class="article__sidebar" style="display:none">
+                    <input type="checkbox" />
+                    <div class="article__arrow"></div>
+                    <div class="table-of-contents elma365-right" id="toc2Content">
+                        <h3 class="h3-toc">In this topic</h3>
+                        <nav id="toc2"></nav>
+                    </div>
+                </aside>
+            </div>
+        </article>
+    </main>               
+    <footer class="footer">
+        <div class="footer-container">
+  <div class="footer-mobile">
+    
+    <ul class="footer-mobile__list"><li><a href="https://brix365.com/en/" target="_blank">BRIX</a></li><li><a href="https://tssdk.brix365.com/en/latest/" target="_blank">SDK</a></li><li><a href="https://api.brix365.com/en/" target="_blank">API</a></li></ul><ul class="footer-mobile__list"><li><a href="https://brix365.com/en/help/platform/get-trial.html">Platform</a></li><li><a href="https://brix365.com/en/help/ecm/ecm-functions.html">ECM</a></li><li><a href="https://brix365.com/en/help/service/service-functions.html">Service</a></li><li><a href="https://brix365.com/en/help/projects/projects-functions.html">Projects</a></li></ul>
+    
+    
+  </div>
+  <div class="footer-wrap">
+    
+      <div><span class="mobile-question-popup">Send feedback</span><form method="POST" action class="question__popup question-xs" id="question__popup"><div class="question-wrap"><span class="close"></span><span class="title">Ask a question</span><label for="help_question" style="display: none;"></label><textarea name="help_question" id="help_question"></textarea><input type="submit" value="Send"></div></form><div class="hidden fade-in question-success-xs">Sent</div></div>
+    
+    <div class="footer-flex-b">
+      <span class="footer-copy">&copy; 2025 BRIX</span>
+      <ul class="footer-list">
+        
+        <li class="footer-item">
+            <a href="#" class="arrow-top" style="display: block;"></a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+ 
+    </footer>
+    <iframe name="hmnavigation" style="display:none!important"></iframe>
+    <script src="./jquery-ui.js"></script>
+    <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
+    <script src="./jquery.tocify.min.js"></script>
+    <script src="./TypoReporter.min.js"></script>
+    <script src="./google-search.js"></script>
+    <script src="./main.js"></script>
+</body>
+
+</html>

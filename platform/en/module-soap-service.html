@@ -1,0 +1,275 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Connect to the external service module with the SOAP protocol</title>
+    <meta name="generator" content="Help+Manual" />
+    <meta name="keywords" content="" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="In a custom module, you can configure the connection of a web service that uses SOAP (Simple Object Access Protocol) to exchange data with BRIX." />
+    <meta name="picture" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Full documentation for BRIX365 platform. Low-code developer guide. User guide. Admin guide. Developer guide." />
+    <meta property="og:url" content="https://brix365.com/en/help" />
+    <meta property="og:image" content="" />                                                              
+    <link rel="icon" href="favicon.png" type="image/png" />
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./jquery-ui.css" />
+    <link rel="stylesheet" href="default.css" />
+    <link rel="stylesheet" href="./search-yandex.css" />
+    <link rel="stylesheet" href="./article.css" />
+    <link rel="stylesheet" href="./glossary.css" />
+    <link rel="stylesheet" href="./theme.css" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+
+<body>
+    
+    <script>!function(e,t,c,n,r,a,m){e.ym=e.ym||function(){(e.ym.a=e.ym.a||[]).push(arguments)},e.ym.l=1*new Date;for(var s=0;s<document.scripts.length;s++)if(document.scripts[s].src===n)return;a=t.createElement(c),m=t.getElementsByTagName(c)[0],a.async=1,a.src=n,m.parentNode.insertBefore(a,m)}(window,document,"script","https://mc.yandex.ru/metrika/tag.js"),ym(83179930,"init",{clickmap:!0,trackLinks:!0,accurateTrackBounce:!0,webvisor:!0})</script><noscript><div><img alt=""src=https://mc.yandex.ru/watch/83179930 style=position:absolute;left:-9999px></div></noscript> 
+    
+    ﻿<header class="header elma-365">
+  <div class="container">
+    <a class="header__logo" href="https://brix365.com/en/help">
+      <img src="./logo-en.svg">
+    </a>
+ <!-- <div class="hero__search-form" id="search-panel">
+   <form class="search-form" onsubmit="ym(83180416,'reachGoal','poisk')">
+     <label class="search-form__label">
+       <span id="reset-search" class="search__icon"></span>
+       <input class="search-form__input" type="text">
+     </label>
+     <input class="search-form__submit" type="submit" value="Submit">
+   </form>
+  </div>       -->
+  
+     <div class="hero__search-form" id="search-panel"> <form class="search-form"> <label class="search-form__label"> <span id="reset-search" class="search__icon"></span> <input class="search-form__input" type="text"> </label> <input class="search-form__submit" type="submit" value="Submit"> </form> </div> 
+  <div class="hero__search">
+      <a href="#" id="search-icon" class="hero__search-icon">
+        <img src="search-icon-white.svg" alt="search string">
+      </a>
+      <a href="#" id="side-menu-icon" class="hero__side-icon">
+        <img src="side_menu.svg" alt="side menu">
+      </a>
+    </div>  
+  <div class="header__navi">
+        
+        <ul class="header__list"><li><span class="solution-select"><span class="solution-select__selected"></span><svg width="7" height="4" viewBox="0 0 7 4" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L3.5 3.5L6 1" stroke="white" stroke-linecap="round" stroke-linejoin="round"/></svg><ul class="solution-select__list"><li><a class="project-link" href="https://brix365.com/en/help/platform/get-trial.html">Platform</a></li><li><a class="project-link" href="https://brix365.com/en/help/ecm/ecm-functions.html">ECM</a></li><li><a class="project-link" href="https://brix365.com/en/help/crm/crm_overview.html">CRM</a></li><li><a class="project-link" href="https://brix365.com/en/help/service/service-functions.html">Service</a></li><li><a class="project-link" href="https://brix365.com/en/help/projects/projects-functions.html">Projects</a></li><li><a class="project-link" href="https://brix365.com/en/help/business_solutions/-elma365-store.html">Business Solutions</a></li></ul></span></li><li><a href="https://api.brix365.com/en/" target="_blank">API</a></li><li><a href="https://tssdk.brix365.com/" target="_blank">SDK</a></li></ul>
+        
+        
+   </div>
+  </div>
+
+</header>
+
+
+
+    
+    <main class="main container">
+
+        <aside class="sidebar" id="sidebar">
+        <div class="sidebar__header">
+                 <a class="header__logo" href="https://brix365.com/en/help">
+                    <img src="./logo-light-en.svg">
+                 </a>
+                    <span class="sidebar__close elma-365-close" id="close"></span>
+            </div>
+            <div class="sidebar__wrapper" id="side-menu">
+                
+            </div>
+        </aside>
+
+        <article class="article" id="article">
+            <div class="article-inner">           
+                <div class="content">
+                    <header class="article__header">
+                        
+                            <div class="topic__breadcrumbs">
+                                <p><a href="360024498352.html">Modules</a> &gt; <a href="extentions.html">Custom modules</a> / Connect to the external service module with the SOAP protocol</p>
+                            </div>
+                        
+                        <div class="topic__title"><h1 class="p_Heading1"><span class="f_Heading1">Connect to the external service module with the SOAP protocol</span></h1>
+</div>
+                    
+</header>
+                    <section class="article__content">
+                        <div class="scroll-top-inner">
+                            <a href="#h1-article" class="scroll-top"></a>
+                        </div>
+                        <!-- Placeholder for topic body. -->
+                        <p class="p_Normal">In a custom module, you can configure the connection of a web service that uses SOAP (Simple Object Access Protocol) to exchange data with BRIX.</p>
+<p class="p_Normal">The web service will act as a connector point. In the module, the <span style="font-weight: bold;">.xml</span> file of the specification of a particular web service is uploaded. This will allow you to access its description language (WSDL). You will then be able to access the methods and data types of the web service in server scripts and use them to implement certain logic in BRIX.</p>
+<p class="p_Normal">For example, in the module, you can configure integration with a web service that provides country data by its ISO code. To use the service methods, you can create a widget and add a server script to it. The user will be able to specify the ISO code of the country in the widget and send a request to the web service. The received country data will be sent to BRIX and displayed in the widget. Then the widget can be placed on any pages and forms of the system apps and receive information from the web service.</p>
+<p class="p_Normal">To configure integration, an <span style="font-weight: bold;">external service</span> is created in the custom module.</p>
+<p class="p_Normal">Only <a href="360006871932.html#administrators" class="topiclink">system administrators</a> can add external services to modules.</p>
+<h2 class="p_Heading2"><span class="f_Heading2">Create an external service in a module</span></h2>
+<p class="p_Normal">To connect a web service to BRIX, follow the steps below:</p>
+<ol style="list-style-type:upper-roman">
+<li value="1" class="p_Normal">Go to the <span style="font-weight: bold;">Administration &gt; Modules</span> workspace and select the created <a href="extentions.html" class="topiclink">custom module</a>.</li><li value="2" class="p_Normal">On the module page, click <span style="font-weight: bold;">Settings</span> and go to the <span style="font-weight: bold;">External Services</span> tab.</li><li value="3" class="p_Normal">Fill in the connection details:</li></ol>
+<p style="text-align: justify; line-height: 1.20; margin: 0 0 11px 34px;"><img alt="soap-service-1" width="532" height="557" style="margin:0;width:532px;height:557px;border:none" src="soap-service-1.png"/></p>
+<ul style="list-style-type:disc">
+<li style="text-align: justify; line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-family: 'Times New Roman',Times,Georgia,serif; font-weight: bold;">Name</span><span style="font-family: 'Times New Roman',Times,Georgia,serif; font-weight: bold; color: #ff0000;">*</span><span style="font-family: 'Times New Roman',Times,Georgia,serif;">. Specify the name of the external service.</span></li><li style="text-align: justify; line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-family: 'Times New Roman',Times,Georgia,serif; font-weight: bold;">Unique name</span><span style="font-family: 'Times New Roman',Times,Georgia,serif; font-weight: bold; color: #ff0000;">*</span><span style="font-family: 'Times New Roman',Times,Georgia,serif;">. Specify the name that will be used in scripts to access the external service. It must be unique.</span></li><li style="text-align: justify; line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-family: 'Times New Roman',Times,Georgia,serif; font-weight: bold;">Specification URL</span><span style="font-family: 'Times New Roman',Times,Georgia,serif;">. Enter the URL where the </span><span style="font-family: 'Times New Roman',Times,Georgia,serif; font-weight: bold;">.xml</span><span style="font-family: 'Times New Roman',Times,Georgia,serif;"> table with the service description language (WSDL) is available. To upload the specification to the system, click the </span><img alt="clip0214" width="20" height="20" style="margin:0;width:20px;height:20px;border:none" src="clip0214.png"/><span class="f_ImageCaption"> </span><span style="font-family: 'Times New Roman',Times,Georgia,serif;">icon to the right of the field. A specification file will then be generated and displayed in the field.</span></li><li style="text-align: justify; line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-family: 'Times New Roman',Times,Georgia,serif; font-weight: bold;">Specification file</span><span style="font-family: 'Times New Roman',Times,Georgia,serif; font-weight: bold; color: #ff0000;">*</span><span style="font-family: 'Times New Roman',Times,Georgia,serif;">. An </span><span style="font-family: 'Times New Roman',Times,Georgia,serif; font-weight: bold;">.xml </span><span style="font-family: 'Times New Roman',Times,Georgia,serif;">file of the web service specification is uploaded to the field. If you entered a URL in the previous field, the file will be displayed automatically.</span></li><li style="text-align: justify; line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-family: 'Times New Roman',Times,Georgia,serif; font-weight: bold;">SOAP service</span><span style="font-family: 'Times New Roman',Times,Georgia,serif;">,</span><span style="font-family: 'Times New Roman',Times,Georgia,serif; font-weight: bold;"> SOAP port</span><span style="font-family: 'Times New Roman',Times,Georgia,serif;">. The fields are filled in automatically from the data in the downloaded </span><span style="font-family: 'Times New Roman',Times,Georgia,serif; font-weight: bold;">.xml</span><span style="font-family: 'Times New Roman',Times,Georgia,serif;"> file of the web service specification. The data is used to debug the interaction with the web service. If multiple SOAP ports are displayed in the field, select the desired one by referring to the web service documentation.</span></li><li style="text-align: justify; line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-family: 'Times New Roman',Times,Georgia,serif; font-weight: bold;">Basic URL</span><span style="font-family: 'Times New Roman',Times,Georgia,serif;">. Specify the URL of the web service. If the field is not filled in, the address from the downloaded </span><span style="font-family: 'Times New Roman',Times,Georgia,serif; font-weight: bold;">.xml</span><span style="font-family: 'Times New Roman',Times,Georgia,serif;"> specification file is used by default.</span></li><li style="text-align: justify; line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold;">Authentication</span>. Select an option to authenticate the web service:</li></ul>
+<ul style="list-style-type:disc"><ul style="list-style-type:circle">
+<li style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold;">None</span>.</li><li style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold;">Basic</span>. Login and password are used for authentication.</li><li style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold;">With Token</span>. A token is required for authentication.</li></ul></li></ul>
+<p style="text-align: justify; line-height: 1.20; margin: 0 0 11px 36px;"><span style="font-family: 'Times New Roman',Times,Georgia,serif;">To specify a login and password or token, click the key icon to the right of the field. Please note that when exporting the module, the data is transmitted in an unencrypted form.</span></p>
+<p style="text-align: justify; line-height: 1.20; margin: 0 0 11px 36px;"><span style="font-family: 'Times New Roman',Times,Georgia,serif;">To encrypt sensitive data, we recommend using template variables, i.e., </span><span style="font-family: 'Times New Roman',Times,Georgia,serif; color: #0000ff;"><a href="extention-settings.html" class="topiclink">parameters created in the module settings</a></span><span style="font-family: 'Times New Roman',Times,Georgia,serif;">. To do this, click the </span><span style="font-family: 'Times New Roman',Times,Georgia,serif; font-weight: bold;">{+}</span><span style="font-family: 'Times New Roman',Times,Georgia,serif;"> icon in the right part of the field, select the added parameter, and save the settings.</span></p>
+<p style="text-align: justify; line-height: 1.20; margin: 0 0 11px 36px;"><span style="font-family: 'Times New Roman',Times,Georgia,serif;">For example, on the </span><span style="font-family: 'Times New Roman',Times,Georgia,serif; font-weight: bold;">Module Settings</span><span style="font-family: 'Times New Roman',Times,Georgia,serif;"> page, you can create the </span><span style="font-family: 'Times New Roman',Times,Georgia,serif; font-weight: bold;">Token</span><span style="font-family: 'Times New Roman',Times,Georgia,serif;"> parameter of the </span><span style="font-family: 'Times New Roman',Times,Georgia,serif; font-weight: bold;">String</span><span style="font-family: 'Times New Roman',Times,Georgia,serif;"> type. Then, when adding an external service, specify the variable in the authentication rule. Then in the settings of the enabled module, the token can be added, changed, or deleted.</span></p>
+<ol style="list-style-type:upper-roman" start="4">
+<li value="4" style="text-align: justify; line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-family: 'Times New Roman',Times,Georgia,serif;">Click </span><span style="font-family: 'Times New Roman',Times,Georgia,serif; font-weight: bold;">Create</span><span style="font-family: 'Times New Roman',Times,Georgia,serif;">.</span></li><li value="5" style="text-align: justify; line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-family: 'Times New Roman',Times,Georgia,serif;">A window with full settings of the external service will open. To provide access to the service, click </span><span style="font-family: 'Times New Roman',Times,Georgia,serif; font-weight: bold;">Save</span><span style="font-family: 'Times New Roman',Times,Georgia,serif;"> and </span><span style="font-family: 'Times New Roman',Times,Georgia,serif; font-weight: bold;">Publish</span><span style="font-family: 'Times New Roman',Times,Georgia,serif;"> in the top panel.</span></li></ol>
+<p style="text-align: justify; line-height: 1.20; margin: 0 0 11px 0;"><span style="font-family: 'Times New Roman',Times,Georgia,serif;">Now you can use the available methods of the web service described in its documentation.</span></p>
+<p style="text-align: justify; line-height: 1.20; margin: 0 0 11px 0;"><span style="font-family: 'Times New Roman',Times,Georgia,serif;">The methods can only be accessed in server scripts that are processed on the BRIX server.</span></p>
+<p style="text-align: justify; line-height: 1.20; margin: 0 0 11px 0;"><span style="font-family: 'Times New Roman',Times,Georgia,serif;">For convenience, you can add scripts within an existing module, for example, in </span><span style="font-family: 'Times New Roman',Times,Georgia,serif; color: #0000ff;"><a href="extention-widegets.html" class="topiclink">custom widgets</a></span><span style="font-family: 'Times New Roman',Times,Georgia,serif;"> or </span><span style="font-family: 'Times New Roman',Times,Georgia,serif; color: #0000ff;"><a href="extention-activities.html" class="topiclink">activities in business processes</a></span><span style="font-family: 'Times New Roman',Times,Georgia,serif;">. Created components with server scripts can be applied in any BRIX workspace but are executed only when the custom module is enabled.</span></p>
+<h2 class="p_Heading2"><span class="f_Heading2">Example of using external service methods &nbsp;</span></h2>
+<p class="p_Normal">Let’s consider the use of an external service in the module on the example of a configured integration with a web service that provides data about a country by its ISO code. You can read and use the service description language (WSDL) at the <a href="http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso?WSDL" target="_blank" class="weblink">URL specification</a>.</p>
+<p class="p_Normal">In the module, we will create and customize a widget where the user specifies the ISO code of the country and clicks the button to run the script. The script uses a method from a web service. After the request is processed, the widget in BRIX displays full information about the country: name, capital city, phone and currency code, national languages, and flag.</p>
+<p class="p_Normal">To allow users to use the widget, let’s place it on a separate page added to a system workspace.</p>
+<p class="p_Normal">Let’s see how to configure such functionality.</p>
+<h3 class="p_Heading3"><span class="f_Heading3">Step 1. Create a widget in the module and configure its context</span></h3>
+<ol style="list-style-type:decimal">
+<li value="1" style="text-align: justify; line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 11px;">Go to the custom module settings and open the <span style="font-weight: bold;">Widgets</span> tab.</li><li value="2" style="text-align: justify; line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 11px;">Click <span style="font-weight: bold;">+Widget</span>, specify a name for the widget, for example, <span style="font-weight: bold;">Country information</span>, and click <span style="font-weight: bold;">Create</span>. The interface designer will open.</li><li value="3" style="text-align: justify; line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 11px;">Create context variables that are placed on the modeling canvas and used to exchange data between BRIX and the web service. To do this, click the <span style="font-weight: bold;">Context</span> tab and add properties:</li></ol>
+<p style="text-align: justify; line-height: 1.20; margin: 0 0 11px 34px;"><img alt="soap-service-2" width="815" height="350" style="margin:0;width:815px;height:350px;border:none" src="soap-service-2.png"/></p>
+<ul style="list-style-type:disc">
+<li style="text-align: justify; line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold;">ISO country code</span> (<code><b>isocode</b></code>). It is a variable of the <span style="color: #0000ff;"><a href="360009707032.html" class="topiclink">String (string)</a></span> type. In the widget, employees will use this field to specify the ISO code of the country.</li><li style="text-align: justify; line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold;">Country information</span> (<code><b>countryinfo</b></code>). It is a variable with of the <span style="color: #0000ff;"><a href="360009707032.html" class="topiclink">String (text)</a></span> type. After processing a request to the web service, this field will display full information about the country.</li><li style="text-align: justify; line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold;">Country flag</span> (<code><b>flag</b></code>). It is a variable of the <span style="color: #0000ff;"><a href="360009707032.html#image" class="topiclink">Image (one)</a></span> type. This field will display the flag image obtained from the link to it in the response from the web service.</li></ul>
+<h3 class="p_Heading3"><span class="f_Heading3">Step 2. Place properties on the widget form</span></h3>
+<p style="text-align: justify; line-height: 1.20; margin: 0 0 11px 0;">Add properties to the widget so that users can specify the ISO code of a country and view information about it resulting from processing a request to the web service. To do this:</p>
+<ol style="list-style-type:decimal">
+<li value="1" style="text-align: justify; line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 11px;">Click the <span style="font-weight: bold;">Template</span> tab and in the right sidebar, click <span style="font-weight: bold;">Properties</span>.</li><li value="2" style="text-align: justify; line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 11px;">Drag and drop the created variables onto the modeling canvas.</li><li value="3" style="text-align: justify; line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 11px;">For the properties that display the query result, i.e., <span style="font-weight: bold;">Country information</span> and <span style="font-weight: bold;">Country flag</span>, we recommend that you enable the <span style="font-weight: bold;">Read only</span> option so that users cannot modify the resulting values.</li></ol>
+<h3 class="p_Heading3"><span class="f_Heading3">Step 3. Configure the server script</span></h3>
+<p style="text-align: justify; line-height: 1.20; margin: 0 0 11px 0;">Write a server script that will handle the method from the web service, and configure it to run. To do this:</p>
+<ol style="list-style-type:decimal">
+<li value="1" style="text-align: justify; line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 11px;">In the designer sidebar, click <span style="font-weight: bold;">Widgets</span>, find the <span style="color: #0000ff;"><a href="button_widget.html" class="topiclink">Button</a></span> widget and drag it to the modeling canvas, for example, place the button under the <span style="font-weight: bold;">ISO country code</span> string.</li><li value="2" style="text-align: justify; line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 11px;">In the window that opens, customize the display of the button and set its name, for example, <span style="font-weight: bold;">Get</span> <span style="font-weight: bold;">info</span>.</li><li value="3" style="text-align: justify; line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 11px;">In the <span style="font-weight: bold;">Executed script</span> field, select the <span style="font-weight: bold;">Server</span> option to add a script that is processed on the BRIX server. Click <span style="font-weight: bold;">Create</span> and specify the name of the script that will be run when the button is clicked, for example, <span style="font-weight: bold;">Show</span>.</li></ol>
+<p style="text-align: justify; line-height: 1.20; margin: 0 0 11px 34px;"><img alt="soap-service-3" width="673" height="369" style="margin:0;width:673px;height:369px;border:none" src="soap-service-3.png"/></p>
+<ol style="list-style-type:decimal">
+<li value="4" style="text-align: justify; line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 11px;">Click the <span style="font-weight: bold;">Open</span> button that appears in the field to go to the <span style="font-weight: bold;">Scripts</span> tab and write the script:</li></ol>
+<p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample">async function Show(): Promise&lt;</span><span class="f_CodeExample" style="font-weight: bold;">void</span><span class="f_CodeExample">&gt; {</span><br />
+<span class="f_CodeExample" style="color: #ffffff;"> &nbsp;  </span><span class="f_CodeExample">Context.data.countryinfo = '';</span><br />
+<span class="f_CodeExample" style="color: #ffffff;"> &nbsp;  </span><span class="f_CodeExample">Context.data.flag = undefined;</span><br />
+<span class="f_CodeExample" style="color: #ffffff;"> &nbsp;  </span><span class="f_CodeExample" style="font-weight: bold;">if </span><span class="f_CodeExample">(!Context.data.isocode) {</span><br />
+<span class="f_CodeExample" style="color: #ffffff;"> &nbsp; &nbsp; &nbsp;  </span><span class="f_CodeExample" style="font-weight: bold;">return</span><span class="f_CodeExample">;</span><br />
+<span class="f_CodeExample" style="color: #ffffff;"> &nbsp;  </span><span class="f_CodeExample">}</span><br />
+<span class="f_CodeExample" style="color: #ffffff;"> &nbsp;  </span><span class="f_CodeExample" style="font-weight: bold;">const </span><span class="f_CodeExample">mysCountryISOCode = Context.data.isocode;</span><br />
+<span class="f_CodeExample" style="color: #ffffff;"> &nbsp;  </span><span class="f_CodeExample" style="font-weight: bold;">try </span><span class="f_CodeExample">{</span><br />
+<span class="f_CodeExample">// Access to an external service created in the module</span><br />
+<span class="f_CodeExample" style="color: #ffffff;"> &nbsp; &nbsp; &nbsp;  </span><span class="f_CodeExample" style="font-weight: bold;">const </span><span class="f_CodeExample">countryinfoservice = Namespace.ws?.countryinfoservice();</span><br />
+<span class="f_CodeExample" style="color: #ffffff;"> &nbsp; &nbsp; &nbsp;  </span><span class="f_CodeExample" style="font-weight: bold;">if </span><span class="f_CodeExample">(countryinfoservice) {</span><br />
+<span class="f_CodeExample">// Call the method to retrieve complete country information from an external service</span><br />
+<span class="f_CodeExample" style="color: #ffffff;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span><span class="f_CodeExample" style="font-weight: bold;">const </span><span class="f_CodeExample">result = await countryinfoservice.FullCountryInfo({</span><br />
+<span class="f_CodeExample" style="color: #ffffff;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span><span class="f_CodeExample">sCountryISOCode: mysCountryISOCode</span><br />
+<span class="f_CodeExample" style="color: #ffffff;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span><span class="f_CodeExample">});</span><br />
+<span class="f_CodeExample" style="color: #ffffff;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span><span class="f_CodeExample" style="font-weight: bold;">if </span><span class="f_CodeExample">(result &amp;&amp; result.data &amp;&amp; result.data.FullCountryInfoResult) {</span><br />
+<span class="f_CodeExample" style="color: #ffffff;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span><span class="f_CodeExample" style="font-weight: bold;">const </span><span class="f_CodeExample">countryInfo = result.data.FullCountryInfoResult;</span><br />
+<span class="f_CodeExample">// Check if languages and their properties are available before displaying them</span><br />
+<span class="f_CodeExample" style="color: #ffffff;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span><span class="f_CodeExample" style="font-weight: bold;">const </span><span class="f_CodeExample">languages = countryInfo.Languages?.tLanguage</span><br />
+<span class="f_CodeExample" style="color: #ffffff;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span><span class="f_CodeExample">? countryInfo.Languages.tLanguage</span><br />
+<span class="f_CodeExample" style="color: #ffffff;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span><span class="f_CodeExample">.filter(lang =&gt; lang.sName &amp;&amp; lang.sISOCode)</span><br />
+<span class="f_CodeExample">// Filter the result to include only those languages for which the service has a country name and ISO code</span><br />
+<span class="f_CodeExample" style="color: #ffffff;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span><span class="f_CodeExample">.map(lang =&gt; `${lang.sName} (${lang.sISOCode})`)</span><br />
+<span class="f_CodeExample" style="color: #ffffff;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span><span class="f_CodeExample">.join(&quot;, &quot;)</span><br />
+<span class="f_CodeExample" style="color: #ffffff;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span><span class="f_CodeExample">: &quot;Information on languages is not available&quot;;</span><br />
+<span class="f_CodeExample">// Generate the formatted result</span><br />
+<span class="f_CodeExample" style="color: #ffffff;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span><span class="f_CodeExample" style="font-weight: bold;">const </span><span class="f_CodeExample">formattedResult = `</span><br />
+<span class="f_CodeExample" style="color: #ffffff;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span><span class="f_CodeExample">Full country information with ISO Code &quot;${mysCountryISOCode}&quot;:</span><br />
+<span class="f_CodeExample" style="color: #ffffff;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span><span class="f_CodeExample">Name: ${countryInfo.sName}</span><br />
+<span class="f_CodeExample" style="color: #ffffff;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span><span class="f_CodeExample">Country code: ${countryInfo.sISOCode}</span><br />
+<span class="f_CodeExample" style="color: #ffffff;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span><span class="f_CodeExample">Capital: ${countryInfo.sCapitalCity}</span><br />
+<span class="f_CodeExample" style="color: #ffffff;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span><span class="f_CodeExample">Phone code: +${countryInfo.sPhoneCode}</span><br />
+<span class="f_CodeExample" style="color: #ffffff;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span><span class="f_CodeExample">Continent: ${countryInfo.sContinentCode}</span><br />
+<span class="f_CodeExample" style="color: #ffffff;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span><span class="f_CodeExample">Currency code: ${countryInfo.sCurrencyISOCode}</span><br />
+<span class="f_CodeExample" style="color: #ffffff;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span><span class="f_CodeExample">Country flag: ${countryInfo.sCountryFlag}</span><br />
+<span class="f_CodeExample" style="color: #ffffff;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span><span class="f_CodeExample">Languages: ${languages}</span><br />
+<span class="f_CodeExample" style="color: #ffffff;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span><span class="f_CodeExample">`;</span><br />
+<span class="f_CodeExample" style="color: #ffffff;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span><span class="f_CodeExample">Context.data.countryinfo += formattedResult;</span><br />
+<span class="f_CodeExample">// Upload flag image using the link received from the service</span><br />
+<span class="f_CodeExample" style="color: #ffffff;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span><span class="f_CodeExample" style="font-weight: bold;">const </span><span class="f_CodeExample">newFlag = await Context.fields.flag.createFromLink(`flagOf${mysCountryISOCode}.jpg`, countryInfo.sCountryFlag!);</span><br />
+<span class="f_CodeExample" style="color: #ffffff;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span><span class="f_CodeExample">Context.data.flag = newFlag;</span><br />
+<span class="f_CodeExample" style="color: #ffffff;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span><span class="f_CodeExample">}</span><br />
+<span class="f_CodeExample" style="color: #ffffff;"> &nbsp; &nbsp; &nbsp;  </span><span class="f_CodeExample">}</span><br />
+<span class="f_CodeExample" style="color: #ffffff;"> &nbsp;  </span><span class="f_CodeExample">}</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample" style="font-weight: bold;">catch </span><span class="f_CodeExample">(error) {</span><br />
+<span class="f_CodeExample" style="color: #ffffff;"> &nbsp;  </span><span class="f_CodeExample">}</span><br />
+<span class="f_CodeExample">}</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Step 4. Publish the customized widget</span></h3>
+<p class="p_Normal">After customization, the widget in the interface designer may look like this:</p>
+<p style="text-align: justify; line-height: 1.20; margin: 0 0 11px 0;"><img alt="soap-service-4" width="949" height="329" style="margin:0;width:949px;height:329px;border:none" src="soap-service-4.png"/></p>
+<p class="p_Normal">To make it available for use, click <span style="font-weight: bold;">Save </span>and<span style="font-weight: bold;"> Publish</span> in the top panel of the interface designer.</p>
+<h3 class="p_Heading3"><span class="f_Heading3">Step 5. Add the widget to a page</span></h3>
+<p style="text-align: justify; line-height: 1.20; margin: 0 0 11px 0;">Once the widget is published, it can be placed on the system app pages and forms. To do this:</p>
+<ol style="list-style-type:decimal">
+<li value="1" style="text-align: justify; line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 11px;">Make sure that the custom module in which the widget is created is enabled. &nbsp;</li><li value="2" style="text-align: justify; line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 11px;">Go to any workspace and <span style="color: #0000ff;"><a href="360009924451.html" class="topiclink">create a new page</a></span>.</li><li value="3" style="text-align: justify; line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 11px;">Open the page in the interface designer.</li><li value="4" style="text-align: justify; line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 11px;">On the <span style="font-weight: bold;">Template</span> tab, in the list of widgets, find the <span style="font-weight: bold;">Country information</span> widget created in the module and drag it to the modeling canvas.</li><li value="5" style="text-align: justify; line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 11px;">Save and publish the page.</li></ol>
+<p style="text-align: justify; line-height: 1.20; margin: 0 0 11px 0;">On the ready page with the widget, users will be able to enter standardized ISO codes of countries and get full information about them from the web service.</p>
+<p style="text-align: justify; line-height: 1.20; margin: 0 0 11px 0;"><img alt="soap-service-5" width="833" height="454" style="margin:0;width:833px;height:454px;border:none" src="soap-service-5.png"/></p>
+
+                        <div class="bottom-nav">
+                            
+                                <a id="prev-link" class="topic__navi_prev" href="module-external-app.html">
+                                    <span class="bottom-nav__arrow bottom-nav__arrow--prev"></span> <span
+                                        class="bottom-nav__link">module-external-app.html</span>
+                                </a>
+                            
+                            
+                                <a id="next-link" class="topic__navi_next" href="export_extention.html">
+                                    <span class="bottom-nav__link">export_extention.html</span> <span
+                                        class="bottom-nav__arrow bottom-nav__arrow--next"></span>
+                                </a>
+                            
+                        </div>
+                        <!-- добавляет на страницу строку блок Была ли статья полезной?  -->
+                          <div class="feedback" id="feedback"><span><b>Was this helpful?</b></span><form action="" method="POST" class="feedback-form" id="feedback-form"><div class="feedback__popup feedback__popup-response" id="feedback__popup_thx" style="display: none;">Thanks for your feedback!</div><div class="feedback__popup" id="feedback__popup_why" style="display: none;"><div class="feedback__popup-header">Please specify why:</div><input type="radio" name="category" id="bad_recommendation" value="bad_recommendation"><label for="bad_recommendation">Recommendations did not help me</label><input type="radio" name="category" id="difficult_text" value="difficult_text"><label for="difficult_text">Article is hard to understand</label><input type="radio" name="category" id="no_answer" value="no_answer"><label for="no_answer">Didn’t answer my question</label><input type="radio" name="category" id="bad_header" value="bad_header"><label for="bad_header">Content does not match the topic</label><input type="radio" name="category" id="other_reason" value="other_reason"><label for="other_reason">Other</label></div><div class="feedback__popup" id="feedback__popup-other" style="display: none;"><div class="feedback__popup-header">How can we improve the article?</div><textarea class="feedback__textarea" name="other" id=""></textarea><input type="submit" class="feedback__other-btn" value="Submit"></div><div class="feedback-form__btn-group"><input type="radio" name="useful" id="feedback__useful_yes" value="true"><label for="feedback__useful_yes"><img src="like.svg" class="small-img"><spanclass="feedback-form__btn-group_yes-btn">Yes</spanclass="feedback-form__btn-group_yes-btn"></label><input type="radio" name="useful" id="feedback__useful_no" value="false"><label for="feedback__useful_no"><img src="dislike.svg" class="small-img"><spanclass="feedback-form__btn-group_no-btn">No</spanclass="feedback-form__btn-group_no-btn"></label></div><select name="category"><option disabled="">Please specify why</option><option value="bad_recommendation" selected="">Recommendations did not help me</option><option value="difficult_text">Article is hard to understand</option><option value="no_answer">Didn’t answer my question</option><option value="bad_header">Content does not match the topic</option><option value="other_reason">Other</option></select><input type="submit"></form></div>
+                           
+                    </section>
+                </div>
+                <aside class="article__sidebar" style="display:none">
+                    <input type="checkbox" />
+                    <div class="article__arrow"></div>
+                    <div class="table-of-contents elma365-right" id="toc2Content">
+                        <h3 class="h3-toc">In this topic</h3>
+                        <nav id="toc2"></nav>
+                    </div>
+                </aside>
+            </div>
+        </article>
+    </main>               
+    <footer class="footer">
+        <div class="footer-container">
+  <div class="footer-mobile">
+    
+    <ul class="footer-mobile__list"><li><a href="https://brix365.com/en/" target="_blank">BRIX</a></li><li><a href="https://tssdk.brix365.com/en/latest/" target="_blank">SDK</a></li><li><a href="https://api.brix365.com/en/" target="_blank">API</a></li></ul><ul class="footer-mobile__list"><li><a href="https://brix365.com/en/help/platform/get-trial.html">Platform</a></li><li><a href="https://brix365.com/en/help/ecm/ecm-functions.html">ECM</a></li><li><a href="https://brix365.com/en/help/service/service-functions.html">Service</a></li><li><a href="https://brix365.com/en/help/projects/projects-functions.html">Projects</a></li></ul>
+    
+    
+  </div>
+  <div class="footer-wrap">
+    
+      <div><span class="mobile-question-popup">Send feedback</span><form method="POST" action class="question__popup question-xs" id="question__popup"><div class="question-wrap"><span class="close"></span><span class="title">Ask a question</span><label for="help_question" style="display: none;"></label><textarea name="help_question" id="help_question"></textarea><input type="submit" value="Send"></div></form><div class="hidden fade-in question-success-xs">Sent</div></div>
+    
+    <div class="footer-flex-b">
+      <span class="footer-copy">&copy; 2025 BRIX</span>
+      <ul class="footer-list">
+        
+        <li class="footer-item">
+            <a href="#" class="arrow-top" style="display: block;"></a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+ 
+    </footer>
+    <iframe name="hmnavigation" style="display:none!important"></iframe>
+    <script src="./jquery-ui.js"></script>
+    <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
+    <script src="./jquery.tocify.min.js"></script>
+    <script src="./TypoReporter.min.js"></script>
+    <script src="./google-search.js"></script>
+    <script src="./main.js"></script>
+</body>
+
+</html>

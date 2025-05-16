@@ -1,0 +1,285 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Event processing in duplicates</title>
+    <meta name="generator" content="Help+Manual" />
+    <meta name="keywords" content="" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="When the search for similar items is enabled in the app, you can create an event handler that will track the merging of duplicates and trigger the necessary actions through a..." />
+    <meta name="picture" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Full documentation for BRIX365 platform. Low-code developer guide. User guide. Admin guide. Developer guide." />
+    <meta property="og:url" content="https://brix365.com/en/help" />
+    <meta property="og:image" content="" />                                                              
+    <link rel="icon" href="favicon.png" type="image/png" />
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./jquery-ui.css" />
+    <link rel="stylesheet" href="default.css" />
+    <link rel="stylesheet" href="./search-yandex.css" />
+    <link rel="stylesheet" href="./article.css" />
+    <link rel="stylesheet" href="./glossary.css" />
+    <link rel="stylesheet" href="./theme.css" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+
+<body>
+    
+    <script>!function(e,t,c,n,r,a,m){e.ym=e.ym||function(){(e.ym.a=e.ym.a||[]).push(arguments)},e.ym.l=1*new Date;for(var s=0;s<document.scripts.length;s++)if(document.scripts[s].src===n)return;a=t.createElement(c),m=t.getElementsByTagName(c)[0],a.async=1,a.src=n,m.parentNode.insertBefore(a,m)}(window,document,"script","https://mc.yandex.ru/metrika/tag.js"),ym(83179930,"init",{clickmap:!0,trackLinks:!0,accurateTrackBounce:!0,webvisor:!0})</script><noscript><div><img alt=""src=https://mc.yandex.ru/watch/83179930 style=position:absolute;left:-9999px></div></noscript> 
+    
+    ﻿<header class="header elma-365">
+  <div class="container">
+    <a class="header__logo" href="https://brix365.com/en/help">
+      <img src="./logo-en.svg">
+    </a>
+ <!-- <div class="hero__search-form" id="search-panel">
+   <form class="search-form" onsubmit="ym(83180416,'reachGoal','poisk')">
+     <label class="search-form__label">
+       <span id="reset-search" class="search__icon"></span>
+       <input class="search-form__input" type="text">
+     </label>
+     <input class="search-form__submit" type="submit" value="Submit">
+   </form>
+  </div>       -->
+  
+     <div class="hero__search-form" id="search-panel"> <form class="search-form"> <label class="search-form__label"> <span id="reset-search" class="search__icon"></span> <input class="search-form__input" type="text"> </label> <input class="search-form__submit" type="submit" value="Submit"> </form> </div> 
+  <div class="hero__search">
+      <a href="#" id="search-icon" class="hero__search-icon">
+        <img src="search-icon-white.svg" alt="search string">
+      </a>
+      <a href="#" id="side-menu-icon" class="hero__side-icon">
+        <img src="side_menu.svg" alt="side menu">
+      </a>
+    </div>  
+  <div class="header__navi">
+        
+        <ul class="header__list"><li><span class="solution-select"><span class="solution-select__selected"></span><svg width="7" height="4" viewBox="0 0 7 4" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L3.5 3.5L6 1" stroke="white" stroke-linecap="round" stroke-linejoin="round"/></svg><ul class="solution-select__list"><li><a class="project-link" href="https://brix365.com/en/help/platform/get-trial.html">Platform</a></li><li><a class="project-link" href="https://brix365.com/en/help/ecm/ecm-functions.html">ECM</a></li><li><a class="project-link" href="https://brix365.com/en/help/crm/crm_overview.html">CRM</a></li><li><a class="project-link" href="https://brix365.com/en/help/service/service-functions.html">Service</a></li><li><a class="project-link" href="https://brix365.com/en/help/projects/projects-functions.html">Projects</a></li><li><a class="project-link" href="https://brix365.com/en/help/business_solutions/-elma365-store.html">Business Solutions</a></li></ul></span></li><li><a href="https://api.brix365.com/en/" target="_blank">API</a></li><li><a href="https://tssdk.brix365.com/" target="_blank">SDK</a></li></ul>
+        
+        
+   </div>
+  </div>
+
+</header>
+
+
+
+    
+    <main class="main container">
+
+        <aside class="sidebar" id="sidebar">
+        <div class="sidebar__header">
+                 <a class="header__logo" href="https://brix365.com/en/help">
+                    <img src="./logo-light-en.svg">
+                 </a>
+                    <span class="sidebar__close elma-365-close" id="close"></span>
+            </div>
+            <div class="sidebar__wrapper" id="side-menu">
+                
+            </div>
+        </aside>
+
+        <article class="article" id="article">
+            <div class="article-inner">           
+                <div class="content">
+                    <header class="article__header">
+                        
+                            <div class="topic__breadcrumbs">
+                                <p><a href="duplicates.html">Duplicates in the CRM workspace</a> / Event processing in duplicates</p>
+                            </div>
+                        
+                        <div class="topic__title"><h1 class="p_Heading1"><span class="f_Heading1">Event processing in duplicates</span></h1>
+</div>
+                    
+</header>
+                    <section class="article__content">
+                        <div class="scroll-top-inner">
+                            <a href="#h1-article" class="scroll-top"></a>
+                        </div>
+                        <!-- Placeholder for topic body. -->
+                        <p style="line-height: 1.20; margin: 7px 0 16px 0;">When the search for similar items is enabled in the app, you can create an event handler that will track the merging of duplicates and trigger the necessary actions through a script or business process.</p>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;">Event handlers are created within <a href="extentions.html" class="topiclink">custom modules</a>. You can pass to the handler a link to the main item and the record marked as a duplicate, as well as properties from their context.</p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;внимание</span></p>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;">Only users who are members of the <span style="color: #0000ff;"><a href="360006871932.html#administrators" class="topiclink">Administrators</a></span> group can create a module and configure the handler in it.</p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;внимание</span></p>
+<h2 class="p_Heading2"><span class="f_Heading2">Example of the event handler tracking the duplicate merge</span></h2>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;">Let’s consider an example of creating an event handler for <span style="font-weight: bold;">CRM</span> workspace apps that have duplicate search enabled.</p>
+<p style="line-height: 1.20; margin: 16px 0 0 0;">For example, a user finds two items with the same data and combines them into one record. The added event handler captures this action and starts the process. In the course of the process, the data on the main and merged item is passed using scripts. Then the responsible employee and their manager are sent the task of reviewing the list of merged duplicates.</p>
+<p style="line-height: 1.20; margin: 16px 0 0 0;">To configure the handler, perform the following steps:</p>
+<ol style="list-style-type:upper-roman">
+<li value="1" style="line-height: 1.20; margin-top: 16px; margin-right: 0; margin-bottom: 0;">Go to <span style="font-weight: bold;">Administration</span> <span style="font-weight: bold;">&gt;</span> <span style="font-weight: bold;">Modules</span> and <span style="color: #0000ff;"><a href="create-extention.html" class="topiclink">create a custom module</a></span>.</li></ol>
+<ol style="list-style-type:upper-roman" start="2">
+<li value="2" style="line-height: 1.20; margin-top: 16px; margin-right: 0; margin-bottom: 0;">In the module settings, go to the <span style="font-weight: bold;">Processes</span> tab and add a <span style="color: #0000ff;"><a href="extention-processes.html" class="topiclink">business process</a></span> that will be executed each time after the duplicate records are merged.</li></ol>
+<p style="line-height: 1.20; margin: 16px 0 0 34px;">For our example, let’s add the <span style="font-weight: bold;">Duplicate merge notification </span>process and configure its flowchart as follows:</p>
+<p style="line-height: 1.20; margin: 16px 0 0 34px;"><img alt="duplicates-events-processing-1" width="956" height="260" style="margin:0;width:956px;height:260px;border:none" src="duplicates-events-processing-1.png"/></p>
+<ol style="list-style-type:upper-roman" start="3">
+<li value="3" style="line-height: 1.20; margin-top: 16px; margin-right: 0; margin-bottom: 0;">In the business process designer, go to the <span style="font-weight: bold;">Context</span> tab and add variables to which the handler will pass links to the main item and merged records as a result of merging duplicates:</li></ol>
+<ul style="list-style-type:disc">
+<li style="line-height: 1.20; margin-top: 16px; margin-right: 0; margin-bottom: 0;"><span style="font-weight: bold;">Merged Item</span> is a property of the <span style="font-weight: bold;">Arbitrary App (One)</span> type.</li></ul>
+<ul style="list-style-type:disc">
+<li style="line-height: 1.20; margin-top: 16px; margin-right: 0; margin-bottom: 0;"><span style="font-weight: bold;">Duplicates</span> are properties of the <span style="font-weight: bold;">Arbitrary App (Many)</span> type.</li></ul>
+<ol style="list-style-type:upper-roman" start="4">
+<li value="4" style="line-height: 1.20; margin-top: 16px; margin-right: 0; margin-bottom: 0;">On the <span style="font-weight: bold;">Flow Chart</span> tab, place two <a href="360027203731.html" class="topiclink">Script</a> activities and set the functions that will be used to define the main item and its duplicate records.</li></ol>
+<p style="line-height: 1.20; margin: 16px 0 0 0;"><span style="font-size: 13px; color: #000000;">&nbsp;</span></p>
+<p style="line-height: 1.20; margin: 0 0 0 24px;"><a class="dropdown-toggle" style="font-style: normal; font-weight: normal; color: #000000; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186A1')">1. Example of a script for obtaining data on duplicates</a></p>
+<div id="TOGGLE0186A1" class="dropdown-toggle-body" style="text-align: left; padding: 0 0 0 0; margin: 0 0 0 24px;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample">async function getDoubles(): Promise&lt;void&gt; {</span><br />
+<span class="f_CodeExample"> &nbsp;// `Context.data.doubles` is the Duplicates variable from the context of the Duplicate merge notification process</span><br />
+<span class="f_CodeExample"> &nbsp;// When an event handler is created, it is configured to store all the items that are merged during the search for duplicates into this variable.</span><br />
+<span class="f_CodeExample"> &nbsp;// To find out which app the duplicates belong to, and to determine which properties can be accessed within the script, we need to get the first item in the `Context.data.doubles` list and read its `code` property:</span><br />
+<span class="f_CodeExample"> &nbsp;let element = await Context.data.doubles![0].fetch(); // Retrieve the first item of the `Context.data.doubles` list.</span><br />
+<span class="f_CodeExample"> &nbsp;let doubles_app_code = element.code; // Read the `code` property.</span><br />
+<span class="f_CodeExample"> &nbsp;// Checking the value of the `code` property allows you to generate a custom item processing script for each app in which the duplicate search is activated:</span><br />
+<span class="f_CodeExample"> &nbsp;switch(doubles_app_code) {</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;case &quot;_opportunities&quot;:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;// Create the Duplicate Leads variable in the business process context (type: App &gt; Leads with the Many option, access code: `Context.data.opportunities_doubles`). This variable stores links to duplicate records within the Leads app:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Context.data.opportunities_doubles = Context.data.doubles as BaseApplicationItem&lt;Application$_clients$_opportunities$Data, Application$_clients$_opportunities$Params&gt;[];</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;// It is now possible to handle duplicates in the Leads app:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;for (let i = 0; i &lt; Context.data.opportunities_doubles!.length; i++) {</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;let opportunity_double = await Context.data.opportunities_doubles[i].fetch(); // Get the item in the loop</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;let opportunity_name = opportunity_double.data.__name; // Retrieve the name of the item. Values of other app properties can be accessed in the same way.</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;break;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;case &quot;_leads&quot;:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;// When accessing this app, processing of deal duplicates can be implemented.</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;break;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;case &quot;_companies&quot;:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;// When accessing this app, processing of company duplicates can be implemented.</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;break;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;case &quot;_contacts&quot;:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;// When accessing this app, processing of contact duplicates can be implemented.</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;break;</span><br />
+<span class="f_CodeExample"> &nbsp;}</span><br />
+<span class="f_CodeExample">}</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="line-height: 1.20; margin: 0 0 0 24px;"><a class="dropdown-toggle" style="font-style: normal; font-weight: normal; color: #000000; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186A2')">2. Example of a script for obtaining data on the main (merged) item</a></p>
+<div id="TOGGLE0186A2" class="dropdown-toggle-body" style="text-align: left; padding: 0 0 0 0; margin: 0 0 0 24px;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample">async function getMainElement(): Promise&lt;void&gt; {</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;// Processing of the main (merged) item is similar to the processing of duplicate records. The main difference is that there are always several duplicates, while there is only one main item.</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;let element = await Context.data.main_element!.fetch(); // Retrieve the first item of the `Context.data.doubles` list.</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;let doubles_app_code = element.code; // Read the `code` property.</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;// By checking the value of the `code` property, you can generate a custom item processing script for each app in which the duplicate search is activated</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;switch(doubles_app_code) {</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;case &quot;_opportunities&quot;:</span><br />
+<span class="f_CodeExample">  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // Create the Main Lead variable in the business process context (type: App &gt; Leads with the One option, access code: `Context.data.opportunity_main_element`). This variable stores a link to main lead:</span><br />
+<span class="f_CodeExample">  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Context.data.main_element_opportunity = Context.data.main_element! as BaseApplicationItem&lt;Application$_clients$_opportunities$Data, Application$_clients$_opportunities$Params&gt;;</span><br />
+<span class="f_CodeExample">  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // The main item of the Leads app can now be processed:</span><br />
+<span class="f_CodeExample">  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; let main_element_opportunity = await Context.data.main_element_opportunity.fetch(); // Obtain the item</span><br />
+<span class="f_CodeExample">  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; let main_opportunity_name = main_element_opportunity.data.__name; // Retrieve the item name. Values of other app properties can be accessed in the same way</span><br />
+<span class="f_CodeExample">  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; break;</span><br />
+<span class="f_CodeExample">  &nbsp; &nbsp; &nbsp; case &quot;_leads&quot;:</span><br />
+<span class="f_CodeExample">  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // When accessing this app, processing of deal duplicates can be implemented.</span><br />
+<span class="f_CodeExample">  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; break;</span><br />
+<span class="f_CodeExample">  &nbsp; &nbsp; &nbsp; case &quot;_companies&quot;:</span><br />
+<span class="f_CodeExample">  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // When accessing this app, processing of company duplicates can be implemented.</span><br />
+<span class="f_CodeExample">  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; break;</span><br />
+<span class="f_CodeExample">  &nbsp; &nbsp; &nbsp; case &quot;_contacts&quot;:</span><br />
+<span class="f_CodeExample">  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // When accessing this app, processing of contact duplicates can be implemented.</span><br />
+<span class="f_CodeExample">  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; break;</span><br />
+<span class="f_CodeExample">  &nbsp; }</span><br />
+<span class="f_CodeExample">}</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="text-indent: -24px; line-height: 1.20; margin: 0 0 0 48px;"><span style="font-size: 13px; color: #000000;">&nbsp;</span></p>
+<ol style="list-style-type:upper-roman" start="5">
+<li value="5" style="line-height: 1.20;">Since the participants of the process will be determined while it’s executed, create two <span style="color: #0000ff;"><a href="360012263032.html#dynamic" class="topiclink">dynamic swimlanes</a></span> on the process diagram:</li></ol>
+<ul style="list-style-type:disc">
+<li style="line-height: 1.20; margin-top: 23px; margin-right: 0; margin-bottom: 0;">For employees responsible for the app item.</li><li style="line-height: 1.20; margin-top: 23px; margin-right: 0; margin-bottom: 0;">For sales reps.</li></ul>
+<ol style="list-style-type:upper-roman" start="6">
+<li value="6" style="line-height: 1.20; margin-top: 23px; margin-right: 0; margin-bottom: 0;">To allow employees to view the list of duplicates found by the event handler, place <span style="color: #0000ff;"><a href="360012495611.html" class="topiclink">Task</a></span> activities in the swimlanes and add the <span style="font-weight: bold;">Merged Item</span> and <span style="font-weight: bold;">Duplicates</span> variables to the task forms.</li><li value="7" style="line-height: 1.20; margin-top: 23px; margin-right: 0; margin-bottom: 0;">Save and publish the process.</li><li value="8" style="line-height: 1.20; margin-top: 23px; margin-right: 0; margin-bottom: 0;">In the module settings, go to the <span style="color: #0000ff;"><a href="events_processing.html" class="topiclink">Event Handling</a></span> tab. Add a handler, specifying the name, the event domain: <span style="font-weight: bold;">Duplicates</span>, the event: <span style="font-weight: bold;">Merge duplicates</span>, and the handler type: <span style="font-weight: bold;">Start process</span>.</li></ol>
+<p style="line-height: 1.20; margin: 23px 0 0 34px;"><img alt="duplicates-events-processing-2" width="559" height="308" style="margin:0;width:559px;height:308px;border:none" src="duplicates-events-processing-2.jpg"/></p>
+<ol style="list-style-type:upper-roman" start="6">
+<li value="9" style="line-height: 1.20; margin-top: 23px; margin-right: 0; margin-bottom: 0;">On the event handler settings page that opens, specify the process created earlier inside the custom module.</li><li value="10" style="line-height: 1.20; margin-top: 23px; margin-right: 0; margin-bottom: 0;">Click the <span style="font-weight: bold;">Input Variables</span> tab and assign data sources for the variables from the process context in the <span style="font-weight: bold;">Item Field</span> column. To do this, map them to the event properties.</li></ol>
+<p style="line-height: 1.20; margin: 23px 0 0 34px;">The <span style="font-weight: bold;">Merge Duplicates</span> event has a set of system fields (event ID, deadline, name of the object, author, etc.), as well as individual properties: link to the main item and duplicates. For our example, we need to map the <span style="font-weight: bold;">Duplicates</span> and <span style="font-weight: bold;">Merged Item</span> variables.</p>
+<p style="line-height: 1.20; margin: 23px 0 0 34px;"><img alt="duplicates-events-processing-3" width="744" height="222" style="margin:0;width:744px;height:222px;border:none" src="duplicates-events-processing-3.png"/></p>
+<p style="line-height: 1.20; margin: 0 0 0 34px;">Please note that the <span style="font-weight: bold;">Input Variables</span> tab displays properties that are present in the process context at the time the process is bound to the event handler. If the process context has been changed, the new variables will not appear in the handler settings. You have to create and configure the event handler again, binding the same business process to it.</p>
+<ol style="list-style-type:upper-roman" start="6">
+<li value="11" style="line-height: 1.20; margin-top: 23px; margin-right: 0; margin-bottom: 0;">On the top panel of the settings page, click <span style="font-weight: bold;">Save</span> and <span style="font-weight: bold;">Publish</span> to activate the event handler.</li><li value="12" style="line-height: 1.20; margin-top: 23px; margin-right: 0; margin-bottom: 0;">Go back to the main module page and enable the module.</li></ol>
+<p style="line-height: 1.20; margin: 23px 0 0 0;"><span style="background-color: #ffffff;">Now, when the user merges multiple duplicate items, an event handler will be triggered in the system, which will start the configured business process. The responsible employees and the manager will review similar records in the task form.</span></p>
+
+                        <div class="bottom-nav">
+                            
+                                <a id="prev-link" class="topic__navi_prev" href="mark-as-duplicate.html">
+                                    <span class="bottom-nav__arrow bottom-nav__arrow--prev"></span> <span
+                                        class="bottom-nav__link">mark-as-duplicate.html</span>
+                                </a>
+                            
+                            
+                                <a id="next-link" class="topic__navi_next" href="marketing.html">
+                                    <span class="bottom-nav__link">marketing.html</span> <span
+                                        class="bottom-nav__arrow bottom-nav__arrow--next"></span>
+                                </a>
+                            
+                        </div>
+                        <!-- добавляет на страницу строку блок Была ли статья полезной?  -->
+                          <div class="feedback" id="feedback"><span><b>Was this helpful?</b></span><form action="" method="POST" class="feedback-form" id="feedback-form"><div class="feedback__popup feedback__popup-response" id="feedback__popup_thx" style="display: none;">Thanks for your feedback!</div><div class="feedback__popup" id="feedback__popup_why" style="display: none;"><div class="feedback__popup-header">Please specify why:</div><input type="radio" name="category" id="bad_recommendation" value="bad_recommendation"><label for="bad_recommendation">Recommendations did not help me</label><input type="radio" name="category" id="difficult_text" value="difficult_text"><label for="difficult_text">Article is hard to understand</label><input type="radio" name="category" id="no_answer" value="no_answer"><label for="no_answer">Didn’t answer my question</label><input type="radio" name="category" id="bad_header" value="bad_header"><label for="bad_header">Content does not match the topic</label><input type="radio" name="category" id="other_reason" value="other_reason"><label for="other_reason">Other</label></div><div class="feedback__popup" id="feedback__popup-other" style="display: none;"><div class="feedback__popup-header">How can we improve the article?</div><textarea class="feedback__textarea" name="other" id=""></textarea><input type="submit" class="feedback__other-btn" value="Submit"></div><div class="feedback-form__btn-group"><input type="radio" name="useful" id="feedback__useful_yes" value="true"><label for="feedback__useful_yes"><img src="like.svg" class="small-img"><spanclass="feedback-form__btn-group_yes-btn">Yes</spanclass="feedback-form__btn-group_yes-btn"></label><input type="radio" name="useful" id="feedback__useful_no" value="false"><label for="feedback__useful_no"><img src="dislike.svg" class="small-img"><spanclass="feedback-form__btn-group_no-btn">No</spanclass="feedback-form__btn-group_no-btn"></label></div><select name="category"><option disabled="">Please specify why</option><option value="bad_recommendation" selected="">Recommendations did not help me</option><option value="difficult_text">Article is hard to understand</option><option value="no_answer">Didn’t answer my question</option><option value="bad_header">Content does not match the topic</option><option value="other_reason">Other</option></select><input type="submit"></form></div>
+                           
+                    </section>
+                </div>
+                <aside class="article__sidebar" style="display:none">
+                    <input type="checkbox" />
+                    <div class="article__arrow"></div>
+                    <div class="table-of-contents elma365-right" id="toc2Content">
+                        <h3 class="h3-toc">In this topic</h3>
+                        <nav id="toc2"></nav>
+                    </div>
+                </aside>
+            </div>
+        </article>
+    </main>               
+    <footer class="footer">
+        <div class="footer-container">
+  <div class="footer-mobile">
+    
+    <ul class="footer-mobile__list"><li><a href="https://brix365.com/en/" target="_blank">BRIX</a></li><li><a href="https://tssdk.brix365.com/en/latest/" target="_blank">SDK</a></li><li><a href="https://api.brix365.com/en/" target="_blank">API</a></li></ul><ul class="footer-mobile__list"><li><a href="https://brix365.com/en/help/platform/get-trial.html">Platform</a></li><li><a href="https://brix365.com/en/help/ecm/ecm-functions.html">ECM</a></li><li><a href="https://brix365.com/en/help/service/service-functions.html">Service</a></li><li><a href="https://brix365.com/en/help/projects/projects-functions.html">Projects</a></li></ul>
+    
+    
+  </div>
+  <div class="footer-wrap">
+    
+      <div><span class="mobile-question-popup">Send feedback</span><form method="POST" action class="question__popup question-xs" id="question__popup"><div class="question-wrap"><span class="close"></span><span class="title">Ask a question</span><label for="help_question" style="display: none;"></label><textarea name="help_question" id="help_question"></textarea><input type="submit" value="Send"></div></form><div class="hidden fade-in question-success-xs">Sent</div></div>
+    
+    <div class="footer-flex-b">
+      <span class="footer-copy">&copy; 2025 BRIX</span>
+      <ul class="footer-list">
+        
+        <li class="footer-item">
+            <a href="#" class="arrow-top" style="display: block;"></a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+ 
+    </footer>
+    <iframe name="hmnavigation" style="display:none!important"></iframe>
+    <script src="./jquery-ui.js"></script>
+    <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
+    <script src="./jquery.tocify.min.js"></script>
+    <script src="./TypoReporter.min.js"></script>
+    <script src="./google-search.js"></script>
+    <script src="./main.js"></script>
+<script type="text/javascript">
+HMInitToggle('TOGGLE0186A1','hm.type','dropdown','hm.state','0');
+HMInitToggle('TOGGLE0186A2','hm.type','dropdown','hm.state','0');
+</script>
+</body>
+
+</html>

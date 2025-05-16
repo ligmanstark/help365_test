@@ -1,0 +1,206 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Sales rep dashboard</title>
+    <meta name="generator" content="Help+Manual" />
+    <meta name="keywords" content="" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sales rep dashboard allows users responsible for sales to view information about leads and deals assigned to them. They also help track CRM tasks assigned to the user." />
+    <meta name="picture" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Full documentation for BRIX365 platform. Low-code developer guide. User guide. Admin guide. Developer guide." />
+    <meta property="og:url" content="https://brix365.com/en/help" />
+    <meta property="og:image" content="" />                                                              
+    <link rel="icon" href="favicon.png" type="image/png" />
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./jquery-ui.css" />
+    <link rel="stylesheet" href="default.css" />
+    <link rel="stylesheet" href="./search-yandex.css" />
+    <link rel="stylesheet" href="./article.css" />
+    <link rel="stylesheet" href="./glossary.css" />
+    <link rel="stylesheet" href="./theme.css" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+
+<body>
+    
+    <script>!function(e,t,c,n,r,a,m){e.ym=e.ym||function(){(e.ym.a=e.ym.a||[]).push(arguments)},e.ym.l=1*new Date;for(var s=0;s<document.scripts.length;s++)if(document.scripts[s].src===n)return;a=t.createElement(c),m=t.getElementsByTagName(c)[0],a.async=1,a.src=n,m.parentNode.insertBefore(a,m)}(window,document,"script","https://mc.yandex.ru/metrika/tag.js"),ym(83179930,"init",{clickmap:!0,trackLinks:!0,accurateTrackBounce:!0,webvisor:!0})</script><noscript><div><img alt=""src=https://mc.yandex.ru/watch/83179930 style=position:absolute;left:-9999px></div></noscript> 
+    
+    ﻿<header class="header elma-365">
+  <div class="container">
+    <a class="header__logo" href="https://brix365.com/en/help">
+      <img src="./logo-en.svg">
+    </a>
+ <!-- <div class="hero__search-form" id="search-panel">
+   <form class="search-form" onsubmit="ym(83180416,'reachGoal','poisk')">
+     <label class="search-form__label">
+       <span id="reset-search" class="search__icon"></span>
+       <input class="search-form__input" type="text">
+     </label>
+     <input class="search-form__submit" type="submit" value="Submit">
+   </form>
+  </div>       -->
+  
+     <div class="hero__search-form" id="search-panel"> <form class="search-form"> <label class="search-form__label"> <span id="reset-search" class="search__icon"></span> <input class="search-form__input" type="text"> </label> <input class="search-form__submit" type="submit" value="Submit"> </form> </div> 
+  <div class="hero__search">
+      <a href="#" id="search-icon" class="hero__search-icon">
+        <img src="search-icon-white.svg" alt="search string">
+      </a>
+      <a href="#" id="side-menu-icon" class="hero__side-icon">
+        <img src="side_menu.svg" alt="side menu">
+      </a>
+    </div>  
+  <div class="header__navi">
+        
+        <ul class="header__list"><li><span class="solution-select"><span class="solution-select__selected"></span><svg width="7" height="4" viewBox="0 0 7 4" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L3.5 3.5L6 1" stroke="white" stroke-linecap="round" stroke-linejoin="round"/></svg><ul class="solution-select__list"><li><a class="project-link" href="https://brix365.com/en/help/platform/get-trial.html">Platform</a></li><li><a class="project-link" href="https://brix365.com/en/help/ecm/ecm-functions.html">ECM</a></li><li><a class="project-link" href="https://brix365.com/en/help/crm/crm_overview.html">CRM</a></li><li><a class="project-link" href="https://brix365.com/en/help/service/service-functions.html">Service</a></li><li><a class="project-link" href="https://brix365.com/en/help/projects/projects-functions.html">Projects</a></li><li><a class="project-link" href="https://brix365.com/en/help/business_solutions/-elma365-store.html">Business Solutions</a></li></ul></span></li><li><a href="https://api.brix365.com/en/" target="_blank">API</a></li><li><a href="https://tssdk.brix365.com/" target="_blank">SDK</a></li></ul>
+        
+        
+   </div>
+  </div>
+
+</header>
+
+
+
+    
+    <main class="main container">
+
+        <aside class="sidebar" id="sidebar">
+        <div class="sidebar__header">
+                 <a class="header__logo" href="https://brix365.com/en/help">
+                    <img src="./logo-light-en.svg">
+                 </a>
+                    <span class="sidebar__close elma-365-close" id="close"></span>
+            </div>
+            <div class="sidebar__wrapper" id="side-menu">
+                
+            </div>
+        </aside>
+
+        <article class="article" id="article">
+            <div class="article-inner">           
+                <div class="content">
+                    <header class="article__header">
+                        
+                            <div class="topic__breadcrumbs">
+                                <p>CRM reports / Sales rep dashboard</p>
+                            </div>
+                        
+                        <div class="topic__title"><h1 class="p_Heading1"><span class="f_Heading1">Sales rep dashboard</span></h1>
+</div>
+                    
+</header>
+                    <section class="article__content">
+                        <div class="scroll-top-inner">
+                            <a href="#h1-article" class="scroll-top"></a>
+                        </div>
+                        <!-- Placeholder for topic body. -->
+                        <p style="line-height: 1.20; margin: 0 0 11px 0;"><span style="font-family: Inter; font-weight: bold;">Sales rep dashboard </span><span style="font-family: Inter;">allows</span><span style="font-family: Inter; font-weight: bold;"> </span><span style="font-family: Inter;">users responsible for sales to view information about leads and deals assigned to them. They also help track </span><span style="font-family: Inter; font-weight: bold;">CRM</span><span style="font-family: Inter;"> tasks assigned to the user.</span></p>
+<p style="line-height: 1.20; margin: 0 0 11px 0;"><span style="font-family: Inter;">Informative charts and lists show data from the following the <a href="leads.html" class="topiclink">Leads</a> and <a href="360012680899.html" class="topiclink">Deals</a> apps. With this tool, a sales rep can see:</span></p>
+<ul style="list-style-type:disc">
+<li style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-family: Inter;">A chart with the</span><span style="font-family: Inter; font-weight: bold;"> </span><span style="font-family: Inter;"><a href="sales-manager-dashboard.html#pipelines" class="topiclink">Allocation of Leads/Deals by Employee</a> widget. It shows deals from different pipelines grouped by status.</span></li><li style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-family: Inter;">The <a href="sales-manager-dashboard.html#crm-activities" class="topiclink">CRM Tasks</a> report. It shows how efficiently the employee finishes tasks associated with leads and deals they work with.</span></li><li style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-family: Inter;">The <a href="sales-manager-dashboard.html#top-deals" class="topiclink">Top 5 Deals</a> list shows deals with the largest budget that the user is working with.</span></li><li style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-family: Inter;">A list of <a href="sales-manager-dashboard.html#today-tasks" class="topiclink">CRM tasks planned for the current date</a>.</span></li></ul>
+<h2 class="p_Heading2"><span class="f_Heading2">Page customization</span></h2>
+<p style="line-height: 1.20; margin: 0 0 11px 0;"><span style="font-family: Inter;">In the dashboard, each report is shown within a separate widget placed on the page. <a href="360006871932.html#administrator" class="topiclink">Administrators</a> can configure the page to suit your company’s needs:</span></p>
+<ul style="list-style-type:disc">
+<li style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-family: Inter;">Change the widgets’ settings, for example, determine the number of deals included in the top deals widget or the number of CRM tasks in the list, exclude deals or leads in final statuses from the statistics, etc.</span></li><li style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-family: Inter;">Rearrange widgets on the page.</span></li><li style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-family: Inter;">Add the same widget several times to break down the data by different attributes.</span></li><li style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-family: Inter;">Delete charts that show statistics irrelevant for your company.</span></li><li style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-family: Inter;">Place additional widgets on the page.</span></li></ul>
+<p style="line-height: 1.20; margin: 0 0 11px 0;"><span style="font-family: Inter;">Read more about widgets on the page in <a href="crm-dashboards-widgets.html" class="topiclink">Sales rep and sales manager dashboard widgets</a>. To learn more about customizing pages in the interface designer, see <a href="360027211631.html" class="topiclink">Add a widget to a page</a>.</span></p>
+<p style="line-height: 1.20; margin: 0 0 11px 0;"><span style="font-family: Inter;">Note that if you changed the page’s settings, the dashboard’s charts may be displayed as one widget. In this case, place separate widgets on the dashboard’s page manually. Read more about this in the <a href="use-dashboards-widgets.html" class="topiclink">Use dashboard widgets on custom pages</a>.</span></p>
+<h2 class="p_Heading2"><span class="f_Heading2">How to read the reports</span></h2>
+<p style="line-height: 1.20; margin: 0 0 11px 0;"><span style="font-family: Inter;">The reports show information about the leads and deals, assigned to the user that were created during the current month.</span></p>
+<p style="line-height: 1.20; margin: 0 0 11px 0;"><span style="font-family: Inter;">To view data for a different period, change the dates at the top of the page and click </span><span style="font-family: Inter; font-weight: bold;">Show</span><span style="font-family: Inter;">.</span></p>
+<p style="line-height: 1.20; margin: 0 0 11px 0;"><img alt="sales-manager-dashboard-1" width="740" height="349" style="margin:0;width:740px;height:349px;border:none" src="sales-manager-dashboard-1.png"/></p>
+<h2 class="p_Heading2"><a id="pipelines" class="hmanchor"></a><span class="f_Heading2">Sales Pipeline: My Leads / My Deals</span></h2>
+<p style="line-height: 1.20; margin: 0 0 11px 0;"><span style="font-family: Inter;">The chart provided by the <a href="crm-dashboards-widgets.html#assigned-items" class="topiclink">Allocation of Leads/Deals by Employee</a> widget shows the number of leads or deals in different statuses assigned to the current user. They are divided by pipeline.</span></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-family: Inter;">You can view data on different pipelines by switching to different tabs above the chart.</span></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><img alt="sales-manager-dashboard-2" width="958" height="512" style="margin:0;width:958px;height:512px;border:none" src="sales-manager-dashboard-2.png"/></p>
+<h2 class="p_Heading2"><a id="crm-activities" class="hmanchor"></a><span class="f_Heading2">CRM Tasks</span></h2>
+<p style="line-height: 1.20; margin: 0 0 11px 0;"><span style="font-family: Inter;">The <a href="crm-dashboards-widgets.html#activities" class="topiclink">CRM tasks for deals/leads</a> widget shows data on </span><span style="font-family: Inter; font-weight: bold;">CRM</span><span style="font-family: Inter;"> tasks assigned to the current user in the </span><span style="font-family: Inter; font-weight: bold;">My Leads</span><span style="font-family: Inter;"> and </span><span style="font-family: Inter; font-weight: bold;">My Deals</span><span style="font-family: Inter;"> charts.</span></p>
+<p style="line-height: 1.20; margin: 0 0 11px 0;"><span style="font-family: Inter;">All tasks in the reports are divided into sections:</span></p>
+<ul style="list-style-type:disc">
+<li style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-family: Inter; font-weight: bold;">Scheduled</span><span style="font-family: Inter;">. Tasks that are not overdue. They can be associated with any deals or leads.</span></li><li style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-family: Inter; font-weight: bold;">No activity</span><span style="font-family: Inter;">. Deals or leads with no active tasks associated with them.</span></li><li style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-family: Inter; font-weight: bold;">Overdue</span><span style="font-family: Inter;">. Number of tasks associated with any deals or leads that weren’t completed on time.</span></li></ul>
+<p style="line-height: 1.20; margin: 0 0 11px 0;"><span style="font-family: Inter;">Under each section, you can see the percentage showing how the number of tasks in it corresponds with the total number of tasks.</span></p>
+<p style="line-height: 1.20; margin: 0 0 11px 0;"><img alt="sales-manager-dashboard-3" width="805" height="294" style="margin:0;width:805px;height:294px;border:none" src="sales-manager-dashboard-3.png"/></p>
+<h2 class="p_Heading2"><a id="top-deals" class="hmanchor"></a><span class="f_Heading2">Top 5 Deals</span></h2>
+<p style="line-height: 1.20; margin: 0 0 11px 0;"><span style="font-family: Inter;">The <a href="crm-dashboards-widgets.html#top-deals" class="topiclink">Top deals</a> widget shows the most profitable deals that the current user is working on. Deals are compared based on the amount specified on their pages, in the </span><span style="font-family: Inter; font-weight: bold;">Budget</span><span style="font-family: Inter;"> field.</span></p>
+<p style="line-height: 1.20; margin: 0 0 11px 0;"><span style="font-family: Inter;">Click on a deal’s name in the list to open it and view its data.</span></p>
+<p style="line-height: 1.20; margin: 0 0 11px 0;"><img alt="sales-manager-dashboard-4" width="917" height="366" style="margin:0;width:917px;height:366px;border:none" src="sales-manager-dashboard-4.png"/></p>
+<h2 class="p_Heading2"><a id="today-tasks" class="hmanchor"></a><span class="f_Heading2">My CRM Tasks for Today</span></h2>
+<p style="line-height: 1.20; margin: 0 0 11px 0;"><span style="font-family: Inter;">The <a href="crm-dashboards-widgets.html#today-tasks" class="topiclink">CRM tasks for today</a> widget shows calls, emails, meetings, and webinars assigned for the current date. The employee can click a task’s name to open the lead, deal, or company that the task is associated with.</span></p>
+
+                        <div class="bottom-nav">
+                            
+                                <a id="prev-link" class="topic__navi_prev" href="360012585020.html">
+                                    <span class="bottom-nav__arrow bottom-nav__arrow--prev"></span> <span
+                                        class="bottom-nav__link">360012585020.html</span>
+                                </a>
+                            
+                            
+                                <a id="next-link" class="topic__navi_next" href="sales-executive-dashboard.html">
+                                    <span class="bottom-nav__link">sales-executive-dashboard.html</span> <span
+                                        class="bottom-nav__arrow bottom-nav__arrow--next"></span>
+                                </a>
+                            
+                        </div>
+                        <!-- добавляет на страницу строку блок Была ли статья полезной?  -->
+                          <div class="feedback" id="feedback"><span><b>Was this helpful?</b></span><form action="" method="POST" class="feedback-form" id="feedback-form"><div class="feedback__popup feedback__popup-response" id="feedback__popup_thx" style="display: none;">Thanks for your feedback!</div><div class="feedback__popup" id="feedback__popup_why" style="display: none;"><div class="feedback__popup-header">Please specify why:</div><input type="radio" name="category" id="bad_recommendation" value="bad_recommendation"><label for="bad_recommendation">Recommendations did not help me</label><input type="radio" name="category" id="difficult_text" value="difficult_text"><label for="difficult_text">Article is hard to understand</label><input type="radio" name="category" id="no_answer" value="no_answer"><label for="no_answer">Didn’t answer my question</label><input type="radio" name="category" id="bad_header" value="bad_header"><label for="bad_header">Content does not match the topic</label><input type="radio" name="category" id="other_reason" value="other_reason"><label for="other_reason">Other</label></div><div class="feedback__popup" id="feedback__popup-other" style="display: none;"><div class="feedback__popup-header">How can we improve the article?</div><textarea class="feedback__textarea" name="other" id=""></textarea><input type="submit" class="feedback__other-btn" value="Submit"></div><div class="feedback-form__btn-group"><input type="radio" name="useful" id="feedback__useful_yes" value="true"><label for="feedback__useful_yes"><img src="like.svg" class="small-img"><spanclass="feedback-form__btn-group_yes-btn">Yes</spanclass="feedback-form__btn-group_yes-btn"></label><input type="radio" name="useful" id="feedback__useful_no" value="false"><label for="feedback__useful_no"><img src="dislike.svg" class="small-img"><spanclass="feedback-form__btn-group_no-btn">No</spanclass="feedback-form__btn-group_no-btn"></label></div><select name="category"><option disabled="">Please specify why</option><option value="bad_recommendation" selected="">Recommendations did not help me</option><option value="difficult_text">Article is hard to understand</option><option value="no_answer">Didn’t answer my question</option><option value="bad_header">Content does not match the topic</option><option value="other_reason">Other</option></select><input type="submit"></form></div>
+                           
+                    </section>
+                </div>
+                <aside class="article__sidebar" style="display:none">
+                    <input type="checkbox" />
+                    <div class="article__arrow"></div>
+                    <div class="table-of-contents elma365-right" id="toc2Content">
+                        <h3 class="h3-toc">In this topic</h3>
+                        <nav id="toc2"></nav>
+                    </div>
+                </aside>
+            </div>
+        </article>
+    </main>               
+    <footer class="footer">
+        <div class="footer-container">
+  <div class="footer-mobile">
+    
+    <ul class="footer-mobile__list"><li><a href="https://brix365.com/en/" target="_blank">BRIX</a></li><li><a href="https://tssdk.brix365.com/en/latest/" target="_blank">SDK</a></li><li><a href="https://api.brix365.com/en/" target="_blank">API</a></li></ul><ul class="footer-mobile__list"><li><a href="https://brix365.com/en/help/platform/get-trial.html">Platform</a></li><li><a href="https://brix365.com/en/help/ecm/ecm-functions.html">ECM</a></li><li><a href="https://brix365.com/en/help/service/service-functions.html">Service</a></li><li><a href="https://brix365.com/en/help/projects/projects-functions.html">Projects</a></li></ul>
+    
+    
+  </div>
+  <div class="footer-wrap">
+    
+      <div><span class="mobile-question-popup">Send feedback</span><form method="POST" action class="question__popup question-xs" id="question__popup"><div class="question-wrap"><span class="close"></span><span class="title">Ask a question</span><label for="help_question" style="display: none;"></label><textarea name="help_question" id="help_question"></textarea><input type="submit" value="Send"></div></form><div class="hidden fade-in question-success-xs">Sent</div></div>
+    
+    <div class="footer-flex-b">
+      <span class="footer-copy">&copy; 2025 BRIX</span>
+      <ul class="footer-list">
+        
+        <li class="footer-item">
+            <a href="#" class="arrow-top" style="display: block;"></a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+ 
+    </footer>
+    <iframe name="hmnavigation" style="display:none!important"></iframe>
+    <script src="./jquery-ui.js"></script>
+    <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
+    <script src="./jquery.tocify.min.js"></script>
+    <script src="./TypoReporter.min.js"></script>
+    <script src="./google-search.js"></script>
+    <script src="./main.js"></script>
+</body>
+
+</html>
