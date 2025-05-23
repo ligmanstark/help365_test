@@ -1967,5 +1967,26 @@ code {
  .article__header{
    min-height: 58px;
  }
+ 
+.article__badge {
+  height: 26px;
+  min-width: 34px;
+  max-width: 120px;
+  box-sizing: border-box;
+  width: max-content;
+  display: flex !important;
+  align-items: center;
+  white-space: nowrap;
+  text-align: center;
+  justify-content: center;
+}
+
+.topic__breadcrumbs {
+  width: 700px;
+}
+
+[data-unique] {
+  scroll-margin-top: 80px;
+}
 
 
