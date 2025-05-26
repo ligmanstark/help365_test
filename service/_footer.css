@@ -432,3 +432,7 @@ img{
     position: static !important;
   }
 }
+
+footer {
+  padding-top:80px
+}
