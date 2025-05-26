@@ -121,7 +121,7 @@
 <li style="background: #ffffff; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-weight: bold; color: #394149;">Название</span><span style="color: #394149;"> — наименование действия в настройках модуля и в дизайнере бизнес-процессов;</span></li><li style="background: #ffffff; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-weight: bold; color: #394149;">Название по умолчанию</span><span style="color: #394149;"> — наименование элемента, отображающееся при его добавлении на схему процесса;</span></li><li style="background: #ffffff; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-weight: bold; color: #394149;">Цвет блока</span><span style="color: #394149;"> — цвет блока на схеме процесса;</span></li><li style="background: #ffffff; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><a id="description" class="hmanchor"></a><span style="font-weight: bold; color: #394149;">Описание</span><span style="color: #394149;"> — описание функциональных возможностей действия и его особенностей;</span></li><li style="background: #ffffff; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-weight: bold; color: #394149;">Устаревшее</span><span style="color: #394149;"> — опция позволяет скрыть элемент из дизайнера бизнес-процессов, чтобы пользователи не смогли добавлять его на схемы новых процессов. Устаревшие действия продолжат работать без изменений в уже созданных процессах. Например, можно включить опцию для блока после обновления модуля;</span></li><li style="background: #ffffff; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-weight: bold; color: #394149;">URL делегирования</span><span style="color: #394149;"> — адрес внешнего сервиса с указанием кода определённого действия в виде:</span><code><b>schema://domain:port/base/path/action-code</b></code><span style="color: #394149;">. Нажмите значок </span><span style="font-weight: bold; color: #394149;">{+}</span><span style="color: #394149;"> в поле, чтобы использовать в адресе переменные, созданные в пользовательском модуле на вкладке </span><a href="extention-settings.html" class="topiclink">Настройки</a><span style="color: #394149;">. С помощью значка </span><span style="font-weight: bold; color: #394149;">f(x)</span><span style="color: #394149;"> в адрес можно добавить функцию </span><a href="360027003711.html#datetime-function" class="topiclink">DateTime()</a><span style="color: #394149;">;</span></li><li style="background: #ffffff; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-weight: bold; color: #394149;">Количество повторов при ошибке </span><span style="color: #394149;">— количество попыток выполнения действия;</span></li><li style="background: #ffffff; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-weight: bold; color: #394149;">Пауза между повторами при ошибке (сек)</span><span style="font-weight: bold; color: #ff0000;">*</span><span style="color: #ff0000;"> </span><span style="color: #394149;">— частота попыток выполнения действия при возникновении ошибки.</span></li></ul>
 <h2 class="p_Heading2"><a id="context" class="hmanchor"></a><span class="f_Heading2">Вкладка «Контекст»</span></h2>
 <p style="background: #ffffff; margin: 14px 0 11px 0;"><span style="color: #394149;">Добавьте переменные, которые будут использоваться в настройках элемента на схеме бизнес-процесса. Контекст можно запросить из внешнего сервиса‑исполнителя или создать вручную, нажав </span><span style="font-weight: bold; color: #394149;">+ Добавить </span><span style="color: #394149;">для каждой переменной. Подробнее о типах переменных читайте в статье </span><a href="360009707032.html" class="topiclink">«Типы данных в системе»</a><span style="color: #394149;">.</span></p>
-<p style="margin: 7px 0 7px 0;"><span style="color: #394149;">Отметьте, какие переменные являются входными и выходными. Это позволит сопоставить контекст действия и процесса, в котором оно используется. Подробнее о биндинге переменных читайте в статье </span><a href="activities-features.html#compare" class="topiclink">«Биндинг и другие аспекты действий в бизнес‑процессах»</a>.</p>
+<p style="margin: 7px 0 7px 0;"><span style="color: #394149;">Отметьте, какие переменные являются входными и выходными. Это позволит сопоставить контекст действия и процесса, в котором оно используется. Подробнее о биндинге переменных читайте в статье </span><a href="activities-features.html" class="topiclink">«Биндинг переменных для действий в бизнес‑процессах»</a>.</p>
 <p style="margin: 7px 0 7px 0;"><span style="color: #394149;">После внесения данных на вкладках нажмите </span><span style="font-weight: bold; color: #394149;">Сохранить</span><span style="color: #394149;"> и </span><span style="font-weight: bold; color: #394149;">Опубликовать</span><span style="color: #394149;"> на верхней панели окна настроек действия. При включённом модуле действие появится в <a href="360012265552.html#process-page" class="topiclink">дизайнере бизнес-процессов</a> на вкладке </span><span style="font-weight: bold; color: #394149;">Интеграции</span><span style="color: #394149;">. Блок можно добавить на схему процесса и <a href="module-action.html" class="topiclink">задать настройки для его выполнения</a>.</span></p>
 <h2 class="p_Heading2"><span class="f_Heading2">Принцип работы действия</span></h2>
 <p style="margin: 16px 0 0 0;">Делегированное действие выполняется по следующему алгоритму:</p>
@@ -149,371 +149,370 @@
 <li class="p_Normal">при прерывании бизнес-процесса; </li><li class="p_Normal">при эскалации по таймеру. </li></ul>
 <p style="margin: 0 0 16px 0;"><span style="font-size: 15px;">Инициатором прерывания действия является </span><span style="font-size: 15px; font-weight: bold;">сервис-processor</span><span style="font-size: 15px;">. Он удаляет созданную точку восстановления и информирует </span><span style="font-size: 15px; font-weight: bold;">сервис-исполнитель</span><span style="font-size: 15px;"> о необходимости отмены действия с помощью вызова.</span></p>
 <h2 class="p_Heading2"><span class="f_Heading2">API сервиса-исполнителя</span></h2>
-<p><span style="font-size: 15px;">Подробное описание интерфейса </span><span style="font-size: 15px; font-weight: bold;">сервиса-исполнителя</span><span style="font-size: 15px;"> вы можете посмотреть в </span><span style="font-size: 15px; font-weight: bold;">OpenAPI-схеме</span><span style="font-size: 15px;">:</span></p>
+<p><span style="font-size: 15px;">Подробное описание интерфейса </span><span style="font-size: 15px; font-weight: bold;">сервиса-исполнителя</span><span style="font-size: 15px;"> вы можете посмотреть в OpenAPI-схеме:</span></p>
 <p><span style="font-size: 15px;"><a class="dropdown-toggle" style="font-style: normal; font-weight: normal; color: #000000; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186A1')">OpenAPI-схема</a></span></p>
 <div id="TOGGLE0186A1" class="dropdown-toggle-body" style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0 0 0 0;"><table style="border:none; border-spacing:0;">
 <tr>
-<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">openapi: 3.0.0</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">info:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp;title: perfomer-service</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp;description: Сервис-исполнитель для делегированного действия</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp;version: 1.0.0</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">servers:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp;- url: schema://domain:port/base/path</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">paths:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp;/{action-code}/context:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp;get:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp;summary: Получить описание контекста</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp;description: Метод предназначен для загрузки описания контекста из сервиса-исполнителя в элемент делегированного действия на этапе его создания блока</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp;operationId: getContext</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp;tags:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp;- Context</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp;parameters:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp;- name: action-code</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;in: path</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;description: Код действия</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;required: true</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;schema:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;type: string</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp;responses:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp;'200':</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;description: Описание контекста действия в виде массива свойств</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;content:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;application/json:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;example: [</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;code&quot;: &quot;firstName&quot;,</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;type&quot;: &quot;STRING&quot;,</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;searchable&quot;: false,</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;indexed&quot;: false,</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;deleted&quot;: false,</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;array&quot;: false,</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;required&quot;: false,</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;single&quot;: true,</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;defaultValue&quot;: null,</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;calcByFormula&quot;: false,</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;formula&quot;: &quot;&quot;,</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;data&quot;: null,</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;view&quot;: {</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;name&quot;: &quot;Имя&quot;,</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;tooltip&quot;: &quot;Имя без сокращений&quot;,</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;data&quot;: {</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;input&quot;: true</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;},</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;code&quot;: &quot;lastName&quot;,</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;type&quot;: &quot;STRING&quot;,</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;searchable&quot;: false,</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;indexed&quot;: false,</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;deleted&quot;: false,</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;array&quot;: false,</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;required&quot;: false,</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;single&quot;: true,</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;defaultValue&quot;: null,</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;calcByFormula&quot;: false,</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;formula&quot;: &quot;&quot;,</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;data&quot;: null,</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;view&quot;: {</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;name&quot;: &quot;Фамилия&quot;,</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;tooltip&quot;: &quot;Фамилия без сокращений&quot;,</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;data&quot;: {</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;input&quot;: true</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;},</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;code&quot;: &quot;fullName&quot;,</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;type&quot;: &quot;STRING&quot;,</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;searchable&quot;: false,</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;indexed&quot;: false,</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;deleted&quot;: false,</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;array&quot;: false,</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;required&quot;: false,</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;single&quot;: true,</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;defaultValue&quot;: null,</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;calcByFormula&quot;: false,</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;formula&quot;: &quot;&quot;,</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;data&quot;: null,</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;view&quot;: {</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;name&quot;: &quot;Полное имя&quot;,</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;tooltip&quot;: &quot;Фамилия и имя без сокращений&quot;,</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;data&quot;: {</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;output&quot;: true</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp;/{action-code}/validate:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp;post:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp;summary: Проверить биндинги</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp;operationId: validateBingings</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp;tags:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp;- Validation</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp;parameters:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp;- name: action-code</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;in: path</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;description: Код действия</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;required: true</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;schema:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;type: string</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp;requestBody:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;description: &quot;&quot;</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;content:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;application/json:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;schema:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;$ref: '#/components/schemas/Bindings'</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp;responses:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp;'200':</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;description: Успешная валидация</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;content:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;application/json:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;schema:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;$ref: '#/components/schemas/ValidationResult'</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp;'400':</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;description: Ошибка при валидации</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp;/{action-code}/requests:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp;post:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp;summary: Выполнить действия</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp;operationId: runActionRequest</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp;tags:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp;- Action</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp;parameters:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp;- name: action-code</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;in: path</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;description: Код действия</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;required: true</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;schema:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;type: string</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp;- name: x-company-alias</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;in: header</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;required: true</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;schema:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;type: string</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp;- name: x-user-id</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;in: header</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;description: Текущий пользователь — в случае выполнения пользовательской задачи</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;required: false</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;schema:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;type: string</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp;- name: x-correlation-id</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;in: header</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;description: CorrelationID — в случае выполнения пользовательской задачи</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;required: false</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;schema:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;type: string</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp;requestBody:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp;required: true</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp;content:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;application/json:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;schema:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;$ref: '#/components/schemas/CreateAction'</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp;responses:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp;'200':</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;description: Задача выполнена</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;content:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;application/json:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;schema:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;$ref: '#/components/schemas/Result'</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp;'201':</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;description: Задача принята к обработке. Необходимо поставить задачу пользователю и после её исполнения повторить запрос</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;content:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;application/json:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;schema:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;$ref: '#/components/schemas/CreateActionCreateTaskResponse'</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp;'202':</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;description: Задача принята к обработке</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;content:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;application/json:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;schema:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;$ref: '#/components/schemas/CreateActionResponse'</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp;'400':</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;description: Ошибка в формате запроса</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;content:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;application/json:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;schema:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;$ref: '#/components/schemas/BadRequest'</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp;'422':</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;description: Ошибка в данных запроса</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;content:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;application/json:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;schema:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;$ref: '#/components/schemas/BadRequest'</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp;'429':</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;description: Необходимо повторить запрос позже</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp;'500':</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;description: Внутренняя ошибка сервиса-исполнителя, действие не может быть продолжено</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp;/{action-code}/requests/{id}:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp;delete:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp;tags:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp;- Action</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp;summary: Отменяет запрос</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp;operationId: cancelAction</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp;parameters:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp;- name: action-code</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;in: path</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;description: Код действия</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;required: true</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;schema:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;type: string</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp;- name: id</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;in: path</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;description: ID действия (он же correlationID)</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;required: true</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;schema:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;type: string</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp;responses:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp;'204':</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;description: Действие успешно отменено</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp;/{action-code}/requests/{id}/restore-point:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp;put:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp;summary: Сохраняет точку останова</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp;operationId: saveRestorePointID</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp;tags:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp;- Action</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp;- RestorePoint</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp;parameters:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp;- name: action-code</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;in: path</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;description: Код межведа</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;required: true</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;schema:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;type: string</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp;- name: id</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;in: path</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;description: ID действия (он же correlationID)</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;required: true</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;schema:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;type: string</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp;requestBody:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp;required: true</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp;content:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;plain/text:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;schema:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;type: string</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;format: uuid</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;description: ID точки останова</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp;responses:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp;'200':</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;description: Код сохранён</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp;'409':</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;description: ID уже сохранён</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp;'400':</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;description: Ошибка в формате запроса</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;content:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;application/json:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;schema:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;$ref: '#/components/schemas/BadRequest'</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">components:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp;schemas:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp;Result:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp;type: object</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp;properties:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp;context:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;type: object</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp;example: {</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp;&quot;context&quot;: {</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;fullName&quot;: &quot;Иванов Иван&quot;</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp;}</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp;}</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp;Bindings:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp;type: object</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp;properties:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp;bindings:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;type: array</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;items:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;type: object</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp;ValidationResult:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp;type: array</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp;items:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp;type: object</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp;BadRequest:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp;type: object</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp;properties:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp;errors:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;type: array</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;items:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;type: object</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;properties:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;source:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;type: string</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;description: Указатель на элемент в запросе, где возникла ошибка</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;title:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;type: string</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;description: Краткое описание ошибки</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;detail:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;type: string</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;description: Детальное описание ошибки</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;code:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;type: string</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;description: Машиночитаемый код ошибки</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;required:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;- code</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;- title</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp;CreateAction:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp;type: object</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp;properties:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp;id:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;type: string</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;format: uuid</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;description: ID запроса, должен быть уникальным для каждого запроса. Используется для контроля над повторными запросами</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp;performers:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;type: array</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;description: Исполнители</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;items:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;type: string</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;format: uuid</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp;context:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;type: object</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;description: Сериализация контекста шага или данные с формы</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp;exitID:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;type: string</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;description: Выбранный переход</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp;required:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp;- id</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp;- performers</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp;- context</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp;CreateActionResponse:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp;type: object</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp;properties:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp;id:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;type: string</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;format: uuid</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;description: Уникальный Correlation ID</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp;restorePointURL:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;type: string</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;format: url</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;description: Адрес, на который отправляется restore-point-id</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp;CreateActionCreateTaskResponse:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp;type: object</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp;properties:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp;performers:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;type: array</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;description: Исполнители для задачи</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;items:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;type: string</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;format: uuid</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp;context:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;type: object</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;description: Описание полей и данные</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp;formFields:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;type: array</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;description: Шаблон формы</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;items:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;type: object</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;description: Структура FormField</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp;exitIDs:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;type: array</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;description: Список допустимых переходов</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;items:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;type: string</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;format: uuid</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp;required:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp;- performers</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp;- context</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> &nbsp; &nbsp; &nbsp; &nbsp;- exitIDs</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 13px; color: #000000;">&nbsp;</span></p>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample">openapi: 3.0.0</span><br />
+<span class="f_CodeExample">info:</span><br />
+<span class="f_CodeExample"> &nbsp;title: perfomer-service</span><br />
+<span class="f_CodeExample"> &nbsp;description: Сервис-исполнитель для делегированного действия</span><br />
+<span class="f_CodeExample"> &nbsp;version: 1.0.0</span><br />
+<span class="f_CodeExample">servers:</span><br />
+<span class="f_CodeExample"> &nbsp;- url: schema://domain:port/base/path</span><br />
+<span class="f_CodeExample">paths:</span><br />
+<span class="f_CodeExample"> &nbsp;/{action-code}/context:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;get:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;summary: Получить описание контекста</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;description: Метод предназначен для загрузки описания контекста из сервиса-исполнителя в элемент делегированного действия на этапе его создания блока</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;operationId: getContext</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;tags:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;- Context</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;parameters:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;- name: action-code</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;in: path</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;description: Код действия</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;required: true</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;schema:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;type: string</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;responses:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;'200':</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;description: Описание контекста действия в виде массива свойств</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;content:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;application/json:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;example: [</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;code&quot;: &quot;firstName&quot;,</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;type&quot;: &quot;STRING&quot;,</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;searchable&quot;: false,</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;indexed&quot;: false,</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;deleted&quot;: false,</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;array&quot;: false,</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;required&quot;: false,</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;single&quot;: true,</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;defaultValue&quot;: null,</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;calcByFormula&quot;: false,</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;formula&quot;: &quot;&quot;,</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;data&quot;: null,</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;view&quot;: {</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;name&quot;: &quot;Имя&quot;,</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;tooltip&quot;: &quot;Имя без сокращений&quot;,</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;data&quot;: {</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;input&quot;: true</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;},</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;code&quot;: &quot;lastName&quot;,</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;type&quot;: &quot;STRING&quot;,</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;searchable&quot;: false,</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;indexed&quot;: false,</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;deleted&quot;: false,</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;array&quot;: false,</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;required&quot;: false,</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;single&quot;: true,</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;defaultValue&quot;: null,</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;calcByFormula&quot;: false,</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;formula&quot;: &quot;&quot;,</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;data&quot;: null,</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;view&quot;: {</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;name&quot;: &quot;Фамилия&quot;,</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;tooltip&quot;: &quot;Фамилия без сокращений&quot;,</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;data&quot;: {</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;input&quot;: true</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;},</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;code&quot;: &quot;fullName&quot;,</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;type&quot;: &quot;STRING&quot;,</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;searchable&quot;: false,</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;indexed&quot;: false,</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;deleted&quot;: false,</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;array&quot;: false,</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;required&quot;: false,</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;single&quot;: true,</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;defaultValue&quot;: null,</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;calcByFormula&quot;: false,</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;formula&quot;: &quot;&quot;,</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;data&quot;: null,</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;view&quot;: {</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;name&quot;: &quot;Полное имя&quot;,</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;tooltip&quot;: &quot;Фамилия и имя без сокращений&quot;,</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;data&quot;: {</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;output&quot;: true</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]</span><br />
+<span class="f_CodeExample"> &nbsp;/{action-code}/validate:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;post:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;summary: Проверить биндинги</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;operationId: validateBingings</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;tags:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;- Validation</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;parameters:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;- name: action-code</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;in: path</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;description: Код действия</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;required: true</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;schema:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;type: string</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;requestBody:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;description: &quot;&quot;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;content:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;application/json:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;schema:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;$ref: '#/components/schemas/Bindings'</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;responses:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;'200':</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;description: Успешная валидация</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;content:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;application/json:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;schema:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;$ref: '#/components/schemas/ValidationResult'</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;'400':</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;description: Ошибка при валидации</span><br />
+<span class="f_CodeExample"> &nbsp;/{action-code}/requests:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;post:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;summary: Выполнить действия</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;operationId: runActionRequest</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;tags:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;- Action</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;parameters:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;- name: action-code</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;in: path</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;description: Код действия</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;required: true</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;schema:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;type: string</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;- name: x-company-alias</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;in: header</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;required: true</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;schema:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;type: string</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;- name: x-user-id</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;in: header</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;description: Текущий пользователь — в случае выполнения пользовательской задачи</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;required: false</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;schema:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;type: string</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;- name: x-correlation-id</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;in: header</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;description: CorrelationID — в случае выполнения пользовательской задачи</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;required: false</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;schema:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;type: string</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;requestBody:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;required: true</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;content:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;application/json:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;schema:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;$ref: '#/components/schemas/CreateAction'</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;responses:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;'200':</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;description: Задача выполнена</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;content:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;application/json:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;schema:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;$ref: '#/components/schemas/Result'</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;'201':</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;description: Задача принята к обработке. Необходимо поставить задачу пользователю и после её исполнения повторить запрос</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;content:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;application/json:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;schema:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;$ref: '#/components/schemas/CreateActionCreateTaskResponse'</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;'202':</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;description: Задача принята к обработке</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;content:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;application/json:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;schema:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;$ref: '#/components/schemas/CreateActionResponse'</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;'400':</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;description: Ошибка в формате запроса</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;content:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;application/json:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;schema:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;$ref: '#/components/schemas/BadRequest'</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;'422':</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;description: Ошибка в данных запроса</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;content:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;application/json:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;schema:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;$ref: '#/components/schemas/BadRequest'</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;'429':</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;description: Необходимо повторить запрос позже</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;'500':</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;description: Внутренняя ошибка сервиса-исполнителя, действие не может быть продолжено</span><br />
+<span class="f_CodeExample"> &nbsp;/{action-code}/requests/{id}:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;delete:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;tags:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;- Action</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;summary: Отменяет запрос</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;operationId: cancelAction</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;parameters:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;- name: action-code</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;in: path</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;description: Код действия</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;required: true</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;schema:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;type: string</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;- name: id</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;in: path</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;description: ID действия (он же correlationID)</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;required: true</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;schema:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;type: string</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;responses:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;'204':</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;description: Действие успешно отменено</span><br />
+<span class="f_CodeExample"> &nbsp;/{action-code}/requests/{id}/restore-point:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;put:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;summary: Сохраняет точку останова</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;operationId: saveRestorePointID</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;tags:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;- Action</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;- RestorePoint</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;parameters:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;- name: action-code</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;in: path</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;description: Код межведа</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;required: true</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;schema:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;type: string</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;- name: id</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;in: path</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;description: ID действия (он же correlationID)</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;required: true</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;schema:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;type: string</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;requestBody:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;required: true</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;content:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;plain/text:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;schema:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;type: string</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;format: uuid</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;description: ID точки останова</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;responses:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;'200':</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;description: Код сохранён</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;'409':</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;description: ID уже сохранён</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;'400':</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;description: Ошибка в формате запроса</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;content:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;application/json:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;schema:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;$ref: '#/components/schemas/BadRequest'</span><br />
+<span class="f_CodeExample">components:</span><br />
+<span class="f_CodeExample"> &nbsp;schemas:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;Result:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;type: object</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;properties:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;context:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;type: object</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;example: {</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;&quot;context&quot;: {</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;fullName&quot;: &quot;Иванов Иван&quot;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;}</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;}</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;Bindings:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;type: object</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;properties:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;bindings:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;type: array</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;items:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;type: object</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;ValidationResult:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;type: array</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;items:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;type: object</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;BadRequest:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;type: object</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;properties:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;errors:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;type: array</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;items:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;type: object</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;properties:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;source:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;type: string</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;description: Указатель на элемент в запросе, где возникла ошибка</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;title:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;type: string</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;description: Краткое описание ошибки</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;detail:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;type: string</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;description: Детальное описание ошибки</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;code:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;type: string</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;description: Машиночитаемый код ошибки</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;required:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;- code</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;- title</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;CreateAction:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;type: object</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;properties:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;id:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;type: string</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;format: uuid</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;description: ID запроса, должен быть уникальным для каждого запроса. Используется для контроля над повторными запросами</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;performers:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;type: array</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;description: Исполнители</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;items:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;type: string</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;format: uuid</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;context:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;type: object</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;description: Сериализация контекста шага или данные с формы</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;exitID:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;type: string</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;description: Выбранный переход</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;required:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;- id</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;- performers</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;- context</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;CreateActionResponse:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;type: object</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;properties:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;id:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;type: string</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;format: uuid</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;description: Уникальный Correlation ID</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;restorePointURL:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;type: string</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;format: url</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;description: Адрес, на который отправляется restore-point-id</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;CreateActionCreateTaskResponse:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;type: object</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;properties:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;performers:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;type: array</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;description: Исполнители для задачи</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;items:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;type: string</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;format: uuid</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;context:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;type: object</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;description: Описание полей и данные</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;formFields:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;type: array</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;description: Шаблон формы</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;items:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;type: object</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;description: Структура FormField</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;exitIDs:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;type: array</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;description: Список допустимых переходов</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;items:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;type: string</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;format: uuid</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;required:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;- performers</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;- context</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;- exitIDs</span></p>
 </td>
 </tr>
 </table>
@@ -606,9 +605,9 @@
 </div>
  
     </footer>
-    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jquery1.min.js"></script>
     <iframe name="hmnavigation" style="display:none!important"></iframe>
-    <script src="./jquery-ui.js"></script>
+    <!--<script src="./jquery-ui.js"></script> -->
     <script src="./jquery-ui.min.js"></script>
     <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
     <script src="./jquery.tocify.min.js"></script>

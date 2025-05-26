@@ -8,7 +8,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="начало внимание С 30.05.2024 заблокирован доступ из РФ к Docker Hub. Ознакомьтесь с официальным заявлением компании. конец внимание ELMA365 On-Premises редакции Standard можно у" />
+    <meta name="description" content="ELMA365 On-Premises редакции Standard можно установить в Kubernetes-in-Docker (KinD). Данный вариант установки наиболее прост и позволяет запускать локальный кластер Kubernetes..." />
     <meta name="picture" content="" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Cправка по Low-code платформе ELMA365" />
@@ -111,20 +111,17 @@
                             <a href="#h1-article" class="scroll-top"></a>
                         </div>
                         <!-- Placeholder for topic body. -->
-                        <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;внимание</span></p>
-<p class="p_Normal">С 30.05.2024 заблокирован доступ из РФ к Docker Hub. Ознакомьтесь с <a href="docker-hub-blocking.html" class="topiclink">официальным заявлением компании</a>.</p>
-<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;внимание</span></p>
-<p class="p_Normal" style="background: #ffffff;"><span style="color: #394149;">ELMA365 On-Premises редакции Standard можно установить в Kubernetes-in-Docker (</span><span style="color: #333333;">KinD</span><span style="color: #394149;">). Данный вариант установки наиболее прост и позволяет запускать локальный кластер Kubernetes с использованием узла Docker контейнера.</span></p>
+                        <p class="p_Normal" style="background: #ffffff;"><span style="color: #394149;">ELMA365 On-Premises редакции Standard можно установить в Kubernetes-in-Docker (</span><span style="color: #333333;">KinD</span><span style="color: #394149;">). Данный вариант установки наиболее прост и позволяет запускать локальный кластер Kubernetes с использованием узла Docker контейнера.</span></p>
 <p class="p_Normal" style="background: #ffffff;"><span style="color: #394149;">Установка состоит из трёх этапов:</span></p>
 <ol style="list-style-type:decimal">
 <li value="1" style="margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="color: #394149;"><a href="elma365-standard-trial-version.html#install-docker" class="topiclink">Установка Docker на вашу операционную систему</a>.</span></li><li value="2" style="margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="color: #394149;"><a href="elma365-standard-trial-version.html#install-config-file" class="topiclink">Скачивание скрипта установки и заполнение конфигурационного файла</a>.</span></li><li value="3" style="margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="color: #394149;"><a href="elma365-standard-trial-version.html#run-script" class="topiclink">Запуск скрипта установки</a>.</span></li></ol>
 <p><span style="color: #394149;">Перед началом установки ознакомьтесь с </span><a href="elma365-standard-on-premises.html" class="topiclink">системными требованиями ELMA365 On-Premises Standard</a>.</p>
-<h2 class="p_Heading2"><a id="install-docker" class="hmanchor"></a><span class="f_Heading2">Шаг 1: Установка Docker</span></h2>
+<h2 class="p_Heading2"><a id="install-docker" class="hmanchor"></a><span class="f_Heading2">Шаг 1. Установка Docker</span></h2>
 <p class="p_Normal" style="background: #ffffff; margin: 10px 0 0 0;"><a href="https://docs.docker.com/engine/install/" class="weblink">Установите Docker</a> для вашей операционной системы.</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;внимание</span></p>
-<p class="p_Normal">Обратите внимание, KinD не поддерживает создание Kubernetes-кластера с Cgroups v2. Подробнее о возможных ошибках читайте в <a href="https://kind.sigs.k8s.io/docs/user/known-issues/#failure-to-create-cluster-with-cgroups-v2" class="weblink">документации</a>.</p>
+<p class="p_Normal">KinD не поддерживает создание Kubernetes-кластера с Cgroups v2. Подробнее о возможных ошибках читайте в <a href="https://kind.sigs.k8s.io/docs/user/known-issues/#failure-to-create-cluster-with-cgroups-v2" class="weblink">документации</a>.</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;внимание</span></p>
-<h2 class="p_Heading2"><a id="install-config-file" class="hmanchor"></a><span class="f_Heading2">Шаг 2: Скачивание скрипта установки и заполнение конфигурационного файла</span></h2>
+<h2 class="p_Heading2"><a id="install-config-file" class="hmanchor"></a><span class="f_Heading2">Шаг 2. Скачивание скрипта установки и заполнение конфигурационного файла</span></h2>
 <p class="p_Normal">При первом запуске скрипт установки создаст файл конфигурации с наименованием <code><b>config-elma365.txt</b></code> в каталоге, откуда он был запущен.</p>
 <ol style="list-style-type:upper-roman">
 <li value="1" class="p_Normal">Скачайте и запустите скрипт установки ELMA365 для создания конфигурационного файла, выполнив следующую команду:</li></ol>
@@ -144,15 +141,14 @@
 <p class="p_Normal" style="background: #ffffff; margin: 10px 0 0 0;"><span style="color: #333333;">Где:</span></p>
 <ul style="list-style-type:disc">
 <li style="margin-top: 0; margin-right: 0; margin-bottom: 0;"><code><b>ELMA365_HOST=192.168.1.103</b></code> —<span style="color: #333333;"> IP-адрес хостовой машины, по которому будет доступно приложение ELMA365 Standard. Подробнее о создании домена (FQDN) читайте в <a href="change-elma365standard-parameters.html" class="topiclink">«Изменение параметров ELMA365 Standard»</a>;</span></li><li style="margin-top: 0; margin-right: 0; margin-bottom: 0;"><code><b>ELMA365_EMAIL=admin@mail.com</b></code><span style="color: #333333;"> — адрес электронной почты администратора;</span></li><li style="margin-top: 0; margin-right: 0; margin-bottom: 0;"><code><b>ELMA365_PASSWORD=test</b></code><span style="color: #333333;"> — пароль администратора;</span></li><li style="margin-top: 0; margin-right: 0; margin-bottom: 0;"><code><b>ELMA365_LANGUAGE=ru-RU</b></code><span style="font-weight: bold;"> </span><span style="color: #333333;">— язык установленной системы.</span></li></ul>
-<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;внимание</span></p>
-<p><span style="color: #394149;">Если Docker установлен через Snap, в файле конфигурации необходимо раскомментировать и изменить пути до папок/каталогов для параметров: </span><code><b>ELMA365_INSTALL_DIR</b></code><span style="color: #394149;">, </span><code><b>ELMA365_BACKUP_DIR</b></code><span style="color: #394149;">, например, на:</span></p>
+<p><span style="font-weight: bold; color: #394149;">Важно</span><span style="color: #394149;">: если Docker установлен через Snap, в файле конфигурации раскомментируйте и измените пути до папок или каталогов для параметров </span><code><b>ELMA365_INSTALL_DIR</b></code><span style="font-size: 13px;"> и</span><span style="color: #394149;"> </span><code><b>ELMA365_BACKUP_DIR</b></code><span style="color: #394149;">, например:</span></p>
 <ul style="list-style-type:disc">
 <li style="margin-top: 0; margin-right: 0; margin-bottom: 0;"><code><b>ELMA365_INSTALL_DIR=/mnt/elma365/docker</b></code><span style="color: #394149;">;</span></li><li style="margin-top: 0; margin-right: 0; margin-bottom: 0;"><code><b>ELMA365_BACKUP_DIR=/mnt/elma365/backup</b></code><span style="color: #394149;">.</span></li></ul>
-<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;внимание</span></p>
 <p class="p_Normal"><a class="dropdown-toggle" style="font-style: normal; font-weight: normal; color: #000000; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186A1')">Заполнение переменных подключения к proxy-серверу</a></p>
 <div id="TOGGLE0186A1" class="dropdown-toggle-body" style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0 0 0 0;"><table style="border:none; border-spacing:0;">
 <tr>
-<td style="vertical-align:top; padding:0; border:none"><p class="p_Normal">Чтобы использовать ваш proxy-сервер для установки и работы ELMA365 Standard, раскомментируйте и заполните переменные секции <code><b>Настройка режима работы сервера ELMA365 через прокси-сервер</b></code> в конфигурационном файле <code><b>config-elma365.txt</b></code>.<br />
+<td style="vertical-align:top; padding:0; border:none"><p class="p_Normal">&nbsp;<br />
+Чтобы использовать ваш proxy-сервер для установки и работы ELMA365 Standard, раскомментируйте и заполните переменные секции <code><b>Настройка режима работы сервера ELMA365 через прокси-сервер</b></code> в конфигурационном файле <code><b>config-elma365.txt</b></code>.<br />
 &nbsp;</p>
 <p class="p_Normal">Пример для <code><b>ELMA365_HOST=192.168.1.103</b></code>:<br />
 &nbsp;</p>
@@ -185,7 +181,7 @@
 <span class="f_CodeExample">no_proxy=localhost,example.com,127.0.0.0/8,10.0.0.0/8,</span><br />
 <span class="f_CodeExample">169.254.0.0/16,192.168.0.0/16,100.64.0.0/10,172.16.0.0/</span></p>
 <p class="p_Normal">&nbsp;</p>
-<p class="p_Normal">где:</p>
+<p class="p_Normal">Где:</p>
 <ul style="list-style-type:disc">
 <li class="p_Normal"><code><b>proxy_user</b></code> <span style="color: #333333;">—</span> имя пользователя для авторизации на proxy‑сервере;</li><li class="p_Normal"><code><b>proxy_pass</b></code> <span style="color: #333333;">—</span> пароль для авторизации на proxy‑сервере;</li><li class="p_Normal"><code><b>host</b></code> <span style="color: #333333;">—</span> хост используемого proxy‑сервера;</li><li class="p_Normal"><code><b>port</b></code> <span style="color: #333333;">—</span> порт используемого proxy‑сервера.</li></ul>
 <p class="p_Normal">Убедитесь, что в переменных <code><b>no_proxy</b></code> и <code><b>NO_PROXY</b></code> указаны сетевые адреса диапазоны сетевых адресов и домены, которые нужно исключить из использования proxy.</p>
@@ -194,7 +190,7 @@
 </table>
 </div>
 <p class="p_Normal">Подробнее о параметрах конфигурационного файла <code><b>config-elma365.txt</b></code> читайте в статье <a href="change-elma365standard-parameters.html" class="topiclink">«Изменение параметров ELMA365 Standard»</a>.</p>
-<h2 class="p_Heading2"><a id="run-script" class="hmanchor"></a><span class="f_Heading2">Шаг 3: Запуск скрипта установки ELMA365 Standard</span></h2>
+<h2 class="p_Heading2"><a id="run-script" class="hmanchor"></a><span class="f_Heading2">Шаг 3. Запуск скрипта установки ELMA365 Standard</span></h2>
 <p class="p_Normal" style="background: #ffffff; margin: 10px 0 0 0;"><span style="color: #333333;">Объём загружаемых файлов во время установки ELMA365 Standard составляет 4-5 ГБ, время установки занимает 10-15 минут.</span></p>
 <ol style="list-style-type:upper-roman">
 <li value="1" class="p_Normal" style="background: #ffffff; margin-top: 10px; margin-right: 0; margin-bottom: 0;"><span style="color: #333333;">Запустите <a href="elma365-standard-trial-version.html#install-config-file" class="topiclink">загруженный ранее скрипт установки</a> с помощью команды: </span></li></ol>
@@ -307,9 +303,9 @@
 </div>
  
     </footer>
-    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jquery1.min.js"></script>
     <iframe name="hmnavigation" style="display:none!important"></iframe>
-    <script src="./jquery-ui.js"></script>
+    <!--<script src="./jquery-ui.js"></script> -->
     <script src="./jquery-ui.min.js"></script>
     <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
     <script src="./jquery.tocify.min.js"></script>

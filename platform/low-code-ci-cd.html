@@ -122,10 +122,6 @@
 <li style="margin-top: 7px; margin-right: 0; margin-bottom: 16px;">утилита <span style="font-weight: bold;">elma365pm</span> — вспомогательная независимая утилита командной строки применяется совместно со сторонними сервисами контроля версий и настройки пайплайнов, например, GitLab. Утилита позволяет экспортировать в файл компонент конфигурации компании (раздел, модуль или решение). Затем работа осуществляется в стороннем сервисе, что позволяет использовать операции из High-code разработки. Компонент обновляется до новой версии, упаковывается в файл и импортируется в другую компанию. Подробнее читайте в статье <a href="lowcode-devops-pm.html" class="topiclink">«Утилита elma365pm для CI/CD в решениях»</a>;</li><li style="margin-top: 7px; margin-right: 0; margin-bottom: 16px;">инструмент <span style="font-weight: bold;">Непрерывная выкладка (Low-code CI / CD)</span> — универсальный инструмент обмена компонентами между<span style="font-weight: bold;"> </span>компаниями из разных окружений. Работа выполняется в интерфейсе ELMA365 на основе стандартных процессов экспорта и импорта. Компании связываются между собой. Затем настраивается операция обмена: выбираются компоненты конфигурации, указывается тип операции и т. д. Профиль обмена сохраняется, что позволяет выполнять операцию несколько раз. Присутствует возможность сравнить конфигурации двух компаний и проанализировать результат выполнения операции. Процесс обмена выполняется в фоновом режиме. </li></ul>
 <p class="p_Normal">Подробную информацию о подходе к разработке CI/CD, а также рекомендации по его осуществлению вы можете найти в <a href="https://community.elma365.com/ru/threads/1784/" target="_blank" class="weblink">ELMA365 Community</a>.</p>
 <p style="text-indent: -24px; margin: 7px 0 16px 22px;">В этой статье рассмотрим подробнее настройку инструмента <span style="font-weight: bold;">Непрерывная выкладка (Low-code CI / CD)</span> и работу с ним.</p>
-<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;внимание</span></p>
-<p class="p_Normal">В ELMA365 On-Premises инструмент <span style="font-weight: bold;">Непрерывная выкладка (Low-code CI / CD)</span> можно использовать, если текущая и внешняя компании обновлены до версии 2024.1 или выше.</p>
-<p class="p_Normal">В разделе <span style="font-weight: bold;">Администрирование</span> инструмент доступен с версии 2024.4. В более ранних версиях <a href="360006871932.html#administrators" class="topiclink">администратору системы</a> нужно включить фича-флаг <code><b>enableLowcodeCICD</b></code>. Подробнее об этом читайте в статьях <a href="change-settings-enterprise.html#enable-feature-flag-enterpeise" class="topiclink">«Изменение параметров On-Premises Enterprise»</a> и <a href="change-elma365standard-parameters.html#enable-feature-flag-standard" class="topiclink">«Изменение параметров On-Premises Standard»</a>. &nbsp;</p>
-<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;внимание</span></p>
 <h2 class="p_Heading2"><a id="glossary" class="hmanchor"></a><span class="f_Heading2" style="font-size: 16px;">Терминология</span></h2>
 <p style="line-height: 1.28; margin: 0 0 11px 0;">В статье используются следующие термины: </p>
 <ul style="list-style-type:disc">
@@ -143,7 +139,7 @@
 <p style="margin: 0 0 11px 0;">Регистрация и лицензирование компаний в dev и test окружениях осуществляется через менеджера ELMA365.</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;внимание</span></p>
 <p class="p_Normal">В ELMA365 SaaS можно установить только одну связь с внешней компанией и настроить одну операцию обмена между ними.</p>
-<p class="p_Normal">В поставке On-Premises можно связывать компании, если они обновлены до версии 2024.1 или выше. При этом ограничения по количеству добавляемых привязок и профилей отсутствуют.</p>
+<p class="p_Normal">В поставке On-Premises нет ограничений по количеству добавляемых привязок и профилей.</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;внимание</span></p>
 <p class="p_Normal">Чтобы привязать одну компанию к другой, выполните следующие действия: </p>
 <ol style="list-style-type:upper-roman">
@@ -302,9 +298,9 @@
 </div>
  
     </footer>
-    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jquery1.min.js"></script>
     <iframe name="hmnavigation" style="display:none!important"></iframe>
-    <script src="./jquery-ui.js"></script>
+    <!--<script src="./jquery-ui.js"></script> -->
     <script src="./jquery-ui.min.js"></script>
     <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
     <script src="./jquery.tocify.min.js"></script>

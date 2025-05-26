@@ -116,7 +116,7 @@
 <p class="p_Normal">Установка DB‑Gateway состоит из следующих этапов:</p>
 <ol style="list-style-type:decimal">
 <li value="1" class="p_Normal"><a href="proxy-db-kubernetes.html#upload-helm" class="topiclink">Загрузить helm‑чарт и конфигурационный файл</a>.</li><li value="2" class="p_Normal"><a href="proxy-db-kubernetes.html#configuration-file" class="topiclink">Заполнить конфигурационный файл</a>.</li><li value="3" class="p_Normal"><a href="proxy-db-kubernetes.html#install-dbgateway" class="topiclink">Установить чарт DB‑Gateway с помощью Helm в Kubernetes‑кластер</a>.</li><li value="4" class="p_Normal"><a href="proxy-db-kubernetes.html#connect-db" class="topiclink">Подключиться к базам данных</a>.</li></ol>
-<h2 class="p_Heading2"><a id="upload-helm" class="hmanchor"></a><span class="f_Heading2">Шаг 1: Загрузить helm-чарт и конфигурационный файл</span></h2>
+<h2 class="p_Heading2"><a id="upload-helm" class="hmanchor"></a><span class="f_Heading2">Шаг 1. Загрузить helm-чарт и конфигурационный файл</span></h2>
 <p class="p_Normal">Для установки через интернет получите конфигурационный файл <code><b>values-dbgateway.yaml</b></code>, выполнив команду:</p>
 <p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample">helm repo add elma365 https://charts.elma365.tech</span><br />
 <span class="f_CodeExample">helm repo update</span><br />
@@ -138,15 +138,15 @@
 </tr>
 </table>
 </div>
-<h2 class="p_Heading2"><a id="configuration-file" class="hmanchor"></a><span class="f_Heading2">Шаг 2: Заполнить конфигурационный файл</span></h2>
+<h2 class="p_Heading2"><a id="configuration-file" class="hmanchor"></a><span class="f_Heading2">Шаг 2. Заполнить конфигурационный файл</span></h2>
 <p class="p_Normal">Заполните конфигурационный файл <code><b>values-dbgateway.yaml</b></code> для установки DB‑Gateway:</p>
 <ol style="list-style-type:upper-roman">
 <li value="1" class="p_Normal">В параметре <code><b>ingress.hostname</b></code> укажите домен (FQDN) или IP‑адрес, по которому доступно приложение ELMA365.</li><li value="2" class="p_Normal">В параметре <code><b>ingress.path</b></code> укажите наименование бакета (в хранилище баз данных), в котором хранятся файлы приложения ELMA365.<br />
 Наименование бакета в базе данных должно соответствовать формату DBelma365.</li></ol>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">Начало&nbsp;примера</span></p>
-<p class="p_Normal">Пример:</p>
-<ul style="list-style-type:disc">
-<li class="p_Normal">DBelma365</li><li class="p_Normal">DBelma365-dev</li><li class="p_Normal">DBelma365-prod</li></ul>
+<p class="p_Normal">Пример</p>
+<ol style="list-style-type:decimal">
+<li value="1" class="p_Normal">DBelma365.</li><li value="2" class="p_Normal">DBelma365-dev.</li><li value="3" class="p_Normal">DBelma365-prod.</li></ol>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;примера</span></p>
 <ol style="list-style-type:upper-roman" start="3">
 <li value="3" class="p_Normal">Следующие изменения нужно внести в конфигурационный файл, если веб‑интерфейс приложения ELMA365 доступен по HTTPS:</li></ol>
@@ -303,13 +303,13 @@
 </tr>
 </table>
 </div>
-<h2 class="p_Heading2"><a id="install-dbgateway" class="hmanchor"></a><span class="f_Heading2">Шаг 3: Установить чарт DB-Gateway с помощью Helm в Kubernetes-кластер</span> </h2>
+<h2 class="p_Heading2"><a id="install-dbgateway" class="hmanchor"></a><span class="f_Heading2">Шаг 3. Установить чарт DB-Gateway с помощью Helm в Kubernetes-кластер</span> </h2>
 <p class="p_Normal">Установите чарт DB‑Gateway в <code><b>namespace dbgateway</b></code>.</p>
 <p class="p_Normal">Для установки через интернет выполните команду:</p>
 <p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample">helm upgrade --install dbgateway elma365/dbgateway -f values-dbgateway.yaml -n dbgateway --create-namespace</span> </p>
 <p class="p_Normal">Для установки без доступа в интернет выполните команду:</p>
 <p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample">helm upgrade --install dbgateway ./dbgateway -f values-dbgateway.yaml -n dbgateway --create-namespace</span> </p>
-<h2 class="p_Heading2"><a id="connect-db" class="hmanchor"></a><span class="f_Heading2">Шаг 4: Подключиться к базам данных</span></h2>
+<h2 class="p_Heading2"><a id="connect-db" class="hmanchor"></a><span class="f_Heading2">Шаг 4. Подключиться к базам данных</span></h2>
 <p class="p_Normal">В конфигурационном файле <code><b>values-elma365.yaml</b></code> заполните параметры, чтобы приложение ELMA365 подключалось к базам данных через настроенный инструмент DB‑Gateway:</p>
 <ul style="list-style-type:disc">
 <li class="p_Normal">параметры для подключения к MinIO:</li></ul>
@@ -415,9 +415,9 @@
 </div>
  
     </footer>
-    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jquery1.min.js"></script>
     <iframe name="hmnavigation" style="display:none!important"></iframe>
-    <script src="./jquery-ui.js"></script>
+    <!--<script src="./jquery-ui.js"></script> -->
     <script src="./jquery-ui.min.js"></script>
     <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
     <script src="./jquery.tocify.min.js"></script>

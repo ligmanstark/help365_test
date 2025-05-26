@@ -160,17 +160,17 @@
 <p class="p_Normal" style="margin: 19px 0 0 0;">Зоны ответственности этого типа используются, если вы заранее знаете, какую должность занимает участник процесса или в какую пользовательскую группу он входит.</p>
 <p class="p_Normal" style="margin: 14px 0 0 0;">На третьем шаге процесса оформления заявки наличие техники проверяет сотрудник склада. Так как нам известно, кто именно должен выполнять эту задачу, для обозначения этого участника процесса следует выбрать статическую зону ответственности.</p>
 <p class="p_Normal" style="margin: 14px 0 0 0;"><a href="360012263032.html#add" class="topiclink">Добавим</a> новую зону ответственности и выберем тип <span style="font-weight: bold;">Статическая зона ответственности</span>. Перейдём в окно настроек, чтобы переименовать зону ответственности.</p>
-<p class="p_Normal" style="margin: 14px 0 0 0;"><img alt="zo_12" width="673" height="417" style="margin:0;width:673px;height:417px;border:none" src="zo_12.png"/></p>
-<p class="p_Normal" style="margin: 14px 0 0 0;">Рассмотрим подробно другие поля в этом окне.</p>
+<p class="p_Normal" style="margin: 14px 0 0 0;"><img alt="zo_12" width="620" height="232" style="margin:0;width:620px;height:232px;border:none" src="zo_12.png"/></p>
+<p class="p_Normal" style="margin: 14px 0 0 0;">Рассмотрим подробно другие поля в этом окне:</p>
 <ul style="list-style-type:disc">
-<li><span style="font-weight: bold;">Переменная</span> — создайте или выберите из контекста процесса переменную типа <a href="360009707032.html#users" class="topiclink">Пользователи</a>, которая будет хранить информацию о должности и имени участника процесса. Вы сможете использовать эту переменную при моделировании <a href="360012495611.html" class="topiclink">форм задач</a>, в <a href="360012495791.html" class="topiclink">оповещениях </a>и т. д;</li></ul>
+<li><span style="font-weight: bold;">Переменная</span> — создайте или выберите из контекста процесса переменную типа <a href="360009707032.html#users" class="topiclink">Пользователи</a>, которая будет хранить информацию о должности и имени участника процесса. Вы сможете использовать эту переменную при моделировании <a href="360012495611.html" class="topiclink">форм задач</a>, в <a href="360012495791.html" class="topiclink">оповещениях </a>и т. д.;</li></ul>
 <ul style="list-style-type:disc">
 <li><span style="font-weight: bold;">Группа пользователей</span> — выберите <a href="360007146071.html" class="topiclink">пользовательскую группу</a> или элемент <a href="360003861992.html" class="topiclink">оргструктуры</a>, чтобы определить, кто именно будет выполнять задачи, расположенные в зоне ответственности. Например, укажите группу <span style="font-weight: bold;">Склад</span>, чтобы ответственными за задачу были все сотрудники из этой группы.</li></ul>
 <p class="p_Normal">Варианты использования этих опций в статической зоне ответственности:</p>
 <ol style="list-style-type:decimal">
 <li value="1" class="p_Normal">Если указана только группа пользователей, поле <span style="font-weight: bold;">Переменная</span> можно оставить пустым.</li><li value="2" class="p_Normal">Если вы задали переменную, и она заполнена до того, как процесс попадает в зону ответственности, исполнителем задачи будет тот, кто указан в переменной. При этом группа пользователей не учитывается.</li><li value="3" class="p_Normal">Если вы указали и переменную, и группу пользователей, но переменная не заполнена заранее, то в переменную автоматически запишется значение из поля <span style="font-weight: bold;">Группа пользователей</span>.</li><li value="4" class="p_Normal">Если указана только переменная и она пуста, исполнитель задачи не определится, и задачи автоматически перейдут к <a href="360006871932.html#supervisor" class="topiclink">супервизору</a>.</li></ol>
 <p class="p_Normal">Рассмотрим пример. В настройках зоны ответственности указана переменная <span style="font-weight: bold;">Ответственный за спец.технику</span> и в поле <span style="font-weight: bold;">Группа пользователей</span> выбрана группа <span style="font-weight: bold;">Склад</span>.</p>
-<p class="p_Normal"><img alt="zo_11" width="698" height="326" style="margin:0;width:698px;height:326px;border:none" src="zo_11.png"/></p>
+<p class="p_Normal"><img alt="zo_11" width="826" height="294" style="margin:0;width:826px;height:294px;border:none" src="zo_11.png"/></p>
 <p class="p_Normal">Ответственный за выдачу техники определяется в задаче <span style="font-weight: bold;">Рассмотреть заявку</span>,<span style="font-weight: bold;"> </span>расположенной в бизнес‑процессе ранее зоны ответственности<span style="font-weight: bold;"> Склад</span>. На форме задачи поле <span style="font-weight: bold;">Ответственный за спец.технику</span> появляется в зависимости от вида техника. Специальную технику выдаёт ответственный за неё, другое оборудование — любой сотрудник склада. Тогда:</p>
 <ul style="list-style-type:disc">
 <li class="p_Normal">если поле <span style="font-weight: bold;">Ответственный за спец.технику</span> не заполнено в задаче <span style="font-weight: bold;">Рассмотреть заявку</span>, исполнителем в зоне ответственности будет группа <span style="font-weight: bold;">Склад</span>;</li><li class="p_Normal">если поле <span style="font-weight: bold;">Ответственный за спец.технику</span> заполнено, указанное в нём значение определит исполнителя в зоне ответственности. Значение <span style="font-weight: bold;">Склад</span>, заданное в поле <span style="font-weight: bold;">Группа пользователей</span>, не применится.</li></ul>
@@ -270,9 +270,9 @@
 </div>
  
     </footer>
-    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jquery1.min.js"></script>
     <iframe name="hmnavigation" style="display:none!important"></iframe>
-    <script src="./jquery-ui.js"></script>
+    <!--<script src="./jquery-ui.js"></script> -->
     <script src="./jquery-ui.min.js"></script>
     <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
     <script src="./jquery.tocify.min.js"></script>

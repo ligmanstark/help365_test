@@ -118,7 +118,7 @@
 <p class="p_Normal">Установка состоит из трёх этапов:</p>
 <ol style="list-style-type:decimal">
 <li value="1" class="p_Normal"><a href="install-descheduler.html#download-helm-chart-and-config-file" class="topiclink">Загрузка Helm-чарта и конфигурационного файла</a>. </li><li value="2" class="p_Normal"><a href="install-descheduler.html#fill-config-file" class="topiclink">Заполнение конфигурационного файла</a>. </li><li value="3" class="p_Normal"><a href="install-descheduler.html#install-chart-descheduler" class="topiclink">Установка чарта Descheduler с помощью Helm в Kubernetes-кластер</a>.</li></ol>
-<h2 class="p_Heading2"><a id="download-helm-chart-and-config-file" class="hmanchor"></a><span class="f_Heading2">Шаг 1: Загрузка Helm-чарта и конфигурационного файла</span></h2>
+<h2 class="p_Heading2"><a id="download-helm-chart-and-config-file" class="hmanchor"></a><span class="f_Heading2">Шаг 1. Загрузка Helm-чарта и конфигурационного файла</span></h2>
 <p class="p_Normal">Для установки через интернет получите конфигурационный файл <code><b>values-descheduler.yaml</b></code>, выполнив команду:</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">helm&nbsp;repo&nbsp;add&nbsp;elma365&nbsp;</span><span class="f_CodeExample">https://charts.elma365.tech</span><br />
 <span class="f_CodeExample">helm&nbsp;repo&nbsp;update</span><br />
@@ -142,7 +142,7 @@
 </tr>
 </table>
 </div>
-<h2 class="p_Heading2"><a id="fill-config-file" class="hmanchor"></a><span class="f_Heading2">Шаг 2: Заполнение конфигурационного файла</span></h2>
+<h2 class="p_Heading2"><a id="fill-config-file" class="hmanchor"></a><span class="f_Heading2">Шаг 2. Заполнение конфигурационного файла</span></h2>
 <p class="p_Normal">Заполните конфигурационный файл <code><b>values-descheduler.yaml</b></code> для установки Descheduler.</p>
 <p class="p_Normal">Для этого настройте периодичность выполнения descheduler, установив нужный интервал в минутах для параметра <code><b>descheduler.deschedulingInterval</b></code>. По умолчанию задан интервал в 2 минуты. Descheduler устанавливается в <code><b>namespace kube-system</b></code>. Этот <code><b>namespace</b></code> задан по умолчанию.</p>
 <p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample"># Настройки descheduler (необходимо не менее 3 узлов в кластере)</span><br />
@@ -175,14 +175,15 @@
 <span class="f_CodeExample">  # секрет с правами доступа к приватному registry должен быть создан вручную, зашифрованный в Base64</span><br />
 <span class="f_CodeExample">  imagePullSecrets:</span><br />
 <span class="f_CodeExample">  &nbsp; -</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">myRegistryKeySecretName</span></p>
-<p class="p_Normal">где формат <span style="font-weight: bold;">repository</span>:</p>
+<p class="p_Normal">&nbsp;<br />
+Где формат <span style="font-weight: bold;">repository</span>:</p>
 <ul style="list-style-type:disc">
 <li class="p_Normal">адрес — <code><b>registry.example.com</b></code>; </li><li class="p_Normal">путь — <code><b>/descheduler/descheduler</b></code>. </li></ul>
 </td>
 </tr>
 </table>
 </div>
-<h2 class="p_Heading2"><a id="install-chart-descheduler" class="hmanchor"></a><span class="f_Heading2">Шаг 3: Установка чарта Descheduler с помощью Helm в Kubernetes-кластер </span></h2>
+<h2 class="p_Heading2"><a id="install-chart-descheduler" class="hmanchor"></a><span class="f_Heading2">Шаг 3. Установка чарта Descheduler с помощью Helm в Kubernetes-кластер </span></h2>
 <p class="p_Normal">Выполните установку чарта Descheduler в <code><b>namespace kube-system</b></code>.</p>
 <p class="p_Normal">Для установки через интернет:</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">helm&nbsp;upgrade&nbsp;--install&nbsp;descheduler&nbsp;elma365/descheduler&nbsp;-f&nbsp;values-descheduler.yaml&nbsp;-n&nbsp;kube-system&nbsp;</span></p>
@@ -279,9 +280,9 @@
 </div>
  
     </footer>
-    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jquery1.min.js"></script>
     <iframe name="hmnavigation" style="display:none!important"></iframe>
-    <script src="./jquery-ui.js"></script>
+    <!--<script src="./jquery-ui.js"></script> -->
     <script src="./jquery-ui.min.js"></script>
     <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
     <script src="./jquery.tocify.min.js"></script>

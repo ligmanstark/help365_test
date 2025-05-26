@@ -128,7 +128,7 @@
 <h2 class="p_Heading2"><a id="backup" class="hmanchor"></a><span class="f_Heading2">Резервное копирование</span></h2>
 <h3 class="p_Heading3"><a id="backup-posgresql" class="hmanchor"></a><span class="f_Heading3">Резервное копирование PostgreSQL</span></h3>
 <p class="p_Normal">Имеется несколько вариантов создания резервных копий баз данных PostgreSQL.</p>
-<p class="p_Normal"><span style="font-weight: bold;">Вариант 1: Физическое копирование</span></p>
+<p class="p_Normal"><span style="font-weight: bold;">Вариант 1. Физическое копирование</span></p>
 <p class="p_Normal">Утилита <code><b>pg_basebackup</b></code> позволяет делать резервную копию на уровне файловой системы. Её можно использовать для восстановления на определённый момент времени, предварительно настроив <span style="font-weight: bold;">Point-in-time-recovery</span> (PITR), обеспечивающий непрерывное резервное копирование данных таблиц. Резервные копии всегда создаются для всего кластера базы данных, резервное копирование отдельных баз данных невозможно.</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;внимание</span></p>
 <p class="p_Normal">Резервное копирование выполняется через обычное соединение PostgreSQL и использует протокол репликации. Соединение должно быть выполнено с правами суперпользователя или пользователя с разрешениями REPLICATION.</p>
@@ -148,7 +148,7 @@
 <p class="p_Normal">После внесения изменений перезапустите PostgreSQL при помощи команды:</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">service&nbsp;postgresql&nbsp;restart</span></p>
 <p class="p_Normal">Значение параметра <code><b>archive_command</b></code> должно содержать в файловой системе сервера PostgreSQL каталог, в который будут копироваться архивируемые сегменты <span style="font-weight: bold;">WAL</span>.</p>
-<p class="p_Normal"><span style="font-weight: bold;">Вариант 2: Логическое копирование</span></p>
+<p class="p_Normal"><span style="font-weight: bold;">Вариант 2. Логическое копирование</span></p>
 <p class="p_Normal">Утилита <code><b>pg_dump</b></code><span style="font-weight: bold;"> </span>создает за один раз резервную копию только одной базы данных, и она не включает информацию о ролях и табличных пространствах. Во время работы <code><b>pg_dump</b></code> будут заблокированы только операции, требующие эксклюзивной блокировки. В итоге изменения, вносимые в базу во время работы <code><b>pg_dump</b></code>, не будут добавляться в выходной файл архива.</p>
 <p class="p_Normal">Резервная копия создается следующей командой:</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">pg_dump&nbsp;&lt;postgresqlURL&gt;&nbsp;-C&nbsp;-c&nbsp;--if-exists&nbsp;-F&nbsp;directory&nbsp;-f&nbsp;/backup/&lt;backup-postgresql-folder-name&gt;</span></p>
@@ -215,8 +215,8 @@
                                 </a>
                             
                             
-                                <a id="next-link" class="topic__navi_next" href="enable-portable-services.html">
-                                    <span class="bottom-nav__link">enable-portable-services.html</span> <span
+                                <a id="next-link" class="topic__navi_next" href="embedded-to-external-database-enterprise.html">
+                                    <span class="bottom-nav__link">embedded-to-external-database-enterprise.html</span> <span
                                         class="bottom-nav__arrow bottom-nav__arrow--next"></span>
                                 </a>
                             
@@ -294,9 +294,9 @@
 </div>
  
     </footer>
-    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jquery1.min.js"></script>
     <iframe name="hmnavigation" style="display:none!important"></iframe>
-    <script src="./jquery-ui.js"></script>
+    <!--<script src="./jquery-ui.js"></script> -->
     <script src="./jquery-ui.min.js"></script>
     <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
     <script src="./jquery.tocify.min.js"></script>

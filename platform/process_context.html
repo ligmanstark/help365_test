@@ -111,7 +111,7 @@
                             <a href="#h1-article" class="scroll-top"></a>
                         </div>
                         <!-- Placeholder for topic body. -->
-                        <p class="p_Normal" style="margin: 14px 0 0 0;"><span style="font-weight: bold;">Контекст процесса</span> — это все данные, которые создаются, изменяются и сохраняются во время выполнения конкретного процесса. Например, информация об участниках, файлы, комментарии исполнителей, контрагенты и т. д. Эти данные хранятся в переменных, значения которых <span style="font-family: Inter;">либо задаются сотрудниками в ходе выполнения процессных задач,</span> либо определяются системой автоматически. </p>
+                        <p class="p_Normal" style="margin: 14px 0 0 0;"><span style="font-weight: bold;">Контекст процесса</span> — это все данные, которые создаются, изменяются и сохраняются во время выполнения конкретного процесса. Например, информация об участниках, файлы, комментарии исполнителей, контрагенты и т. д. Эти данные хранятся в переменных, значения которых <span style="font-family: Inter;">либо задаются сотрудниками в ходе выполнения процессных задач,</span> либо определяются системой автоматически. </p>
 <p class="p_Normal">Контекстные переменные могут быть пользовательскими и <a href="process_context.html#system-variable" class="topiclink">системными</a>.</p>
 <h2 class="p_Heading2"><span class="f_Heading2">Пользовательские переменные</span></h2>
 <p class="p_Normal">Чтобы посмотреть список всех пользовательских переменных, в разделе <span style="font-weight: bold;">Администрирование &gt; Бизнес-процессы</span> нажмите на название процесса, а затем перейдите на вкладку <span style="font-weight: bold;">Контекст</span>. </p>
@@ -141,8 +141,11 @@
 <h2 class="p_Heading2"><a id="actions-with-variable" class="hmanchor"></a><span class="f_Heading2">Действия с пользовательской переменной на вкладке «Контекст»</span></h2>
 <p class="p_Normal">Вы можете выбрать переменную, а затем применить к ней доступные действия:</p>
 <ul style="list-style-type:disc">
-<li class="p_Normal">отредактировать — нажмите название и измените его;</li><li class="p_Normal">удалить — можно удалить сразу несколько переменных свойств, зажав клавишу <span style="font-weight: bold;">Ctrl</span> на клавиатуре и выделив их;</li><li class="p_Normal">восстановить удалённую переменную — включите опцию <span style="font-weight: bold;">Показывать удалённые переменные</span>, выберите нужную строку в появившемся списке и нажмите <span style="font-weight: bold;">Восстановить</span>. Также из этого списка переменную можно удалить окончательно без возможности восстановления;<br />
-<img alt="context-2" width="925" height="401" style="margin:0;width:925px;height:401px;border:none" src="context-2.png"/></li><li class="p_Normal">скопировать в буфер — перенесите созданную переменную в контекст другого бизнес-процесса, например, чтобы использовать повторно свойство со сложными настройками такое, как <a href="360010201779.html" class="topiclink">Таблица</a>. Для этого выберите переменную и нажмите появившуюся кнопку <span style="font-weight: bold;">Скопировать в буфер</span>. Затем откройте другой процесс в режиме моделирования и добавьте в его контекст переменную, нажав кнопку <span style="font-weight: bold;">Вставить из буфера</span>. Для перенесённой переменной нельзя изменить имя свойства, используемое в скриптах, и тип. Поскольку в процессе не могут присутствовать свойства с одинаковым кодом, нельзя скопировать переменную и вставить её в контекст этого же процесса.</li></ul>
+<li class="p_Normal">отредактировать — нажмите название и измените его;</li><li class="p_Normal">удалить — можно удалить сразу несколько переменных свойств, зажав клавишу <span style="font-weight: bold;">Ctrl</span> на клавиатуре и выделив их;</li><li class="p_Normal">восстановить удалённую переменную — включите опцию <span style="font-weight: bold;">Показывать удалённые переменные</span>, выберите нужную строку в появившемся списке и нажмите <span style="font-weight: bold;">Восстановить</span>.</li></ul>
+<p class="p_Normal" style="text-indent: 1px; margin: 0 0 0 35px;">Также из этого списка переменную можно удалить окончательно без возможности восстановления. Обратите внимание, начиная с версии 2025.3 полностью удалить контекстные переменные можно только до публикации бизнес‑процесса. Если версия процесса опубликована, при создании новых переменных присваивайте им уникальные коды;</p>
+<p class="p_Normal" style="margin: 0 0 0 36px;"><img alt="context-2" width="925" height="401" style="margin:0;width:925px;height:401px;border:none" src="context-2.png"/></p>
+<ul style="list-style-type:disc">
+<li class="p_Normal">скопировать в буфер — перенесите созданную переменную в контекст другого бизнес-процесса, например, чтобы использовать повторно свойство со сложными настройками такое, как <a href="360010201779.html" class="topiclink">Таблица</a>. Для этого выберите переменную и нажмите появившуюся кнопку <span style="font-weight: bold;">Скопировать в буфер</span>. Затем откройте другой процесс в режиме моделирования и добавьте в его контекст переменную, нажав кнопку <span style="font-weight: bold;">Вставить из буфера</span>. Для перенесённой переменной нельзя изменить имя свойства, используемое в скриптах, и тип. Поскольку в процессе не могут присутствовать свойства с одинаковым кодом, нельзя скопировать переменную и вставить её в контекст этого же процесса.</li></ul>
 <h2 class="p_Heading2"><a id="system-variable" class="hmanchor"></a><span class="f_Heading2">Системные переменные</span></h2>
 <p class="p_Normal">В каждый бизнес-процесс по умолчанию добавлены системные контекстные переменные. Они не отображаются в списке переменных на вкладке <span style="font-weight: bold;">Контекст</span>, но их можно использовать при моделировании процесса, например, в скриптах, шаблонах или на формах задач.</p>
 <p style="background: #ffffff; margin: 0 0 10px 0;"><img alt="proccess-context-5" width="731" height="535" style="margin:0;width:731px;height:535px;border:none" src="proccess-context-5.png"/></p>
@@ -253,9 +256,9 @@
 </div>
  
     </footer>
-    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jquery1.min.js"></script>
     <iframe name="hmnavigation" style="display:none!important"></iframe>
-    <script src="./jquery-ui.js"></script>
+    <!--<script src="./jquery-ui.js"></script> -->
     <script src="./jquery-ui.min.js"></script>
     <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
     <script src="./jquery.tocify.min.js"></script>

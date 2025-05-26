@@ -115,14 +115,14 @@
 <p class="p_Normal">Установка состоит из трёх этапов:</p>
 <ol style="list-style-type:decimal">
 <li value="1" class="p_Normal"><a href="haproxy-load-balance.html#install-haproxy" class="topiclink">Установка HAProxy</a>.</li><li value="2" class="p_Normal"><a href="haproxy-load-balance.html#set-up-haproxy-configuration" class="topiclink">Настройка базовой конфигурации HAProxy</a>.</li><li value="3" class="p_Normal"><a href="haproxy-load-balance.html#add-configurations" class="topiclink">Добавление конфигураций для балансировки компонентов ELMA365</a>.</li></ol>
-<h2 class="p_Heading2"><a id="install-haproxy" class="hmanchor"></a><span class="f_Heading2">Шаг 1: Установка HAProxy</span></h2>
+<h2 class="p_Heading2"><a id="install-haproxy" class="hmanchor"></a><span class="f_Heading2">Шаг 1. Установка HAProxy</span></h2>
 <ol style="list-style-type:upper-roman">
 <li value="1" class="p_Normal">Установите HAProxy, используя следующую команду:</li></ol>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">sudo&nbsp;apt&nbsp;install&nbsp;haproxy&nbsp;-y</span></p>
 <ol style="list-style-type:upper-roman" start="2">
 <li value="2" class="p_Normal">Запустите сервис HAProxy и добавьте его в автозагрузку:</li></ol>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">sudo&nbsp;systemctl&nbsp;enable&nbsp;--now&nbsp;haproxy</span></p>
-<h2 class="p_Heading2"><a id="set-up-haproxy-configuration" class="hmanchor"></a><span class="f_Heading2">Шаг 2: Настройка базовой конфигурации HAProxy</span></h2>
+<h2 class="p_Heading2"><a id="set-up-haproxy-configuration" class="hmanchor"></a><span class="f_Heading2">Шаг 2. Настройка базовой конфигурации HAProxy</span></h2>
 <ol style="list-style-type:upper-roman">
 <li value="1" class="p_Normal">Переместите конфигурационный файл по умолчанию:</li></ol>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">sudo&nbsp;mv&nbsp;/etc/haproxy/haproxy.cfg{,.original}</span></p>
@@ -184,7 +184,7 @@
 <ol style="list-style-type:upper-roman" start="3">
 <li value="3" class="p_Normal">Перезапустите HAProxy:</li></ol>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">sudo&nbsp;systemctl&nbsp;restart&nbsp;haproxy</span></p>
-<h2 class="p_Heading2"><a id="add-configurations" class="hmanchor"></a><span class="f_Heading2">Шаг 3: Добавление конфигураций для балансировки компонентов ELMA365</span></h2>
+<h2 class="p_Heading2"><a id="add-configurations" class="hmanchor"></a><span class="f_Heading2">Шаг 3. Добавление конфигураций для балансировки компонентов ELMA365</span></h2>
 <p class="p_Normal">Конфигурации компонентов ELMA365 добавляются в файл <code><b>haproxy.cfg</b></code> по необходимости. </p>
 <p class="p_Normal">В зависимости от выстраиваемой архитектуры вы можете добавить следующие конфигурации:</p>
 <ul style="list-style-type:disc">
@@ -277,9 +277,9 @@
 </div>
  
     </footer>
-    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jquery1.min.js"></script>
     <iframe name="hmnavigation" style="display:none!important"></iframe>
-    <script src="./jquery-ui.js"></script>
+    <!--<script src="./jquery-ui.js"></script> -->
     <script src="./jquery-ui.min.js"></script>
     <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
     <script src="./jquery.tocify.min.js"></script>

@@ -117,14 +117,14 @@
 <p class="p_Normal">Установка состоит из пяти этапов:</p>
 <ol style="list-style-type:decimal">
 <li value="1" class="p_Normal"><a href="install-istio.html#change-parameters" class="topiclink">Изменение параметров ядра на рабочих узлах (опционально)</a>.</li><li value="2" class="p_Normal"><a href="install-istio.html#download-helm-chart-and-config-file" class="topiclink">Загрузка Helm-чарта и конфигурационного файла</a>.</li><li value="3" class="p_Normal"><a href="install-istio.html#fill-config-file" class="topiclink">Заполнение конфигурационного файла</a>.</li><li value="4" class="p_Normal"><a href="install-istio.html#install-istio-chart" class="topiclink">Установка чарта Istio с помощью Helm в Kubernetes-кластер.</a></li><li value="5" class="p_Normal"><a href="install-istio.html#switch-on-istio" class="topiclink">Включение Istio на namespace с приложением ELMA365</a>.</li></ol>
-<h2 class="p_Heading2"><a id="change-parameters" class="hmanchor"></a><span class="f_Heading2">Шаг 1: Изменение параметров ядра на рабочих узлах (опционально)</span></h2>
+<h2 class="p_Heading2"><a id="change-parameters" class="hmanchor"></a><span class="f_Heading2">Шаг 1. Изменение параметров ядра на рабочих узлах (опционально)</span></h2>
 <p class="p_Normal">Перед установкой удостоверьтесь, что параметры операционной системы установлены корректно. Если параметры для увеличения лимитов <span style="font-weight: bold;">inotify</span> не заданы, добавьте их в конфигурационный файл <code><b>/etc/sysctl.conf</b></code>:</p>
-<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">sudo</span><span class="f_CodeExample" style="color: #ffffff;">&nbsp;</span><span class="f_CodeExample">nano</span><span class="f_CodeExample" style="color: #ffffff;">&nbsp;</span><span class="f_CodeExample">/etc/sysctl.conf</span><br />
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">sudo&nbsp;nano</span><span class="f_CodeExample" style="color: #ffffff;">&nbsp;</span><span class="f_CodeExample">/etc/sysctl.conf</span><br />
 <span class="f_CodeExample">fs.inotify.max_user_instances</span><span class="f_CodeExample" style="color: #ffffff;">&nbsp;</span><span class="f_CodeExample">=</span><span class="f_CodeExample" style="color: #ffffff;">&nbsp;</span><span class="f_CodeExample">1024</span><br />
 <span class="f_CodeExample">fs.inotify.max_user_watches</span><span class="f_CodeExample" style="color: #ffffff;">&nbsp;</span><span class="f_CodeExample">=</span><span class="f_CodeExample" style="color: #ffffff;">&nbsp;</span><span class="f_CodeExample">1048576</span></p>
 <p class="p_Normal">Обновите значение параметров следующей командой:</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">sysctl&nbsp;-p</span></p>
-<h2 class="p_Heading2"><a id="download-helm-chart-and-config-file" class="hmanchor"></a><span class="f_Heading2">Шаг 2: Загрузка Helm-чарта и конфигурационного файла</span></h2>
+<h2 class="p_Heading2"><a id="download-helm-chart-and-config-file" class="hmanchor"></a><span class="f_Heading2">Шаг 2. Загрузка Helm-чарта и конфигурационного файла</span></h2>
 <p class="p_Normal">Для установки через интернет получите конфигурационный файл <code><b>values-istio.yaml</b></code>, выполнив команду:</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">helm&nbsp;repo&nbsp;add&nbsp;elma365&nbsp;</span><span class="f_CodeExample">https://charts.elma365.tech</span><br />
 <span class="f_CodeExample">helm&nbsp;repo&nbsp;update</span><br />
@@ -145,7 +145,7 @@
 </tr>
 </table>
 </div>
-<h2 class="p_Heading2"><a id="fill-config-file" class="hmanchor"></a><span class="f_Heading2">Шаг 3: Заполнение конфигурационного файла</span></h2>
+<h2 class="p_Heading2"><a id="fill-config-file" class="hmanchor"></a><span class="f_Heading2">Шаг 3. Заполнение конфигурационного файла</span></h2>
 <p class="p_Normal">Заполните конфигурационный файл <code><b>values-istio.yaml</b></code> для установки сервиса Istio.</p>
 <p class="p_Normal">Для параметра <code><b>istioNamespace</b></code> укажите <code><b>namespace</b></code>, в который устанавливается Istio. </p>
 <p class="p_Normal">Чтобы обеспечить высокую доступность Istio: </p>
@@ -191,20 +191,20 @@
 </tr>
 </table>
 </div>
-<h2 class="p_Heading2"><a id="install-istio-chart" class="hmanchor"></a><span class="f_Heading2">Шаг 4: Установка чарта Istio с помощью Helm в Kubernetes-кластер</span></h2>
+<h2 class="p_Heading2"><a id="install-istio-chart" class="hmanchor"></a><span class="f_Heading2">Шаг 4. Установка чарта Istio с помощью Helm в Kubernetes-кластер</span></h2>
 <p class="p_Normal">Выполните установку чарта Istio в <code><b>namespace istio-system</b></code>. <code><b>Namespace</b></code> будет создан во время установки, если не был создан ранее.</p>
 <p class="p_Normal">Для установки через интернет:</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">helm&nbsp;upgrade&nbsp;--install&nbsp;istio&nbsp;elma365/istio&nbsp;-f&nbsp;values-istio.yaml&nbsp;-n&nbsp;istio-system&nbsp;--create-</span><span class="f_CodeExample" style="font-weight: bold;">namespace</span></p>
 <p class="p_Normal">Для офлайн-установки без доступа в интернет перейдите в каталог с загруженным чартом и выполните команду:</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">helm&nbsp;upgrade&nbsp;--install&nbsp;istio&nbsp;./istio&nbsp;-f&nbsp;values-istio.yaml&nbsp;-n&nbsp;istio-system&nbsp;--create-</span><span class="f_CodeExample" style="font-weight: bold;">namespace</span></p>
-<h2 class="p_Heading2"><a id="switch-on-istio" class="hmanchor"></a><span class="f_Heading2">Шаг 5: Включение Istio на namespace с приложением ELMA365</span></h2>
+<h2 class="p_Heading2"><a id="switch-on-istio" class="hmanchor"></a><span class="f_Heading2">Шаг 5. Включение Istio на namespace с приложением ELMA365</span></h2>
 <p class="p_Normal">В описанном примере приложение ELMA365 установлено в <code><b>namespace elma365</b></code>.</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">Начало&nbsp;внимание</span></p>
-<p class="p_Normal">Перед включением Istio необходимо проверить и отключить другие Service Mesh в namespace, где установлено приложение ELMA365. &nbsp;</p>
 <p class="p_Normal">Одновременная работа нескольких Service Mesh не допускается.</p>
-<p class="p_Normal">Для отключения Linkerd удалите аннотацию на <code><b>namespace</b></code> с приложением ELMA365:</p>
-<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">kubectl&nbsp;annotate&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">namespace&nbsp;</span><span class="f_CodeExample">elma365&nbsp;linkerd.io/inject-</span></p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">Конец&nbsp;внимание</span></p>
+<p class="p_Normal"><span style="font-weight: bold;">Важно</span>: перед включением Istio проверьте и отключите другие Service Mesh в namespace, где установлено приложение ELMA365. </p>
+<p class="p_Normal">Для отключения Linkerd удалите аннотацию на <code><b>namespace</b></code> с приложением ELMA365:</p>
+<p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample">kubectl annotate namespace elma365 linkerd.io/inject-</span></p>
 <p class="p_Normal">Добавьте лейбл на <code><b>namespace</b></code> с приложением ELMA365 для автоматической инъекции контейнеров Istio-proxy в сервисы ELMA365 командой:</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">kubectl&nbsp;label&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">namespace&nbsp;</span><span class="f_CodeExample">elma365&nbsp;istio-injection=enabled&nbsp;--overwrite</span></p>
 <p class="p_Normal">Перезапустите все сервисы приложения ELMA365 командой:</p>
@@ -303,9 +303,9 @@
 </div>
  
     </footer>
-    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jquery1.min.js"></script>
     <iframe name="hmnavigation" style="display:none!important"></iframe>
-    <script src="./jquery-ui.js"></script>
+    <!--<script src="./jquery-ui.js"></script> -->
     <script src="./jquery-ui.min.js"></script>
     <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
     <script src="./jquery.tocify.min.js"></script>

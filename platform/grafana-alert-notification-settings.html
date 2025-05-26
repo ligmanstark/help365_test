@@ -119,7 +119,7 @@
 <p style="line-height: 1.28; margin: 0 0 11px 0;">Настройка оповещений в Grafana состоит из нескольких этапов:</p>
 <ol style="list-style-type:decimal">
 <li value="1" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><a href="grafana-alert-notification-settings.html#notification-receiving-method" class="topiclink">Настроить способ получения оповещений</a>.</li><li value="2" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><a href="grafana-alert-notification-settings.html#create-alert-rules" class="topiclink">Создать правила оповещения</a>.</li><li value="3" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><a href="grafana-alert-notification-settings.html#configure-notification-routing" class="topiclink">Настроить маршрутизацию оповещений</a>.</li></ol>
-<h3 class="p_Heading3"><a id="notification-receiving-method" class="hmanchor"></a><span class="f_Heading3">Шаг 1: Настроить способ получения оповещений</span></h3>
+<h3 class="p_Heading3"><a id="notification-receiving-method" class="hmanchor"></a><span class="f_Heading3">Шаг 1. Настроить способ получения оповещений</span></h3>
 <p style="line-height: 1.28; margin: 0 0 11px 0;">В настройках Grafana перейдите в раздел <span style="font-weight: bold;">Alerting &gt; Contact points</span> и в поле <span style="font-weight: bold;">Integration</span> укажите способ получения уведомлений, а затем заполните соответствующие поля. </p>
 <p style="line-height: 1.28; margin: 0 0 11px 0;">Чтобы получать уведомления через электронную почту, выберите опцию <span style="font-weight: bold;">Email</span>. Затем в появившемся поле <span style="font-weight: bold;">Addresses</span> укажите список электронных адресов, на которые будут отправляться оповещения.</p>
 <p style="line-height: 1.28; margin: 0 0 11px 0;"><img alt="grafana-alert-notification-settings-1" width="989" height="689" style="margin:0;width:989px;height:689px;border:none" src="grafana-alert-notification-settings-1.png"/></p>
@@ -128,7 +128,7 @@
 <li value="1" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;">Перейдите в Telegram и создайте бота.</li><li value="2" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;">Скопируйте токен бота и введите его в поле <span style="font-weight: bold;">BOT API Token</span>.</li><li value="3" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;">Создайте группу в Telegram и добавьте в неё вашего бота.</li><li value="4" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;">Получите ID группы и укажите его в поле <span style="font-weight: bold;">Chat ID</span>.</li></ol>
 <p style="line-height: 1.28; margin: 0 0 11px 0;">Для выполнения действий в Telegram используйте <a href="https://core.telegram.org/bots/tutorial" target="_blank" class="weblink">официальную документацию</a>.</p>
 <p style="line-height: 1.28; margin: 0 0 11px 0;"><img alt="grafana-alert-notification-settings-2" width="947" height="749" style="margin:0;width:947px;height:749px;border:none" src="grafana-alert-notification-settings-2.png"/></p>
-<h3 class="p_Heading3"><a id="create-alert-rules" class="hmanchor"></a><span class="f_Heading3">Шаг 2: Создать правила оповещения</span></h3>
+<h3 class="p_Heading3"><a id="create-alert-rules" class="hmanchor"></a><span class="f_Heading3">Шаг 2. Создать правила оповещения</span></h3>
 <p style="line-height: 1.28; margin: 0 0 11px 0;">На основе метрик с использованием <a href="monitoring_infrastructure.html" class="topiclink">Prometheus</a> или отслеживании логов с помощью <a href="install-loki.html" class="topiclink">Loki</a> вы можете создать правила оповещения.</p>
 <p style="line-height: 1.28; margin: 0 0 11px 0;">Для примера создадим правило оповещения по метрикам с использованием <a href="elma365-overview-dashboard.html" class="topiclink">дэшборда ELMA365-Overview</a> и настроим уведомления при нагрузке на ноде CPU более 80% длительностью 5 минут. Для этого в дэшборде откройте нужный раздел, в нашем случае <span style="font-size: 13px; font-family: Inter; color: #394149;">—</span> <a href="elma365-overview-dashboard.html#nodes-info-tab" class="topiclink">Nodes info</a>. Затем в правом верхнем углу нажмите на <span style="font-weight: bold;">три точки</span> и выберите пункт <span style="font-weight: bold;">More &gt; New alert rule</span>. В открывшемся окне выполните следующие действия:</p>
 <ol style="list-style-type:upper-roman">
@@ -141,7 +141,7 @@
 <li value="3" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;">Затем в этом же окне в поле <span style="font-weight: bold;">Folder</span> выберите папку, в которой будут сохраняться и отображаться уведомления по созданному правилу. В поле <span style="font-weight: bold;">Evaluation group </span>добавьте ранее созданную группу оценки <span style="font-weight: bold;">5m</span>.</li></ol>
 <p style="line-height: 1.28; margin: 0 0 11px 34px;">Дополнительно в окне <span style="font-weight: bold;">New alert rule</span> можно добавить лейблы и аннотации для вашего правила оповещения. Лейблы помогут вам классифицировать и фильтровать оповещения, а аннотации позволят добавить описание проблемы или действий, которые следует предпринять.</p>
 <p style="line-height: 1.28; margin: 0 0 11px 34px;"><img alt="grafana-alert-notification-settings-5" width="913" height="539" style="margin:0;width:913px;height:539px;border:none" src="grafana-alert-notification-settings-5.png"/></p>
-<h3 class="p_Heading3"><a id="configure-notification-routing" class="hmanchor"></a><span class="f_Heading3">Шаг 3: Настроить маршрутизацию оповещений</span></h3>
+<h3 class="p_Heading3"><a id="configure-notification-routing" class="hmanchor"></a><span class="f_Heading3">Шаг 3. Настроить маршрутизацию оповещений</span></h3>
 <p style="line-height: 1.28; margin: 0 0 11px 0;">Перейдите в раздел <span style="font-weight: bold;">Alerting – Notification policies </span>и в открывшемся окне:</p>
 <ul style="list-style-type:disc">
 <li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;">заполните пункт <span style="font-weight: bold;">Matching labels</span>;</li><li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;">в поле <span style="font-weight: bold;">Contact point</span> выберите способ получения уведомлений.</li></ul>
@@ -149,18 +149,18 @@
 <p style="line-height: 1.28; margin: 0 0 11px 0;"><img alt="grafana-alert-notification-settings-6" width="921" height="901" style="margin:0;width:921px;height:901px;border:none" src="grafana-alert-notification-settings-6.png"/></p>
 <p style="line-height: 1.28; margin: 0 0 11px 0;">Маршрутизация настроена. Если пороговое значение будет превышать коэффициент 0.8 в течение 5 минут, то поступит уведомление на указанный электронный адрес.</p>
 <h2 class="p_Heading2"><a id="preset-alerts" class="hmanchor"></a><span class="f_Heading2">Применить готовый список правил для оповещений в мессенджеры</span></h2>
-<p style="line-height: 1.28; margin: 0 0 11px 0;">В чарте <span style="font-weight: bold;">elma365/monitoring</span> расположен список правил для оповещений, заданный в файле <code><b>alerting.yaml</b></code>. Его можно применить только для отправки уведомлений в мессенджеры. </p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;">В чарте <span style="font-weight: bold;">elma365/monitoring</span> расположен список правил для оповещений, заданный в файле <code><b>alerts.yaml</b></code>. Его можно применить только для отправки уведомлений в мессенджеры. </p>
 <p style="line-height: 1.28; margin: 0 0 11px 0;">По умолчанию в конфигурации файла указаны параметры для маршрутизации сообщений в наиболее распространённый сервис Telegram.</p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;">Чтобы использовать готовый список с другим мессенджером, вы можете изменить конфигурацию в файле <code><b>alerting.yaml</b></code>, задать в нём маршрутизацию оповещений и шаблоны для необходимого мессенджера.</p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;">Если готового списка правил в файле <code><b>alerting.yaml</b></code> недостаточно, вы можете <a href="grafana-alert-notification-settings.html#notification-receiving-method" class="topiclink">создать правила вручную и настроить их маршрутизацию</a> по инструкции, приведённой выше.</p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;">Чтобы использовать готовый список с другим мессенджером, вы можете изменить конфигурацию в файле <code><b>alerts.yaml</b></code>, задать в нём маршрутизацию оповещений и шаблоны для необходимого мессенджера.</p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;">Если готового списка правил в файле <code><b>alerts.yaml</b></code> недостаточно, вы можете <a href="grafana-alert-notification-settings.html#notification-receiving-method" class="topiclink">создать правила вручную и настроить их маршрутизацию</a> по инструкции, приведённой выше.</p>
 <p style="line-height: 1.28; margin: 0 0 11px 0;">Рассмотрим, как использовать готовый список правил и отправлять оповещения в Telegram:</p>
 <ol style="list-style-type:upper-roman">
-<li value="1" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;">Перед настройкой проверьте, что у вас установлены <a href="install-monitoring-tools.html" class="topiclink">средства мониторинга</a> и <a href="monitoring-databases.html" class="topiclink">DBSExporter для наблюдения за базами данных</a> с включённым Node Exporter.</li><li value="2" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;">Чтобы установить готовый список правил оповещений через интернет, получите конфигурационный файл <code><b>values-monitoring.yaml</b></code>, выполнив команду:</li></ol>
+<li value="1" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;">Перед настройкой проверьте, что у вас установлены <a href="install-monitoring-tools.html" class="topiclink">средства мониторинга</a> и <a href="monitoring-databases.html" class="topiclink">DBSExporter для наблюдения за базами данных</a> с включённым Node Exporter.</li><li value="2" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;">Чтобы установить готовый список правил оповещений через интернет, получите конфигурационный файл <code><b>values.yaml</b></code>, выполнив команду:</li></ol>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">helm&nbsp;repo&nbsp;add&nbsp;elma365&nbsp;https://charts.elma365.tech</span><br />
 <span class="f_CodeExample">helm&nbsp;repo&nbsp;update</span><br />
 <span class="f_CodeExample">helm&nbsp;pull&nbsp;elma365/monitoring&nbsp;--untar</span></p>
 <ol style="list-style-type:upper-roman" start="3">
-<li value="3" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;">В файле <code><b>alerting.yaml</b></code> настройте канал оповещения. Для этого укажите в строке:</li></ol>
+<li value="3" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;">В файле <code><b>alerts.yaml</b></code> настройте канал оповещения. Для этого укажите в строке:</li></ol>
 <ul style="list-style-type:disc">
 <li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold;">bottoken: &lt;bot-token&gt;</span> — &nbsp;токен Telegram-бота;</li><li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold;">chatid: &quot;&lt;chat-id&gt;&quot;</span> — &nbsp;идентификатор чата в Telegram. </li></ul>
 <p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample"># Настройки alerting</span><br />
@@ -182,10 +182,10 @@
 <span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;parse_mode: HTML</span><br />
 <span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;disableResolveMessage: false</span></p>
 <ol style="list-style-type:upper-roman" start="4">
-<li value="4" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;">Примените готовый список оповещений из файла <code><b>alerting.yaml</b></code>, выполнив команду:</li></ol>
-<p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample">helm upgrade --install elma365-monitoring elma365/monitoring -f values-monitoring.yaml -f alerting.yaml -n monitoring --create-namespace</span> </p>
+<li value="4" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;">Примените готовый список оповещений из файла <code><b>alerts.yaml</b></code>, выполнив команду:</li></ol>
+<p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample">helm upgrade --install elma365-monitoring elma365/monitoring -f values.yaml -f alerts.yaml -n monitoring --create-namespace</span> </p>
 <p style="line-height: 1.28; margin: 0 0 11px 0;">Оповещения в Telegram могут выглядеть следующим образом:</p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><img alt="grafana-alert-notification-settings-7" width="665" height="621" style="margin:0;width:665px;height:621px;border:none" src="grafana-alert-notification-settings-7.png"/></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><img alt="grafana-alert-notification-settings-7" width="532" height="497" style="margin:0;width:532px;height:497px;border:none" src="grafana-alert-notification-settings-7.png"/></p>
 
                         <div class="bottom-nav">
                             
@@ -274,9 +274,9 @@
 </div>
  
     </footer>
-    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jquery1.min.js"></script>
     <iframe name="hmnavigation" style="display:none!important"></iframe>
-    <script src="./jquery-ui.js"></script>
+    <!--<script src="./jquery-ui.js"></script> -->
     <script src="./jquery-ui.min.js"></script>
     <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
     <script src="./jquery.tocify.min.js"></script>

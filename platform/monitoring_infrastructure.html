@@ -116,7 +116,7 @@
 <p class="p_Normal">Настройка состоит из четырёх этапов:</p>
 <ol style="list-style-type:decimal">
 <li value="1" class="p_Normal"><a href="monitoring_infrastructure.html#configure_kube_proxy_component" class="topiclink">Настроить компонент kube-proxy</a>.</li><li value="2" class="p_Normal"><a href="monitoring_infrastructure.html#configure_kube-scheduler_component" class="topiclink">Настроить компонент kube-scheduler</a>.</li><li value="3" class="p_Normal"><a href="monitoring_infrastructure.html#configure_etcd_component" class="topiclink">Настроить компонент etcd</a>.</li><li value="4" class="p_Normal"><a href="monitoring_infrastructure.html#configure_kube_controller_manager_component" class="topiclink">Настроить компонент kube-controller-manager</a>.</li></ol>
-<h2 class="p_Heading2"><a id="configure_kube_proxy_component" class="hmanchor"></a><span class="f_Heading2">Шаг 1: Настроить компонент kube-proxy</span></h2>
+<h2 class="p_Heading2"><a id="configure_kube_proxy_component" class="hmanchor"></a><span class="f_Heading2">Шаг 1. Настроить компонент kube-proxy</span></h2>
 <ol style="list-style-type:decimal">
 <li value="1" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;">Внесите изменения в <span style="font-weight: bold;">ConfigMap</span>.</li></ol>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">kubectl&nbsp;edit&nbsp;cm/kube-proxy&nbsp;-n&nbsp;kube-system</span></p>
@@ -127,21 +127,21 @@
 <ol style="list-style-type:decimal">
 <li value="3" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;">Примените изменения.</li></ol>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">kubectl&nbsp;-n&nbsp;kube-system&nbsp;rollout&nbsp;restart&nbsp;daemonset&nbsp;kube-proxy</span></p>
-<h2 class="p_Heading2"><a id="configure_kube-scheduler_component" class="hmanchor"></a><span class="f_Heading2">Шаг 2: Настроить компонент kube-scheduler</span></h2>
+<h2 class="p_Heading2"><a id="configure_kube-scheduler_component" class="hmanchor"></a><span class="f_Heading2">Шаг 2. Настроить компонент kube-scheduler</span></h2>
 <ol style="list-style-type:decimal">
 <li value="1" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;">Внести изменения в манифест файл <code><b>kube-scheduler.yaml</b></code>.</li></ol>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">nano&nbsp;/etc/kubernetes/manifests/kube-scheduler.yaml</span></p>
 <ol style="list-style-type:decimal">
 <li value="2" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;">Установите значение <code><b>0.0.0.0</b></code> в строке <code><b>--bind-address</b></code>. Настройка применится автоматически после сохранения манифеста.</li></ol>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">-&nbsp;--bind-address=0.0.0.0</span></p>
-<h2 class="p_Heading2"><a id="configure_etcd_component" class="hmanchor"></a><span class="f_Heading2">Шаг 3: Настроить компонент etcd</span></h2>
+<h2 class="p_Heading2"><a id="configure_etcd_component" class="hmanchor"></a><span class="f_Heading2">Шаг 3. Настроить компонент etcd</span></h2>
 <ol style="list-style-type:decimal">
 <li value="1" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;">Внесите изменения в манифест файл <code><b>etcd.yaml</b></code>.</li></ol>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">nano&nbsp;/etc/kubernetes/manifests/etcd.yaml</span></p>
 <ol style="list-style-type:decimal">
 <li value="2" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;">Установите значение <code><b>http://0.0.0.0:2381</b></code> в строке <code><b>--listen-metrics-urls</b></code>. Настройка применится автоматически после сохранения манифеста.</li></ol>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">-&nbsp;--listen-metrics-urls=http://0.0.0.0:2381</span></p>
-<h2 class="p_Heading2"><a id="configure_kube_controller_manager_component" class="hmanchor"></a><span class="f_Heading2">Шаг 4: Настроить компонент kube-controller-manager</span></h2>
+<h2 class="p_Heading2"><a id="configure_kube_controller_manager_component" class="hmanchor"></a><span class="f_Heading2">Шаг 4. Настроить компонент kube-controller-manager</span></h2>
 <ol style="list-style-type:decimal">
 <li value="1" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;">Внесите изменения в манифест файл <code><b>kube-controller-manager.yaml</b></code>.</li></ol>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">nano&nbsp;/etc/kubernetes/manifests/kube-controller-manager.yaml</span></p>
@@ -260,9 +260,9 @@
 </div>
  
     </footer>
-    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jquery1.min.js"></script>
     <iframe name="hmnavigation" style="display:none!important"></iframe>
-    <script src="./jquery-ui.js"></script>
+    <!--<script src="./jquery-ui.js"></script> -->
     <script src="./jquery-ui.min.js"></script>
     <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
     <script src="./jquery.tocify.min.js"></script>

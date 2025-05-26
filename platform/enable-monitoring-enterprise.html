@@ -114,17 +114,39 @@
                         <p class="p_Normal">Процесс включения мониторинга для приложения ELMA365 состоит из трёх этапов:</p>
 <ol style="list-style-type:decimal">
 <li value="1" class="p_Normal"><a href="enable-monitoring-enterprise.html#installation-tools-monitoring" class="topiclink">Установка средств мониторинга</a>.</li><li value="2" class="p_Normal"><a href="enable-monitoring-enterprise.html#alteration-config-file" class="topiclink">Внесение изменений в конфигурационный файл values-elma365.yaml</a>.</li><li value="3" class="p_Normal"><a href="enable-monitoring-enterprise.html#applying-parameters-monitoring" class="topiclink">Применение параметров мониторинга для ELMA365 Enterprise</a>.</li></ol>
-<h2 class="p_Heading2"><a id="installation-tools-monitoring" class="hmanchor"></a><span class="f_Heading2">Шаг 1: Установка средств мониторинга</span></h2>
+<h2 class="p_Heading2"><a id="installation-tools-monitoring" class="hmanchor"></a><span class="f_Heading2">Шаг 1. Установка средств мониторинга</span></h2>
 <p class="p_Normal">Под установкой средств мониторинга подразумевается развёртывание в Kubernetes-кластере Prometheus для хранения временных рядов, а также Grafana для их визуализации. Если у вас уже есть развёрнутые Prometheus и Grafana, этот этап можно пропустить. </p>
 <p class="p_Normal">Вы можете установить средства мониторинга в Kubernetes-кластере. Подробнее об этом читайте в статье <a href="install-monitoring-tools.html" class="topiclink">«Установка средств мониторинга»</a>.</p>
-<h2 class="p_Heading2"><a id="alteration-config-file" class="hmanchor"></a><span class="f_Heading2">Шаг 2: Внесение изменений в конфигурационный файл values-elma365.yaml</span></h2>
+<h2 class="p_Heading2"><a id="alteration-config-file" class="hmanchor"></a><span class="f_Heading2">Шаг 2. Внесение изменений в конфигурационный файл values-elma365.yaml</span></h2>
 <p class="p_Normal">Изменения вносятся в конфигурационный файл <code><b>values-elma365.yaml</b></code>, заполненный при установке ELMA365.</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">Начало&nbsp;внимание</span></p>
 <p class="p_Normal">Перед редактированием файла <code><b>values-elma365.yaml</b></code> создайте его резервную копию, поскольку некорректная настройка параметров может привести к сбоям в работе приложения ELMA365.</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">Конец&nbsp;внимание</span></p>
 <p class="p_Normal">Заполните конфигурационный файл <code><b>values-elma365.yaml</b></code> для включения мониторинга:</p>
 <ol style="list-style-type:upper-roman">
-<li value="1" class="p_Normal">Чтобы включить поддержку мониторинга, укажите <code><b>true</b></code> в параметре <code><b>global.monitoring.enabled</b></code>.</li><li value="2" class="p_Normal">Включите установку в Kubernetes-кластере ServiceMonitor для сервисов приложения ELMA365, указав <code><b>true</b></code> в параметре <code><b>global.monitoring.metrics.enabled</b></code>. По умолчанию отдаются только основные метрики сервисов ELMA365. Предоставление всех метрик отключено для предотвращения нарушения работы всего мониторинга слишком большим количеством метрик. Чтобы включить предоставления значительно большего количества метрик сервисами приложения ELMA365, укажите <code><b>true</b></code> в параметре <code><b>global.monitoring.metrics.all</b></code>. В рамках статьи включение предоставления всех метрик не требуется. </li><li value="3" class="p_Normal">Если Kubernetes-кластер развернут на платформе Deckhouse, выставите значение <code><b>deckhouse</b></code> в параметре <code><b>global.monitoring.provisioner</b></code>. Это настроит поставляемые средства мониторинга под целевую платформу.</li><li value="4" class="p_Normal">Чтобы установить Dashboards (ConfigMap) в Kubernetes-кластер для сервисов приложения ELMA365, укажите <code><b>true</b></code> в параметре <code><b>global.monitoring.dashboard.enabled</b></code>.</li><li value="5" class="p_Normal">Если нужна установка оповещений, выставите <code><b>true</b></code> для <code><b>global.monitoring.alerts.enabled</b></code>. Начнётся установка PrometheusRule (CRD) в Kubernetes-кластер для сервисов приложения ELMA365.</li><li value="6" class="p_Normal">Чтобы включить <a href="export-monitoring-enterprise.html" class="topiclink">экспорт метрик производительности системы</a> в хранилище Prometheus для визуализации данных с помощью Grafana, в <code><b>global.monitoring.lowcode.metricExportEnabled</b></code> укажите <code><b>true</b></code>.</li></ol>
+<li value="1" class="p_Normal">Чтобы включить поддержку мониторинга, укажите <code><b>true</b></code> в параметре <code><b>global.monitoring.enabled</b></code>.</li><li value="2" class="p_Normal">Включите установку в Kubernetes-кластере ServiceMonitor для сервисов приложения ELMA365, указав в параметре <code><b>global.monitoring.metrics.enabled</b></code> значение <code><b>true</b></code>.<br />
+&nbsp;<br />
+По умолчанию передаются только основные метрики сервисов ELMA365. Предоставление всех метрик отключено для предотвращения нарушения работы мониторинга из-за слишком большого количества данных. Чтобы включить все доступные метрики по сервисам приложения ELMA365, укажите в параметре <code><b>global.monitoring.metrics.all</b></code> значение <code><b>true</b></code>. <br />
+&nbsp;<br />
+В рамках статьи включение всех метрик не требуется.</li></ol>
+<p class="p_Normal"><a class="dropdown-toggle" style="font-style: normal; font-weight: normal; color: #000000; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186A1')">Дополнительные параметры для ServiceMonitor</a></p>
+<div id="TOGGLE0186A1" class="dropdown-toggle-body" style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0 0 0 0;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_Normal">&nbsp;<br />
+По умолчанию при мониторинге используются все ServiceMonitor. Вы можете исключить сбор данных с определённых ServiceMonitor или настроить перенаправление данных в разные экземпляры Prometheus с помощью меток (labels). Для этого используйте параметры: </p>
+<ul style="list-style-type:disc">
+<li class="p_Normal"><code><b>labels</b></code> — позволяет добавить или перезаписать метки (labels) для ServiceMonitor;</li><li class="p_Normal"><code><b>relabelings</b></code> — применяется перед сканированием целей (targets) к их меткам, чтобы:</li></ul>
+<ul style="list-style-type:disc"><ul style="list-style-type:circle">
+<li class="p_Normal">отфильтровать цели, например, оставить только те, у которых есть определённая метка;</li><li class="p_Normal">отредактировать метки цели, например добавить, удалить или изменить метки <code><b>__meta_*</b></code>, полученные из инструмента Service Discovery;</li><li class="p_Normal">динамически определить параметры <code><b>scrape</b></code>, например, путь или порт;</li></ul></li></ul>
+<ul style="list-style-type:disc">
+<li class="p_Normal"><code><b>metricRelabelings</b></code> — применяется к меткам метрик после их сбора, но до их сохранения в Prometheus, чтобы:<ul style="list-style-type:circle">
+<li class="p_Normal">удалить ненужные метрики;</li><li class="p_Normal">изменить метки собранных метрик, например, для агрегации или упрощения;</li><li class="p_Normal">отфильтровать чувствительные данные.</li></ul></li></ul>
+</td>
+</tr>
+</table>
+</div>
+<ol style="list-style-type:upper-roman">
+<li value="3" class="p_Normal">Если Kubernetes-кластер развёрнут на платформе Deckhouse, выставите в параметре <code><b>global.monitoring.provisioner</b></code> значение <code><b>deckhouse</b></code>. Это настроит поставляемые средства мониторинга под целевую платформу.</li><li value="4" class="p_Normal">Чтобы установить Dashboards (ConfigMap) в Kubernetes-кластер для сервисов приложения ELMA365, укажите в параметре <code><b>global.monitoring.dashboard.enabled</b></code> значение <code><b>true</b></code>.</li><li value="5" class="p_Normal">Если нужна установка оповещений, выставите для <code><b>global.monitoring.alerts.enabled</b></code> значение <code><b>true</b></code>. Начнётся установка PrometheusRule (CRD) в Kubernetes-кластер для сервисов приложения ELMA365.</li><li value="6" class="p_Normal">Чтобы включить <a href="export-monitoring-enterprise.html" class="topiclink">экспорт метрик производительности системы</a> в хранилище Prometheus для визуализации данных с помощью Grafana, в <code><b>global.monitoring.lowcode.metricExportEnabled</b></code> укажите <code><b>true</b></code>.</li></ol>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">global:</span><br />
 <span class="f_CodeExample">&nbsp;&nbsp;...</span><br />
 <span class="f_CodeExample">&nbsp;&nbsp;monitoring:</span><br />
@@ -140,7 +162,7 @@
 <span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;lowcode</span><br />
 <span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;metricExportEnabled:&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">true</span><br />
 <span class="f_CodeExample">...</span></p>
-<h2 class="p_Heading2"><a id="applying-parameters-monitoring" class="hmanchor"></a><span class="f_Heading2">Шаг 3: Применение параметров мониторинга для ELMA365 Enterprise</span></h2>
+<h2 class="p_Heading2"><a id="applying-parameters-monitoring" class="hmanchor"></a><span class="f_Heading2">Шаг 3. Применение параметров мониторинга для ELMA365 Enterprise</span></h2>
 <p class="p_Normal">Вы можете обновить параметры мониторинга для ELMA365 Enterprise двумя способами: через интернет или <a href="enable-monitoring-enterprise.html#offline-update" class="topiclink">без доступа к сети</a>.</p>
 <h3 class="p_Heading3"><span class="f_Heading3">Обновление параметров через интернет</span></h3>
 <ol style="list-style-type:upper-roman">
@@ -244,15 +266,18 @@
 </div>
  
     </footer>
-    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jquery1.min.js"></script>
     <iframe name="hmnavigation" style="display:none!important"></iframe>
-    <script src="./jquery-ui.js"></script>
+    <!--<script src="./jquery-ui.js"></script> -->
     <script src="./jquery-ui.min.js"></script>
     <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
     <script src="./jquery.tocify.min.js"></script>
     <script src="./TypoReporter.min.js"></script>
     <script src="./google-search.js"></script>
     <script src="./main.js"></script>
+<script type="text/javascript">
+HMInitToggle('TOGGLE0186A1','hm.type','dropdown','hm.state','0');
+</script>
 </body>
 
 </html>

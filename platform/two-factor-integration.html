@@ -8,7 +8,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Вы можете включить двухэтапную аутентификацию при входе в систему, чтобы в качестве второго фактора использовался код подтверждения. Пользователь получит этот код через..." />
+    <meta name="description" content="Вы можете включить двухэтапную аутентификацию при входе в систему или на внешний портал, чтобы в качестве второго фактора использовался код подтверждения. Пользователь получит..." />
     <meta name="picture" content="" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Cправка по Low-code платформе ELMA365" />
@@ -111,19 +111,21 @@
                             <a href="#h1-article" class="scroll-top"></a>
                         </div>
                         <!-- Placeholder for topic body. -->
-                        <p class="p_Normal">Вы можете включить двухэтапную аутентификацию при входе в систему, чтобы в качестве второго фактора использовался код подтверждения. Пользователь получит этот код через сторонний сервис, например мессенджер. </p>
-<p class="p_Normal">Для этого создайте <a href="extentions.html" class="topiclink">пользовательский модуль</a> и затем выберите его в <a href="security_settings.html#authorization" class="topiclink">настройках безопасности</a>. </p>
+                        <p class="p_Normal">Вы можете включить двухэтапную аутентификацию при входе в систему или на <a href="service-portal.html" class="topiclink">внешний портал</a>, чтобы в качестве второго фактора использовался код подтверждения. Пользователь получит этот код через сторонний сервис, например мессенджер. </p>
+<p class="p_Normal">Для этого создайте <a href="extentions.html" class="topiclink">пользовательский модуль</a> и затем выберите его:</p>
+<ul style="list-style-type:disc">
+<li class="p_Normal">в <a href="security_settings.html#authorization" class="topiclink">настройках безопасности</a>, чтобы включить двухфакторную аутентификацию при входе в систему;</li><li class="p_Normal">в <a href="portal-login-page.html#two-factor" class="topiclink">настройках портала</a> на вкладке <span style="font-weight: bold;">Авторизация</span>, чтобы включить двухфакторную аутентификацию при входе на портал для внутренних пользователей.</li></ul>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;внимание</span></p>
 <p class="p_Normal">Работать с модулями и настраивать их могут только пользователи, включённые в группу <a href="360006871932.html#administrators" class="topiclink">Администраторы</a>.</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;внимание</span></p>
-<p class="p_Normal">Для примера настроим получение кода подтверждения через Telegram-бот, выполнив следующие шаги:</p>
+<p class="p_Normal">Для примера настроим получение кода подтверждения через Telegram-бот, выполнив шаги:</p>
 <ol style="list-style-type:decimal">
 <li value="1" class="p_Normal">Настроить получение кода из стороннего сервиса.</li><li value="2" class="p_Normal">Создать и настроить модуль.</li><li value="3" class="p_Normal">Включить модуль для второго фактора аутентификации.</li></ol>
-<h2 class="p_Heading2"><span class="f_Heading2">Шаг 1: Настроить получение кода из стороннего сервиса</span> </h2>
+<h2 class="p_Heading2"><span class="f_Heading2">Шаг 1. Настроить получение кода из стороннего сервиса</span> </h2>
 <ol style="list-style-type:upper-roman">
 <li value="1" class="p_Normal">Перейдите в Telegram.</li><li value="2" class="p_Normal">Создайте бота. Подробнее читайте в <a href="https://core.telegram.org/bots/tutorial" target="_blank" class="weblink">официальной документации Telegram</a>.</li><li value="3" class="p_Normal">Скопируйте токен бота.</li><li value="4" class="p_Normal">С помощью токена получите идентификатор чата для пользователя. Вы можете использовать следующий способ:</li></ol>
 <ol style="list-style-type:decimal">
-<li value="1" class="p_Normal">Пользователь пишет любое сообщение созданному боту.</li><li value="2" class="p_Normal" style="page-break-inside: avoid; page-break-after: avoid;">Затем администратор системы получает идентификатор чата пользователя с ботом. Для этого:</li></ol>
+<li value="1" class="p_Normal">Пользователь пишет любое сообщение созданному боту.</li><li value="2" class="p_Normal" style="page-break-inside: avoid; page-break-after: avoid;">Администратор системы получает идентификатор чата пользователя с ботом. Для этого:</li></ol>
 <ul style="list-style-type:disc">
 <li class="p_Normal" style="page-break-inside: avoid; page-break-after: avoid;">введите следующий запрос в браузере: <code><b>https://api.telegram.org/bottoken/getUpdates</b></code>, где <code><b>token</b></code> — токен, полученный при создании бота;</li><li class="p_Normal" style="page-break-after: avoid;">в ответ на этот запрос на странице браузера появится JSON-текст, в котором содержится идентификатор чата.</li></ul>
 <p class="p_Normal"><a class="dropdown-toggle" style="font-style: normal; font-weight: normal; color: #000000; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186A1')">Пример JSON-текста</a></p>
@@ -158,8 +160,8 @@
 </table>
 </div>
 <ol style="list-style-type:upper-roman" start="5">
-<li value="5" class="p_Normal">Затем нужно в профиле пользователя указать его идентификатор чата в поле <a href="360004833572.html#accounts" class="topiclink">Учетные записи</a>. Если идентификатор не указан, сотрудник войдёт в систему только по логину и паролю. </li></ol>
-<h2 class="p_Heading2"><span class="f_Heading2">Шаг 2: Создать и настроить модуль</span></h2>
+<li value="5" class="p_Normal">В профиле пользователя укажите его идентификатор чата в поле <a href="360004833572.html#accounts" class="topiclink">Учетные записи</a>. Если идентификатор не указан, сотрудник войдёт в систему только по логину и паролю. </li></ol>
+<h2 class="p_Heading2"><span class="f_Heading2">Шаг 2. Создать и настроить модуль</span></h2>
 <p class="p_Normal">Перейдите в <span style="font-weight: bold;">Администрирование &gt; Модули</span> и <a href="create-extention.html" class="topiclink">создайте модуль</a>. Затем выполните настройки на открывшейся странице <span style="font-weight: bold;">Управление</span>:</p>
 <ol style="list-style-type:upper-roman">
 <li value="1" class="p_Normal">На вкладке <a href="extention-settings.html" class="topiclink">Настройки</a> создайте свойства типа <a href="360009707032.html#string" class="topiclink">Строка</a>, которые будут использованы в скриптах для получения кода подтверждения через бот мессенджера:</li></ol>
@@ -167,11 +169,11 @@
 <li class="p_Normal"><span style="font-weight: bold;">Тип аккаунта</span> (<code><b>accountType</b></code>) — название стороннего сервиса, через который настраивается двухфакторная аутентификация;</li><li class="p_Normal"><span style="font-weight: bold;">Токен бота</span> (<code><b>botToken</b></code>) — идентификатор бота на стороне внешнего сервиса. Выдаётся при создании бота;</li><li class="p_Normal"><span style="font-weight: bold;">Сообщение</span> (<code><b>message</b></code>) — сообщение, которое получит пользовать вместе с кодом подтверждения, например «Вы заходите в ELMA365. Ваш проверочный код: ».</li></ul>
 <p class="p_Normal">Если все свойства указаны, перейдите на вкладку <span style="font-weight: bold;">Основные</span> и нажмите <span style="font-weight: bold;">Сохранить</span>.</p>
 <ol style="list-style-type:upper-roman" start="2">
-<li value="2" class="p_Normal">Перейдите на вкладку <span style="font-weight: bold;">Методы API</span> и нажмите <span style="font-weight: bold;">Редактировать</span>. Откроется редактор методов. Затем на вкладке <span style="font-weight: bold;">Скрипты</span> напишите код, используя следующий шаблон:</li></ol>
-<p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample">// Этот интерфейс позволят задать условия в указанной ниже функции, при которых у пользователя будет запрашиваться код второго фактора аутентификации:</span><br />
+<li value="2" class="p_Normal">Перейдите на вкладку <span style="font-weight: bold;">Методы API</span> и нажмите <span style="font-weight: bold;">Редактировать</span>. Откроется редактор методов. На вкладке <span style="font-weight: bold;">Скрипты</span> напишите код, используя следующий шаблон:</li></ol>
+<p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample">// Интерфейс позволят задать условия в указанной ниже функции, при которых у пользователя будет запрашиваться код второго фактора аутентификации</span><br />
 <span class="f_CodeExample">interface SecondFactor_sendError { error: string; skip2fa: boolean; }</span><br />
 <span class="f_CodeExample">&nbsp;</span><br />
-<span class="f_CodeExample">// Эта функция определяет входящего пользователя по идентификатору и принимает код подтверждения:</span><br />
+<span class="f_CodeExample">// Функция определяет входящего пользователя по идентификатору и принимает код подтверждения</span><br />
 <span class="f_CodeExample">async function secondFactor_sendCode(userID: string, code: string): Promise&lt;SecondFactor_sendError&gt; {} </span></p>
 <p class="p_Normal"><a class="dropdown-toggle" style="font-style: normal; font-weight: normal; color: #000000; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186A2')">Пример скрипта для поиска входящего пользователя по идентификатору чата с Telegram-ботом</a></p>
 <div id="TOGGLE0186A2" class="dropdown-toggle-body" style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0 0 0 0;"><table style="border:none; border-spacing:0;">
@@ -228,7 +230,7 @@
 </tr>
 </table>
 </div>
-<h2 class="p_Heading2"><span class="f_Heading2">Шаг 3: Включить модуль для второго фактора аутентификации</span></h2>
+<h2 class="p_Heading2"><span class="f_Heading2">Шаг 3. Включить модуль для второго фактора аутентификации</span></h2>
 <ol style="list-style-type:upper-roman">
 <li value="1" class="p_Normal">Перейдите в <span style="font-weight: bold;">Администрирование &gt; Модули</span>, откройте страницу модуля и включите его.</li><li value="2" class="p_Normal">В открывшемся окне заполните поля:</li></ol>
 <ul style="list-style-type:disc">
@@ -326,9 +328,9 @@
 </div>
  
     </footer>
-    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jquery1.min.js"></script>
     <iframe name="hmnavigation" style="display:none!important"></iframe>
-    <script src="./jquery-ui.js"></script>
+    <!--<script src="./jquery-ui.js"></script> -->
     <script src="./jquery-ui.min.js"></script>
     <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
     <script src="./jquery.tocify.min.js"></script>

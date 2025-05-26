@@ -109,12 +109,15 @@
                         <!-- Placeholder for topic body. -->
                         <p style="margin: 7px 0 16px 0;">Листы согласования и ознакомления формируются каждый раз, когда документ направляется на рассмотрение, и сотрудникам назначаются соответствующие задачи. Кроме того, в пользовательском процессе можно настроить <a href="/ru/help/platform/auto-approval.html" target="_blank" class="weblink">автоматическое согласование</a>, при котором в карточке документа также создастся лист.</p>
 <p style="margin: 7px 0 16px 0;">Листы расположены на боковой панели карточки документа и содержат информацию о сотрудниках, выполняющих ознакомление или согласование. </p>
-<p style="margin: 7px 0 16px 0;">Если пользователь ещё не просмотрел документ, рядом с его именем отображается вопросительный знак. После выполнения задачи в лист добавляется дата и время, принятое решение, комментарий, а также дополнительный файл, загруженный при вынесении резолюции. </p>
+<p style="margin: 7px 0 16px 0;">Если пользователь ещё не просмотрел документ, рядом с его именем отображается вопросительный знак. После выполнения задачи в лист добавляется дата и время, принятое решение, комментарий, а также дополнительный файл, загруженный при вынесении резолюции. </p>
 <p style="line-height: 1.28; margin: 0 0 11px 0;"><img alt="approval-sheets-1" width="907" height="506" style="margin:0;width:907px;height:506px;border:none" src="approval-sheets-1.png"/></p>
-<p style="margin: 7px 0 16px 0;">Пока исполнители выполняют назначенные задачи, в листе значится статус: <span style="font-weight: bold;">На ознакомлении</span> или <span style="font-weight: bold;">На согласовании</span>. После завершения процесса формируется окончательная резолюция: <span style="font-weight: bold;">Ознакомились</span> или <span style="font-weight: bold;">Согласовано</span>/<span style="font-weight: bold;">Отказано</span>.</p>
+<p style="margin: 7px 0 16px 0;">Пока исполнители работают с назначенными задачами, в листе отображается отметка <span style="font-weight: bold;">На ознакомлении</span> или <span style="font-weight: bold;">На согласовании</span>. После завершения процесса формируется финальный статус:</p>
+<ul style="list-style-type:disc">
+<li style="margin-top: 7px; margin-right: 0; margin-bottom: 16px;"><span style="font-weight: bold;">Ознакомились</span> <span style="font-size: 13px; font-family: Inter;">—</span> для задач ознакомления;</li><li style="margin-top: 7px; margin-right: 0; margin-bottom: 16px;"><span style="font-weight: bold;">Согласовано</span> или <span style="font-weight: bold;">Отказано</span> <span style="font-size: 13px; font-family: Inter;">—</span> для этапа согласования.</li></ul>
+<p style="margin: 7px 0 16px 0;">Если согласование выполняется в ходе пользовательского процесса, резолюцию можно отобразить в карточке документа до его окончания. Для этого используется блок <a href="360011756780.html" class="topiclink">Закрыть согласование</a>.</p>
 <h2 class="p_Heading2"><a id="participants-list" class="hmanchor"></a><span class="f_Heading2">Список участников ознакомления и согласования</span></h2>
 <p style="margin: 7px 0 16px 0;">Когда документ отправляется на согласование или ознакомление большому количеству сотрудников, вы можете открыть список пользователей и посмотреть, кто из них ещё не выполнил задачу.</p>
-<p style="margin: 7px 0 16px 0;">Пользователи записываются в список в том порядке, в котором нзначены задачи согласования или ознакомления. Порядок также зависит от зоны ответственности, в которой размещена задача:</p>
+<p style="margin: 7px 0 16px 0;">Пользователи записываются в список в том порядке, в котором назначены задачи согласования или ознакомления. Порядок также зависит от зоны ответственности, в которой размещена задача:</p>
 <ul style="list-style-type:disc">
 <li style="margin-top: 7px; margin-right: 0; margin-bottom: 16px;">в статической зоне задачи назначатся случайным образом;</li><li style="margin-top: 7px; margin-right: 0; margin-bottom: 16px;">в динамической <span style="font-size: 13px; font-family: Inter;">—</span> в той последовательности, в которой заполнялась переменная, хранящая исполнителей.</li></ul>
 <p style="margin: 7px 0 16px 0;">Для листа согласования доступна фильтрация по вынесенной резолюции.</p>
@@ -142,7 +145,7 @@
 <p class="p_Normal"><img alt="approval-sheets-5" width="454" height="205" style="margin:0;width:454px;height:205px;border:none" src="approval-sheets-5.png"/></p>
 <p style="margin: 7px 0 16px 0;">Выгруженный лист можно распечатать и, например, приложить к бумажной копии документа. По умолчанию лист содержит название документа, исполнителей и их резолюции, даты принятия решения и комментарии. Если задачу выполнил пользователь, <a href="https://elma365.com/ru/help/platform/360010244599.html" target="_blank" class="weblink">замещающий исполнителя</a>, в выгруженном листе отобразится имя этого сотрудника в скобках.</p>
 <p style="line-height: 1.28; margin: 0 0 11px 0;"><img alt="approval-sheets-6" width="769" height="89" style="margin:0;width:769px;height:89px;border:none" src="approval-sheets-6.png"/></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;">Кроме того, вы можете <a href="ready-made-sheets-settings.html" class="topiclink">настроить пользовательский шаблон</a> <span style="font-weight: bold;">.xlsx</span>-файла, по которому формируется экспортированный лист согласования или ознакомления. Тогда внешний вид выгруженного листа изменится. Например, можно выбрать шрифт текста, убрать столбцы из таблицы, вставить логотип компании и т. д.</p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;">Кроме того, вы можете <a href="ready-made-sheets-settings.html" class="topiclink">настроить пользовательский шаблон</a> <span style="font-weight: bold;">.xlsx</span>-файла, по которому формируется экспортированный лист согласования или ознакомления. Тогда внешний вид выгруженного листа изменится. Например, можно выбрать шрифт текста, убрать столбцы из таблицы, вставить логотип компании и т. д.</p>
 
                         <div class="bottom-nav">
                             
@@ -231,9 +234,9 @@
 </div>
  
     </footer>
-    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jquery1.min.js"></script>
     <iframe name="hmnavigation" style="display:none!important"></iframe>
-    <script src="./jquery-ui.js"></script>
+    <!--<script src="./jquery-ui.js"></script> -->
     <script src="./jquery-ui.min.js"></script>
     <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
     <script src="./jquery.tocify.min.js"></script>

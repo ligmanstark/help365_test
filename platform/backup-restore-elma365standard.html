@@ -129,7 +129,7 @@
 <p class="p_Normal"><img alt="backup-restore-2" width="879" height="183" style="margin:0;width:879px;height:183px;border:none" src="backup-restore-2.png"/></p>
 <p class="p_Normal">По окончании резервного копирования вы увидите сообщение об успешном создании дампа.</p>
 <p class="p_Normal">Дамп сохранится в отдельную папку с указанием в названии версии поставки и временного штампа, например, <code><b>&quot;/backup/ELMA365_2023.2.15_2023.04.10-13.52.26&quot;</b></code>. </p>
-<p class="p_Normal">По умолчанию дампы сохраняются по пути <code><b>&quot;/backup&quot;</b></code>. Путь к директории, в которую будут сохраняться резервные копий системы ELMA365 Standard (KinD) задаётся в параметре <code><b>ELMA365_BACKUP_DIR</b></code> конфигурационного файла <code><b>config-elma365.txt</b></code>. О том, как изменить путь сохранения резервных копий, читайте в статье <a href="change-elma365standard-parameters.html" class="topiclink">«Изменение параметров ELMA365 Standard»</a>.</p>
+<p class="p_Normal">По умолчанию дампы сохраняются по пути <code><b>&quot;/backup&quot;</b></code>. Путь к директории, в которую будут сохраняться резервные копии системы ELMA365 Standard (KinD), задаётся в параметре <code><b>ELMA365_BACKUP_DIR</b></code> конфигурационного файла <code><b>config-elma365.txt</b></code>. О том, как изменить путь сохранения резервных копий, читайте в статье <a href="change-elma365standard-parameters.html" class="topiclink">«Изменение параметров ELMA365 Standard»</a>.</p>
 <ol style="list-style-type:upper-roman" start="3">
 <li value="3" class="p_Normal">Запустите приложение ELMA365 Standard, выполнив команду:</li></ol>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">sudo&nbsp;./</span><span class="f_CodeExample">elma365-docker.sh&nbsp;</span><span class="f_CodeExample">--</span><span class="f_CodeExample">start</span></p>
@@ -143,19 +143,17 @@
 <ol style="list-style-type:upper-roman" start="2">
 <li value="2" class="p_Normal"><span style="font-size: 15px; font-family: Inter;">Если ранее уже использовались внешние базы данных PostgreSQL и MongoDB, следует подготовить их к восстановлению, выполнив следующие шаги:</span></li></ol>
 <ul style="list-style-type:disc">
-<li class="p_Normal"><span style="font-size: 15px; font-family: Inter;">пересоздайте базы данных с помощью команды </span><code><b>drop</b></code><span style="font-size: 15px; font-family: Inter;">. Подробнее об этом читайте в статьях <a href="postgresql.html#prepare-to-recovery" class="topiclink">«PostgreSQL»</a> и <a href="mongodb.html#prepare-to-recovery" class="topiclink">«MongoDB»</a>;</span></li><li class="p_Normal"><span style="font-size: 15px; font-family: Inter;">настройте базы данных в соответствии с параметрами, представленными в статье <a href="infrastructure-preparation.html" class="topiclink">«Подготовка инфраструктуры»</a>.</span></li></ul>
+<li class="p_Normal"><span style="font-size: 15px; font-family: Inter;">пересоздайте базы данных с помощью команды </span><code><b>drop</b></code><span style="font-size: 15px; font-family: Inter;">. Подробнее об этом читайте в статьях <a href="postgresql.html#prepare-to-recovery" class="topiclink">«PostgreSQL»</a> и <a href="mongodb.html#prepare-to-recovery" class="topiclink">«MongoDB»</a>;</span></li><li class="p_Normal"><span style="font-size: 15px; font-family: Inter;">настройте базы данных в соответствии с параметрами, представленными в статьях раздела <a href="embedded-databases-settings.html" class="topiclink">«Базы данных»</a>.</span></li></ul>
 <ol style="list-style-type:upper-roman" start="2">
 <li value="3" class="p_Normal"><span style="font-size: 15px; font-family: Inter;">Восстановите данные из резервной копии. </span></li></ol>
-<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;внимание</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Inter;">Перед восстановлением убедитесь, что папка с резервной копией расположена в папке </span><code><b>/backup</b></code><span style="font-size: 15px; font-family: Inter;"> или в другой папке, указанной в </span><span style="font-size: 15px; font-family: Inter; color: #0563c1;"><a href="change-elma365standard-parameters.html#backup-directory" class="topiclink">параметрах конфигурационного файла</a></span><span style="font-size: 15px; font-family: Inter;">, например, </span><code><b>/backup/&lt;backup-folder-name&gt;</b></code><span style="font-size: 15px; font-family: Inter;">. Не поддерживается восстановление данных из папок с более глубоким уровнем вложенности, например, </span><code><b>/backup/elma365/&lt;backup-folder-name&gt;</b></code><span style="font-size: 15px; font-family: Inter;">.</span></p>
-<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;внимание</span></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Inter; font-weight: bold;">Важно</span><span style="font-size: 15px; font-family: Inter;">: перед восстановлением убедитесь, что папка с резервной копией расположена в папке </span><code><b>/backup</b></code><span style="font-size: 15px; font-family: Inter;"> или в другой папке, указанной в </span><span style="font-size: 15px; font-family: Inter; color: #0563c1;"><a href="change-elma365standard-parameters.html#backup-directory" class="topiclink">параметрах конфигурационного файла</a></span><span style="font-size: 15px; font-family: Inter;">, например, </span><code><b>/backup/&lt;backup-folder-name&gt;</b></code><span style="font-size: 15px; font-family: Inter;">. Не поддерживается восстановление данных из папок с более глубоким уровнем вложенности, например, </span><code><b>/backup/elma365/&lt;backup-folder-name&gt;</b></code><span style="font-size: 15px; font-family: Inter;">.</span></p>
 <p style="line-height: 1.28; margin: 0 0 11px 0;">Чтобы восстановить данные, запустите скрипт установки с ключами <code><b>--restore</b></code> и <code><b>--path /backup/&lt;backup-folder-name&gt;</b></code>:</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">sudo&nbsp;./elma365-docker.sh&nbsp;--restore&nbsp;--path&nbsp;/backup/&lt;backup-folder-name&gt;</span></p>
 <p class="p_Normal">Пример выполнения скрипта установки с ключами <code><b>--restore</b></code> и <code><b>--path /backup/&lt;backup-folder-name&gt;</b></code>:</p>
 <p class="p_Normal"><img alt="backup-restore-3" width="883" height="150" style="margin:0;width:883px;height:150px;border:none" src="backup-restore-3.png"/></p>
 <p class="p_Normal">По окончании восстановления данных из резервной копии вы увидите сообщение об успешном восстановлении.</p>
-<ol style="list-style-type:upper-roman" start="3">
-<li value="3" class="p_Normal">Запустите приложение ELMA365 Standard, выполнив команду:</li></ol>
+<ol style="list-style-type:upper-roman" start="4">
+<li value="4" class="p_Normal">Запустите приложение ELMA365 Standard, выполнив команду:</li></ol>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">sudo&nbsp;./</span><span class="f_CodeExample">elma365-docker.sh&nbsp;</span><span class="f_CodeExample">--start</span></p>
 
                         <div class="bottom-nav">
@@ -166,8 +164,8 @@
                                 </a>
                             
                             
-                                <a id="next-link" class="topic__navi_next" href="elma365-standard-administering.html">
-                                    <span class="bottom-nav__link">elma365-standard-administering.html</span> <span
+                                <a id="next-link" class="topic__navi_next" href="embedded-to-external-database-standard.html">
+                                    <span class="bottom-nav__link">embedded-to-external-database-standard.html</span> <span
                                         class="bottom-nav__arrow bottom-nav__arrow--next"></span>
                                 </a>
                             
@@ -245,9 +243,9 @@
 </div>
  
     </footer>
-    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jquery1.min.js"></script>
     <iframe name="hmnavigation" style="display:none!important"></iframe>
-    <script src="./jquery-ui.js"></script>
+    <!--<script src="./jquery-ui.js"></script> -->
     <script src="./jquery-ui.min.js"></script>
     <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
     <script src="./jquery.tocify.min.js"></script>

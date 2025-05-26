@@ -136,19 +136,20 @@
 <h3 class="p_Heading3"><a id="edit" class="hmanchor"></a><span class="f_Heading3">Настроить массовое редактирование</span></h3>
 <p style="margin: 7px 0 0 0;">Чтобы изменять значения свойств нескольких элементов, необходимо настроить форму массового редактирования приложения. На ней выбираются поля, которые будут доступны для редактирования. Подробнее об этом читайте в статье <a href="mass-edit-tab.html" class="topiclink">«Вкладка „Массовое редактирование“»</a>.</p>
 <h3 class="p_Heading3"><a id="start-process" class="hmanchor"></a><span class="f_Heading3">Настроить массовый запуск процесса</span></h3>
-<p style="margin: 7px 0 7px 0;">К кнопке массового действия <span style="font-weight: bold;">Запуск бизнес-процесса</span> можно привязать только процесс, в <a href="process_context.html" class="topiclink">контексте</a> которого создано множественное поле типа <span style="font-weight: bold;">Приложение</span>. Оно должно быть связанно с приложением, для которого настраивается массовое действие. </p>
+<p style="margin: 7px 0 7px 0;">К кнопке массового действия <span style="font-weight: bold;">Запуск бизнес-процесса</span> можно привязать только процесс, в <a href="process_context.html" class="topiclink">контексте</a> которого создано множественное поле типа <span style="font-weight: bold;">Приложение</span>. Оно должно быть связанно с приложением, для которого настраивается массовое действие. В эту переменную запишутся элементы, выбранные пользователем для запуска процесса.</p>
 <p style="margin: 7px 0 7px 0;">Например, чтобы вы могли привязать процесс <span style="font-weight: bold;">Назначение ответственного</span> к приложению <span style="font-weight: bold;">Заявки на обслуживание</span>, необходимо создать новое свойство в контексте этого процесса. Задайте тип свойства <span style="font-weight: bold;">Приложение</span>, выберите опцию <span style="font-weight: bold;">Несколько</span>, в поле <span style="font-weight: bold;">Приложение</span> укажите <span style="font-weight: bold;">Заявки на обслуживание</span>. </p>
 <p style="margin: 7px 0 7px 0;"><img alt="mass_actions-9" width="736" height="454" style="margin:0;width:736px;height:454px;border:none" src="mass_actions-9.png"/></p>
-<p style="margin: 7px 0 7px 0;">Для добавления действия и настройки запуска процесса:</p>
+<p style="margin: 7px 0 7px 0;">В процессе при назначении ответственного также можно автоматически изменять статусы заявок, если они настроены в приложении. Для этого используйте блок <a href="360012263332.html" class="topiclink">Управление статусом</a>.</p>
+<p style="margin: 7px 0 7px 0;">Чтобы добавить действие и настроить запуск процесса:</p>
 <ol style="list-style-type:upper-roman">
 <li value="1" style="margin-top: 7px; margin-right: 0; margin-bottom: 7px;">В окне настроек массовых действий выберите опцию <span style="font-weight: bold;">Добавить кнопку запуска процесса</span>.</li><li value="2" style="margin-top: 7px; margin-right: 0; margin-bottom: 7px;">Заполните поля:</li></ol>
 <ul style="list-style-type:disc">
 <li style="margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-weight: bold; background-color: #ffffff;">Текст кнопки</span><span style="color: #ff0000; background-color: #ffffff;">*</span><span style="background-color: #ffffff;">&nbsp;— название кнопки запуска процесса в списке доступных действий;&nbsp;</span></li><li style="margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-weight: bold; background-color: #ffffff;">Бизнес-процесс</span><span style="font-weight: bold; color: #ff0000; background-color: #ffffff;">*</span><span style="color: #ff0000; background-color: #ffffff;">&nbsp;</span><span style="background-color: #ffffff;">— выберите процесс, который будет запускаться при нажатии на кнопку массового действия; &nbsp;</span><ul style="list-style-type:circle">
-<li style="margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-weight: bold; background-color: #ffffff;">Связать с полем</span><span style="background-color: #ffffff;">&nbsp;— укажите контекстную переменную процесса, в которую будут записаны все выбранные элементы.&nbsp;</span></li></ul></li></ul>
+<li style="margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-weight: bold; background-color: #ffffff;">Связать с полем</span><span style="background-color: #ffffff;">&nbsp;— укажите контекстную переменную процесса, в которую запишутся все выбранные элементы.&nbsp;</span></li></ul></li></ul>
 <p style="margin: 7px 0 7px 34px;"><img alt="mass_actions-8" width="868" height="380" style="margin:0;width:868px;height:380px;border:none" src="mass_actions-8.png"/></p>
 <ol style="list-style-type:upper-roman" start="3">
 <li value="3" style="margin-top: 7px; margin-right: 0; margin-bottom: 7px;">Нажмите кнопку <span style="font-weight: bold;">Создать</span>. </li></ol>
-<p>Обратите внимание, со всеми выбранными элементами запускается <span style="font-weight: bold;">один</span> экземпляр процесса. Элементы записываются в контекстную переменную процесса, указанную в настройках кнопки.</p>
+<p><a id="process-cycle" class="hmanchor"></a>Обратите внимание, со всеми выбранными элементами запускается <span style="font-style: italic;">один</span> экземпляр процесса. Элементы записываются в контекстную переменную процесса, указанную в настройках кнопки.</p>
 <p style="margin: 1px 0 0 0;">При использовании массового действия может запускаться отдельный экземпляр процесса для каждого отмеченного элемента. Для этого в рамках выбранного бизнес-процесса используйте <a href="360012266792.html" class="topiclink">подпроцесс</a>, а также создайте цикл с помощью <a href="360012495911.html#exclusive-gateway" class="topiclink">исключающего шлюза</a> и <a href="360028476691.html" class="topiclink">скрипта</a>, добавленного в настройки шлюза. Подробнее о настройке автоматического цикла читайте в <a href="https://community.elma365.com/ru/threads/64/" target="_blank" class="weblink">ELMA365 Community</a>.</p>
 
                         <div class="bottom-nav">
@@ -238,9 +239,9 @@
 </div>
  
     </footer>
-    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jquery1.min.js"></script>
     <iframe name="hmnavigation" style="display:none!important"></iframe>
-    <script src="./jquery-ui.js"></script>
+    <!--<script src="./jquery-ui.js"></script> -->
     <script src="./jquery-ui.min.js"></script>
     <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
     <script src="./jquery.tocify.min.js"></script>

@@ -191,6 +191,9 @@
 <li value="3" style="margin-top: 13px; margin-right: 0; margin-bottom: 8px;">Перейдите в пункт <span style="font-weight: bold;">Сертификат подписи SAML</span>. Импортируйте ранее подготовленный сертификат и активируйте его. Он будет использоваться при настройке SAML‑интеграции в ELMA365. </li><li value="4" style="margin-top: 13px; margin-right: 0; margin-bottom: 8px;">В боковом меню выберите <span style="font-weight: bold;">Обзор</span> и перейдите в пункт <span style="font-weight: bold;">1. Назначение пользователей и групп</span>. Добавьте пользователей, которым будет доступна авторизация через созданное приложение. </li></ol>
 <h2 class="p_Heading2"><span class="f_Heading2">Обновление файла метаданных в настроенной SAML‑интеграции в ELMA365</span></h2>
 <p style="page-break-after: avoid; margin: 13px 0 8px 0;"><span style="font-size: 13px; color: #323130;">После того как в Azure был изменён сертификат, необходимо обновить файл метаданных Azure приложения на стороне SAML‑интеграции в ELMA365. Для этого откройте настройки ранее сконфигурированной SAML‑интеграции и нажмите кнопку </span><span style="font-size: 13px; font-weight: bold; color: #323130;">Сохранить</span><span style="font-size: 13px; color: #323130;">. После этого метаданные Azure приложения будут обновлены.</span></p>
+<h2 class="p_Heading2"><span class="f_Heading2">Удаление SAML-провайдера</span></h2>
+<p style="page-break-after: avoid; margin: 13px 0 8px 0;"><span style="font-size: 13px; color: #323130;">Если в системе нет пользователей, авторизованных через SAML-провайдера, его можно удалить. Для этого в настройках модуля SAML нажмите на значок корзины справа от названия и подтвердите действие.</span></p>
+<p style="page-break-after: avoid; margin: 13px 0 8px 0;"><img alt="saml-3" width="598" height="282" style="margin:0;width:598px;height:282px;border:none" src="saml-3.png"/></p>
 
                         <div class="bottom-nav">
                             
@@ -279,9 +282,9 @@
 </div>
  
     </footer>
-    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jquery1.min.js"></script>
     <iframe name="hmnavigation" style="display:none!important"></iframe>
-    <script src="./jquery-ui.js"></script>
+    <!--<script src="./jquery-ui.js"></script> -->
     <script src="./jquery-ui.min.js"></script>
     <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
     <script src="./jquery.tocify.min.js"></script>

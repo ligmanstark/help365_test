@@ -175,14 +175,14 @@
 <span class="f_CodeExample"> &nbsp; &nbsp;proxy_pass &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; http:</span><span class="f_CodeExample" style="font-style: italic;">//192.168.1.10;</span><br />
 <span class="f_CodeExample">}</span><br />
 <span class="f_CodeExample">}</span></p>
-<p class="p_Normal">В процессе установки или при реконфигурации в поле <span style="font-weight: bold;">Enter host</span> необходимо прописать внешний домен <span style="font-weight: bold;">elma365client.domain.com</span>, по которому будет доступна ELMA365, и включить параметр <span style="font-weight: bold;">SSL termination</span>.</p>
-<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">Начало&nbsp;внимание</span></p>
-<p class="p_Normal">Параметры </p>
+<p class="p_Normal">В процессе установки или при реконфигурации в поле <span style="font-weight: bold;">Enter host</span> пропишите внешний домен <span style="font-weight: bold;">elma365client.domain.com</span>, по которому будет доступна ELMA365, и включите параметр <span style="font-weight: bold;">SSL termination</span>.</p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">Начало&nbsp;примечание</span></p>
+<p class="p_Normal"><span style="font-weight: bold;">Примечание</span></p>
+<p class="p_Normal">Для работы веб-сокетов в приложении обязательны параметры:</p>
 <ul style="list-style-type:disc">
 <li class="p_Normal"><span style="font-weight: bold;">proxy_http_version 1.1</span> </li><li class="p_Normal"><span style="font-weight: bold;">proxy_set_header Upgrade $http_upgrade</span></li><li class="p_Normal"><span style="font-weight: bold;">proxy_set_header Connection &quot;upgrade&quot;</span></li></ul>
-<p class="p_Normal">обязательны для работы веб-сокетов в приложении.</p>
-<p class="p_Normal">Для работы директивы <span style="font-weight: bold;">sub_filter</span> в Nginx должен быть включен модуль <span style="font-weight: bold;">ngx_http_sub_module</span>.</p>
-<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">Конец&nbsp;внимание</span></p>
+<p class="p_Normal">Для работы директивы <span style="font-weight: bold;">sub_filter</span> в Nginx включите модуль <span style="font-weight: bold;">ngx_http_sub_module</span>.</p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">Конец&nbsp;примечание</span></p>
 
                         <div class="bottom-nav">
                             
@@ -271,9 +271,9 @@
 </div>
  
     </footer>
-    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jquery1.min.js"></script>
     <iframe name="hmnavigation" style="display:none!important"></iframe>
-    <script src="./jquery-ui.js"></script>
+    <!--<script src="./jquery-ui.js"></script> -->
     <script src="./jquery-ui.min.js"></script>
     <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
     <script src="./jquery.tocify.min.js"></script>

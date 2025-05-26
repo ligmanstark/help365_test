@@ -121,17 +121,17 @@
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">Конец&nbsp;внимание</span></p>
 <p class="p_Normal"><span style="background-color: #ffffff;">Если файл&nbsp;</span><code><b>values-elma365.yaml</b></code><span style="background-color: #ffffff;">&nbsp;был утрачен, получите параметры текущей установки ELMA365 и сохраните их в этот файл. Для этого выполните команду:</span></p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">helm get values elma365 [-n namespace] &gt; values-elma365.yaml</span></p>
-<h2 class="p_Heading2"><a id="collect-diagnostic-info" class="hmanchor"></a><span class="f_Heading2">Шаг 1: Сбор диагностической информации</span></h2>
+<h2 class="p_Heading2"><a id="collect-diagnostic-info" class="hmanchor"></a><span class="f_Heading2">Шаг 1. Сбор диагностической информации</span></h2>
 <p style="line-height: 1.28; margin: 0 0 11px 0;">Чтобы собрать данные о состоянии системы, включите отладку платформы. Для этого установите параметр <code><b>debug</b></code><span style="font-weight: bold;"> </span>в режиме <code><b>true</b></code>:</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">debug: true</span></p>
-<h2 class="p_Heading2"><a id="apply-new-parameters-enterprise" class="hmanchor"></a><span class="f_Heading2">Шаг 2: Применение новых параметров для ELMA365 Enterprise</span></h2>
+<h2 class="p_Heading2"><a id="apply-new-parameters-enterprise" class="hmanchor"></a><span class="f_Heading2">Шаг 2. Применение новых параметров для ELMA365 Enterprise</span></h2>
 <p style="line-height: 1.28; margin: 0 0 11px 0;">Вы можете обновить параметры приложения ELMA365 двумя способами: <a href="enterprise-troubleshooting.html#update-via-internet" class="topiclink">через интернет</a> или <a href="enterprise-troubleshooting.html#update-offline" class="topiclink">без доступа к сети</a>.</p>
 <h3 class="p_Heading3"><a id="update-via-internet" class="hmanchor"></a><span class="f_Heading3">Обновление параметров через интернет</span></h3>
 <ol style="list-style-type:upper-roman">
 <li value="1" style="margin-top: 7px; margin-right: 0; margin-bottom: 7px;">Определите версию чарта, с помощью которого было установлено или обновлено приложение ELMA365:</li></ol>
 <p class="p_CodeExample" style="page-break-inside: avoid; margin: 0 0 0 34px;"><span class="f_CodeExample">helm&nbsp;show&nbsp;chart&nbsp;elma365/elma365</span></p>
 <p style="margin: 7px 0 7px 33px;">Пример выполнения команды:</p>
-<p style="margin: 7px 0 7px 33px;"><img alt="change-settings-enterprise-1" width="417" height="141" style="margin:0;width:417px;height:141px;border:none" src="change-settings-enterprise-1.png"/></p>
+<p style="margin: 7px 0 7px 33px;"><img alt="change-settings-enterprise-1" width="1126" height="83" style="margin:0;width:1126px;height:83px;border:none" src="change-settings-enterprise-1.png"/></p>
 <p style="margin: 7px 0 7px 34px;">В результате выполнения команды информация о версии чарта будет указана в строке <code><b>version</b></code>. Сохраните это значение для выполнения следующего шага.</p>
 <ol style="list-style-type:upper-roman" start="2">
 <li value="2" style="margin-top: 7px; margin-right: 0; margin-bottom: 7px;">Обновите параметры приложения ELMA365. Для этого используйте следующую команду, указав в ней для флага <code><b>--version</b></code> установленную версию чарта вместо <code><b>&lt;elma365-chart-version&gt;</b></code>:</li></ol>
@@ -140,7 +140,7 @@
 <p style="margin: 7px 0 7px 0;">Перейдите в каталог с чартом, с помощью которого было установлено или обновлено приложение ELMA365, и выполните команду:</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">helm&nbsp;upgrade&nbsp;--install elma365&nbsp;./elma365 -f&nbsp;values-elma365.yaml --timeout=30m --wait [-n namespace]</span></p>
 <p style="margin: 7px 0 7px 0;">Обновление параметров занимает 10-30 минут. Дождитесь его завершения.</p>
-<h2 class="p_Heading2"><a id="generate-logs-check-status" class="hmanchor"></a><span class="f_Heading2">Шаг 3: Формирование логов и проверка статуса сервисов</span></h2>
+<h2 class="p_Heading2"><a id="generate-logs-check-status" class="hmanchor"></a><span class="f_Heading2">Шаг 3. Формирование логов и проверка статуса сервисов</span></h2>
 <h3 class="p_Heading3"><span class="f_Heading3">Получение логов </span></h3>
 <ul style="list-style-type:disc">
 <li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="background-color: #ffffff;">Если вам нужно собрать логи со всех сервисов приложения, выполните команду:</span></li></ul>
@@ -252,9 +252,9 @@
 </div>
  
     </footer>
-    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jquery1.min.js"></script>
     <iframe name="hmnavigation" style="display:none!important"></iframe>
-    <script src="./jquery-ui.js"></script>
+    <!--<script src="./jquery-ui.js"></script> -->
     <script src="./jquery-ui.min.js"></script>
     <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
     <script src="./jquery.tocify.min.js"></script>

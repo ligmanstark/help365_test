@@ -8,7 +8,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="начало внимание С 30.05.2024 заблокирован доступ из РФ к Docker Hub. Ознакомьтесь с официальным заявлением компании. конец внимание ELMA365 редакции Standard можно установить в" />
+    <meta name="description" content="ELMA365 редакции Standard можно установить в Kubernetes-in-Docker (KinD). Данный вариант установки наиболее прост и позволяет запускать локальный кластер Kubernetes с..." />
     <meta name="picture" content="" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Cправка по Low-code платформе ELMA365" />
@@ -111,31 +111,45 @@
                             <a href="#h1-article" class="scroll-top"></a>
                         </div>
                         <!-- Placeholder for topic body. -->
-                        <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;внимание</span></p>
-<p class="p_Normal">С 30.05.2024 заблокирован доступ из РФ к Docker Hub. Ознакомьтесь с <a href="docker-hub-blocking.html" class="topiclink">официальным заявлением компании</a>.</p>
-<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;внимание</span></p>
-<p class="p_Normal" style="background: #ffffff;"><span style="color: #394149;">ELMA365 редакции Standard можно установить в Kubernetes-in-Docker (</span><span style="color: #333333;">KinD</span><span style="color: #394149;">). Данный вариант установки наиболее прост и позволяет запускать локальный кластер Kubernetes с использованием узла Docker контейнера. </span></p>
+                        <p class="p_Normal" style="background: #ffffff;"><span style="color: #394149;">ELMA365 редакции Standard можно установить в Kubernetes-in-Docker (</span><span style="color: #333333;">KinD</span><span style="color: #394149;">). Данный вариант установки наиболее прост и позволяет запускать локальный кластер Kubernetes с использованием узла Docker контейнера. </span></p>
 <p class="p_Normal" style="background: #ffffff;"><span style="color: #394149;">Установка состоит из трёх этапов:</span></p>
 <ol style="list-style-type:decimal">
-<li value="1" style="margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="color: #394149;"><a href="install-kubernetes-in-docker.html#prepare-infrastructure" class="topiclink">Подготовка инфраструктуры</a>.</span></li><li value="2" style="margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="color: #394149;"><a href="install-kubernetes-in-docker.html#enable-docker" class="topiclink">Установка Docker на вашу операционную систему</a>.</span></li><li value="3" style="margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="color: #394149;"><a href="install-kubernetes-in-docker.html#install-config-file" class="topiclink">Скачивание скрипта установки и заполнение конфигурационного файла</a>.</span></li><li value="4" style="margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="color: #394149;"><a href="install-kubernetes-in-docker.html#run-script" class="topiclink">Запуск скрипта установки</a>.</span></li></ol>
+<li value="1" style="margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="color: #394149;"><a href="install-kubernetes-in-docker.html#prepare-infrastructure" class="topiclink">Подготовка инфраструктуры</a>.</span></li><li value="2" style="margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="color: #394149;"><a href="install-kubernetes-in-docker.html#enable-docker" class="topiclink">Установка Docker на вашу ОС и проверка его работоспособности</a>.</span></li><li value="3" style="margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="color: #394149;"><a href="install-kubernetes-in-docker.html#install-config-file" class="topiclink">Скачивание скрипта установки и заполнение конфигурационного файла</a>.</span></li><li value="4" style="margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="color: #394149;"><a href="install-kubernetes-in-docker.html#run-script" class="topiclink">Запуск скрипта установки</a>.</span></li><li value="5" style="margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="color: #394149;"><a href="install-kubernetes-in-docker.html#verification-of-successful-installation" class="topiclink">Проверка успешной установки системы на инфраструктурном уровне</a>.</span></li></ol>
 <p><span style="color: #394149;">Перед началом установки ознакомьтесь с </span><a href="elma365-standard-on-premises.html" class="topiclink">системными требованиями ELMA365 On-Premises Standard</a>.</p>
 <p><img alt="on-premises-standard-1" width="661" height="312" style="margin:0;width:661px;height:312px;border:none" src="on-premises-standard-1.png"/></p>
-<h2 class="p_Heading2"><a id="prepare-infrastructure" class="hmanchor"></a><span class="f_Heading2">Шаг 1: Подготовка инфраструктуры</span></h2>
+<h2 class="p_Heading2"><a id="prepare-infrastructure" class="hmanchor"></a><span class="f_Heading2">Шаг 1. Подготовка инфраструктуры</span></h2>
 <p class="p_Normal">Под инфраструктурой понимаются необходимые для работы приложения ELMA365 On-Premises компоненты:</p>
 <ul style="list-style-type:disc">
 <li style="margin-top: 0; margin-right: 0; margin-bottom: 0;">Docker;</li><li style="margin-top: 0; margin-right: 0; margin-bottom: 0;">PostgreSQL;</li><li style="margin-top: 0; margin-right: 0; margin-bottom: 0;">MongoDB;</li><li style="margin-top: 0; margin-right: 0; margin-bottom: 0;">RabbitMQ;</li><li style="margin-top: 0; margin-right: 0; margin-bottom: 0;">Redis;</li><li style="margin-top: 0; margin-right: 0; margin-bottom: 0;">S3 (MinIO).</li></ul>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;внимание</span></p>
-<p class="p_Normal">Предполагается, что зависимые компоненты должны быть развёрнуты заказчиком самостоятельно. Все работы по организации отказоустойчивой локальной архитектуры и настройке отказоустойчивости зависимых компонентов также остаются на стороне заказчика.</p>
+<p class="p_Normal">Заказчик самостоятельно разворачивает зависимые компоненты. Все работы по организации отказоустойчивой локальной архитектуры и настройке отказоустойчивости зависимых компонентов также остаются на стороне заказчика.</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;внимание</span></p>
 <p class="p_Normal" style="background: #ffffff; margin: 10px 0 0 0;">Встроенные компоненты хранения данных подходят для ознакомительных целей и в особых случаях для организации платформ тестирования и разработки. Если в дополнительных параметрах установки не заданы параметры подключения к внешним базам данных и S3-хранилищу, то автоматически будут использованы встроенные компоненты хранения данных (PostgreSQL, MongoDB, RabbitMQ, Redis, MinIO). </p>
 <p class="p_Normal" style="background: #ffffff; margin: 10px 0 0 0;">В рамках статьи база данных PostgreSQL и объектное хранилище S3 будут внешними. Подробнее о том, как развернуть базу данных и объектное хранилище читайте в статьях:<span style="color: #394149;"> </span><span style="color: #394149;"><a href="postgresql.html" class="topiclink">«PostgreSQL»</a></span><span style="color: #394149;"> и</span> <a href="configure-minio.html" class="topiclink">«MinIO (S3)»</a>. </p>
 <p class="p_Normal" style="background: #ffffff; margin: 10px 0 0 0;">Для подключения к PostgreSQL и MinIO (S3) используются стандартные строки подключения и пароли.</p>
-<h2 class="p_Heading2"><a id="enable-docker" class="hmanchor"></a><span class="f_Heading2">Шаг 2: Установка Docker</span></h2>
-<p class="p_Normal" style="background: #ffffff; margin: 10px 0 0 0;"><a href="https://docs.docker.com/engine/install/" class="weblink">Установите Docker</a> для вашей операционной системы.</p>
+<h2 class="p_Heading2"><a id="enable-docker" class="hmanchor"></a><span class="f_Heading2">Шаг 2. Установка Docker и проверка его работоспособности</span></h2>
+<ol style="list-style-type:upper-roman">
+<li value="1" class="p_Normal" style="background: #ffffff; margin-top: 10px; margin-right: 0; margin-bottom: 0;">Установите Docker для вашей операционной системы. О том, как это сделать, читайте в <a href="https://docs.docker.com/engine/install/" class="weblink">официальной документации Docker</a></li></ol>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;внимание</span></p>
-<p class="p_Normal">Обратите внимание, KinD не поддерживает создание Kubernetes-кластера с Cgroups v2. Подробнее о возможных ошибках читайте в <a href="https://kind.sigs.k8s.io/docs/user/known-issues/#failure-to-create-cluster-with-cgroups-v2" class="weblink">документации</a>.</p>
+<p class="p_Normal">KinD не поддерживает создание Kubernetes-кластера с Cgroups v2. Подробнее о возможных ошибках читайте в <a href="https://kind.sigs.k8s.io/docs/user/known-issues/#failure-to-create-cluster-with-cgroups-v2" class="weblink">документации</a>.</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;внимание</span></p>
-<h2 class="p_Heading2"><a id="install-config-file" class="hmanchor"></a><span class="f_Heading2">Шаг 3: Скачивание скрипта установки и заполнение конфигурационного файла</span></h2>
+<ol style="list-style-type:upper-roman" start="2">
+<li value="2" class="p_CodeExample" style="page-break-inside: avoid;">Проверьте&nbsp;список&nbsp;контейнеров&nbsp;<span style="font-weight: bold;">Docker</span>.&nbsp;Для&nbsp;этого&nbsp;выполните&nbsp;команду:</li></ol>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">sudo&nbsp;docker&nbsp;ps</span></p>
+<p style="margin: 7px 0 7px 0;">Если <span style="font-weight: bold;">Docker</span> установлен корректно, то вы увидите пустой список.</p>
+<ol style="list-style-type:upper-roman" start="3">
+<li value="3" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;">Запустите тестовый контейнер для проверки функциональности <span style="font-weight: bold;">Docker</span>, выполнив команду:</li></ol>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">sudo&nbsp;docker&nbsp;run&nbsp;hello-world</span></p>
+<p style="background: #ffffff; margin: 0 0 7px 0;">При успешном выполнении команды загрузится образ для размещения тестового контейнера <code><b>hello-world</b></code>. После этого запустится контейнер и появится сообщение:</p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">...</span><br />
+<span class="f_CodeExample">Hello&nbsp;from&nbsp;Docker!</span><br />
+<span class="f_CodeExample">This&nbsp;message&nbsp;shows&nbsp;that&nbsp;your&nbsp;installation&nbsp;appears&nbsp;to&nbsp;be&nbsp;working&nbsp;correctly.</span><br />
+<span class="f_CodeExample">To&nbsp;generate&nbsp;this&nbsp;message,&nbsp;Docker&nbsp;took&nbsp;the&nbsp;following&nbsp;steps:</span><br />
+<span class="f_CodeExample">1.&nbsp;The&nbsp;Docker&nbsp;client&nbsp;contacted&nbsp;the&nbsp;Docker&nbsp;daemon.</span><br />
+<span class="f_CodeExample">2.&nbsp;The&nbsp;Docker&nbsp;daemon&nbsp;pulled&nbsp;the&nbsp;&quot;hello-world&quot;&nbsp;image&nbsp;from&nbsp;the&nbsp;Docker&nbsp;Hub.</span><br />
+<span class="f_CodeExample">...</span></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;">Обратите внимание, тестовый контейнер <code><b>hello-world</b></code> автоматически завершит работу после выполнения и не отобразится в списке активных контейнеров.</p>
+<h2 class="p_Heading2"><a id="install-config-file" class="hmanchor"></a><span class="f_Heading2">Шаг 3. Скачивание скрипта установки и заполнение конфигурационного файла</span></h2>
 <p class="p_Normal">При первом запуске скрипт установки создаст файл конфигурации с наименованием <code><b>config-elma365.txt</b></code> в каталоге, откуда он был запущен.</p>
 <ol style="list-style-type:upper-roman">
 <li value="1" class="p_Normal">Скачайте и запустите скрипт установка ELMA365 для создания конфигурационного файла, выполнив следующую команду:</li></ol>
@@ -155,14 +169,13 @@
 <p class="p_Normal" style="background: #ffffff; margin: 10px 0 0 36px;"><span style="color: #333333;">Где:</span></p>
 <ul style="list-style-type:disc">
 <li style="margin-top: 0; margin-right: 0; margin-bottom: 0;"><code><b>ELMA365_HOST=192.168.1.103</b></code> —<span style="color: #333333;"> IP-адрес хостовой машины, по которому будет доступно приложение ELMA365 Standard. Подробнее о создании домена (FQDN) читайте в <a href="change-elma365standard-parameters.html" class="topiclink">«Изменение параметров ELMA365 Standard»</a>;</span></li><li style="margin-top: 0; margin-right: 0; margin-bottom: 0;"><code><b>ELMA365_EMAIL=admin@mail.com</b></code><span style="color: #333333;"> — адрес электронной почты администратора;</span></li><li style="margin-top: 0; margin-right: 0; margin-bottom: 0;"><code><b>ELMA365_PASSWORD=test</b></code><span style="color: #333333;"> — пароль администратора;</span></li><li style="margin-top: 0; margin-right: 0; margin-bottom: 0;"><code><b>ELMA365_LANGUAGE=ru-RU</b></code><span style="font-weight: bold;"> </span><span style="color: #333333;">— язык установленной системы.</span></li></ul>
-<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;внимание</span></p>
-<p><span style="color: #394149;">Если Docker установлен через Snap, в файле конфигурации необходимо раскомментировать и изменить пути до папок/каталогов для параметров: </span><code><b>ELMA365_INSTALL_DIR</b></code><span style="color: #394149;">, </span><code><b>ELMA365_BACKUP_DIR</b></code><span style="color: #394149;">, например, на:</span></p>
+<p><span style="font-weight: bold; color: #394149;">Важно</span><span style="color: #394149;">: если Docker установлен через Snap, в файле конфигурации раскомментируйте и измените пути до папок или каталогов для параметров </span><code><b>ELMA365_INSTALL_DIR</b></code><span style="font-size: 13px;"> и</span><span style="color: #394149;"> </span><code><b>ELMA365_BACKUP_DIR</b></code><span style="color: #394149;">, например:</span></p>
 <ul style="list-style-type:disc">
 <li style="margin-top: 0; margin-right: 0; margin-bottom: 0;"><code><b>ELMA365_INSTALL_DIR=/mnt/elma365/docker</b></code><span style="color: #394149;">;</span></li><li style="margin-top: 0; margin-right: 0; margin-bottom: 0;"><code><b>ELMA365_BACKUP_DIR=/mnt/elma365/backup</b></code><span style="color: #394149;">.</span></li></ul>
-<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;внимание</span></p>
 <ol style="list-style-type:upper-roman" start="4">
-<li value="4" class="p_Normal" style="background: #ffffff; margin-top: 10px; margin-right: 0; margin-bottom: 0;">Настройте подключение к внешним базам данных и объектному хранилищу S3.</li></ol>
-<p class="p_Normal"><span style="font-weight: bold;">Важно:</span> встроенные компоненты хранения данных подходят для ознакомительных целей и в особых случаях для организации платформ тестирования и разработки. Если в дополнительных параметрах установки не заданы параметры подключения к внешним базам данных и S3-хранилищу, то автоматически будут использованы встроенные компоненты хранения данных (PostgreSQL, MongoDB, RabbitMQ, Redis, MinIO).</p>
+<li value="4" class="p_Normal" style="background: #ffffff; margin-top: 10px; margin-right: 0; margin-bottom: 0;">Настройте подключение к внешним базам данных и объектному хранилищу S3.<br />
+&nbsp;<br />
+<span style="font-weight: bold;">Важно:</span> встроенные компоненты хранения данных подходят для ознакомительных целей и в особых случаях для организации платформ тестирования и разработки. Если в дополнительных параметрах установки не заданы параметры подключения к внешним базам данных и S3-хранилищу, то автоматически будут использованы встроенные компоненты хранения данных (PostgreSQL, MongoDB, RabbitMQ, Redis, MinIO).</li></ol>
 <p class="p_Normal" style="margin: 0 0 0 36px;">Для подключения к внешней базе данных PostgreSQL расскоментируйте и заполните параметр <code><b>ELMA365_DB_PSQL</b></code>, указав строку подключения, полученную при <a href="postgresql.html#connect-to-postgresql" class="topiclink">выполнении установки PostgreSQL в шаге 6</a>. </p>
 <p class="p_Normal" style="margin: 0 0 0 36px;">Пример настройки подключения:</p>
 <p class="p_Normal" style="background: #ffffff; margin: 10px 0 0 36px;"><img alt="kubernetes-in-docker-7" width="782" height="309" style="margin:0;width:782px;height:309px;border:none" src="kubernetes-in-docker-7.png"/></p>
@@ -174,7 +187,8 @@
 <p class="p_Normal"><a class="dropdown-toggle" style="font-style: normal; font-weight: normal; color: #000000; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186A1')">Заполнение переменных подключения к proxy-серверу</a></p>
 <div id="TOGGLE0186A1" class="dropdown-toggle-body" style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0 0 0 0;"><table style="border:none; border-spacing:0;">
 <tr>
-<td style="vertical-align:top; padding:0; border:none"><p class="p_Normal">Чтобы использовать ваш proxy-сервер для установки и работы ELMA365 Standard, раскомментируйте и заполните переменные секции <code><b>Настройка режима работы сервера ELMA365 через прокси-сервер</b></code> в конфигурационном файле <code><b>config-elma365.txt</b></code>.<br />
+<td style="vertical-align:top; padding:0; border:none"><p class="p_Normal">&nbsp;<br />
+Чтобы использовать ваш proxy-сервер для установки и работы ELMA365 Standard, раскомментируйте и заполните переменные секции <code><b>Настройка режима работы сервера ELMA365 через прокси-сервер</b></code> в конфигурационном файле <code><b>config-elma365.txt</b></code>.<br />
 &nbsp;</p>
 <p class="p_Normal">Пример для <code><b>ELMA365_HOST=192.168.1.103</b></code>:<br />
 &nbsp;</p>
@@ -216,7 +230,7 @@
 </table>
 </div>
 <p class="p_Normal">Подробнее о параметрах конфигурационного файла <code><b>config-elma365.txt</b></code> читайте в статье <a href="change-elma365standard-parameters.html" class="topiclink">«Изменение параметров ELMA365 Standard»</a>.</p>
-<h2 class="p_Heading2"><a id="run-script" class="hmanchor"></a><span class="f_Heading2">Шаг 4: Запуск скрипта установки ELMA365 Standard</span></h2>
+<h2 class="p_Heading2"><a id="run-script" class="hmanchor"></a><span class="f_Heading2">Шаг 4. Запуск скрипта установки ELMA365 Standard</span></h2>
 <p class="p_Normal" style="background: #ffffff; margin: 10px 0 0 0;"><span style="color: #333333;">Объём загружаемых файлов во время установки ELMA365 Standard составляет 4-5 ГБ, время установки занимает 10-15 минут.</span></p>
 <ol style="list-style-type:upper-roman">
 <li value="1" class="p_Normal" style="background: #ffffff; margin-top: 10px; margin-right: 0; margin-bottom: 0;"><span style="color: #333333;">Запустите <a href="install-kubernetes-in-docker.html#install-config-file" class="topiclink">загруженный ранее скрипт установки</a> с помощью команды: </span></li></ol>
@@ -237,10 +251,14 @@
 <p class="p_Normal">Откроется окно активации системы ELMA365.</p>
 <ol style="list-style-type:upper-roman" start="5">
 <li value="5" class="p_Normal">Активируйте систему. Подробнее об этом читайте в статье <a href="activate_on_premise.html" class="topiclink">«Активация On-Premises»</a>. </li></ol>
-<p class="p_Normal">Установка приложения ELMA365 редакции Standard успешно закончена.</p>
+<p class="p_Normal">Установка приложения ELMA365 редакции Standard успешно закончена. <span style="font-size: 15px;">Перед началом работы в системе рекомендуем проверить работоспособность модулей.</span></p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">Начало&nbsp;внимание</span></p>
 <p class="p_Normal">Сохраните файл <code><b>config-elma365.txt</b></code> для последующих обновлений.</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">Конец&nbsp;внимание</span></p>
+<h2 class="p_Heading2"><a id="verification-of-successful-installation" class="hmanchor"></a><span class="f_Heading2">Шаг 5. Проверка успешной установки системы на инфраструктурном уровне</span></h2>
+<p style="background: #ffffff;"><span style="color: #212529;">После завершения установки ELMA365 Standard проверьте работоспособность модулей системы. Для этого в терминале, где выполнялась установка системы, выполните команду:</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">sudo&nbsp;./elma365-docker.&nbsp;docker&nbsp;exec&nbsp;elma365&nbsp;kubectl&nbsp;get&nbsp;pods</span></p>
+<p style="background: #ffffff;"><span style="color: #212529;">Запущенные модули продукта должны находится в статусе </span><span style="font-weight: bold; color: #212529;">Running</span><span style="color: #212529;"> и быть в готовности </span><span style="font-weight: bold; color: #212529;">1/1</span><span style="color: #212529;">. Модули, жизненный цикл которых не предполагает постоянную активность и является конечным, могут быть в статусе </span><span style="font-weight: bold; color: #212529;">Completed</span><span style="color: #212529;">.</span></p>
 
                         <div class="bottom-nav">
                             
@@ -329,9 +347,9 @@
 </div>
  
     </footer>
-    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jquery1.min.js"></script>
     <iframe name="hmnavigation" style="display:none!important"></iframe>
-    <script src="./jquery-ui.js"></script>
+    <!--<script src="./jquery-ui.js"></script> -->
     <script src="./jquery-ui.min.js"></script>
     <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
     <script src="./jquery.tocify.min.js"></script>

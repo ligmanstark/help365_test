@@ -115,7 +115,7 @@
 <p style="line-height: 1.28; margin: 0 0 11px 0;">Установка состоит из трёх этапов:</p>
 <ol style="list-style-type:decimal">
 <li value="1" style="background: #ffffff; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><a href="install-hostpath-provisioner.html#download-helm-chart-and-config-file" class="topiclink">Загрузить Helm-чарт и конфигурационный файл</a>.</li><li value="2" style="background: #ffffff; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><a href="install-hostpath-provisioner.html#fill-config-file" class="topiclink">Заполнить конфигурационный файл</a>.</li><li value="3" style="background: #ffffff; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><a href="install-hostpath-provisioner.html#install-hostpath-provisioner-chart" class="topiclink">Установить чарт hostpath-provisioner с помощью Helm в Kubernetes-кластер</a>.</li></ol>
-<h2 class="p_Heading2"><a id="download-helm-chart-and-config-file" class="hmanchor"></a><span class="f_Heading2">Шаг 1: Загрузить Helm-чарт и конфигурационный файл</span></h2>
+<h2 class="p_Heading2"><a id="download-helm-chart-and-config-file" class="hmanchor"></a><span class="f_Heading2">Шаг 1. Загрузить Helm-чарт и конфигурационный файл</span></h2>
 <p style="line-height: 1.28; margin: 0 0 11px 0;">Для установки через интернет получите конфигурационный файл <code><b>values-hostpath-provisioner.yaml</b></code>, выполнив команду:</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">helm&nbsp;repo&nbsp;add&nbsp;elma365&nbsp;</span><span class="f_CodeExample">https://charts.elma365.tech</span><br />
 <span class="f_CodeExample">helm&nbsp;repo&nbsp;update</span><br />
@@ -138,7 +138,7 @@
 </tr>
 </table>
 </div>
-<h2 class="p_Heading2"><a id="fill-config-file" class="hmanchor"></a><span class="f_Heading2">Шаг 2: Заполнить конфигурационный файл</span></h2>
+<h2 class="p_Heading2"><a id="fill-config-file" class="hmanchor"></a><span class="f_Heading2">Шаг 2. Заполнить конфигурационный файл</span></h2>
 <p style="line-height: 1.28; margin: 0 0 11px 0;">Заполните конфигурационный файл <code><b>values-hostpath-provisioner.yaml</b></code> для установки Hostpath-provisioner:</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">#&nbsp;Настройки&nbsp;hostpath-provisioner</span><br />
 <span class="f_CodeExample">hostpath-provisioner:</span><br />
@@ -162,7 +162,7 @@
 </tr>
 </table>
 </div>
-<h2 class="p_Heading2"><a id="install-hostpath-provisioner-chart" class="hmanchor"></a><span class="f_Heading2">Шаг 3: Установить чарт hostpath-provisioner с помощью Helm в Kubernetes-кластер</span></h2>
+<h2 class="p_Heading2"><a id="install-hostpath-provisioner-chart" class="hmanchor"></a><span class="f_Heading2">Шаг 3. Установить чарт hostpath-provisioner с помощью Helm в Kubernetes-кластер</span></h2>
 <p style="line-height: 1.28; margin: 0 0 11px 0;">Выполните установку чарта <span style="font-weight: bold;">hostpath-provisioner</span> в <code><b>namespace hostpath-provisioner</b></code>.</p>
 <p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="background-color: #ffffff;">Для установки через интернет выполните следующую команду:</span></p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">helm&nbsp;upgrade&nbsp;--install&nbsp;hostpath-provisioner&nbsp;elma365/hostpath-provisioner&nbsp;-f&nbsp;values-hostpath-provisioner.yaml&nbsp;-n&nbsp;kube-system</span></p>
@@ -256,9 +256,9 @@
 </div>
  
     </footer>
-    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jquery1.min.js"></script>
     <iframe name="hmnavigation" style="display:none!important"></iframe>
-    <script src="./jquery-ui.js"></script>
+    <!--<script src="./jquery-ui.js"></script> -->
     <script src="./jquery-ui.min.js"></script>
     <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
     <script src="./jquery.tocify.min.js"></script>

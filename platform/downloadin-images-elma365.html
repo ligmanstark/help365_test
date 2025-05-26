@@ -115,14 +115,14 @@
 <p class="p_Normal">Загрузка образов ELMA365 состоит из трёх этапов:</p>
 <ol style="list-style-type:decimal">
 <li value="1" class="p_Normal"><a href="downloadin-images-elma365.html" class="topiclink">Создание нового проекта в Harbor</a>.</li><li value="2" class="p_Normal"><a href="downloadin-images-elma365.html#downloading-images" class="topiclink">Скачивание образов ELMA365</a>.</li><li value="3" class="p_Normal"><a href="downloadin-images-elma365.html#uploading-images-to-harbor" class="topiclink">Загрузка образов ELMA365 в Harbor</a>.</li></ol>
-<h2 class="p_Heading2"><a id="creating-new-project" class="hmanchor"></a><span class="f_Heading2">Шаг 1: Создание нового проекта в Harbor</span></h2>
+<h2 class="p_Heading2"><a id="creating-new-project" class="hmanchor"></a><span class="f_Heading2">Шаг 1. Создание нового проекта в Harbor</span></h2>
 <ol style="list-style-type:upper-roman">
 <li value="1" class="p_Normal">Войдите в web-интерфейс Harbor. В главном левом меню перейдите в раздел <span style="font-weight: bold;">Projects</span>. Чтобы создать новый проект, нажмите <span style="font-weight: bold;">+New project</span>.</li></ol>
 <p class="p_Normal" style="text-indent: -1px; margin: 0 0 0 37px;"><img alt="creating-new-project-harbor-1" width="1033" height="477" style="margin:0;width:1033px;height:477px;border:none" src="creating-new-project-harbor-1.png"/></p>
 <ol style="list-style-type:upper-roman" start="2">
 <li value="2" class="p_Normal">Введите имя проекта строчными буквами, например, <span style="font-weight: bold;">images</span>. Укажите, должен ли проект быть общедоступным. Нажмите <span style="font-weight: bold;">OK</span>.</li></ol>
 <p class="p_Normal" style="margin: 0 0 0 37px;"><img alt="creating-new-project-harbor-2" width="846" height="489" style="margin:0;width:846px;height:489px;border:none" src="creating-new-project-harbor-2.png"/></p>
-<h2 class="p_Heading2"><a id="downloading-images" class="hmanchor"></a><span class="f_Heading2">Шаг 2: Скачивание образов ELMA365</span></h2>
+<h2 class="p_Heading2"><a id="downloading-images" class="hmanchor"></a><span class="f_Heading2">Шаг 2. Скачивание образов ELMA365</span></h2>
 <ol style="list-style-type:upper-roman">
 <li value="1" class="p_Normal">На компьютере с доступом в интернет скачайте скрипт загрузки дистрибутивов ELMA365 для офлайн-установки, выполнив следующую команду:</li></ol>
 <p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample">curl -fsSL -o elma365-charts-offline.sh https://dl.elma365.com/onPremise/latest/elma365-charts-offline-latest &amp;&amp; \</span><br />
@@ -138,7 +138,7 @@
 <p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample"> ./elma365-charts-offline.sh --pull</span></p>
 <ol style="list-style-type:upper-roman" start="3">
 <li value="3" class="p_Normal">После скачивания дистрибутивов скопируйте полученный каталог <code><b>elma365-X.Y.Z</b></code> на сервер, где будет производиться установка.</li></ol>
-<h2 class="p_Heading2"><a id="uploading-images-to-harbor" class="hmanchor"></a><span class="f_Heading2">Шаг 3: Загрузка образов ELMA365 в Harbor</span></h2>
+<h2 class="p_Heading2"><a id="uploading-images-to-harbor" class="hmanchor"></a><span class="f_Heading2">Шаг 3. Загрузка образов ELMA365 в Harbor</span></h2>
 <ol style="list-style-type:upper-roman">
 <li value="1" class="p_Normal">На сервере, где будет производиться установка, перейдите в каталог <code><b>elma365-X.Y.Z</b></code>.</li><li value="2" class="p_Normal">Запустите скрипт загрузки дистрибутивов ELMA365 для офлайн-установки и выберите:</li></ol>
 <ul style="list-style-type:disc">
@@ -251,9 +251,9 @@
 </div>
  
     </footer>
-    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jquery1.min.js"></script>
     <iframe name="hmnavigation" style="display:none!important"></iframe>
-    <script src="./jquery-ui.js"></script>
+    <!--<script src="./jquery-ui.js"></script> -->
     <script src="./jquery-ui.min.js"></script>
     <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
     <script src="./jquery.tocify.min.js"></script>

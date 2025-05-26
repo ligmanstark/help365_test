@@ -8,7 +8,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Интеграция с сервисом СПАРК позволяет получать различную информацию по компании, подписываться на её изменения с помощью опции мониторинга и загружать данные в ELMA365." />
+    <meta name="description" content="Интеграция с сервисом СПАРК позволяет получать различную информацию по компании или физическому лицу, подписываться на изменения с помощью опции мониторинга и загружать данные..." />
     <meta name="picture" content="" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Cправка по Low-code платформе ELMA365" />
@@ -111,11 +111,168 @@
                             <a href="#h1-article" class="scroll-top"></a>
                         </div>
                         <!-- Placeholder for topic body. -->
-                        <p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="color: #394149;">Интеграция с сервисом СПАРК позволяет </span>получать различную информацию по компании, подписываться на её изменения с помощью опции мониторинга и загружать данные в ELMA365.</p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;">Запросы <span style="color: #394149;">отправляются при создании элементов приложений в преднастроенном разделе </span><span style="font-weight: bold; color: #394149;">СПАРК</span><span style="color: #394149;">. Это можно сделать:</span></p>
+                        <p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="color: #394149;">Интеграция с сервисом СПАРК позволяет </span>получать различную информацию по компании или физическому лицу, подписываться на изменения с помощью опции мониторинга и загружать данные в ELMA365.</p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="color: #394149;">Это можно сделать:</span></p>
 <ul style="list-style-type:disc">
-<li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold; color: #394149;">вручную</span><span style="color: #394149;"> — элемент добавляется пользователем со страницы приложения раздела </span><span style="font-weight: bold; color: #394149;">СПАРК</span><span style="color: #394149;">. Затем запускается бизнес-процесс, входящий в состав решения, и запрос направляется в сервис. После обработки запроса данные отображаются в карточке элемента. Таким образом пользователь единовременно получает данные только по одному созданному запросу. Подробнее об этом читайте в статье </span><a href="send-spark-requests.html" class="topiclink">«Отправка запросов в сервис из раздела „СПАРК”»</a>;</li><li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold; color: #394149;">автоматически</span><span style="color: #394149;"> — с помощью специальных блоков решения моделируется пользовательский бизнес-процесс. В его ходе можно запустить обработку нескольких запросов в сервис. Для каждого из них добавится элемент приложения в разделе </span><span style="font-weight: bold; color: #394149;">СПАРК</span><span style="color: #394149;">. Полученные данные можно отобразить в карточке элемента любого приложения. </span>Например, вы можете настроить процесс создания компании и сбора информации о её индексах риска. По окончании процесса информации добавится в карточку компании. <span style="color: #394149;">Подробнее читайте в статье </span><a href="spark-process-blocks.html" class="topiclink">«Моделирование процесса с блоками решения „Интеграция СПАРК“»</a>.<span style="color: #394149;"> </span></li></ul>
-<p class="p_Normal">Рассмотрим доступные запросы в сервис. &nbsp; </p>
+<li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold; color: #394149;">вручную</span><span style="color: #394149;"> — со страницы приложения в разделе </span><span style="font-weight: bold; color: #394149;">СПАРК</span><span style="color: #394149;">. Каждому типу запроса соответствует своё приложение, в котором пользователь создаёт элемент. Затем запускается преднастроенный процесс со специальным блоком, в котором выполняется запрос в сервис. После обработки запроса данные отображаются в карточке элемента. Таким образом пользователь единовременно получает данные только по одному созданному запросу. Подробнее об этом читайте в статье </span><a href="send-spark-requests.html" class="topiclink">«Отправка запросов в сервис из раздела „СПАРК”»</a>;</li><li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold; color: #394149;">автоматически</span><span style="color: #394149;"> — с помощью специальных блоков решения моделируется пользовательский бизнес-процесс. В его ходе можно запустить обработку нескольких запросов в сервис. Для каждого из них добавится элемент приложения в разделе </span><span style="font-weight: bold; color: #394149;">СПАРК</span><span style="color: #394149;">. Полученные данные можно отобразить в карточке элемента любого приложения. </span>Например, вы можете настроить процесс создания компании и сбора информации о её индексах риска. По окончании процесса информации добавится в карточку компании. <span style="color: #394149;">Подробнее читайте в статье </span><a href="spark-process-blocks.html" class="topiclink">«Моделирование процесса с блоками решения „Интеграция СПАРК“»</a>.</li></ul>
+<h2 class="p_Heading2"><a id="applications-for-requests" class="hmanchor"></a><span class="f_Heading2">Приложения раздела СПАРК для создания запросов</span></h2>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0 0 0 0;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p style="text-align: center; line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 13px; font-family: Inter; font-weight: bold; color: #394149;">Приложение в разделе СПАРК</span></p>
+</td>
+<td style="vertical-align:top; padding:0; border:none"><p style="text-align: center; line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 13px; font-family: Inter; font-weight: bold; color: #394149;">Метод получения данных из СПАРК</span></p>
+</td>
+<td style="vertical-align:top; padding:0; border:none"><p style="text-align: center; line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 13px; font-family: Inter; font-weight: bold; color: #394149;">Графический блок бизнес‑процесса</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 13px; font-family: Inter; color: #394149;">Расширенная справка по российской компании</span></p>
+</td>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 13px; font-family: Inter; font-weight: bold;">GetCompanyExtendedReport</span></p>
+</td>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 13px; font-family: Inter; color: #394149;">Расширенная справка по российской компании</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 13px; font-family: Inter; color: #394149;">Отчет “СПАРК-Риски” по российской компании PDF</span></p>
+</td>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 13px; font-family: Inter; font-weight: bold;">GetCompanySparkRisksReport</span></p>
+</td>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 13px; font-family: Inter; color: #394149;">Получение данных из СПАРК: Отчет СПАРК-Риски по российской компании PDF</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 13px; font-family: Inter; color: #394149;">Информация о структуре российской компании</span></p>
+</td>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 13px; font-family: Inter; font-weight: bold;">GetCompanyStructure</span></p>
+</td>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 13px; font-family: Inter; color: #394149;">Получение данных из СПАРК: Структура российской компании</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 13px; font-family: Inter; color: #394149;">Информация об актуальных совладельцах российской компании</span></p>
+</td>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 13px; font-family: Inter; font-weight: bold;">GetCompanyCoowners</span></p>
+</td>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 13px; font-family: Inter; color: #394149;">Получение информации об актуальных совладельцах российской компании</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 13px; font-family: Inter;">Получение исторических данных о дочерних компаниях</span></p>
+</td>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 13px; font-family: Inter; font-weight: bold;">GetCompanySubsidiariesHistory</span></p>
+</td>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 13px; font-family: Inter;">Получение исторических данных о дочерних компаниях</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 13px; font-family: Inter;">Получение данных по остатку платных запросов</span></p>
+</td>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 13px; font-family: Inter; font-weight: bold;">GetStateAccount</span><span style="font-size: 13px; font-family: Inter;"> — для получения сводной информации о вызовах пользователем методов API СПАРК, которые учитываются в общем лимите запросов.</span></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 13px;">Услуги подключения подписки </span><span style="font-size: 13px; color: #1155cc;"><a href="https://spark-interfax.ru/integration" target="_blank" class="weblink">API СПАРК</a></span><span style="font-size: 13px;"> приобретаются отдельно.</span></p>
+</td>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 13px; font-family: Inter;">Получение данных по остатку платных запросов</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 13px; font-family: Inter;">Получение данных из СПАРК</span></p>
+</td>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 13px; font-family: Inter; color: #394149;">Приложение позволяет создать запрос с использованием любого доступного метода для </span><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif; color: #394149;">получения данных из сервиса. Также в ходе процесса можно применить соответствующий блок и отправлять каждый раз запросы с разными методами.</span></p>
+</td>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 13px; font-family: Inter;">Получение данных из СПАРК</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px;">Бывшие совладельцы компании</span></p>
+</td>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 13px; font-family: Inter; font-weight: bold;">GetCompanyCoownersHistory</span></p>
+</td>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 13px; font-family: Inter;">Получение списка бывших совладельцев компании</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 13px; font-family: Inter;">Получение данных по санкционным рискам ПДЛ</span></p>
+</td>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 13px; font-family: Inter; font-weight: bold;">GetPersonComplianceReport</span></p>
+</td>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 13px; font-family: Inter;">Получение данных по санкционным рискам ПДЛ (публичного должностного лица)</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px;">Санкционные риски компании</span></p>
+</td>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 13px; font-family: Inter; font-weight: bold;">GetCompanySanctionList</span></p>
+</td>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 13px; font-family: Inter; color: #394149;">Получение информации о вхождении компании в санкционные списки, а также список санкций по Правилу 50%</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px;">Санкционные риски физического лица</span></p>
+</td>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 13px; font-family: Inter; font-weight: bold;">GetPersonSanctionList</span></p>
+</td>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 13px; font-family: Inter; color: #394149;">Получение информации о вхождении физического лица в санкционные списки и списки наблюдения</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px;">Информация о факторах риска российской компании</span></p>
+</td>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 13px; font-family: Inter; font-weight: bold;">GetCompanyRiskFactors</span></p>
+</td>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 13px; font-family: Inter;">Получение информации о факторах риска</span><span style="font-size: 13px; font-family: Inter; color: #394149;"> российской компании</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px;">Факторы риска физического лица</span></p>
+</td>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 13px; font-family: Inter; font-weight: bold;">GetPersonSparkRisksReport</span></p>
+</td>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 13px; font-family: Inter;">Получение информации о факторах риска по физическому лицу</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px;">Справки по ИП</span></p>
+</td>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 13px; font-family: Inter; font-weight: bold;">GetEntrepreneurReport </span></p>
+</td>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 13px; font-family: Inter;">Получение данных о Справке по ИП</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 13px; font-family: Inter; color: #394149;">Включение мониторинга по компании</span></p>
+</td>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 13px; font-family: Inter; font-weight: bold;">MonActivate</span></p>
+</td>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 13px; font-family: Inter; color: #394149;">Включение мониторинга по компании</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 13px; font-family: Inter; color: #394149;">Выключение мониторинга по компании</span></p>
+</td>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 13px; font-family: Inter; font-weight: bold;">MonDisable</span></p>
+</td>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 13px; font-family: Inter; color: #394149;">Выключение мониторинга по компании</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 13px; font-family: Inter; color: #394149;">Получение списка событий мониторинга по компаниям</span></p>
+</td>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 13px; font-family: Inter; font-weight: bold;">MonGetEventsList</span></p>
+</td>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 13px; font-family: Inter; color: #394149;">Получение списка событий мониторинга по компаниям</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 13px; font-family: Inter; color: #394149;">Получение списка событий мониторинга по компании</span></p>
+</td>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 13px; font-family: Inter; font-weight: bold;">MonGetCompanyEvents</span></p>
+</td>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 13px; font-family: Inter; color: #394149;">Получение списка событий мониторинга по компании</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Normal">Рассмотрим на примерах, какие данные можно получить через запросы в СПАРК. &nbsp; </p>
 <h2 class="p_Heading2"><a id="extended-info" class="hmanchor"></a><span class="f_Heading2">Расширенная справка по российской компании</span></h2>
 <p style="line-height: 1.28; margin: 0 0 11px 0;">Расширенная справка содержит всю информацию по компании, собранную в сервисе СПАРК. Вы можете получить: </p>
 <ul style="list-style-type:disc">
@@ -130,6 +287,12 @@
 <ul style="list-style-type:disc">
 <li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold;">Сводный индикатор риска</span> — совокупная оценка надёжности компании, рассчитываемая на основании публично доступной информации о деятельности юридического лица. Вычисляется в трёх значениях: <span style="font-weight: bold;">Низкий </span>(зелёный), <span style="font-weight: bold;">Средний </span>(жёлтый), <span style="font-weight: bold;">Высокий </span>(красный); </li><li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold;">Индекс должной осмотрительности (ИДО)</span> — анализ компании, выявляющий вероятность её незаконной деятельности. Представляет собой значение от 1 до 99. Более высокое значение отражает большую вероятность рисков при взаимодействии с компанией и обозначается красным индикатором;</li><li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold;">Индекс финансового риска (ИФР)</span> — оценка вероятности неплатёжеспособности компании. Результат обозначается цифрой от 1 до 99. Чем выше значение, тем больше вероятность неудовлетворительного финансового состояния компании. Высокий риск отмечается красным цветом;</li><li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold;">Индекс платежной дисциплины (ИПД)</span> — показатель, учитывающий своевременность внесения оплат по выставленным компании счетам. Показывается в виде числа от 0 до 100. Более низкое значение указывает на высокий риск просрочки платежей и отображается в виде красного индикатора. </li></ul>
 <p style="line-height: 1.28; margin: 0 0 11px 0;">Подробную информацию об индексах риска можно найти на <span style="color: #0563c1;"><a href="https://spark-interfax.ru/features/indexes" target="_blank" class="weblink">официальном сайте сервиса СПАРК</a></span>.</p>
+<h2 class="p_Heading2"><a id="spark-risks-report" class="hmanchor"></a><span class="f_Heading2">Отчет «СПАРК-Риски»</span></h2>
+<p style="line-height: 1.28; margin: 0 0 11px 0;">Сервис СПАРК формирует профиль компании и сохраняет данные в отчёте СПАРК-Риски. </p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;">Отчёт содержит агрегированную оценку благонадёжности компании, выраженную в значениях <a href="spark-requests-types.html#risk-indices" class="topiclink">индексов риска</a>, ключевые финансовые показатели и подробное описание признаков её хозяйственной деятельности.</p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;">С помощью интеграции можно загрузить эту информацию в ELMA365 и отобразить в файле формата <span style="font-weight: bold;">.pdf</span>. Отчёт выглядит следующим образом:</p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><img alt="spark-4" width="882" height="758" style="margin:0;width:882px;height:758px;border:none" src="spark-4.png"/></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;">Подробнее о возможностях отчетов СПАРК читайте на <span style="color: #0563c1;"><a href="https://spark-interfax.ru/features/reports" target="_blank" class="weblink">официальном сайте сервиса СПАРК</a></span>.</p>
 <h2 class="p_Heading2"><a id="company-structure" class="hmanchor"></a><span class="f_Heading2">Информация о структуре российской компании</span></h2>
 <p style="line-height: 1.28; margin: 0 0 11px 0;">Структура компании загружается из сервиса СПАРК и содержит данные о совладельцах, перечень филиалов и дочерних компаний с их реквизитами. Также отмечается участие компании в фондах, холдингах, некоммерческих партнёрствах и объединениях.</p>
 <p style="line-height: 1.28; margin: 0 0 11px 0;">Информация из СПАРК поступает в виде строчного сериализованного ответа и в карточке запроса выглядит следующим образом: </p>
@@ -138,12 +301,12 @@
 <p style="line-height: 1.28; margin: 0 0 11px 0;">Из СПАРК загружаются актуальные данные о собственниках компании, включая иностранных бенефициаров, список совладельцев, история изменений в иерархии владения, а также признаки и основания ограничения доступа к информации о совладельцах.</p>
 <p style="line-height: 1.28; margin: 0 0 11px 0;">В карточке созданного запроса в разделе СПАРК информация о совладельцах отображается в виде строчного сериализованного ответа.</p>
 <p style="line-height: 1.28; margin: 0 0 11px 0;">Подробнее о возможности проанализировать структуру компании и информацию о совладельцах читайте на <span style="color: #0563c1;"><a href="https://spark-interfax.ru/features/structure" target="_blank" class="weblink">официальном сайте сервиса СПАРК</a></span>.</p>
-<h2 class="p_Heading2"><a id="spark-risks-report" class="hmanchor"></a><span class="f_Heading2">Отчет «СПАРК-Риски»</span></h2>
-<p style="line-height: 1.28; margin: 0 0 11px 0;">Сервис СПАРК формирует профиль компании и сохраняет данные в отчёте СПАРК-Риски. </p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;">Отчёт содержит агрегированную оценку благонадёжности компании, выраженную в значениях <a href="spark-requests-types.html#risk-indices" class="topiclink">индексов риска</a>, ключевые финансовые показатели и подробное описание признаков её хозяйственной деятельности.</p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;">С помощью интеграции можно загрузить эту информацию в ELMA365 и отобразить в файле формата <span style="font-weight: bold;">.pdf</span>. Отчёт выглядит следующим образом:</p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><img alt="spark-4" width="882" height="758" style="margin:0;width:882px;height:758px;border:none" src="spark-4.png"/></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;">Подробнее о возможностях отчетов СПАРК читайте на <span style="color: #0563c1;"><a href="https://spark-interfax.ru/features/reports" target="_blank" class="weblink">официальном сайте сервиса СПАРК</a></span>.</p>
+<h2 class="p_Heading2"><span class="f_Heading2">Получение данных из СПАРК</span></h2>
+<p style="margin: 7px 0 16px 0;"><span style="font-size: 13px; font-family: Inter; color: #394149; background-color: #ffffff;">Запрос, созданный в приложении&nbsp;</span><span style="font-size: 13px; font-family: Inter; font-weight: bold; color: #394149; background-color: #ffffff;">СПАРК </span><span style="font-size: 13px; font-family: Inter; color: #394149; background-color: #ffffff;">&gt;</span><span style="font-size: 13px; font-family: Inter; font-weight: bold; color: #394149; background-color: #ffffff;"> Получение данных из СПАРК</span><span style="font-size: 13px; font-family: Inter; color: #394149; background-color: #ffffff;">&nbsp;является универсальным, т. к. позволяет получить данные по любому из доступных запросов в сервис. Для этого в карточке запроса указывается соответствующий метод СПАРК и его входные параметры.</span></p>
+<p style="margin: 7px 0 16px 0;"><span style="font-size: 13px; font-family: Inter; color: #394149; background-color: #ffffff;">Полученные данные отобразятся в элементе приложения&nbsp;</span><span style="font-size: 13px; font-family: Inter; font-weight: bold; color: #394149; background-color: #ffffff;">Получение данных из СПАРК</span><span style="font-size: 13px; font-family: Inter; color: #394149; background-color: #ffffff;">&nbsp;как строчный сериализованный ответ в поле&nbsp;</span><span style="font-size: 13px; font-family: Inter; font-weight: bold; color: #394149; background-color: #ffffff;">Результат выполнения</span><span style="font-size: 13px; font-family: Inter; color: #394149; background-color: #ffffff;">.</span></p>
+<h2 class="p_Heading2"><span class="f_Heading2">Информация о факторах риска физического лица</span></h2>
+<p style="margin: 0 0 11px 0;"><span style="font-size: 13px; font-family: Inter; color: #394149; background-color: #ffffff;">Из сервиса СПАРК загружаются актуальные данные о физическом лице, включая Ф. И. О., дату и место рождения, дату потери правоспособности.</span></p>
+<p style="margin: 0 0 11px 0;"><span style="font-size: 13px; font-family: Inter; color: #394149; background-color: #ffffff;">В карточке созданного запроса в виде строчных сериализованных ответов отобразится следующая информация: факторы риска, наличие связанных ИП, дисквалификации данные о физическом лице как индивидуальном предпринимателе, руководителе, совладельце и бенефициаре.</span></p>
 <h2 class="p_Heading2"><a id="company-changes-tracking" class="hmanchor"></a><span class="f_Heading2">Мониторинг изменений по компании</span></h2>
 <p style="line-height: 1.28; margin: 0 0 11px 0;">В сервисе СПАРК существует опция <span style="font-weight: bold;">Мониторинг изменений</span>, которая обеспечивает своевременное отслеживание существенных событий компании и сведений о ней. Мониторинг включается для каждой компании и помогает отреагировать на действия контрагента, а также узнать о планах по реорганизации или ликвидации раньше, чем информация появится в Едином государственном реестре юридических лиц.</p>
 <p style="line-height: 1.28; margin: 0 0 11px 0;">В ELMA365 вы можете управлять опцией мониторинга, а также загружать данные обо всех изменениях компании: о смене собственника, банкротстве, включении в специализированные реестры и т. д. Запрашиваются события по компании, произошедшие за последние 15 дней, но не ранее даты подписки на компанию в СПАРК.</p>
@@ -239,9 +402,9 @@
 </div>
  
     </footer>
-    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jquery1.min.js"></script>
     <iframe name="hmnavigation" style="display:none!important"></iframe>
-    <script src="./jquery-ui.js"></script>
+    <!--<script src="./jquery-ui.js"></script> -->
     <script src="./jquery-ui.min.js"></script>
     <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
     <script src="./jquery.tocify.min.js"></script>

@@ -111,76 +111,18 @@
                             <a href="#h1-article" class="scroll-top"></a>
                         </div>
                         <!-- Placeholder for topic body. -->
-                        <p class="p_Normal">Важно организовать рабочий процесс так, чтобы работа не простаивала, когда сотрудник отсутствует на рабочем месте, например, находится в отпуске, на обучении или в командировке. Для этого в системе предусмотрены уведомления об отсутствии и механизм замещения.</p>
-<p class="p_Normal">Предположим, бухгалтер компании уходит в отпуск. Он запускает процесс <span style="font-weight: bold;">Заявление на отпуск</span>. В рамках процесса администратор может выбрать тип замещения: проинформировать пользователей об отсутствии бухгалтера или назначить замещающего, чтобы другие сотрудники знали, к кому обратиться по рабочим вопросам.</p>
-<h2 class="p_Heading2"><a id="types" class="hmanchor"></a><span class="f_Heading2">Типы замещений</span></h2>
-<p class="p_Normal">В ELMA365 существует три типа замещения, которые отличаются набором передаваемых прав:</p>
+                        <p style="margin: 7px 0 16px 0;">Важно организовать рабочий процесс так, чтобы работа не простаивала, когда сотрудник отсутствует на рабочем месте, например, находится в отпуске, на обучении или в командировке. Для этого в системе можно настроить замещение пользователей и уведомления об их отсутствии.</p>
+<p style="margin: 7px 0 16px 0;">Предположим, бухгалтер компании уходит в отпуск. Он запускает процесс <span style="font-weight: bold;">Заявление на отпуск</span>. В рамках процесса администратор может выбрать тип замещения:</p>
 <ul style="list-style-type:disc">
-<li class="p_Normal"><span style="font-weight: bold;">Информирование </span>— используется, когда нужно просто показать пользователям, что сотрудник отсутствует. Для этого типа указывать замещающего необязательно. Например, когда решение текущих вопросов может подождать или некому передать дела. </li></ul>
-<p class="p_Normal" style="margin: 0 0 0 37px;">Если замещающий всё-таки указывается, то он сможет решать текущие вопросы, но не будет иметь доступа к задачам, приложениям или документам отсутствующего сотрудника.</p>
-<ul style="list-style-type:disc">
-<li><span style="font-weight: bold;">Переназначение задач </span>— при выборе этого типа сохраняется функция информирования. В дополнение замещающему будут делегированы все новые задачи, которые пользователи назначают в системе в период замещения, а также задачи и оповещения из бизнес-процессов. Чтобы делегировать замещающему задачи, назначенные до даты начала замещения, используйте опцию <a href="360010244599.html#options" class="topiclink">Переназначить активные задачи</a>.</li></ul>
-<p style="margin: 0 0 0 36px;">Рассмотрим пример. В рамках процесса сотрудник отправляет документ на согласование руководителю, после чего уезжает в срочную командировку. Руководитель возвращает документ на доработку. Согласно процессу задача доработать документ должна прийти уехавшему сотруднику. Однако, так как было настроено замещение с переназначением задач, задача приходит замещающему его коллеге. Он дорабатывает документ от своего имени и снова отправляет его на согласование, не задерживая рабочий процесс.</p>
-<ul style="list-style-type:disc">
-<li><span style="font-weight: bold;">Полная передача прав </span>— этот тип замещения включает в себя оба предыдущих. В дополнение замещающий временно получает доступ к объектам системы, доступным отсутствующему сотруднику: документам, файлам, разделам и приложениям. Он также сможет увидеть события отсутствующего сотрудника, если ему придёт оповещение или задача со ссылкой на это событие. Исключение составляет раздел <a href="360009293799.html" class="topiclink">Мой отдел</a>, доступ к которому не передаётся.</li></ul>
-<p style="margin: 0 0 0 36px;">Обратите внимание, даже при выборе этого типа замещения сотрудник, который заменяет администратора системы, но не входит в группу <a href="360006871932.html#administrators" class="topiclink">Администраторы</a>, <span style="font-weight: bold;">не получит</span> доступ к разделу <span style="font-weight: bold;">Администрирование</span>, настройкам разделов и приложений и т. д. </p>
-<p style="margin: 0 0 0 36px;">Рассмотрим пример. Подошла дата расчёта с контрагентами, а главный бухгалтер ушел на больничный. Был назначен замещающий — бухгалтер по зарплате. У бухгалтера по зарплате нет доступа к приложениям <span style="font-weight: bold;">Платежи</span> и <span style="font-weight: bold;">Контрагенты</span>, необходимым для того, чтобы провести расчёты. Однако, так как при замещении был выбран типа <span style="font-weight: bold;">Полная передача прав</span>, временный доступ к этим приложениям у него появился автоматически. Теперь он сможет провести все нужные платежи вовремя, не ожидая, когда главный бухгалтер выйдет с больничного.</p>
-<p class="p_Normal" style="margin: 14px 0 0 0;">При выборе типа замещения мы рекомендуем руководствоваться <a href="360003861992.html" class="topiclink">оргструктурой</a> и внутренними правилами компании. </p>
-<h2 class="p_Heading2" style="margin: 19px 0 0 0;"><span class="f_Heading2" style="font-size: 24px;">Создать замещение</span></h2>
-<p class="p_Normal" style="margin: 14px 0 0 0;">Перейдите в раздел <span style="font-weight: bold;">Администрирование </span>&gt;<span style="font-weight: bold;"> Компания </span>&gt;<span style="font-weight: bold;"> Замещения</span>.</p>
-<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;внимание</span></p>
-<p style="margin: 19px 0 0 0;">Просматривать, настраивать, редактировать и удалять замещения могут только пользователи, включённые в группу <a href="360006871932.html#administrators" class="topiclink">Администраторы</a>.</p>
-<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;внимание&nbsp;</span></p>
-<p class="p_Normal" style="margin: 14px 0 0 0;">На открывшейся странице показаны все текущие замещения.</p>
-<p class="p_Normal" style="margin: 14px 0 0 0;"><img alt="ЗП_3" width="1038" height="296" style="margin:0;width:1038px;height:296px;border:none" src="hmfile_hash_37e865fe.png"/></p>
-<p class="p_Normal" style="margin: 14px 0 0 0;">Чтобы добавить новое замещение:</p>
-<ol style="list-style-type:decimal">
-<li value="1" class="p_Normal">В правом верхнем углу страницы нажмите кнопку <span style="font-weight: bold;">+Замещение</span>;</li><li value="2" class="p_Normal">Заполните форму:</li></ol>
-<p class="p_Normal"><img alt="ЗП_2" width="964" height="782" style="margin:0;width:964px;height:782px;border:none" src="hmfile_hash_c29a3184.png"/></p>
-<ul style="list-style-type:disc">
-<li class="p_Normal"><span style="font-weight: bold;">Тип</span> — выберите <a href="360010244599.html#types" class="topiclink">тип замещения</a> в зависимости от того, какие права вы хотите назначить замещающему;</li><li class="p_Normal"><span style="font-weight: bold;">Отсутствующий</span><span style="color: #ff0000;">*</span> — укажите сотрудника, который будет отсутствовать;</li><li class="p_Normal"><span style="font-weight: bold;">Замещающий</span><span style="color: #ff0000;">*</span> — укажите замещающего пользователя. </li></ul>
-<p class="p_Normal" style="text-indent: -1px; margin: 0 0 0 37px;">Для типа <span style="font-weight: bold;">Информирование</span> указывать замещающего необязательно. </p>
-<ul style="list-style-type:disc">
-<li class="p_Normal"><span style="font-weight: bold;">Дата начала</span><span style="color: #ff0000;">*</span> и <span style="font-weight: bold;">Дата окончания</span><span style="color: #ff0000;">*</span> — установите время начала и окончания замещения. Период замещения не ограничен и может длиться как один час, так и больше года, например, если сотрудник находится в длительной командировке.</li><li class="p_Normal"><a id="options" class="hmanchor"></a>Настройте опции переназначения задач:</li></ul>
-<ul style="list-style-type:circle"><ul style="list-style-type:square"><ul style="list-style-type:disc"><ul style="list-style-type:circle">
-<li class="p_Normal" style="margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-weight: bold;">Переназначить активные задачи</span> — включите опцию, чтобы назначить замещающему задачи отсутствующего сотрудника, поставленые ему до даты начала замещения. Задачи без указанного срока исполнения или со сроком позже даты окончания замещения не переназначаются; </li><li class="p_Normal" style="margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-weight: bold;">Переназначить задачи по завершении замещения</span> — выберите <span style="font-weight: bold;">Да</span>, чтобы по окончании периода замещения все задачи снова вернулись замещаемому.</li></ul></li></ul></li></ul></li></ul>
-<p class="p_Normal" style="text-indent: -1px; margin: 0 0 0 37px;">Данные опции недоступны, если выбран тип замещения <span style="font-weight: bold;">Информирование</span>.</p>
-<ol style="list-style-type:decimal">
-<li value="3" class="p_Normal">Нажмите кнопку <span style="font-weight: bold;">Сохранить</span>.</li></ol>
-<h2 class="p_Heading2"><span class="f_Heading2">Настроить оповещение об отсутствии</span></h2>
-<p class="p_Normal">По умолчанию пользователи видят информацию об отсутствии их коллеги только с того момента, когда замещение уже началось. Но вы можете настроить предупреждение заранее, чтобы они успели решить срочные вопросы с нужным сотрудником.</p>
-<p class="p_Normal">В этом случае нужно указать, за сколько дней информация о предстоящем отсутствии должна появиться в системе.</p>
-<p class="p_Normal">Для этого откройте страницу со списком замещений и в правом верхнем углу нажмите на <span style="font-weight: bold;">Настройки</span> .</p>
-<p class="p_Normal" style="margin: 14px 0 0 0;"><img alt="ЗП_7" width="1043" height="279" style="margin:0;width:1043px;height:279px;border:none" src="hmfile_hash_316aa959.png"/></p>
-<p class="p_Normal" style="margin: 14px 0 0 0;">В открывшемся окне укажите нужное количество дней.</p>
-<p style="margin: 14px 0 0 0;"><img alt="ЗП_8" width="529" height="200" style="margin:0;width:529px;height:200px;border:none" src="hmfile_hash_c444e187.png"/></p>
-<p class="p_Normal" style="margin: 14px 0 0 0;"><a id="interface" class="hmanchor"></a>Обратите внимание, эта настройка применяется ко всем предстоящим замещениям.</p>
-<h2 class="p_Heading2" style="margin: 19px 0 0 0;"><span class="f_Heading2" style="font-size: 24px;">Работа с замещениями</span></h2>
-<p class="p_Normal" style="margin: 19px 0 0 0;">Вы можете просматривать, редактировать, удалять или прерывать замещения.</p>
-<h3 class="p_Heading3" style="margin: 19px 0 0 0;"><span class="f_Heading3" style="font-size: 19px;">Просмотреть замещение</span></h3>
-<p class="p_Normal" style="margin: 19px 0 0 0;">Раздел <span style="font-weight: bold;">Администрирование</span> &gt; <span style="font-weight: bold;">Замещения</span> настроен <a href="folder_tree.html" class="topiclink">иерархический справочник</a>, благодаря которому удобно просматривать и находить нужные замещения:</p>
-<ul style="list-style-type:disc">
-<li><span style="font-weight: bold;">Текущие</span> — все действующие на данный момент замещения;</li><li><span style="font-weight: bold;">В плане</span> — все запланированные, но еще не начавшиеся замещения;</li><li><span style="font-weight: bold;">Архив</span> — все завершившиеся и прерванные замещения;</li><li><span style="font-weight: bold;">Все</span> — все созданные замещения.</li></ul>
-<p style="margin: 14px 0 0 0;">Вы можете посмотреть всю информацию о замещении, открыв его карточку. Для этого выберите замещение в списке и нажмите на его название.</p>
-<p style="margin: 14px 0 0 0;"><img alt="ЗП_4" width="885" height="331" style="margin:0;width:885px;height:331px;border:none" src="hmfile_hash_a3294d7d.png"/></p>
-<h3 class="p_Heading3" style="margin: 19px 0 0 0;"><span class="f_Heading3" style="font-size: 19px;">Изменить или удалить замещение</span></h3>
-<p class="p_Normal" style="margin: 19px 0 0 0;">Действующее или ещё не начавшееся замещение можно изменить. Для этого откройте его карточку и нажмите кнопку <span style="font-weight: bold;">Редактировать</span>. </p>
-<p class="p_Normal" style="margin: 19px 0 0 0;">Обратите внимание, если замещение ещё не наступило, вы можете изменить пользователей, тип замещения, время начала и окончания.</p>
-<p class="p_Normal" style="margin: 19px 0 0 0;"><img alt="ЗП_5" width="882" height="566" style="margin:0;width:882px;height:566px;border:none" src="hmfile_hash_975e0fc0.png"/></p>
-<p class="p_Normal" style="margin: 14px 0 0 0;">У замещения, которое уже началось, изменить можно только дату или время окончания.</p>
-<p class="p_Normal" style="margin: 14px 0 0 0;"><img alt="ЗП_6" width="881" height="325" style="margin:0;width:881px;height:325px;border:none" src="hmfile_hash_daba6c79.png"/></p>
-<p class="p_Normal" style="margin: 14px 0 0 0;">В этом же окне вы можете удалить ещё не начавшееся замещение или прервать текущее, нажав на кнопку <span style="font-weight: bold;">Удалить</span> или <span style="font-weight: bold;">Прервать</span>.</p>
-<p class="p_Normal">Удалённое замещение нельзя восстановить, информация о нём исключается из системы. Чтобы уведомить сотрудников и передать права отсутствующего пользователя, создайте замещение повторно. </p>
-<h2 class="p_Heading2" style="margin: 19px 0 0 0;"><span class="f_Heading2" style="font-size: 24px;">Замещение в интерфейсе системы</span></h2>
-<p class="p_Normal" style="margin: 19px 0 0 0;">Рассмотрим, как пользователи видят действующее замещение в интерфейсе системы. Когда сотрудник отсутствует, рядом с его именем появляется надпись с указанием времени отсутствия. Если был назначен замещающий, то в плашке есть ссылка на этого работника. </p>
-<p class="p_Normal" style="margin: 19px 0 0 0;">Например, информационная плашка при создании и просмотре <a href="360014351011.html" class="topiclink">задачи</a>, <a href="360026962272.html" class="topiclink">события</a> и в разделе <a href="360009293799.html" class="topiclink">Мой отдел</a>:</p>
-<p class="p_Normal" style="margin: 19px 0 0 0;"><img alt="ЗП_9" width="341" height="186" style="margin:0;width:341px;height:186px;border:none" src="hmfile_hash_4b4465e3.png"/></p>
-<p class="p_Normal" style="margin: 14px 0 0 0;">В <a href="360014191012.html" class="topiclink">сообщениях</a> и <a href="360014162732.html" class="topiclink">групповых чатах</a> имя отсутствующего так же подсвечивается. Нажав на него, можно посмотреть информацию о сотруднике и увидеть, до какого числа он отсутствует, кто его замещает.</p>
-<p style="margin: 14px 0 0 0;"><img alt="ЗП_11" width="713" height="277" style="margin:0;width:713px;height:277px;border:none" src="hmfile_hash_7693905d.png"/></p>
-<p class="p_Normal" style="margin: 14px 0 0 0;">Если отсутствующий сотрудник состоит в групповом чате, а замещающего там нет, то другие участники легко смогут его туда добавить, нажав на три точки рядом с именем отсутствующего.</p>
-<p style="margin: 14px 0 0 0;"><img alt="ЗП_10" width="656" height="278" style="margin:0;width:656px;height:278px;border:none" src="hmfile_hash_21b37619.png"/></p>
-<p class="p_Normal" style="margin: 14px 0 0 0;">Список всех отсутствующих на текущий день сотрудников можно посмотреть в разделе <span style="font-weight: bold;">Компания</span> на вкладке <span style="font-weight: bold;">График отсутствий</span>. Там же на вкладке <span style="font-weight: bold;">Мои замещения</span> вы увидите, кого вы замещаете на данный момент.</p>
+<li style="margin-top: 7px; margin-right: 0; margin-bottom: 7px;">проинформировать пользователей об отсутствии бухгалтера;</li><li style="margin-top: 7px; margin-right: 0; margin-bottom: 7px;">назначить замещающего<span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">, </span>к которому пользователи смогут обращаться по рабочим вопросам.</li></ul>
+<p class="p_Normal">На время действия замещения можно включить переназначение задач отсутствующего. При этом задачи могут распределяться по правилам, например, между несколькими ответственным.</p>
+<h2 class="p_Heading2"><span class="f_Heading2">Отсутствие и замещение в интерфейсе системы</span></h2>
+<p style="margin: 14px 0 0 0;">Список всех отсутствующих на текущий день сотрудников можно посмотреть в разделе <span style="font-weight: bold;">Компания </span>на вкладке <span style="font-weight: bold;">График отсутствий</span>. Там же на вкладке <span style="font-weight: bold;">Мои замещения </span>вы увидите, кого вы замещаете на данный момент.</p>
 <p style="margin: 14px 0 0 0;"><img alt="ЗП_12" width="854" height="357" style="margin:0;width:854px;height:357px;border:none" src="hmfile_hash_f911eb97.png"/></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;">В интерфейсе рядом с именем отсутствующего сотрудника появляется надпись с указанием периода отсутствия и пользователя, который указан замещающим. Увидеть уведомление об отсутствии сотрудника можно при создании и просмотре <a href="360014351011.html" class="topiclink">задачи</a>, <a href="360026962272.html" class="topiclink">события</a>, в разделе <a href="360009293799.html" class="topiclink">Мой отдел</a>, в <a href="360014191012.html" class="topiclink">сообщениях</a> и <a href="360014162732.html" class="topiclink">групповых чатах</a> и т. д.</p>
+<p class="p_Normal" style="margin: 14px 0 0 0;">Если отсутствующий сотрудник состоит в групповом чате, а замещающего там нет, то другие участники могут его добавить. Для этого нажмите на три точки рядом с именем отсутствующего и выберите соответствующее действие.</p>
+<p style="margin: 14px 0 0 0;"><img alt="ЗП_10" width="656" height="278" style="margin:0;width:656px;height:278px;border:none" src="hmfile_hash_21b37619.png"/></p>
+<p style="margin: 14px 0 0 0;">Настроить замещение может <a href="360006871932.html#administrators" class="topiclink">администратор системы</a>. Подробнее об этом читайте в статье <a href="substitution-add-working.html" class="topiclink">«Создание и работа с замещениями»</a>.</p>
 
                         <div class="bottom-nav">
                             
@@ -190,8 +132,8 @@
                                 </a>
                             
                             
-                                <a id="next-link" class="topic__navi_next" href="active-users.html">
-                                    <span class="bottom-nav__link">active-users.html</span> <span
+                                <a id="next-link" class="topic__navi_next" href="substitution-add-working.html">
+                                    <span class="bottom-nav__link">substitution-add-working.html</span> <span
                                         class="bottom-nav__arrow bottom-nav__arrow--next"></span>
                                 </a>
                             
@@ -269,9 +211,9 @@
 </div>
  
     </footer>
-    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jquery1.min.js"></script>
     <iframe name="hmnavigation" style="display:none!important"></iframe>
-    <script src="./jquery-ui.js"></script>
+    <!--<script src="./jquery-ui.js"></script> -->
     <script src="./jquery-ui.min.js"></script>
     <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
     <script src="./jquery.tocify.min.js"></script>

@@ -8,7 +8,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Лимиты и параметры развёртывания микросервисов из переносимых сервисов в&nbsp;модулях можно задавать с&nbsp;помощью ConfigMap. Это&nbsp;позволяет ограничивать выделяемые ресурсы, определять..." />
+    <meta name="description" content="Лимиты и параметры развёртывания микросервисов из переносимых сервисов в&nbsp;модулях можно задавать с&nbsp;помощью ConfigMap. Это&nbsp;позволяет ограничить выделяемые ресурсы, определить..." />
     <meta name="picture" content="" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Cправка по Low-code платформе ELMA365" />
@@ -98,7 +98,7 @@
                         <span id="subcategory" class="search-res__item-category search-res__item-category_subcategory subcategory article__badge"></span>
                         
                             <div class="topic__breadcrumbs">     
-                                <p><a href="elma365-on-premises.html">ELMA365 On-Premises</a> / Настройка параметров переносимых сервисов через ConfigMap</p>
+                                <p><a href="elma365-on-premises.html">ELMA365 On-Premises</a> &gt; Дополнительно / Настройка параметров переносимых сервисов через ConfigMap</p>
                             </div>
                         
                     </div>
@@ -111,38 +111,43 @@
                             <a href="#h1-article" class="scroll-top"></a>
                         </div>
                         <!-- Placeholder for topic body. -->
-                        <p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Inter;">Лимиты и параметры развёртывания микросервисов из </span><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif; color: #0563c1;"><a href="portable-microservices.html" class="topiclink">переносимых сервисов в модулях</a></span><span style="font-size: 15px; font-family: Inter;"> можно задавать с помощью ConfigMap. Это позволяет ограничивать выделяемые ресурсы, определять количество экземпляров микросервисов, которые разворачиваются в Kubernetes, а также настраивать их автомасштабирование.</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Inter;">Вы можете задать глобальные настройки для переносимых сервисов, настроенных во всех модулях системы, а также указать индивидуальные настройки для определённого сервиса.</span></p>
+                        <p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Inter;">Лимиты и параметры развёртывания микросервисов из </span><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif; color: #0563c1;"><a href="portable-microservices.html" class="topiclink">переносимых сервисов в модулях</a></span><span style="font-size: 15px; font-family: Inter;"> можно задавать с помощью ConfigMap. Это позволяет ограничить выделяемые ресурсы, определить количество экземпляров микросервисов, которые разворачиваются в Kubernetes, и включить их автомасштабирование. Кроме того, в ConfigMap можно настроить распределение подов микросервисов по узлам кластера.</span></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Inter;">Вы можете задать глобальные настройки для переносимых сервисов, созданных во всех модулях системы, а также указать индивидуальные настройки для определённого сервиса.</span></p>
 <p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Inter;">ConfigMap используется:</span></p>
 <ul style="list-style-type:disc">
 <li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-size: 15px; font-family: Inter;">для тонкой настройки развёртывания микросервиса — можно задать значения параметров, недоступных при </span><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif; color: #0563c1;"><a href="portable-services.html#docker-settings" class="topiclink">редактировании переносимого сервиса в модуле</a></span><span style="font-size: 15px; font-family: Inter;">;</span></li><li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-size: 15px; font-family: Inter;">для изменения настроек без редактирования модуля — полезно для платных модулей. Например, можно задать количество экземпляров микросервиса, поскольку параметр в ConfigMap приоритетнее, чем значение, установленное разработчиком при создании модуля.</span></li></ul>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Inter;">Настройка ConfigMap состоит из трёх этапов:</span></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Inter;">Настройка ConfigMap состоит из двух этапов:</span></p>
 <ol style="list-style-type:decimal">
-<li value="1" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif; color: #0563c1;"><a href="configmap.html#enable-configmap" class="topiclink">Включить использование ConfigMap</a></span><span style="font-size: 15px; font-family: Inter;">.</span></li><li value="2" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif; color: #0563c1;"><a href="configmap.html#create-configmap-file" class="topiclink">Создать файл ConfigMap</a></span><span style="font-size: 15px; font-family: Inter;">.</span></li><li value="3" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif; color: #0563c1;"><a href="configmap.html#set-up-configmap" class="topiclink">Задать параметры в ConfigMap</a></span><span style="font-size: 15px; font-family: Inter;">.</span></li></ol>
+<li value="1" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif; color: #0563c1;"><a href="configmap.html#enable-configmap" class="topiclink">Включить использование ConfigMap</a></span><span style="font-size: 15px; font-family: Inter;">.</span></li><li value="2" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif; color: #0563c1;"><a href="configmap.html#set-up-configmap" class="topiclink">Задать параметры в ConfigMap</a></span><span style="font-size: 15px; font-family: Inter;">.</span></li></ol>
 <h2 class="p_Heading2"><a id="enable-configmap" class="hmanchor"></a><span class="f_Heading2">Шаг 1. Включить использование ConfigMap</span></h2>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Inter;">Чтобы для настройки переносимых сервисов применялся ConfigMap, нужно включить переменную окружения </span><code><b>ELMA365_BABYSITTER_ENABLE_CONFIGMAP_WATCHER</b></code><span style="font-size: 15px; font-family: Inter;"> для сервиса </span><span style="font-size: 15px; font-family: Inter; font-weight: bold;">babysitter</span><span style="font-size: 15px; font-family: Inter;">. Для этого:</span></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Inter;">Чтобы для настройки переносимых сервисов применялся ConfigMap, нужно включить переменную окружения </span><code><b>ELMA365_BABYSITTER_ENABLE_CONFIGMAP_WATCHER</b></code><span style="font-size: 15px; font-family: Inter;"> для сервиса </span><span style="font-size: 15px; font-family: Inter; font-weight: bold;">babysitter</span><span style="font-size: 15px; font-family: Inter;">. Для этого вносятся изменения в конфигурационный файл </span><code><b>values-elma365.yaml</b></code><span style="font-size: 15px; font-family: Inter;">:</span></p>
 <ol style="list-style-type:upper-roman">
-<li value="1" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-size: 15px; font-family: Inter;">Выполните команду:</span></li></ol>
-<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">kubectl&nbsp;edit&nbsp;deployments&nbsp;babysitter</span></p>
+<li value="1" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-size: 15px; font-family: Inter;">Создайте резервную копию файла </span><code><b>values-elma365.yaml</b></code><span style="font-size: 15px; font-family: Inter;">, заполненного при установке ELMA365. Это требуется перед редактированием, так как некорректная настройка параметров может привести к сбоям в работе приложения ELMA365.</span></li><li value="2" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-size: 15px; font-family: Inter;">В конфигурационном файле </span><code><b>values-elma365.yaml</b></code><span style="font-size: 15px; font-family: Inter;"> включите параметры:</span></li></ol>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">global:</span><br />
+<span class="f_CodeExample">...</span><br />
+<span class="f_CodeExample">#&nbsp;Включение&nbsp;переносимых&nbsp;сервисов</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;managedServices:</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;enabled:&nbsp;true</span><br />
+<span class="f_CodeExample">...</span><br />
+<span class="f_CodeExample">#&nbsp;Использование&nbsp;ConfigMap</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;watchableConfigMap:</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;enabled:&nbsp;true</span></p>
 <ol style="list-style-type:upper-roman">
-<li value="2" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-size: 15px; font-family: Inter;">В открывшемся редакторе перейдите к блоку </span><code><b>spec.template.spec.containers.env</b></code><span style="font-size: 15px; font-family: Inter;"> и измените значение переменной на </span><code><b>true</b></code><span style="font-size: 15px; font-family: Inter;">:</span></li></ol>
-<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">-&nbsp;name:&nbsp;ELMA365_BABYSITTER_ENABLE_CONFIGMAP_WATCHER</span><br />
-<span class="f_CodeExample">&nbsp;&nbsp;value:&nbsp;'true'</span></p>
-<ol style="list-style-type:upper-roman">
-<li value="3" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-size: 15px; font-family: Inter;">Сохраните изменения.</span></li></ol>
-<h2 class="p_Heading2"><a id="create-configmap-file" class="hmanchor"></a><span class="f_Heading2">Шаг 2. Создать файл ConfigMap</span></h2>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Inter;">Параметры ConfigMap устанавливаются в файле </span><span style="font-size: 15px; font-family: Inter; font-weight: bold;">cfg.yaml</span><span style="font-size: 15px; font-family: Inter;">. Его нужно создать в </span><code><b>namespace</b></code><span style="font-size: 15px; font-family: Inter;">, в котором размещаются переносимые сервисы, по умолчанию — </span><code><b>elma365-applets</b></code><span style="font-size: 15px; font-family: Inter;">. Для этого используйте команду:</span></p>
+<li value="3" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-size: 15px; font-family: Inter;">Обновите приложение ELMA365 с помощью команды:</span></li></ol>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">helm&nbsp;upgrade&nbsp;elma365&nbsp;./elma365&nbsp;-f&nbsp;values-elma365.yaml&nbsp;--timeout=30m</span></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Inter;">После этого автоматически создастся файл, в котором хранятся параметры ConfigMap. Он добавится в </span><code><b>namespace</b></code><span style="font-size: 15px; font-family: Inter;">, где размещаются переносимые сервисы, по умолчанию — </span><code><b>elma365-applets</b></code><span style="font-size: 15px; font-family: Inter;">. В файле преднастроен ConfigMap с именем </span><code><b>elma365-babysitter-config</b></code><span style="font-size: 15px; font-family: Inter;">. Для корректной работы рекомендуем не изменять заданное имя.</span></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Inter;">Теперь вы можете задать параметры в ConfigMap. </span></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Inter;">Чтобы вернуться к параметрам по умолчанию и начать настройку заново, удалите файл </span><code><b>cfg.yaml</b></code><span style="font-size: 15px; font-family: Inter;"> и примените команду для его повторного создания:</span></p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">kubectl&nbsp;apply&nbsp;-f&nbsp;cfg.yaml&nbsp;-n&nbsp;elma365-applets</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Inter;">Добавится файл, в котором настроен ConfigMap с именем </span><code><b>elma365-babysitter-config</b></code><span style="font-size: 15px; font-family: Inter;">. Для корректной работы рекомендуем не изменять заданное имя. </span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Inter;">Теперь вы можете редактировать ConfigMap. Чтобы вернуться к параметрам по умолчанию и начать настройку заново, удалите файл </span><span style="font-size: 15px; font-family: Inter; font-weight: bold;">cfg.yaml </span><span style="font-size: 15px; font-family: Inter;">и повторно примените команду для его создания.</span></p>
-<h2 class="p_Heading2"><a id="set-up-configmap" class="hmanchor"></a><span class="f_Heading2">Шаг 3. Задать параметры в ConfigMap</span></h2>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Inter;">Чтобы изменить настройки:</span></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Inter;">Где </span><code><b>elma365-applets</b></code><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace;"> — </span><code><b>namespace</b></code><span style="font-size: 15px; font-family: Inter;"> для размещения переносимых сервисов.</span></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 13px; color: #000000;">&nbsp;</span></p>
+<h2 class="p_Heading2"><a id="set-up-configmap" class="hmanchor"></a><span class="f_Heading2">Шаг 2. Задать параметры в ConfigMap</span></h2>
 <ol style="list-style-type:upper-roman">
 <li value="1" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-size: 15px; font-family: Inter;">Откройте файл ConfigMap для редактирования, используя команду:</span></li></ol>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">kubectl&nbsp;edit&nbsp;configmap&nbsp;elma365-babysitter-config&nbsp;-n&nbsp;elma365-applets</span></p>
 <p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Inter;">Где:</span></p>
 <ul style="list-style-type:disc">
-<li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><code><b>elma365-babysitter-config</b></code><span style="font-size: 15px; font-family: Inter;"> — название ConfigMap в файле </span><span style="font-size: 15px; font-family: Inter; font-weight: bold;">cfg.yaml</span><span style="font-size: 15px; font-family: Inter;">;</span></li><li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><code><b>elma365-applets</b></code><span style="font-size: 15px; font-family: Inter;"> — </span><code><b>namespace</b></code><span style="font-size: 15px; font-family: Inter;">, в котором размещаются переносимые сервисы.</span></li></ul>
+<li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><code><b>elma365-babysitter-config</b></code><span style="font-size: 15px; font-family: Inter;"> — название ConfigMap в файле </span><code><b>cfg.yaml</b></code><span style="font-size: 15px; font-family: Inter;">;</span></li><li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><code><b>elma365-applets</b></code><span style="font-size: 15px; font-family: Inter;"> — </span><code><b>namespace</b></code><span style="font-size: 15px; font-family: Inter;">, в котором размещаются переносимые сервисы.</span></li></ul>
 <ol style="list-style-type:upper-roman">
 <li value="2" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-size: 15px; font-family: Inter;">В открывшемся файле задайте:</span></li></ol>
 <ol style="list-style-type:upper-roman"><ul style="list-style-type:disc">
@@ -162,6 +167,13 @@
 <span class="f_CodeExample">&nbsp;&nbsp;#&nbsp;Глобальные&nbsp;настройки</span><br />
 <span class="f_CodeExample">&nbsp;&nbsp;global:</span><br />
 <span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;replicaCount:&nbsp;1</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;nodeSelector:&nbsp;</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;role:&nbsp;elma365&nbsp;</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;tolerations:</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;effect:&nbsp;NoSchedule</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;key:&nbsp;dedicated</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;operator:&nbsp;Equal</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value:&nbsp;elma365</span><br />
 <span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;autoscaling:</span><br />
 <span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;enabled:&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">true</span><br />
 <span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;minReplicas:&nbsp;1</span><br />
@@ -176,7 +188,7 @@
 <span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;memory:&nbsp;&quot;1024Mi&quot;</span><br />
 <span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cpu:&nbsp;&quot;1000m&quot;</span><br />
 <span class="f_CodeExample">&nbsp;</span><br />
-<span class="f_CodeExample">&nbsp;&nbsp;#&nbsp;Настройки&nbsp;для&nbsp;определённого&nbsp;сервиса</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;#&nbsp;Настройки&nbsp;для&nbsp;конкретного&nbsp;сервиса</span><br />
 <span class="f_CodeExample">&nbsp;&nbsp;abcd12345efgh.ext_4a685c94-3dcd-433a-ac5f-6367aaf38950.portable_service:</span><br />
 <span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;resources:</span><br />
 <span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;requests:</span><br />
@@ -225,21 +237,41 @@
 <span class="f_CodeExample">&nbsp;&nbsp;targetMemoryUtilizationPercentage:&nbsp;80</span><br />
 <span class="f_CodeExample">&nbsp;&nbsp;targetCPUUtilizationPercentage:&nbsp;80</span></p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;примера</span></p>
+<ol style="list-style-type:decimal" start="4">
+<li value="4" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-size: 15px; font-family: Inter; font-weight: bold;">Выбор узлов для размещения подов </span><span style="font-size: 15px; font-family: Inter;">(</span><code><b>nodeSelector</b></code><span style="font-size: 15px; font-family: Inter;">) — настройте размещение подов микросервисов на определённых узлах кластера с помощью специальных меток. </span></li></ol>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Inter;">Подробнее об использовании параметра читайте в </span><span style="font-size: 15px; font-family: Inter; color: #0563c1;"><a href="https://kubernetes.io/docs/tasks/configure-pod-container/assign-pods-nodes/" target="_blank" class="weblink">официальной документации Kubernetes</a></span><span style="font-size: 15px; font-family: Inter;">.</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;примера</span></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Inter; font-weight: bold;">Пример</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">nodeSelector:</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;role:&nbsp;elma365</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;disk:&nbsp;ssd</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;примера</span></p>
+<ol style="list-style-type:decimal" start="5">
+<li value="5" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-size: 15px; font-family: Inter; font-weight: bold;">Разрешения для размещения подов </span><span style="font-size: 15px; font-family: Inter;">(</span><code><b>tolerations</b></code><span style="font-size: 15px; font-family: Inter;">) — установите для подов микросервисов разрешения (tolerations), чтобы они могли размещаться на узлах с соответствующими ограничениями (taints).</span></li></ol>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Inter;">Подробнее об инструментах taints и tolerations читайте в </span><span style="font-size: 15px; font-family: Inter; color: #0563c1;"><a href="https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/" target="_blank" class="weblink">официальной документации Kubernetes</a></span><span style="font-size: 15px; font-family: Inter;">.</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;примера</span></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Inter; font-weight: bold;">Пример</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">tolerations:</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;-&nbsp;effect:&nbsp;NoSchedule</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;key:&nbsp;dedicated</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;operator:&nbsp;Equal</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;value:&nbsp;monitoring</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;примера</span></p>
 <ol style="list-style-type:upper-roman" start="3">
-<li value="3" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-size: 15px; font-family: Inter;">После внесения изменений примените их с помощью команды с указанием </span><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; font-weight: bold;">namespace</span><span style="font-size: 15px; font-family: Inter;">, в котором размещаются переносимые сервисы:</span></li></ol>
+<li value="3" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-size: 15px; font-family: Inter;">После внесения изменений примените их с помощью команды с указанием </span><code><b>namespace</b></code><span style="font-size: 15px; font-family: Inter;">, в котором размещаются переносимые сервисы:</span></li></ol>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">kubectl&nbsp;apply&nbsp;-f&nbsp;cfg.yaml&nbsp;-n&nbsp;elma365-applets</span></p>
 <p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Inter;">Параметры применятся автоматически, так как сервис </span><span style="font-size: 15px; font-family: Inter; font-weight: bold;">babysitter</span><span style="font-size: 15px; font-family: Inter;"> отслеживает изменения в ConfigMap. Все микросервисы, для которых изменились настройки, перезапустятся. </span></p>
 
                         <div class="bottom-nav">
                             
-                                <a id="prev-link" class="topic__navi_prev" href="links-for-install-elma365.html">
+                                <a id="prev-link" class="topic__navi_prev" href="kubernetes-air-gap.html">
                                     <span class="bottom-nav__arrow bottom-nav__arrow--prev"></span> <span
-                                        class="bottom-nav__link">links-for-install-elma365.html</span>
+                                        class="bottom-nav__link">kubernetes-air-gap.html</span>
                                 </a>
                             
                             
-                                <a id="next-link" class="topic__navi_next" href="360012427220.html">
-                                    <span class="bottom-nav__link">360012427220.html</span> <span
+                                <a id="next-link" class="topic__navi_next" href="postgresql-performance-diagnostics.html">
+                                    <span class="bottom-nav__link">postgresql-performance-diagnostics.html</span> <span
                                         class="bottom-nav__arrow bottom-nav__arrow--next"></span>
                                 </a>
                             
@@ -317,9 +349,9 @@
 </div>
  
     </footer>
-    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jquery1.min.js"></script>
     <iframe name="hmnavigation" style="display:none!important"></iframe>
-    <script src="./jquery-ui.js"></script>
+    <!--<script src="./jquery-ui.js"></script> -->
     <script src="./jquery-ui.min.js"></script>
     <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
     <script src="./jquery.tocify.min.js"></script>

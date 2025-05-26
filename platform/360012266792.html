@@ -129,7 +129,8 @@
 <h3 class="p_Heading3"><span class="f_Heading3">Вкладка «Основное»</span></h3>
 <p class="p_Normal"><img alt="start-subproccess-3" width="801" height="435" style="margin:0;width:801px;height:435px;border:none" src="start-subproccess-3.png"/></p>
 <ul style="list-style-type:disc">
-<li><span style="font-weight: bold;">Название</span> — укажите название блока, которое будет отображаться на схеме;</li><li><span style="font-weight: bold;">Процесс</span> — выберите процесс, который будет вызываться в рамках родительского. Обратите внимание, вы можете добавить только опубликованный процесс;</li></ul>
+<li><span style="font-weight: bold;">Название</span> — укажите название блока, которое будет отображаться на схеме;</li><li><span style="font-weight: bold;">Процесс</span> — выберите опубликованный процесс, который будет вызываться в рамках родительского.</li></ul>
+<p style="margin: 0 0 0 35px;">Если выбранный процесс не является системным и не включён в <a href="block_solution.html" class="topiclink">заблокированное решение</a>, его можно открыть для редактирования в новой вкладке браузера. Для этого нажмите кнопку <img alt="link-button" width="32" height="26" style="margin:0;width:32px;height:26px;border:none" src="link-button.png"/>. Обратите внимание, процесс откроется только в режиме просмотра, если включён фича-флаг <code><b>enableReadOnlyModeForDiagrammer</b></code>. Для поставки SaaS обратитесь к менеджеру. Для поставки On-Premises подробнее об этом читайте в статьях <a href="change-settings-enterprise.html#enable-feature-flag-enterpeise" class="topiclink">«Изменение параметров On‑Premises Enterprise»</a> и <a href="change-elma365standard-parameters.html#enable-feature-flag-standard" class="topiclink">«Изменение параметров On‑Premises Standard»</a>;</p>
 <ul style="list-style-type:disc">
 <li><span style="font-weight: bold;">Выполнять от имени  </span>— выберите, кто отобразится в <a href="360012498891.html#history_tab" class="topiclink">карточке экземпляра</a> в качестве инициатора процесса:<ul style="list-style-type:circle">
 <li><span style="font-weight: bold;">Текущий пользователь</span> — пользователь, запустивший экземпляр дочернего процесса;</li><li><span style="font-weight: bold;">Контекстная переменная </span>— выберите переменную типа <a href="360009707032.html#users" class="topiclink">Пользователи (один)</a> из контекста процесса. Инициатором будет значиться сотрудник, который указан в значении переменной. Например, вы можете выбрать контекстную переменную с пользователем, в чьей зоне ответственности размещён дочерний процесс;</li><li><span style="font-weight: bold;">Система </span>— дочерний процесс будет выполняться от имени пользователя, назначенного на роль <a href="360006871932.html#supervisor" class="topiclink">Супервизор системы</a>.</li></ul></li></ul>
@@ -245,9 +246,9 @@
 </div>
  
     </footer>
-    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jquery1.min.js"></script>
     <iframe name="hmnavigation" style="display:none!important"></iframe>
-    <script src="./jquery-ui.js"></script>
+    <!--<script src="./jquery-ui.js"></script> -->
     <script src="./jquery-ui.min.js"></script>
     <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
     <script src="./jquery.tocify.min.js"></script>

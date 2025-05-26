@@ -98,7 +98,7 @@
                         <span id="subcategory" class="search-res__item-category search-res__item-category_subcategory subcategory article__badge"></span>
                         
                             <div class="topic__breadcrumbs">     
-                                <p>Настроить работу в линиях &gt; <a href="connection_to_line.html">Подключить линию к мессенджерам</a> / Telegram</p>
+                                <p>Настроить работу в линиях &gt; <a href="connection_to_line.html">Подключить мессенджеры к линии</a> / Telegram</p>
                             </div>
                         
                     </div>
@@ -114,19 +114,20 @@
                         <p style="background: #ffffff; margin: 7px 0 7px 0;">При подключении Telegram к линии клиенты смогут отправлять через мессенджер запросы, голосовые сообщения, файлы и изображения, а операторы — отвечать на них из интерфейса ELMA365. При этом история переписки с каждым пользователем сохранится внутри системы.</p>
 <p class="p_Normal">При получении сообщения от пользователя из Telegram в разделе <a href="chat_lines.html" class="topiclink">Линии</a> будет создана новая сессия. Если клиент уже обращался, предыдущая сессия возобновится, и сообщение отобразится в ней. Оператор сможет <a href="working_in_chat.html" class="topiclink">обработать обращение</a>, отвечая на него из интерфейса ELMA365. Пользователь при этом получит ответ в приложении Telegram. </p>
 <p class="p_Normal">Оператор может самостоятельно создать сессию с клиентом и написать ему в Telegram из раздела <span style="font-weight: bold;">Линии</span>, если номер телефона клиента известен. Подробнее об этом читайте в статье <a href="create-session.html" class="topiclink">«Создать сессию с внешним пользователем»</a>. </p>
+<p class="p_Normal">Когда для линии настроен ELMA Bot, он может также реагировать на запросы пользователей: предлагать оператору подсказки для сообщений или отвечать вместо него. Подробнее о режимах работы бота читайте в статье <a href="connect-bot.html" class="topiclink">«Подключить бота к линии»</a>.</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;внимание</span></p>
-<p class="p_Normal">Настраивать линии и подключать их к мессенджерам могут только пользователи, входящие в группу <a href="360006871932.html#administrators" class="topiclink">Администраторы</a>.</p>
+<p class="p_Normal">Настраивать линии и подключать к ним мессенджеры могут только пользователи, входящие в группу <a href="360006871932.html#administrators" class="topiclink">Администраторы</a>.</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;внимание</span></p>
 <h2 class="p_Heading2"><span class="f_Heading2">Подключить Telegram </span></h2>
 <p style="background: #ffffff; margin: 7px 0 7px 0;">К одной линии можно привязать несколько доступных мессенджеров. Каждый аккаунт мессенджера можно связать только с одной линией.</p>
 <p style="background: #ffffff; margin: 7px 0 7px 0;">Чтобы подключить к линии мессенджер Telegram:</p>
 <ol style="list-style-type:upper-roman">
-<li value="1" style="background: #ffffff; margin-top: 7px; margin-right: 0; margin-bottom: 7px;">Перейдите в раздел <span style="font-weight: bold;">Администрирование &gt; Линии</span>. </li><li value="2" style="background: #ffffff; margin-top: 7px; margin-right: 0; margin-bottom: 7px;">Выберите линию из списка или <a href="create_line.html" class="topiclink">создайте новую</a>, нажав на кнопку <span style="font-weight: bold;">+ Линия</span> в правом верхнем углу.</li><li value="3" style="background: #ffffff; margin-top: 7px; margin-right: 0; margin-bottom: 7px;">Перейдите на вкладку <span style="font-weight: bold;">Мессенджеры</span> и нажмите на кнопку <img alt="telegram_button" width="95" height="36" style="margin:0;width:95px;height:36px;border:none" src="telegram_button.png"/>.</li><li value="4" style="background: #ffffff; margin-top: 7px; margin-right: 0; margin-bottom: 7px;">В открывшемся окне введите название канала, например, <span style="font-weight: bold;">Служба поддержки</span>. Нажмите кнопку <span style="font-weight: bold;">Подключить</span>.</li><li value="5" style="background: #ffffff; margin-top: 7px; margin-right: 0; margin-bottom: 7px;">Укажите номер телефона, связанный с аккаунтом, и нажмите кнопку <span style="font-weight: bold;">Отправить</span>. </li><li value="6" style="background: #ffffff; margin-top: 7px; margin-right: 0; margin-bottom: 7px;">На указанный номер придёт сообщение с кодом, введите его в поле <span style="font-weight: bold;">Код подтверждения</span>.</li></ol>
+<li value="1" style="background: #ffffff; margin-top: 7px; margin-right: 0; margin-bottom: 7px;">Перейдите в раздел <span style="font-weight: bold;">Администрирование &gt; Линии</span>. </li><li value="2" style="background: #ffffff; margin-top: 7px; margin-right: 0; margin-bottom: 7px;">Выберите линию из списка или <a href="create_line.html" class="topiclink">создайте новую</a>, нажав на кнопку <span style="font-weight: bold;">+ Линия</span> в правом верхнем углу.</li><li value="3" style="background: #ffffff; margin-top: 7px; margin-right: 0; margin-bottom: 7px;">Перейдите на вкладку <span style="font-weight: bold;">Мессенджеры</span> и нажмите на кнопку <img alt="telegram_button" width="95" height="36" style="margin:0;width:95px;height:36px;border:none" src="telegram_button.png"/>.</li><li value="4" style="background: #ffffff; margin-top: 7px; margin-right: 0; margin-bottom: 7px;">В открывшемся окне введите название канала, например, <span style="font-weight: bold;">Служба поддержки</span>. Нажмите кнопку <span style="font-weight: bold;">Подключить</span>.</li><li value="5" style="background: #ffffff; margin-top: 7px; margin-right: 0; margin-bottom: 7px;">Укажите номер телефона, связанный с аккаунтом, и нажмите кнопку <span style="font-weight: bold;">Отправить</span>. </li><li value="6" style="background: #ffffff; margin-top: 7px; margin-right: 0; margin-bottom: 7px;">На указанный номер придёт сообщение с кодом, введите его в поле <span style="font-weight: bold;">Код подтверждения</span>.</li><li value="7" style="background: #ffffff; margin-top: 7px; margin-right: 0; margin-bottom: 7px;">Если для аккаунта включена двухфакторная аутентификация, то повторно появится окно <span style="font-weight: bold;">Настройки подключения</span>. Введите в нём пароль, который вы задавали в настройках Telegram.</li></ol>
 <p style="background: #ffffff; margin: 7px 0 7px 0;">После прохождения процедуры верификации аккаунт Telegram будет связан с линией.</p>
 <p style="background: #ffffff; margin: 7px 0 7px 0;"><img alt="connect_telegram" width="741" height="410" style="margin:0;width:741px;height:410px;border:none" src="connect_telegram.png"/></p>
 <p class="p_Normal">Чтобы отвязать Telegram от линии, напротив названия канала нажмите кнопку  <img alt="on_button" width="34" height="17" style="margin:0;width:34px;height:17px;border:none" src="on_button.png"/>. Статус изменится с <span style="font-weight: bold;">Активен</span> на <span style="font-weight: bold;">Разорван</span>. Для восстановления подключения нажмите на эту кнопку повторно. </p>
 <p class="p_Normal">Вы можете изменить название канала, нажав на значок карандаша, а также удалить его, нажав на значок корзины.</p>
-<p class="p_Normal">Если соединение с каналом прервалось, перейдите в раздел <span style="font-weight: bold;">Администрирование &gt; Линии</span> и <a href="connection_to_line.html" class="topiclink">обновите подключение</a>. После этого в линию поступят сообщения, неполученные за последние 24 часа. </p>
+<p class="p_Normal">Если соединение с каналом прервалось, перейдите в раздел <span style="font-weight: bold;">Администрирование &gt; Линии</span> и <a href="connection_to_line.html" class="topiclink">обновите подключение</a>. После этого в линию поступят сообщения, не полученные за последние 24 часа. </p>
 
                         <div class="bottom-nav">
                             
@@ -215,9 +216,9 @@
 </div>
  
     </footer>
-    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jquery1.min.js"></script>
     <iframe name="hmnavigation" style="display:none!important"></iframe>
-    <script src="./jquery-ui.js"></script>
+    <!--<script src="./jquery-ui.js"></script> -->
     <script src="./jquery-ui.min.js"></script>
     <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
     <script src="./jquery.tocify.min.js"></script>

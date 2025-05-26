@@ -115,9 +115,9 @@
 <p class="p_Normal">Включение TLS для приложения ELMA365 состоит из трёх этапов:</p>
 <ol style="list-style-type:decimal">
 <li value="1" class="p_Normal"><a href="enable-tls-enterprise.html#preparation-of-secret-for-work-on-https" class="topiclink">Подготовка secret с сертификатом для работы по HTTPS</a>.</li><li value="2" class="p_Normal"><a href="enable-tls-enterprise.html#change-config-file" class="topiclink">Внесение изменений в конфигурационный файл</a>.</li><li value="3" class="p_Normal"><a href="enable-tls-enterprise.html#using-tls-for-elma365-enterprise" class="topiclink">Применение параметров TLS для ELMA365 Enterprise</a>.</li></ol>
-<h2 class="p_Heading2"><a id="preparation-of-secret-for-work-on-https" class="hmanchor"></a><span class="f_Heading2">Шаг 1: Подготовка secret с сертификатом для работы по HTTPS</span></h2>
+<h2 class="p_Heading2"><a id="preparation-of-secret-for-work-on-https" class="hmanchor"></a><span class="f_Heading2">Шаг 1. Подготовка secret с сертификатом для работы по HTTPS</span></h2>
 <p class="p_Normal">О том, как это сделать, читайте в статье <a href="preparation-secret-with-certificate-https.html" class="topiclink">«Подготовка secret с сертификатом для работы по HTTPS»</a>.</p>
-<h2 class="p_Heading2"><a id="change-config-file" class="hmanchor"></a><span class="f_Heading2">Шаг 2: Внесение изменений в конфигурационный файл values-elma365.yaml</span></h2>
+<h2 class="p_Heading2"><a id="change-config-file" class="hmanchor"></a><span class="f_Heading2">Шаг 2. Внесение изменений в конфигурационный файл values-elma365.yaml</span></h2>
 <p class="p_Normal">Изменения вносятся в конфигурационный файл <code><b>values-elma365.yaml</b></code>, заполненный при установке ELMA365.</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">Начало&nbsp;внимание</span></p>
 <p class="p_Normal">Перед редактированием файла <code><b>values-elma365.yaml</b></code> создайте его резервную копию, поскольку некорректная настройка параметров может привести к сбоям в работе приложения ELMA365.</p>
@@ -179,7 +179,7 @@
 </table>
 </div>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">Начало&nbsp;внимание</span></p>
-<p class="p_Normal">Перед применением параметров TLS для приложения ELMA365 убедитесь, что хранилище файлов S3 работает по протоколу HTTPS (использует TLS шифрование). Перенастройте хранилище файлов S3 на работу по протоколу HTTPS до того, как включите поддержку использования TLS в приложении ELMA365.</p>
+<p class="p_Normal">Перед применением параметров TLS для приложения ELMA365 убедитесь, что хранилище файлов S3 работает по протоколу HTTPS (использует TLS шифрование).</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">Конец&nbsp;внимание</span></p>
 <ol style="list-style-type:upper-roman" start="2">
 <li value="2" class="p_Normal">Укажите в параметрах подключения, что на стороне сервера хранилища S3 используется TLS шифрование. Для этого задайте <code><b>true</b></code> в параметре <code><b>db.s3.ssl.enabled</b></code>.</li></ol>
@@ -198,15 +198,15 @@
 <span class="f_CodeExample"> &nbsp; &nbsp;ssl:</span><br />
 <span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;enabled: &quot;true&quot;</span><br />
 <span class="f_CodeExample">...</span></p>
-<h2 class="p_Heading2"><a id="using-tls-for-elma365-enterprise" class="hmanchor"></a><span class="f_Heading2">Шаг 3: Применение параметров TLS для ELMA365 Enterprise</span></h2>
+<h2 class="p_Heading2"><a id="using-tls-for-elma365-enterprise" class="hmanchor"></a><span class="f_Heading2">Шаг 3. Применение параметров TLS для ELMA365 Enterprise</span></h2>
 <p class="p_Normal">Вы можете обновить параметры приложения ELMA365 двумя способами: через интернет или <a href="enable-tls-enterprise.html#offline-update" class="topiclink">без доступа к сети</a>. </p>
 <h3 class="p_Heading3"><span class="f_Heading3">Обновление параметров через интернет</span></h3>
 <ol style="list-style-type:upper-roman">
 <li value="1" class="p_Normal">Определите версию чарта, с помощью которого было установлено или обновлено приложение ELMA365:</li></ol>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">helm&nbsp;show&nbsp;chart&nbsp;elma365/elma365</span></p>
 <p class="p_Normal">Пример выполнения команды:</p>
-<p class="p_Normal"><img alt="enable-tls-enterprise-1" width="417" height="141" style="margin:0;width:417px;height:141px;border:none" src="enable-tls-enterprise-1.png"/></p>
-<p class="p_Normal">В результате выполнения команды информация о версии чарта будет указана в строке <code><b>version</b></code>. Сохраните это значение для выполнения следующего шага.</p>
+<p class="p_Normal"><img alt="enable-tls-enterprise-1" width="1126" height="86" style="margin:0;width:1126px;height:86px;border:none" src="enable-tls-enterprise-1.png"/></p>
+<p class="p_Normal">В результате выполнения команды информация о версии чарта будет указана в <code><b>APP VERSION</b></code>. Сохраните это значение для выполнения следующего шага.</p>
 <ol style="list-style-type:upper-roman" start="2">
 <li value="2" class="p_Normal">Обновите параметры приложения ELMA365 с применением конфигурационного файла <code><b>values-elma365.yaml</b></code>. Для этого используйте следующую команду, указав в ней для флага <code><b>--version</b></code> установленную версию чарта вместо <code><b>&lt;elma365-chart-version&gt;</b></code>:</li></ol>
 <p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample">helm upgrade --install elma365 elma365/elma365 -f values-elma365.yaml --version &lt;elma365-chart-version&gt; --timeout=30m --wait [-n namespace]</span></p>
@@ -302,9 +302,9 @@
 </div>
  
     </footer>
-    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jquery1.min.js"></script>
     <iframe name="hmnavigation" style="display:none!important"></iframe>
-    <script src="./jquery-ui.js"></script>
+    <!--<script src="./jquery-ui.js"></script> -->
     <script src="./jquery-ui.min.js"></script>
     <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
     <script src="./jquery.tocify.min.js"></script>

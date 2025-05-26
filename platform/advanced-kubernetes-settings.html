@@ -2,7 +2,7 @@
 <html lang="ru">
 
 <head>
-    <title>Продвинутое изменение параметров ELMA365 Enterprise</title>
+    <title>Продвинутые параметры ELMA365 Enterprise</title>
     <meta name="generator" content="Help+Manual" />
     <meta name="keywords" content="" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -98,11 +98,11 @@
                         <span id="subcategory" class="search-res__item-category search-res__item-category_subcategory subcategory article__badge"></span>
                         
                             <div class="topic__breadcrumbs">     
-                                <p><a href="elma365-on-premises.html">ELMA365 On-Premises</a> &gt; <a href="elma365-enterprise.html">ELMA365 On-Premises Enterprise</a> / Продвинутое изменение параметров ELMA365 Enterprise</p>
+                                <p><a href="elma365-on-premises.html">ELMA365 On-Premises</a> &gt; <a href="elma365-enterprise.html">ELMA365 On-Premises Enterprise</a> / Продвинутые параметры ELMA365 Enterprise</p>
                             </div>
                         
                     </div>
-                        <div class="topic__title"><h1 class="p_Heading1"><span class="f_Heading1">Продвинутое изменение параметров ELMA365 Enterprise</span></h1>
+                        <div class="topic__title"><h1 class="p_Heading1"><span class="f_Heading1">Продвинутые параметры ELMA365 Enterprise</span></h1>
 </div>
                     
 </header>
@@ -112,9 +112,18 @@
                         </div>
                         <!-- Placeholder for topic body. -->
                         <p class="p_Normal">Продвинутые параметры приложений в Kubernetes-кластере — это инструменты для распределения рабочей нагрузки между узлами. С их помощью вы можете контролировать, где и как запускаются контейнеры, а также настраивать их взаимодействие с узлами и другими репликами. Управление параметрами позволяет повысить отказоустойчивость системы, ограничить влияние сбоев и защитить критически важные компоненты.</p>
-<p class="p_Normal">Подробнее о параметрах и их настройке читайте в статьях:</p>
+<h2 class="p_Heading2"><span class="f_Heading2">Настройки для управления подами</span></h2>
+<p class="p_Normal">Вы можете применить параметры:</p>
 <ul style="list-style-type:disc">
-<li class="p_Normal"><a href="security-context.html" class="topiclink">«Параметры безопасности для контейнеров и подов»</a> — настроить параметры <code><b>securityContext</b></code> и <code><b>podSecurityContext</b></code>;</li><li class="p_Normal"><a href="node-selector.html" class="topiclink">«Выбор узлов для размещения подов»</a> — ограничить размещение подов на конкретных узлах при помощи параметра <code><b>nodeSelector</b></code>;</li><li class="p_Normal"><a href="taints-tolerations.html" class="topiclink">«Размещение подов на узлах с ограничениями»</a> — выделить узлы для критически важных сервисов и запретить распределение другой нагрузки на этих узлах при помощи инструментов <span style="font-weight: bold;">taints</span> и <span style="font-weight: bold;">tolerations</span>;</li><li class="p_Normal"><a href="affinity-antiaffinity.html" class="topiclink">«Правила распределения нагрузки на узлах»</a> — задать гибкие правила распределения нагрузки при помощи инструментов <span style="font-weight: bold;">Affinity</span> и <span style="font-weight: bold;">Anti-affinity</span>.</li></ul>
+<li class="p_Normal"><a href="security-context.html" class="topiclink">securityContext и podSecurityContext</a>, чтобы задать настройки безопасности для контейнеров и подов;</li><li class="p_Normal"><a href="pod-disruption-budget.html" class="topiclink">podDisruptionBudget</a> — указать количество подов, недоступных во время плановых работ, например при обновлениях или миграциях.</li></ul>
+<h2 class="p_Heading2"><span class="f_Heading2">Настройки размещения подов</span></h2>
+<p class="p_Normal">Чтобы распределить поды по узлам, вы можете использовать инструменты:</p>
+<ul style="list-style-type:disc">
+<li class="p_Normal"><a href="pod-topology-spread-constraints.html" class="topiclink">параметр topologySpreadConstraints</a> — для равномерного распределения подов по топологии кластера;</li><li class="p_Normal"><a href="node-selector.html" class="topiclink">параметр nodeSelector</a> — для размещения подов на определённых узлах;</li><li class="p_Normal"><a href="taints-tolerations.html" class="topiclink">инструменты taints и tolerations</a> — для выделения узлов под критически важные сервисы и запрета другой нагрузки на этих узлах;</li><li class="p_Normal"><a href="affinity-antiaffinity.html" class="topiclink">инструменты Affinity и Anti-affinity</a> — для настройки гибких правил распределения нагрузки на узлах.</li></ul>
+<h2 class="p_Heading2"><span class="f_Heading2">Рекомендации для настройки размещения подов</span></h2>
+<ol style="list-style-type:decimal">
+<li value="1" class="p_Normal">Для оптимальной конфигурации используйте параметры размещения подов последовательно и тестируйте результат их выполнения.</li><li value="2" class="p_Normal">Не задавайте слишком строгих правил. Это может привести к конфликтам между инструментами.</li><li value="3" class="p_Normal">Избегайте чрезмерных ограничений, когда задаёте правила для taints и tolerations и используете их совместно с параметром <code><b>nodeSelector</b></code>. Иначе для подов не найдутся подходящие узлы.</li><li value="4" class="p_Normal">Следите за строгостью требований при комбинации правила <code><b>requiredDuringSchedulingIgnoredDuringExecution</b></code> в Affinity с taints или параметром <code><b>nodeSelector</b></code>. При несогласованных условиях может блокироваться размещение подов на всех узлах.</li><li value="5" class="p_Normal">Не допускайте противоречий в задаваемых условиях при настройке Affinity и параметра <code><b>topologySpreadConstraints</b></code>. Например, поды невозможно запустить, когда в правилах Affinity требуется группировка подов на одном узле, а в параметре <code><b>topologySpreadConstraints</b></code> — распределение по разным узлам.</li></ol>
+<p class="p_Normal">&nbsp;</p>
 
                         <div class="bottom-nav">
                             
@@ -203,9 +212,9 @@
 </div>
  
     </footer>
-    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jquery1.min.js"></script>
     <iframe name="hmnavigation" style="display:none!important"></iframe>
-    <script src="./jquery-ui.js"></script>
+    <!--<script src="./jquery-ui.js"></script> -->
     <script src="./jquery-ui.min.js"></script>
     <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
     <script src="./jquery.tocify.min.js"></script>

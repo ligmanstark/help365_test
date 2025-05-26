@@ -134,9 +134,6 @@
 <p class="p_Normal" style="margin: 14px 0 0 35px;"><img alt="аpplication-level-process-4" width="884" height="512" style="margin:0;width:884px;height:512px;border:none" src="hmfile_hash_f1241140.png"/></p>
 <p style="margin: 14px 0 0 0;">Обратите внимание, в контекст бизнес-процесса, созданного на уровне приложения,<span style="color: #212529;"> всегда добавляется переменная, ссылающаяся на это приложение. Это удобно, например, чтобы выносить на формы задач свойства приложения. При этом не нужно добавлять их в контекст процесса вручную.</span></p>
 <p style="margin: 14px 0 0 0;">После публикации процесс отображается в <a href="360009921131.html#processes-list" class="topiclink">списке бизнес-процессов</a> приложения. Отсюда можно снова перейти в дизайнер моделирования. Если процесс уже редактируется другим пользователем, открыть его схему можно в режиме просмотра.</p>
-<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">Начало&nbsp;внимание</span></p>
-<p style="margin: 14px 0 0 0;">Режим просмотра активируется с помощью фича-флага <code><b>enableReadOnlyModeForDiagrammer</b></code><span style="color: #212529; background-color: #ffffff;">. Подробнее о том, как его включить читайте в статьях&nbsp;</span><a href="change-settings-enterprise.html#enable-feature-flag-enterpeise" class="topiclink">«Изменение параметров On-Premises Enterprise»</a><span style="color: #394149;"> и </span><a href="change-elma365standard-parameters.html#enable-feature-flag-standard" class="topiclink">«Изменение параметров On-Premises Standard»</a><span style="color: #394149;">.</span></p>
-<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">Конец&nbsp;внимание</span></p>
 <h2 class="p_Heading2" style="margin: 19px 0 0 0;"><span class="f_Heading2" style="font-size: 24px;">Статусы приложения в бизнес-процессе</span></h2>
 <p class="p_Normal" style="margin: 19px 0 0 0;">Настраивая бизнес-процесс на уровне приложения, вы можете добавлять или изменять статусы приложения прямо в дизайнере процессов на вкладке <span style="font-weight: bold;">Статусы</span>. </p>
 <p class="p_Normal" style="margin: 14px 0 0 0;"><img alt="аpplication-level-process-6" width="974" height="848" style="margin:0;width:974px;height:848px;border:none" src="hmfile_hash_0498e20d.png"/></p>
@@ -149,9 +146,13 @@
 <p>Для этого отвяжите первый процесс. Перейдите на страницу со списком всех процессов приложения. Привязанный процесс обозначен значком<img alt="associate_icon" width="26" height="12" style="margin:0;width:26px;height:12px;border:none" src="associate_icon.png"/>. Нажмите на три точки напротив названия процесса и выберите опцию <span style="font-weight: bold;">Отвязать от приложения</span>.</p>
 <p><img alt="associate_business_process-6" width="841" height="341" style="margin:0;width:841px;height:341px;border:none" src="associate_business_process-6.png"/></p>
 <p><span style="font-size: 13px; color: #000000;">&nbsp;</span></p>
-<p>После того, как текущий процесс отвязан, вы сможете связать с приложением любой другой процесс, созданный на его уровне. Чтобы это сделать, нажмите на кнопку <span style="font-weight: bold;">Привязать</span> в окне, появляющемся при публикации первой версии процесса.</p>
+<p>После того как текущий процесс отвязан, вы сможете связать с приложением любой другой процесс, созданный на его уровне. Чтобы это сделать:</p>
+<ul style="list-style-type:disc">
+<li>в окне, появляющемся при публикации первой версии процесса нажмите на кнопку <span style="font-weight: bold;">Привязать</span>;</li></ul>
 <p><img alt="associated_business_process-7" width="878" height="412" style="margin:0;width:878px;height:412px;border:none" src="associated_business_process-7.png"/></p>
-<p style="margin: 19px 0 0 0;">Кроме того, привязать запуск процесса к кнопке <span style="font-weight: bold;">Сохранить</span> можно на карточках создания или редактирования элемента приложения. Подробнее об этом читайте в статье <a href="button-types-settings.html#save-button" class="topiclink">«Типы и настройки кнопок»</a>. </p>
+<ul style="list-style-type:disc">
+<li class="p_Normal">на странице со списком процессов напротив названия нужного процесса нажмите на три точки и выберите <span style="font-weight: bold;">Привязать к приложению</span>. </li></ul>
+<p class="p_Normal">Кроме того, привязать запуск процесса к кнопке <span style="font-weight: bold;">Сохранить</span> можно на карточках создания или редактирования элемента приложения. Подробнее об этом читайте в статье <a href="button-types-settings.html#save-button" class="topiclink">«Типы и настройки кнопок»</a>. </p>
 <p style="margin: 19px 0 0 0;">Вы также можете добавить дополнительную кнопку запуска бизнес-процесса на <a href="360019229331.html#start_process_button" class="topiclink">страницу приложения</a> или в <a href="360019228531.html#add-button" class="topiclink">карточку элемента приложения</a>. &nbsp;</p>
 
                         <div class="bottom-nav">
@@ -241,9 +242,9 @@
 </div>
  
     </footer>
-    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jquery1.min.js"></script>
     <iframe name="hmnavigation" style="display:none!important"></iframe>
-    <script src="./jquery-ui.js"></script>
+    <!--<script src="./jquery-ui.js"></script> -->
     <script src="./jquery-ui.min.js"></script>
     <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
     <script src="./jquery.tocify.min.js"></script>

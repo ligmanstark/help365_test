@@ -98,7 +98,7 @@
                         <span id="subcategory" class="search-res__item-category search-res__item-category_subcategory subcategory article__badge"></span>
                         
                             <div class="topic__breadcrumbs">     
-                                <p><a href="elma365-on-premises.html">ELMA365 On-Premises</a> &gt; <a href="elma365-enterprise.html">ELMA365 On-Premises Enterprise</a> &gt; <a href="advanced-kubernetes-settings.html">Продвинутое изменение параметров ELMA365 Enterprise</a> / Параметры безопасности для контейнеров и подов</p>
+                                <p><a href="elma365-on-premises.html">ELMA365 On-Premises</a> &gt; <a href="elma365-enterprise.html">ELMA365 On-Premises Enterprise</a> &gt; <a href="advanced-kubernetes-settings.html">Продвинутые параметры ELMA365 Enterprise</a> / Параметры безопасности для контейнеров и подов</p>
                             </div>
                         
                     </div>
@@ -126,7 +126,7 @@
 <p class="p_Normal">Где:</p>
 <ul style="list-style-type:disc">
 <li class="p_Normal"><code><b>runAsUser</b></code> — UID пользователя внутри контейнера, от имени которого запускаются процессы в этом контейнере;</li><li class="p_Normal"><code><b>seccompProfile.type</b></code> — профиль <span style="font-weight: bold;">seccomp</span> для ограничения системных вызовов внутри контейнера: открытия файлов, создания процессов и т. п. В этом примере используется значение <code><b>RuntimeDefault</b></code>, которое предоставляет базовый уровень безопасности. </li></ul>
-<p class="p_Normal">Этапы изменения параметра аналогичны шагам в статье <a href="change-settings-enterprise.html" class="topiclink">«Изменение параметров ELMA365 Enterprise»</a>.</p>
+<p class="p_Normal">После настройки параметра примените его, как указано в статье <a href="change-settings-enterprise.html#apply-new-parameters" class="topiclink">«Изменение параметров ELMA365 Enterprise»</a>.</p>
 <h3 class="p_Heading3"><span class="f_Heading3">Значения по умолчанию для параметра securityContext</span></h3>
 <p class="p_Normal">Если вы не указали значение для параметра, по умолчанию применяются настройки: </p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">runAsUser:&nbsp;1001</span><br />
@@ -143,7 +143,7 @@
 <p class="p_Normal">Где:</p>
 <ul style="list-style-type:disc">
 <li class="p_Normal"><code><b>runAsUser</b></code> — UID пользователя, от имени которого запускаются все процессы в поде;</li><li class="p_Normal"><code><b>seccompProfile.type</b></code> — профиль <span style="font-weight: bold;">seccomp</span> для всего пода. В этом примере используется значение <code><b>RuntimeDefault</b></code>, которое предоставляет базовый уровень безопасности. </li></ul>
-<p class="p_Normal">Этапы изменения параметра аналогичны шагам в статье <a href="change-settings-enterprise.html" class="topiclink">«Изменение параметров ELMA365 Enterprise»</a>.</p>
+<p class="p_Normal">После настройки параметра примените его, как указано в статье <a href="change-settings-enterprise.html#apply-new-parameters" class="topiclink">«Изменение параметров ELMA365 Enterprise»</a>.</p>
 <h3 class="p_Heading3"><span class="f_Heading3">Значения по умолчанию для параметра podSecurityContext</span></h3>
 <p class="p_Normal">Если вы не указали значения для параметра, применяются настройки по умолчанию:</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">runAsUser:&nbsp;1001</span><br />
@@ -159,8 +159,8 @@
                                 </a>
                             
                             
-                                <a id="next-link" class="topic__navi_next" href="node-selector.html">
-                                    <span class="bottom-nav__link">node-selector.html</span> <span
+                                <a id="next-link" class="topic__navi_next" href="pod-disruption-budget.html">
+                                    <span class="bottom-nav__link">pod-disruption-budget.html</span> <span
                                         class="bottom-nav__arrow bottom-nav__arrow--next"></span>
                                 </a>
                             
@@ -238,9 +238,9 @@
 </div>
  
     </footer>
-    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jquery1.min.js"></script>
     <iframe name="hmnavigation" style="display:none!important"></iframe>
-    <script src="./jquery-ui.js"></script>
+    <!--<script src="./jquery-ui.js"></script> -->
     <script src="./jquery-ui.min.js"></script>
     <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
     <script src="./jquery.tocify.min.js"></script>

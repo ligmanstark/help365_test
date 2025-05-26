@@ -8,7 +8,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Приложение ELMA365 устанавливается в Kubernetes-кластер. Для работы с ним мы рекомендуем платформу Deckhouse на базе Open Source-компонентов." />
+    <meta name="description" content="Приложение ELMA365 устанавливается в Kubernetes-кластер. Для работы с ним мы рекомендуем платформу Deckhouse на&nbsp;базе Open Source-компонентов." />
     <meta name="picture" content="" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Cправка по Low-code платформе ELMA365" />
@@ -111,25 +111,25 @@
                             <a href="#h1-article" class="scroll-top"></a>
                         </div>
                         <!-- Placeholder for topic body. -->
-                        <p class="p_Normal">Приложение ELMA365 устанавливается в Kubernetes-кластер. Для работы с ним мы рекомендуем платформу <a href="https://deckhouse.ru/" target="_blank" class="weblink">Deckhouse</a> на базе Open Source-компонентов.</p>
-<p class="p_Normal">Платформа Deckhouse включена <a href="https://reestr.digital.gov.ru/reestr/490559/" target="_blank" class="weblink">в реестре российского ПО</a> и <a href="https://landscape.cncf.io/?view-mode=card&amp;classify=category&amp;sort-by=name&amp;sort-direction=asc&amp;item=platform--certified-kubernetes-distribution--flant-deckhouse#app-definition-and-development--application-definition-image-build%20" target="_blank" class="weblink">сертифицирована в CNCF</a>. Кроме Kubernetes, она включает дополнительные модули для мониторинга, балансировки трафика, автомасштабирования, безопасного доступа и т. д. Модули преднастроены, интегрированы друг с другом и готовы к работе. Управление всеми компонентами кластера и платформы, а также их обновление полностью автоматизированы.</p>
+                        <p class="p_Normal">Приложение ELMA365 устанавливается в Kubernetes-кластер. Для работы с ним мы рекомендуем платформу <a href="https://deckhouse.ru/" target="_blank" class="weblink">Deckhouse</a> на базе Open Source-компонентов.</p>
+<p class="p_Normal">Платформа Deckhouse включена <a href="https://reestr.digital.gov.ru/reestr/490559/" target="_blank" class="weblink">в реестре российского ПО</a> и <a href="https://landscape.cncf.io/?view-mode=card&amp;classify=category&amp;sort-by=name&amp;sort-direction=asc&amp;item=platform--certified-kubernetes-distribution--flant-deckhouse#app-definition-and-development--application-definition-image-build%20" target="_blank" class="weblink">сертифицирована в CNCF</a>. Кроме Kubernetes, она включает дополнительные модули для мониторинга, балансировки трафика, автомасштабирования, безопасного доступа и т. д. Модули преднастроены, интегрированы друг с другом и готовы к работе. Управление всеми компонентами кластера и платформы, а также их обновление полностью автоматизированы.</p>
 <p class="p_Normal">Совместимость платформы и версий Kubernetes смотрите в <a href="https://deckhouse.ru/products/kubernetes-platform/documentation/v1/supported_versions.html" target="_blank" class="weblink">официальной документации Deckhouse</a>.</p>
 <p class="p_Normal">В статье рассмотрим, как развернуть Kubernetes-кластер, который состоит из единственного master-узла.</p>
 <p class="p_Normal">Установка состоит из пяти этапов:</p>
 <ol style="list-style-type:decimal">
 <li value="1" class="p_Normal"><a href="kubernetes-deckhouse-air-gap.html#infrastructure-preparation" class="topiclink">Подготовка инфраструктуры</a>.</li><li value="2" class="p_Normal"><a href="kubernetes-deckhouse-air-gap.html#preparation-config-file" class="topiclink">Подготовка конфигурационного файла</a>.</li><li value="3" class="p_Normal"><a href="kubernetes-deckhouse-air-gap.html#installation" class="topiclink">Установка Kubernetes-кластера на базе Deckhouse</a>.</li><li value="4" class="p_Normal"><a href="kubernetes-deckhouse-air-gap.html#setting" class="topiclink">Настройка Deckhouse</a>.</li><li value="5" class="p_Normal"><a href="kubernetes-deckhouse-air-gap.html#installation-helm" class="topiclink">Установка HELM</a>.</li></ol>
-<h2 class="p_Heading2"><a id="infrastructure-preparation" class="hmanchor"></a><span class="f_Heading2">Шаг 1: Подготовка инфраструктуры</span></h2>
+<h2 class="p_Heading2"><a id="infrastructure-preparation" class="hmanchor"></a><span class="f_Heading2">Шаг 1. Подготовка инфраструктуры</span></h2>
 <p class="p_Normal">Чтобы развернуть Kubernetes-кластер на базе платформы Deckhouse, вам потребуются:</p>
 <ol style="list-style-type:upper-roman">
 <li value="1" class="p_Normal">Персональный компьютер.</li></ol>
-<p class="p_Normal">Компьютер, с которого будет производиться установка. Он нужен только для запуска инсталлятора Deckhouse и не будет частью кластера.</p>
+<p class="p_Normal">Компьютер, с которого будет производиться установка. Он нужен только для запуска инсталлятора Deckhouse и не будет частью кластера.</p>
 <p class="p_Normal">Системные требования:</p>
 <ul style="list-style-type:disc">
 <li class="p_Normal" style="margin-top: 0; margin-right: 0; margin-bottom: 0;">ОС: Windows 10+, macOS 10.15+, Linux (Ubuntu 18.04+, Fedora 35+);</li><li class="p_Normal" style="margin-top: 0; margin-right: 0; margin-bottom: 0;">установленный docker для запуска инсталлятора Deckhouse;</li><li class="p_Normal" style="margin-top: 0; margin-right: 0; margin-bottom: 0;">доступ до проксирующего registry или до частного хранилища образов контейнеров с образами контейнеров Deckhouse;</li><li class="p_Normal" style="margin-top: 0; margin-right: 0; margin-bottom: 0;">SSH-доступ по ключу до узла, который будет master-узлом будущего кластера.</li></ul>
 <ol style="list-style-type:upper-roman" start="2">
 <li value="2" class="p_Normal">Master-узел.</li></ol>
 <p class="p_Normal">Сервер (физический сервер или виртуальная машина), который будет управляющим узлом (master-узлом) будущего кластера.</p>
-<p class="p_Normal">В процессе установки инсталлятор Deckhouse, запущенный на персональном компьютере, подключится к master-узлу по SSH, установит необходимые пакеты, настроит control plane Kubernetes и развернёт Deckhouse.</p>
+<p class="p_Normal">В процессе установки инсталлятор Deckhouse, запущенный на персональном компьютере, подключится к master-узлу по SSH, установит необходимые пакеты, настроит control plane Kubernetes и развернёт Deckhouse.</p>
 <p class="p_Normal">Системные требования:</p>
 <ul style="list-style-type:disc">
 <li class="p_Normal" style="margin-top: 0; margin-right: 0; margin-bottom: 0;">не менее 12 ядер CPU;</li><li class="p_Normal" style="margin-top: 0; margin-right: 0; margin-bottom: 0;">не менее 16 ГБ RAM;</li><li class="p_Normal" style="margin-top: 0; margin-right: 0; margin-bottom: 0;">не менее 200 ГБ дискового пространства;</li><li class="p_Normal" style="margin-top: 0; margin-right: 0; margin-bottom: 0;"><a href="https://deckhouse.ru/documentation/v1/supported_versions.html" target="_blank" class="weblink">поддерживаемая ОС</a>;</li><li class="p_Normal" style="margin-top: 0; margin-right: 0; margin-bottom: 0;">доступ до проксирующего <span style="font-weight: bold;">registry</span> или до частного хранилища образов контейнеров с образами контейнеров Deckhouse;</li></ul>
@@ -142,19 +142,19 @@
 <ol style="list-style-type:upper-roman" start="3">
 <li value="3" class="p_Normal">Загрузка образов Deckhouse в локальный реестр образов.</li></ol>
 <p class="p_Normal">Кластер Kubernetes с помощью Deckhouse можно развернуть в закрытом окружении, из которого нет доступа в интернет. Для этого предварительно скачайте на компьютере с доступом в интернет образы платформы Deckhouse и загрузите их в локальный реестр образов. Подробнее об этом читайте в статье <a href="downloading-images-deckhouse.html" class="topiclink">«Загрузка образов Deckhouse».</a></p>
-<h2 class="p_Heading2"><a id="preparation-config-file" class="hmanchor"></a><span class="f_Heading2">Шаг 2: Подготовка конфигурационного файла</span></h2>
-<p class="p_Normal">Чтобы установить Deckhouse, подготовьте YAML-файл конфигурации установки. Для получения YAML-файла конфигурации воспользуйтесь сервисом <a href="https://deckhouse.ru/gs/" target="_blank" class="weblink">Быстрый старт</a> на сайте Deckhouse. Сервис сгенерирует актуальный YAML-файл для текущей версий платформы.</p>
+<h2 class="p_Heading2"><a id="preparation-config-file" class="hmanchor"></a><span class="f_Heading2">Шаг 2. Подготовка конфигурационного файла</span></h2>
+<p class="p_Normal">Чтобы установить Deckhouse, подготовьте YAML-файл конфигурации установки. Для получения YAML‑файла конфигурации воспользуйтесь сервисом <a href="https://deckhouse.ru/gs/" target="_blank" class="weblink">Быстрый старт</a> на сайте Deckhouse. Сервис сгенерирует актуальный YAML‑файл для текущей версий платформы.</p>
 <ol style="list-style-type:upper-roman">
 <li value="1" class="p_Normal">Сгенерируйте YAML-файла сервисом <a href="https://deckhouse.ru/gs/" target="_blank" class="weblink">Быстрый старт</a>, выполнив следующие шаги:</li></ol>
 <ol style="list-style-type:decimal">
-<li value="1" class="p_Normal">Выберите инфраструктуру — Bare Metal.</li><li value="2" class="p_Normal">Ознакомьтесь с информацией об установке.</li><li value="3" class="p_Normal">Укажите шаблон для DNS-имен кластера. В нашем случае — <span style="font-weight: bold;">%s.example.com</span>.</li><li value="4" class="p_Normal">Сохраните <code><b>config.yml</b></code>.</li></ol>
+<li value="1" class="p_Normal">Выберите инфраструктуру — Bare Metal.</li><li value="2" class="p_Normal">Ознакомьтесь с информацией об установке.</li><li value="3" class="p_Normal">Укажите шаблон для DNS-имен кластера. В нашем случае — <span style="font-weight: bold;">%s.example.com</span>.</li><li value="4" class="p_Normal">Сохраните <code><b>config.yml</b></code>.</li></ol>
 <ol style="list-style-type:upper-roman" start="2">
 <li value="2" class="p_Normal">Внесите необходимые изменения в <code><b>config.yml</b></code>. Для этого выполните следующие действия:</li></ol>
 <ol style="list-style-type:decimal">
 <li value="1" class="p_Normal">Задайте адресное пространство подов кластера в <span style="font-weight: bold;">podSubnetCIDR</span>.</li><li value="2" class="p_Normal">Задайте адресное пространство Service’ов кластера в <span style="font-weight: bold;">serviceSubnetCIDR</span>.</li><li value="3" class="p_Normal">Задайте нужную версию Kubernetes в <span style="font-weight: bold;">kubernetesVersion</span>.</li><li value="4" class="p_Normal">Проверьте канал обновления в <span style="font-weight: bold;">releaseChannel</span> (Stable).</li><li value="5" class="p_Normal">Проверьте шаблон доменного имени в <span style="font-weight: bold;">publicDomainTemplate</span> (<span style="font-weight: bold;">%s.example.com</span>).<br />
 Используется для формирования доменов системных приложений в кластере. Например, Grafana для шаблона <span style="font-weight: bold;">%s.example.com</span> будет доступна, как <span style="font-weight: bold;">grafana.example.com</span>.</li><li value="6" class="p_Normal">Проверьте режим работы модуля cni-flannel в <span style="font-weight: bold;">podNetworkMode</span>.<br />
-Режим работы flannel, допустимые значения <span style="font-weight: bold;">VXLAN</span> (если ваши сервера имеют связность L3) или <span style="font-weight: bold;">HostGW</span> (для L2-сетей).</li><li value="7" class="p_Normal">Укажите локальную сеть, которую будут использовать узлы кластера в <span style="font-weight: bold;">internalNetworkCIDRs</span>.<br />
-Список внутренних сетей узлов кластера, например, <code><b>'192.168.1.0/24'</b></code>, который используется для связи компонентов Kubernetes (kube-apiserver, kubelet и т. д.) между собой.</li></ol>
+Режим работы flannel, допустимые значения <span style="font-weight: bold;">VXLAN</span> (если ваши сервера имеют связность L3) или <span style="font-weight: bold;">HostGW</span> (для L2-сетей).</li><li value="7" class="p_Normal">Укажите локальную сеть, которую будут использовать узлы кластера в <span style="font-weight: bold;">internalNetworkCIDRs</span>.<br />
+Список внутренних сетей узлов кластера, например, <code><b>'192.168.1.0/24'</b></code>, который используется для связи компонентов Kubernetes (kube-apiserver, kubelet и т. д.) между собой.</li></ol>
 <p class="p_Normal">Пример файла первичной конфигурации кластера — <code><b>config.yml</b></code>.</p>
 <p class="p_Normal"><span style="font-weight: bold;">Для установки через интернет:</span></p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">apiVersion:&nbsp;deckhouse.io/v1</span><br />
@@ -181,17 +181,17 @@
 <span class="f_CodeExample">kind:&nbsp;StaticClusterConfiguration</span><br />
 <span class="f_CodeExample">internalNetworkCIDRs:</span><br />
 <span class="f_CodeExample">&nbsp;&nbsp;-&nbsp;192.168.1.0/24</span></p>
-<p class="p_Normal"><span style="font-weight: bold;"><a class="dropdown-toggle" style="font-style: normal; font-weight: bold; color: #000000; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186A1')">Для установки без доступа в интернет:</a></span></p>
+<p class="p_Normal"><span style="font-weight: bold;"><a class="dropdown-toggle" style="font-style: normal; font-weight: bold; color: #000000; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186A1')">Для установки без доступа в интернет</a></span></p>
 <div id="TOGGLE0186A1" class="dropdown-toggle-body" style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0 0 0 0;"><table style="border:none; border-spacing:0;">
 <tr>
 <td style="vertical-align:top; padding:0; border:none"><p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">Начало&nbsp;внимание</span></p>
-<p class="p_Normal">Для генерации YAML-файла сервисом <a href="https://deckhouse.ru/gs/" target="_blank" class="weblink">Быстрый старт</a>, выберите инфраструктуру — <span style="font-weight: bold;">Закрытое окружение</span>.</p>
+<p class="p_Normal">Для генерации YAML-файла сервисом <a href="https://deckhouse.ru/gs/" target="_blank" class="weblink">Быстрый старт</a>, выберите инфраструктуру <span style="font-weight: bold;">Закрытое окружение</span>.</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">Конец&nbsp;внимание</span></p>
 <p class="p_Normal">Установите следующие параметры в ресурсе <span style="font-weight: bold;">InitConfiguration</span>:</p>
 <ul style="list-style-type:disc">
-<li class="p_Normal"><span style="font-weight: bold;">devBranch</span>: если в изолированном приватном репозитории нет образов, содержащих информацию о каналах обновлений, используйте точный тег образа Deckhouse, чтобы установить Deckhouse Platform. Например, если вы хотите установить релиз v1.46.3, используйте образ <code><b>registry.example.com/images/deckhouse/install:v1.46.3</b></code>. Также укажите <code><b>devBranch: v1.46.3</b></code> вместо <code><b>releaseChannel: XXX</b></code>;</li></ul>
+<li class="p_Normal"><span style="font-weight: bold;">devBranch</span>: если в изолированном приватном репозитории нет образов, содержащих информацию о каналах обновлений, используйте точный тег образа Deckhouse, чтобы установить Deckhouse Platform. Например, если вы хотите установить релиз v1.46.3, используйте образ <code><b>registry.example.com/images/deckhouse/install:v1.46.3</b></code>. Также укажите <code><b>devBranch: v1.46.3</b></code> вместо <code><b>releaseChannel: XXX</b></code>;</li></ul>
 <ul style="list-style-type:disc">
-<li class="p_Normal"><span style="font-weight: bold;">imagesRepo</span>: <code><b>&lt;PROXY_REGISTRY&gt;/&lt;DECKHOUSE_REPO_PATH&gt;/&lt;DECKHOUSE_REVISION&gt;</b></code> — адрес образа Deckhouse в приватном репозитории с учётом используемой редакции. В рамках статьи образы были загружены в <code><b>registry.example.com/images/deckhouse</b></code>. Подробнее читайте в статье <a href="downloading-images-deckhouse.html" class="topiclink">«Загрузка образов Deckhouse»</a>;</li></ul>
+<li class="p_Normal"><span style="font-weight: bold;">imagesRepo</span>: <code><b>&lt;PROXY_REGISTRY&gt;/&lt;DECKHOUSE_REPO_PATH&gt;/&lt;DECKHOUSE_REVISION&gt;</b></code> — адрес образа Deckhouse в приватном репозитории с учётом используемой редакции. В рамках статьи образы были загружены в <code><b>registry.example.com/images/deckhouse</b></code>. Подробнее читайте в статье <a href="downloading-images-deckhouse.html" class="topiclink">«Загрузка образов Deckhouse»</a>;</li></ul>
 <ul style="list-style-type:disc">
 <li class="p_Normal"><span style="font-weight: bold;">registryDockerCfg</span>: <code><b>&lt;BASE64&gt;</b></code> — права доступа к приватному репозиторию, зашифрованные в Base64. Примеры заполнения <span style="font-weight: bold;">registryDockerCfg</span> читайте в официальной документации <a href="https://deckhouse.ru/documentation/v1/deckhouse-faq.html#%D0%BF%D0%BE%D0%B4%D0%B3%D0%BE%D1%82%D0%BE%D0%B2%D0%BA%D0%B0-%D0%BA%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D0%B8" target="_blank" class="weblink">Deckhouse Kubernetes Platform</a>. В рамках статьи разрешён анонимный доступ к образам Deckhouse в стороннем registry. Сформируйте <span style="font-weight: bold;">registryDockerCfg</span>, выполнив следующую команду:</li></ul>
 <p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample">echo -n &quot;{\&quot;auths\&quot;: { \&quot;registry.example.com:443/images/deckhouse\&quot;: {}}}&quot; | base64</span></p>
@@ -239,21 +239,21 @@
 </tr>
 </table>
 </div>
-<h2 class="p_Heading2"><a id="installation" class="hmanchor"></a><span class="f_Heading2">Шаг 3: Установка Kubernetes-кластера на базе Deckhouse</span></h2>
+<h2 class="p_Heading2"><a id="installation" class="hmanchor"></a><span class="f_Heading2">Шаг 3. Установка Kubernetes-кластера на базе Deckhouse</span></h2>
 <p class="p_Normal">Установка Deckhouse Platform Community Edition сводится к установке кластера (установщиком на базе Docker-образа), который состоит из единственного master-узла. Инсталлятор Deckhouse доступен в виде образа контейнера, в который необходимо передать конфигурационные файлы и SSH-ключи доступа на master-узел. Далее подразумевается, что используется SSH-ключ <code><b>~/.ssh/id_rsa</b></code>. В основе инсталлятора лежит утилита <a href="https://github.com/deckhouse/deckhouse/tree/main/dhctl/" target="_blank" class="weblink">dhctl</a>.</p>
 <ol style="list-style-type:upper-roman">
 <li value="1" class="p_Normal">Запустите установщик.</li></ol>
 <p class="p_Normal"><span style="font-weight: bold;">Важно</span>: установка непосредственно с master-узла в настоящий момент не поддерживается. Установщик в виде Docker-образа нельзя запускать на том же узле, на котором планируется развёртывание master-узла, так как на узле не должно быть установлено пакетов container runtime, например, containerd или docker.</p>
 <p class="p_Normal">Установщик запускается на персональном компьютере, подготовленном на этапе <a href="kubernetes-deckhouse-air-gap.html#infrastructure-preparation" class="topiclink">подготовка инфраструктуры</a>. На ПК перейдите в директорию с файлом конфигурации <code><b>config.yml</b></code>, подготовленным на этапе <a href="kubernetes-deckhouse-air-gap.html#preparation-config-file" class="topiclink">подготовка конфигурационного файла</a>.</p>
-<p class="p_Normal"><span style="font-weight: bold;">Для запуска установщика через интернет:</span></p>
+<p class="p_Normal">Для запуска установщика через интернет:</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">sudo&nbsp;docker&nbsp;run&nbsp;--pull=always&nbsp;-it&nbsp;-v&nbsp;&quot;$PWD/config.yml:/config.yml&quot;&nbsp;-v&nbsp;&quot;$HOME/.ssh/:/tmp/.ssh/&quot;&nbsp;registry.deckhouse.io/deckhouse/ce/install:stable&nbsp;bash</span></p>
-<p class="p_Normal"><span style="font-weight: bold;"><a class="dropdown-toggle" style="font-style: normal; font-weight: bold; color: #000000; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186A2')">Для установки без доступа в интернет:</a></span></p>
+<p class="p_Normal"><span style="font-weight: bold;"><a class="dropdown-toggle" style="font-style: normal; font-weight: bold; color: #000000; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186A2')">Для установки без доступа в интернет</a></span></p>
 <div id="TOGGLE0186A2" class="dropdown-toggle-body" style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0 0 0 0;"><table style="border:none; border-spacing:0;">
 <tr>
 <td style="vertical-align:top; padding:0; border:none"><p class="p_Normal">&nbsp;<br />
 Выполните команду:</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">sudo&nbsp;docker&nbsp;run&nbsp;--pull=always&nbsp;-it&nbsp;-v&nbsp;&quot;$PWD/config.yml:/config.yml&quot;&nbsp;-v&nbsp;&quot;$HOME/.ssh/:/tmp/.ssh/&quot;&nbsp;example.com:443/images/deckhouse/install:v1.46.3&nbsp;bash</span></p>
-<p class="p_Normal">где:</p>
+<p class="p_Normal">Где:</p>
 <p class="p_Normal"><code><b>example.com:443/images/deckhouse/install:v1.46.3</b></code> — версия устанавливаемого релиза.</p>
 </td>
 </tr>
@@ -264,9 +264,9 @@
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">dhctl&nbsp;bootstrap&nbsp;--ssh-user=&lt;username&gt;&nbsp;--ssh-host=&lt;master_ip&gt;&nbsp;--ssh-agent-</span><span class="f_CodeExample" style="font-weight: bold;">private</span><span class="f_CodeExample">-keys=/tmp/.ssh/id_rsa&nbsp;\</span><br />
 <span class="f_CodeExample">--config=/config.yml&nbsp;\</span><br />
 <span class="f_CodeExample">--ask-become-pass</span></p>
-<p class="p_Normal">где:</p>
+<p class="p_Normal">Где:</p>
 <ul style="list-style-type:disc">
-<li class="p_CodeExample" style="white-space: normal; page-break-inside: auto;"><code><b>&lt;username&gt;</b></code> — в параметре <code><b>--ssh-user</b></code> укажите имя пользователя, от которого генерировался SSH-ключ для установки;</li><li class="p_CodeExample" style="white-space: normal; page-break-inside: auto;"><code><b>&lt;master_ip&gt;</b></code> — IP-адрес master-узла, подготовленного на этапе <a href="kubernetes-deckhouse-air-gap.html#infrastructure-preparation" class="topiclink">подготовка инфраструктуры</a>.</li></ul>
+<li class="p_CodeExample" style="white-space: normal; page-break-inside: auto;"><code><b>&lt;username&gt;</b></code> — в параметре <code><b>--ssh-user</b></code> укажите имя пользователя, от которого генерировался SSH‑ключ для установки;</li><li class="p_CodeExample" style="white-space: normal; page-break-inside: auto;"><code><b>&lt;master_ip&gt;</b></code> — IP-адрес master-узла, подготовленного на этапе <a href="kubernetes-deckhouse-air-gap.html#infrastructure-preparation" class="topiclink">подготовка инфраструктуры</a>.</li></ul>
 <p class="p_Normal">Процесс установки может занять 15-30 минут при хорошем соединении.</p>
 <p class="p_Normal"><a class="dropdown-toggle" style="font-style: normal; font-weight: normal; color: #000000; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186A3')">Возможные ошибки при установке Deckhouse</a></p>
 <div id="TOGGLE0186A3" class="dropdown-toggle-body" style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0 0 0 0;"><table style="border:none; border-spacing:0;">
@@ -303,16 +303,20 @@
 </tr>
 </table>
 </div>
-<h2 class="p_Heading2"><a id="setting" class="hmanchor"></a><span class="f_Heading2">Шаг 4: Настройка Deckhouse</span></h2>
+<h2 class="p_Heading2"><a id="setting" class="hmanchor"></a><span class="f_Heading2">Шаг 4. Настройка Deckhouse</span></h2>
 <p class="p_Normal">Подключитесь по SSH на master-узел, подготовленный на этапе <a href="kubernetes-deckhouse-air-gap.html#infrastructure-preparation" class="topiclink">подготовка инфраструктуры</a>. Для этого выполните следующие шаги:</p>
 <ol style="list-style-type:upper-roman">
 <li value="1" class="p_Heading3">Снимите с master-узла ограничения taint.</li></ol>
-<p class="p_Normal">В рамках статьи Kubernetes-кластер на базе Deckhouse состоит из одного узла. Разрешите компонентам Deckhouse работать на master-узле. Для этого выполните следующую команду:</p>
+<p class="p_Normal">В рамках статьи Kubernetes-кластер на базе Deckhouse состоит из одного узла. Разрешите компонентам Deckhouse работать на master-узле. Для этого выполните одну из следующих команд:</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">sudo&nbsp;kubectl&nbsp;patch&nbsp;nodegroup&nbsp;master&nbsp;--type&nbsp;json&nbsp;-p&nbsp;'[{&quot;op&quot;:&nbsp;&quot;remove&quot;,&nbsp;&quot;path&quot;:&nbsp;&quot;/spec/nodeTemplate/taints&quot;}]'</span></p>
+<p class="p_Normal">Или</p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">sudo&nbsp;-i&nbsp;d8&nbsp;k&nbsp;patch&nbsp;nodegroup&nbsp;master&nbsp;--type&nbsp;json&nbsp;-p&nbsp;'[{&quot;op&quot;:&nbsp;&quot;remove&quot;,&nbsp;&quot;path&quot;:&nbsp;&quot;/spec/nodeTemplate/taints&quot;}]'</span></p>
 <ol style="list-style-type:upper-roman" start="2">
-<li value="2" class="p_Heading3">Увеличьте количества подов на master-ноде.</li></ol>
-<p class="p_Normal">Увеличьте максимальное количество подов на узлах NodeGroup master, выполнив следующую команду:</p>
+<li value="2" class="p_Heading3">Увеличьте количество подов на master-ноде.</li></ol>
+<p class="p_Normal">Увеличьте максимальное количество подов на узлах NodeGroup master, выполнив одну из следующих команд:</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">sudo&nbsp;kubectl&nbsp;patch&nbsp;nodegroup&nbsp;master&nbsp;--type=merge&nbsp;-p&nbsp;'{&quot;spec&quot;:{&quot;kubelet&quot;:{&quot;maxPods&quot;:200}}}'</span></p>
+<p class="p_Normal">Или</p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">sudo&nbsp;-i&nbsp;d8&nbsp;k&nbsp;patch&nbsp;nodegroup&nbsp;master&nbsp;--type=merge&nbsp;-p&nbsp;'{&quot;spec&quot;:{&quot;kubelet&quot;:{&quot;maxPods&quot;:200}}}'</span></p>
 <ol style="list-style-type:upper-roman" start="3">
 <li value="3" class="p_Normal">Добавьте Local Path Provisioner.</li></ol>
 <p class="p_Normal">По умолчанию storageclass отсутствует в Deckhouse. Создайте custom resource <span style="font-weight: bold;">LocalPathProvisioner</span>, позволяющий пользователям Kubernetes использовать локальное хранилище на узлах. Для этого выполните следующие действия:</p>
@@ -334,8 +338,10 @@
 <li value="3" class="p_Normal">Примените файл <code><b>local-path-provisioner.yaml</b></code> в Kubernetes. Для этого выполните команду:</li></ol>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">sudo&nbsp;kubectl&nbsp;apply&nbsp;-f&nbsp;local-path-provisioner.yaml</span></p>
 <ol style="list-style-type:decimal" start="4">
-<li value="4" class="p_CodeExample" style="white-space: normal; page-break-inside: auto;">Установите созданный <span style="font-weight: bold;">LocalPathProvisioner</span>, как storageclass по умолчанию (default-class), выполнив команду:</li></ol>
+<li value="4" class="p_CodeExample" style="white-space: normal; page-break-inside: auto;">Установите созданный <span style="font-weight: bold;">LocalPathProvisioner</span>, как storageclass по умолчанию (default-class), выполнив одну из команд:</li></ol>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">sudo&nbsp;kubectl&nbsp;patch&nbsp;storageclass&nbsp;localpath-deckhouse-system&nbsp;-p&nbsp;'{&quot;metadata&quot;:&nbsp;{&quot;annotations&quot;:{&quot;storageclass.kubernetes.io/is-default-class&quot;:&quot;true&quot;}}}'</span></p>
+<p class="p_Normal">Или</p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">sudo&nbsp;-i&nbsp;d8&nbsp;k&nbsp;patch&nbsp;mc&nbsp;global&nbsp;--type&nbsp;merge&nbsp;-p&nbsp;&quot;{&quot;spec&quot;:&nbsp;{&quot;settings&quot;:{&quot;defaultClusterStorageClass&quot;:&quot;localpath-deckhouse-system&quot;}}}&quot;</span></p>
 <ol style="list-style-type:upper-roman" start="4">
 <li value="4" class="p_Normal">Добавьте Ingress Nginx Controller.</li></ol>
 <p class="p_Normal">Deckhouse устанавливает и управляет NGINX Ingress Controller при помощи Custom Resources. Если узлов для размещения Ingress-контроллера больше одного, он устанавливается в отказоустойчивом режиме и учитывает все особенности реализации инфраструктуры облаков и bare metal, а также кластеров Kubernetes различных типов.</p>
@@ -403,20 +409,22 @@
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">sudo&nbsp;kubectl&nbsp;create&nbsp;-f&nbsp;user.yml</span></p>
 <ol style="list-style-type:upper-roman" start="5">
 <li value="6" class="p_Normal">Разрешите переназначить политику привилегий для запускаемых подов:</li></ol>
-<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">sudo&nbsp;kubectl&nbsp;label&nbsp;namespace&nbsp;elma365 security.deckhouse.io/pod-policy=privileged --overwrite</span></p>
-<h2 class="p_Heading2"><a id="installation-helm" class="hmanchor"></a><span class="f_Heading2">Шаг 5: Установка HELM</span></h2>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">sudo&nbsp;kubectl&nbsp;label&nbsp;namespace&nbsp;elma365&nbsp;security.deckhouse.io/pod-policy=privileged&nbsp;--overwrite</span></p>
+<h2 class="p_Heading2"><a id="installation-helm" class="hmanchor"></a><span class="f_Heading2">Шаг 5. Установка HELM</span></h2>
 <p class="p_Normal">HELM можно установить, загрузив определённую версию вручную, или с помощью скрипта. Оба способа подробно описаны в <a href="https://helm.sh/ru/docs/intro/install/" target="_blank" class="weblink">официальной документации менеджера пакетов HELM</a>. </p>
 <p class="p_Normal">Рассмотрим загрузку и установку инструмента вручную:</p>
 <ol style="list-style-type:upper-roman">
 <li value="1" class="p_Normal">Перейдите на страницу релизов <a href="https://github.com/helm/helm/releases" target="_blank" class="weblink">Helm</a> и скачайте архив <code><b>helm-vX.Y.Z-linux-amd64.tar.gz</b></code> необходимой версии.</li></ol>
 <p class="p_Normal"><span style="font-weight: bold;">Для установки через интернет:</span></p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">wget&nbsp;https://get.helm.sh/helm-vX.Y.Z-linux-amd64.tar.gz</span></p>
-<p class="p_Normal"><span style="font-weight: bold;"><a class="dropdown-toggle" style="font-style: normal; font-weight: bold; color: #000000; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186A4')">Для офлайн-установки без доступа в интернет:</a></span></p>
+<p class="p_Normal"><span style="font-weight: bold;"><a class="dropdown-toggle" style="font-style: normal; font-weight: bold; color: #000000; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186A4')">Для установки без доступа в интернет</a></span></p>
 <div id="TOGGLE0186A4" class="dropdown-toggle-body" style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0 0 0 0;"><table style="border:none; border-spacing:0;">
 <tr>
-<td style="vertical-align:top; padding:0; border:none"><p class="p_Normal">На компьютере с доступом в интернет перейдите на страницу релизов Helm и скачайте архив <code><b>helm-vX.Y.Z-linux-amd64.tar.gz</b></code> нужной версии, выполнив команду:</p>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_Normal">&nbsp;<br />
+На компьютере с доступом в интернет перейдите на страницу релизов Helm и скачайте архив <code><b>helm-vX.Y.Z-linux-amd64.tar.gz</b></code> нужной версии, выполнив команду:</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">wget&nbsp;https://get.helm.sh/helm-vX.Y.Z-linux-amd64.tar.gz</span></p>
-<p class="p_Normal">Скопируйте полученный архив на master-узел.</p>
+<p class="p_Normal">&nbsp;<br />
+Скопируйте полученный архив на master-узел.</p>
 </td>
 </tr>
 </table>
@@ -513,9 +521,9 @@
 </div>
  
     </footer>
-    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jquery1.min.js"></script>
     <iframe name="hmnavigation" style="display:none!important"></iframe>
-    <script src="./jquery-ui.js"></script>
+    <!--<script src="./jquery-ui.js"></script> -->
     <script src="./jquery-ui.min.js"></script>
     <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
     <script src="./jquery.tocify.min.js"></script>

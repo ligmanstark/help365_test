@@ -119,7 +119,7 @@
 <p class="p_Normal">Действие фильтрации данных выполняется в дочернем виджете. После его исполнения событие о нём передаётся по нажатию кнопки в родительский виджет, т. е. страницу. Таким образом на странице пользователь сможет увидеть результаты поиска.</p>
 <p class="p_Normal"><img alt="event-in-widgets-1" width="992" height="543" style="margin:0;width:992px;height:543px;border:none" src="event-in-widgets-1.png"/></p>
 <p class="p_Normal">Рассмотрим подробнее, как выполнить настройку такой передачи данных.</p>
-<h2 class="p_Heading2"><span class="f_Heading2">Шаг 1: Создать виджет «Фильтр данных» и настроить передачу события из него</span></h2>
+<h2 class="p_Heading2"><span class="f_Heading2">Шаг 1. Создать виджет «Фильтр данных» и настроить передачу события из него</span></h2>
 <p class="p_Normal">Начните настройку с создания дочернего виджета. В нём нужно:</p>
 <ul style="list-style-type:disc">
 <li class="p_Normal">добавить свойства для поиска;</li><li class="p_Normal">создать переменную типа <span style="font-weight: bold;">Событие</span>, к которой в родительском виджете нужно привязать скрипт для выполнения поиска;</li><li class="p_Normal">разместить кнопку <span style="font-weight: bold;">Найти</span>, чтобы при её нажатии передать событие в родительский виджет.</li></ul>
@@ -137,7 +137,7 @@
 <ol style="list-style-type:upper-roman" start="4">
 <li value="4" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Сохраните и опубликуйте виджет </span><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif; font-weight: bold;">Фильтр данных</span><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">.</span></li></ol>
 <p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Теперь его можно использовать в других виджетах как дочерний для настройки быстрого поиска элементов любых приложений.</span></p>
-<h2 class="p_Heading2"><span class="f_Heading2">Шаг 2: Разместить виджет на странице и настроить скрипт при получении события</span></h2>
+<h2 class="p_Heading2"><span class="f_Heading2">Шаг 2. Разместить виджет на странице и настроить скрипт при получении события</span></h2>
 <p class="p_Normal">На готовую страницу <span style="font-weight: bold;">Оптовые продажи</span> со списком задач добавьте созданный виджет. Страница станет для него родительским виджетом. Для этого нужно:</p>
 <ul style="list-style-type:disc">
 <li class="p_Normal">создать в её контексте переменные, чтобы записать данные фильтрации и найти договоры;</li><li class="p_Normal">разместить на ней созданный на первом шаге виджет и поле для отображения результатов поиска;</li><li class="p_Normal">в настройках добавленного виджета указать скрипт в пользовательском событии, чтобы находить нужные элементы при получении события о нажатии кнопки <span style="font-weight: bold;">Найти</span>.</li></ul>
@@ -271,9 +271,9 @@
 </div>
  
     </footer>
-    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jquery1.min.js"></script>
     <iframe name="hmnavigation" style="display:none!important"></iframe>
-    <script src="./jquery-ui.js"></script>
+    <!--<script src="./jquery-ui.js"></script> -->
     <script src="./jquery-ui.min.js"></script>
     <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
     <script src="./jquery.tocify.min.js"></script>

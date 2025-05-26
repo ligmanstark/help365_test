@@ -119,7 +119,7 @@
 <p class="p_Normal"><img alt="auto-approval-1" width="377" height="595" style="margin:0;width:377px;height:595px;border:none" src="auto-approval-1.png"/></p>
 <p class="p_Normal">Обратите внимание, при автоматическом согласовании:</p>
 <ul style="list-style-type:disc">
-<li class="p_Normal">не предусмотрено подписание документа;</li><li class="p_Normal">к резолюции нельзя приложить дополнительный файл;</li><li class="p_Normal">из блока <span style="font-weight: bold;">Согласование</span> можно настроить только один переход к следующему шагу процесса в соответствии с резолюцией. Также можно задать переход, который выполнится, если возникнет ошибка;</li><li class="p_Normal">блок <a href="360011756780.html" class="topiclink">Закрыть согласование</a> не используется, т. к. резолюция будет вынесена в самом блоке <span style="font-weight: bold;">Согласование</span>, дополнительно завершать согласование не нужно. Если блок <span style="font-weight: bold;">Закрыть согласование</span> разместить после блока <span style="font-weight: bold;">Согласование</span> с включённой опцией <span style="font-weight: bold;">Автоматически</span>, в ходе процесса возникнет ошибка.</li></ul>
+<li class="p_Normal">не предусмотрено подписание документа;</li><li class="p_Normal">к резолюции нельзя приложить дополнительный файл;</li><li class="p_Normal">из блока <span style="font-weight: bold;">Согласование</span> можно настроить только один переход к следующему шагу процесса в соответствии с резолюцией. Также можно задать переход, который выполнится, если возникнет ошибка;</li><li class="p_Normal">по умолчанию в <a href="approval-sheets.html" class="topiclink">листе согласования</a> финальная резолюция отображается после завершения процесса. До этого момента пользователи видят статус <span style="font-weight: bold;">На согласовании</span>. Чтобы сформировать итоговую резолюцию <span style="font-weight: bold;">Согласовано</span> или <span style="font-weight: bold;">Отказано</span> после рассмотрения документа, файла или элемента приложения, используйте блок  <a href="360011756780.html" class="topiclink">Закрыть согласование</a>.</li></ul>
 <h2 class="p_Heading2"><span class="f_Heading2">Предварительные настройки</span></h2>
 <p class="p_Normal">Убедитесь, что в <a href="process_context.html" class="topiclink">контекст процесса</a> добавлена переменная, которая ссылается на объект согласования.</p>
 <p class="p_Normal">Также добавьте в контекст процесса переменную типа <span style="font-weight: bold;">Строка</span>, в которую запишется комментарий согласующего. Эта переменная должна быть заполнена до перехода процесса в блок <span style="font-weight: bold;">Согласование</span>. Вынесите её на форму задачи, в которой сотрудник принимает решение по документу. Такую задачу разместите на схеме процесса раньше блока <span style="font-weight: bold;">Согласование</span>.</p>
@@ -230,9 +230,9 @@
 </div>
  
     </footer>
-    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jquery1.min.js"></script>
     <iframe name="hmnavigation" style="display:none!important"></iframe>
-    <script src="./jquery-ui.js"></script>
+    <!--<script src="./jquery-ui.js"></script> -->
     <script src="./jquery-ui.min.js"></script>
     <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
     <script src="./jquery.tocify.min.js"></script>

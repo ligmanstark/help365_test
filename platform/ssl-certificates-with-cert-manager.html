@@ -171,11 +171,12 @@
 <p class="p_Normal">где:</p>
 <ul style="list-style-type:disc">
 <li class="p_Normal"><code><b>metadata.namespace</b></code> <span style="font-size: 11px; color: #394149;">—</span> наименование нужного namespace, в котором должен быть размещён сертификат;</li></ul>
-<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;внимание</span></p>
-<p class="p_Normal">Secret с сертификатом должен быть создан в том же namespace, в котором работает или будет установлено целевое приложение, для которого выпускается сертификат.</p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;примечание</span></p>
+<p class="p_Normal"><span style="font-weight: bold;">Примечание</span></p>
+<p class="p_Normal">Создайте Secret с сертификатом в том же namespace, в котором работает или будет установлено целевое приложение, для которого выпускается сертификат.</p>
 <p class="p_Normal">Для приложения <a href="installing-elma365-enterprise.html" class="topiclink">ELMA365</a> стандартный namespace: <code><b>elma365</b></code>. </p>
 <p class="p_Normal">Для <a href="embedded-databases-settings.html" class="topiclink">встроенных баз данных</a> стандартный namespace: <code><b>elma365-dbs</b></code>.</p>
-<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;внимание</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;примечание</span></p>
 <ul style="list-style-type:disc">
 <li class="p_Normal"><code><b>spec.duration</b></code> <span style="font-size: 11px; color: #394149;">—</span> срок действия сертификата в часах;</li><li class="p_Normal"><code><b>spec.subject.organizations</b></code><span style="font-weight: bold;"> </span><span style="font-size: 11px; color: #394149;">—</span> наименование вашей организации (замените <code><b>"YOUR_NAME_ORGANIZATIONS"</b></code>);</li><li class="p_Normal"><code><b>spec.commonName</b></code> и <code><b>dnsNames</b></code> <span style="font-size: 11px; color: #394149;">—</span> наименование домена (FQDN), для которого должен быть выпущен сертификат (замените <code><b>"elma365_server.your_domain"</b></code>).</li></ul>
 <ol style="list-style-type:upper-roman">
@@ -271,9 +272,9 @@
 </div>
  
     </footer>
-    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jquery1.min.js"></script>
     <iframe name="hmnavigation" style="display:none!important"></iframe>
-    <script src="./jquery-ui.js"></script>
+    <!--<script src="./jquery-ui.js"></script> -->
     <script src="./jquery-ui.min.js"></script>
     <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
     <script src="./jquery.tocify.min.js"></script>

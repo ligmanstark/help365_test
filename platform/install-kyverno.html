@@ -115,7 +115,7 @@
 <p class="p_Normal">Установка состоит из трёх этапов:</p>
 <ol style="list-style-type:decimal">
 <li value="1" class="p_Normal"><a href="install-kyverno.html#download-helm-chart" class="topiclink">Скачивание Helm-чарта и конфигурационного файла</a>.</li><li value="2" class="p_Normal"><a href="install-kyverno.html#enable-policies" class="topiclink">Настройка политики и заполнение конфигурационного файла</a>.</li><li value="3" class="p_Normal"><a href="install-kyverno.html#install-chart" class="topiclink">Установка с помощью Helm в Kubernetes-кластер чарта Kyverno</a>.</li></ol>
-<h2 class="p_Heading2"><a id="download-helm-chart" class="hmanchor"></a><span class="f_Heading2">Шаг 1: Скачивание Helm-чарта и конфигурационного файла</span></h2>
+<h2 class="p_Heading2"><a id="download-helm-chart" class="hmanchor"></a><span class="f_Heading2">Шаг 1. Скачивание Helm-чарта и конфигурационного файла</span></h2>
 <p class="p_Normal">Для установки через интернет получите конфигурационный файл <code><b>values-kyverno.yaml</b></code>, выполнив команду:</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">helm&nbsp;repo&nbsp;add&nbsp;elma365&nbsp;https://charts.elma365.tech</span><br />
 <span class="f_CodeExample">helm&nbsp;repo&nbsp;update</span><br />
@@ -139,11 +139,11 @@
 </tr>
 </table>
 </div>
-<h2 class="p_Heading2"><a id="enable-policies" class="hmanchor"></a><span class="f_Heading2">Шаг 2: Настройка политики и заполнение конфигурационного файла</span></h2>
+<h2 class="p_Heading2"><a id="enable-policies" class="hmanchor"></a><span class="f_Heading2">Шаг 2. Настройка политики и заполнение конфигурационного файла</span></h2>
 <p class="p_Normal">Заполните конфигурационный файл <code><b>values-kyverno.yaml</b></code> для включения необходимых политик:</p>
 <ul style="list-style-type:disc">
 <li class="p_Normal"><a href="ca-certificates-adding-policy.html" class="topiclink">политика добавления пользовательских сертификатов CA в контейнеры ELMA365</a>;</li><li class="p_Normal"><a href="docker-image-verification-policy.html" class="topiclink">политика проверки подписей Docker-образов</a>.</li></ul>
-<h2 class="p_Heading2"><a id="install-chart" class="hmanchor"></a><span class="f_Heading2">Шаг 3: Установка чарта Kyverno с помощью Helm в Kubernetes-кластер</span></h2>
+<h2 class="p_Heading2"><a id="install-chart" class="hmanchor"></a><span class="f_Heading2">Шаг 3. Установка чарта Kyverno с помощью Helm в Kubernetes-кластер</span></h2>
 <p class="p_Normal">Выполните установку чарта Kyverno в <code><b>namespace</b></code>, созданный на <a href="install-kyverno.html#download-helm-chart" class="topiclink">шаге 1</a>. В данной статье — значение <code><b>kyverno</b></code>.</p>
 <p class="p_Normal">Для установки через интернет:</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">helm&nbsp;upgrade&nbsp;--install&nbsp;kyverno&nbsp;elma365/kyverno&nbsp;-f&nbsp;values-kyverno.yaml&nbsp;-n&nbsp;kyverno&nbsp;--create-namespace&nbsp;</span></p>
@@ -243,9 +243,9 @@
 </div>
  
     </footer>
-    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jquery1.min.js"></script>
     <iframe name="hmnavigation" style="display:none!important"></iframe>
-    <script src="./jquery-ui.js"></script>
+    <!--<script src="./jquery-ui.js"></script> -->
     <script src="./jquery-ui.min.js"></script>
     <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
     <script src="./jquery.tocify.min.js"></script>

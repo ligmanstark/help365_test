@@ -122,7 +122,7 @@
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">Начало&nbsp;внимание</span></p>
 <p class="p_Normal">При установке Loki + <a href="install-tempo.html" class="topiclink">Tempo</a> начните с аддона Loki. Это позволит сохранить настройки кросслинков, так как изначально прописываются настройки <span style="font-weight: bold;">Datasource</span>.</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">Конец&nbsp;внимание</span></p>
-<h2 class="p_Heading2"><a id="download-helm-chart-and-config-file" class="hmanchor"></a><span class="f_Heading2">Шаг 1: Загрузить Helm-чарт и конфигурационный файл</span></h2>
+<h2 class="p_Heading2"><a id="download-helm-chart-and-config-file" class="hmanchor"></a><span class="f_Heading2">Шаг 1. Загрузить Helm-чарт и конфигурационный файл</span></h2>
 <p style="line-height: 1.28; margin: 0 0 11px 0;">Для установки через интернет получите конфигурационный файла <code><b>values-loki.yaml</b></code>, выполнив команду:</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">helm&nbsp;repo&nbsp;add&nbsp;elma365&nbsp;https://charts.elma365.tech</span><br />
 <span class="f_CodeExample">helm&nbsp;repo&nbsp;update</span><br />
@@ -144,14 +144,14 @@
 </tr>
 </table>
 </div>
-<h2 class="p_Heading2"><a id="create-bucket" class="hmanchor"></a><span class="f_Heading2">Шаг 2: Создать бакеты в MinIO</span></h2>
+<h2 class="p_Heading2"><a id="create-bucket" class="hmanchor"></a><span class="f_Heading2">Шаг 2. Создать бакеты в MinIO</span></h2>
 <p class="p_Normal">1. Создайте <code><b>alias</b></code> для MinIO:</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">mc&nbsp;alias&nbsp;set&nbsp;my_alias&nbsp;http://minio.local&nbsp;accessKey&nbsp;secretKey</span></p>
 <p class="p_Normal">2. Создайте бакеты с наименованиями <span style="font-weight: bold;">admins</span>, <span style="font-weight: bold;">chunks</span> и <span style="font-weight: bold;">rules</span>, выполнив команду:</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">mc&nbsp;mb&nbsp;-p&nbsp;my_alias/admin&nbsp;--region=ru-central-1</span><br />
 <span class="f_CodeExample">mc&nbsp;mb&nbsp;-p&nbsp;my_alias/chunks&nbsp;--region=ru-central-1</span><br />
 <span class="f_CodeExample">mc&nbsp;mb&nbsp;-p&nbsp;my_alias/rules&nbsp;--region=ru-central-1</span></p>
-<h2 class="p_Heading2"><a id="filling-out-configuration-file" class="hmanchor"></a><span class="f_Heading2">Шаг 3: Заполнить конфигурационный файл</span></h2>
+<h2 class="p_Heading2"><a id="filling-out-configuration-file" class="hmanchor"></a><span class="f_Heading2">Шаг 3. Заполнить конфигурационный файл</span></h2>
 <p class="p_Normal"><a class="dropdown-toggle" style="font-style: normal; font-weight: normal; color: #000000; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186A2')">Заполнение конфигурационного файла values-loki.yaml для установки Loki</a></p>
 <div id="TOGGLE0186A2" class="dropdown-toggle-body" style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0 0 0 0;"><table style="border:none; border-spacing:0;">
 <tr>
@@ -302,13 +302,13 @@
 </tr>
 </table>
 </div>
-<h2 class="p_Heading2"><a id="install-chart-loki" class="hmanchor"></a><span class="f_Heading2">Шаг 4: Установить чарт Loki с помощью Helm в Kubernetes-кластер</span></h2>
+<h2 class="p_Heading2"><a id="install-chart-loki" class="hmanchor"></a><span class="f_Heading2">Шаг 4. Установить чарт Loki с помощью Helm в Kubernetes-кластер</span></h2>
 <p style="line-height: 1.28; page-break-inside: avoid; page-break-after: avoid; margin: 3px 0 0 0;">Выполните установку чарта <span style="font-weight: bold;">Loki</span> в <code><b>namespace monitoring</b></code><span style="color: #333333;">.</span></p>
 <p style="background: #ffffff; margin: 10px 0 0 0;">Для установки через интернет:</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">helm&nbsp;upgrade&nbsp;--install&nbsp;-n&nbsp;monitoring&nbsp;loki&nbsp;elma365/loki&nbsp;-f&nbsp;values-loki.yaml</span></p>
 <p style="line-height: 1.0; white-space: nowrap; page-break-inside: avoid;">Для&nbsp;офлайн-установки&nbsp;без&nbsp;доступа&nbsp;в&nbsp;интернет&nbsp;перейдите&nbsp;в&nbsp;каталог&nbsp;с&nbsp;загруженным&nbsp;чартом&nbsp;и&nbsp;выполните&nbsp;команду:</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">helm&nbsp;upgrade&nbsp;--install&nbsp;loki&nbsp;./loki&nbsp;-f&nbsp;values-loki.yaml&nbsp;-n&nbsp;monitoring</span></p>
-<h2 class="p_Heading2"><a id="configure-connection" class="hmanchor"></a><span class="f_Heading2">Шаг 5: Настроить подключение Loki в источниках данных Grafana</span></h2>
+<h2 class="p_Heading2"><a id="configure-connection" class="hmanchor"></a><span class="f_Heading2">Шаг 5. Настроить подключение Loki в источниках данных Grafana</span></h2>
 <p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="background-color: #ffffff;">Источник Loki добавляется в Grafana автоматически при установке. Проверить его можно в меню администратора&nbsp;</span><span style="font-weight: bold; background-color: #ffffff;">Home &gt; Administration &gt; Data source</span><span style="background-color: #ffffff;">&nbsp;или&nbsp;</span><span style="font-weight: bold; background-color: #ffffff;">Home &gt; Connections &gt; Data sources</span><span style="background-color: #ffffff;">.&nbsp;</span></p>
 <p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="background-color: #ffffff;">Для добавления вручную в поле&nbsp;</span><span style="font-weight: bold; background-color: #ffffff;">URL</span><span style="background-color: #ffffff;">&nbsp;укажите значение&nbsp;</span><span style="font-weight: bold;">http://loki-gateway</span>.</p>
 <p style="line-height: 1.28; margin: 0 0 11px 0;"><img alt="install-loki-1" width="525" height="341" style="margin:0;width:525px;height:341px;border:none" src="install-loki-1.png"/></p>
@@ -439,9 +439,9 @@
 </div>
  
     </footer>
-    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jquery1.min.js"></script>
     <iframe name="hmnavigation" style="display:none!important"></iframe>
-    <script src="./jquery-ui.js"></script>
+    <!--<script src="./jquery-ui.js"></script> -->
     <script src="./jquery-ui.min.js"></script>
     <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
     <script src="./jquery.tocify.min.js"></script>
