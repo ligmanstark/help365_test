@@ -117,14 +117,13 @@
 <p class="p_Normal">Вы также можете ознакомиться с кратким руководством в <a href="https://www.mongodb.com/docs/manual/installation/" target="_blank" class="weblink">официальной документации MongoDB</a>.</p>
 <p class="p_Normal">Если вы устанавливаете MongoDB 5.0, эта версия требует использования набора инструкций AVX. Предварительно проверьте их наличие следующей командой:</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">cat&nbsp;/proc/cpuinfo&nbsp;|&nbsp;grep&nbsp;avx</span></p>
-<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;внимание&nbsp;</span></p>
-<p class="p_Normal"><span style="font-size: 15px;">В рамках статьи используется имя базы </span><span style="font-size: 15px; font-weight: bold;">elma365</span><span style="font-size: 15px;">, пользователь </span><span style="font-size: 15px; font-weight: bold;">elma365</span><span style="font-size: 15px;"> и пароль </span><span style="font-size: 15px; font-weight: bold;">SecretPassword</span><span style="font-size: 15px; font-style: italic;">.</span></p>
-<p class="p_Normal" style="line-height: 1.57;"><span style="font-size: 15px;">При настройке задайте эти данные согласно политике безопасности, принятой в вашей организации.</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;внимание</span></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;">В статье используется имя базы <span style="font-weight: bold;">elma365</span>, пользователь <span style="font-weight: bold;">elma365 </span>и пароль <span style="font-weight: bold;">SecretPassword</span>.<span style="font-weight: bold;"> </span>При настройке задайте эти данные согласно политике безопасности, принятой в вашей организации.</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;внимание</span></p>
 <p class="p_Normal">Установка состоит из пяти этапов:</p>
 <ol style="list-style-type:decimal">
 <li value="1" class="p_Normal"><a href="mongodb.html#installation" class="topiclink">Установка MongoDB</a>.</li><li value="2" class="p_Normal"><a href="mongodb.html#add_db" class="topiclink">Настройка MongoDB</a>.</li><li value="3" class="p_Normal"><a href="mongodb.html#connection-setup" class="topiclink">Настройка подключения к MongoDB</a>.</li><li value="4" class="p_Normal"><a href="mongodb.html#replica-initial" class="topiclink">Инициализация реплики</a>.</li><li value="5" class="p_Normal"><a href="mongodb.html#connection" class="topiclink">Подключение к MongoDB</a>.</li></ol>
-<h2 class="p_Heading2"><a id="installation" class="hmanchor"></a><span class="f_Heading2">Шаг 1: Установка MongoDB</span></h2>
+<h2 class="p_Heading2"><a id="installation" class="hmanchor"></a><span class="f_Heading2">Шаг 1. Установка MongoDB</span></h2>
 <p class="p_Normal">Для установки MongoDB добавьте официальный репозиторий:</p>
 <p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample">sudo apt-get install gnupg</span><br />
 <span class="f_CodeExample">curl -fsSL https:</span><span class="f_CodeExample">//pgp.mongodb.com/server-6.0.asc | sudo gpg -o /usr/share/keyrings/mongodb-server-6.0.gpg --dearmor</span><br />
@@ -134,14 +133,15 @@
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">sudo&nbsp;apt&nbsp;install&nbsp;mongodb-org</span></p>
 <p class="p_Normal">Запустите MongoDB:</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">sudo&nbsp;systemctl&nbsp;enable&nbsp;--now&nbsp;mongod</span></p>
-<h2 class="p_Heading2"><a id="add_db" class="hmanchor"></a><span class="f_Heading2">Шаг 2: Настройка MongoDB</span></h2>
-<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">Начало&nbsp;внимание</span></p>
+<h2 class="p_Heading2"><a id="add_db" class="hmanchor"></a><span class="f_Heading2">Шаг 2. Настройка MongoDB</span></h2>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">Начало&nbsp;примечание</span></p>
+<p class="p_Normal"><span style="font-weight: bold;">Примечание</span></p>
 <p class="p_Normal">Для пароля разрешается применять следующие символы: </p>
 <ul style="list-style-type:disc">
 <li class="p_Normal">Заглавные латинские буквы: от A до Z;</li><li class="p_Normal">Строчные латинские буквы: от a до z; </li><li class="p_Normal">Цифры от 0 до 9; </li><li class="p_Normal">Символы: -_.</li></ul>
 <p class="p_Normal">Зарезервированные (недопустимые) символы:</p>
 <p class="p_Normal">! * ' ( ) ; : @ &amp; = + $ , / ? % # [ ]</p>
-<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">Конец&nbsp;внимание</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">Конец&nbsp;примечание</span></p>
 <ol style="list-style-type:upper-roman">
 <li value="1" class="p_Normal"><a id="create-db" class="hmanchor"></a>Зайдите в <span style="font-weight: bold;">mongosh</span> (Command Line Interface) и создайте базу данных:</li></ol>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">mongosh</span></p>
@@ -182,7 +182,7 @@
 <ol style="list-style-type:upper-roman">
 <li value="10" class="p_Normal">Перезапустите MongoDB:</li></ol>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">sudo&nbsp;systemctl&nbsp;restart&nbsp;mongod</span></p>
-<h2 class="p_Heading2"><a id="connection-setup" class="hmanchor"></a><span class="f_Heading2">Шаг 3: Настройка подключения к MongoDB</span></h2>
+<h2 class="p_Heading2"><a id="connection-setup" class="hmanchor"></a><span class="f_Heading2">Шаг 3. Настройка подключения к MongoDB</span></h2>
 <p class="p_Normal">Внесите изменения в файл конфигурации <code><b>/etc/mongod.conf</b></code>:</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">sudo&nbsp;nano&nbsp;/etc/mongod.conf</span></p>
 <p class="p_Normal">Настройте значения переменных:</p>
@@ -225,7 +225,7 @@
 </div>
 <p class="p_Normal">Перезапустите MongoDB, чтобы изменение вступило в силу:</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">sudo&nbsp;systemctl&nbsp;restart&nbsp;mongod</span></p>
-<h2 class="p_Heading2"><a id="replica-initial" class="hmanchor"></a><span class="f_Heading2">Шаг 4: Инициализация реплики</span></h2>
+<h2 class="p_Heading2"><a id="replica-initial" class="hmanchor"></a><span class="f_Heading2">Шаг 4. Инициализация реплики</span></h2>
 <ol style="list-style-type:upper-roman">
 <li value="1" class="p_Normal">Откройте консоль <span style="font-weight: bold;">mongosh</span> для конфигурирования.</li></ol>
 <p class="p_Normal">Для подключения к MongoDB:</p>
@@ -241,7 +241,7 @@
 <ol style="list-style-type:upper-roman">
 <li value="4" class="p_Normal">Проверьте состояние MongoDB:</li></ol>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">rs.status()</span></p>
-<h2 class="p_Heading2"><a id="connection" class="hmanchor"></a><span class="f_Heading2">Шаг 5: Подключение к MongoDB</span></h2>
+<h2 class="p_Heading2"><a id="connection" class="hmanchor"></a><span class="f_Heading2">Шаг 5. Подключение к MongoDB</span></h2>
 <p class="p_Normal">Строка для подключения к MongoDB:</p>
 <p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample">mongodb://elma365:SecretPassword@&lt;mongodb-server-address&gt;:27017/elma365?ssl=false&amp;replicaSet=rs0&amp;readPreference=nearest</span></p>
 <p class="p_Normal">Строка для подключения к MongoDB c TLS/SSL:</p>
@@ -271,7 +271,7 @@
 <ol style="list-style-type:upper-roman" start="4">
 <li value="4" class="p_Normal">После этого выполните восстановление данных, в зависимости от вашей поставки ELMA365 On-Premises и способа резервного копирования:</li></ol>
 <ul style="list-style-type:disc">
-<li class="p_Normal"><a href="database-backup-and-recovery.html#recovery-database" class="topiclink">восстановление резервной копии с помощью утилиты Elma365-Backupper</a>;</li><li class="p_Normal"><a href="dump_db.html#recovery-mongo" class="topiclink">восстановление для резервного копирования внешними средствами</a>;</li><li class="p_Normal"><a href="backup-restore-elma365standard.html#restore-data" class="topiclink">восстановление резервной копии в поставке Standard</a>.</li></ul>
+<li class="p_Normal"><a href="database-backup-and-recovery.html#recovery-database" class="topiclink">восстановление резервной копии с помощью утилиты Elma365-Backupper</a>;</li><li class="p_Normal"><a href="backup-and-recovery-with-wal-g-and-rclone.html#wal-g-in-mongo" class="topiclink">восстановление резервной копии с помощью WAL-G</a>;</li><li class="p_Normal"><a href="dump_db.html#recovery-mongo" class="topiclink">восстановление для резервного копирования внешними средствами</a>;</li><li class="p_Normal"><a href="backup-restore-elma365standard.html#restore-data" class="topiclink">восстановление резервной копии в поставке Standard</a>.</li></ul>
 
                         <div class="bottom-nav">
                             
@@ -360,9 +360,9 @@
 </div>
  
     </footer>
-    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jquery1.min.js"></script>
     <iframe name="hmnavigation" style="display:none!important"></iframe>
-    <script src="./jquery-ui.js"></script>
+    <!--<script src="./jquery-ui.js"></script> -->
     <script src="./jquery-ui.min.js"></script>
     <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
     <script src="./jquery.tocify.min.js"></script>

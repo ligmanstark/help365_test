@@ -185,9 +185,6 @@
 <ul style="list-style-type:disc">
 <li class="p_Normal"><span style="font-size: 15px; font-family: Inter; font-weight: bold;">Опциональные зависимости (доступны в объекте Imports) </span><span style="font-size: 15px; font-family: Inter;">— установите </span><span style="font-size: 15px; font-family: Inter; color: #0563c1;"><a href="optional-dependencies.html" class="topiclink">опциональные зависимости</a></span><span style="font-size: 15px; font-family: Inter;"> от выбранных разделов или пользовательских модулей. После этого в срипте виджета к указанным компонентам можно получить доступ с помощью константы </span><span style="font-size: 13px; font-family: Inter; color: #0563c1;"><a href="global-constants.html" class="topiclink">Imports</a></span><span style="font-size: 15px; font-family: Inter;">. Это позволяет экспортировать и импортировать приложение или раздел без ограничений.</span></li></ul>
 <p style="margin: 7px 0 7px 34px;"><span style="font-size: 15px; font-family: Inter;">Чтобы установить зависимость, нажмите </span><span style="font-size: 15px; font-family: Inter; font-weight: bold;">+ Добавить раздел</span><span style="font-size: 15px; font-family: Inter;"> и выберите раздел или пользовательский модуль. Затем в колонке </span><span style="font-size: 15px; font-family: Inter; font-weight: bold;">Псевдоним</span><span style="font-size: 15px; font-family: Inter;"> задайте для него уникальное имя, которое будет использоваться в скрипте. Допустимы латинские буквы и цифры, для разделения слов можно использовать знак подчёркивания. По умолчанию в поле указывается код раздела или ID модуля.</span></p>
-<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;внимание</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-family: Inter;">Опциональные зависимости </span><span style="font-size: 15px; font-family: Inter;">и константа </span><code><b>Imports</b></code><span style="font-family: Inter;"> по умолчанию доступны в поставке SaaS, а также On‑Premises, начиная с версии системы 2024.2. В более ранних версиях <a href="360006871932.html#administrators" class="topiclink">администратору системы</a> нужно включить фича-флаг </span><code><b>allowScriptImportsDependencies</b></code><span style="font-family: Inter;">. Подробнее об этом читайте в статьях <a href="change-settings-enterprise.html#enable-feature-flag-enterpeise" class="topiclink">«Изменение параметров On-Premises Enterprise»</a> и <a href="change-elma365standard-parameters.html#enable-feature-flag-standard" class="topiclink">«Изменение параметров On-Premises Standard»</a>.</span></p>
-<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;внимание</span></p>
 <p style="margin: 0 0 11px 0;">Подробнее об использовании констант <code><b>Global</b></code> или <code><b>Namespace</b></code> в скриптах читайте в cправке ELMA365 TS SDK в статье <a href="https://tssdk.elma365.com/ru/latest/pages/quick-start/intro_globals.html" target="_blank" class="weblink">«Глобальный контекст и изоляция»</a>. Использование константы <code><b>Imports</b></code> описано в статье <a href="optional-dependencies.html" class="topiclink">«Опциональные зависимости»</a>.</p>
 <h2 class="p_Heading2"><a id="files-tab" class="hmanchor"></a><span class="f_Heading3">Вкладка </span><span class="f_Heading2">«Файлы»</span></h2>
 <p style="margin: 19px 0 0 0;">На вкладке <span style="font-weight: bold;">Файлы</span> вы можете добавить библиотеки и пользовательские функции на языке JavaScript, чтобы обращаться к ним в <a href="client_server_scripts.html" class="topiclink">клиентских скриптах</a>.</p>
@@ -280,9 +277,9 @@
 </div>
  
     </footer>
-    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jquery1.min.js"></script>
     <iframe name="hmnavigation" style="display:none!important"></iframe>
-    <script src="./jquery-ui.js"></script>
+    <!--<script src="./jquery-ui.js"></script> -->
     <script src="./jquery-ui.min.js"></script>
     <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
     <script src="./jquery.tocify.min.js"></script>

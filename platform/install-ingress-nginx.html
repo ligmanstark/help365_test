@@ -115,7 +115,7 @@
 <p style="line-height: 1.28; margin: 0 0 11px 0;">Установка состоит из трёх этапов:</p>
 <ol style="list-style-type:decimal">
 <li value="1" style="background: #ffffff; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><a href="install-ingress-nginx.html#download-helm-chart-and-config-file" class="topiclink">Скачать Helm-чарт и конфигурационный файл</a>.</li><li value="2" style="background: #ffffff; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><a href="install-ingress-nginx.html#fill-config-file" class="topiclink">Заполнить конфигурационный файл</a>.</li><li value="3" style="background: #ffffff; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><a href="install-ingress-nginx.html#install-ingress-nginx-chart" class="topiclink">Установить чарт ingress-nginx с помощью Helm в Kubernetes-кластер</a>.</li></ol>
-<h2 class="p_Heading2"><a id="download-helm-chart-and-config-file" class="hmanchor"></a><span class="f_Heading2">Шаг 1: Скачать Helm-чарт и конфигурационный файл</span></h2>
+<h2 class="p_Heading2"><a id="download-helm-chart-and-config-file" class="hmanchor"></a><span class="f_Heading2">Шаг 1. Скачать Helm-чарт и конфигурационный файл</span></h2>
 <p style="line-height: 1.28; margin: 0 0 11px 0;">Для установки через интернет получите конфигурационный файл <code><b>values-ingress-nginx.yaml</b></code>, выполнив команду:</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">helm&nbsp;repo&nbsp;add&nbsp;elma365&nbsp;https://charts.elma365.tech</span><br />
 <span class="f_CodeExample">helm&nbsp;repo&nbsp;update</span><br />
@@ -136,7 +136,7 @@
 </tr>
 </table>
 </div>
-<h2 class="p_Heading2"><a id="fill-config-file" class="hmanchor"></a><span class="f_Heading2">Шаг 2: Заполнить конфигурационный файл</span></h2>
+<h2 class="p_Heading2"><a id="fill-config-file" class="hmanchor"></a><span class="f_Heading2">Шаг 2. Заполнить конфигурационный файл</span></h2>
 <p style="line-height: 1.28; margin: 0 0 11px 0;">Заполните конфигурационный файл <code><b>values-ingress-nginx.yaml</b></code> для установки Ingress NGINX:</p>
 <p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample"># Настройки ingress-nginx</span><br />
 <span class="f_CodeExample">ingress-nginx:</span><br />
@@ -192,7 +192,7 @@
 </tr>
 </table>
 </div>
-<h2 class="p_Heading2"><a id="install-ingress-nginx-chart" class="hmanchor"></a><span class="f_Heading2">Шаг 3: Установить чарт ingress-nginx с помощью Helm в Kubernetes-кластер</span></h2>
+<h2 class="p_Heading2"><a id="install-ingress-nginx-chart" class="hmanchor"></a><span class="f_Heading2">Шаг 3. Установить чарт ingress-nginx с помощью Helm в Kubernetes-кластер</span></h2>
 <p style="line-height: 1.28; margin: 0 0 11px 0;">Выполните установку чарта <span style="font-weight: bold;">ingress-nginx</span> в <code><b>namespace ingress-nginx</b></code>.</p>
 <p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="background-color: #ffffff;">Для установки через интернет выполните следующую команду:</span></p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">helm&nbsp;upgrade&nbsp;--install&nbsp;ingress-nginx&nbsp;elma365/ingress-nginx&nbsp;-f&nbsp;values-ingress-nginx.yaml&nbsp;-n&nbsp;ingress-nginx&nbsp;--create-namespace</span></p>
@@ -286,9 +286,9 @@
 </div>
  
     </footer>
-    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jquery1.min.js"></script>
     <iframe name="hmnavigation" style="display:none!important"></iframe>
-    <script src="./jquery-ui.js"></script>
+    <!--<script src="./jquery-ui.js"></script> -->
     <script src="./jquery-ui.min.js"></script>
     <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
     <script src="./jquery.tocify.min.js"></script>

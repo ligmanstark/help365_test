@@ -116,7 +116,7 @@
 <p class="p_Normal">Предположим, что в системе создана страница <span style="font-weight: bold;">Отчёт по транзакциям</span>. На ней размещены два дочерних виджета: <span style="font-weight: bold;">Настройки фильтрации</span> и <span style="font-weight: bold;">Таблица с поступлениями</span>. Когда пользователь вводит значения в поля фильтров, в виджете с таблицей выполняется поиск по введённым параметрам и отображаются его результаты. Это позволяет просматривать искомые элементы сразу после ввода значения в поле фильтра.</p>
 <p class="p_Normal"><img alt="child-widget-event-1" width="822" height="518" style="margin:0;width:822px;height:518px;border:none" src="child-widget-event-1.png"/></p>
 <p class="p_Normal">Рассмотрим подробнее, как выполнить настройку такой передачи данных. </p>
-<h2 class="p_Heading2"><span class="f_Heading2">Шаг 1: Создать и настроить пользовательский виджет «Настройки фильтрации»</span></h2>
+<h2 class="p_Heading2"><span class="f_Heading2">Шаг 1. Создать и настроить пользовательский виджет «Настройки фильтрации»</span></h2>
 <p class="p_Normal">Начните настройку с создания виджета, который содержит поля с параметрами фильтрации. В нём нужно:</p>
 <ul style="list-style-type:disc">
 <li class="p_Normal">добавить свойства для поиска;</li><li class="p_Normal">создать переменную типа <span style="font-weight: bold;">Событие</span>, к которой в родительском виджете (странице <span style="font-weight: bold;">Отчёт по транзакциям</span>) привязывается скрипт для выполнения поиска;</li><li class="p_Normal">в настройках созданных свойств для поиска указать скрипт в опции <span style="font-weight: bold;">Событие при изменении значения</span>. Таким образом каждый раз, когда вводится значение в поле, в родительский виджет будет передаваться событие вместе с указанными данными фильтрации.</li></ul>
@@ -145,7 +145,7 @@
 <ol style="list-style-type:upper-roman" start="4">
 <li value="4" class="p_Normal">Укажите эту же функцию для свойств <span style="font-weight: bold;">Начало периода</span> и <span style="font-weight: bold;">Конец периода</span>. Для этого в их настройках на вкладке <span style="font-weight: bold;">События</span> справа от опции <span style="font-weight: bold;">Событие при изменении значения</span> нажмите пустое поле и выберите <span style="font-weight: bold;">setFilters</span>.</li><li value="5" class="p_Normal">Сохраните и опубликуйте виджет <span style="font-weight: bold;">Настройки фильтрации</span>.</li></ol>
 <p class="p_Normal">Теперь его можно использовать в других виджетах как дочерний для фильтрации элементов приложений по заданным параметрам.</p>
-<h2 class="p_Heading2"><span class="f_Heading2">Шаг 2: Создать и настроить пользовательский виджет «Таблица с поступлениями»</span></h2>
+<h2 class="p_Heading2"><span class="f_Heading2">Шаг 2. Создать и настроить пользовательский виджет «Таблица с поступлениями»</span></h2>
 <p class="p_Normal">Создайте второй виджет для отображения результатов фильтрации в виде таблицы. В настройках виджета задайте настройки, чтобы:</p>
 <ul style="list-style-type:disc">
 <li class="p_Normal">запускать поиск соответствующих элементов, когда в фильтрах изменяется значение;</li><li class="p_Normal">отображать результат поиска в таблице.</li></ul>
@@ -214,7 +214,7 @@
 <ol style="list-style-type:upper-roman" start="3">
 <li value="3" class="p_Normal">Сохраните и опубликуйте виджет <span style="font-weight: bold;">Таблица с поступлениями</span>.</li></ol>
 <p class="p_Normal">Теперь его можно использовать в других виджетах как дочерний, чтобы показать результаты фильтрации транзакций в виде таблицы.</p>
-<h2 class="p_Heading2"><span class="f_Heading2">Шаг 3: Добавить виджеты на страницу и настроить передачу данных между ними</span></h2>
+<h2 class="p_Heading2"><span class="f_Heading2">Шаг 3. Добавить виджеты на страницу и настроить передачу данных между ними</span></h2>
 <p class="p_Normal">На <a href="360009924451.html" class="topiclink">созданную страницу</a> <span style="font-weight: bold;">Отчёт по транзакциям</span> добавьте виджеты <span style="font-weight: bold;">Настройки фильтрации</span> и <span style="font-weight: bold;">Таблица с поступлениями</span>. Страница станет для них родительским виджетом. На странице записываются данные фильтрации от первого виджета и передаются во второй.</p>
 <ol style="list-style-type:upper-roman">
 <li value="1" class="p_Normal">Откройте настройки страницы <span style="font-weight: bold;">Отчёт по транзакциям</span> и перейдите в <a href="360027211631.html#setting-in-designer" class="topiclink">дизайнер интерфейсов</a>, нажав опцию <span style="font-weight: bold;">Конструктор</span>.</li><li value="2" class="p_Normal">На вкладке <span style="font-weight: bold;">Контекст</span> создайте переменную <span style="font-weight: bold;">Данные фильтрации</span> типа <span style="font-weight: bold;">Произвольный тип</span>. Она нужна, чтобы:</li></ol>
@@ -336,9 +336,9 @@
 </div>
  
     </footer>
-    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jquery1.min.js"></script>
     <iframe name="hmnavigation" style="display:none!important"></iframe>
-    <script src="./jquery-ui.js"></script>
+    <!--<script src="./jquery-ui.js"></script> -->
     <script src="./jquery-ui.min.js"></script>
     <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
     <script src="./jquery.tocify.min.js"></script>

@@ -116,7 +116,7 @@
 <p class="p_Normal">Установка дополнения состоит из трёх этапов:</p>
 <ol style="list-style-type:decimal">
 <li value="1" class="p_Normal"><a href="event-monitoring.html#helm-chart" class="topiclink">Загрузить Helm-чарт и конфигурационный файл</a>.</li><li value="2" class="p_Normal"><a href="event-monitoring.html#configuration-file" class="topiclink">Заполнить конфигурационный файл</a>.</li><li value="3" class="p_Normal"><a href="event-monitoring.html#install-chart" class="topiclink">Установить чарт kubernetes-event-exporter с помощью Helm в Kubernetes-кластер</a>.</li></ol>
-<h2 class="p_Heading2"><a id="helm-chart" class="hmanchor"></a><span class="f_Heading2">Шаг 1: Загрузка Helm-чарта и конфигурационного файла</span></h2>
+<h2 class="p_Heading2"><a id="helm-chart" class="hmanchor"></a><span class="f_Heading2">Шаг 1. Загрузка Helm-чарта и конфигурационного файла</span></h2>
 <p class="p_Normal">Для установки через интернет получите конфигурационный файл <code><b>values-kubernetes-event-exporter.yaml</b></code>, выполнив следующую команду:</p>
 <p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample">helm repo add elma365 https://charts.elma365.tech</span><br />
 <span class="f_CodeExample">helm repo update</span><br />
@@ -140,7 +140,7 @@
 </tr>
 </table>
 </div>
-<h2 class="p_Heading2"><a id="configuration-file" class="hmanchor"></a><span class="f_Heading2">Шаг 2: Заполнение конфигурационного файла</span></h2>
+<h2 class="p_Heading2"><a id="configuration-file" class="hmanchor"></a><span class="f_Heading2">Шаг 2. Заполнение конфигурационного файла</span></h2>
 <p class="p_Normal"><a class="dropdown-toggle" style="font-style: normal; font-weight: normal; color: #000000; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186A2')">Заполнение конфигурационного файла values-kubernetes-event-exporter.yaml для установки kubernetes-event-exporter</a></p>
 <div id="TOGGLE0186A2" class="dropdown-toggle-body" style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0 0 0 0;"><table style="border:none; border-spacing:0;">
 <tr>
@@ -188,7 +188,7 @@
 </tr>
 </table>
 </div>
-<h2 class="p_Heading2"><a id="install-chart" class="hmanchor"></a><span class="f_Heading2">Шаг 3: Установка чарта kubernetes-event-exporter с помощью Helm в Kubernetes-кластер</span> </h2>
+<h2 class="p_Heading2"><a id="install-chart" class="hmanchor"></a><span class="f_Heading2">Шаг 3. Установка чарта kubernetes-event-exporter с помощью Helm в Kubernetes-кластер</span> </h2>
 <p class="p_Normal">Выполните установку чарта <span style="font-weight: bold;">kubernetes-event-exporter</span> в <code><b>namespace monitoring</b></code>.</p>
 <p class="p_Normal">Для установки через интернет используйте следующую команду:</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">helm&nbsp;upgrade&nbsp;--install&nbsp;-n&nbsp;monitoring&nbsp;kubernetes-event-exporter&nbsp;elma365/kubernetes-event-exporter&nbsp;-f&nbsp;values-kubernetes-event-exporter.yaml</span><br />
@@ -291,9 +291,9 @@
 </div>
  
     </footer>
-    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jquery1.min.js"></script>
     <iframe name="hmnavigation" style="display:none!important"></iframe>
-    <script src="./jquery-ui.js"></script>
+    <!--<script src="./jquery-ui.js"></script> -->
     <script src="./jquery-ui.min.js"></script>
     <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
     <script src="./jquery.tocify.min.js"></script>

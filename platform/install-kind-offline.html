@@ -8,7 +8,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="начало внимание С 30.05.2024 заблокирован доступ из РФ к Docker Hub. Ознакомьтесь с официальным заявлением компании. конец внимание ELMA365 редакции Standard можно установить в" />
+    <meta name="description" content="ELMA365 редакции Standard можно установить в закрытый контур без доступа в интернет. Вариант установки Kubernetes-in-Docker (KinD) наиболее прост и позволяет запускать..." />
     <meta name="picture" content="" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Cправка по Low-code платформе ELMA365" />
@@ -111,25 +111,22 @@
                             <a href="#h1-article" class="scroll-top"></a>
                         </div>
                         <!-- Placeholder for topic body. -->
-                        <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;внимание</span></p>
-<p class="p_Normal">С 30.05.2024 заблокирован доступ из РФ к Docker Hub. Ознакомьтесь с <a href="docker-hub-blocking.html" class="topiclink">официальным заявлением компании</a>.</p>
-<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;внимание</span></p>
-<p class="p_Normal">ELMA365 редакции Standard можно установить в закрытый контур без доступа в интернет. Вариант установки Kubernetes-in-Docker (KinD) наиболее прост и позволяет запускать локальный кластер Kubernetes с использованием узла Docker контейнера в закрытом контуре без доступа в интернет. </p>
+                        <p class="p_Normal">ELMA365 редакции Standard можно установить в закрытый контур без доступа в интернет. Вариант установки Kubernetes-in-Docker (KinD) наиболее прост и позволяет запускать локальный кластер Kubernetes с использованием узла Docker контейнера в закрытом контуре без доступа в интернет. </p>
 <p class="p_Normal"><span style="color: #394149;">Установка состоит пяти этапов:</span></p>
 <ol style="list-style-type:decimal">
 <li value="1" class="p_Normal"><a href="install-kind-offline.html#prepare-infrastructure" class="topiclink">Подготовка инфраструктуры</a>.</li><li value="2" class="p_Normal"><a href="install-kind-offline.html#download-files" class="topiclink">Загрузка файлов для офлайн-версии</a>.</li><li value="3" class="p_Normal"><a href="install-kind-offline.html#install-docker" class="topiclink">Установка Docker на компьютер в закрытый контур</a>.</li><li value="4" class="p_Normal"><a href="install-kind-offline.html#complete-config-file" class="topiclink">Заполнение конфигурационного файла</a>.</li><li value="5" class="p_Normal"><a href="install-kind-offline.html#run-script" class="topiclink">Запуск скрипта установки</a>.</li></ol>
 <p class="p_Normal"><img alt="install-kind-offline-1" width="661" height="312" style="margin:0;width:661px;height:312px;border:none" src="install-kind-offline-1.png"/></p>
-<h2 class="p_Heading2"><a id="prepare-infrastructure" class="hmanchor"></a><span class="f_Heading2">Шаг 1: Подготовка инфраструктуры</span></h2>
+<h2 class="p_Heading2"><a id="prepare-infrastructure" class="hmanchor"></a><span class="f_Heading2">Шаг 1. Подготовка инфраструктуры</span></h2>
 <p class="p_Normal">Под инфраструктурой понимаются необходимые для работы приложения ELMA365 On-Premises компоненты.</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">Начало&nbsp;внимание</span></p>
-<p class="p_Normal">Предполагается, что зависимые компоненты должны быть развёрнуты заказчиком самостоятельно. Все работы по организации отказоустойчивой локальной архитектуры, настройке отказоустойчивости зависимых компонентов также остаются на стороне заказчика.</p>
+<p class="p_Normal">Заказчик самостоятельно разворачивает зависимые компоненты. Все работы по организации отказоустойчивой локальной архитектуры, настройке отказоустойчивости зависимых компонентов также остаются на стороне заказчика.</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">Конец&nbsp;внимание</span></p>
 <p class="p_Normal">Компоненты, необходимые для работы приложения ELMA365 On-Premises:</p>
 <ul style="list-style-type:disc">
 <li class="p_Normal">Docker;</li><li class="p_Normal">PostgreSQL;</li><li class="p_Normal">MongoDB;</li><li class="p_Normal">RabbitMQ;</li><li class="p_Normal">Redis;</li><li class="p_Normal">S3 (MinIO).</li></ul>
 <p class="p_Normal">Встроенные компоненты хранения данных подходят для ознакомительных целей и в особых случаях <span style="font-size: 15px; color: #333333;">— </span>для организации стендов тестирования и разработки. Если в дополнительных параметрах установки не заданы параметры подключения к внешним базам данных и S3-хранилищу, автоматически будут использованы встроенные компоненты хранения данных (PostgreSQL, MongoDB, RabbitMQ, Redis, S3 MinIO). </p>
 <p class="p_Normal">В рамках текущей статьи база данных PostgreSQL и объектное хранилище S3 будут внешними. База данных PostgreSQL развернута по статье <a href="postgresql.html" class="topiclink">«PostgreSQL»</a>, объектное S3-хранилище развернуто по статье <a href="configure-minio.html" class="topiclink">«MinIO S3»</a>. Для подключения к PostgreSQL и MinIO S3 используются стандартные строки подключения и пароли.</p>
-<h2 class="p_Heading2"><a id="download-files" class="hmanchor"></a><span class="f_Heading2">Шаг 2: Загрузка файлов для офлайн-версии</span></h2>
+<h2 class="p_Heading2"><a id="download-files" class="hmanchor"></a><span class="f_Heading2">Шаг 2. Загрузка файлов для офлайн-версии</span></h2>
 <ol style="list-style-type:upper-roman">
 <li value="1" class="p_Normal">На компьютере с доступом в интернет загрузите необходимые файлы для офлан-версии (объём загружаемых файлов ~4-5 ГБ), выполнив следующую команду:</li></ol>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">sudo&nbsp;curl&nbsp;-fsSL&nbsp;-o&nbsp;elma365-docker.sh&nbsp;https://dl.elma365.com/onPremise/latest/elma365-docker-offline-latest&nbsp;&amp;&amp;&nbsp;\</span><br />
@@ -142,12 +139,12 @@
 <p class="p_Normal"><img alt="install-kind-offline-2" width="769" height="214" style="margin:0;width:769px;height:214px;border:none" src="install-kind-offline-2.png"/></p>
 <ol style="list-style-type:upper-roman" start="2">
 <li value="2" class="p_Normal" style="margin-top: 10px; margin-right: 0; margin-bottom: 0;">После загрузки всех файлов полученный каталог <code><b>elma365-X.Y.Z</b></code> скопируйте на сервер, где будет производиться установка.</li></ol>
-<h2 class="p_Heading2"><a id="install-docker" class="hmanchor"></a><span class="f_Heading2">Шаг 3: Установка Docker на компьютер в закрытый контур</span></h2>
+<h2 class="p_Heading2"><a id="install-docker" class="hmanchor"></a><span class="f_Heading2">Шаг 3. Установка Docker на компьютер в закрытый контур</span></h2>
 <p class="p_Normal" style="background: #ffffff; margin: 10px 0 0 0;"><a href="https://docs.docker.com/engine/install/" class="weblink">Установите Docker</a> для вашей операционной системы на локальный компьютер в закрытый контур.</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;внимание</span></p>
-<p class="p_Normal">Обратите внимание, KinD не поддерживает создание Kubernetes-кластера с Cgroups v2. Подробнее о возможных ошибках читайте в <a href="https://kind.sigs.k8s.io/docs/user/known-issues/#failure-to-create-cluster-with-cgroups-v2" class="weblink">документации</a>.</p>
+<p class="p_Normal">KinD не поддерживает создание Kubernetes-кластера с Cgroups v2. Подробнее о возможных ошибках читайте в <a href="https://kind.sigs.k8s.io/docs/user/known-issues/#failure-to-create-cluster-with-cgroups-v2" class="weblink">документации</a>.</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;внимание</span></p>
-<h2 class="p_Heading2"><a id="complete-config-file" class="hmanchor"></a><span class="f_Heading2">Шаг 4: Заполнение конфигурационного файла</span></h2>
+<h2 class="p_Heading2"><a id="complete-config-file" class="hmanchor"></a><span class="f_Heading2">Шаг 4. Заполнение конфигурационного файла</span></h2>
 <p class="p_Normal">При первом запуске скрипт установки создаст файл конфигурации с наименованием <code><b>config-elma365.txt</b></code> в каталоге, откуда он был запущен.</p>
 <ol style="list-style-type:upper-roman">
 <li value="1" class="p_Normal">На компьютере в закрытом контуре, куда были скопированы файлы для оффлайн-версии, перейдите в каталог <code><b>elma365-X.Y.Z</b></code> и запустите скрипт установки ELMA365 для создания конфигурационного файла, выполнив следующую команду:</li></ol>
@@ -164,9 +161,10 @@
 <li style="margin-top: 0; margin-right: 0; margin-bottom: 0;"><code><b>ELMA365_HOST=192.168.1.103</b></code> —<span style="color: #333333;"> IP-адрес хостовой машины, по которому будет доступно приложение ELMA365 Standard. Подробнее о создании домена (FQDN) читайте в <a href="change-elma365standard-parameters.html" class="topiclink">«Изменение параметров ELMA365 Standard»</a>;</span></li><li style="margin-top: 0; margin-right: 0; margin-bottom: 0;"><code><b>ELMA365_EMAIL=admin@mail.com</b></code><span style="color: #333333;"> — адрес электронной почты администратора;</span></li><li style="margin-top: 0; margin-right: 0; margin-bottom: 0;"><code><b>ELMA365_PASSWORD=test</b></code><span style="color: #333333;"> — пароль администратора;</span></li><li style="margin-top: 0; margin-right: 0; margin-bottom: 0;"><code><b>ELMA365_LANGUAGE=ru-RU</b></code><span style="font-weight: bold;"> </span><span style="color: #333333;">— язык установленной системы.</span></li></ul>
 <ol style="list-style-type:upper-roman" start="4">
 <li value="4" class="p_Normal">Настройте подключение к внешним базам данных и объектному S3-хранилищу.</li></ol>
-<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;внимание</span></p>
-<p class="p_Normal">Встроенные компоненты хранения данных подходят для ознакомительных целей и в особых случаях для организации стендов тестирования и разработки. Если в дополнительных параметрах установки не заданы параметры подключения к внешним базам данных и S3 хранилищу, то автоматически будут использованы встроенные компоненты хранения данных (PostgreSQL, MongoDB, RabbitMQ, Redis, S3 MinIO).</p>
-<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;внимание</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;примечание</span></p>
+<p class="p_Normal"><span style="font-weight: bold;">Примечание</span></p>
+<p class="p_Normal">Встроенные компоненты хранения данных подходят для ознакомительных целей и в особых случаях для организации стендов тестирования и разработки. Если в дополнительных параметрах установки не заданы параметры подключения к внешним базам данных и S3 хранилищу, то автоматически будут использованы встроенные компоненты хранения данных: PostgreSQL, MongoDB, RabbitMQ, Redis, S3 MinIO.</p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;примечание</span></p>
 <p class="p_Normal">Для подключения к внешней базе данных PostgreSQL расскоментируйте и заполните параметр  <code><b>ELMA365_DB_PSQL</b></code><span style="font-size: 13px;"> </span>(укажите строку подключения, полученную на шаге 6 статьи <a href="postgresql.html#connect-to-postgresql" class="topiclink">«PostgreSQL»</a>). Например:</p>
 <p style="background: #ffffff; margin: 10px 0 0 0;"><img alt="install-kind-offline-5" width="782" height="309" style="margin:0;width:782px;height:309px;border:none" src="install-kind-offline-5.png"/></p>
 <p class="p_Normal">Расскоментируйте и задайте для подключения к S3-хранилищу:</p>
@@ -187,13 +185,11 @@
 <ul style="list-style-type:disc"><ul style="list-style-type:circle">
 <li class="p_Normal" style="margin-top: 0; margin-right: 0; margin-bottom: 0;"><code><b>192.168.0.103</b></code> — IP-адрес<span style="font-size: 13px;"> </span>приватного репозитория Docker-образов;</li><li class="p_Normal" style="margin-top: 0; margin-right: 0; margin-bottom: 0;"><code><b>5000</b></code> — порт приватного репозитория Docker-образов.</li></ul></li></ul>
 <p class="p_Normal">В случае отсутствия собственного приватного репозитория, можно использовать локальный приватный репозитории. Для этого раскомментируйте параметр <code><b>ELMA365_LOCAL_PRIVATE_REGISTRY_ENABLE</b></code> и установите значение <code><b>true</b></code>.</p>
-<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;внимание</span></p>
-<p class="p_Normal">Если используется локальный приватный репозиторий и если Docker установлен через Snap, в файле конфигурации необходимо раскомментировать и изменить пути до папок/каталогов для параметров:<span style="color: #394149;"> </span><code><b>ELMA365_INSTALL_DIR, ELMA365_BACKUP_DIR</b></code><span style="color: #394149;">, </span><code><b>ELMA365_LOCAL_PRIVATE_REGISTRY_DIR</b></code><span style="color: #394149;">,</span><span style="font-size: 13px;"> </span><span style="color: #394149;">например, на:</span></p>
+<p class="p_Normal"><span style="font-weight: bold;">Важно</span>: если используется локальный приватный репозиторий и если Docker установлен через Snap, в файле конфигурации раскомментируйте и измените пути до папок или каталогов для параметров<code><b>ELMA365_INSTALL_DIR, ELMA365_BACKUP_DIR</b></code> и<span style="color: #394149;"> </span><code><b>ELMA365_LOCAL_PRIVATE_REGISTRY_DIR</b></code><span style="color: #394149;">,</span><span style="font-size: 13px;"> </span><span style="color: #394149;">например:</span></p>
 <ul style="list-style-type:disc">
 <li style="margin-top: 0; margin-right: 0; margin-bottom: 0;"><code><b>ELMA365_INSTALL_DIR=/mnt/elma365/docker</b></code><span style="color: #394149;">;</span></li><li style="margin-top: 0; margin-right: 0; margin-bottom: 0;"><code><b>ELMA365_BACKUP_DIR=/mnt/elma365/backup</b></code><span style="font-size: 13px;">;</span></li><li style="margin-top: 0; margin-right: 0; margin-bottom: 0;"><code><b>ELMA365_LOCAL_PRIVATE_REGISTRY_DIR=/mnt/elma365/registry</b></code><span style="font-size: 13px;">.</span></li></ul>
-<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;внимание</span></p>
 <p class="p_Normal">Подробнее о параметрах конфигурационного файла <code><b>config-elma365.txt</b></code> читайте в статье <a href="change-elma365standard-parameters.html" class="topiclink">«Изменение параметров ELMA365 Standard»</a>.</p>
-<h2 class="p_Heading2"><a id="run-script" class="hmanchor"></a><span class="f_Heading2">Шаг 5: Запуск скрипта установки ELMA365 Standard</span></h2>
+<h2 class="p_Heading2"><a id="run-script" class="hmanchor"></a><span class="f_Heading2">Шаг 5. Запуск скрипта установки ELMA365 Standard</span></h2>
 <p class="p_Normal">После запуска скрипт установки разместит необходимые образы в репозитории Docker-образов. Далее будет производиться установка приложения ELMA365 Standard, время установки занимает 10-15 минут.</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;внимание</span></p>
 <p class="p_Normal">В системе должен быть задан маршрут по умолчанию.</p>
@@ -310,9 +306,9 @@
 </div>
  
     </footer>
-    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jquery1.min.js"></script>
     <iframe name="hmnavigation" style="display:none!important"></iframe>
-    <script src="./jquery-ui.js"></script>
+    <!--<script src="./jquery-ui.js"></script> -->
     <script src="./jquery-ui.min.js"></script>
     <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
     <script src="./jquery.tocify.min.js"></script>

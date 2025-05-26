@@ -2,7 +2,7 @@
 <html lang="ru">
 
 <head>
-    <title>Виджет Код</title>
+    <title>Виджет «Код»</title>
     <meta name="generator" content="Help+Manual" />
     <meta name="keywords" content="" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -98,11 +98,11 @@
                         <span id="subcategory" class="search-res__item-category search-res__item-category_subcategory subcategory article__badge"></span>
                         
                             <div class="topic__breadcrumbs">     
-                                <p>Low-code дизайнер &gt; <a href="interface_settings.html">Создание интерфейсов</a> &gt; Типы виджетов &gt; HTML-виджеты / Виджет Код</p>
+                                <p>Low-code дизайнер &gt; <a href="interface_settings.html">Создание интерфейсов</a> &gt; Типы виджетов &gt; HTML-виджеты / Виджет «Код»</p>
                             </div>
                         
                     </div>
-                        <div class="topic__title"><h1 class="p_Heading1" style="text-align: center; margin: 19px 0 19px 0;"><span class="f_Heading1" style="font-size: 32px;">Виджет Код</span></h1>
+                        <div class="topic__title"><h1 class="p_Heading1" style="text-align: center; margin: 19px 0 19px 0;"><span class="f_Heading1" style="font-size: 32px;">Виджет «Код»</span></h1>
 </div>
                     
 </header>
@@ -163,20 +163,20 @@
 <p class="p_Normal" style="margin: 14px 0 0 0;"><a class="dropdown-toggle" style="font-style: normal; font-weight: normal; color: #000000; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186A1')">Скрипт</a></p>
 <div id="TOGGLE0186A1" class="dropdown-toggle-body" style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 14px 0 0 0;"><table style="border:none; border-spacing:0;">
 <tr>
-<td style="vertical-align:top; padding:0; border:none"><p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">async function onInit():Promise &lt;</span><span class="f_CodeExample" style="font-weight: bold;">void</span><span class="f_CodeExample">&gt; {</span><br />
-<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample">// Получаем список пользователей</span><br />
-<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">const</span><span class="f_CodeExample"> users = await System.users.search().size(10000).all()</span><br />
-<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-style: italic;">// Выбираем пользователей с ДР в текущем месяце</span><br />
-<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">const</span><span class="f_CodeExample"> thisMonthUsers = users.filter (f=&gt;f.data.birthDate &amp;&amp; f.data.birthDate.month == </span><span class="f_CodeExample" style="font-weight: bold;">new</span><span class="f_CodeExample"> TDate().month)</span><br />
-<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample">//&nbsp;Записываем пользователя и дату рождения в таблицу</span><br />
-<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">for</span><span class="f_CodeExample"> (let user of thisMonthUsers) {</span><br />
-<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">const</span><span class="f_CodeExample"> row = Context.data.currentMonth!.insert()</span><br />
-<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;row.user = user!</span><br />
-<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;row.birthDate = user.data.birthDate!.format(&quot;DD/MM/YYYY&quot;)&nbsp;&nbsp;&nbsp;</span><br />
-<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;}</span><br />
-<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample">// Сохраняем таблицу&nbsp;в&nbsp;контекстную&nbsp;переменную</span><br />
-<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;Context.data.currentMonth = Context.data.currentMonth</span><br />
-<span class="f_CodeExample" style="color: #ffffff;">&nbsp;</span><span class="f_CodeExample">}</span></p>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample">async function onInit():Promise &lt;</span><span class="f_CodeExample" style="font-weight: bold;">void</span><span class="f_CodeExample">&gt; {</span><br />
+<span class="f_CodeExample">  &nbsp; </span><span class="f_CodeExample">// Получаем список пользователей</span><br />
+<span class="f_CodeExample">  &nbsp; </span><span class="f_CodeExample" style="font-weight: bold;">const</span><span class="f_CodeExample"> users = await System.users.search().size(10000).all()</span><br />
+<span class="f_CodeExample">  &nbsp; </span><span class="f_CodeExample" style="font-style: italic;">// Выбираем пользователей с ДР в текущем месяце</span><br />
+<span class="f_CodeExample">  &nbsp; </span><span class="f_CodeExample" style="font-weight: bold;">const </span><span class="f_CodeExample">thisMonthUsers = users.filter (f=&gt;f.data.birthDate &amp;&amp; f.data.birthDate.month == </span><span class="f_CodeExample" style="font-weight: bold;">new</span><span class="f_CodeExample"> TDate().month)</span><br />
+<span class="f_CodeExample">  &nbsp; </span><span class="f_CodeExample">// Записываем пользователя и дату рождения в таблицу</span><br />
+<span class="f_CodeExample">  &nbsp; </span><span class="f_CodeExample" style="font-weight: bold;">for</span><span class="f_CodeExample"> (let user of thisMonthUsers) {</span><br />
+<span class="f_CodeExample">  &nbsp; &nbsp; &nbsp; </span><span class="f_CodeExample" style="font-weight: bold;">const</span><span class="f_CodeExample"> row = Context.data.currentMonth!.insert()</span><br />
+<span class="f_CodeExample">  &nbsp; &nbsp; &nbsp; row.user = user!</span><br />
+<span class="f_CodeExample">  &nbsp; &nbsp; &nbsp; row.birthDate = user.data.birthDate!.format(&quot;DD/MM/YYYY&quot;) &nbsp; </span><br />
+<span class="f_CodeExample">  &nbsp; }</span><br />
+<span class="f_CodeExample">  &nbsp; </span><span class="f_CodeExample">// Сохраняем таблицу в контекстную переменную</span><br />
+<span class="f_CodeExample">  &nbsp; Context.data.currentMonth = Context.data.currentMonth</span><br />
+<span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">}</span></p>
 </td>
 </tr>
 </table>
@@ -273,9 +273,9 @@
 </div>
  
     </footer>
-    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jquery1.min.js"></script>
     <iframe name="hmnavigation" style="display:none!important"></iframe>
-    <script src="./jquery-ui.js"></script>
+    <!--<script src="./jquery-ui.js"></script> -->
     <script src="./jquery-ui.min.js"></script>
     <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
     <script src="./jquery.tocify.min.js"></script>

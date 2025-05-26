@@ -8,7 +8,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Графический элемент Закрыть согласование используется как&nbsp;вспомогательный для&nbsp;блока Согласование, если выбран способ согласования Вручную. Он&nbsp;размещается на&nbsp;том&nbsp;отрезке,..." />
+    <meta name="description" content="Графический элемент Закрыть согласование используется как&nbsp;вспомогательный для&nbsp;блока Согласование. Он размещается на том отрезке процесса, где нужно вынести финальную резолюцию..." />
     <meta name="picture" content="" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Cправка по Low-code платформе ELMA365" />
@@ -111,12 +111,9 @@
                             <a href="#h1-article" class="scroll-top"></a>
                         </div>
                         <!-- Placeholder for topic body. -->
-                        <p class="p_Normal" style="margin: 14px 0 0 0;"><img alt="01.PNG" title="01.PNG" width="122" height="98" style="margin:0 15px 0 3px;width:122px;height:98px;border:none" src="360008872920-01.png"/>Графический элемент <span style="font-weight: bold;">Закрыть согласование</span> используется как вспомогательный для блока <span style="font-weight: bold;">Согласование</span>, если выбран способ согласования <a href="360010366380.html#manual-approval" class="topiclink">Вручную</a>. Он размещается на том отрезке, где нужно завершить согласование документа и вынести резолюцию, не дожидаясь окончания бизнес‑процесса.</p>
-<p class="p_Normal" style="margin: 14px 0 0 0;">На этапе <span style="font-weight: bold;">Согласование</span> сотрудник должен утвердить или отклонить документ. Далее в процесс можно добавить блок <span style="font-weight: bold;">Закрыть согласование</span> и настроить его. На этом этапе согласование автоматически закрывается, и по документу выносится резолюция. Она не будет доступна для изменения, пока вы не откроете для этого документа новое согласование.</p>
-<p class="p_Normal" style="margin: 14px 0 0 0;">Обычно вы можете увидеть резолюцию в карточке только по завершении бизнес‑процесса, в котором присутствует блок <span style="font-weight: bold;">Согласование</span>. До этого в <a href="/ru/help/ecm/approval-sheets.html" target="_blank" class="weblink">листе согласования</a> документа значится <span style="font-weight: bold;">На согласовании</span>. При использовании графического элемента <span style="font-weight: bold;">Закрыть согласование</span> резолюция будет проставлена в карточку до завершения бизнес‑процесса. Пользователь при этом не совершает никаких действий — все операции по закрытию согласования выполняются автоматически.</p>
-<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;внимание</span></p>
-<p style="margin: 14px 0 0 0;">Графический элемент <span style="font-weight: bold;">Закрыть согласование</span> не используется, если в блоке <span style="font-weight: bold;">Согласование</span> включена опция <a href="auto-approval.html" class="topiclink">Автоматически</a>, т. к. резолюция по документу будет вынесена в самом блоке <span style="font-weight: bold;">Согласование</span>, и закрывать согласование до завершения процесса не нужно. Иначе в ходе процесса возникнет ошибка.</p>
-<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;внимание</span></p>
+                        <p class="p_Normal"><img alt="01.PNG" title="01.PNG" width="122" height="98" style="margin:0 15px 0 3px;width:122px;height:98px;border:none" src="360008872920-01.png"/>Графический элемент <span style="font-weight: bold;">Закрыть согласование</span> используется как вспомогательный для блока <span style="font-weight: bold;">Согласование</span>. Он размещается на том отрезке процесса, где нужно вынести финальную резолюцию по документу. Тогда в его карточке пользователи увидят статус <span style="font-weight: bold;">Согласовано</span> или <span style="font-weight: bold;">Отказано</span>.</p>
+<p class="p_Normal">Без вспомогательного блока итоговый результат формируется после окончания процесса. До этого в карточке элемента приложения отображается отметка <span style="font-weight: bold;">На согласовании</span>. &nbsp; &nbsp; </p>
+<p class="p_Normal">Подробнее о моделировании процесса с формированием финальной резолюции после этапа рассмотрения документа читайте в статье <a href="approval-use-case.html" class="topiclink">«Пример настройки маршрута согласования»</a>.</p>
 <h2 class="p_Heading2" style="margin: 19px 0 0 0;"><span class="f_Heading2" style="font-size: 24px;">Как настроить закрытие согласования</span></h2>
 <p style="margin: 19px 0 0 0;"><span style="font-family: Inter;">Разместите графический элемент </span><span style="font-family: Inter; font-weight: bold;">Закрыть согласование</span><span style="font-family: Inter;"> на схеме процесса после блока </span><span style="font-family: Inter; color: #0000ff;"><a href="360010366380.html" class="topiclink">Согласование</a></span><span style="font-family: Inter;">.</span></p>
 <p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-family: Inter;">Перед настройкой блока убедитесь, что в контекст процесса добавлена переменная, ссылающаяся на объект согласования: </span><span style="font-family: Inter; color: #0000ff;"><a href="360009923631.html" class="topiclink">документ</a></span><span style="font-family: Inter;">, </span><span style="font-family: Inter; color: #0000ff;"><a href="360014164452.html" class="topiclink">файл</a></span><span style="font-family: Inter;"> или </span><span style="font-family: Inter; color: #0000ff;"><a href="360016427291.html" class="topiclink">элемент приложения</a></span><span style="font-family: Inter;">.</span></p>
@@ -222,9 +219,9 @@
 </div>
  
     </footer>
-    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jquery1.min.js"></script>
     <iframe name="hmnavigation" style="display:none!important"></iframe>
-    <script src="./jquery-ui.js"></script>
+    <!--<script src="./jquery-ui.js"></script> -->
     <script src="./jquery-ui.min.js"></script>
     <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
     <script src="./jquery.tocify.min.js"></script>

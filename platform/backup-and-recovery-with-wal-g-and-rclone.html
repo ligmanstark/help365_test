@@ -113,13 +113,17 @@
                         <!-- Placeholder for topic body. -->
                         <p class="p_Normal">Вы можете настроить резервное копирование и восстановление данных ELMA365 с помощью следующих программ:</p>
 <ul style="list-style-type:disc">
-<li class="p_Normal">WAL-G — это утилита для создания резервных копий и восстановления баз данных, которая поддерживает несколько СУБД, включая <a href="backup-and-recovery-with-wal-g-and-rclone.html#wal-g-in-postgres" class="topiclink">PostgreSQL</a> и <a href="backup-and-recovery-with-wal-g-and-rclone.html#wal-g-in-mongo" class="topiclink">MongoDB</a>.</li></ul>
-<p class="p_Normal" style="margin: 0 0 0 36px;">Она использует механизм непрерывного архивирования (Continuous Archiving) и точки восстановления (Point-in-Time Recovery, PITR) для обеспечения надёжной архивации и восстановления данных.</p>
-<p class="p_Normal" style="margin: 0 0 0 36px;">WAL-G поддерживает хранение резервных копий в различных облачных хранилищах, таких как Amazon S3, Google Cloud Storage, Azure Blob Storage и других.</p>
-<ul style="list-style-type:disc">
-<li class="p_Normal"><a href="backup-and-recovery-with-wal-g-and-rclone.html#rclone" class="topiclink">Rclone</a> — это многопоточная программа с открытым исходным кодом и командной строкой для управления контентом. Позволяет переносить данные в облако и другие хранилища. </li></ul>
+<li class="p_Normal">WAL-G — это утилита для создания резервных копий и восстановления баз данных, которая поддерживает несколько СУБД, включая <a href="backup-and-recovery-with-wal-g-and-rclone.html#wal-g-in-postgres" class="topiclink">PostgreSQL</a> и <a href="backup-and-recovery-with-wal-g-and-rclone.html#wal-g-in-mongo" class="topiclink">MongoDB</a>.<br />
+&nbsp;<br />
+Она использует механизм непрерывного архивирования (Continuous Archiving) и точки восстановления (Point-in-Time Recovery, PITR) для обеспечения надёжной архивации и восстановления данных.<br />
+&nbsp;<br />
+WAL-G поддерживает хранение резервных копий в различных облачных хранилищах, таких как Amazon S3, Google Cloud Storage, Azure Blob Storage и других;</li><li class="p_Normal"><a href="backup-and-recovery-with-wal-g-and-rclone.html#rclone" class="topiclink">Rclone</a> — это многопоточная программа с открытым исходным кодом и командной строкой для управления контентом. Позволяет переносить данные в облако и другие хранилища. </li></ul>
 <p class="p_Normal">В статье описан процесс резервного копирования и восстановления PostgreSQL 15 и MongoDB 6 в ОС Ubuntu Linux 22.04.</p>
 <h2 class="p_Heading2"><a id="wal-g-in-postgres" class="hmanchor"></a><span class="f_Heading2">Настройка WAL-G для PostgreSQL</span></h2>
+<p class="p_Normal">С помощью WAL-G вы можете:</p>
+<ul style="list-style-type:disc">
+<li class="p_Normal">выполнить резервное копирование данных;</li><li class="p_Normal"><a href="backup-and-recovery-with-wal-g-and-rclone.html#psql-restore" class="topiclink">восстановить данные из резервной копии</a>.</li></ul>
+<h3 class="p_Heading3"><span class="f_Heading3">Резервное копирование для PostgreSQL</span></h3>
 <p class="p_Normal">Для резервного копирования данных с помощью WAL-G выполните следующие действия:</p>
 <ol style="list-style-type:upper-roman">
 <li value="1" class="p_Normal">Предварительно установите WAL-G с <a href="https://github.com/wal-g/wal-g" target="_blank" class="weblink">официального GitHub-репозитория</a>:</li></ol>
@@ -141,11 +145,11 @@
 <span class="f_CodeExample">&quot;PGDATA&quot;:&nbsp;&quot;/var/lib/postgresql/15/main&quot;,</span><br />
 <span class="f_CodeExample">&quot;PGSSLMODE&quot;:&nbsp;&quot;disable&quot;</span><br />
 <span class="f_CodeExample">}</span></p>
-<p class="p_Normal" style="margin: 0 0 0 37px;">Здесь:</p>
+<p class="p_Normal" style="margin: 0 0 0 37px;">Где:</p>
 <ul style="list-style-type:disc">
-<li class="p_Normal"><code><b>WALG_S3_PREFIX</b></code>  — указывает путь к хранилищу S3, где будут храниться резервные копии и <span style="font-weight: bold;">.WAL</span>-файлы (Write-Ahead Logs);</li><li class="p_Normal"><code><b>AWS_ENDPOINT</b></code> — указывает точку доступа (endpoint) для S3-совместимого хранилища;</li><li class="p_Normal"><code><b>AWS_ACCESS_KEY_ID</b></code> — идентификатор ключа доступа (Access Key ID) для аутентификации в S3-совместимом хранилище;</li><li class="p_Normal"><code><b>AWS_SECRET_ACCESS_KEY</b></code> — секретный ключ (Secret Access Key) для аутентификации в S3-совместимом хранилище;</li><li class="p_Normal"><code><b>AWS_REGION</b></code> — регион, в котором находится S3-совместимое хранилище;</li><li class="p_Normal"><code><b>AWS_S3_FORCE_PATH_STYLE</b></code> &nbsp;— указывает, что нужно использовать path-style для доступа к S3-бакетам;</li><li class="p_Normal"><code><b>WALG_COMPRESSION_METHOD</b></code> &nbsp;— метод сжатия, используемый для резервных копий. В данном случае используется алгоритм <code><b>Brotli</b></code>, который обеспечивает хорошее соотношение между степенью сжатия и скоростью;</li><li class="p_Normal"><code><b>WALG_DELTA_MAX_STEPS</b></code> &nbsp;— максимальное количество шагов (delta steps), которые WAL-G может использовать для постепенно увеличивающихся (дельта) резервных копий. Позволяет экономить место, храня только изменения между резервными копиями;</li><li class="p_Normal"><code><b>PGHOST</b></code> — указывает путь к сокету PostgreSQL, через который WAL-G будет подключаться к базе данных. Используется для выполнения команд, требующих подключения к PostgreSQL;</li><li class="p_Normal"><code><b>PGDATA</b></code> — путь к каталогу данных PostgreSQL. WAL-G использует этот параметр для определения, где находятся данные PostgreSQL, чтобы корректно выполнять резервное копирование и восстановление;</li><li class="p_Normal"><code><b>PGSSLMODE</b></code> — указывает, что SSL/TLS-шифрование для подключения к PostgreSQL отключено. Это может быть полезно для локальных подключений, где шифрование не требуется.</li></ul>
+<li class="p_Normal"><code><b>WALG_S3_PREFIX</b></code>  — путь к хранилищу S3, где будут храниться резервные копии и <span style="font-weight: bold;">.WAL</span>-файлы (Write-Ahead Logs);</li><li class="p_Normal"><code><b>AWS_ENDPOINT</b></code> — точка доступа (endpoint) для S3-совместимого хранилища;</li><li class="p_Normal"><code><b>AWS_ACCESS_KEY_ID</b></code> — идентификатор ключа доступа (Access Key ID) для аутентификации в S3-совместимом хранилище;</li><li class="p_Normal"><code><b>AWS_SECRET_ACCESS_KEY</b></code> — секретный ключ (Secret Access Key) для аутентификации в S3-совместимом хранилище;</li><li class="p_Normal"><code><b>AWS_REGION</b></code> — регион, в котором находится S3-совместимое хранилище;</li><li class="p_Normal"><code><b>AWS_S3_FORCE_PATH_STYLE</b></code> &nbsp;— указывает, что нужно использовать path-style для доступа к S3-бакетам;</li><li class="p_Normal"><code><b>WALG_COMPRESSION_METHOD</b></code> &nbsp;— метод сжатия, используемый для резервных копий. В данном случае используется алгоритм <code><b>Brotli</b></code>, который обеспечивает хорошее соотношение между степенью сжатия и скоростью;</li><li class="p_Normal"><code><b>WALG_DELTA_MAX_STEPS</b></code> &nbsp;— максимальное количество шагов (delta steps), которые WAL-G может использовать для постепенно увеличивающихся (дельта) резервных копий. Позволяет экономить место, храня только изменения между резервными копиями;</li><li class="p_Normal"><code><b>PGHOST</b></code> — путь к сокету PostgreSQL, через который WAL-G будет подключаться к базе данных. Используется для выполнения команд, требующих подключения к PostgreSQL;</li><li class="p_Normal"><code><b>PGDATA</b></code> — путь к каталогу данных PostgreSQL. WAL-G использует этот параметр для определения, где находятся данные PostgreSQL, чтобы корректно выполнять резервное копирование и восстановление;</li><li class="p_Normal"><code><b>PGSSLMODE</b></code> — указывает, что SSL/TLS-шифрование для подключения к PostgreSQL отключено. Это может быть полезно для локальных подключений, где шифрование не требуется.</li></ul>
 <ol style="list-style-type:upper-roman">
-<li value="3" class="p_Normal">Меняем владельца файла:</li></ol>
+<li value="3" class="p_Normal">Измените владельца файла:</li></ol>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">chown&nbsp;postgres: /etc/postgresql/15/main/.walg.json</span></p>
 <ol style="list-style-type:upper-roman">
 <li value="4" class="p_Normal">Чтобы использовать WAL-G, настройте PostgreSQL для работы с непрерывным архивированием. Для этого откройте файл конфигурации <code><b>/etc/postgresql/15/main/postgresql.conf</b></code> и добавьте следующие параметры:</li></ol>
@@ -157,31 +161,34 @@
 <ol style="list-style-type:upper-roman">
 <li value="5" class="p_Normal">Для создания полной резервной копии базы данных выполните команду:</li></ol>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">sudo&nbsp;-u&nbsp;postgres&nbsp;/usr/local/bin/wal-g-pg&nbsp;backup-push&nbsp;--config&nbsp;/etc/postgresql/15/main/.walg.json&nbsp;/var/lib/postgresql/15/main/</span></p>
+<h3 class="p_Heading3"><a id="psql-restore" class="hmanchor"></a><span class="f_Heading3">Восстановление данных для PostgreSQL</span></h3>
+<p class="p_Normal"><span style="font-weight: bold;">Важно</span>: восстановление из резервной копии должно производиться в пустую базу данных. Предварительно убедитесь, что у вас есть резервная копия удаляемой БД. Только после этого приступайте к удалению. Подробнее о подготовке к восстановлению читайте в статье <a href="postgresql.html#prepare-to-recovery" class="topiclink">«PostgreSQL»</a>.</p>
 <p class="p_Normal">Для восстановления базы данных из резервной копии с помощью WAL-G: </p>
-<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">Начало&nbsp;внимание</span></p>
-<p class="p_Normal">Восстановление из резервной копии должно производиться в пустую базу данных. Предварительно убедитесь, что у вас есть резервная копия удаляемой БД. Только после этого приступайте к удалению. Подробнее об этом читайте в статье <a href="postgresql.html#prepare-to-recovery" class="topiclink">«PostgreSQL»</a>.</p>
-<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">Конец&nbsp;внимание</span></p>
-<ol style="list-style-type:decimal">
+<ol style="list-style-type:upper-roman">
 <li value="1" class="p_Normal">Остановите PostgreSQL, если он запущен:</li></ol>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">sudo&nbsp;systemctl&nbsp;stop&nbsp;postgresql</span></p>
-<ol style="list-style-type:decimal">
+<ol style="list-style-type:upper-roman">
 <li value="2" class="p_Normal">Переместите или удалите содержимое директории <code><b>/var/lib/postgresql/15/main</b></code>:</li></ol>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">sudo mv&nbsp;/var/lib/postgresql/15/main&nbsp;/var/lib/postgresql/15/main_old</span></p>
-<ol style="list-style-type:decimal">
+<ol style="list-style-type:upper-roman">
 <li value="3" class="p_Normal">Создайте пустую директорию для восстановления:</li></ol>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">sudo mkdir&nbsp;/var/lib/postgresql/15/main</span><br />
 <span class="f_CodeExample">sudo&nbsp;chown&nbsp;postgres:postgres&nbsp;/var/lib/postgresql/15/main</span></p>
-<ol style="list-style-type:decimal">
+<ol style="list-style-type:upper-roman">
 <li value="4" class="p_Normal">Для просмотра списка резервных копий баз данных выполните команду:</li></ol>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">sudo&nbsp;-u&nbsp;postgres&nbsp;/usr/local/bin/wal-g-pg&nbsp;backup-list&nbsp;--config&nbsp;/etc/postgresql/15/main/.walg.json</span></p>
-<ol style="list-style-type:decimal">
+<ol style="list-style-type:upper-roman">
 <li value="5" class="p_Normal">Выполните команду восстановления:</li></ol>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">sudo&nbsp;-u&nbsp;postgres&nbsp;/usr/local/bin/wal-g-pg&nbsp;backup-fetch&nbsp;/var/lib/postgresql/15/main&nbsp;LATEST --config&nbsp;/etc/postgresql/15/main/.walg.json</span></p>
-<p class="p_Normal" style="margin: 0 0 0 36px;">Здесь <code><b>LATEST</b></code> указывает на последнюю резервную копию, либо можно ввести наименование нужной копии, полученной из списка на предыдущем шаге, например: <span style="font-weight: bold;">base_000000010000000000000009</span>.</p>
-<ol style="list-style-type:decimal">
+<p class="p_Normal" style="margin: 0 0 0 36px;">Здесь <code><b>LATEST</b></code> указывает на последнюю резервную копию. Вы также можете ввести наименование нужной копии, полученной из списка на предыдущем шаге, например, <span style="font-weight: bold;">base_000000010000000000000009</span>.</p>
+<ol style="list-style-type:upper-roman">
 <li value="6" class="p_Normal">Запустите PostgreSQL:</li></ol>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">sudo systemctl&nbsp;start&nbsp;postgresql</span></p>
 <h2 class="p_Heading2"><a id="wal-g-in-mongo" class="hmanchor"></a><span class="f_Heading2">Настройка WAL-G для MongoDB</span></h2>
+<p class="p_Normal">С помощью WAL-G вы можете:</p>
+<ul style="list-style-type:disc">
+<li class="p_Normal">выполнить резервное копирование данных;</li><li class="p_Normal"><a href="backup-and-recovery-with-wal-g-and-rclone.html#mongo-restore" class="topiclink">восстановить данные из резервной копии</a>.</li></ul>
+<h3 class="p_Heading3"><span class="f_Heading3">Резервное копирование для MongoDB</span></h3>
 <p class="p_Normal">Для резервного копирования данных с помощью WAL-G выполните следующие действия:</p>
 <ol style="list-style-type:upper-roman">
 <li value="1" class="p_Normal">Предварительно установите WAL-G с <a href="https://github.com/wal-g/wal-g" target="_blank" class="weblink">официального GitHub-репозитория</a>:</li></ol>
@@ -202,37 +209,39 @@
 <span class="f_CodeExample">&quot;WALG_STREAM_CREATE_COMMAND&quot;:&nbsp;&quot;mongodump&nbsp;--archive&nbsp;--oplog&nbsp;--uri='mongodb://superuser:SecretPassword@mongodb-server.your_domain:27017/?authSource=admin&amp;connectTimeoutMS=10000'&quot;,</span><br />
 <span class="f_CodeExample">&quot;WALG_STREAM_RESTORE_COMMAND&quot;:&nbsp;&quot;mongorestore&nbsp;--archive&nbsp;--oplogReplay&nbsp;--uri='mongodb://superuser:SecretPassword@mongodb-server.your_domain:27017/?authSource=admin&amp;connectTimeoutMS=10000'&quot;</span><br />
 <span class="f_CodeExample">}</span></p>
-<p class="p_Normal" style="margin: 0 0 0 37px;">Здесь:</p>
+<p class="p_Normal" style="margin: 0 0 0 37px;">Где:</p>
 <ul style="list-style-type:disc">
-<li class="p_Normal"><code><b>WALG_S3_PREFIX</b></code> — указывает путь к S3, где будут храниться резервные копии и <span style="font-weight: bold;">.WAL</span>-файлы (Write-Ahead Logs);</li><li class="p_Normal"><code><b>AWS_ENDPOINT</b></code> — указывает точку доступа (endpoint) для S3-совместимого хранилища;</li><li class="p_Normal"><code><b>AWS_ACCESS_KEY_ID</b></code> — идентификатор ключа доступа (Access Key ID) для аутентификации в S3-совместимом хранилище;</li><li class="p_Normal"><code><b>AWS_SECRET_ACCESS_KEY</b></code> — секретный ключ (Secret Access Key) для аутентификации в S3-совместимом хранилище;</li><li class="p_Normal"><code><b>AWS_REGION</b></code> — регион, в котором находится S3-совместимое хранилище;</li><li class="p_Normal"><code><b>AWS_S3_FORCE_PATH_STYLE</b></code> — указывает, что нужно использовать path-style для доступа к S3-бакетам;</li><li class="p_Normal"><code><b>WALG_COMPRESSION_METHOD</b></code> — метод сжатия, используемый для резервных копий. В данном случае используется алгоритм <code><b>Brotli</b></code>, который обеспечивает хорошее соотношение между степенью сжатия и скоростью;</li><li class="p_Normal"><code><b>MONGODB_URI</b></code> — URI для подключения к MongoDB;</li><li class="p_Normal"><code><b>WALG_STREAM_CREATE_COMMAND</b></code> — команда, используемая WAL-G для создания резервной копии MongoDB;</li><li class="p_Normal"><code><b>ALG_STREAM_RESTORE_COMMAND</b></code> — команда, используемая WAL-G для восстановления резервной копии MongoDB.</li></ul>
+<li class="p_Normal"><code><b>WALG_S3_PREFIX</b></code> — путь к S3, где будут храниться резервные копии и <span style="font-weight: bold;">.WAL</span>-файлы (Write-Ahead Logs);</li><li class="p_Normal"><code><b>AWS_ENDPOINT</b></code> — точка доступа (endpoint) для S3-совместимого хранилища;</li><li class="p_Normal"><code><b>AWS_ACCESS_KEY_ID</b></code> — идентификатор ключа доступа (Access Key ID) для аутентификации в S3-совместимом хранилище;</li><li class="p_Normal"><code><b>AWS_SECRET_ACCESS_KEY</b></code> — секретный ключ (Secret Access Key) для аутентификации в S3-совместимом хранилище;</li><li class="p_Normal"><code><b>AWS_REGION</b></code> — регион, в котором находится S3-совместимое хранилище;</li><li class="p_Normal"><code><b>AWS_S3_FORCE_PATH_STYLE</b></code> — указывает, что нужно использовать path-style для доступа к S3-бакетам;</li><li class="p_Normal"><code><b>WALG_COMPRESSION_METHOD</b></code> — метод сжатия, используемый для резервных копий. В данном случае используется алгоритм <code><b>Brotli</b></code>, который обеспечивает хорошее соотношение между степенью сжатия и скоростью;</li><li class="p_Normal"><code><b>MONGODB_URI</b></code> — URI для подключения к MongoDB;</li><li class="p_Normal"><code><b>WALG_STREAM_CREATE_COMMAND</b></code> — команда, используемая WAL-G для создания резервной копии MongoDB;</li><li class="p_Normal"><code><b>ALG_STREAM_RESTORE_COMMAND</b></code> — команда, используемая WAL-G для восстановления резервной копии MongoDB.</li></ul>
 <ol style="list-style-type:upper-roman">
 <li value="3" class="p_Normal">Для создания полной резервной копии баз данных выполните команду:</li></ol>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">/usr/local/bin/wal-g-mongo&nbsp;backup-push&nbsp;--config&nbsp;/home/user/.walg.json</span></p>
 <ol style="list-style-type:upper-roman">
 <li value="4" class="p_Normal">Для просмотра списка резервных копий баз данных выполните команду:</li></ol>
-<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">/usr/local/bin/wal-g-mongo&nbsp;backup-lis&nbsp;--config&nbsp;/home/user/.walg.json</span></p>
-<p class="p_Normal">Для восстановления базы данных из резервной копии выполните команду:</p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">/usr/local/bin/wal-g-mongo&nbsp;backup-list&nbsp;--config&nbsp;/home/user/.walg.json</span></p>
+<h3 class="p_Heading3"><a id="mongo-restore" class="hmanchor"></a><span class="f_Heading3">Восстановление данных для MongoDB</span></h3>
+<p class="p_Normal"><span style="font-weight: bold;">Важно</span>: восстановление из резервной копии должно производиться в пустую базу данных. Предварительно убедитесь, что у вас есть резервная копия удаляемой базы данных. Только после этого приступайте к удалению БД. Подробнее о подготовке к восстановлению читайте в статье <a href="mongodb.html#prepare-to-recovery" class="topiclink">«MongoDB»</a>.</p>
+<p class="p_Normal">Чтобы восстановить базу данных из резервной копии, используйте команду:</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">/usr/local/bin/wal-g-mongo&nbsp;backup-fetch&nbsp;LATEST&nbsp;--config&nbsp;/home/user/.walg.json</span></p>
-<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">Начало&nbsp;внимание</span></p>
-<p class="p_Normal">Восстановление из резервной копии должно производиться в пустую базу данных. Предварительно убедитесь, что у вас есть резервная копия удаляемой базы данных. Только после этого приступайте к удалению БД. Подробнее об этом читайте в статье <a href="mongodb.html#prepare-to-recovery" class="topiclink">«MongoDB»</a>.</p>
-<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">Конец&nbsp;внимание</span></p>
-<p class="p_Normal">Здесь <code><b>LATEST</b></code> указывает на последнюю резервную копию, либо можно указать наименование нужной копии, полученной из списка на предыдущем шаге, например: <span style="font-weight: bold;">stream_20250214T093724Z</span>.</p>
+<p class="p_Normal">Здесь <code><b>LATEST</b></code> указывает на последнюю резервную копию. Вы также можете указать наименование нужной копии, полученной из списка на предыдущем шаге, например, <span style="font-weight: bold;">stream_20250214T093724Z</span>.</p>
 <h2 class="p_Heading2"><a id="rclone" class="hmanchor"></a><span class="f_Heading2">Настройка Rclone</span></h2>
-<p class="p_Normal">Для установки Rclone используйте команду:</p>
+<ol style="list-style-type:upper-roman">
+<li value="1" class="p_Normal">Установите Rclone с помощью команды:</li></ol>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">sudo&nbsp;-v&nbsp;;&nbsp;curl&nbsp;https://rclone.org/install.sh&nbsp;|&nbsp;sudo&nbsp;bash</span></p>
-<p class="p_Normal">Чтобы настроить Rclone для работы с S3:</p>
+<ol style="list-style-type:upper-roman" start="2">
+<li value="2" class="p_Normal">Настройте Rclone для работы с S3:</li></ol>
 <ol style="list-style-type:decimal">
 <li value="1" class="p_Normal">Запустите команду для настройки нового S3-хранилища:</li></ol>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">rclone&nbsp;config</span></p>
 <ol style="list-style-type:decimal">
-<li value="2" class="p_Normal">В открывшемся окне выберите опцию <span style="font-weight: bold;">n</span> для создания нового хранилища.</li><li value="3" class="p_Normal">Введите имя для вашего хранилища. Например <span style="font-weight: bold;">source-s3</span> для исходного хранилища и <span style="font-weight: bold;">backup-s3</span> для целевого.</li><li value="4" class="p_Normal">Выберите тип хранилища (<span style="font-weight: bold;">s3</span>). </li><li value="5" class="p_Normal">Выберите провайдера (<span style="font-weight: bold;">Other</span>).  </li><li value="6" class="p_Normal">Введите параметры доступа к вашему S3-хранилищу:</li></ol>
+<li value="2" class="p_Normal">В открывшемся окне выберите опцию <span style="font-weight: bold;">n</span> для создания нового хранилища.</li><li value="3" class="p_Normal">Введите имя для вашего хранилища. Например <span style="font-weight: bold;">source-s3</span> для исходного хранилища и <span style="font-weight: bold;">backup-s3</span> для целевого.</li><li value="4" class="p_Normal">Выберите тип хранилища <span style="font-weight: bold;">s3</span>. </li><li value="5" class="p_Normal">Выберите провайдера <span style="font-weight: bold;">Other</span>.  </li><li value="6" class="p_Normal">Введите параметры доступа к вашему S3-хранилищу:</li></ol>
 <ul style="list-style-type:disc">
-<li class="p_Normal"><code><b>access_key_id</b></code> — ваш идентификатор ключа доступа;</li><li class="p_Normal"><code><b>secret_access_key</b></code> — ваш секретный ключ;</li><li class="p_Normal"><code><b>region</b></code> — регион вашего S3-хранилища;</li><li class="p_Normal"><code><b>endpoint</b></code> — укажите точку доступа S3-хранилища.</li></ul>
+<li class="p_Normal"><code><b>access_key_id</b></code> — ваш идентификатор ключа доступа;</li><li class="p_Normal"><code><b>secret_access_key</b></code> — ваш секретный ключ;</li><li class="p_Normal"><code><b>region</b></code> — регион вашего S3-хранилища;</li><li class="p_Normal"><code><b>endpoint</b></code> — точка доступа S3-хранилища.</li></ul>
 <ol style="list-style-type:decimal">
 <li value="7" class="p_Normal">Повторите шаги для настройки второго S3-хранилища.</li></ol>
-<p class="p_Normal">Для копирования данных из одного S3-хранилища в другое используйте команду <code><b>rclone copy</b></code>:</p>
+<ol style="list-style-type:upper-roman" start="3">
+<li value="3" class="p_Normal">Скопируйте данные из одного S3-хранилища в другое с помощью команды <code><b>rclone copy</b></code>:</li></ol>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">rclone&nbsp;copy&nbsp;source-s3:bucket-name/path&nbsp;backup-s3:backup-bucket-name/path&nbsp;-v&nbsp;--ignore-errors&nbsp;--fast-list&nbsp;--checksum</span></p>
-<p class="p_Normal">Здесь:</p>
+<p class="p_Normal" style="margin: 0 0 0 32px;">Где:</p>
 <ul style="list-style-type:disc">
 <li class="p_Normal"><code><b>source-s3</b></code> — имя удалённого хранилища, настроенного для исходного S3;</li><li class="p_Normal"><code><b>bucket-name/path</b></code> — имя бакета и путь к данным в исходном хранилище;</li><li class="p_Normal"><code><b>backup-s3</b></code> — имя удалённого хранилища, настроенного для целевого S3;</li><li class="p_Normal"><code><b>backup-bucket-name/path</b></code> — имя бакета и путь для резервной копии в целевом хранилище;</li><li class="p_Normal"><code><b>-v</b></code> — включает подробный вывод (verbose mode);</li><li class="p_Normal"><code><b>--ignore-errors</b></code> — игнорирует ошибки, возникающие во время выполнения команды;</li><li class="p_Normal"><code><b>--fast-list</b></code> — ускоряет процесс создания списка файлов и директорий, особенно при работе с облачными хранилищами, такими как S3, Google Drive и другими;</li><li class="p_Normal"><code><b>--checksum</b></code> — включает проверку контрольных сумм (хешей) файлов при копировании или синхронизации.</li></ul>
 
@@ -323,9 +332,9 @@
 </div>
  
     </footer>
-    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jquery1.min.js"></script>
     <iframe name="hmnavigation" style="display:none!important"></iframe>
-    <script src="./jquery-ui.js"></script>
+    <!--<script src="./jquery-ui.js"></script> -->
     <script src="./jquery-ui.min.js"></script>
     <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
     <script src="./jquery.tocify.min.js"></script>

@@ -113,13 +113,12 @@
                         <!-- Placeholder for topic body. -->
                         <p class="p_Normal">В этой статье рассматривается пример развёртывания MinIO в качестве объектного хранилища S3 для программного комплекса ELMA365. Статья охватывает развёртывание MinIO в конфигурации с одним узлом и одним диском (SNSD). Развёртывание SNSD не обеспечивает дополнительной надёжности или доступности, помимо того, что реализовано в базовом томе хранилища (RAID, LVM, ZFS и т. д.). Вы также можете ознакомиться с руководством в <a href="https://min.io/docs/minio/linux/operations/install-deploy-manage/deploy-minio-single-node-single-drive.html#minio-snsd" target="_blank" class="weblink">официальной документации MinIO</a>.</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;внимание</span></p>
-<p class="p_Normal">В рамках статьи используется имя бакета <code><b>s3elma365</b></code>, пользователь <code><b>elma365user</b></code> и пароль <code><b>SecretPassword</b></code>.</p>
-<p class="p_Normal">При настройке задайте эти данные согласно политике безопасности, принятой в вашей организации.</p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;">В статье используется имя бакета <span style="font-weight: bold;">s3elma365</span>, пользователь <span style="font-weight: bold;">elma365user</span> и пароль <span style="font-weight: bold;">SecretPassword</span>. При настройке задайте эти данные согласно политике безопасности, принятой в вашей организации.</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;внимание</span></p>
 <p class="p_Normal">Установка состоит из нескольких этапов:</p>
 <ol style="list-style-type:decimal">
 <li value="1" class="p_Normal"><a href="configure-minio.html#prepare-disk" class="topiclink">Подготовка диска</a>.</li><li value="2" class="p_Normal"><a href="configure-minio.html#install-minio" class="topiclink">Установка MinIO</a>.</li><li value="3" class="p_Normal"><a href="configure-minio.html#install-min-client" class="topiclink">Установка MinIO Client</a>.</li><li value="4" class="p_Normal"><a href="configure-minio.html#create-user-and-group-minio-user" class="topiclink">Создание пользователя и группы minio-user</a>.</li><li value="5" class="p_Normal"><a href="configure-minio.html#create-service-file" class="topiclink">Создание файла сервиса для systemd</a>.</li><li value="6" class="p_Normal"><a href="configure-minio.html#create-environment-file" class="topiclink">Создание файла окружения для MinIO</a>.</li><li value="7" class="p_Normal"><a href="configure-minio.html#start-service" class="topiclink">Запуск сервиса MinIO</a>.</li><li value="8" class="p_Normal"><a href="configure-minio.html#connection-setup" class="topiclink">Настройка подключения к MinIO</a>.</li><li value="9" class="p_Normal"><a href="configure-minio.html#create-bucket" class="topiclink">Создание бакета</a>.</li><li value="10" class="p_Normal"><a href="configure-minio.html#cors" class="topiclink">Настройка CORS</a>.</li><li value="11" class="p_Normal"><a href="configure-minio.html#connection-to-minio" class="topiclink">Подключение к MinIO</a>.</li></ol>
-<h2 class="p_Heading2"><a id="prepare-disk" class="hmanchor"></a><span class="f_Heading2">Шаг 1: Подготовка диска </span></h2>
+<h2 class="p_Heading2"><a id="prepare-disk" class="hmanchor"></a><span class="f_Heading2">Шаг 1. Подготовка диска </span></h2>
 <ol style="list-style-type:upper-roman">
 <li value="1" class="p_Normal">Создайте каталог для монтирования диска:</li></ol>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">sudo&nbsp;mkdir&nbsp;-p&nbsp;/var/lib/minio/data1</span></p>
@@ -133,17 +132,17 @@
 <ol style="list-style-type:upper-roman" start="4">
 <li value="4" class="p_Normal">Проверьте монтирование ранее подготовленного диска:</li></ol>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">sudo&nbsp;mount&nbsp;-av</span></p>
-<h2 class="p_Heading2"><a id="install-minio" class="hmanchor"></a><span class="f_Heading2">Шаг 2: Установка MinIO</span></h2>
+<h2 class="p_Heading2"><a id="install-minio" class="hmanchor"></a><span class="f_Heading2">Шаг 2. Установка MinIO</span></h2>
 <p class="p_Normal">Загрузите последний стабильный binary-файл MinIO и установите его в систему:</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">wget&nbsp;https://dl.min.io/server/minio/release/linux-amd64/minio</span><br />
 <span class="f_CodeExample">chmod&nbsp;+x&nbsp;minio</span><br />
 <span class="f_CodeExample">sudo&nbsp;mv&nbsp;minio&nbsp;/usr/local/bin/</span></p>
-<h2 class="p_Heading2"><a id="install-min-client" class="hmanchor"></a><span class="f_Heading2">Шаг 3: Установка MinIO Client</span></h2>
+<h2 class="p_Heading2"><a id="install-min-client" class="hmanchor"></a><span class="f_Heading2">Шаг 3. Установка MinIO Client</span></h2>
 <p class="p_Normal">Загрузите последний стабильный binary-файл <a href="https://min.io/docs/minio/linux/reference/minio-mc.html" class="weblink">MinIO Client</a> и установите его в систему:</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">wget&nbsp;https://dl.min.io/client/mc/release/linux-amd64/mc</span><br />
 <span class="f_CodeExample">chmod&nbsp;+x&nbsp;mc</span><br />
 <span class="f_CodeExample">sudo&nbsp;mv&nbsp;mc&nbsp;/usr/local/bin/</span></p>
-<h2 class="p_Heading2"><a id="create-user-and-group-minio-user" class="hmanchor"></a><span class="f_Heading2">Шаг 4: Создание пользователя и группы minio-user</span></h2>
+<h2 class="p_Heading2"><a id="create-user-and-group-minio-user" class="hmanchor"></a><span class="f_Heading2">Шаг 4. Создание пользователя и группы minio-user</span></h2>
 <ol style="list-style-type:upper-roman">
 <li value="1" class="p_Normal">Cоздайте пользователя и группу <span style="font-weight: bold;">minio-user</span>:</li></ol>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">sudo&nbsp;groupadd&nbsp;-r&nbsp;minio-user</span><br />
@@ -156,7 +155,7 @@
 <li value="3" class="p_Normal">Задайте разрешения на доступ к каталогам, предназначенным для использования в MinIO:</li></ol>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">sudo&nbsp;chown&nbsp;-R&nbsp;minio-user:minio-user&nbsp;/etc/minio</span><br />
 <span class="f_CodeExample">sudo&nbsp;chown&nbsp;-R&nbsp;minio-user:minio-user&nbsp;/</span><span class="f_CodeExample" style="font-weight: bold;">var</span><span class="f_CodeExample">/lib/minio</span></p>
-<h2 class="p_Heading2"><a id="create-service-file" class="hmanchor"></a><span class="f_Heading2">Шаг 5: Создание файла сервиса для systemd</span></h2>
+<h2 class="p_Heading2"><a id="create-service-file" class="hmanchor"></a><span class="f_Heading2">Шаг 5. Создание файла сервиса для systemd</span></h2>
 <ol style="list-style-type:upper-roman">
 <li value="1" class="p_Normal">Загрузите официальный файл сервиса MinIO:</li></ol>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">sudo&nbsp;curl&nbsp;-O&nbsp;https://raw.githubusercontent.com/minio/minio-service/master/linux-systemd/minio.service</span></p>
@@ -166,7 +165,7 @@
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;внимание</span></p>
 <p class="p_Normal">На этом шаге не запускайте <code><b>minio.service</b></code>.</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;внимание&nbsp;</span></p>
-<h2 class="p_Heading2"><a id="create-environment-file" class="hmanchor"></a><span class="f_Heading2">Шаг 6: Создание файла окружения для MinIO</span></h2>
+<h2 class="p_Heading2"><a id="create-environment-file" class="hmanchor"></a><span class="f_Heading2">Шаг 6. Создание файла окружения для MinIO</span></h2>
 <p class="p_Normal">Создайте файл окружения в <code><b>/etc/default/minio</b></code>. Служба MinIO использует этот файл в качестве источника всех переменных окружения, используемых MinIO и файлом <code><b>minio.service</b></code>.</p>
 <p class="p_Normal">Пример файла окружения в<span style="font-weight: bold;"> </span><code><b>/etc/default/minio</b></code>:</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">#&nbsp;Set&nbsp;the&nbsp;hosts&nbsp;and&nbsp;volumes&nbsp;MinIO&nbsp;uses&nbsp;at&nbsp;startup</span><br />
@@ -232,7 +231,7 @@
 </tr>
 </table>
 </div>
-<h2 class="p_Heading2"><a id="start-service" class="hmanchor"></a><span class="f_Heading2">Шаг 7: Запуск сервиса MinIO</span></h2>
+<h2 class="p_Heading2"><a id="start-service" class="hmanchor"></a><span class="f_Heading2">Шаг 7. Запуск сервиса MinIO</span></h2>
 <ol style="list-style-type:upper-roman">
 <li value="1" class="p_Normal">Выполните следующие команды, чтобы запустить службу MinIO:</li></ol>
 <p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample">sudo systemctl daemon-reload</span><br />
@@ -242,10 +241,10 @@
 <li value="2" class="p_Normal">Убедитесь в том, что сервис minio запустился и работает без ошибок:</li></ol>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">sudo&nbsp;systemctl&nbsp;status&nbsp;minio.service</span><br />
 <span class="f_CodeExample">journalctl&nbsp;-f&nbsp;-u&nbsp;minio.service</span></p>
-<h2 class="p_Heading2"><a id="connection-setup" class="hmanchor"></a><span class="f_Heading2">Шаг 8: Настройка подключения к MinIO</span></h2>
+<h2 class="p_Heading2"><a id="connection-setup" class="hmanchor"></a><span class="f_Heading2">Шаг 8. Настройка подключения к MinIO</span></h2>
 <p class="p_Normal">Создайте <code><b>alias</b></code> для minio:</p>
 <p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample">/usr/local/bin/mc alias set minio http://minio.your_domain:9000 elma365user SecretPassword</span></p>
-<h2 class="p_Heading2"><a id="create-bucket" class="hmanchor"></a><span class="f_Heading2">Шаг 9: Создание бакета</span></h2>
+<h2 class="p_Heading2"><a id="create-bucket" class="hmanchor"></a><span class="f_Heading2">Шаг 9. Создание бакета</span></h2>
 <p class="p_Normal"><span style="font-weight: bold;">Важно</span>: наименование бакета в S3 должно соответствовать формату <code><b>s3elma365*</b></code>.</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;примера</span></p>
 <p class="p_Normal">Примеры наименований для бакетов</p>
@@ -270,8 +269,8 @@
 </tr>
 </table>
 </div>
-<h2 class="p_Heading2"><a id="cors" class="hmanchor"></a><span class="f_Heading2">Шаг 10: Настройка CORS</span></h2>
-<p class="p_Normal"><span style="font-weight: bold;">Cross-Origin Resource Sharing (CORS)</span> — это механизм, с помощью которого ограничивается доступ к ресурсам веб-приложения из сторонних доменов. Вы можете определить список доменов, с которых разрешено направлять запросы к приложению ELMA365, а также указать доступные заголовки и методы HTTP. </p>
+<h2 class="p_Heading2"><a id="cors" class="hmanchor"></a><span class="f_Heading2">Шаг 10. Настройка CORS</span></h2>
+<p class="p_Normal"><span style="font-weight: bold;">Cross-Origin Resource Sharing (CORS)</span> — это инструмент, с помощью которого ограничивается доступ к ресурсам веб-приложения из сторонних доменов. Вы можете определить список доменов, с которых разрешено направлять запросы к приложению ELMA365, а также указать доступные заголовки и методы HTTP. </p>
 <p class="p_Normal">Настройте CORS одним из способов:</p>
 <ol style="list-style-type:decimal">
 <li value="1" class="p_Normal"><a href="configure-minio.html#cors-file" class="topiclink">С помощью файла с конфигурацией CORS</a>.</li><li value="2" class="p_Normal"><a href="configure-minio.html#cors-via-service" class="topiclink">Через веб-интерфейс сервиса для управления данными</a>, например Yandex Object Storage.</li></ol>
@@ -306,7 +305,7 @@
 <p class="p_Normal">Пример заполнения параметров CORS в Yandex Object Storage:</p>
 <p class="p_Normal"><img alt="configure-minio-1" width="596" height="505" style="margin:0;width:596px;height:505px;border:none" src="configure-minio-1.png"/></p>
 <p class="p_Normal">Подробнее о том, как настроить CORS читайте в <a href="https://yandex.cloud/ru/docs/storage/operations/buckets/cors" target="_blank" class="weblink">официальной документации Yandex Cloud</a>.</p>
-<h2 class="p_Heading2"><a id="connection-to-minio" class="hmanchor"></a><span class="f_Heading2">Шаг 11: Подключение к MinIO</span></h2>
+<h2 class="p_Heading2"><a id="connection-to-minio" class="hmanchor"></a><span class="f_Heading2">Шаг 11. Подключение к MinIO</span></h2>
 <p class="p_Normal">Параметры для подключения к MinIO:</p>
 <ul style="list-style-type:disc">
 <li class="p_Normal"><span style="font-weight: bold;">address</span> — <code><b>minio.your_domain:9000</b></code>;</li><li class="p_Normal"><span style="font-weight: bold;">bucket</span> — <code><b>s3elma365</b></code>;</li><li class="p_Normal"><span style="font-weight: bold;">region</span> — <code><b>ru-central-1</b></code>;</li><li class="p_Normal"><span style="font-weight: bold;">access key ID</span> — <code><b>elma365user</b></code>;</li><li class="p_Normal"><span style="font-weight: bold;">secret access key</span> — <code><b>SecretPassword</b></code>;</li><li class="p_Normal"><span style="font-weight: bold;">upload method</span> — <code><b>PUT</b></code>;</li><li class="p_Normal"><span style="font-weight: bold;">enable SSL</span> — <code><b>No</b></code>.</li></ul>
@@ -399,9 +398,9 @@
 </div>
  
     </footer>
-    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jquery1.min.js"></script>
     <iframe name="hmnavigation" style="display:none!important"></iframe>
-    <script src="./jquery-ui.js"></script>
+    <!--<script src="./jquery-ui.js"></script> -->
     <script src="./jquery-ui.min.js"></script>
     <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
     <script src="./jquery.tocify.min.js"></script>

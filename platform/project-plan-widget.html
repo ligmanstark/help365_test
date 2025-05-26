@@ -8,7 +8,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Виджет используется в карточке проекта для создания, отображения и редактирования плана проекта.&nbsp;" />
+    <meta name="description" content="Виджет используется в карточке проекта для создания, просмотра и редактирования плана проекта в виде диаграммы со списком задач и цветовой схемой вдоль календарной оси." />
     <meta name="picture" content="" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Cправка по Low-code платформе ELMA365" />
@@ -111,19 +111,34 @@
                             <a href="#h1-article" class="scroll-top"></a>
                         </div>
                         <!-- Placeholder for topic body. -->
-                        <p class="p_Normal">Виджет используется в <a href="project-card.html#plan-tab" class="topiclink">карточке проекта</a> для создания, отображения и редактирования <a href="project-plan.html" class="topiclink">плана проекта</a>. </p>
-<p class="p_Normal">На карточке просмотра проекта виджет отображает диаграмму Ганта, в которой каждый элемент плана показан в виде списка и цветовой схемы.</p>
-<p class="p_Normal">По умолчанию виджет размещён на формах просмотра системных приложений <span style="font-weight: bold;">Проекты</span> и <span style="font-weight: bold;">План проекта</span>. Вы можете использовать его в карточках любых приложений системы или процессных задачах. Виджет может выглядеть следующим образом:</p>
+                        <p class="p_Normal">Виджет используется в <a href="project-card.html#plan-tab" class="topiclink">карточке проекта</a> для создания, просмотра и редактирования <a href="project-plan.html" class="topiclink">плана проекта</a> в виде диаграммы со списком задач и цветовой схемой вдоль календарной оси.</p>
+<p class="p_Normal">По умолчанию виджет размещён на формах просмотра системных приложений <span style="font-weight: bold;">Проекты</span> и <span style="font-weight: bold;">План проекта</span> и может выглядеть следующим образом:</p>
 <p style="line-height: 1.28; margin: 0 0 11px 0;"><img alt="project-plan-widget-01" width="673" height="248" style="margin:0;width:673px;height:248px;border:none" src="project-plan-widget-01.png"/></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;">Также вы можете вынести виджет на формы других приложений или процессных задач. При этом план проекта можно просматривать, а режим его редактирования доступен только в карточке проекта.</p>
+<h2 class="p_Heading2"><span class="f_Heading2">Настроить виджет «План проекта»</span></h2>
 <p class="p_Normal"><a id="configure-widget" class="hmanchor"></a>Чтобы перейти к настройкам виджета, откройте форму просмотра приложения <span style="font-weight: bold;">Проекты</span> в <a href="interface_designer.html" class="topiclink">дизайнере интерфейсов</a>, выберите виджет и нажмите значок шестерёнки. Форма настроек состоит из трёх вкладок.</p>
-<h2 class="p_Heading2"><a id="main-tab" class="hmanchor"></a><span class="f_Heading2">Вкладка «Основные» </span></h2>
-<p class="p_Normal"><img alt="project-plan-widget-3" width="585" height="526" style="margin:0;width:585px;height:526px;border:none" src="project-plan-widget-3.png"/></p>
+<h3 class="p_Heading3"><a id="main-tab" class="hmanchor"></a><span class="f_Heading3">Вкладка «Основные» </span></h3>
+<p class="p_Normal"><img alt="project-plan-widget-3" width="585" height="671" style="margin:0;width:585px;height:671px;border:none" src="project-plan-widget-3.png"/></p>
 <ul style="list-style-type:disc">
 <li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold;">Текущий объект</span><span style="font-weight: bold; color: #ff0000;">*</span> — в этом поле автоматически задаётся элемент приложения <span style="font-weight: bold;">Проекты</span>;</li><li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold;">План проекта</span> — определите план, который будет отображаться в виджете;</li><li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold;">Проект</span> — определите проект, план которого будет отображать виджет.</li></ul>
 <p style="line-height: 1.28; margin: 0 0 11px 0;">Для заполнения полей <span style="font-weight: bold;">План проекта </span>и <span style="font-weight: bold;">Проект </span>нажмите ссылку <span style="font-weight: bold;">&lt;Не установлено&gt;</span> и выберите элемент. На формах приложений <span style="font-weight: bold;">Проекты</span> и <span style="font-weight: bold;">План проекта</span> эти поля заполнять не нужно, т. к. значение определяется автоматически из текущего объекта;</p>
 <ul style="list-style-type:disc">
-<li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold;">Базовый план для сравнения</span> — укажите версию плана, с которой будут сопоставляться все последующие черновики при включении опции <a href="create-or-change-plan.html#compare-with-current" class="topiclink">Сравнить с базовым</a>;</li><li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><a id="counter-task" class="hmanchor"></a><span style="font-weight: bold;">Нумерация задач </span>— опция по умолчанию выключена. Чтобы пронумеровать задачи в плане с учётом вложенности, поставьте флажок. Обратите внимание, нумерация не отобразится после экспорта или импорта плана.</li><li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold;">Показывать кнопки редактирования плана</span> — опция включена по умолчанию. Если вы не хотите отображать над планом <a href="create-or-change-plan.html#settings-panel" class="topiclink">панель инструментов</a>, снимите флажок;</li><li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold;">Отображать временную диаграмму</span> — опция включена по умолчанию. Если вы не хотите показывать цветовую схему в виджете, снимите флажок;</li><li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><a id="edit-modal-window" class="hmanchor"></a><span style="font-weight: bold;">Редактировать в модальном окне </span>— опция включена по умолчанию. В этом случае план откроется в отдельном окне для внесения в него изменений. Чтобы пользователь редактировал план на самой вкладке<span style="font-weight: bold;"> Календарный план</span> в карточке проекта, снимите флажок.</li></ul>
-<h2 class="p_Heading2"><a id="system-tab" class="hmanchor"></a><span class="f_Heading2">Вкладки «События» и «Системные»</span></h2>
+<li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold;">Базовый план для сравнения</span> — укажите версию плана, с которой будут сопоставляться все последующие черновики при включении опции <a href="create-or-change-plan.html#compare-with-current" class="topiclink">Сравнить с базовым</a>;</li><li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><a id="counter-task" class="hmanchor"></a><span style="font-weight: bold;">Нумерация задач </span>— опция по умолчанию выключена. Чтобы пронумеровать задачи в плане с учётом вложенности, поставьте флажок. Обратите внимание, нумерация не отобразится после экспорта или импорта плана.</li><li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold;">Показывать кнопки редактирования плана</span> — опция включена по умолчанию. Если вы не хотите отображать над планом <a href="create-or-change-plan.html#settings-panel" class="topiclink">панель инструментов</a>, снимите флажок;</li><li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold;">Отображать временную диаграмму</span> — опция включена по умолчанию. Если вы не хотите показывать цветовую схему в виджете, снимите флажок;</li><li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><a id="column-configuration" class="hmanchor"></a><span style="font-weight: bold;">Конфигурация столбцов (JSON) </span>— в этом поле задаётся отображение столбцов плана в виде структуры JSON со свойствами, которые соответствуют данным задачи. По умолчанию настроена видимость даты начала и завершения задачи, её процент выполнения и продолжительность, а также ответственный. Вы можете также установить запрет на редактирования данных в столбцах, чтобы предотвратить случайные изменения при нажатии на ячейку.</li></ul>
+<p style="line-height: 1.28; margin: 0 0 11px 34px;"><a class="dropdown-toggle" href="javascript:HMToggle('toggle','TOGGLE0186A1')">Примеры настройки столбцов</a></p>
+<div id="TOGGLE0186A1" class="dropdown-toggle-body" style="text-align: left; text-indent: 0; line-height: 1.28; padding: 0 0 0 0; margin: 0 0 11px 34px;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><ol style="list-style-type:decimal">
+<li value="1" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;">Если вы хотите показать столбец с участниками задач, добавьте значение <code><b>{"fieldCode": "_participants", "width": 210}</b></code><span style="background-color: #ffffff;">. Несколько участников отобразятся в ячейке таблицы в виде аватаров. Чтобы просмотреть Ф. И. О. сотрудника, достаточно навести курсор на аватар.</span></li><li value="2" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="background-color: #ffffff;">Чтобы запретить редактировать дату начала задачи, добавьте параметр&nbsp;</span><code><b>disableEdit</b></code><span style="color: #212529; background-color: #ffffff;">:</span><span style="font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif; color: #212529; background-color: #ffffff;">&nbsp;</span><code><b>{ "fieldCode": "_start_date", "width": 110, "disableEdit": true }</b></code><span style="color: #212529; background-color: #ffffff;">. Тогда изменить данные пользователь сможет, только открыв карточку задачи.</span></li></ol>
+</td>
+</tr>
+</table>
+</div>
+<ul style="list-style-type:disc">
+<li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><a id="edit-modal-window" class="hmanchor"></a><span style="font-weight: bold;">Редактировать в модальном окне </span>— когда опция выключена, редактировать план можно только в карточке проекта на вкладке <span style="font-weight: bold;">Календарный план</span>. Включите опцию, чтобы пользователь открывал план <a href="project-plan.html#full-screen-plan" class="topiclink">на весь экран</a> в отдельном окне для редактирования.</li></ul>
+<p style="line-height: 1.28; margin: 0 0 11px 34px;">Также при включённой опции в карточке проекта над его планом появится значок <img alt="scale-icon" width="31" height="28" style="margin:0;width:31px;height:28px;border:none" src="scale-icon.png"/>. Он позволяет открыть план для просмотра в полноэкранном режиме;</p>
+<ul style="list-style-type:disc">
+<li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><a id="prohibit-task-creation" class="hmanchor"></a><span style="font-weight: bold;">Запретить инлайн-создание задач</span> — по умолчанию опция выключена, и пользователь может <a href="create-plan-items.html#inline-create-task" class="topiclink">добавить задачу</a><span style="color: #394149;"> </span>при редактировании плана, указав её название в пустой строке списка задач. При этом форма создания не открывается, и если вы добавляли поля на форму, задача сохранится без их заполнения, включая обязательные поля. <span style="background-color: #ffffff;">Чтобы установить запрет такого варианта создания задачи, включите опцию. Тогда добавлять задачи пользователь сможет, только через кнопку в левом верхнем углу плана.</span></li></ul>
+<h3 class="p_Heading3"><a id="system-tab" class="hmanchor"></a><span class="f_Heading3">Вкладки «События» и «Системные»</span></h3>
 <p class="p_Normal">Вы можете изменить <a href="common_widget_settings.html" class="topiclink">Системные настройки</a> виджета. Они одинаковы для всех виджетов и позволяют управлять видимостью виджетов и доступом к ним, настраивать их поведение при наведении курсора и так далее.</p>
 <p class="p_Normal">Для завершения настройки виджета нажмите кнопку <span style="font-weight: bold;">Сохранить</span>, а затем <span style="font-weight: bold;">Опубликовать</span> на верхней панели дизайнера интерфейсов.</p>
 <p class="p_Normal">Внесённые в виджет изменения можно посмотреть в <a href="project-card.html" class="topiclink">карточке проекта</a>, а также в карточках приложения <span style="font-weight: bold;">План проекта</span>.</p>
@@ -215,15 +230,18 @@
 </div>
  
     </footer>
-    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jquery1.min.js"></script>
     <iframe name="hmnavigation" style="display:none!important"></iframe>
-    <script src="./jquery-ui.js"></script>
+    <!--<script src="./jquery-ui.js"></script> -->
     <script src="./jquery-ui.min.js"></script>
     <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
     <script src="./jquery.tocify.min.js"></script>
     <script src="./TypoReporter.min.js"></script>
     <script src="./google-search.js"></script>
     <script src="./main.js"></script>
+<script type="text/javascript">
+HMInitToggle('TOGGLE0186A1','hm.type','dropdown','hm.state','0');
+</script>
 </body>
 
 </html>

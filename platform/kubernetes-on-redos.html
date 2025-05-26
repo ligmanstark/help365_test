@@ -123,7 +123,7 @@
 <p class="p_Normal">Установка Kubernetes-кластера состоит из четырёх этапов:</p>
 <ol style="list-style-type:decimal">
 <li value="1" class="p_Normal"><a href="kubernetes-on-redos.html#preparation" class="topiclink">Подготовить инфраструктуру</a>.</li><li value="2" class="p_Normal"><a href="kubernetes-on-redos.html#master-node" class="topiclink">Подготовить master-узел</a>.</li><li value="3" class="p_Normal"><a href="kubernetes-on-redos.html#worker-node" class="topiclink">Подготовить worker-узел</a>.</li><li value="4" class="p_Normal"><a href="kubernetes-on-redos.html#other-components" class="topiclink">Установить дополнительные компоненты</a>.</li></ol>
-<h2 class="p_Heading2"><a id="preparation" class="hmanchor"></a><span class="f_Heading2">Шаг 1: Подготовить инфраструктуру</span></h2>
+<h2 class="p_Heading2"><a id="preparation" class="hmanchor"></a><span class="f_Heading2">Шаг 1. Подготовить инфраструктуру</span></h2>
 <p class="p_Normal">Для развёртывания Kubernetes-кластера вам потребуются:</p>
 <ol style="list-style-type:decimal">
 <li value="1" class="p_Normal">Сервер физический или ВМ — управляющий узел (master-узлом) будущего кластера.<br />
@@ -197,7 +197,7 @@
 <ol style="list-style-type:upper-roman" start="10">
 <li value="10" class="p_Normal">Добавьте службу kubelet в автозагрузку:</li></ol>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">systemctl&nbsp;enable&nbsp;kubelet.service</span></p>
-<h2 class="p_Heading2"><a id="master-node" class="hmanchor"></a><span class="f_Heading2">Шаг 2: Подготовить master-узел</span></h2>
+<h2 class="p_Heading2"><a id="master-node" class="hmanchor"></a><span class="f_Heading2">Шаг 2. Подготовить master-узел</span></h2>
 <p class="p_Normal">Выполните следующие действия на master-узле от пользователя <span style="font-weight: bold;">root</span>:</p>
 <ol style="list-style-type:upper-roman">
 <li value="1" class="p_Normal">Запустите инициализацию master-ноды. Эта команда выполнит начальную настройку и подготовку основного узла кластера. Ключ <code><b>--pod-network-cidr</b></code> задаёт адрес внутренней подсети для будущего кластера:</li></ol>
@@ -215,10 +215,10 @@
 <p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample">kubeadm token create --print-join-command</span></p>
 <p class="p_Normal">В результате сформируется команда вида:</p>
 <p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample">kubeadm join 192.168.1.10:6443 --token c7nysv.vyt6wwx3df459ha5a --discovery-token-ca-cert-hash sha256:7cab98d22238e6240add52db9a25465d4668ac588fd70e8e3d9d3cbd4688c7</span></p>
-<h2 class="p_Heading2"><a id="worker-node" class="hmanchor"></a><span class="f_Heading2">Шаг 3: Подготовить worker-узел</span></h2>
+<h2 class="p_Heading2"><a id="worker-node" class="hmanchor"></a><span class="f_Heading2">Шаг 3. Подготовить worker-узел</span></h2>
 <p class="p_Normal">На worker-узле от пользователя <span style="font-weight: bold;">root</span> запустите полученную на предыдущем этапе команду, чтобы подключиться к master-узлу:</p>
 <p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample">kubeadm join 192.168.1.10:6443 --token c7nysv.vyt6wwx3df459ha5a --discovery-token-ca-cert-hash sha256:7cab98d22238e6240add52db9a25465d4668ac588fd70e8e3d9d3cbd4688c7</span></p>
-<h2 class="p_Heading2"><a id="other-components" class="hmanchor"></a><span class="f_Heading2">Шаг 4: Установить дополнительные компоненты</span></h2>
+<h2 class="p_Heading2"><a id="other-components" class="hmanchor"></a><span class="f_Heading2">Шаг 4. Установить дополнительные компоненты</span></h2>
 <p class="p_Normal">Выполните следующие действия на master-узле от пользователя <span style="font-weight: bold;">root</span>:</p>
 <ol style="list-style-type:upper-roman">
 <li value="1" class="p_Normal">Для установки Helm перейдите на страницу релизов <a href="https://github.com/helm/helm/releases" target="_blank" class="weblink">Helm</a> и загрузите архив <code><b>helm-vX.Y.Z-linux-amd64.tar.gz</b></code> необходимой версии. </li></ol>
@@ -340,9 +340,9 @@
 </div>
  
     </footer>
-    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jquery1.min.js"></script>
     <iframe name="hmnavigation" style="display:none!important"></iframe>
-    <script src="./jquery-ui.js"></script>
+    <!--<script src="./jquery-ui.js"></script> -->
     <script src="./jquery-ui.min.js"></script>
     <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
     <script src="./jquery.tocify.min.js"></script>

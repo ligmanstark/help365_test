@@ -115,7 +115,7 @@
 <p class="p_Normal">Процесс включения автомасштабирования для приложения ELMA365 состоит из пяти этапов:</p>
 <ol style="list-style-type:decimal">
 <li value="1" class="p_Normal"><a href="autoscaling-service-enterprise.html#preparation-service-mesh" class="topiclink">Подготовка Service Mesh</a>.</li><li value="2" class="p_Normal"><a href="autoscaling-service-enterprise.html#alteration-config-file" class="topiclink">Внесение изменений в конфигурационный файл</a>.</li><li value="3" class="p_Normal"><a href="autoscaling-service-enterprise.html#apply-autoscale-options" class="topiclink">Применение параметров автомасштабирования для ELMA365 Enterprise</a>.</li><li value="4" class="p_Normal"><a href="autoscaling-service-enterprise.html#enable-load-sharing" class="topiclink">Включение перераспределения нагрузки в Kubernetes-кластере (опционально)</a>.</li><li value="5" class="p_Normal"><a href="autoscaling-service-enterprise.html#enabling-caching" class="topiclink">Включение кэширования DNS-запросов в Kubernetes-кластере (опционально)</a>.</li></ol>
-<h2 class="p_Heading2"><a id="preparation-service-mesh" class="hmanchor"></a><span class="f_Heading2">Шаг 1: Подготовка Service Mesh</span></h2>
+<h2 class="p_Heading2"><a id="preparation-service-mesh" class="hmanchor"></a><span class="f_Heading2">Шаг 1. Подготовка Service Mesh</span></h2>
 <p class="p_Normal">В качестве Service Mesh для ELMA365 используется Linkerd. Этот компонент нужен для обеспечения сетевой связанности приложения ELMA365. Без установленного Service Mesh Linkerd балансировка трафика микросервисов недоступна. </p>
 <p class="p_Normal">Подробнее о настройке и установке Service Mesh Linkerd читайте в статье <a href="install-linkerd.html" class="topiclink">«Установка Linkerd»</a>.</p>
 <ol style="list-style-type:upper-roman">
@@ -124,7 +124,7 @@
 <ol style="list-style-type:upper-roman" start="2">
 <li value="2" class="p_Normal"><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; color: #111111; background-color: #ffffff;">Перезапустите все сервисы приложения ELMA365 командой:</span></li></ol>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">kubectl&nbsp;rollout&nbsp;restart&nbsp;deploy&nbsp;[-n&nbsp;namespace]&nbsp;&amp;&amp;&nbsp;kubectl&nbsp;rollout&nbsp;restart&nbsp;ds&nbsp;[-n&nbsp;namespace]</span></p>
-<h2 class="p_Heading2"><a id="alteration-config-file" class="hmanchor"></a><span class="f_Heading2">Шаг 2: Внесение изменений в конфигурационный файл values-elma365.yaml</span></h2>
+<h2 class="p_Heading2"><a id="alteration-config-file" class="hmanchor"></a><span class="f_Heading2">Шаг 2. Внесение изменений в конфигурационный файл values-elma365.yaml</span></h2>
 <p class="p_Normal">Изменения вносятся в конфигурационный файл <code><b>values-elma365.yaml</b></code>, заполненный при установке ELMA365.</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">Начало&nbsp;внимание</span></p>
 <p class="p_Normal">Перед редактированием файла <code><b>values-elma365.yaml</b></code> создайте его резервную копию, поскольку некорректная настройка параметров может привести к сбоям в работе приложения ELMA365.</p>
@@ -151,7 +151,7 @@
 <span class="f_CodeExample">&nbsp;</span><br />
 <span class="f_CodeExample">...</span></p>
 <p class="p_Normal">Вы также можете задать индивидуальные параметры репликации для каждого сервиса. </p>
-<h2 class="p_Heading2"><a id="apply-autoscale-options" class="hmanchor"></a><span class="f_Heading2">Шаг 3: Применение параметров автомасштабирования для ELMA365 Enterprise</span></h2>
+<h2 class="p_Heading2"><a id="apply-autoscale-options" class="hmanchor"></a><span class="f_Heading2">Шаг 3. Применение параметров автомасштабирования для ELMA365 Enterprise</span></h2>
 <p class="p_Normal">Вы можете обновить параметры для ELMA365 Enterprise двумя способами: через интернет или <a href="autoscaling-service-enterprise.html#offline-update" class="topiclink">без доступа к сети</a>.</p>
 <h3 class="p_Heading3"><span class="f_Heading3">Обновление параметров через интернет</span></h3>
 <ol style="list-style-type:upper-roman">
@@ -167,7 +167,7 @@
 <p class="p_Normal">Перейдите в каталог с загруженным чартом ELMA365 и выполните команду:</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">helm&nbsp;upgrade&nbsp;--install&nbsp;elma365&nbsp;./elma365&nbsp;-f&nbsp;values-elma365.yaml&nbsp;--timeout=30m&nbsp;--wait&nbsp;[-n&nbsp;namespace]</span></p>
 <p class="p_Normal">Обновление параметров занимает 10–30 минут. Дождитесь его завершения.</p>
-<h2 class="p_Heading2"><a id="enable-load-sharing" class="hmanchor"></a><span class="f_Heading2">Шаг 4: Включение перераспределения нагрузки в Kubernetes-кластере (опционально)</span></h2>
+<h2 class="p_Heading2"><a id="enable-load-sharing" class="hmanchor"></a><span class="f_Heading2">Шаг 4. Включение перераспределения нагрузки в Kubernetes-кластере (опционально)</span></h2>
 <p class="p_Normal">Descheduler используется для перебалансировки кластеров путём вытеснения подов, которые потенциально могут быть запущены на более подходящих узлах.</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">Начало&nbsp;внимание</span></p>
 <p class="p_Normal">Если в Kubernetes-кластере три и более ноды, рекомендуется установить компонент дополнения Descheduler.</p>
@@ -175,7 +175,7 @@
 <p class="p_Normal">Пример работы Descheduler:</p>
 <p class="p_Normal">В Kubernetes-кластере из-за проблем с электропитанием стала недоступна одна из нод. Все сервисы приложения ELMA365, которые размещались на недоступной ноде, запустятся на оставшихся в работе нодах. После устранения проблем с электропитанием, нода вернётся в кластер, но сервисы приложения ELMA365 продолжат работу на других нодах. Descheduler периодически проверяет размещение подов в кластере Kubernetes. Descheduler перераспределит поды между нодами Kubernetes-кластера, используя набор преднастроенных стратегий. Перераспределение подов приведёт к выравниванию нагрузки на нодах кластера.</p>
 <p class="p_Normal">Подробнее о настройке и установке Descheduler читайте в статье <a href="install-descheduler.html" class="topiclink">«Установка Descheduler»</a>.</p>
-<h2 class="p_Heading2"><a id="enabling-caching" class="hmanchor"></a><span class="f_Heading2">Шаг 5: Включение кеширования DNS-запросов в Kubernetes-кластере (опционально)</span></h2>
+<h2 class="p_Heading2"><a id="enabling-caching" class="hmanchor"></a><span class="f_Heading2">Шаг 5. Включение кеширования DNS-запросов в Kubernetes-кластере (опционально)</span></h2>
 <p class="p_Normal">NodeLocal DNS Cache позволяет снизить нагрузку по DNS-запросам в кластере Kubernetes. NodeLocal DNS позволяет повысить стабильность преобразования DNS имён, что в свою очередь позволит избежать правил DNAT, connection tracking и ограничений по количеству соединений.</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">Начало&nbsp;внимание</span></p>
 <p class="p_Normal">Если в Kubernetes-кластере более одной ноды, рекомендуется установить компонент дополнения NodeLocal DNS Cache. </p>
@@ -269,9 +269,9 @@
 </div>
  
     </footer>
-    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jquery1.min.js"></script>
     <iframe name="hmnavigation" style="display:none!important"></iframe>
-    <script src="./jquery-ui.js"></script>
+    <!--<script src="./jquery-ui.js"></script> -->
     <script src="./jquery-ui.min.js"></script>
     <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
     <script src="./jquery.tocify.min.js"></script>

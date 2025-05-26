@@ -115,7 +115,7 @@
 <p class="p_Normal">Установка HashiCorp Vault состоит из следующих этапов:</p>
 <ol style="list-style-type:decimal">
 <li value="1" class="p_Normal"><a href="install-vault.html#install-config-file-vault" class="topiclink">Загрузка Helm-чарта и конфигурационного файла Vault</a>.</li><li value="2" class="p_Normal"><a href="install-vault.html#vault-parameters" class="topiclink">Заполнение конфигурационного файла Vault</a>.</li><li value="3" class="p_Normal"><a href="install-vault.html#install-vault" class="topiclink">Установка Vault с помощью Helm в Kubernetes-кластер</a>.</li><li value="4" class="p_Normal"><a href="install-vault.html#vault-settings" class="topiclink">Настройка Vault</a>.</li></ol>
-<h2 class="p_Heading2"><a id="install-config-file-vault" class="hmanchor"></a><span class="f_Heading2">Шаг 1: Загрузка Helm-чарта и конфигурационного файла Vault</span></h2>
+<h2 class="p_Heading2"><a id="install-config-file-vault" class="hmanchor"></a><span class="f_Heading2">Шаг 1. Загрузка Helm-чарта и конфигурационного файла Vault</span></h2>
 <p class="p_Normal">Для установки через интернет получите конфигурационный файл <code><b>values-vault.yaml</b></code>, выполнив команду:</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">helm&nbsp;repo&nbsp;add&nbsp;elma365&nbsp;https://charts.elma365.tech</span><br />
 <span class="f_CodeExample">helm&nbsp;repo&nbsp;update</span><br />
@@ -137,7 +137,7 @@
 </tr>
 </table>
 </div>
-<h2 class="p_Heading2"><a id="vault-parameters" class="hmanchor"></a><span class="f_Heading2">Шаг 2: Заполнение конфигурационного файла Vault</span></h2>
+<h2 class="p_Heading2"><a id="vault-parameters" class="hmanchor"></a><span class="f_Heading2">Шаг 2. Заполнение конфигурационного файла Vault</span></h2>
 <p class="p_Normal">Заполните конфигурационный файл <code><b>values-vault.yaml</b></code> для установки сервиса <span style="font-weight: bold;">Vault</span>.</p>
 <p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample"># Настройки vault</span><br />
 <span class="f_CodeExample">vault:</span><br />
@@ -183,13 +183,13 @@
 </tr>
 </table>
 </div>
-<h2 class="p_Heading2"><a id="install-vault" class="hmanchor"></a><span class="f_Heading2">Шаг 3: Установка Vault с помощью Helm в Kubernetes-кластер</span></h2>
+<h2 class="p_Heading2"><a id="install-vault" class="hmanchor"></a><span class="f_Heading2">Шаг 3. Установка Vault с помощью Helm в Kubernetes-кластер</span></h2>
 <p class="p_Normal">Выполните установку сервиса <span style="font-weight: bold;">Vault</span> в отдельный <code><b>namespace</b></code>, например, в <span style="font-weight: bold;">vault</span>. <code><b>Namespace</b></code> будет создан во время установки, если не был создан ранее.</p>
 <p class="p_Normal">Для установки через интернет выполните команду:</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">helm&nbsp;upgrade&nbsp;--install&nbsp;vault&nbsp;elma365/vault&nbsp;-f&nbsp;values-vault.yaml&nbsp;-n&nbsp;vault&nbsp;--create-namespace</span></p>
 <p class="p_Normal">Для установки без доступа в интернет перейдите в каталог с загруженным сервисом и выполните команду:</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">helm&nbsp;upgrade&nbsp;--install&nbsp;vault&nbsp;./vault&nbsp;-f&nbsp;values-vault.yaml&nbsp;-n&nbsp;vault&nbsp;--create-namespace</span></p>
-<h2 class="p_Heading2"><a id="vault-settings" class="hmanchor"></a><span class="f_Heading2">Шаг 4: Настройка Vault</span></h2>
+<h2 class="p_Heading2"><a id="vault-settings" class="hmanchor"></a><span class="f_Heading2">Шаг 4. Настройка Vault</span></h2>
 <ol style="list-style-type:upper-roman">
 <li value="1" class="p_Normal">Проверьте, что <code><b>vault-server-0</b></code> в статусе <code><b>Running</b></code>:</li></ol>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">kubectl&nbsp;get&nbsp;pods&nbsp;-n&nbsp;vault </span></p>
@@ -355,9 +355,9 @@
 </div>
  
     </footer>
-    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jquery1.min.js"></script>
     <iframe name="hmnavigation" style="display:none!important"></iframe>
-    <script src="./jquery-ui.js"></script>
+    <!--<script src="./jquery-ui.js"></script> -->
     <script src="./jquery-ui.min.js"></script>
     <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
     <script src="./jquery.tocify.min.js"></script>

@@ -149,7 +149,7 @@
 <h2 class="p_Heading2"><span class="f_Heading2">Опции для настройки статусов</span></h2>
 <p style="line-height: 1.28; margin: 0 0 11px 0;">На странице настройки статусов вы можете включить дополнительные опции для смены и отслеживания статусов:</p>
 <ul style="list-style-type:disc">
-<li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold;">Сохранять историю изменения</span> — история смены статусов будет сохраняться и записываться в ассоциированную ленту в карточке элемента приложения. Вы сможете обращаться к этой информации через скрипт при создании своих виджетов или при настройке бизнес-процессов;</li><li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold;">Сохранять дату перехода в статус</span> — дата и время смены статуса элемента будут записываться в системное поле в контексте приложения <span style="font-weight: bold;">Дата перехода в статус</span>. Вы можете вынести поле на форму элемента или на его карточку на канбан-доске. С помощью поля можно отслеживать элементы, которые долго находятся на определённом этапе работы;</li><li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold;">Статус Приложения можно менять вручную</span> — пользователи смогут изменять статус элемента в его карточке или с помощью перемещения по канбан-доске. </li></ul>
+<li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold;">Сохранять историю изменения</span> — если опция включена, данные об изменении статуса элементов приложения записываются в системе. Вы можете обращаться к этой информации в скриптах с помощью метода <code><b>statusHistory()</b></code>. Например, вывести в виджет элементы, получившие определённый статус за последний день. Подробнее читайте в <a href="https://tssdk.elma365.com/ru/latest/interfaces/_03_globals_.application.html#statushistory" target="_blank" class="weblink">справке ELMA365 TS SDK</a>;</li><li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold;">Сохранять дату перехода в статус</span> — дата и время смены статуса элемента будут записываться в системное поле в контексте приложения <span style="font-weight: bold;">Дата перехода в статус</span>. Вы можете вынести поле на форму элемента или на его карточку на канбан-доске. С помощью поля можно отслеживать элементы, которые долго находятся на определённом этапе работы;</li><li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold;">Статус Приложения можно менять вручную</span> — пользователи смогут изменять статус элемента в его карточке или с помощью перемещения по канбан-доске. </li></ul>
 <h2 class="p_Heading2"><a id="change_status_manually" class="hmanchor"></a><span class="f_Heading2">Настройка ручной смены статуса</span></h2>
 <p style="margin: 19px 0 0 0;"><span style="color: #394149;">Чтобы пользователи могли вручную изменять статусы в </span><a href="360016427291.html#element_page" class="topiclink">карточке элемента</a>,<span style="font-weight: bold; color: #394149;"> </span>выполните следующие действия:</p>
 <ol style="list-style-type:upper-roman">
@@ -265,9 +265,9 @@
 </div>
  
     </footer>
-    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jquery1.min.js"></script>
     <iframe name="hmnavigation" style="display:none!important"></iframe>
-    <script src="./jquery-ui.js"></script>
+    <!--<script src="./jquery-ui.js"></script> -->
     <script src="./jquery-ui.min.js"></script>
     <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
     <script src="./jquery.tocify.min.js"></script>

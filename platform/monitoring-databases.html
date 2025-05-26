@@ -115,7 +115,7 @@
 <p class="p_Normal">Установка дополнения состоит из следующих этапов:</p>
 <ol style="list-style-type:decimal">
 <li value="1" class="p_Normal"><a href="monitoring-databases.html#download-helm-chart-and-config-file" class="topiclink">Загрузить helm-чарт и конфигурационный файл</a>.</li><li value="2" class="p_Normal"><a href="monitoring-databases.html#create-configuration-token" class="topiclink">Создать токен конфигурации, чтобы использовать MinIO-метрики для Prometheus</a>.</li><li value="3" class="p_Normal"><a href="monitoring-databases.html#filling-out-configuration-file" class="topiclink">Заполнить конфигурационный файл</a>.</li><li value="4" class="p_Normal"><a href="monitoring-databases.html#node-exporter" class="topiclink">Установить Node Exporter на серверы с базами данных</a>.</li><li value="5" class="p_Normal"><a href="monitoring-databases.html#install-chart-dbsexporter" class="topiclink">Установить чарт DBSExporter с помощью Helm в Kubernetes-кластер</a>.</li></ol>
-<h2 class="p_Heading2"><a id="download-helm-chart-and-config-file" class="hmanchor"></a><span class="f_Heading2">Шаг 1: Загрузить Helm-чарт и конфигурационный файл</span></h2>
+<h2 class="p_Heading2"><a id="download-helm-chart-and-config-file" class="hmanchor"></a><span class="f_Heading2">Шаг 1. Загрузить Helm-чарт и конфигурационный файл</span></h2>
 <p>Для установки через интернет получите конфигурационный файл <code><b>values-dbsexporter.yaml</b></code>, выполнив команду:</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">helm&nbsp;repo&nbsp;add&nbsp;elma365&nbsp;https://charts.elma365.tech</span><br />
 <span class="f_CodeExample">helm&nbsp;repo&nbsp;update</span><br />
@@ -136,11 +136,11 @@
 </tr>
 </table>
 </div>
-<h2 class="p_Heading2"><a id="create-configuration-token" class="hmanchor"></a><span class="f_Heading2">Шаг 2: Создать токен конфигурации, чтобы использовать MinIO-метрики для Prometheus</span></h2>
+<h2 class="p_Heading2"><a id="create-configuration-token" class="hmanchor"></a><span class="f_Heading2">Шаг 2. Создать токен конфигурации, чтобы использовать MinIO-метрики для Prometheus</span></h2>
 <p style="line-height: 1.28; margin: 0 0 11px 0;">Cоздайте <code><b>alias</b></code> и отправьте команду для генерации токена, выполнив команду:</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">mc&nbsp;alias&nbsp;set&nbsp;my_alias&nbsp;http://minio.local&nbsp;accessKey&nbsp;secretKey</span><br />
 <span class="f_CodeExample">mc&nbsp;admin&nbsp;prometheus&nbsp;generate&nbsp;my_alias</span></p>
-<h2 class="p_Heading2"><a id="filling-out-configuration-file" class="hmanchor"></a><span class="f_Heading2">Шаг 3: Заполнить конфигурационный файл</span></h2>
+<h2 class="p_Heading2"><a id="filling-out-configuration-file" class="hmanchor"></a><span class="f_Heading2">Шаг 3. Заполнить конфигурационный файл</span></h2>
 <p class="p_Normal"><a class="dropdown-toggle" style="font-style: normal; font-weight: normal; color: #000000; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186A2')">Заполнение конфигурационного файла для установки DBSExporter</a></p>
 <div id="TOGGLE0186A2" class="dropdown-toggle-body" style="text-align: left; text-indent: 0; line-height: 1.28; padding: 0 0 0 0; margin: 0 0 11px 0;"><table style="border:none; border-spacing:0;">
 <tr>
@@ -310,7 +310,7 @@
 <li value="3" class="p_Normal">Связать DBSExporter с Deckhouse. Пример:</li></ol>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">global:&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
 <span class="f_CodeExample">&nbsp;&nbsp;provisioner:&nbsp;&quot;deckhouse&quot;</span></p>
-<h2 class="p_Heading2"><a id="node-exporter" class="hmanchor"></a><span class="f_Heading2">Шаг 4: Установить Node Exporter на серверы с базами данных</span></h2>
+<h2 class="p_Heading2"><a id="node-exporter" class="hmanchor"></a><span class="f_Heading2">Шаг 4. Установить Node Exporter на серверы с базами данных</span></h2>
 <p class="p_Normal">Чтобы отслеживать состояние серверов с базами данных, выполните установку Node Exporter. Для этого:</p>
 <ol style="list-style-type:upper-roman">
 <li value="1" class="p_Normal">Загрузите Node Exporter на сервер с базой данных:</li></ol>
@@ -354,7 +354,7 @@
 <span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;enabled:&nbsp;true</span><br />
 <span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;port:&nbsp;9100</span><br />
 <span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;relabelings:&nbsp;{}</span></p>
-<h2 class="p_Heading2"><a id="install-chart-dbsexporter" class="hmanchor"></a><span class="f_Heading2">Шаг 5: Установить чарт DBSExporter с помощью Helm в Kubernetes-кластер</span></h2>
+<h2 class="p_Heading2"><a id="install-chart-dbsexporter" class="hmanchor"></a><span class="f_Heading2">Шаг 5. Установить чарт DBSExporter с помощью Helm в Kubernetes-кластер</span></h2>
 <p style="line-height: 1.28; margin: 0 0 11px 0;">Выполните установку чарта <span style="font-weight: bold;">DBSExporter</span> в <code><b>namespace monitoring</b></code>.</p>
 <p style="line-height: 1.28; margin: 0 0 11px 0;">Для установки через интернет:</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">helm&nbsp;upgrade&nbsp;--install&nbsp;-n&nbsp;monitoring&nbsp;dbsexporter&nbsp;elma365/dbsexporter&nbsp;-f&nbsp;values-dbsexporter.yaml</span></p>
@@ -448,9 +448,9 @@
 </div>
  
     </footer>
-    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jquery1.min.js"></script>
     <iframe name="hmnavigation" style="display:none!important"></iframe>
-    <script src="./jquery-ui.js"></script>
+    <!--<script src="./jquery-ui.js"></script> -->
     <script src="./jquery-ui.min.js"></script>
     <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
     <script src="./jquery.tocify.min.js"></script>

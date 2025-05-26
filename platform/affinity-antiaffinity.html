@@ -98,7 +98,7 @@
                         <span id="subcategory" class="search-res__item-category search-res__item-category_subcategory subcategory article__badge"></span>
                         
                             <div class="topic__breadcrumbs">     
-                                <p><a href="elma365-on-premises.html">ELMA365 On-Premises</a> &gt; <a href="elma365-enterprise.html">ELMA365 On-Premises Enterprise</a> &gt; <a href="advanced-kubernetes-settings.html">Продвинутое изменение параметров ELMA365 Enterprise</a> / Правила распределения нагрузки на узлах</p>
+                                <p><a href="elma365-on-premises.html">ELMA365 On-Premises</a> &gt; <a href="elma365-enterprise.html">ELMA365 On-Premises Enterprise</a> &gt; <a href="advanced-kubernetes-settings.html">Продвинутые параметры ELMA365 Enterprise</a> / Правила распределения нагрузки на узлах</p>
                             </div>
                         
                     </div>
@@ -114,9 +114,7 @@
                         <p class="p_Normal">Для повышения отказоустойчивости и производительности системы вы можете задать гибкие правила распределения нагрузки на узлах при помощи инструментов:</p>
 <ul style="list-style-type:disc">
 <li class="p_Normal"><a href="affinity-antiaffinity.html#affinity" class="topiclink">Affinity</a> — определить гибкие правила для размещения подов по отношению друг к другу или на определённых узлах;</li><li class="p_Normal"><a href="affinity-antiaffinity.html#antiaffinity" class="topiclink">Anti-affinity</a> — предотвратить размещение подов одного типа на одном узле или в одной топологии.</li></ul>
-<p class="p_Normal">Также для настройки размещения подов можно использовать:</p>
-<ul style="list-style-type:disc">
-<li class="p_Normal"><a href="node-selector.html" class="topiclink">параметр nodeSelector</a> — задать базовое размещение по меткам узлов;</li><li class="p_Normal"><a href="taints-tolerations.html" class="topiclink">инструменты taints и tolerations</a> — выделить узлы для критически важных сервисов и запретить другую нагрузку на них.</li></ul>
+<p class="p_Normal">Перед настройкой Affinity или Anti-affinity ознакомьтесь со всеми инструментами для размещения подов и с рекомендациями по их совместному использованию в статье <a href="advanced-kubernetes-settings.html" class="topiclink">«Продвинутые параметры ELMA365 Enterprise»</a>. </p>
 <h2 class="p_Heading2"><a id="affinity" class="hmanchor"></a><span class="f_Heading2">Инструмент Affinity</span></h2>
 <p class="p_Normal">Вы можете настроить гибкие правила для распределения подов по узлам или зонам. Например, определить приоритетные узлы или задать сложные условия для размещения подов. Для этого используйте инструмент Affinity. Он настраивается с помощью параметра <code><b>nodeAffinity</b></code>. </p>
 <h3 class="p_Heading3"><span class="f_Heading3">Настройка параметра nodeAffinity</span></h3>
@@ -137,7 +135,7 @@
 <li class="p_Normal"><code><b>key</b></code> — имя метки;</li><li class="p_Normal"><code><b>operator</b></code> — оператор сравнения: <ul style="list-style-type:square">
 <li class="p_Normal"><code><b>In</b></code> — значение метки должно входить в список <code><b>values</b></code>;</li><li class="p_Normal"><code><b>NotIn</b></code> — значение метки не должно входить в список <code><b>values</b></code>;</li><li class="p_Normal"><code><b>Exists</b></code> — у пода должна быть метка <code><b>key</b></code> с заданным именем;</li><li class="p_Normal"><code><b>DoesNotExist</b></code> &nbsp;— у пода не должно быть метки <code><b>key</b></code> с заданным именем;</li></ul></li></ul>
 <li class="p_Normal"><code><b>values</b></code> — значения метки, которые используются с операторами <code><b>In</b></code> и <code><b>NotIn</b></code>. Можно указать несколько значений.</li></ul>
-<p class="p_Normal">Этапы изменения параметра аналогичны шагам в статье <a href="change-settings-enterprise.html" class="topiclink">«Изменение параметров ELMA365 Enterprise»</a>.</p>
+<p class="p_Normal">После настройки параметра примените его, как указано в статье <a href="change-settings-enterprise.html#apply-new-parameters" class="topiclink">«Изменение параметров ELMA365 Enterprise»</a>.</p>
 <h2 class="p_Heading2"><a id="antiaffinity" class="hmanchor"></a><span class="f_Heading2">Инструмент Anti-affinity</span></h2>
 <p class="p_Normal">Для повышения отказоустойчивости системы вы можете распределить поды одного типа по разным узлам. Например, задать правила для размещения подов сервиса <span style="font-weight: bold;">mailer</span>. Если одного узла недостаточно для выполнения вычислений, то работа сервиса продолжится на других узлах.</p>
 <p class="p_Normal">Чтобы задать такие правила, используйте инструмент Anti-affinity. Он настраивается с помощью параметра <code><b>podAntiAffinity</b></code>.</p>
@@ -161,7 +159,7 @@
 <li class="p_Normal"><code><b>key</b></code> — имя метки;</li><li class="p_Normal"><code><b>operator</b></code> — оператор сравнения: <ul style="list-style-type:square">
 <li class="p_Normal"><code><b>In</b></code> — значение метки должно входить в список <code><b>values</b></code>;</li><li class="p_Normal"><code><b>NotIn</b></code> — значение метки не должно входить в список <code><b>values</b></code>;</li><li class="p_Normal"><code><b>Exists</b></code> — у пода должна быть метка <code><b>key</b></code> с заданным именем;</li><li class="p_Normal"><code><b>DoesNotExist</b></code> &nbsp;— у пода не должно быть метки <code><b>key</b></code> с заданным именем;</li></ul></li></ul>
 <li class="p_Normal"><code><b>values</b></code> — значения метки, которые используются с операторами <code><b>In</b></code> и <code><b>NotIn</b></code>. Можно указать несколько значений;</li><li class="p_Normal"><code><b>topologyKey</b></code> — ключ метаданных, который используется для определения топологии узлов, например <code><b>kubernetes.io/hostname</b></code>. </li></ul>
-<p class="p_Normal">Этапы изменения параметра аналогичны шагам в статье <a href="change-settings-enterprise.html" class="topiclink">«Изменение параметров ELMA365 Enterprise»</a>.</p>
+<p class="p_Normal">После настройки параметра примените его, как указано в статье <a href="change-settings-enterprise.html#apply-new-parameters" class="topiclink">«Изменение параметров ELMA365 Enterprise»</a>.</p>
 <h2 class="p_Heading2"><span class="f_Heading2">Значения по умолчанию в поле .Values.global.affinity </span></h2>
 <p class="p_Normal">Если в поле <code><b>.Values.global.affinity</b></code> вы не задали значения, применяется настройка по умолчанию:</p>
 <p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample">affinity:</span><br />
@@ -272,9 +270,9 @@
 </div>
  
     </footer>
-    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jquery1.min.js"></script>
     <iframe name="hmnavigation" style="display:none!important"></iframe>
-    <script src="./jquery-ui.js"></script>
+    <!--<script src="./jquery-ui.js"></script> -->
     <script src="./jquery-ui.min.js"></script>
     <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
     <script src="./jquery.tocify.min.js"></script>

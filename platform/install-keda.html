@@ -115,7 +115,7 @@
 <p class="p_Normal">Установка состоит из трёх этапов:</p>
 <ol style="list-style-type:decimal">
 <li value="1" class="p_Normal"><a href="install-keda.html#download-helm-chart-and-config-file" class="topiclink">Загрузка Helm-чарта и конфигурационного файла</a>.</li><li value="2" class="p_Normal"><a href="install-keda.html#fill-config-file" class="topiclink">Заполнение конфигурационного файла</a>.</li><li value="3" class="p_Normal"><a href="install-keda.html#instal-keda-chart" class="topiclink">Установка чарта KEDA с помощью Helm в Kubernetes-кластер</a>.</li></ol>
-<h2 class="p_Heading2"><a id="download-helm-chart-and-config-file" class="hmanchor"></a><span class="f_Heading2">Шаг 1: Загрузка Helm-чарта и конфигурационного файла</span></h2>
+<h2 class="p_Heading2"><a id="download-helm-chart-and-config-file" class="hmanchor"></a><span class="f_Heading2">Шаг 1. Загрузка Helm-чарта и конфигурационного файла</span></h2>
 <p class="p_Normal">Для установки через интернет получите конфигурационный файл <code><b>values-keda.yaml</b></code>, выполнив команду:</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">helm&nbsp;repo&nbsp;add&nbsp;elma365&nbsp;</span><span class="f_CodeExample">https://charts.elma365.tech</span><br />
 <span class="f_CodeExample">helm&nbsp;repo&nbsp;update</span><br />
@@ -139,7 +139,7 @@
 </tr>
 </table>
 </div>
-<h2 class="p_Heading2"><a id="fill-config-file" class="hmanchor"></a><span class="f_Heading2">Шаг 2: Заполнение конфигурационного файла</span></h2>
+<h2 class="p_Heading2"><a id="fill-config-file" class="hmanchor"></a><span class="f_Heading2">Шаг 2. Заполнение конфигурационного файла</span></h2>
 <p class="p_Normal">Заполните конфигурационный файл <code><b>values-keda.yaml</b></code> для установки сервиса KEDA.</p>
 <p class="p_Normal">При необходимости укажите <code><b>namespace</b></code>, за которым должен следить KEDA (по умолчанию сервис KEDA отслеживает все <code><b>namespace</b></code>). Для этого в параметре <code><b>watchNamespace</b></code> укажите <code><b>namespace</b></code>, в котором установлено приложение.</p>
 <p class="p_Normal">Если нужно обеспечить высокую доступность, задайте количество реплик <span style="font-weight: bold;">3</span> в параметрах <code><b>operator.replicaCount</b></code> и <code><b>metricsServer.replicaCount</b></code>.</p>
@@ -179,14 +179,15 @@
 <span class="f_CodeExample">  # секрет с правами доступа к приватному registry должен быть создан вручную, зашифрованный в Base64</span><br />
 <span class="f_CodeExample">  imagePullSecrets:</span><br />
 <span class="f_CodeExample">  &nbsp; - name: myRegistryKeySecretName</span></p>
-<p class="p_Normal">где формат <span style="font-weight: bold;">repository</span>:</p>
+<p class="p_Normal">&nbsp;<br />
+Где формат <span style="font-weight: bold;">repository</span>:</p>
 <ul style="list-style-type:disc">
 <li class="p_Normal">адрес — <code><b>registry.example.com</b></code>; </li><li class="p_Normal">путь — <code><b>/kedacore/keda</b></code> (для <code><b>metricsApiServer</b></code> — <code><b>/kedacore/keda-metrics-apiserver</b></code>).</li></ul>
 </td>
 </tr>
 </table>
 </div>
-<h2 class="p_Heading2"><a id="instal-keda-chart" class="hmanchor"></a><span class="f_Heading2">Шаг 3: Установка чарта KEDA с помощью Helm в Kubernetes-кластер</span></h2>
+<h2 class="p_Heading2"><a id="instal-keda-chart" class="hmanchor"></a><span class="f_Heading2">Шаг 3. Установка чарта KEDA с помощью Helm в Kubernetes-кластер</span></h2>
 <p class="p_Normal">Перед установкой чарта keda в кластер Deckhouse выполните следующие действия:</p>
 <p class="p_Normal">1. Отключите модуль <code><b>prometheus-metrics-adapter</b></code>:</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">kubectl&nbsp;-ti&nbsp;-n&nbsp;d8-system&nbsp;exec&nbsp;svc/deckhouse-leader&nbsp;-c&nbsp;deckhouse&nbsp;--&nbsp;deckhouse-controller&nbsp;module&nbsp;disable&nbsp;prometheus-metrics-adapter</span></p>
@@ -297,9 +298,9 @@
 </div>
  
     </footer>
-    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jquery1.min.js"></script>
     <iframe name="hmnavigation" style="display:none!important"></iframe>
-    <script src="./jquery-ui.js"></script>
+    <!--<script src="./jquery-ui.js"></script> -->
     <script src="./jquery-ui.min.js"></script>
     <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
     <script src="./jquery.tocify.min.js"></script>

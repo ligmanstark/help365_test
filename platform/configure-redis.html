@@ -140,13 +140,14 @@
 <li value="4" class="p_CodeExample" style="white-space: normal; page-break-inside: auto;">Установите Redis:</li></ol>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">sudo&nbsp;apt-get&nbsp;-y&nbsp;install&nbsp;redis=6:6.2.12-1rl1~$(lsb_release&nbsp;-cs)1&nbsp;redis-server=6:6.2.12-1rl1~$(lsb_release&nbsp;-cs)1&nbsp;redis-tools=6:6.2.12-1rl1~$(lsb_release&nbsp;-cs)1&nbsp;redis-sentinel=6:6.2.12-1rl1~$(lsb_release&nbsp;-cs)1</span></p>
 <h2 class="p_Heading2"><a id="redis-setup" class="hmanchor"></a><span class="f_Heading2">Шаг 3. Настройка Redis</span></h2>
-<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">Начало&nbsp;внимание</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">Начало&nbsp;примечание</span></p>
+<p class="p_Normal"><span style="font-weight: bold;">Примечание</span></p>
 <p class="p_Normal">Для пароля разрешается применять следующие символы:</p>
 <ul style="list-style-type:disc">
 <li class="p_Normal">заглавные латинские буквы: от A до Z;</li><li class="p_Normal">строчные латинские буквы: от a до z;</li><li class="p_Normal">цифры от 0 до 9;</li><li class="p_Normal">символы: &nbsp;-_.</li></ul>
 <p class="p_Normal">Зарезервированные (недопустимые) символы:</p>
 <p class="p_Normal">! * ' ( ) ; : @ &amp; = + $ , / ? % # [ ]</p>
-<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;внимание</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;примечание</span></p>
 <p class="p_Normal">Для настройки необходимо отредактировать файл <code><b>/etc/redis/redis.conf</b></code> на каждом из серверов:</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">sudo&nbsp;nano&nbsp;/etc/redis/redis.conf</span></p>
 <ol style="list-style-type:upper-roman">
@@ -405,9 +406,9 @@
 </div>
  
     </footer>
-    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jquery1.min.js"></script>
     <iframe name="hmnavigation" style="display:none!important"></iframe>
-    <script src="./jquery-ui.js"></script>
+    <!--<script src="./jquery-ui.js"></script> -->
     <script src="./jquery-ui.min.js"></script>
     <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
     <script src="./jquery.tocify.min.js"></script>

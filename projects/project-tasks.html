@@ -151,7 +151,7 @@
 <h2 class="p_Heading2"><a id="plan-task-statuses" class="hmanchor"></a><span class="f_Heading2">Статусы задач плана</span></h2>
 <p class="p_Normal">Задачи плана с типами <span style="font-weight: bold;">Задача</span> и <span style="font-weight: bold;">Контрольная точка</span> могут иметь один из следующих системных статусов:</p>
 <ul style="list-style-type:disc">
-<li class="p_Normal"><span style="font-weight: bold;">Черновик</span> — задача, созданная в черновике плана до его публикации, а также задача плана проекта, восстановленного из архива;</li><li class="p_Normal"><span style="font-weight: bold;">В работе</span> — задача опубликованного плана, а также задача, которую <a href="project-tasks.html#rediscover" class="topiclink">вернули в работу</a> после её выполнения;</li><li class="p_Normal"><span style="font-weight: bold;">Выполнена</span> — этот статус присваивается задаче в следующих случаях:</li></ul>
+<li class="p_Normal"><span style="font-weight: bold;">Черновик</span> — задача, созданная в черновике плана до его публикации, а также невыполненная задача плана, восстановленного из архива;</li><li class="p_Normal"><span style="font-weight: bold;">В работе</span> — задача опубликованного плана, а также задача, которую <a href="project-tasks.html#rediscover" class="topiclink">вернули в работу</a> после её выполнения;</li><li class="p_Normal"><span style="font-weight: bold;">Выполнена</span> — этот статус присваивается задаче в следующих случаях:</li></ul>
 <ul style="list-style-type:disc"><ul style="list-style-type:circle">
 <li class="p_Normal">сотрудник закрыл задачу, нажав кнопку <span style="font-weight: bold;">Сделано</span> в её карточке;</li><li class="p_Normal">руководитель проекта проверил выполнение задачи исполнителя и нажал кнопку <span style="font-weight: bold;">Принять</span> в своей задаче контроля. Опция применяется, если автор задачи при её создании включил <a href="create-plan-items.html#control" class="topiclink">отправку на контроль</a>;</li><li class="p_Normal"><a id="complete-task" class="hmanchor"></a>исполнитель задачи или <a href="project-access-and-roles.html#change-plan" class="topiclink">сотрудник с правом редактировать план</a> на диаграмме плана изменил процент выполнения задачи на 100% или в контекстном меню задачи выбрал действие <span style="font-weight: bold;">Выполнить</span>. Это действие доступно как при просмотре, так и при редактировании плана;</li></ul>
 <li class="p_Normal"><span style="font-weight: bold;">Отменена</span> — статус присваивается задаче после публикации версии плана, в которой она удалена;</li><li class="p_Normal"><span style="font-weight: bold;">В архиве</span> — задача переходит в этот статус при перемещении проекта в архив;</li><li class="p_Normal"><span style="font-weight: bold;">Контроль</span> — статус присваивается, когда исполнитель нажимает в карточке задачи кнопку <span style="font-weight: bold;">На контроль</span>, чтобы завершить её. Доступно для задач с включённой опцией <a href="create-plan-items.html#control" class="topiclink">отправки на контроль</a>.</li></ul>
@@ -171,6 +171,7 @@
 <p style="line-height: 1.28; margin: 0 0 11px 0;">Задача типа <span style="font-weight: bold;">Процесс</span> закроется, когда завершится запущенный процесс.</p>
 <p style="margin: 0 0 11px 0;">Завершённая задача типа <span style="font-weight: bold;">Контрольная точка</span> отобразится в плане проекта в виде ромба зелёного цвета.</p>
 <p style="margin: 0 0 11px 0;">Если в карточке проекта настроено отображение задач в виде канбан-доски с их распределением по статусам, вы можете завершить задачу с типом <span style="font-weight: bold;">Задача</span> или <span style="font-weight: bold;">Контрольная точка</span>, переместив её в колонку со статусом <span style="font-weight: bold;">Выполнена</span>. При этом отметка о выполнении задачи отобразится как в карточке задачи, так и в плане проекта. Подробнее читайте в статье <a href="project-task-board.html" class="topiclink">«Доска задач плана»</a>.</p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;">Также администратор системы может настроить <a href="progress-change.html" class="topiclink">изменение процента выполнения проектной задачи</a> в ходе бизнес-процесса, например после приёмки работ.</p>
 <h2 class="p_Heading2"><span class="f_Heading2">Прогнозные сроки выполнения задач</span></h2>
 <p style="margin: 0 0 11px 0;">Для задач с типами <span style="font-weight: bold;">Задача</span> и <span style="font-weight: bold;">Контрольная точка</span> и статусом <span style="font-weight: bold;">В работе</span> можно устанавливать и запрашивать у исполнителей прогнозные сроки выполнения их задач. Это позволит сравнить сроки выполнения, предполагаемые на текущий день, с плановыми. Подробнее об этом читайте в статье <a href="forecast-dates.html" class="topiclink">«Установить прогнозные сроки»</a>.</p>
 <h2 class="p_Heading2"><a id="control-task" class="hmanchor"></a><span class="f_Heading2">Контроль выполнения задачи</span></h2>
@@ -286,9 +287,9 @@
 </div>
  
     </footer>
-    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jquery1.min.js"></script>
     <iframe name="hmnavigation" style="display:none!important"></iframe>
-    <script src="./jquery-ui.js"></script>
+    <!--<script src="./jquery-ui.js"></script> -->
     <script src="./jquery-ui.min.js"></script>
     <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
     <script src="./jquery.tocify.min.js"></script>

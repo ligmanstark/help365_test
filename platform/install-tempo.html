@@ -119,7 +119,7 @@
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">Начало&nbsp;внимание</span></p>
 <p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="background-color: #ffffff;">При установке&nbsp;<a href="install-loki.html" class="topiclink">Loki</a>&nbsp;+ Tempo начните с аддона Loki. Это позволит сохранить настройки кросслинков, так как изначально прописываются настройки&nbsp;</span><span style="font-weight: bold; background-color: #ffffff;">Datasource</span><span style="background-color: #ffffff;">.</span></p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">Конец&nbsp;внимание</span></p>
-<h2 class="p_Heading2"><a id="download-helm-chart-and-config-file" class="hmanchor"></a><span class="f_Heading2">Шаг 1: Загрузить Helm-чарт и конфигурационный файл</span></h2>
+<h2 class="p_Heading2"><a id="download-helm-chart-and-config-file" class="hmanchor"></a><span class="f_Heading2">Шаг 1. Загрузить Helm-чарт и конфигурационный файл</span></h2>
 <p style="line-height: 1.28; margin: 0 0 11px 0;">Для установки через интернет получите конфигурационный файл <code><b>values-tempo.yaml</b></code>, выполнив команду:</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">helm&nbsp;repo&nbsp;add&nbsp;elma365&nbsp;https://charts.elma365.tech</span><br />
 <span class="f_CodeExample">helm&nbsp;repo&nbsp;update</span><br />
@@ -141,12 +141,12 @@
 </tr>
 </table>
 </div>
-<h2 class="p_Heading2"><a id="create-bucket" class="hmanchor"></a><span class="f_Heading2">Шаг 2: Создать бакет в MinIO</span></h2>
+<h2 class="p_Heading2"><a id="create-bucket" class="hmanchor"></a><span class="f_Heading2">Шаг 2. Создать бакет в MinIO</span></h2>
 <p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="background-color: #ffffff;">1. Создайте&nbsp;</span><code><b>alias</b></code><span style="background-color: #ffffff;">&nbsp;для MinIO:</span></p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">mc&nbsp;alias&nbsp;set&nbsp;my_alias&nbsp;http://minio.local&nbsp;accessKey&nbsp;secretKey</span></p>
 <p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="background-color: #ffffff;">2. Создайте бакет с наименованием&nbsp;</span><code><b>tempo</b></code><span style="background-color: #ffffff;">, выполнив команду:</span></p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">mc&nbsp;mb&nbsp;-p&nbsp;my_alias/tempo&nbsp;--region=ru-central-1</span></p>
-<h2 class="p_Heading2"><a id="fill-config-file" class="hmanchor"></a><span class="f_Heading2">Шаг 3: Заполнить конфигурационный файл</span></h2>
+<h2 class="p_Heading2"><a id="fill-config-file" class="hmanchor"></a><span class="f_Heading2">Шаг 3. Заполнить конфигурационный файл</span></h2>
 <p class="p_Normal"><a class="dropdown-toggle" style="font-style: normal; font-weight: normal; color: #000000; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186A2')">Заполнение конфигурационного файла values-tempo.yaml для установки Tempo</a></p>
 <div id="TOGGLE0186A2" class="dropdown-toggle-body" style="text-align: left; text-indent: 0; background: #fcfcfc; padding: 0 0 0 0; margin: 0 0 0 0;"><table style="border:none; border-spacing:0;">
 <tr>
@@ -220,18 +220,19 @@
 <span class="f_CodeExample"> #&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pullPolicy:&nbsp;IfNotPresent</span><br />
 <span class="f_CodeExample"> &nbsp;&nbsp;imagePullSecrets:</span><br />
 <span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;myRegistryKeySecretName</span></p>
-<p class="p_Normal">Где формат <span style="font-weight: bold;">repository</span>: адрес — <code><b>registry.example.com</b></code> .</p>
+<p class="p_Normal">&nbsp;<br />
+Где формат <span style="font-weight: bold;">repository</span>: адрес — <code><b>registry.example.com</b></code> .</p>
 </td>
 </tr>
 </table>
 </div>
-<h2 class="p_Heading2"><a id="install-chart-tempo" class="hmanchor"></a><span class="f_Heading2">Шаг 4: Установить чарт Tempo с помощью Helm в Kubernetes-кластер</span></h2>
+<h2 class="p_Heading2"><a id="install-chart-tempo" class="hmanchor"></a><span class="f_Heading2">Шаг 4. Установить чарт Tempo с помощью Helm в Kubernetes-кластер</span></h2>
 <p style="line-height: 1.28; page-break-inside: avoid; page-break-after: avoid; margin: 3px 0 0 0;">Выполните установку чарта <span style="font-weight: bold;">Tempo</span> в <code><b>namespace monitoring</b></code><span style="color: #333333;">.</span></p>
 <p style="background: #ffffff; margin: 10px 0 0 0;">Для установки через интернет:</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">helm&nbsp;upgrade&nbsp;--install&nbsp;-n&nbsp;monitoring&nbsp;tempo&nbsp;elma365/tempo&nbsp;-f&nbsp;values-tempo.yaml</span></p>
 <p style="line-height: 1.0; white-space: nowrap; page-break-inside: avoid;">Для&nbsp;офлайн-установки&nbsp;без&nbsp;доступа&nbsp;в&nbsp;интернет&nbsp;перейдите&nbsp;в&nbsp;каталог&nbsp;с&nbsp;загруженным&nbsp;чартом&nbsp;и&nbsp;выполните&nbsp;команду:</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">helm&nbsp;upgrade&nbsp;--install&nbsp;tempo&nbsp;./tempo&nbsp;-f&nbsp;values-tempo.yaml&nbsp;-n&nbsp;monitoring</span></p>
-<h2 class="p_Heading2"><a id="configure-connection" class="hmanchor"></a><span class="f_Heading2">Шаг 5: Настроить подключение Tempo в источниках данных Grafana</span></h2>
+<h2 class="p_Heading2"><a id="configure-connection" class="hmanchor"></a><span class="f_Heading2">Шаг 5. Настроить подключение Tempo в источниках данных Grafana</span></h2>
 <p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="background-color: #ffffff;">Добавьте источник Tempo при установке. Проверить его можно, используя путь:&nbsp;</span><span style="font-weight: bold; background-color: #ffffff;">Home &gt; Administration &gt; Data source &gt; Tempo</span><span style="background-color: #ffffff;">.</span></p>
 <p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="background-color: #ffffff;">В поле URL укажите значение&nbsp;</span><span style="font-weight: bold; background-color: #ffffff;">http://tempo:3100</span><span style="background-color: #ffffff;">.</span></p>
 <p style="line-height: 1.28; margin: 0 0 11px 0;"><img alt="install-tempo-1" width="560" height="334" style="margin:0;width:560px;height:334px;border:none" src="install-tempo-1.png"/></p>
@@ -328,9 +329,9 @@
 </div>
  
     </footer>
-    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jquery1.min.js"></script>
     <iframe name="hmnavigation" style="display:none!important"></iframe>
-    <script src="./jquery-ui.js"></script>
+    <!--<script src="./jquery-ui.js"></script> -->
     <script src="./jquery-ui.min.js"></script>
     <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
     <script src="./jquery.tocify.min.js"></script>

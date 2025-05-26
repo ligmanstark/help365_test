@@ -115,27 +115,31 @@
 <p class="p_Normal">Процесс включения переносимых сервисов для приложения ELMA365 состоит из трёх этапов:</p>
 <ol style="list-style-type:decimal">
 <li value="1" class="p_Normal"><a href="enable-portable-services.html#prepare-storage-systems" class="topiclink">Подготовить системы хранения данных.</a></li><li value="2" class="p_Normal"><a href="enable-portable-services.html#make-changes-to-file" class="topiclink">Внести изменения в конфигурационный файл.</a></li><li value="3" class="p_Normal"><a href="enable-portable-services.html#apply-parameters" class="topiclink">Применить параметры для ELMA365 Enterprise.</a></li></ol>
-<h2 class="p_Heading2"><a id="prepare-storage-systems" class="hmanchor"></a><span class="f_Heading2">Шаг 1: Подготовить системы хранения данных</span></h2>
+<h2 class="p_Heading2"><a id="prepare-storage-systems" class="hmanchor"></a><span class="f_Heading2">Шаг 1. Подготовить системы хранения данных</span></h2>
 <p class="p_Normal">В качестве системы хранения данных для ELMA365 используется Longhorn. Подробнее о настройке и установке этой системы читайте в статье <a href="install-longhorn.html" class="topiclink">«Установка Longhorn»</a>.</p>
-<h2 class="p_Heading2"><a id="make-changes-to-file" class="hmanchor"></a><span class="f_Heading2">Шаг 2: Внести изменения в конфигурационный файл values-elma365.yaml</span></h2>
+<h2 class="p_Heading2"><a id="make-changes-to-file" class="hmanchor"></a><span class="f_Heading2">Шаг 2. Внести изменения в конфигурационный файл values-elma365.yaml</span></h2>
 <p class="p_Normal">Изменения вносятся в конфигурационный файл <code><b>values-elma365.yaml</b></code>, заполненный при установке ELMA365.</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">Начало&nbsp;внимание</span></p>
 <p class="p_Normal">Перед редактированием файла <code><b>values-elma365.yaml</b></code> создайте его резервную копию, поскольку некорректная настройка параметров может привести к сбоям в работе приложения ELMA365.</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">Конец&nbsp;внимание</span></p>
 <p class="p_Normal">Заполните конфигурационный файл <code><b>values-elma365.yaml</b></code> для настройки переносимых сервисов:</p>
 <ol style="list-style-type:upper-roman">
-<li value="1" class="p_Normal">Убедитесь, что переносимые сервисы включены, то есть в параметре <code><b>global.managedServices.enabled</b></code> задано значение <code><b>true</b></code>.</li><li value="2" class="p_Normal">В параметре <code><b>global.managedServices.namespace</b></code> укажите <code><b>namespace</b></code>, в котором будут размещаться переносимые сервисы.</li><li value="3" class="p_Normal">Укажите систему хранения данных Longhorn в параметре <code><b>global.managedServices.defaultStorageClass</b></code>.</li></ol>
+<li value="1" class="p_Normal">Убедитесь, что переносимые сервисы включены, то есть в параметре <code><b>global.managedServices.enabled</b></code> задано значение <code><b>true</b></code>.</li><li value="2" class="p_Normal">В параметре <code><b>global.managedServices.namespace</b></code> укажите <code><b>namespace</b></code>, в котором будут размещаться переносимые сервисы.</li><li value="3" class="p_Normal">Укажите систему хранения данных Longhorn в параметре <code><b>global.managedServices.defaultStorageClass</b></code>.</li><li value="4" class="p_Normal">Чтобы установить лимиты ресурсов, включить автомасштабирование микросервисов, распределить поды по узлам кластера и т. д., включите использование ConfigMap для переносимых сервисов. Для этого задайте в параметре <code><b>global.managedServices.watchableConfigMap</b></code> значение <code><b>true</b></code>. Подробнее читайте в статье <a href="configmap.html" class="topiclink">«Настройка параметров переносимых сервисов через ConfigMap»</a>.</li></ol>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">global:</span><br />
-<span class="f_CodeExample"> &nbsp;...</span><br />
-<span class="f_CodeExample">#&nbsp;включение&nbsp;переносимых&nbsp;сервисов</span><br />
-<span class="f_CodeExample"> &nbsp;managedServices:</span><br />
-<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;enabled:&nbsp;true</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;...</span><br />
+<span class="f_CodeExample">#&nbsp;Включение&nbsp;переносимых&nbsp;сервисов</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;managedServices:</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;enabled:&nbsp;true</span><br />
 <span class="f_CodeExample">#&nbsp;namespace&nbsp;для&nbsp;переносимых&nbsp;сервисов</span><br />
-<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;namespace:&nbsp;elma365-applets</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;namespace:&nbsp;elma365-applets</span><br />
 <span class="f_CodeExample">#&nbsp;storageclass&nbsp;для&nbsp;переносимых&nbsp;сервисов</span><br />
-<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;defaultStorageClass:&nbsp;&quot;longhorn&quot;</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;defaultStorageClass:&nbsp;&quot;longhorn&quot;</span><br />
+<span class="f_CodeExample">#&nbsp;Включение&nbsp;использования&nbsp;ConfigMap</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;watchableConfigMap:</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;enabled:&nbsp;true</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name:&nbsp;'elma365-babysitter-config'</span><br />
 <span class="f_CodeExample">...</span></p>
-<h2 class="p_Heading2"><a id="apply-parameters" class="hmanchor"></a><span class="f_Heading2">Шаг 3: Применить параметры переносимых сервисов для ELMA365 Enterprise</span></h2>
+<h2 class="p_Heading2"><a id="apply-parameters" class="hmanchor"></a><span class="f_Heading2">Шаг 3. Применить параметры переносимых сервисов для ELMA365 Enterprise</span></h2>
 <p>Выполните обновление параметров приложения ELMA365 с использованием конфигурационного файла <code><b>values-elma365.yaml</b></code>. Это можно сделать двумя способами: через интернет или <a href="enable-portable-services.html#offline-update" class="topiclink">без доступа к сети</a>.</p>
 <h3 class="p_Heading3"><span class="f_Heading3">Обновление параметров через интернет</span></h3>
 <ol style="list-style-type:upper-roman">
@@ -154,9 +158,9 @@
 
                         <div class="bottom-nav">
                             
-                                <a id="prev-link" class="topic__navi_prev" href="dump_db.html">
+                                <a id="prev-link" class="topic__navi_prev" href="embedded-to-external-database-enterprise-backupper.html">
                                     <span class="bottom-nav__arrow bottom-nav__arrow--prev"></span> <span
-                                        class="bottom-nav__link">dump_db.html</span>
+                                        class="bottom-nav__link">embedded-to-external-database-enterprise-backupper.html</span>
                                 </a>
                             
                             
@@ -239,9 +243,9 @@
 </div>
  
     </footer>
-    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jquery1.min.js"></script>
     <iframe name="hmnavigation" style="display:none!important"></iframe>
-    <script src="./jquery-ui.js"></script>
+    <!--<script src="./jquery-ui.js"></script> -->
     <script src="./jquery-ui.min.js"></script>
     <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
     <script src="./jquery.tocify.min.js"></script>

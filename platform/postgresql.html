@@ -116,28 +116,28 @@
 <li class="p_Normal">установка PostgreSQL для ОС Ubuntu Linux 20.04;</li><li class="p_Normal"><a href="postgresql.html#prepare-to-recovery" class="topiclink">подготовка базы данных в PostgreSQL к восстановлению</a>.</li></ul>
 <p class="p_Normal">Вы также можете ознакомиться с кратким руководством в <a href="https://www.postgresql.org/download/linux/ubuntu/" target="_blank" class="weblink">официальной документации PostgreSQL</a>. </p>
 <p class="p_Normal">Для корректной работы системы ELMA365 требуется PostgreSQL версии 11-15. &nbsp;</p>
-<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;внимание&nbsp;</span></p>
-<p class="p_Normal" style="line-height: 1.57;"><span style="font-size: 15px;">Для примера используется имя базы </span><span style="font-size: 15px; font-weight: bold;">elma365</span><span style="font-size: 15px;">, пользователь </span><span style="font-size: 15px; font-weight: bold;">elma365</span><span style="font-size: 15px;"> и пароль </span><span style="font-size: 15px; font-weight: bold;">SecretPassword</span><span style="font-size: 15px; font-style: italic;">.</span></p>
-<p class="p_Normal" style="line-height: 1.57;"><span style="font-size: 15px;">При настройке задайте эти данные согласно политике безопасности, принятой в вашей организации.</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;внимание</span></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;">В статье используется имя базы <span style="font-weight: bold;">elma365</span>, пользователь <span style="font-weight: bold;">elma365 </span>и пароль <span style="font-weight: bold;">SecretPassword</span>.<span style="font-weight: bold;"> </span>При настройке задайте эти данные согласно политике безопасности, принятой в вашей организации.</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;внимание</span></p>
-<p class="p_Normal">Установка состоит из шести этапов:</p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;">Установка состоит из шести этапов:</p>
 <ol style="list-style-type:decimal">
 <li value="1" class="p_Normal"><a href="postgresql.html#install-postgresql" class="topiclink">Установка PostgreSQL</a>.</li><li value="2" class="p_Normal"><a href="postgresql.html#set-up-postgresql" class="topiclink">Настройка PostgreSQL</a>.</li><li value="3" class="p_Normal"><a href="postgresql.html#set-up-connection-to-postgresql" class="topiclink">Настройка подключения к PostgreSQL</a>.</li><li value="4" class="p_Normal"><a href="postgresql.html#set-limits-to-postgresql" class="topiclink">Настройка ограничений и лимитов к PostgreSQL</a>.</li><li value="5" class="p_Normal"><a href="postgresql.html#prepare-pgbouncer" class="topiclink">Подготовка PGBouncer (опционально)</a>.</li><li value="6" class="p_Normal"><a href="postgresql.html#connect-to-postgresql" class="topiclink">Подключение к PostgreSQL</a>.</li></ol>
-<h2 class="p_Heading2"><a id="install-postgresql" class="hmanchor"></a><span class="f_Heading2">Шаг 1: Установка PostgreSQL</span></h2>
+<h2 class="p_Heading2"><a id="install-postgresql" class="hmanchor"></a><span class="f_Heading2">Шаг 1. Установка PostgreSQL</span></h2>
 <p class="p_Normal">Для установки PostgreSQL добавьте официальный репозиторий:</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">sudo&nbsp;sh&nbsp;-c&nbsp;'echo&nbsp;&quot;deb&nbsp;http://apt.postgresql.org/pub/repos/apt&nbsp;$(lsb_release&nbsp;-cs)-pgdg&nbsp;main&quot;&nbsp;&gt;&nbsp;/etc/apt/sources.list.d/pgdg.list'</span><br />
 <span class="f_CodeExample">wget&nbsp;--quiet&nbsp;-O&nbsp;-&nbsp;https://www.postgresql.org/media/keys/ACCC4CF8.asc&nbsp;|&nbsp;sudo&nbsp;apt-key&nbsp;add&nbsp;-</span><br />
 <span class="f_CodeExample">sudo&nbsp;apt&nbsp;update</span></p>
 <p class="p_Normal">Далее установите PostgreSQL:</p>
 <p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample">sudo apt install postgresql-15</span></p>
-<h2 class="p_Heading2"><a id="set-up-postgresql" class="hmanchor"></a><span class="f_Heading2">Шаг 2: Настройка PostgreSQL</span></h2>
-<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">Начало&nbsp;внимание</span></p>
+<h2 class="p_Heading2"><a id="set-up-postgresql" class="hmanchor"></a><span class="f_Heading2">Шаг 2. Настройка PostgreSQL</span></h2>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">Начало&nbsp;примечание</span></p>
+<p class="p_Normal"><span style="font-weight: bold;">Примечание</span></p>
 <p class="p_Normal">Для пароля разрешается применять следующие символы: </p>
 <ul style="list-style-type:disc">
 <li class="p_Normal">заглавные латинские буквы: от A до Z;</li><li class="p_Normal">строчные латинские буквы: от a до z; </li><li class="p_Normal">цифры от 0 до 9; </li><li class="p_Normal">символы: -_.</li></ul>
 <p class="p_Normal">Зарезервированные (недопустимые) символы:</p>
 <p class="p_Normal">! * ' ( ) ; : @ &amp; = + $ , / ? % # [ ]</p>
-<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">Конец&nbsp;внимание</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">Конец&nbsp;примечание</span></p>
 <p class="p_Normal">Для настройки PostgreSQL используйте следующие команды:</p>
 <ol style="list-style-type:decimal">
 <li value="1" class="p_Normal">Создайте отдельного пользователя <span style="font-weight: bold;">elma365</span> с паролем <span style="font-weight: bold;">SecretPassword</span> для работы с БД. Имя пользователя и пароль приведены для примера:</li></ol>
@@ -148,7 +148,7 @@
 <ol style="list-style-type:decimal" start="3">
 <li value="3" class="p_Normal">Добавьте необходимые расширения для базы данных <span style="font-weight: bold;">elma365</span>:</li></ol>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">sudo&nbsp;-u&nbsp;postgres&nbsp;psql&nbsp;-d&nbsp;elma365&nbsp;-c&nbsp;&quot;CREATE&nbsp;EXTENSION&nbsp;\&quot;uuid-ossp\&quot;;&nbsp;CREATE&nbsp;EXTENSION&nbsp;pg_trgm;&quot;</span></p>
-<h2 class="p_Heading2"><a id="set-up-connection-to-postgresql" class="hmanchor"></a><span class="f_Heading2">Шаг 3: Настройка подключения к PostgreSQL</span></h2>
+<h2 class="p_Heading2"><a id="set-up-connection-to-postgresql" class="hmanchor"></a><span class="f_Heading2">Шаг 3. Настройка подключения к PostgreSQL</span></h2>
 <ol style="list-style-type:decimal">
 <li value="1" class="p_Normal">Добавьте IP-адрес сервера, на котором запущен PostgreSQL, в конфигурационный файл <code><b>/etc/postgresql/15/main/postgresql.conf</b></code> в параметр<span style="font-weight: bold;"> </span><code><b>listen_addresses</b></code>, например, <code><b>192.168.10.10</b></code>:</li></ol>
 <p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample">sudo nano /etc/postgresql/15/main/postgresql.conf</span><br />
@@ -181,7 +181,7 @@
 <ol style="list-style-type:decimal" start="3">
 <li value="3" class="p_Normal">Перезагрузите сервис PostgreSQL:</li></ol>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">sudo&nbsp;systemctl&nbsp;restart&nbsp;postgresql</span></p>
-<h2 class="p_Heading2"><a id="set-limits-to-postgresql" class="hmanchor"></a><span class="f_Heading2">Шаг 4: Настройка ограничений и лимитов к PostgreSQL</span></h2>
+<h2 class="p_Heading2"><a id="set-limits-to-postgresql" class="hmanchor"></a><span class="f_Heading2">Шаг 4. Настройка ограничений и лимитов к PostgreSQL</span></h2>
 <ol style="list-style-type:decimal">
 <li value="1" class="p_Normal">Откройте для редактирования конфигурационный файл <code><b>/etc/postgresql/15/main/postgresql.conf</b></code>:</li></ol>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">sudo&nbsp;nano&nbsp;/etc/postgresql/15/main/postgresql.conf</span></p>
@@ -197,10 +197,10 @@
 <ol style="list-style-type:decimal" start="5">
 <li value="5" class="p_CodeExample" style="page-break-inside: avoid;">В&nbsp;некоторых&nbsp;дистрибутивах&nbsp;PostgreSQL&nbsp;параметр&nbsp;<code><b>standard_conforming_strings,</b></code>&nbsp;отвечающий&nbsp;за&nbsp;интерпретацию&nbsp;символов&nbsp;backslash,&nbsp;выключен.&nbsp;Проверьте&nbsp;и&nbsp;включите&nbsp;параметр:</li></ol>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">standard_conforming_strings&nbsp;=&nbsp;on</span></p>
-<h2 class="p_Heading2"><a id="prepare-pgbouncer" class="hmanchor"></a><span class="f_Heading2">Шаг 5: Подготовка PGBouncer (опционально)</span></h2>
+<h2 class="p_Heading2"><a id="prepare-pgbouncer" class="hmanchor"></a><span class="f_Heading2">Шаг 5. Подготовка PGBouncer (опционально)</span></h2>
 <p class="p_Normal">PGBouncer предназначен для управления пулом соединений к PostgreSQL и позволяет минимизировать издержки, связанные с установлением новых подключений к PostgreSQL.</p>
 <p class="p_Normal">Про установку и настройку PGBouncer читайте в статье <a href="pgbouncer-installation.html" class="topiclink">«Установка PGBouncer»</a>.</p>
-<h2 class="p_Heading2"><a id="connect-to-postgresql" class="hmanchor"></a><span class="f_Heading2">Шаг 6: Подключение к PostgreSQL</span></h2>
+<h2 class="p_Heading2"><a id="connect-to-postgresql" class="hmanchor"></a><span class="f_Heading2">Шаг 6. Подключение к PostgreSQL</span></h2>
 <p class="p_Normal">Строка подключения к PostgreSQL:</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">postgresql://elma365:SecretPassword@&lt;postgresql-server-address&gt;:5432/elma365?sslmode=disable</span></p>
 <p class="p_Normal">Строка подключения PostgreSQL с TLS/SSL:</p>
@@ -224,15 +224,13 @@
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">Начало&nbsp;внимание</span></p>
 <p class="p_Normal">Предварительно убедитесь, что у вас есть резервная копия удаляемой базы данных. Только после этого приступайте к удалению БД.</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">Конец&nbsp;внимание</span></p>
-<ol style="list-style-type:decimal">
+<ol style="list-style-type:upper-roman">
 <li value="1" class="p_Normal">Удалите базу данных <span style="font-weight: bold;">elma365</span>:</li></ol>
 <p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample">sudo -u postgres psql -c &quot;DROP DATABASE elma365 WITH (FORCE);&quot;</span></p>
-<ol style="list-style-type:decimal" start="2">
-<li value="2" class="p_Normal">Создайте пустую базу данных <span style="font-weight: bold;">elma365</span> для последующего восстановления БД из резервной копии. Для этого выполните действия из <a href="postgresql.html#create-db" class="topiclink">шага 2 в настройках PostgreSQL</a>.</li></ol>
-<ol style="list-style-type:decimal" start="3">
-<li value="3" class="p_Normal">После этого выполните восстановление данных, в зависимости от вашей поставки ELMA365 On-Premises и способа резервного копирования:</li></ol>
+<ol style="list-style-type:upper-roman" start="2">
+<li value="2" class="p_Normal">Создайте пустую базу данных <span style="font-weight: bold;">elma365</span> для последующего восстановления БД из резервной копии. Для этого выполните действия из <a href="postgresql.html#create-db" class="topiclink">шага 2 в настройках PostgreSQL</a>.</li><li value="3" class="p_Normal">После этого выполните восстановление данных, в зависимости от вашей поставки ELMA365 On-Premises и способа резервного копирования:</li></ol>
 <ul style="list-style-type:disc">
-<li class="p_Normal"><a href="database-backup-and-recovery.html#recovery-database" class="topiclink">восстановление резервной копии с помощью утилиты Elma365-Backupper</a>;</li><li class="p_Normal"><a href="dump_db.html#recovery-posgresql" class="topiclink">восстановление для резервного копирования внешними средствами</a>;</li><li class="p_Normal"><a href="backup-restore-elma365standard.html#restore-data" class="topiclink">восстановление резервной копии в поставке Standard</a>.</li></ul>
+<li class="p_Normal"><a href="database-backup-and-recovery.html#recovery-database" class="topiclink">восстановление резервной копии с помощью утилиты Elma365-Backupper</a>;</li><li class="p_Normal"><a href="backup-and-recovery-with-wal-g-and-rclone.html#wal-g-in-postgres" class="topiclink">восстановление резервной копии с помощью WAL-G</a>;</li><li class="p_Normal"><a href="dump_db.html#recovery-posgresql" class="topiclink">восстановление для резервного копирования внешними средствами</a>;</li><li class="p_Normal"><a href="backup-restore-elma365standard.html#restore-data" class="topiclink">восстановление резервной копии в поставке Standard</a>.</li></ul>
 
                         <div class="bottom-nav">
                             
@@ -321,9 +319,9 @@
 </div>
  
     </footer>
-    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jquery1.min.js"></script>
     <iframe name="hmnavigation" style="display:none!important"></iframe>
-    <script src="./jquery-ui.js"></script>
+    <!--<script src="./jquery-ui.js"></script> -->
     <script src="./jquery-ui.min.js"></script>
     <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
     <script src="./jquery.tocify.min.js"></script>

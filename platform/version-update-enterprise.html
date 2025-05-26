@@ -8,7 +8,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="начало внимание С 30.05.2024 заблокирован доступ из РФ к Docker Hub. Ознакомьтесь с официальным заявлением компании. конец внимание Чтобы обеспечить целостность при миграции дан" />
+    <meta name="description" content="Чтобы обеспечить целостность при миграции данных со сменой версии ELMA365, рекомендуется обновлять каждую мажорную версию без пропусков, например, версию 2025.2.1 можно..." />
     <meta name="picture" content="" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Cправка по Low-code платформе ELMA365" />
@@ -111,14 +111,11 @@
                             <a href="#h1-article" class="scroll-top"></a>
                         </div>
                         <!-- Placeholder for topic body. -->
-                        <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;внимание</span></p>
-<p class="p_Normal">С 30.05.2024 заблокирован доступ из РФ к Docker Hub. Ознакомьтесь с <a href="docker-hub-blocking.html" class="topiclink">официальным заявлением компании</a>.</p>
-<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;внимание</span></p>
-<p class="p_Normal" style="background: #ffffff;">Чтобы обеспечить целостность при миграции данных со сменой версии ELMA365, рекомендуется обновлять каждую <a href="version-support-elma365-on-premises.html#major" class="topiclink">мажорную</a> версию без пропусков, например, версию 2023.<span style="font-weight: bold;">2</span>.1 можно обновить до 2023.<span style="font-weight: bold;">3</span>.1.</p>
+                        <p class="p_Normal" style="background: #ffffff;">Чтобы обеспечить целостность при миграции данных со сменой версии ELMA365, рекомендуется обновлять каждую <a href="version-support-elma365-on-premises.html#major" class="topiclink">мажорную</a> версию без пропусков, например, версию 2025.<span style="font-weight: bold;">2</span>.1 можно обновить до 2025.<span style="font-weight: bold;">3</span>.1.</p>
 <p class="p_Normal" style="background: #ffffff;">Процесс обновления ELMA365 Enterprise состоит из следующих этапов:</p>
 <ol style="list-style-type:decimal">
 <li value="1" class="p_Normal"><a href="version-update-enterprise.html#definition-of-steps" class="topiclink">Определение количества шагов обновления</a>.</li><li value="2" class="p_Normal"><a href="version-update-enterprise.html#copying-config-file" class="topiclink">Копирование конфигурационного файла от текущей установленной версии</a>.</li><li value="3" class="p_Normal"><a href="version-update-enterprise.html#change-timeout" class="topiclink">Изменение предустановленных значений таймаутов для миграции данных (опционально)</a>.</li><li value="4" class="p_Normal"><a href="version-update-enterprise.html#update-with-helm" class="topiclink">Обновление с помощью Helm в Kubernetes-кластере приложения ELMA365</a>.</li></ol>
-<h2 class="p_Heading2"><a id="definition-of-steps" class="hmanchor"></a><span class="f_Heading2">Шаг 1: Определение количества шагов обновления</span></h2>
+<h2 class="p_Heading2"><a id="definition-of-steps" class="hmanchor"></a><span class="f_Heading2">Шаг 1. Определение количества шагов обновления</span></h2>
 <ol style="list-style-type:upper-roman">
 <li value="1" class="p_Normal">Определите версию установленного чарта, с помощью которого было ранее развёрнуто или обновлено приложение ELMA365:</li></ol>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">helm&nbsp;show&nbsp;chart&nbsp;elma365/elma365</span></p>
@@ -131,17 +128,17 @@
 <li value="3" class="p_Normal">Если установленный чарт необходимо обновить более чем на одну версию, рекомендуется последовательно устанавливать каждую мажорную версию до актуального (latest) чарта.</li></ol>
 <p class="p_Normal"><span style="font-weight: bold;">Важно</span>: в каждой версии необходимо устанавливать последний <a href="version-support-elma365-on-premises.html#minor" class="topiclink">минорный</a> релиз.</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;примера</span></p>
-<p class="p_Normal">Примеры:</p>
+<p class="p_Normal">Примеры</p>
 <ol style="list-style-type:decimal">
-<li value="1" class="p_Normal">Версия установленного чарта 2023.<span style="font-weight: bold;">5</span>.1, версия актуального (latest) чарта 2023.<span style="font-weight: bold;">6</span>.9 — обновление производится в один этап: сразу до 2023.6.9.</li><li value="2" class="p_Normal">Версия установленного чарта 2023.<span style="font-weight: bold;">3</span>.23, версия актуального (latest) чарта 2023.<span style="font-weight: bold;">6</span>.9 — обновление производится в три этапа: 2023.<span style="font-weight: bold;">3</span>.23 &gt; 2023.<span style="font-weight: bold;">4</span>.<span style="font-weight: bold;">60</span> &gt; 2023.<span style="font-weight: bold;">5</span>.<span style="font-weight: bold;">31</span> &gt; 2023.<span style="font-weight: bold;">6</span>.9.</li><li value="3" class="p_Normal">Версия установленного чарта 2023.<span style="font-weight: bold;">11</span>.56 версия актуального (latest) чарта 2024.<span style="font-weight: bold;">4</span>.42 — обновление производится в четыре этапа: 2023.<span style="font-weight: bold;">11</span>.56 &gt; 2024.<span style="font-weight: bold;">1</span>.<span style="font-weight: bold;">32</span> &gt; 2024.<span style="font-weight: bold;">2</span>.<span style="font-weight: bold;">30</span> &gt; 2024.<span style="font-weight: bold;">3</span>.<span style="font-weight: bold;">36</span> &gt; 2024.<span style="font-weight: bold;">4</span>.42.</li></ol>
+<li value="1" class="p_Normal">Версия установленного чарта 2025.<span style="font-weight: bold;">3</span>.2, версия актуального (latest) чарта 2025.<span style="font-weight: bold;">4</span>.1 — обновление производится в один этап: сразу до 2025.4.1.</li><li value="2" class="p_Normal">Версия установленного чарта 2025.<span style="font-weight: bold;">1</span>.29, версия актуального (latest) чарта 2025.<span style="font-weight: bold;">4</span>.1 — обновление производится в три этапа: 2025.<span style="font-weight: bold;">1</span>.29 &gt; 2025.<span style="font-weight: bold;">2</span>.<span style="font-weight: bold;">16</span> &gt; 2025.<span style="font-weight: bold;">3</span>.<span style="font-weight: bold;">2</span> &gt; 2025.<span style="font-weight: bold;">4</span>.1.</li><li value="3" class="p_Normal">Версия установленного чарта 2024.<span style="font-weight: bold;">11</span>.46, версия актуального (latest) чарта 2025.<span style="font-weight: bold;">4</span>.1 — обновление производится в четыре этапа: 2024.<span style="font-weight: bold;">11</span>.46 &gt; 2025.<span style="font-weight: bold;">1</span>.<span style="font-weight: bold;">32</span> &gt; 2025.<span style="font-weight: bold;">2</span>.<span style="font-weight: bold;">16</span> &gt; 2025.<span style="font-weight: bold;">3</span>.<span style="font-weight: bold;">2</span> &gt; 2025.<span style="font-weight: bold;">4</span>.1.</li></ol>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;примера</span></p>
-<p class="p_Normal">Обратите внимание, если у вас установлена LTS версия, то вы можете обновить её сразу на следующую LTS версию в один этап, согласно <a href="version-support-elma365-on-premises.html#lts_schedule" class="topiclink">графику жизненного цикла</a> релизов.</p>
-<p class="p_Normal">Чтобы посмотреть список всех версий ELMA365, используйте следующую команду:</p>
+<p class="p_Normal">Обратите внимание, если у вас установлена LTS‑версия, то вы можете обновить её сразу на следующую LTS‑версию в один этап, согласно <a href="version-support-elma365-on-premises.html#lts_schedule" class="topiclink">графику жизненного цикла</a> релизов.</p>
+<p class="p_Normal">Чтобы посмотреть список всех версий ELMA365, используйте команду:</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">helm&nbsp;repo&nbsp;add&nbsp;elma365&nbsp;https:</span><span class="f_CodeExample">//charts.elma365.tech</span><br />
 <span class="f_CodeExample">helm&nbsp;repo&nbsp;update</span><br />
 <span class="f_CodeExample">helm&nbsp;search&nbsp;repo&nbsp;elma365/elma365&nbsp;--versions</span></p>
-<p class="p_Normal">Вы также можете загрузить файл формата <span style="font-weight: bold;">.tar.gz</span> с определённой версией ELMA365 с помощью адресов, перечисленных в статье <a href="links-for-install-elma365.html#links-for-install-helm" class="topiclink">«Ссылки для скачивания дистрибутивов ELMA365»</a>. </p>
-<h2 class="p_Heading2"><a id="copying-config-file" class="hmanchor"></a><span class="f_Heading2">Шаг 2: Копирование конфигурационного файла от текущей установленной версии</span></h2>
+<p class="p_Normal">Вы также можете загрузить файл формата <span style="font-weight: bold;">.tar.gz</span> с определённой версией ELMA365 с помощью адресов, перечисленных в статье <a href="links-for-install-elma365.html#links-for-install-helm" class="topiclink">«Ссылки для скачивания дистрибутивов ELMA365»</a>. </p>
+<h2 class="p_Heading2"><a id="copying-config-file" class="hmanchor"></a><span class="f_Heading2">Шаг 2. Копирование конфигурационного файла от текущей установленной версии</span></h2>
 <p class="p_Normal">Скопируйте конфигурационный файл <code><b>values-elma365.yaml</b></code> в текущий каталог. Используйте этот файл, сохранённый на этапе установки или последнего обновления.</p>
 <p class="p_Normal">Если файл <code><b>values-elma365.yaml</b></code> был утрачен, получите параметры текущей установки ELMA365 и сохраните их в этот файл, выполнив команду: </p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">helm&nbsp;get&nbsp;values&nbsp;elma365&nbsp;[-n&nbsp;namespace]&nbsp;&gt;&nbsp;values-elma365.yaml</span></p>
@@ -152,7 +149,7 @@
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">helm&nbsp;show&nbsp;values&nbsp;elma365/elma365&nbsp;&gt;&nbsp;values-elma365.yaml</span></p>
 <ol style="list-style-type:upper-roman" start="2">
 <li value="2" class="p_Normal">Перенести вручную параметры приложения из конфигурационного файла <code><b>values-elma365.yaml</b></code> старого образца (версии до 2023.4.30) в новый конфигурационный файл.</li></ol>
-<h2 class="p_Heading2"><a id="change-timeout" class="hmanchor"></a><span class="f_Heading2">Шаг 3: Изменение предустановленных значений таймаутов для миграции данных (опционально)</span></h2>
+<h2 class="p_Heading2"><a id="change-timeout" class="hmanchor"></a><span class="f_Heading2">Шаг 3. Изменение предустановленных значений таймаутов для миграции данных (опционально)</span></h2>
 <p class="p_Normal">Чтобы обновление прошло корректно, в командах для его запуска вы задаёте время ожидания на миграцию данных. Оно рассчитывается в зависимости от количества информации, накопленной в базах данных. Перед началом обновления:</p>
 <ol style="list-style-type:upper-roman">
 <li value="1" class="p_Normal">Оцените объём данных.</li><li value="2" class="p_Normal">Откройте конфигурационный файл <code><b>values-elma365.yaml</b></code> и измените предустановленные параметры:</li></ol>
@@ -160,7 +157,7 @@
 <li class="p_Normal"><code><b>global.curlMigrationsMaxTime</b></code> — по умолчанию установлено <code><b>3000</b></code>. Увеличьте значение, например, до <code><b>18000</b></code>;</li><li class="p_Normal"><code><b>deploy.appconfig.migrateTimeout</b></code> — по умолчанию <code><b>1h</b></code>. Раскомментируйте параметр и задайте новое значение, например, <code><b>3h</b></code>. Значение этого параметра должно быть таким же, как и время ожидания <code><b>--timeout</b></code> в команде для обновления в шаге 4.</li></ul>
 <ol style="list-style-type:upper-roman" start="3">
 <li value="3" class="p_Normal">Перейдите к следующему этапу обновления.</li></ol>
-<h2 class="p_Heading2"><a id="update-with-helm" class="hmanchor"></a><span class="f_Heading2">Шаг 4: Обновление с помощью Helm в Kubernetes-кластере приложения ELMA365</span></h2>
+<h2 class="p_Heading2"><a id="update-with-helm" class="hmanchor"></a><span class="f_Heading2">Шаг 4. Обновление с помощью Helm в Kubernetes-кластере приложения ELMA365</span></h2>
 <p class="p_Normal">Выполните обновление приложения ELMA365 с использованием конфигурационного файла <code><b>values-elma365.yaml</b></code>. Для этого:</p>
 <ol style="list-style-type:upper-roman">
 <li value="1" class="p_Normal">Последовательно произведите обновление на каждую промежуточную минорную версию, если имеются промежуточные минорные версии (шагов обновления два или больше):</li></ol>
@@ -260,9 +257,9 @@
 </div>
  
     </footer>
-    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jquery1.min.js"></script>
     <iframe name="hmnavigation" style="display:none!important"></iframe>
-    <script src="./jquery-ui.js"></script>
+    <!--<script src="./jquery-ui.js"></script> -->
     <script src="./jquery-ui.min.js"></script>
     <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
     <script src="./jquery.tocify.min.js"></script>

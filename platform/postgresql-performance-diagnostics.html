@@ -114,13 +114,13 @@
                         <p class="p_Normal">В этой статье рассмотрим методы диагностики производительности <a href="postgresql.html" class="topiclink">PostgreSQL</a>, которая состоит из трёх этапов:</p>
 <ol style="list-style-type:decimal">
 <li value="1" class="p_Normal"><a href="postgresql-performance-diagnostics.html#optimize-cluster" class="topiclink">Оптимизировать кластер</a>.</li><li value="2" class="p_Normal"><a href="postgresql-performance-diagnostics.html#log-analysis" class="topiclink">Анализ логов</a>.</li><li value="3" class="p_Normal"><a href="postgresql-performance-diagnostics.html#analysis-of-plans" class="topiclink">Анализ планов</a>.</li></ol>
-<h2 class="p_Heading2"><a id="optimize-cluster" class="hmanchor"></a><span class="f_Heading1">Шаг</span><span class="f_Heading2"> 1: Оптимизировать кластер</span></h2>
+<h2 class="p_Heading2"><a id="optimize-cluster" class="hmanchor"></a><span class="f_Heading1">Шаг</span><span class="f_Heading2"> 1. Оптимизировать кластер</span></h2>
 <p class="p_Normal">Для улучшения работы вашей базы данных используйте следующие методы диагностики производительности PostgreSQL:</p>
 <ul style="list-style-type:disc">
 <li class="p_Normal">примените вертикальное или горизонтальное масштабирование и затем проведите анализ запросов;</li><li class="p_Normal">настройте конфигурационные параметры развернутого кластера. Например, используйте онлайн генераторы конфигурационных параметров. Подробнее смотрите в сервисе <a href="https://pgconfigurator.cybertec-postgresql.com/" target="_blank" class="weblink">CYBERTEC</a>.</li></ul>
 <p style="text-align: justify;">Пример генерации оптимальных настроек для кластера по введённым характеристикам сервера:</p>
 <p style="line-height: 1.28; margin: 0 0 11px 0;"><img alt="postgresql-performance-diagnostics-1" width="904" height="616" style="margin:0;width:904px;height:616px;border:none" src="postgresql-performance-diagnostics-1.png"/></p>
-<h2 class="p_Heading2"><a id="log-analysis" class="hmanchor"></a><span class="f_Heading1">Шаг</span><span class="f_Heading2"> 2: Анализ логов</span></h2>
+<h2 class="p_Heading2"><a id="log-analysis" class="hmanchor"></a><span class="f_Heading1">Шаг</span><span class="f_Heading2"> 2. Анализ логов</span></h2>
 <p style="line-height: 1.28; margin: 0 0 11px 0;">Обратите внимание, что включение анализаторов запросов может потреблять около 10% ресурсов. Но после завершения процесса анализа и оптимизации запросов производительность может значительно вырасти.</p>
 <p style="line-height: 1.28; margin: 0 0 11px 0;">Вы можете использовать встроенные инструменты для анализа производительности PostgreSQL, чтобы идентифицировать узкие места и медленные запросы:</p>
 <ul style="list-style-type:disc">
@@ -154,7 +154,7 @@
 <h3 class="p_Heading3"><a id="log-min-duration-statement" class="hmanchor"></a><span class="f_Heading3">Инструмент «log_min_duration_statement»</span></h3>
 <p style="line-height: 1.28; margin: 0 0 11px 0;">Это параметр позволяет настроить журналирование запросов, выполнение которых занимает больше времени, чем указано в миллисекундах. Например, чтобы журналировать запросы, выполняющиеся более 1000 миллисекунд, задайте параметр в <code><b>postgresql.conf</b></code>:</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">log_min_duration_statement&nbsp;=&nbsp;1000;&nbsp;##&nbsp;Журналирование&nbsp;запросов,&nbsp;выполняющихся&nbsp;более&nbsp;1000&nbsp;миллисекунд</span></p>
-<h2 class="p_Heading2"><a id="analysis-of-plans" class="hmanchor"></a><span class="f_Heading1">Шаг</span><span class="f_Heading2"> 3: Анализ планов</span></h2>
+<h2 class="p_Heading2"><a id="analysis-of-plans" class="hmanchor"></a><span class="f_Heading1">Шаг</span><span class="f_Heading2"> 3. Анализ планов</span></h2>
 <p style="line-height: 1.28; margin: 0 0 11px 0;">Оптимизация запросов может быть сложной и часто представляет собой итеративный процесс. Вносите изменения постепенно и измеряйте влияние каждого изменения на производительность запросов. Также рекомендуем протестировать выполненные оптимизации в промежуточной среде, прежде чем применять их к рабочей базе данных. Убедитесь в отсутствии непредвиденных последствий.</p>
 <p style="line-height: 1.28; margin: 0 0 11px 0;">План запроса PostgreSQL описывает выполнение SQL-запроса, включая сортировку и фильтрацию, а также использование ресурсов во время выполнения.</p>
 <p style="line-height: 1.28; margin: 0 0 11px 0;"><a class="dropdown-toggle" href="javascript:HMToggle('toggle','TOGGLE0186A1')">Пример плана</a></p>
@@ -205,9 +205,9 @@
 
                         <div class="bottom-nav">
                             
-                                <a id="prev-link" class="topic__navi_prev" href="kubernetes-air-gap.html">
+                                <a id="prev-link" class="topic__navi_prev" href="configmap.html">
                                     <span class="bottom-nav__arrow bottom-nav__arrow--prev"></span> <span
-                                        class="bottom-nav__link">kubernetes-air-gap.html</span>
+                                        class="bottom-nav__link">configmap.html</span>
                                 </a>
                             
                             
@@ -290,9 +290,9 @@
 </div>
  
     </footer>
-    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jquery1.min.js"></script>
     <iframe name="hmnavigation" style="display:none!important"></iframe>
-    <script src="./jquery-ui.js"></script>
+    <!--<script src="./jquery-ui.js"></script> -->
     <script src="./jquery-ui.min.js"></script>
     <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
     <script src="./jquery.tocify.min.js"></script>

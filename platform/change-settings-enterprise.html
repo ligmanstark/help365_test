@@ -115,7 +115,7 @@
 <p class="p_Normal">Процесс изменения параметров приложения состоит из двух этапов:</p>
 <ol style="list-style-type:decimal">
 <li value="1" class="p_Normal"><a href="change-settings-enterprise.html#changes-config-file" class="topiclink">Внесение изменений в конфигурационный файл</a>.</li><li value="2" class="p_Normal"><a href="change-settings-enterprise.html#apply-new-parameters" class="topiclink">Применение новых параметров для ELMA365 Enterprise</a>.</li></ol>
-<h2 class="p_Heading2"><a id="changes-config-file" class="hmanchor"></a><span class="f_Heading2">Шаг 1: Внесение изменений в конфигурационный файл values-elma365.yaml</span></h2>
+<h2 class="p_Heading2"><a id="changes-config-file" class="hmanchor"></a><span class="f_Heading2">Шаг 1. Внесение изменений в конфигурационный файл values-elma365.yaml</span></h2>
 <p class="p_Normal">Изменения вносятся в конфигурационный файл <code><b>values-elma365.yaml</b></code>, заполненный при установке ELMA365 Enterprise.</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">Начало&nbsp;внимание</span></p>
 <p class="p_Normal">Перед редактированием файла <code><b>values-elma365.yaml</b></code> создайте его резервную копию, поскольку некорректная настройка параметров может привести к сбоям в работе приложения ELMA365 Enterprise.</p>
@@ -179,16 +179,6 @@
 </td>
 </tr>
 <tr>
-<td style="vertical-align:top; width:307px; padding:0; border:none"><p class="p_Normal"><code><b>elma365.global.machineId</b></code></p>
-<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">Начало&nbsp;внимание</span></p>
-<p class="p_Normal">Начиная с версии 2023.10 параметр не используется.</p>
-<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">Конец&nbsp;внимание</span></p>
-</td>
-<td style="vertical-align:top; width:834px; padding:0; border:none"><p class="p_Normal">Путь к файлу <code><b>machine-id</b></code>.</p>
-<p class="p_Normal">Значение по умолчанию: <code><b>/etc/machine-id</b></code>.</p>
-</td>
-</tr>
-<tr>
 <td style="vertical-align:top; width:307px; padding:0; border:none"><p class="p_Normal"><code><b>elma365.global.checkdbs</b></code></p>
 </td>
 <td style="vertical-align:top; width:834px; padding:0; border:none"><p class="p_Normal">Включает проверку подключения к БД при установке или обновлении приложения ELMA365.</p>
@@ -197,7 +187,7 @@
 </td>
 </tr>
 <tr>
-<td colspan="2"  style="vertical-align:top; width:1141px; padding:0; border:none"><p class="p_Normal"><a id="tls-encryption-parameters" class="hmanchor"></a><span style="font-style: italic;">GLOBAL </span>—<span style="font-style: italic;"> Параметры TLS шифрования</span></p>
+<td colspan="2"  style="vertical-align:top; width:1141px; padding:0; border:none"><p class="p_Normal"><a id="tls-encryption-parameters" class="hmanchor"></a><span style="font-style: italic;">GLOBAL </span>—<span style="font-style: italic;"> Параметры TLS-шифрования</span></p>
 </td>
 </tr>
 <tr>
@@ -306,17 +296,25 @@
 </td>
 </tr>
 <tr>
-<td style="vertical-align:top; width:307px; height:40px; padding:0; border:none"><p class="p_Normal"><code><b>elma365.global.managedServices.defaultStorageClass</b></code></p>
+<td style="vertical-align:top; width:307px; height:60px; padding:0; border:none"><p class="p_Normal"><code><b>elma365.global.managedServices.namespace</b></code></p>
 </td>
-<td style="vertical-align:top; width:834px; height:40px; padding:0; border:none"><p class="p_Normal">Укажите систему хранения данных.<br />
-Значение по умолчанию: <span style="font-weight: bold;">longhorn</span>.</p>
+<td style="vertical-align:top; width:834px; height:60px; padding:0; border:none"><p class="p_Normal">Наименования <code><b>namespace</b></code>, где будут размещаться переносимые сервисы.<br />
+Значение по умолчанию: <code><b>elma365-applets</b></code>.</p>
 </td>
 </tr>
 <tr>
-<td style="vertical-align:top; width:307px; padding:0; border:none"><p class="p_Normal"><code><b>elma365.global.managedServices.namespace</b></code></p>
+<td style="vertical-align:top; width:307px; height:40px; padding:0; border:none"><p class="p_Normal"><code><b>elma365.global.managedServices.defaultStorageClass</b></code></p>
 </td>
-<td style="vertical-align:top; width:834px; padding:0; border:none"><p class="p_Normal">Наименования namespace, где будут размещаться переносимые сервисы.<br />
-Значение по умолчанию: <code><b>elma365-applets</b></code>.</p>
+<td style="vertical-align:top; width:834px; height:40px; padding:0; border:none"><p class="p_Normal">Укажите систему хранения данных.<br />
+Значение по умолчанию: <code><b>longhorn</b></code>.</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:307px; padding:0; border:none"><p class="p_Normal"><code><b>elma365.global.watchableConfigMap.enabled</b></code></p>
+</td>
+<td style="vertical-align:top; width:834px; padding:0; border:none"><p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Inter;">Включает </span><span style="font-size: 15px; font-family: Inter; color: #0563c1;"><a href="configmap.html" class="topiclink">использование ConfigMap</a></span><span style="font-size: 15px; font-family: Inter;"> для настройки переносимых сервисов. Это позволяет устанавливать лимиты на распределение ресурсов, настраивать размещение подов микросервиса на узлах кластера и т. д.</span><br />
+<span style="font-size: 15px; font-family: Inter;">Значение по умолчанию: </span><code><b>false</b></code><span style="font-size: 15px; font-family: Inter;">.</span><br />
+<span style="font-size: 15px; font-family: Inter;">Доступные варианты: </span><code><b>true</b></code><span style="font-size: 15px; font-family: Inter;">, </span><code><b>false</b></code><span style="font-size: 15px; font-family: Inter;">.</span></p>
 </td>
 </tr>
 <tr>
@@ -451,6 +449,24 @@
 </td>
 <td style="vertical-align:top; width:834px; padding:0; border:none"><p class="p_Normal">Количество попыток миграции при обновлении ELMA365.</p>
 <p class="p_Normal">Значение по умолчанию: <code><b>5</b></code>.</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:307px; padding:0; border:none"><p class="p_Normal"><code><b>values.global.maxScriptTimeoutSeconds</b></code></p>
+</td>
+<td style="vertical-align:top; width:834px; padding:0; border:none"><p class="p_Normal">Максимальное время ожидания для завершения обработки скрипта сервисом <span style="font-weight: bold;">worker</span>.</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:307px; padding:0; border:none"><p class="p_Normal"><code><b>values.global.defaultScriptTimeoutSeconds</b></code></p>
+</td>
+<td style="vertical-align:top; width:834px; padding:0; border:none"><p class="p_Normal">Время ожидания для завершения обработки скрипта по умолчанию. Параметр применится, если превышено время ожидания, заданное в <code><b>values.global.maxScriptTimeoutSeconds</b></code>.</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:307px; padding:0; border:none"><p class="p_Normal"><code><b>values.global.runtimeSchemaCacheMemoryLimit</b></code></p>
+</td>
+<td style="vertical-align:top; width:834px; padding:0; border:none"><p class="p_Normal">Позволяет установить лимит на кеширование схем исполнения серверных скриптов в сервисе <span style="font-weight: bold;">worker</span>. </p>
 </td>
 </tr>
 <tr>
@@ -779,7 +795,7 @@
 <td style="vertical-align:top; width:307px; padding:0; border:none"><p class="p_Normal"><code><b>ELMA365_MAX_NUMBER_OF_WORKERS_TO_FILL_VARIABLES</b></code></p>
 </td>
 <td style="vertical-align:top; width:834px; padding:0; border:none"><p class="p_Normal">Настраивается после включения фича-флага <code><b>enableConcurrencyTemplateMapper</b></code> и задаёт количество параллельных экземпляров worker внутри сервиса для обработки переменных.</p>
-<p class="p_Normal">Удобно, если при генерации шаблона документа используется много <a href="360027003711.html#feature-flag" class="topiclink">пользовательских переменных</a>.</p>
+<p class="p_Normal">Удобно, если при генерации шаблона документа используется много <a href="360027003711.html" class="topiclink">пользовательских переменных</a>.</p>
 <p class="p_Normal">Значение по умолчанию 5.</p>
 </td>
 </tr>
@@ -796,15 +812,15 @@
 </table>
 </div>
 <p class="p_Normal">Раскомментируйте и внесите правки в нужные параметры конфигурационного файла <code><b>values-elma365.yaml</b></code> и сохраните изменения.</p>
-<h2 class="p_Heading2"><a id="apply-new-parameters" class="hmanchor"></a><span class="f_Heading2">Шаг 2: Применение новых параметров для ELMA365 Enterprise</span></h2>
+<h2 class="p_Heading2"><a id="apply-new-parameters" class="hmanchor"></a><span class="f_Heading2">Шаг 2. Применение новых параметров для ELMA365 Enterprise</span></h2>
 <p class="p_Normal">Вы можете обновить параметры для ELMA365 Enterprise двумя способами: через интернет или <a href="change-settings-enterprise.html#offline-update" class="topiclink">без доступа к сети</a>.</p>
 <h3 class="p_Heading3"><span class="f_Heading3">Обновление параметров через интернет</span></h3>
 <ol style="list-style-type:upper-roman">
 <li value="1" class="p_Normal">Определите версию чарта, с помощью которого было установлено или обновлено приложение ELMA365:</li></ol>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">helm&nbsp;list&nbsp;[-n&nbsp;namespace]</span></p>
 <p class="p_Normal">Пример выполнения команды:</p>
-<p class="p_Normal"><img alt="change-settings-enterprise-1" width="417" height="141" style="margin:0;width:417px;height:141px;border:none" src="change-settings-enterprise-1.png"/></p>
-<p class="p_Normal">В результате выполнения команды информация о версии чарта будет указана в строке <code><b>version</b></code>. Сохраните это значение для выполнения следующего шага.</p>
+<p class="p_Normal"><img alt="change-settings-enterprise-1" width="1126" height="83" style="margin:0;width:1126px;height:83px;border:none" src="change-settings-enterprise-1.png"/></p>
+<p class="p_Normal">В результате выполнения команды информация о версии чарта будет указана в <code><b>APP VERSION</b></code>. Сохраните это значение для выполнения следующего шага.</p>
 <ol style="list-style-type:upper-roman" start="2">
 <li value="2" class="p_Normal">Обновите параметры приложения ELMA365 с применением конфигурационного файла <code><b>values-elma365.yaml</b></code>. Для этого используйте следующую команду, указав в ней для флага <code><b>--version</b></code> установленную версию чарта вместо <code><b>&lt;elma365-chart-version&gt;</b></code>:</li></ol>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">helm&nbsp;upgrade&nbsp;--install&nbsp;elma365&nbsp;elma365/elma365&nbsp;-f&nbsp;values-elma365.yaml&nbsp;--version&nbsp;&lt;elma365-chart-version&gt;&nbsp;--timeout=30m&nbsp;--wait&nbsp;[-n&nbsp;namespace]</span></p>
@@ -900,9 +916,9 @@
 </div>
  
     </footer>
-    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jquery1.min.js"></script>
     <iframe name="hmnavigation" style="display:none!important"></iframe>
-    <script src="./jquery-ui.js"></script>
+    <!--<script src="./jquery-ui.js"></script> -->
     <script src="./jquery-ui.min.js"></script>
     <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
     <script src="./jquery.tocify.min.js"></script>

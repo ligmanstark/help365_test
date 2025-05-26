@@ -117,9 +117,6 @@
 <li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-size: 15px; font-family: Inter;">опциональная зависимость работает в рамках скрипта, который получает доступ к другому разделу или модулю через уникальное имя, задаваемое для этого раздела или модуля;</span></li><li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-size: 15px; font-family: Inter;">в скрипте компонента доступна глобальная константа </span><code><b>Imports</b></code><span style="font-size: 15px; font-family: Inter;">. Эта константа позволяет в коде скрипта обращаться к объектам и функциям раздела или модуля, с которым установлена опциональная зависимость;</span></li><li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-size: 15px; font-family: Inter;">компоненты, использующие опциональные зависимости, можно экспортировать и импортировать между различными средами или компаниями без наличия связанных разделов или модулей в целевой среде. Это обеспечивает удобство переноса решений и их независимость от конкретных конфигураций системы;</span></li><li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-size: 15px; font-family: Inter;">при отсутствии зависимого раздела или модуля в целевой системе связанные функции либо не активируются, либо можно настроить вывод сообщения об ошибке.</span></li></ul>
 <p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Inter;">Примеры применения опциональной зависимости включают создание гибких бизнес-процессов, виджетов и других компонентов системы, которые могут взаимодействовать с разнообразными модулями и разделами, не требуя их обязательного наличия для функционирования основной логики. Это особенно важно для разработки расширяемых решений, где новые функции и модули могут добавляться по мере необходимости без переработки уже существующих компонентов.</span></p>
 <h2 class="p_Heading2"><span class="f_Heading2">Добавление опциональной зависимости</span></h2>
-<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;внимание</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-family: Inter;">Опциональные зависимости </span><span style="font-size: 15px; font-family: Inter;">и константа </span><code><b>Imports</b></code><span style="font-family: Inter;"> по умолчанию доступны в поставке SaaS, а также On‑Premises, начиная с версии системы 2024.2. В более ранних версиях <a href="360006871932.html#administrators" class="topiclink">администратору системы</a> нужно включить фича-флаг </span><code><b>allowScriptImportsDependencies</b></code><span style="font-family: Inter;">. Подробнее об этом читайте в статьях <a href="change-settings-enterprise.html#enable-feature-flag-enterpeise" class="topiclink">«Изменение параметров On-Premises Enterprise»</a> и <a href="change-elma365standard-parameters.html#enable-feature-flag-standard" class="topiclink">«Изменение параметров On-Premises Standard»</a>.</span></p>
-<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;внимание</span></p>
 <p><span style="font-size: 15px; font-family: Inter;">Когда вы настраиваете опциональную зависимость в скрипте, вы выбираете, к какому именно разделу или модулю хотите получить доступ, и присваиваете ему уникальное имя. Это имя затем используется в коде скрипта для обращения к функциям или данным выбранного раздела или модуля.</span></p>
 <p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Inter;">Подробнее о том, как создать опциональные зависимости в разных компонентах системы, читайте в статьях:</span></p>
 <ul style="list-style-type:disc">
@@ -135,9 +132,14 @@
 <span class="f_CodeExample">}</span></p>
 <p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Inter;">При написании скрипта учитывайте, что компонент с использованием константы </span><code><b>Imports</b></code><span style="font-size: 13px; font-family: 'Courier New',Courier,monospace; font-weight: bold;"> </span><span style="font-size: 15px; font-family: Inter;">можно импортировать, даже если зависимость в компании не найдена. Рекомендуется добавить блок кода, который выполняется, если не удаётся обратиться к выбранному разделу или модулю. Например, чтобы выводить понятную для пользователя ошибку.</span></p>
 <p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Inter;">Кроме того, компонент со скриптом и раздел или модуль, с которым создана опциональная зависимость, можно экспортировать совместно в составе </span><span style="font-size: 15px; font-family: Inter; color: #0563c1;"><a href="create-solution.html" class="topiclink">решения</a></span><span style="font-size: 15px; font-family: Inter;">.</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Inter;">Подробнее об экспорте компонентов с глобальными константами читайте в статье </span><span style="font-size: 15px; font-family: Inter; color: #0563c1;"><a href="global-constants.html#export-restrictions" class="topiclink">«Глобальные константы в скриптах»</a></span><span style="font-size: 15px; font-family: Inter;">. </span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><a id="compatible-with-older-versions" class="hmanchor"></a><span style="font-size: 15px; font-family: Inter; font-weight: bold;">Важно</span><span style="font-size: 15px; font-family: Inter;">: в версиях системы ниже 2023.11 объект </span><code><b>Imports</b></code><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; font-weight: bold;"> </span><span style="font-size: 15px; font-family: Inter;">недоступен. Если вы разрабатываете решение, которое должно быть совместимо с более ранними версиями платформы, используйте в начале скрипта функцию следующего вида:</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 13px; color: #000000;">&nbsp;</span></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Inter;">Подробнее об экспорте компонентов с глобальными константами читайте в статье </span><span style="font-size: 15px; font-family: Inter; color: #0563c1;"><a href="global-constants.html#export-restrictions" class="topiclink">«Глобальные константы в скриптах»</a></span><span style="font-size: 15px; font-family: Inter;">.</span><a id="compatible-with-older-versions" class="hmanchor"></a></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Inter;"><a class="dropdown-toggle" style="font-style: normal; font-weight: normal; color: #000000; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186A1')">Совместимость решения с версиями системы, где не поддерживается Imports</a></span></p>
+<div id="TOGGLE0186A1" class="dropdown-toggle-body" style="text-align: left; text-indent: 0; line-height: 1.28; padding: 0 0 0 0; margin: 0 0 11px 0;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 13px; color: #000000;">&nbsp;</span><br />
+<span style="font-size: 15px; font-family: Inter;">В версиях системы ниже 2023.11 объект </span><code><b>Imports</b></code><span style="font-size: 15px; font-family: 'Courier New',Courier,monospace; font-weight: bold;"> </span><span style="font-size: 15px; font-family: Inter;">недоступен. Если вы разрабатываете решение, которое должно быть совместимо с более ранними версиями платформы, используйте в начале скрипта функцию следующего вида:</span><br />
+<span style="font-size: 15px; font-family: Inter;">&nbsp;</span><br />
+<span style="font-size: 15px; font-family: Inter;">&nbsp;</span></p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">function&nbsp;getImports()&nbsp;{</span><br />
 <span class="f_CodeExample">&nbsp;&nbsp;//&nbsp;Присвоение&nbsp;начального&nbsp;значения&nbsp;локальной&nbsp;переменной</span><br />
 <span class="f_CodeExample">&nbsp;&nbsp;return&nbsp;typeof&nbsp;Imports&nbsp;!==&nbsp;'undefined'&nbsp;?&nbsp;&lt;typeof&nbsp;Imports&gt;Imports&nbsp;:&nbsp;undefined;</span><br />
@@ -149,7 +151,10 @@
 <span class="f_CodeExample">if&nbsp;(__Imports?.payment_docs)&nbsp;{</span><br />
 <span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;let&nbsp;item&nbsp;=&nbsp;__Imports.payment_docs.app.invoices.create();</span><br />
 <span class="f_CodeExample">}</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 13px; color: #000000;">&nbsp;</span></p>
+</td>
+</tr>
+</table>
+</div>
 <h2 class="p_Heading2"><span class="f_Heading2">Пример использования опциональной зависимости</span></h2>
 <p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Inter;">Допустим, в компании есть раздел </span><span style="font-size: 15px; font-family: Inter; font-weight: bold;">Платёжные документы</span><span style="font-size: 15px; font-family: Inter;"> с приложением </span><span style="font-size: 15px; font-family: Inter; font-weight: bold;">Счета</span><span style="font-size: 15px; font-family: Inter;"> и раздел </span><span style="font-size: 15px; font-family: Inter; font-weight: bold;">Документы</span><span style="font-size: 15px; font-family: Inter;"> с приложением </span><span style="font-size: 15px; font-family: Inter; font-weight: bold;">Договоры</span><span style="font-size: 15px; font-family: Inter;">. С карточки договора необходимо добавлять новые счета по нажатию кнопки.</span></p>
 <p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Inter;">Разделы входят в состав разных решений, их необходимо экспортировать по отдельности.</span></p>
@@ -258,15 +263,18 @@
 </div>
  
     </footer>
-    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jquery1.min.js"></script>
     <iframe name="hmnavigation" style="display:none!important"></iframe>
-    <script src="./jquery-ui.js"></script>
+    <!--<script src="./jquery-ui.js"></script> -->
     <script src="./jquery-ui.min.js"></script>
     <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
     <script src="./jquery.tocify.min.js"></script>
     <script src="./TypoReporter.min.js"></script>
     <script src="./google-search.js"></script>
     <script src="./main.js"></script>
+<script type="text/javascript">
+HMInitToggle('TOGGLE0186A1','hm.type','dropdown','hm.state','0');
+</script>
 </body>
 
 </html>

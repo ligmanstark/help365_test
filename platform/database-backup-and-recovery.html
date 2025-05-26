@@ -121,7 +121,7 @@
 <p class="p_Normal">Резервное копирование и восстановление баз данных состоит из четырёх этапов:</p>
 <ol style="list-style-type:decimal">
 <li value="1" class="p_Normal"><a href="database-backup-and-recovery.html#install-elma365-backupper" class="topiclink">Установка Elma365-Backupper</a>.</li><li value="2" class="p_Normal"><a href="database-backup-and-recovery.html#setting-elma365-backupper" class="topiclink">Настройка Elma365-Backupper</a>.</li><li value="3" class="p_Normal"><a href="database-backup-and-recovery.html#backup-database" class="topiclink">Резервное копирование баз данных</a>.</li><li value="4" class="p_Normal"><a href="database-backup-and-recovery.html#recovery-database" class="topiclink">Восстановление баз данных</a>.</li></ol>
-<h2 class="p_Heading2"><a id="install-elma365-backupper" class="hmanchor"></a><span class="f_Heading2">ШАГ 1: Установка Elma365-Backupper</span></h2>
+<h2 class="p_Heading2"><a id="install-elma365-backupper" class="hmanchor"></a><span class="f_Heading2">Шаг 1. Установка Elma365-Backupper</span></h2>
 <ol style="list-style-type:upper-roman">
 <li value="1" class="p_Normal">Установите пакеты:</li></ol>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">sudo&nbsp;apt&nbsp;install&nbsp;-y&nbsp;apt-transport-https&nbsp;ca-certificates&nbsp;curl</span></p>
@@ -156,7 +156,7 @@
 </tr>
 </table>
 </div>
-<h2 class="p_Heading2"><a id="setting-elma365-backupper" class="hmanchor"></a><span class="f_Heading2">ШАГ 2: Настройка Elma365-Backupper</span></h2>
+<h2 class="p_Heading2"><a id="setting-elma365-backupper" class="hmanchor"></a><span class="f_Heading2">Шаг 2. Настройка Elma365-Backupper</span></h2>
 <ol style="list-style-type:upper-roman">
 <li value="1" class="p_Normal">Откройте файл конфигурации <code><b>/opt/elma365/backupper/etc/config</b></code>:</li></ol>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">nano&nbsp;/opt/elma365/backupper/etc/config</span></p>
@@ -222,7 +222,7 @@
 </tr>
 </table>
 </div>
-<h2 class="p_Heading2"><a id="backup-database" class="hmanchor"></a><span class="f_Heading2">ШАГ 3: Резервное копирование баз данных</span></h2>
+<h2 class="p_Heading2"><a id="backup-database" class="hmanchor"></a><span class="f_Heading2">Шаг 3. Резервное копирование баз данных</span></h2>
 <p class="p_Normal">Выполните резервное копирование баз данных приложения ELMA365:</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">elma365-backupper&nbsp;backup&nbsp;&lt;&lt;db-type&gt;&gt;</span></p>
 <p class="p_Normal">где <code><b>&lt;&lt;db-type&gt;&gt;</b></code> — наименование базы данных, для которой необходимо выполнить резервное копирование. Варианты значений аргумента:</p>
@@ -245,10 +245,9 @@
 </tr>
 </table>
 </div>
-<h2 class="p_Heading2"><a id="recovery-database" class="hmanchor"></a><span class="f_Heading2">ШАГ 4: Восстановление баз данных</span></h2>
+<h2 class="p_Heading2"><a id="recovery-database" class="hmanchor"></a><span class="f_Heading2">Шаг 4. Восстановление баз данных</span></h2>
 <p class="p_Normal">Вы можете восстановить базы данных из последней или определённой версии резервной копии.</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">Начало&nbsp;внимание</span></p>
-<p class="p_Normal">Восстановление из резервной копии должно производиться в пустые базы данных и S3 хранилище.</p>
 <p class="p_Normal">Перед восстановлением данных из резервной копии очистите базы данных и S3 хранилище или воспользуйтесь ключом <code><b>--cleanup-databases</b></code>.</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">Конец&nbsp;внимание</span></p>
 <p class="p_Normal">Подробнее о подготовке БД к восстановлению читайте в статьях <a href="postgresql.html#prepare-to-recovery" class="topiclink">«PostgreSQL»</a> и <a href="mongodb.html#prepare-to-recovery" class="topiclink">«MongoDB»</a>.</p>
@@ -401,9 +400,9 @@
 </div>
  
     </footer>
-    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jquery1.min.js"></script>
     <iframe name="hmnavigation" style="display:none!important"></iframe>
-    <script src="./jquery-ui.js"></script>
+    <!--<script src="./jquery-ui.js"></script> -->
     <script src="./jquery-ui.min.js"></script>
     <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
     <script src="./jquery.tocify.min.js"></script>

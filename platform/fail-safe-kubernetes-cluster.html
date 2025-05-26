@@ -116,7 +116,7 @@
 <p class="p_Normal">Установка состоит из следующих этапов:</p>
 <ol style="list-style-type:decimal">
 <li value="1" class="p_Normal"><a href="fail-safe-kubernetes-cluster.html#cluster-architecture" class="topiclink">Архитектура кластера Kubernetes</a>.</li><li value="2" class="p_Normal"><a href="fail-safe-kubernetes-cluster.html#system-requirements" class="topiclink">Рекомендуемые системные требования</a>.</li><li value="3" class="p_Normal"><a href="fail-safe-kubernetes-cluster.html#preparation-config-file" class="topiclink">Подготовка конфигурационного файла</a>.</li><li value="4" class="p_Normal"><a href="fail-safe-kubernetes-cluster.html#installation" class="topiclink">Установка Kubernetes-кластера на базе Deckhouse</a>.</li><li value="5" class="p_Normal"><a href="fail-safe-kubernetes-cluster.html#addition-frontend-nodes" class="topiclink">Добавление frontend-узлов</a>.</li><li value="6" class="p_Normal"><a href="fail-safe-kubernetes-cluster.html#addition-system-nodes" class="topiclink">Добавление system-узлов</a>.</li><li value="7" class="p_Normal"><a href="fail-safe-kubernetes-cluster.html#addition-worke-nodes" class="topiclink">Добавление worker-узлов</a>.</li><li value="8" class="p_Normal"><a href="fail-safe-kubernetes-cluster.html#addition-master-nodes" class="topiclink">Добавление master-узлов</a>.</li><li value="9" class="p_Normal"><a href="fail-safe-kubernetes-cluster.html#addition-local-path-provisioner" class="topiclink">Добавление Local Path Provisioner</a>.</li><li value="10" class="p_Normal"><a href="fail-safe-kubernetes-cluster.html#addition-balancer" class="topiclink">Добавление балансировщика OpenELB - VIP</a>.</li><li value="11" class="p_Normal"><a href="fail-safe-kubernetes-cluster.html#addition-ingress-nginx-controller" class="topiclink">Добавление Ingress Nginx Controller - LoadBalancer</a>.</li><li value="12" class="p_Normal"><a href="fail-safe-kubernetes-cluster.html#addition-user" class="topiclink">Добавление пользователя для доступа к веб-интерфейсу кластера</a>.</li><li value="13" class="p_Normal"><a href="fail-safe-kubernetes-cluster.html#load-privileges" class="topiclink">Привилегии запускаемых нагрузок</a>.</li><li value="14" class="p_Normal"><a href="fail-safe-kubernetes-cluster.html#installation-helm" class="topiclink">Установка HELM</a>.</li></ol>
-<h2 class="p_Heading2"><a id="cluster-architecture" class="hmanchor"></a><span class="f_Heading2">Шаг 1: Архитектура кластера Kubernetes</span></h2>
+<h2 class="p_Heading2"><a id="cluster-architecture" class="hmanchor"></a><span class="f_Heading2">Шаг 1. Архитектура кластера Kubernetes</span></h2>
 <p class="p_Normal">В рамках статьи рассматривается внедрение инфраструктуры отказоустойчивого кластера Kubernetes на базе платформы Deckhouse.</p>
 <ol style="list-style-type:upper-roman">
 <li value="1" class="p_Normal">Структура Kubernetes-кластера.</li></ol>
@@ -130,7 +130,7 @@
 <ol style="list-style-type:upper-roman" start="2">
 <li value="2" class="p_Normal">Загрузка образов Deckhouse в локальный реестр образов.</li></ol>
 <p class="p_Normal">Кластер Kubernetes с помощью Deckhouse можно развернуть в закрытом окружении, из которого нет доступа в интернет. Для этого предварительно скачайте на компьютере с доступом в интернет образы платформы Deckhouse и загрузите их в локальный реестр образов. Подробнее читайте в статье <a href="downloading-images-deckhouse.html" class="topiclink">«Загрузка образов Deckhouse»</a>.</p>
-<h2 class="p_Heading2"><a id="system-requirements" class="hmanchor"></a><span class="f_Heading2">Шаг 2: Рекомендуемые системные требования</span></h2>
+<h2 class="p_Heading2"><a id="system-requirements" class="hmanchor"></a><span class="f_Heading2">Шаг 2. Рекомендуемые системные требования</span></h2>
 <ol style="list-style-type:upper-roman">
 <li value="1" class="p_Normal">Персональный компьютер:</li></ol>
 <ul style="list-style-type:disc">
@@ -209,10 +209,11 @@
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">Конец&nbsp;внимание</span></p>
 <ul style="list-style-type:disc">
 <li class="p_Normal">доступ до прокси-сервера для скачивания deb/rpm-пакетов ОС при необходимости;</li><li class="p_Normal">на узле не должно быть установлено пакетов container runtime, например, containerd или docker.</li></ul>
-<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">Начало&nbsp;внимание</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">Начало&nbsp;примечание</span></p>
+<p class="p_Normal"><span style="font-weight: bold;">Примечание</span></p>
 <p class="p_Normal">Установка непосредственно с master-узла в настоящий момент не поддерживается. Установщик в виде Docker-образа нельзя запускать на том же узле, на котором планируется развёртывание master-узла, так как на узле не должно быть установлено пакетов container runtime, например, containerd или docker. При отсутствии менеджмент узлов установите docker на любой другой ноде будущего кластера, запустите Docker-образ установщика, установите Deckhouse и удалите Docker-образ установщика c ноды вместе с docker.</p>
-<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">Конец&nbsp;внимание</span></p>
-<h2 class="p_Heading2"><a id="preparation-config-file" class="hmanchor"></a><span class="f_Heading2">Шаг 3: Подготовка конфигурационного файла</span></h2>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">Конец&nbsp;примечание</span></p>
+<h2 class="p_Heading2"><a id="preparation-config-file" class="hmanchor"></a><span class="f_Heading2">Шаг 3. Подготовка конфигурационного файла</span></h2>
 <p class="p_Normal">Чтобы установить Deckhouse, подготовьте YAML-файл конфигурации установки. Для получения YAML-файла конфигурации воспользуйтесь сервисом <a href="https://deckhouse.ru/gs/" target="_blank" class="weblink">Быстрый старт</a> на сайте Deckhouse. Сервис сгенерирует актуальный YAML-файл для текущей версий платформы.</p>
 <ol style="list-style-type:upper-roman">
 <li value="1" class="p_Normal">Сгенерируйте YAML-файл сервисом <a href="https://deckhouse.ru/gs/" target="_blank" class="weblink">Быстрый старт</a>, выполнив следующие шаги:</li></ol>
@@ -251,7 +252,7 @@
 <span class="f_CodeExample">kind:&nbsp;StaticClusterConfiguration</span><br />
 <span class="f_CodeExample">internalNetworkCIDRs:</span><br />
 <span class="f_CodeExample"> &nbsp;-&nbsp;192.168.1.0/24</span></p>
-<p class="p_Normal"><a class="dropdown-toggle" style="font-style: normal; font-weight: normal; color: #000000; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186A1')">Для офлайн-установки без доступа в интернет:</a></p>
+<p class="p_Normal"><a class="dropdown-toggle" style="font-style: normal; font-weight: normal; color: #000000; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186A1')">Для офлайн-установки без доступа в интернет</a></p>
 <div id="TOGGLE0186A1" class="dropdown-toggle-body" style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0 0 0 0;"><table style="border:none; border-spacing:0;">
 <tr>
 <td style="vertical-align:top; padding:0; border:none"><p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">Начало&nbsp;внимание</span></p>
@@ -309,22 +310,25 @@
 </tr>
 </table>
 </div>
-<h2 class="p_Heading2"><a id="installation" class="hmanchor"></a><span class="f_Heading2">Шаг 4: Установка Kubernetes-кластера на базе Deckhouse</span></h2>
+<h2 class="p_Heading2"><a id="installation" class="hmanchor"></a><span class="f_Heading2">Шаг 4. Установка Kubernetes-кластера на базе Deckhouse</span></h2>
 <p class="p_Normal">Установка Deckhouse Platform Community Edition сводится к установке кластера, который состоит из единственного master-узла. Инсталлятор Deckhouse доступен в виде образа контейнера, в который необходимо передать конфигурационные файлы и SSH-ключи доступа на master-узел. Далее подразумевается, что используется SSH-ключ <code><b>~/.ssh/id_rsa</b></code>. В основе инсталлятора лежит утилита <a href="https://github.com/deckhouse/deckhouse/tree/main/dhctl/" target="_blank" class="weblink">dhctl</a>.</p>
 <ol style="list-style-type:upper-roman">
 <li value="1" class="p_Normal">Запустите установщик.</li></ol>
-<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">Начало&nbsp;внимание</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">Начало&nbsp;примечание</span></p>
+<p class="p_Normal"><span style="font-weight: bold;">Примечание</span></p>
 <p class="p_Normal">Установка непосредственно с master-узла в настоящий момент не поддерживается. Установщик в виде Docker-образа нельзя запускать на том же узле, на котором планируется развёртывание master-узла, так как на узле не должно быть установлено пакетов container runtime, например, containerd или docker.</p>
-<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">Конец&nbsp;внимание</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">Конец&nbsp;примечание</span></p>
 <p class="p_Normal">Установщик запускается на персональном компьютере, подготовленном на этапе <a href="fail-safe-kubernetes-cluster.html#cluster-architecture" class="topiclink">архитектура кластера Kubernetes</a>. На ПК перейдите в директорию с файлом конфигурации <code><b>config.yml</b></code>, подготовленным на этапе <a href="fail-safe-kubernetes-cluster.html#preparation-config-file" class="topiclink">подготовка конфигурационного файла</a>.</p>
-<p class="p_Normal"><span style="font-weight: bold;">Для запуска установщика через интернет выполните команду:</span></p>
+<p class="p_Normal">Для запуска установщика через интернет выполните команду:</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">sudo&nbsp;docker&nbsp;run&nbsp;--pull=always&nbsp;-it&nbsp;-v&nbsp;&quot;$PWD/config.yml:/config.yml&quot;&nbsp;-v&nbsp;&quot;$HOME/.ssh/:/tmp/.ssh/&quot;&nbsp;registry.deckhouse.io/deckhouse/ce/install:stable&nbsp;bash</span></p>
-<p class="p_Normal"><a class="dropdown-toggle" style="font-style: normal; font-weight: normal; color: #000000; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186A2')">Для офлайн-установки без доступа в интернет:</a></p>
+<p class="p_Normal"><a class="dropdown-toggle" style="font-style: normal; font-weight: normal; color: #000000; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186A2')">Для офлайн-установки без доступа в интернет</a></p>
 <div id="TOGGLE0186A2" class="dropdown-toggle-body" style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0 0 0 0;"><table style="border:none; border-spacing:0;">
 <tr>
-<td style="vertical-align:top; padding:0; border:none"><p class="p_Normal">Выполните команду:</p>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_Normal">&nbsp;<br />
+Выполните команду:</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">sudo&nbsp;docker&nbsp;run&nbsp;--pull=always&nbsp;-it&nbsp;-v&nbsp;&quot;$PWD/config.yml:/config.yml&quot;&nbsp;-v&nbsp;&quot;$HOME/.ssh/:/tmp/.ssh/&quot;&nbsp;example.com:443/images/deckhouse/install:v1.46.3&nbsp;bash</span></p>
-<p class="p_Normal">где:</p>
+<p class="p_Normal">&nbsp;<br />
+Где:</p>
 <p class="p_Normal"><code><b>example.com:443/images/deckhouse/install:v1.46.3</b></code> — версия устанавливаемого релиза.</p>
 </td>
 </tr>
@@ -339,7 +343,7 @@
 <ul style="list-style-type:disc">
 <li class="p_CodeExample" style="white-space: normal; page-break-inside: auto;"><code><b>&lt;username&gt;</b></code> — в параметре <code><b>--ssh-user</b></code> укажите имя пользователя, от которого генерировался SSH-ключ для установки;</li><li class="p_CodeExample" style="white-space: normal; page-break-inside: auto;"><code><b>&lt;master_ip&gt;</b></code> — IP адрес master-узла подготовленного на этапе <a href="fail-safe-kubernetes-cluster.html#cluster-architecture" class="topiclink">архитектура кластера Kubernetes</a>.</li></ul>
 <p class="p_Normal">Процесс установки может занять 15-30 минут при хорошем соединении.</p>
-<h2 class="p_Heading2"><a id="addition-frontend-nodes" class="hmanchor"></a><span class="f_Heading2">Шаг 5: Добавление frontend-узлов</span></h2>
+<h2 class="p_Heading2"><a id="addition-frontend-nodes" class="hmanchor"></a><span class="f_Heading2">Шаг 5. Добавление frontend-узлов</span></h2>
 <p class="p_Normal">Перед добавлением frontend-нод предварительно создайте новый custom resource <a href="https://deckhouse.ru/documentation/latest/modules/040-node-manager/cr.html#nodegroup" target="_blank" class="weblink">NodeGroup</a> с именем <code><b>frontend</b></code>. Параметр <code><b>nodeType</b></code> в custom resource NodeGroup задайте как <code><b>Static</b></code>.</p>
 <ol style="list-style-type:upper-roman">
 <li value="1" class="p_Normal">Создайте на ноде master 1 файл <code><b>frontend.yaml</b></code> с описанием статичной NodeGroup с наименованием <code><b>frontend</b></code>:</li></ol>
@@ -369,7 +373,7 @@
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">echo&nbsp;&lt;Base64-КОД-СКРИПТА&gt;&nbsp;|&nbsp;base64&nbsp;-d&nbsp;|&nbsp;bash</span></p>
 <p class="p_Normal">Дождитесь окончания выполнения скрипта. Нода добавлена.</p>
 <p class="p_Normal">Чтобы добавить новые frontend-ноды, выполните действия из пункта 3.</p>
-<h2 class="p_Heading2"><a id="addition-system-nodes" class="hmanchor"></a><span class="f_Heading2">Шаг 6: Добавление system-узлов</span></h2>
+<h2 class="p_Heading2"><a id="addition-system-nodes" class="hmanchor"></a><span class="f_Heading2">Шаг 6. Добавление system-узлов</span></h2>
 <p class="p_Normal">Перед добавлением system-нод предварительно создайте новый custom resource <a href="https://deckhouse.ru/documentation/latest/modules/040-node-manager/cr.html#nodegroup" target="_blank" class="weblink">NodeGroup</a> с именем <code><b>system</b></code>. Параметр <code><b>nodeType</b></code> в custom resource NodeGroup задать как <code><b>Static</b></code>.</p>
 <ol style="list-style-type:upper-roman">
 <li value="1" class="p_Normal">Создайте на ноде master 1 файл <code><b>system.yaml</b></code> с описанием статичной NodeGroup с наименованием <code><b>system</b></code>:</li></ol>
@@ -399,7 +403,7 @@
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">echo&nbsp;&lt;Base64-КОД-СКРИПТА&gt;&nbsp;|&nbsp;base64&nbsp;-d&nbsp;|&nbsp;bash</span></p>
 <p class="p_Normal">Дождитесь окончания выполнения скрипта. Нода добавлена.</p>
 <p class="p_Normal">Чтобы добавить новые system-ноды, выполните действия из пункта 3.</p>
-<h2 class="p_Heading2"><a id="addition-worke-nodes" class="hmanchor"></a><span class="f_Heading2">Шаг 7: Добавление worker-узлов</span></h2>
+<h2 class="p_Heading2"><a id="addition-worke-nodes" class="hmanchor"></a><span class="f_Heading2">Шаг 7. Добавление worker-узлов</span></h2>
 <p class="p_Normal">Перед добавлением worker-нод предварительно создайте новый custom resource <a href="https://deckhouse.ru/documentation/latest/modules/040-node-manager/cr.html#nodegroup" target="_blank" class="weblink">NodeGroup</a> с именем <code><b>worker</b></code>. Параметр <code><b>nodeType</b></code> в custom resource NodeGroup задать как <code><b>Static</b></code>.</p>
 <ol style="list-style-type:upper-roman">
 <li value="1" class="p_Normal">Создайте на ноде master 1 файл <code><b>worker.yaml</b></code> с описанием статичной NodeGroup с наименованием <code><b>worker</b></code>:</li></ol>
@@ -424,7 +428,7 @@
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">echo&nbsp;&lt;Base64-КОД-СКРИПТА&gt;&nbsp;|&nbsp;base64&nbsp;-d&nbsp;|&nbsp;bash</span></p>
 <p class="p_Normal">Дождитесь окончания выполнения скрипта. Нода добавлена.</p>
 <p class="p_Normal">Чтобы добавить новые worker-ноды, действия из пункта 3.</p>
-<h2 class="p_Heading2"><a id="addition-master-nodes" class="hmanchor"></a><span class="f_Heading2">Шаг 8: Добавление master-узлов</span></h2>
+<h2 class="p_Heading2"><a id="addition-master-nodes" class="hmanchor"></a><span class="f_Heading2">Шаг 8. Добавление master-узлов</span></h2>
 <ol style="list-style-type:upper-roman">
 <li value="1" class="p_Normal">Получите код скрипта в кодировке Base64 для добавления и настройки нового узла master, выполнив команду на ноде master 1:</li></ol>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">kubectl&nbsp;-n&nbsp;d8-cloud-instance-manager&nbsp;get&nbsp;secret&nbsp;manual-bootstrap-</span><span class="f_CodeExample" style="font-weight: bold;">for</span><span class="f_CodeExample">-master&nbsp;-o&nbsp;json&nbsp;|&nbsp;jq&nbsp;'.data.&quot;bootstrap.sh&quot;'&nbsp;-r</span></p>
@@ -433,7 +437,7 @@
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">echo&nbsp;&lt;Base64-КОД-СКРИПТА&gt;&nbsp;|&nbsp;base64&nbsp;-d&nbsp;|&nbsp;bash</span></p>
 <p class="p_Normal">Дождитесь окончания выполнения скрипта. Нода добавлена.</p>
 <p class="p_Normal">Чтобы добавить новые master-ноды, выполните действия из шага 8.</p>
-<h2 class="p_Heading2"><a id="addition-local-path-provisioner" class="hmanchor"></a><span class="f_Heading2">Шаг 9: Добавление Local Path Provisioner</span></h2>
+<h2 class="p_Heading2"><a id="addition-local-path-provisioner" class="hmanchor"></a><span class="f_Heading2">Шаг 9. Добавление Local Path Provisioner</span></h2>
 <p class="p_Normal">По умолчанию storageclass отсутствует в Deckhouse. Создайте custom resource <span style="font-weight: bold;">LocalPathProvisioner</span>, позволяющий пользователям Kubernetes использовать локальное хранилище на узлах. Для этого выполните следующие действия:</p>
 <ol style="list-style-type:upper-roman">
 <li value="1" class="p_Normal">Создайте на master-узле файл <code><b>local-path-provisioner.yaml</b></code>, содержащий конфигурацию для <span style="font-weight: bold;">LocalPathProvisioner</span>.</li></ol>
@@ -454,19 +458,21 @@
 <li value="3" class="p_Normal">Примените файл <code><b>local-path-provisioner.yaml</b></code> в Kubernetes. Для этого выполните команду:</li></ol>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">kubectl&nbsp;apply&nbsp;-f&nbsp;local-path-provisioner.yaml</span></p>
 <ol style="list-style-type:upper-roman" start="4">
-<li value="4" class="p_Normal">Установите созданный <span style="font-weight: bold;">LocalPathProvisioner</span>, как storageclass по умолчанию (default-class), выполнив команду:</li></ol>
+<li value="4" class="p_Normal">Установите созданный <span style="font-weight: bold;">LocalPathProvisioner</span>, как storageclass по умолчанию (default-class), выполнив одну из команд:</li></ol>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">kubectl&nbsp;patch&nbsp;storageclass&nbsp;localpath-deckhouse-system&nbsp;-p&nbsp;'{&quot;metadata&quot;:&nbsp;{&quot;annotations&quot;:{&quot;storageclass.kubernetes.io/is-default-class&quot;:&quot;true&quot;}}}'</span></p>
+<p class="p_Normal">или</p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">sudo&nbsp;-i&nbsp;d8&nbsp;k&nbsp;patch&nbsp;mc&nbsp;global&nbsp;--type&nbsp;merge&nbsp;-p&nbsp;“{&quot;spec&quot;:&nbsp;{&quot;settings&quot;:{&quot;defaultClusterStorageClass&quot;:&quot;localpath-deckhouse-system&quot;}}}”</span></p>
 <p class="p_Normal"><span style="font-weight: bold;">LocalPathProvisioner</span> с наименованием localpath-deckhouse-system создан и готов предоставлять локальные хранилища на узлах c NodeGroup system и worker.</p>
-<h2 class="p_Heading2"><a id="addition-balancer" class="hmanchor"></a><span class="f_Heading2">Шаг 10: Добавление балансировщика OpenELB-VIP</span></h2>
-<p class="p_Normal">Для правильной работы Ingress-контроллера требуется прямой выход в интернет с белым IP-адресом на Ingress-узле кластера с использованием NodePort, или можно установить балансировщик <a href="https://openelb.io/docs/getting-started/installation/" target="_blank" class="weblink">OpenELB</a>, который будет заниматься балансировкой трафика так, как это организовано у любого облачного провайдера. Этот балансировщик использует Keepalived для поддержки IP-адреса службы.</p>
-<p class="p_Normal">Разверните OpenELB в режиме VIP Mode. Для того:</p>
+<h2 class="p_Heading2"><a id="addition-balancer" class="hmanchor"></a><span class="f_Heading2">Шаг 10. Добавление балансировщика OpenELB-VIP</span></h2>
+<p class="p_Normal">Для правильной работы Ingress-контроллера требуется прямой выход в интернет с белым IP-адресом на Ingress-узле кластера с использованием NodePort, или можно установить балансировщик <a href="https://openelb.io/docs/getting-started/installation/" target="_blank" class="weblink">OpenELB</a>, который будет заниматься балансировкой трафика так, как это организовано у любого облачного провайдера. Этот балансировщик использует Speaker для поддержки IP-адреса службы.</p>
+<p class="p_Normal">Разверните OpenELB в режиме VIP Mode. Для этого:</p>
 <ol style="list-style-type:upper-roman">
 <li value="1" class="p_Normal">Получите конфигурационный файл <code><b>values-openelb.yaml</b></code>.</li></ol>
-<p class="p_Normal"><span style="font-weight: bold;">Для установки через интернет:</span></p>
+<p class="p_Normal">Для установки через интернет:</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">helm&nbsp;repo&nbsp;add&nbsp;elma365&nbsp;https:</span><span class="f_CodeExample">//charts.elma365.tech</span><br />
 <span class="f_CodeExample">helm&nbsp;repo&nbsp;update</span><br />
 <span class="f_CodeExample">helm&nbsp;show&nbsp;values&nbsp;elma365/openelb&nbsp;&gt;&nbsp;values-openelb.yaml</span></p>
-<p class="p_Normal"><a class="dropdown-toggle" style="font-style: normal; font-weight: normal; color: #000000; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186A3')">Получение конфигурационного файла для установки в закрытом контуре без доступа в интернет.</a></p>
+<p class="p_Normal"><a class="dropdown-toggle" style="font-style: normal; font-weight: normal; color: #000000; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186A3')">Получение конфигурационного файла для установки в закрытом контуре без доступа в интернет</a></p>
 <div id="TOGGLE0186A3" class="dropdown-toggle-body" style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0 0 0 0;"><table style="border:none; border-spacing:0;">
 <tr>
 <td style="vertical-align:top; padding:0; border:none"><ol style="list-style-type:decimal">
@@ -486,88 +492,95 @@
 </div>
 <ol style="list-style-type:upper-roman" start="2">
 <li value="2" class="p_Normal">Измените конфигурационный файл <code><b>values-openelb.yaml</b></code>.</li></ol>
-<p class="p_Normal">Запланируйте размещение подов openelb-manager на frontend-нодах кластреа. Для этого измените секции <span style="font-weight: bold;">tolerations</span> и <span style="font-weight: bold;">nodeSelector</span>:</p>
+<p class="p_Normal">Запланируйте размещение подов openelb-controller на frontend-нодах кластера. Для этого измените секции <span style="font-weight: bold;">tolerations</span> и <span style="font-weight: bold;">nodeSelector</span>:</p>
 <p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample">## Настройки openelb</span><br />
 <span class="f_CodeExample">openelb:</span><br />
-<span class="f_CodeExample">  manager:</span><br />
-<span class="f_CodeExample">  &nbsp; apiHosts:</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">&quot;:50051&quot;</span><br />
-<span class="f_CodeExample">  &nbsp; webhookPort:</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">443</span><br />
+<span class="f_CodeExample">  speaker:</span><br />
+<span class="f_CodeExample">  &nbsp; enable: true</span><br />
+<span class="f_CodeExample">  &nbsp; vip: true</span><br />
+<span class="f_CodeExample">  &nbsp; apiHosts: &quot;:50051&quot;</span><br />
 <span class="f_CodeExample">  &nbsp; tolerations:</span><br />
-<span class="f_CodeExample">  &nbsp; &nbsp; -</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">key:</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">CriticalAddonsOnly</span><br />
-<span class="f_CodeExample">  &nbsp; &nbsp; &nbsp; </span><span class="f_CodeExample" style="font-weight: bold;">operator</span><span class="f_CodeExample">:</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">Exists</span><br />
-<span class="f_CodeExample">  &nbsp; &nbsp; -</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">effect:</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">NoExecute</span><br />
-<span class="f_CodeExample">  &nbsp; &nbsp; &nbsp; key:</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">dedicated.deckhouse.io</span><br />
-<span class="f_CodeExample">  &nbsp; &nbsp; &nbsp; </span><span class="f_CodeExample" style="font-weight: bold;">operator</span><span class="f_CodeExample">:</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">Equal</span><br />
-<span class="f_CodeExample">  &nbsp; &nbsp; &nbsp; value:</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">frontend</span><br />
+<span class="f_CodeExample">  &nbsp; &nbsp; - key: CriticalAddonsOnly</span><br />
+<span class="f_CodeExample">  &nbsp; &nbsp; &nbsp; operator: Exists</span><br />
+<span class="f_CodeExample">  &nbsp; &nbsp; - effect: NoExecute</span><br />
+<span class="f_CodeExample">  &nbsp; &nbsp; &nbsp; key: dedicated.deckhouse.io</span><br />
+<span class="f_CodeExample">  &nbsp; &nbsp; &nbsp; operator: Equal</span><br />
+<span class="f_CodeExample">  &nbsp; &nbsp; &nbsp; value: frontend</span><br />
 <span class="f_CodeExample">  &nbsp; nodeSelector:</span><br />
-<span class="f_CodeExample">  &nbsp; &nbsp; kubernetes.io/os:</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">linux</span><br />
-<span class="f_CodeExample">  &nbsp; &nbsp; node-role.deckhouse.io/frontend:</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">&quot;&quot;</span><br />
+<span class="f_CodeExample">  &nbsp; &nbsp; kubernetes.io/os: linux</span><br />
+<span class="f_CodeExample">  &nbsp; &nbsp; node-role.deckhouse.io/frontend: &quot;&quot;</span><br />
+<span class="f_CodeExample">  controller:</span><br />
+<span class="f_CodeExample">  &nbsp; webhookPort: 443</span><br />
+<span class="f_CodeExample">  &nbsp; tolerations:</span><br />
+<span class="f_CodeExample">  &nbsp; &nbsp; - key: CriticalAddonsOnly</span><br />
+<span class="f_CodeExample">  &nbsp; &nbsp; &nbsp; operator: Exists</span><br />
+<span class="f_CodeExample">  &nbsp; &nbsp; - effect: NoExecute</span><br />
+<span class="f_CodeExample">  &nbsp; &nbsp; &nbsp; key: dedicated.deckhouse.io</span><br />
+<span class="f_CodeExample">  &nbsp; &nbsp; &nbsp; operator: Equal</span><br />
+<span class="f_CodeExample">  &nbsp; &nbsp; &nbsp; value: frontend</span><br />
+<span class="f_CodeExample">  &nbsp; nodeSelector:</span><br />
+<span class="f_CodeExample">  &nbsp; &nbsp; kubernetes.io/os: linux</span><br />
+<span class="f_CodeExample">  &nbsp; &nbsp; node-role.deckhouse.io/frontend: &quot;&quot;</span><br />
 <span class="f_CodeExample">...</span></p>
-<p class="p_Normal"><a class="dropdown-toggle" style="font-style: normal; font-weight: normal; color: #000000; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186A4')">Заполнение параметров подключения к приватному registry для установки в закрытом контуре без доступа в интернет.</a></p>
+<p class="p_Normal"><a class="dropdown-toggle" style="font-style: normal; font-weight: normal; color: #000000; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186A4')">Заполнение параметров подключения к приватному registry для установки в закрытом контуре без доступа в интернет</a></p>
 <div id="TOGGLE0186A4" class="dropdown-toggle-body" style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0 0 0 0;"><table style="border:none; border-spacing:0;">
 <tr>
-<td style="vertical-align:top; padding:0; border:none"><p class="p_Normal">Для подключения к приватному <span style="font-weight: bold;">registry</span> необходимо:</p>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_Normal">&nbsp;<br />
+Для подключения к приватному <span style="font-weight: bold;">registry</span> необходимо:</p>
 <ol style="list-style-type:decimal">
-<li value="1" class="p_Normal">Задать адрес и путь для параметра <code><b>openelb.manager.image.repository</b></code> и <code><b>openelb.admission.image.repository</b></code>.</li></ol>
+<li value="1" class="p_Normal">Задать адрес и путь для параметра <code><b>openelb.global.imageRegistry</b></code>.</li></ol>
 <ol style="list-style-type:decimal" start="2">
 <li value="2" class="p_Normal">Указать наименование секрета с правами доступа к приватному <span style="font-weight: bold;">registry</span> в параметре <code><b>imagePullSecrets</b></code>. Секрет должен быть создан вручную и зашифрован в Base64.</li></ol>
 <p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample">## Настройки openelb</span><br />
 <span class="f_CodeExample">openelb:</span><br />
-<span class="f_CodeExample"> &nbsp;manager:</span><br />
-<span class="f_CodeExample">...</span><br />
-<span class="f_CodeExample"> &nbsp; &nbsp;## параметры подключения к приватному registry</span><br />
-<span class="f_CodeExample"> &nbsp; &nbsp;image:</span><br />
-<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;## адрес и путь для приватного registry</span><br />
-<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;repository: registry.example.com/openelb</span><br />
-<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;tag: v0.5.0</span><br />
-<span class="f_CodeExample"> &nbsp; &nbsp;## секрет с правами доступа к приватному registry должен быть создан вручную, зашифрованный в Base64</span><br />
-<span class="f_CodeExample"> &nbsp; &nbsp;imagePullSecrets:</span><br />
-<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;- name: myRegistryKeySecretName</span><br />
-<span class="f_CodeExample"> &nbsp;admission:</span><br />
-<span class="f_CodeExample"> &nbsp; &nbsp;## параметры подключения к приватному registry</span><br />
-<span class="f_CodeExample"> &nbsp; &nbsp;image:</span><br />
-<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;repository: registry.example.com/kube-webhook-certgen</span><br />
-<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;tag: v1.1.1</span><br />
-<span class="f_CodeExample"> &nbsp; &nbsp;## секрет с правами доступа к приватному registry должен быть создан вручную, зашифрованный в Base64</span><br />
-<span class="f_CodeExample"> &nbsp; &nbsp;imagePullSecrets:</span><br />
-<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;- name: myRegistryKeySecretName</span></p>
-<p class="p_Normal">где формат <span style="font-weight: bold;">repository</span>:</p>
-<ul style="list-style-type:disc">
-<li class="p_Normal">адрес — <code><b>registry.example.com</b></code>;</li><li class="p_Normal">путь — <code><b>/openelb</b></code> (для admission — <code><b>/kube-webhook-certgen</b></code>).</li></ul>
+<span class="f_CodeExample"> &nbsp; ## параметры подключения к приватному registry</span><br />
+<span class="f_CodeExample"> global:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; ## адрес и путь для приватного registry</span><br />
+<span class="f_CodeExample"> &nbsp; imageRegistry: registry.example.com/docker/addons</span><br />
+<span class="f_CodeExample"> &nbsp; ## секрет с правами доступа к приватному registry должен быть создан вручную, зашифрованный в Base64</span><br />
+<span class="f_CodeExample"> &nbsp; imagePullSecrets:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; - name: myRegistryKeySecretName</span></p>
+<p class="p_Normal">где формат <code><b>imageRegistry</b></code>: адрес — <code><b>registry.example.com</b></code>.</p>
 </td>
 </tr>
 </table>
 </div>
 <ol style="list-style-type:upper-roman" start="3">
 <li value="3" class="p_Normal">Установите OpenELB в Kubernetes.</li></ol>
-<p class="p_Normal"><span style="font-weight: bold;">Для установки через интернет:</span></p>
+<p class="p_Normal">Для установки через интернет:</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">helm&nbsp;upgrade&nbsp;--install&nbsp;openelb&nbsp;elma365/openelb&nbsp;-f&nbsp;values-openelb.yaml&nbsp;-n&nbsp;openelb-system&nbsp;--create-namespace</span></p>
-<p class="p_Normal"><a class="dropdown-toggle" style="font-style: normal; font-weight: normal; color: #000000; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186A5')">Для офлайн-установки без доступа в интернет:</a></p>
+<p class="p_Normal"><a class="dropdown-toggle" style="font-style: normal; font-weight: normal; color: #000000; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186A5')">Для установки без доступа в интернет</a></p>
 <div id="TOGGLE0186A5" class="dropdown-toggle-body" style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0 0 0 0;"><table style="border:none; border-spacing:0;">
 <tr>
-<td style="vertical-align:top; padding:0; border:none"><p class="p_Normal">Перейдите в каталог с загруженным чартом и выполните команду:</p>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_Normal">&nbsp;<br />
+Перейдите в каталог с загруженным чартом и выполните команду:<br />
+&nbsp;</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">helm&nbsp;upgrade&nbsp;--install&nbsp;openelb&nbsp;./openelb&nbsp;-f&nbsp;values-openelb.yaml&nbsp;-n&nbsp;openelb-system&nbsp;--create-namespace</span></p>
 </td>
 </tr>
 </table>
 </div>
 <ol style="list-style-type:upper-roman" start="4">
-<li value="4" class="p_Normal">Настройте отказоустойчивость openelb-manager.</li></ol>
-<p class="p_Normal">Для достижения отказоустойчивости увеличьте количестесво реплик openelb-manager, выполнив команду на ноде master 1:</p>
-<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">kubectl&nbsp;scale&nbsp;--replicas=2&nbsp;deployment&nbsp;openelb-manager&nbsp;-n&nbsp;openelb-system</span></p>
-<p class="p_Normal">Выполните следующую команду, чтобы проверить находится ли openelb-manager в состоянии <span style="font-weight: bold;">READY:</span> <span style="font-weight: bold;">1/1</span> и <span style="font-weight: bold;">STATUS:</span> <span style="font-weight: bold;">Running</span>. Если да, OpenELB успешно установлен.</p>
+<li value="4" class="p_Normal">Настройте отказоустойчивость openelb-controller.</li></ol>
+<p class="p_Normal">Для достижения отказоустойчивости увеличьте количество реплик openelb-controller, выполнив команду на ноде master 1:</p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">kubectl&nbsp;scale&nbsp;--replicas=2&nbsp;deployment&nbsp;openelb-controller&nbsp;-n&nbsp;openelb-system</span></p>
+<p class="p_Normal">Выполните следующую команду, чтобы проверить находится ли openelb-controller в состоянии <span style="font-weight: bold;">READY:</span> <span style="font-weight: bold;">1/1</span> и <span style="font-weight: bold;">STATUS:</span> <span style="font-weight: bold;">Running</span>. Если да, OpenELB успешно установлен.</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">kubectl&nbsp;get&nbsp;po&nbsp;-n&nbsp;openelb-system</span></p>
 <ol style="list-style-type:upper-roman" start="5">
 <li value="5" class="p_Normal">Создайте пул IP-адресов для OpenELB.</li></ol>
 <p class="p_Normal">Создайте на ноде master 1 файл <code><b>vip-eip.yaml</b></code> с описанием EIP‑объекта. Объект Eip функционирует как пул IP-адресов для OpenELB.</p>
 <p class="p_Normal">Пример файла <code><b>vip-eip.yaml</b></code>:</p>
-<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">apiVersion:&nbsp;network.kubesphere.io/v1alpha2</span><br />
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample">apiVersion:&nbsp;network.kubesphere.io/v1alpha2</span><br />
 <span class="f_CodeExample">kind:&nbsp;Eip</span><br />
 <span class="f_CodeExample">metadata:</span><br />
 <span class="f_CodeExample">&nbsp;&nbsp;name:&nbsp;vip-eip</span><br />
+<span class="f_CodeExample">annotations:</span><br />
+<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;eip.openelb.kubesphere.io/is-default-eip:&nbsp;&quot;true&quot;</span><br />
 <span class="f_CodeExample">spec:</span><br />
 <span class="f_CodeExample">&nbsp;&nbsp;address:&nbsp;192.168.1.13</span><br />
-<span class="f_CodeExample">&nbsp;&nbsp;protocol:&nbsp;vip</span></p>
+<span class="f_CodeExample">&nbsp;&nbsp;protocol:&nbsp;vip</span><br />
+<span class="f_CodeExample"> &nbsp;interface:&nbsp;ens18</span></p>
 <p class="p_Normal">Примените файл <code><b>vip-eip.yaml</b></code> в Kubernetes, выполнив команду:</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">kubectl&nbsp;apply&nbsp;-f&nbsp;vip-eip.yaml</span></p>
 <ol style="list-style-type:upper-roman" start="6">
@@ -577,14 +590,15 @@
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">kubectl&nbsp;patch&nbsp;ds&nbsp;-n&nbsp;openelb-system&nbsp;openelb-keepalive-vip&nbsp;-p&nbsp;'{&quot;spec&quot;:{&quot;template&quot;:{&quot;spec&quot;:{&quot;nodeSelector&quot;:{&quot;kubernetes.io/os&quot;:&quot;linux&quot;,&quot;node-role.deckhouse.io/frontend&quot;:&quot;&quot;},&quot;tolerations&quot;:[{&quot;key&quot;:&quot;dedicated.deckhouse.io&quot;,&quot;value&quot;:&quot;frontend&quot;,&quot;effect&quot;:&quot;NoExecute&quot;}]}}}}'</span></p>
 <p class="p_Normal">Проверьте, что изменения, внесённые в <span style="font-weight: bold;">DaemonSet openelb-keepalive-vip</span> применились и поды разместились на нодах frontend:</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">kubectl&nbsp;get&nbsp;po&nbsp;-o&nbsp;wide&nbsp;-n&nbsp;openelb-system</span></p>
-<h2 class="p_Heading2"><a id="addition-ingress-nginx-controller" class="hmanchor"></a><span class="f_Heading2">Шаг 11: Добавление Ingress Nginx Controller - LoadBalancer</span></h2>
+<h2 class="p_Heading2"><a id="addition-ingress-nginx-controller" class="hmanchor"></a><span class="f_Heading2">Шаг 11. Добавление Ingress Nginx Controller - LoadBalancer</span></h2>
 <p class="p_Normal">Deckhouse устанавливает и управляет NGINX Ingress Controller при помощи Custom Resources. Если узлов для размещения Ingress-контроллера больше одного, он устанавливается в отказоустойчивом режиме и учитывает все особенности реализации инфраструктуры облаков и bare metal, а также кластеров Kubernetes различных типов.</p>
 <ol style="list-style-type:upper-roman">
 <li value="1" class="p_Normal">Создайте на ноде master 1 файл <code><b>ingress-nginx-controller.yml</b></code>, содержащий конфигурацию Ingress-контроллера.</li></ol>
-<p class="p_Normal"><a class="dropdown-toggle" style="font-style: normal; font-weight: normal; color: #000000; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186A6')">Пример файла ingress-nginx-controller.yml:</a></p>
+<p class="p_Normal"><a class="dropdown-toggle" style="font-style: normal; font-weight: normal; color: #000000; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186A6')">Пример файла ingress-nginx-controller.yml</a> </p>
 <div id="TOGGLE0186A6" class="dropdown-toggle-body" style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0 0 0 0;"><table style="border:none; border-spacing:0;">
 <tr>
-<td style="vertical-align:top; padding:0; border:none"><p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">#&nbsp;секция,&nbsp;описывающая&nbsp;параметры&nbsp;nginx&nbsp;ingress&nbsp;controller</span><br />
+<td style="vertical-align:top; padding:0; border:none"><p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample">#&nbsp;секция,&nbsp;описывающая&nbsp;параметры&nbsp;nginx&nbsp;ingress&nbsp;controller</span><br />
 <span class="f_CodeExample">#&nbsp;используемая&nbsp;версия&nbsp;API&nbsp;Deckhouse</span><br />
 <span class="f_CodeExample">apiVersion:&nbsp;deckhouse.io/v1</span><br />
 <span class="f_CodeExample">kind:&nbsp;IngressNginxController</span><br />
@@ -592,11 +606,14 @@
 <span class="f_CodeExample">&nbsp;&nbsp;name:&nbsp;nginx</span><br />
 <span class="f_CodeExample">spec:</span><br />
 <span class="f_CodeExample">&nbsp;&nbsp;#&nbsp;имя&nbsp;Ingress-класса&nbsp;для&nbsp;обслуживания&nbsp;Ingress&nbsp;NGINX&nbsp;controller</span><br />
-<span class="f_CodeExample">&nbsp;&nbsp;ingressClass:&nbsp;nginx</span><br />
-<span class="f_CodeExample">&nbsp;&nbsp;#&nbsp;версия&nbsp;Ingress-контроллера&nbsp;(используйте&nbsp;версию&nbsp;1.1&nbsp;с&nbsp;Kubernetes&nbsp;1.23+)</span><br />
-<span class="f_CodeExample">&nbsp;&nbsp;controllerVersion:&nbsp;&quot;1.1&quot;</span><br />
-<span class="f_CodeExample">&nbsp;&nbsp;#&nbsp;способ&nbsp;поступления&nbsp;трафика&nbsp;из&nbsp;внешнего&nbsp;мира</span><br />
-<span class="f_CodeExample">&nbsp;&nbsp;inlet:&nbsp;LoadBalancer</span><br />
+<span class="f_CodeExample"> &nbsp;ingressClass:&nbsp;nginx</span><br />
+<span class="f_CodeExample"> &nbsp;#&nbsp;способ&nbsp;поступления&nbsp;трафика&nbsp;из&nbsp;внешнего&nbsp;мира</span><br />
+<span class="f_CodeExample"> &nbsp;inlet:&nbsp;LoadBalancer</span><br />
+<span class="f_CodeExample">#&nbsp;Аннотация&nbsp;для&nbsp;OpenELB&nbsp;в&nbsp;сервис&nbsp;nginx-load-balancer</span><br />
+<span class="f_CodeExample"> &nbsp;loadBalancer:</span><br />
+<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;annotations:</span><br />
+<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eip.openelb.kubesphere.io/v1alpha2:&nbsp;&quot;vip-eip&quot;</span><br />
+<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://lb.kubesphere.io/v1alpha1" target="_blank" class="weblink">lb.kubesphere.io/v1alpha1</a>:&nbsp;&quot;openelb&quot;</span><br />
 <span class="f_CodeExample">&nbsp;&nbsp;hostPort:</span><br />
 <span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;httpPort:&nbsp;80</span><br />
 <span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;httpsPort:&nbsp;443</span><br />
@@ -613,19 +630,17 @@
 <li value="2" class="p_Normal">Примените файл <code><b>ingress-nginx-controller.yml</b></code> в Kubernetes, выполнив команду:</li></ol>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">kubectl&nbsp;create&nbsp;-f&nbsp;ingress-nginx-controller.yml</span></p>
 <p class="p_Normal">После установки ingress-контроллера Deckhouse автоматически создаст сервис nginx-load-balancer в namespace <code><b>d8-ingress-nginx</b></code>, но не свяжет данный сервис с OpenELB. </p>
-<ol style="list-style-type:upper-roman" start="3">
-<li value="3" class="p_Normal">Добавьте <span style="font-weight: bold;">annotations</span> и <span style="font-weight: bold;">labels</span> для OpenELB в сервис nginx-load-balancer, выполнив команду на ноде master 1:</li></ol>
-<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">kubectl&nbsp;patch&nbsp;svc&nbsp;-n&nbsp;d8-ingress-nginx&nbsp;nginx-load-balancer&nbsp;-p&nbsp;'{&quot;metadata&quot;:{&quot;annotations&quot;:{&quot;eip.openelb.kubesphere.io/v1alpha2&quot;:&quot;vip-eip&quot;,&quot;lb.kubesphere.io/v1alpha1&quot;:&quot;openelb&quot;,&quot;protocol.openelb.kubesphere.io/v1alpha1&quot;:&quot;vip&quot;},&quot;labels&quot;:{&quot;eip.openelb.kubesphere.io/v1alpha2&quot;:&quot;vip-eip&quot;}}}'</span></p>
-<ol style="list-style-type:upper-roman" start="4">
-<li value="4" class="p_Normal">Проверьте, что изменения внесённые в сервис nginx-load-balancer применились, в <span style="font-weight: bold;">EXTERNAL-IP</span> появился ip-адрес 192.168.1.13. Для этого выполните следующую команду:</li></ol>
+<ol style="list-style-type:upper-roman" start="2">
+<li value="3" class="p_Normal">Проверьте, что изменения, внесённые в сервис nginx-load-balancer применились, в <span style="font-weight: bold;">EXTERNAL-IP</span> появился IP-адрес 192.168.1.13. Для этого выполните следующую команду:</li></ol>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">kubectl&nbsp;get&nbsp;svc&nbsp;-n&nbsp;d8-ingress-nginx</span></p>
-<h2 class="p_Heading2"><a id="addition-user" class="hmanchor"></a><span class="f_Heading2">Шаг 12: Добавление пользователя для доступа к веб-интерфейсу кластера</span></h2>
+<h2 class="p_Heading2"><a id="addition-user" class="hmanchor"></a><span class="f_Heading2">Шаг 12. Добавление пользователя для доступа к веб-интерфейсу кластера</span></h2>
 <ol style="list-style-type:upper-roman">
 <li value="1" class="p_Normal">Создайте на ноде master 1 файл <code><b>user.yml</b></code>, содержащий описание учётной записи пользователя и прав доступа.</li></ol>
-<p class="p_Normal"><a class="dropdown-toggle" style="font-style: normal; font-weight: normal; color: #000000; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186A7')">Пример файла user.yml:</a></p>
+<p class="p_Normal"><a class="dropdown-toggle" style="font-style: normal; font-weight: normal; color: #000000; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186A7')">Пример файла user.yml</a></p>
 <div id="TOGGLE0186A7" class="dropdown-toggle-body" style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0 0 0 0;"><table style="border:none; border-spacing:0;">
 <tr>
-<td style="vertical-align:top; padding:0; border:none"><p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">apiVersion:&nbsp;deckhouse.io/v1</span><br />
+<td style="vertical-align:top; padding:0; border:none"><p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample">apiVersion:&nbsp;deckhouse.io/v1</span><br />
 <span class="f_CodeExample">kind:&nbsp;ClusterAuthorizationRule</span><br />
 <span class="f_CodeExample">metadata:</span><br />
 <span class="f_CodeExample">&nbsp;&nbsp;name:&nbsp;admin</span><br />
@@ -663,12 +678,12 @@
 <h2 class="p_Heading2"><a id="load-privileges" class="hmanchor"></a><span class="f_Heading2">Шаг 13. Привилегии запускаемых нагрузок</span></h2>
 <p class="p_Normal">Разрешите переназначить политику привилегий для запускаемых подов:</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">kubectl&nbsp;label&nbsp;namespace&nbsp;elma365 security.deckhouse.io/pod-policy=privileged --overwrite</span></p>
-<h2 class="p_Heading2"><a id="installation-helm" class="hmanchor"></a><span class="f_Heading2">Шаг 14: Установка HELM</span></h2>
+<h2 class="p_Heading2"><a id="installation-helm" class="hmanchor"></a><span class="f_Heading2">Шаг 14. Установка HELM</span></h2>
 <ol style="list-style-type:upper-roman">
 <li value="1" class="p_Normal">Перейдите на страницу релизов <a href="https://github.com/helm/helm/releases" target="_blank" class="weblink">Helm</a> и скачайте архив <code><b>helm-vX.Y.Z-linux-amd64.tar.gz</b></code> нужно версии.</li></ol>
-<p class="p_Normal"><span style="font-weight: bold;">Для установки через интернет:</span></p>
+<p class="p_Normal">Для установки через интернет:</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">wget&nbsp;https://get.helm.sh/helm-vX.Y.Z-linux-amd64.tar.gz</span></p>
-<p class="p_Normal"><a class="dropdown-toggle" style="font-style: normal; font-weight: normal; color: #000000; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186A8')">Для офлайн-установки без доступа в интернет:</a></p>
+<p class="p_Normal"><a class="dropdown-toggle" style="font-style: normal; font-weight: normal; color: #000000; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186A8')">Для офлайн-установки без доступа в интернет</a></p>
 <div id="TOGGLE0186A8" class="dropdown-toggle-body" style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0 0 0 0;"><table style="border:none; border-spacing:0;">
 <tr>
 <td style="vertical-align:top; padding:0; border:none"><ol style="list-style-type:decimal">
@@ -772,9 +787,9 @@
 </div>
  
     </footer>
-    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jquery1.min.js"></script>
     <iframe name="hmnavigation" style="display:none!important"></iframe>
-    <script src="./jquery-ui.js"></script>
+    <!--<script src="./jquery-ui.js"></script> -->
     <script src="./jquery-ui.min.js"></script>
     <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
     <script src="./jquery.tocify.min.js"></script>

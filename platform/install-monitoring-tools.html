@@ -117,25 +117,24 @@
 <p class="p_Normal">Рассмотрим, как развернуть их в Kubernetes-кластере в несколько этапов:</p>
 <ol style="list-style-type:decimal">
 <li value="1" class="p_Normal"><a href="install-monitoring-tools.html#clean-cdr" class="topiclink">Очистка CRD перед установкой (опционально)</a>.</li><li value="2" class="p_Normal"><a href="install-monitoring-tools.html#download-helm-chart-and-config-file" class="topiclink">Загрузка Helm-чарта и конфигурационного файла</a>.</li><li value="3" class="p_Normal"><a href="install-monitoring-tools.html#fill-config-file" class="topiclink">Заполнение конфигурационного файла</a>.</li><li value="4" class="p_Normal"><a href="install-monitoring-tools.html#install-monitoring-chart" class="topiclink">Установка чарта Monitoring с помощью Helm в Kubernetes-кластер</a>.</li></ol>
-<h2 class="p_Heading2"><a id="clean-cdr" class="hmanchor"></a><span class="f_Heading2">Шаг 1: Очистка CRD перед установкой (опционально)</span></h2>
-<p class="p_Normal">Произведите очистку CRD, если вы ранее устанавливали средства мониторинга или используете версию ELMA365 ниже ELMA365 2023.6.19 или ELMA365 LTS 2023.4.52.</p>
-<p class="p_Normal">Для очистки старых CRD выполните следующую команду:</p>
-<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">kubectl&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">delete</span><span class="f_CodeExample">&nbsp;crd&nbsp;alertmanagerconfigs.monitoring.coreos.com</span><br />
-<span class="f_CodeExample">kubectl&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">delete</span><span class="f_CodeExample">&nbsp;crd&nbsp;alertmanagers.monitoring.coreos.com</span><br />
-<span class="f_CodeExample">kubectl&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">delete</span><span class="f_CodeExample">&nbsp;crd&nbsp;podmonitors.monitoring.coreos.com</span><br />
-<span class="f_CodeExample">kubectl&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">delete</span><span class="f_CodeExample">&nbsp;crd&nbsp;probes.monitoring.coreos.com</span><br />
-<span class="f_CodeExample">kubectl&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">delete</span><span class="f_CodeExample">&nbsp;crd&nbsp;prometheusagents.monitoring.coreos.com</span><br />
-<span class="f_CodeExample">kubectl&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">delete</span><span class="f_CodeExample">&nbsp;crd&nbsp;prometheuses.monitoring.coreos.com</span><br />
-<span class="f_CodeExample">kubectl&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">delete</span><span class="f_CodeExample">&nbsp;crd&nbsp;prometheusrules.monitoring.coreos.com</span><br />
-<span class="f_CodeExample">kubectl&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">delete</span><span class="f_CodeExample">&nbsp;crd&nbsp;scrapeconfigs.monitoring.coreos.com</span><br />
-<span class="f_CodeExample">kubectl&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">delete</span><span class="f_CodeExample">&nbsp;crd&nbsp;servicemonitors.monitoring.coreos.com</span><br />
-<span class="f_CodeExample">kubectl&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">delete</span><span class="f_CodeExample">&nbsp;crd&nbsp;thanosrulers.monitoring.coreos.com</span></p>
-<h2 class="p_Heading2"><a id="download-helm-chart-and-config-file" class="hmanchor"></a><span class="f_Heading2">Шаг 2: Загрузка Helm-чарта и конфигурационного файла</span></h2>
-<p class="p_Normal">Для установки через интернет получите конфигурационный файл <code><b>values-monitoring.yaml</b></code>, выполнив команду:</p>
+<h2 class="p_Heading2"><a id="clean-cdr" class="hmanchor"></a><span class="f_Heading2">Шаг 1. Очистка CRD перед установкой (опционально)</span></h2>
+<p class="p_Normal">Если вы ранее устанавливали средства мониторинга, произведите очистку CRD с помощью команд:</p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">kubectl&nbsp;delete&nbsp;crd&nbsp;alertmanagerconfigs.monitoring.coreos.com</span><br />
+<span class="f_CodeExample">kubectl&nbsp;delete&nbsp;crd&nbsp;alertmanagers.monitoring.coreos.com</span><br />
+<span class="f_CodeExample">kubectl&nbsp;delete&nbsp;crd&nbsp;podmonitors.monitoring.coreos.com</span><br />
+<span class="f_CodeExample">kubectl&nbsp;delete&nbsp;crd&nbsp;probes.monitoring.coreos.com</span><br />
+<span class="f_CodeExample">kubectl&nbsp;delete&nbsp;crd&nbsp;prometheusagents.monitoring.coreos.com</span><br />
+<span class="f_CodeExample">kubectl&nbsp;delete&nbsp;crd&nbsp;prometheuses.monitoring.coreos.com</span><br />
+<span class="f_CodeExample">kubectl&nbsp;delete&nbsp;crd&nbsp;prometheusrules.monitoring.coreos.com</span><br />
+<span class="f_CodeExample">kubectl&nbsp;delete&nbsp;crd&nbsp;scrapeconfigs.monitoring.coreos.com</span><br />
+<span class="f_CodeExample">kubectl&nbsp;delete&nbsp;crd&nbsp;servicemonitors.monitoring.coreos.com</span><br />
+<span class="f_CodeExample">kubectl&nbsp;delete&nbsp;crd&nbsp;thanosrulers.monitoring.coreos.com</span></p>
+<h2 class="p_Heading2"><a id="download-helm-chart-and-config-file" class="hmanchor"></a><span class="f_Heading2">Шаг 2. Загрузка Helm-чарта и конфигурационного файла</span></h2>
+<p class="p_Normal">Для установки через интернет получите конфигурационный файл <code><b>values-monitoring.yaml</b></code>, выполнив команды:</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">helm&nbsp;repo&nbsp;add&nbsp;elma365&nbsp;</span><span class="f_CodeExample">https://charts.elma365.tech</span><br />
 <span class="f_CodeExample">helm&nbsp;repo&nbsp;update</span><br />
 <span class="f_CodeExample">helm&nbsp;show&nbsp;values&nbsp;elma365/monitoring&gt;&nbsp;values-monitoring.yaml</span></p>
-<h2 class="p_Heading2"><a id="fill-config-file" class="hmanchor"></a><span class="f_Heading2">Шаг 3: Заполнение конфигурационного файла</span></h2>
+<h2 class="p_Heading2"><a id="fill-config-file" class="hmanchor"></a><span class="f_Heading2">Шаг 3. Заполнение конфигурационного файла</span></h2>
 <p class="p_Normal">Заполните конфигурационный файл <code><b>values-monitoring.yaml</b></code> для установки средств мониторинга.</p>
 <p class="p_Normal">Для этого в параметрах <code><b>kube-prometheus-stack.namespaceOverride</b></code> и <code><b>grafana.namespaceOverride</b></code> укажите нужный <code><b>namespace</b></code> для сервиса мониторинга, например, <span style="font-weight: bold;">namespaceOverride: monitoring</span>. <code><b>Namespace</b></code> будет создан во время установки, если не был создан ранее.</p>
 <p class="p_Normal">Для Grafana:</p>
@@ -144,8 +143,7 @@
 <p class="p_Normal"><a class="dropdown-toggle" style="font-style: normal; font-weight: normal; color: #000000; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186A1')">Заполнение конфигурационного файла values-monitoring.yaml для установки мониторинга</a></p>
 <div id="TOGGLE0186A1" class="dropdown-toggle-body" style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0 0 0 0;"><table style="border:none; border-spacing:0;">
 <tr>
-<td style="vertical-align:top; padding:0; border:none"><p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample">&nbsp;</span><br />
-<span class="f_CodeExample"># Настройки monitoring</span><br />
+<td style="vertical-align:top; padding:0; border:none"><p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample"># Настройки monitoring</span><br />
 <span class="f_CodeExample">kube-prometheus-stack:</span><br />
 <span class="f_CodeExample" style="color: #ffffff;">  </span><span class="f_CodeExample"># Настройки grafana</span><br />
 <span class="f_CodeExample" style="color: #ffffff;">  </span><span class="f_CodeExample">grafana:</span><br />
@@ -196,8 +194,7 @@
 <p class="p_Normal"><a class="dropdown-toggle" style="font-style: normal; font-weight: normal; color: #000000; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186A2')">Заполнение параметров подключения к удалённому хранилищу Mimir</a></p>
 <div id="TOGGLE0186A2" class="dropdown-toggle-body" style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0 0 0 0;"><table style="border:none; border-spacing:0;">
 <tr>
-<td style="vertical-align:top; padding:0; border:none"><p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample">&nbsp;</span><br />
-<span class="f_CodeExample">kube-prometheus-stack:</span><br />
+<td style="vertical-align:top; padding:0; border:none"><p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample">kube-prometheus-stack:</span><br />
 <span class="f_CodeExample" style="color: #ffffff;">  </span><span class="f_CodeExample">grafana:</span><br />
 <span class="f_CodeExample" style="color: #ffffff;"> &nbsp;  </span><span class="f_CodeExample">sidecar:</span><br />
 <span class="f_CodeExample" style="color: #ffffff;"> &nbsp; &nbsp;  </span><span class="f_CodeExample"># включить mimir в качестве источника данных</span><br />
@@ -217,7 +214,7 @@
 </tr>
 </table>
 </div>
-<h2 class="p_Heading2"><a id="install-monitoring-chart" class="hmanchor"></a><span class="f_Heading2">Шаг 4: Установка чарта Monitoring с помощью Helm в Kubernetes-кластер</span></h2>
+<h2 class="p_Heading2"><a id="install-monitoring-chart" class="hmanchor"></a><span class="f_Heading2">Шаг 4. Установка чарта Monitoring с помощью Helm в Kubernetes-кластер</span></h2>
 <p class="p_Normal">Выполните установку чарта Monitoring в <code><b>namespace</b></code>, наименование которого указали на шаге 2 в конфигурационном файле <code><b>values-monitoring.yaml</b></code>. Namespace будет создан во время установки, если не был создан ранее.</p>
 <p class="p_Normal">Для установки через интернет выполните команду:</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">helm&nbsp;upgrade&nbsp;--install&nbsp;elma365-monitoring&nbsp;elma365/monitoring&nbsp;-f&nbsp;values-monitoring.yaml&nbsp;-n&nbsp;monitoring&nbsp;--create-namespace&nbsp;</span></p>
@@ -232,7 +229,7 @@
 <li value="1" class="p_Normal">Чтобы удалить чарт <span style="font-weight: bold;">elma365-monitoring</span> в <code><b>namespace monitoring</b></code>, выполните команду:</li></ol>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">helm&nbsp;uninstall&nbsp;elma365-monitoring&nbsp;-n&nbsp;monitoring</span></p>
 <ol style="list-style-type:upper-roman" start="2">
-<li value="2" class="p_Normal">CRD, созданные чартом elma365-monitoring, не удаляются по умолчанию и должны быть очищены вручную пользователем с правами <span style="font-weight: bold;">cluster-admin</span>:</li></ol>
+<li value="2" class="p_Normal">CRD, созданные чартом <span style="font-weight: bold;">elma365-monitoring</span>, не удаляются по умолчанию и должны быть очищены вручную пользователем с правами <span style="font-weight: bold;">cluster-admin</span>:</li></ol>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">kubectl&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">delete</span><span class="f_CodeExample">&nbsp;crd&nbsp;alertmanagerconfigs.monitoring.coreos.com</span><br />
 <span class="f_CodeExample">kubectl&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">delete</span><span class="f_CodeExample">&nbsp;crd&nbsp;alertmanagers.monitoring.coreos.com</span><br />
 <span class="f_CodeExample">kubectl&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">delete</span><span class="f_CodeExample">&nbsp;crd&nbsp;podmonitors.monitoring.coreos.com</span><br />
@@ -244,7 +241,7 @@
 <span class="f_CodeExample">kubectl&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">delete</span><span class="f_CodeExample">&nbsp;crd&nbsp;servicemonitors.monitoring.coreos.com</span><br />
 <span class="f_CodeExample">kubectl&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">delete</span><span class="f_CodeExample">&nbsp;crd&nbsp;thanosrulers.monitoring.coreos.com</span></p>
 <ol style="list-style-type:upper-roman" start="3">
-<li value="3" class="p_Normal">Если при удалении CRD более 5 минут остается в статусе <span style="font-weight: bold;">Terminating</span>, произведите патчинг этой CRD командой:</li></ol>
+<li value="3" class="p_Normal">Если при удалении CRD более пяти минут остается в статусе <span style="font-weight: bold;">Terminating</span>, произведите патчинг с помощью CRD‑команды:</li></ol>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">kubectl&nbsp;patch&nbsp;crd/MY_CRD_NAME&nbsp;-p&nbsp;'{&quot;metadata&quot;:{&quot;finalizers&quot;:[]}}'&nbsp;--type=merge</span></p>
 
                         <div class="bottom-nav">
@@ -334,9 +331,9 @@
 </div>
  
     </footer>
-    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jquery1.min.js"></script>
     <iframe name="hmnavigation" style="display:none!important"></iframe>
-    <script src="./jquery-ui.js"></script>
+    <!--<script src="./jquery-ui.js"></script> -->
     <script src="./jquery-ui.min.js"></script>
     <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
     <script src="./jquery.tocify.min.js"></script>

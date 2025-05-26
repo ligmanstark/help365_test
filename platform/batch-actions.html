@@ -131,7 +131,7 @@
 <li value="1" class="p_Normal">Создать приложения для загрузки публикаций и комментариев.</li><li value="2" class="p_Normal">Настроить интеграцию через <a href="extentions.html" class="topiclink">пользовательский модуль</a> и добавить в интерфейс модуля две кнопки со скриптами:</li></ol>
 <ul style="list-style-type:disc">
 <li class="p_Normal"><span style="font-weight: bold;">Добавить посты</span> — для массового переноса всех публикаций из стороннего сервиса в ELMA365;</li><li class="p_Normal"><span style="font-weight: bold;">Добавить комментарии</span> — для загрузки всех комментариев к этим публикациям.</li></ul>
-<h4 class="p_Heading4"><span class="f_Heading4">Шаг 1: Создать два приложения</span></h4>
+<h4 class="p_Heading4"><span class="f_Heading4">Шаг 1. Создать два приложения</span></h4>
 <p class="p_Normal">Для начала создайте <a href="360007235031.html" class="topiclink">приложения</a>, чтобы импортировать в них данные. При этом добавляйте свойства приложений в соответствии с полями публикаций и комментариев в сторонней системе. Рассмотрим на примере:</p>
 <ol style="list-style-type:decimal">
 <li value="1" class="p_Normal"><span style="font-weight: bold;">Посты</span> — содержит свойства:</li></ol>
@@ -142,7 +142,7 @@
 <ul style="list-style-type:disc">
 <li class="p_Normal"><span style="font-weight: bold;">Название</span> (<code><b>__name</b></code>) — системное свойство, создаётся автоматически;</li><li class="p_Normal"><span style="font-weight: bold;">Номер</span> (<code><b>postID</b></code>) — тип <span style="font-weight: bold;">Число (целое)</span> для идентификационного номера, по которому во внешней системе определяется связь между публикацией и комментариями к ней, т. е. значения этого поля равны в связанных элементах;</li><li class="p_Normal"><span style="font-weight: bold;">Дата создания</span> (<code><b>__createdAt</b></code>) — тип <span style="font-weight: bold;">Дата/время</span> для хранения даты создания комментария;</li><li class="p_Normal"><span style="font-weight: bold;">Электронная почта пользователя</span> (<code><b>email</b></code>) — тип <a href="360009707032.html#email" class="topiclink">Электронная почта</a> для электронной почты пользователя, оставившего комментарий;</li><li class="p_Normal"><span style="font-weight: bold;">Сообщение</span> (<code><b>body</b></code>) — тип <span style="font-weight: bold;">Строка (текст)</span> для текста комментария;</li><li class="p_Normal"><span style="font-weight: bold;">Посты</span> (<code><b>post</b></code>) — тип <span style="font-weight: bold;">Приложение (один)</span> для ссылки на связанный пост.</li></ul>
 <p class="p_Normal">С помощью этих свойств далее в скрипте определяются поля, в которые запишутся значения, переданные из внешнего сервиса. Подробнее про заполнение полей <span style="font-weight: bold;">Комментарии</span> и <span style="font-weight: bold;">Посты</span> типа <span style="font-weight: bold;">Приложение (один)</span> читайте в разделе <a href="batch-actions.html#example-batch-update" class="topiclink">«Пример массового обновления полей»</a>.</p>
-<h4 class="p_Heading4"><span class="f_Heading4">Шаг 2: Настроить загрузку данных через скрипт</span></h4>
+<h4 class="p_Heading4"><span class="f_Heading4">Шаг 2. Настроить загрузку данных через скрипт</span></h4>
 <p class="p_Normal">После создания приложений настройте импорт данных из сторонней системы.</p>
 <p class="p_Normal">Для этого:</p>
 <ol style="list-style-type:upper-roman">
@@ -353,9 +353,9 @@
 </div>
  
     </footer>
-    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jquery1.min.js"></script>
     <iframe name="hmnavigation" style="display:none!important"></iframe>
-    <script src="./jquery-ui.js"></script>
+    <!--<script src="./jquery-ui.js"></script> -->
     <script src="./jquery-ui.min.js"></script>
     <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
     <script src="./jquery.tocify.min.js"></script>

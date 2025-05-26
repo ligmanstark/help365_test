@@ -98,7 +98,7 @@
                         <span id="subcategory" class="search-res__item-category search-res__item-category_subcategory subcategory article__badge"></span>
                         
                             <div class="topic__breadcrumbs">     
-                                <p>Настроить работу в линиях &gt; <a href="connection_to_line.html">Подключить линию к мессенджерам</a> &gt; <a href="custom-messenger.html">Произвольный мессенджер</a> / Настройка запросов взаимодействия в произвольном мессенджере</p>
+                                <p>Настроить работу в линиях &gt; <a href="connection_to_line.html">Подключить мессенджеры к линии</a> &gt; <a href="custom-messenger.html">Произвольный мессенджер</a> / Настройка запросов взаимодействия в произвольном мессенджере</p>
                             </div>
                         
                     </div>
@@ -116,7 +116,7 @@
 <p class="p_Normal">Базовые URL и token для взаимодействия систем прописаны в настройках мессенджера. </p>
 <p class="p_Normal">Логика работы оператора с сессиями клиентов реализуется в рамках стандартной логики решения <a href="service-functions.html" class="topiclink">ELMA365 Service</a>, предусмотренной для остальных мессенджеров, и не подразумевает дополнительной функциональности.</p>
 <h2 class="p_Heading2"><span class="f_Heading2">Настройка мессенджера </span></h2>
-<p class="p_Normal">Подключение произвольного мессенджера к линии производится аналогично другим доступным мессенджерам. Подробнее об этом читайте в разделе <a href="connection_to_line.html" class="topiclink">«Подключить линию к мессенджерам»</a>. </p>
+<p class="p_Normal">Подключение произвольного мессенджера к линии производится аналогично другим доступным мессенджерам. Подробнее об этом читайте в разделе <a href="connection_to_line.html" class="topiclink">«Подключить мессенджеры к линии»</a>. </p>
 <p class="p_Normal">Перечень настроек, которые должны присутствовать в произвольном мессенджере для его подключения к линии: </p>
 <ul style="list-style-type:disc">
 <li class="p_Normal">наименование канала связи с мессенджером с типом <code><b>[string]</b></code>. Не влияет на взаимодействие с мессенджером. Служит дополнительной информацией и отображается в списке подключённых каналов для администратора и в сессии для оператора; </li><li class="p_Normal">токен доступа к API стороннего мессенджера (строка подтверждения) с типом <code><b>[string]</b></code>. Заполняется при создании канала для связи с мессенджером. Будет передаваться с каждым сообщением из системы ELMA365 в мессенджер. Может быть пустой;</li><li class="p_Normal">API URL мессенджера с типом <code><b>[string]</b></code> — URL (вебхук), на который будут отправляться сообщения из системы ELMA365.</li></ul>
@@ -449,9 +449,9 @@
 </div>
  
     </footer>
-    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jquery1.min.js"></script>
     <iframe name="hmnavigation" style="display:none!important"></iframe>
-    <script src="./jquery-ui.js"></script>
+    <!--<script src="./jquery-ui.js"></script> -->
     <script src="./jquery-ui.min.js"></script>
     <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
     <script src="./jquery.tocify.min.js"></script>

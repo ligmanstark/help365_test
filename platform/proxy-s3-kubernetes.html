@@ -116,7 +116,7 @@
 <p class="p_Normal">Установка S3‑Gateway состоит из нескольких этапов:</p>
 <ol style="list-style-type:decimal">
 <li value="1" class="p_Normal"><a href="proxy-s3-kubernetes.html#download-helm-chart-and-config-file" class="topiclink">Скачивание Helm-чарта и конфигурационного файла</a>.</li><li value="2" class="p_Normal"><a href="proxy-s3-kubernetes.html#fill-config-file" class="topiclink">Заполнение конфигурационного файла</a>.</li><li value="3" class="p_Normal"><a href="proxy-s3-kubernetes.html#set-chart-s3-gateway" class="topiclink">Установка с помощью Helm в Kubernetes-кластер чарта S3-Gateway</a>.</li><li value="4" class="p_Normal"><a href="proxy-s3-kubernetes.html#s3-connect" class="topiclink">Подключение к S3</a>.</li></ol>
-<h2 class="p_Heading2"><a id="download-helm-chart-and-config-file" class="hmanchor"></a><span class="f_Heading2">Шаг 1: Скачивание Helm-чарта и конфигурационного файла</span></h2>
+<h2 class="p_Heading2"><a id="download-helm-chart-and-config-file" class="hmanchor"></a><span class="f_Heading2">Шаг 1. Скачивание Helm-чарта и конфигурационного файла</span></h2>
 <p class="p_Normal">Для установки через интернет получите конфигурационный файл <code><b>values-s3gateway.yaml</b></code>, выполнив команду:</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">helm&nbsp;repo&nbsp;add&nbsp;elma365&nbsp;</span><span class="f_CodeExample">https://charts.elma365.tech</span><br />
 <span class="f_CodeExample">helm&nbsp;repo&nbsp;update</span><br />
@@ -139,15 +139,15 @@
 </tr>
 </table>
 </div>
-<h2 class="p_Heading2"><a id="fill-config-file" class="hmanchor"></a><span class="f_Heading2">Шаг 2: Заполнение конфигурационного файла</span></h2>
+<h2 class="p_Heading2"><a id="fill-config-file" class="hmanchor"></a><span class="f_Heading2">Шаг 2. Заполнение конфигурационного файла</span></h2>
 <p class="p_Normal">Заполните конфигурационный файл <code><b>values-s3gateway.yaml</b></code> для установки S3‑Gateway:</p>
 <ol style="list-style-type:upper-roman">
 <li value="1" class="p_Normal">В параметре <code><b>ingress.hostname</b></code> укажите домен (FQDN) или IP-адрес, по которому доступно приложение ELMA365. </li><li value="2" class="p_Normal">В параметре <code><b>ingress.path</b></code> укажите наименование бакета (в хранилище S3), в котором приложение ELMA365 хранит файлы.<br />
 Наименование бакета в S3 должно соответствовать формату <span style="font-weight: bold;">s3elma365</span>.</li></ol>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">Начало&nbsp;примера</span></p>
-<p class="p_Normal">Пример:</p>
-<ul style="list-style-type:disc">
-<li class="p_Normal">s3elma365</li><li class="p_Normal">s3elma365-dev</li><li class="p_Normal">s3elma365-prod</li></ul>
+<p class="p_Normal">Пример</p>
+<ol style="list-style-type:decimal">
+<li value="1" class="p_Normal">s3elma365.</li><li value="2" class="p_Normal">s3elma365-dev.</li><li value="3" class="p_Normal">s3elma365-prod.</li></ol>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;примера</span></p>
 <ol style="list-style-type:upper-roman" start="3">
 <li value="3" class="p_Normal">Следующие изменения нужно внести в конфигурационный файл, если веб‑интерфейс приложения ELMA365 доступен по HTTPS:</li></ol>
@@ -310,18 +310,18 @@
 </tr>
 </table>
 </div>
-<h2 class="p_Heading2"><a id="set-chart-s3-gateway" class="hmanchor"></a><span class="f_Heading2">Шаг 3: Установка с помощью Helm в Kubernetes-кластер чарта S3-Gateway</span></h2>
+<h2 class="p_Heading2"><a id="set-chart-s3-gateway" class="hmanchor"></a><span class="f_Heading2">Шаг 3. Установка с помощью Helm в Kubernetes-кластер чарта S3-Gateway</span></h2>
 <p class="p_Normal">Установите чарт S3-Gateway в <code><b>namespace s3gateway</b></code>.</p>
 <p class="p_Normal">Для установки через интернет выполните команду:</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">helm&nbsp;upgrade&nbsp;--install&nbsp;s3gateway&nbsp;elma365/s3gateway&nbsp;-f&nbsp;values-s3gateway.yaml&nbsp;-n&nbsp;s3gateway&nbsp;--create-namespace&nbsp;</span></p>
 <p class="p_Normal">Для установки без доступа в интернет выполните команду:</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">helm&nbsp;upgrade&nbsp;--install&nbsp;s3gateway&nbsp;./s3gateway&nbsp;-f&nbsp;values-s3gateway.yaml&nbsp;-n&nbsp;s3gateway&nbsp;--create-namespace&nbsp;</span></p>
-<h2 class="p_Heading2"><a id="s3-connect" class="hmanchor"></a><span class="f_Heading2">Шаг 4: Подключение к S3</span></h2>
+<h2 class="p_Heading2"><a id="s3-connect" class="hmanchor"></a><span class="f_Heading2">Шаг 4. Подключение к S3</span></h2>
 <p class="p_Normal">Параметры для подключения к S3:</p>
 <ul style="list-style-type:disc">
 <li class="p_Normal"><code><b>address</b></code> — укажите <code><b>elma365-server.your_domain</b></code>;</li><li class="p_Normal"><code><b>bucket</b></code>, <code><b>region, access key ID</b></code>, <code><b>secret access key</b></code>, <code><b>secret access key</b></code> и <code><b>enable SSL</b></code> — укажите значения согласно параметрам S3-хранилища, для которого настраивается проксирование.</li></ul>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;внимание</span></p>
-<p class="p_Normal">Подготовка инфраструктуры происходит до установки приложения ELMA365. Если была произведена установка чарта S3-Gateway, не забудьте изменить адрес подключения к S3 (<span style="font-weight: bold;">elma365.s3.backend.address</span>) в настройках приложения ELMA365. Подробнее об этом читайте в статье <a href="change-settings-enterprise.html#changes-config-file" class="topiclink">«Изменение параметров ELMA365 Enterprise»</a>.</p>
+<p class="p_Normal">Подготовка инфраструктуры происходит до установки приложения ELMA365. Если была произведена установка чарта S3-Gateway, измените адрес подключения к S3 (<span style="font-weight: bold;">elma365.s3.backend.address</span>) в <a href="change-settings-enterprise.html#changes-config-file" class="topiclink">настройках приложения ELMA365</a>.</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;внимание</span></p>
 
                         <div class="bottom-nav">
@@ -411,9 +411,9 @@
 </div>
  
     </footer>
-    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jquery1.min.js"></script>
     <iframe name="hmnavigation" style="display:none!important"></iframe>
-    <script src="./jquery-ui.js"></script>
+    <!--<script src="./jquery-ui.js"></script> -->
     <script src="./jquery-ui.min.js"></script>
     <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
     <script src="./jquery.tocify.min.js"></script>

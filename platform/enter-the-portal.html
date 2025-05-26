@@ -117,22 +117,19 @@
 <p class="p_Normal">Для регистрации на портале новому пользователю необходимо указать адрес электронной почты и нажать кнопку <span style="font-weight: bold;">Отправить проверочный код</span>. Затем ему нужно ввести полученный на указанную почту код, чтобы перейти к заполнению личных данных в окне <span style="font-weight: bold;">Приглашение на портал</span>.</p>
 <p class="p_Normal">Если в настройках портала включена <a href="portal-login-page.html#authorization" class="topiclink">аутентификация по номеру телефона</a>, пользователь может зарегистрироваться без ввода электронной почты, указав только свой номер. На указанный телефон придёт проверочный код для подтверждения аутентификационных данных. </p>
 <p class="p_Normal">Чтобы пользователь не подтверждал электронную почту и номер телефона, а сразу приступил к заполнению личных данных, при <a href="add-external-users.html#get_link" class="topiclink">генерации ссылки‑приглашения</a> выберите опцию <span style="font-weight: bold;">Без подтверждения контактных данных</span>.</p>
-<p class="p_Normal">В окне <span style="font-weight: bold;">Приглашение на портал</span> требуется указать ФИО и придумать пароль для входа. При этом применятся настройки <a href="security_settings.html#password" class="topiclink">политики паролей</a>.</p>
+<p class="p_Normal">В окне <span style="font-weight: bold;">Приглашение на портал</span> требуется указать <span style="font-size: 15px; font-family: Inter;">Ф. И. О.</span> и придумать пароль для входа. При этом применятся настройки <a href="security_settings.html#password" class="topiclink">политики паролей</a>.</p>
 <p class="p_Normal"><img alt="sportal-12" width="411" height="352" style="margin:0;width:411px;height:352px;border:none" src="sportal-12.png"/></p>
 <p class="p_Normal">После сохранения личной информации пользователь перейдёт к <a href="portal-setting.html" class="topiclink">настроенным страницам портала</a>. </p>
 <p class="p_Normal">По умолчанию внешние пользователи имеют доступ только к страницам портала и добавленным на них данным системы. Вы можете <a href="360007527512.html" class="topiclink">настраивать</a> индивидуальный доступ каждому пользователю к разделу, на уровне которого был создан портал, и его приложениям. Кроме того, вы можете <a href="block-user.html" class="topiclink">заблокировать пользователя</a> и полностью ограничить его доступ к порталу. &nbsp; </p>
 <h2 class="p_Heading2"><a id="log-in" class="hmanchor"></a><span class="f_Heading2">Страница входа на портал </span></h2>
-<p class="p_Normal">В случае выхода из учётной записи зарегистрированный или импортированный из <a href="ad_ldap.html" class="topiclink">AD/LDAP</a> внешний пользователь может авторизоваться на портале снова. Для этого он может перейти по предоставленной ссылке и на открывшейся странице ввести электронную почту или логин и пароль. При этом применятся настройки <a href="security_settings.html#password" class="topiclink">политики паролей</a>.</p>
+<p class="p_Normal">В случае выхода из учётной записи зарегистрированный или импортированный из <a href="ad_ldap.html" class="topiclink">AD/LDAP</a> внешний пользователь может авторизоваться на портале снова. Для этого он переходит по предоставленной ссылке и на открывшейся странице вводит электронную почту или логин и пароль. При этом применятся настройки <a href="security_settings.html#password" class="topiclink">политики паролей</a>.</p>
 <p class="p_Normal">Если на портале включена <a href="portal-login-page.html#authorization" class="topiclink">аутентификация по номеру телефона</a>, для авторизации пользователь может ввести свой номер и пароль от учётной записи. Если в настройках портала дополнительно включена отправка одноразовых кодов, пользователь может ввести номер телефона и получить код. После ввода кода пользователь авторизуется на портале. </p>
-<p class="p_Normal">Обратите внимание, для входа на портал по номеру телефона пользователю необходимо подтвердить номер. </p>
-<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">Начало&nbsp;внимание</span></p>
-<p class="p_Normal">В данный момент подтверждение номера доступно только при регистрации нового внешнего пользователя. </p>
-<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">Конец&nbsp;внимание</span></p>
 <p class="p_Normal">Эту же страницу увидит пользователь, впервые переходящий на портал по предоставленной ссылке при настроенной <a href="saml-with-windows-server.html" class="topiclink">интеграции с SAML</a> или через <a href="portal-login-page.html#third-party-service" class="topiclink">сторонний сервис с включённой авторегистрацией</a> без сквозной аутентификации. Обратите внимание, для пользователей, входящих на внешний портал через SAML, авторизация по номеру телефона недоступна.</p>
 <p style="margin: 7px 0 16px 0;"><a id="third-party-service" class="hmanchor"></a>Для входа через сторонний сервис пользователь нажмёт <span style="font-weight: bold;">Войти другим способом</span>, затем выберет модуль авторизации и перейдёт на страницу входа в аккаунт стороннего сервиса. Указав учётные данные своего аккаунта, пользователь авторизуется на портале.</p>
 <p class="p_Normal"><img alt="restore-password-1" width="418" height="294" style="margin:0;width:418px;height:294px;border:none" src="restore-password-1.png"/></p>
 <p class="p_Normal">Вы можете изменить внешний вид страницы входа, а также включить <a href="portal-login-page.html#password-recovery" class="topiclink">опцию восстановления пароля</a> для пользователя.</p>
 <p class="p_Normal">Если для портала настроена <a href="portal-login-page.html#end-to-end-auth" class="topiclink">сквозная аутентификация</a>, пользователь сразу увидит страницу авторизации внешнего провайдера.</p>
+<p class="p_Normal">Если для портала включена <a href="portal-login-page.html#two-factor" class="topiclink">двухфакторная аутентификация</a>, после ввода логина и пароля пользователь увидит окно для указания кода подтверждения.</p>
 <h2 class="p_Heading2"><span class="f_Heading2">Вход на портал в приложении </span></h2>
 <p class="p_Normal">Внешний пользователь может взаимодействовать со страницами портала из <a href="mobile_app.html" class="topiclink">мобильного приложения</a> (версия 1.3.0 и выше) или <a href="360027248771.html" class="topiclink">приложения для ПК</a> (версия 2.0.6 и выше). </p>
 <p class="p_Normal">Для этого администратору необходимо разместить на странице портала <a href="portal-app.html" class="topiclink">специальную ссылку для доступа</a> из приложения или QR‑код. </p>
@@ -226,9 +223,9 @@
 </div>
  
     </footer>
-    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jquery1.min.js"></script>
     <iframe name="hmnavigation" style="display:none!important"></iframe>
-    <script src="./jquery-ui.js"></script>
+    <!--<script src="./jquery-ui.js"></script> -->
     <script src="./jquery-ui.min.js"></script>
     <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
     <script src="./jquery.tocify.min.js"></script>

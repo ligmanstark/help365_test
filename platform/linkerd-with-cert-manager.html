@@ -122,7 +122,7 @@
 <p class="p_Normal">Установка Linkerd состоит из четырёх этапов:</p>
 <ol style="list-style-type:decimal">
 <li value="1" class="p_Normal"><a href="linkerd-with-cert-manager.html#prepare-certificate" class="topiclink">Подготовить сертификаты для Linkerd</a>.</li><li value="2" class="p_Normal"><a href="linkerd-with-cert-manager.html#helm-chart" class="topiclink">Загрузить Helm-чарт и конфигурационный файл</a>.</li><li value="3" class="p_Normal"><a href="linkerd-with-cert-manager.html#configuration-file" class="topiclink">Заполнить конфигурационный файл</a>.</li><li value="4" class="p_Normal"><a href="linkerd-with-cert-manager.html#install-chart" class="topiclink">Установить чарт Linkerd с помощью Helm в Kubernetes-кластер</a>.</li></ol>
-<h2 class="p_Heading2"><a id="prepare-certificate" class="hmanchor"></a><span class="f_Heading2">Шаг 1: Подготовить сертификаты для Linkerd</span></h2>
+<h2 class="p_Heading2"><a id="prepare-certificate" class="hmanchor"></a><span class="f_Heading2">Шаг 1. Подготовить сертификаты для Linkerd</span></h2>
 <ol style="list-style-type:decimal">
 <li value="1" class="p_Normal">Установите <a href="install-cert-manager.html" class="topiclink">Cert-manager</a> и создайте пространства имён. Cert-manager будет использовать их для хранения ресурсов, связанных с веб-перехватчиком:</li></ol>
 <p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample">kubectl create namespace linkerd</span><br />
@@ -276,7 +276,7 @@
 </tr>
 </table>
 </div>
-<h2 class="p_Heading2"><a id="helm-chart" class="hmanchor"></a><span class="f_Heading2">Шаг 2: Загрузить Helm-чарт и конфигурационный файл</span></h2>
+<h2 class="p_Heading2"><a id="helm-chart" class="hmanchor"></a><span class="f_Heading2">Шаг 2. Загрузить Helm-чарт и конфигурационный файл</span></h2>
 <p style="line-height: 1.28; margin: 0 0 11px 0;">Для установки через интернет получите конфигурационный файл <code><b>values-linkerd.yaml</b></code>, выполнив команду:</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">helm&nbsp;repo&nbsp;add&nbsp;elma365&nbsp;https://charts.elma365.tech</span><br />
 <span class="f_CodeExample">helm&nbsp;repo&nbsp;update</span><br />
@@ -300,7 +300,7 @@
 </tr>
 </table>
 </div>
-<h2 class="p_Heading2"><a id="configuration-file" class="hmanchor"></a><span class="f_Heading2">Шаг 3: Заполнить конфигурационный файл</span></h2>
+<h2 class="p_Heading2"><a id="configuration-file" class="hmanchor"></a><span class="f_Heading2">Шаг 3. Заполнить конфигурационный файл</span></h2>
 <p class="p_Normal">В конфигурационном файле <code><b>values-linkerd.yaml</b></code> заполните параметры для установки Linkerd:</p>
 <ol style="list-style-type:upper-roman">
 <li value="1" class="p_Normal">Укажите DNS-имя домена Kubernetes-кластера в параметре <code><b>linkerd.clusterDomain</b></code>. В этом примере указано имя <code><b>cluster.local</b></code>:</li></ol>
@@ -420,7 +420,7 @@
 </tr>
 </table>
 </div>
-<h2 class="p_Heading2"><a id="install-chart" class="hmanchor"></a><span class="f_Heading2">Шаг 4: Установить чарт Linkerd с помощью Helm в Kubernetes-кластер</span></h2>
+<h2 class="p_Heading2"><a id="install-chart" class="hmanchor"></a><span class="f_Heading2">Шаг 4. Установить чарт Linkerd с помощью Helm в Kubernetes-кластер</span></h2>
 <p class="p_Normal">Установите чарт <span style="font-weight: bold;">Linkerd</span> в <code><b>namespace linkerd</b></code>. Namespace будет создан во время установки, если не был создан ранее.</p>
 <p class="p_Normal">В примере ниже команда установки выполняется из директории, где на <a href="linkerd-with-cert-manager.html#prepare-certificate" class="topiclink">шаге 1</a> были созданы сертификаты. Если выполнение команды происходит из другой директории, укажите пути до сертификатов, созданных на <a href="linkerd-with-cert-manager.html#prepare-certificate" class="topiclink">шаге 1</a> (<code><b>caRoot.crt</b></code>, <code><b>caWebhook.crt</b></code>).</p>
 <p class="p_Normal">Для установки через интернет:</p>
@@ -444,9 +444,7 @@
 <span class="f_CodeExample">--set linkerd.profileValidator.externalSecret=true \</span><br />
 <span class="f_CodeExample">--set-file linkerd.profileValidator.caBundle=caWebhook.crt</span></p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">Начало&nbsp;внимание</span></p>
-<p class="p_Normal">Установка компонента дополнений Linkerd автоматически не включает поддержку масштабирования сервисов на стороне приложения ELMA365.</p>
-<p class="p_Normal">После установки измените параметры приложения ELMA365 и настройте автомасштабирование на стороне приложения ELMA365.</p>
-<p class="p_Normal">Подробнее читайте в статье <a href="autoscaling-service-enterprise.html" class="topiclink">«Включение автомасштабирования сервисов в ELMA365 Enterprise»</a>.</p>
+<p class="p_Normal">После установки Linkerd измените параметры приложения ELMA365 и настройте автомасштабирование сервисов. Подробнее читайте в статье <a href="autoscaling-service-enterprise.html" class="topiclink">«Включение автомасштабирования сервисов в ELMA365 Enterprise»</a>.</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">Конец&nbsp;внимание</span></p>
 <h2 class="p_Heading2"><a id="delete-chart" class="hmanchor"></a><span class="f_Heading2">Удалить чарт Linkerd с помощью Helm в Kubernetes-кластере</span></h2>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">Начало&nbsp;внимание</span></p>
@@ -543,9 +541,9 @@
 </div>
  
     </footer>
-    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jquery1.min.js"></script>
     <iframe name="hmnavigation" style="display:none!important"></iframe>
-    <script src="./jquery-ui.js"></script>
+    <!--<script src="./jquery-ui.js"></script> -->
     <script src="./jquery-ui.min.js"></script>
     <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
     <script src="./jquery.tocify.min.js"></script>

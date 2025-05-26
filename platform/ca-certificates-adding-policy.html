@@ -115,12 +115,12 @@
 <p class="p_Normal">Установка состоит из двух этапов:</p>
 <ol style="list-style-type:decimal">
 <li value="1" class="p_Normal"><a href="ca-certificates-adding-policy.html#secret-preparation" class="topiclink">Подготовка Secret с сертификатом корневого CA</a>.</li><li value="2" class="p_Normal"><a href="ca-certificates-adding-policy.html#fill-config-file" class="topiclink">Заполнение конфигурационного файла</a>.</li></ol>
-<h2 class="p_Heading2"><a id="secret-preparation" class="hmanchor"></a><span class="f_Heading2">Шаг 1: Подготовка Secret с сертификатом корневого CA</span></h2>
+<h2 class="p_Heading2"><a id="secret-preparation" class="hmanchor"></a><span class="f_Heading2">Шаг 1. Подготовка Secret с сертификатом корневого CA</span></h2>
 <p class="p_Normal">Создайте <span style="font-weight: bold;">Secret</span> с сертификатом корневого CA в <code><b>namespace</b></code>, где установлено приложение ELMA365. Если в кластере Kubernetes установлено несколько экземпляров приложения ELMA365, добавьте <span style="font-weight: bold;">Secret</span> только в <code><b>namespace</b></code> нужных экземпляров ELMA365.</p>
 <p class="p_Normal">Создайте <span style="font-weight: bold;">Secret</span> с наименованием <code><b>elma365-onpremise-ca</b></code> в <code><b>namespace</b></code>, где установлено приложение ELMA365, выполнив команду:</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">kubectl&nbsp;create&nbsp;secret&nbsp;generic&nbsp;elma365-onpremise-ca&nbsp;--from-file=elma365-onpremise-ca.pem=/etc/ssl/certs/rootCA.pem&nbsp;[-n&nbsp;namespace]</span></p>
 <p class="p_Normal">Где в <code><b>--from-file</b></code> указывается путь до вашего сертификата корневого CA в формате <span style="font-weight: bold;">.pem</span>.</p>
-<h2 class="p_Heading2"><a id="fill-config-file" class="hmanchor"></a><span class="f_Heading2">Шаг 2: Заполнение конфигурационного файла</span></h2>
+<h2 class="p_Heading2"><a id="fill-config-file" class="hmanchor"></a><span class="f_Heading2">Шаг 2. Заполнение конфигурационного файла</span></h2>
 <p class="p_Normal">Заполните конфигурационный файл <code><b>values-kyverno.yaml</b></code> для установки Kyverno:</p>
 <ol style="list-style-type:upper-roman">
 <li value="1" class="p_Normal">Настройте политику добавления пользовательских сертификатов CA во все контейнеры. Политика включена по умолчанию — в параметре <code><b>kyverno.injectCerts.enabled</b></code> выставлено <code><b>true</b></code>. </li><li value="2" class="p_Normal">В параметре <code><b>kyverno.injectCerts.secretCA</b></code> укажите наименование <span style="font-weight: bold;">Secret</span>, созданного на шаге 1. В примере в данной статье — это значение <code><b>elma365-onpremise-ca</b></code>. Политика добавляет том, содержащий сертификат CA, ко всем контейнерам с меткой <code><b>tier=elma365</b></code>.</li><li value="3" class="p_Normal">Если в кластере Kubernetes установлено несколько экземпляров приложения ELMA365 On-Premises, но пользовательский сертификат CA нужно добавить только к части экземпляров приложений ELMA365, заполните параметр <code><b>kyverno.injectCerts.injectNamespace</b></code>. </li></ol>
@@ -177,7 +177,8 @@
 <span class="f_CodeExample"># секрет с правами доступа к приватному registry должен быть создан вручную, зашифрованный в Base64</span><br />
 <span class="f_CodeExample">  &nbsp; &nbsp; pullSecrets:</span><br />
 <span class="f_CodeExample">  &nbsp; &nbsp; &nbsp; - myRegistryKeySecretName</span></p>
-<p class="p_Normal">где:</p>
+<p class="p_Normal">&nbsp;<br />
+Где:</p>
 <ul style="list-style-type:disc">
 <li class="p_Normal">формат <code><b>kyverno.image.repository</b></code>:</li></ul>
 <ul style="list-style-type:disc"><ul style="list-style-type:circle">
@@ -191,7 +192,7 @@
 </table>
 </div>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;внимание</span></p>
-<p class="p_Normal">Установка компонента дополнений Kyverno автоматически не подключает том, содержащий сертификат CA, к уже запущенным подам приложения ELMA365. После установки Kyverno не забудьте перезапустить сервисы приложения ELMA365.</p>
+<p class="p_Normal">Установка компонента дополнений Kyverno автоматически не подключает том, содержащий сертификат CA, к уже запущенным подам приложения ELMA365. После установки Kyverno перезапустите сервисы приложения ELMA365.</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;внимание</span></p>
 
                         <div class="bottom-nav">
@@ -281,9 +282,9 @@
 </div>
  
     </footer>
-    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jquery1.min.js"></script>
     <iframe name="hmnavigation" style="display:none!important"></iframe>
-    <script src="./jquery-ui.js"></script>
+    <!--<script src="./jquery-ui.js"></script> -->
     <script src="./jquery-ui.min.js"></script>
     <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
     <script src="./jquery.tocify.min.js"></script>

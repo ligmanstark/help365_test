@@ -163,11 +163,12 @@
 <p class="p_Normal">где:</p>
 <ul style="list-style-type:disc">
 <li class="p_Normal"><code><b>metadata.namespace</b></code> <span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">—</span> наименование нужного namespace, в котором должен быть размещён сертификат;</li><li class="p_Normal"><code><b>spec.commonName</b></code> и <code><b>dnsNames</b></code> <span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">—</span> наименование домена (FQDN), для которого должен быть выпущен сертификат (замените <code><b>"elma365_server.your_domain"</b></code>).</li></ul>
-<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;внимание</span></p>
-<p class="p_Normal">Secret с сертификатом должен быть создан в том же namespace, в котором работает или будет установлено целевое приложение, для которого выпускается сертификат.</p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;примечание</span></p>
+<p class="p_Normal"><span style="font-weight: bold;">Примечание</span></p>
+<p class="p_Normal">Создайте Secret с сертификатом в том же namespace, в котором работает или будет установлено целевое приложение, для которого выпускается сертификат.</p>
 <p class="p_Normal">Для приложения <a href="installing-elma365-enterprise.html" class="topiclink">ELMA365</a> стандартный namespace: <code><b>elma365</b></code>. </p>
 <p class="p_Normal">Для <a href="embedded-databases-settings.html" class="topiclink">встроенных баз данных</a> стандартный namespace: <code><b>elma365-dbs</b></code>.</p>
-<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;внимание</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;примечание</span></p>
 <ol style="list-style-type:upper-roman">
 <li value="7" class="p_Normal"> Примените сертификат к кластеру:</li></ol>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">kubectl&nbsp;apply&nbsp;-f&nbsp;create-elma365-certificate.yaml</span></p>
@@ -261,9 +262,9 @@
 </div>
  
     </footer>
-    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jquery1.min.js"></script>
     <iframe name="hmnavigation" style="display:none!important"></iframe>
-    <script src="./jquery-ui.js"></script>
+    <!--<script src="./jquery-ui.js"></script> -->
     <script src="./jquery-ui.min.js"></script>
     <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
     <script src="./jquery.tocify.min.js"></script>

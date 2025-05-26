@@ -158,12 +158,9 @@
 <p class="p_Normal">Вызывать серверные методы можно также с помощью вложенных виджетов, например, <a href="button_widget.html" class="topiclink">Кнопка</a> или <a href="code_widget.html" class="topiclink">Код</a>. Подробнее об этом читайте в <a href="https://tssdk.elma365.com/ru/latest/pages/quick-start/scripts-in-widgets.html#3" target="_blank" class="weblink">справке ELMA365 TS SDK</a>.</p>
 <h2 class="p_Heading2"><a id="app-events" class="hmanchor"></a><span class="f_Heading2">Отслеживание событий в приложениях через клиентский скрипт</span></h2>
 <p style="margin: 0 0 7px 0;"><span style="font-family: Inter;">Виджет на странице может отображать данные по элементам приложения в реальном времени. Например, вы можете настроить отчёт, в котором без обновления страницы отображаются актуальные статусы элементов и новые записи в приложении. </span></p>
-<p style="margin: 0 0 7px 0;"><span style="font-family: Inter;">Для этого в виджете отчёта подпишитесь на события создания, удаления и изменения элементов и задайте для них функции‑обработчики. Это можно сделать с помощью клиентского скрипта.</span></p>
-<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;внимание</span></p>
-<p style="margin: 0 0 7px 0;"><span style="font-family: Inter;">Подписка на события элементов приложения доступна по умолчанию для поставки On-Premises, начиная с версии 2024.2. В более ранних версиях <a href="360006871932.html#administrators" class="topiclink">администратору системы</a> нужно включить фича‑флаг </span><code><b>enableSubscriptionOnEventsFromScript</b></code><span style="font-family: Inter;">. Подробнее читайте в статьях <a href="change-settings-enterprise.html#enable-feature-flag-enterpeise" class="topiclink">«Изменение параметров On-Premises Enterprise»</a> и <a href="change-elma365standard-parameters.html#enable-feature-flag-standard" class="topiclink">«Изменение параметров On-Premises Standard»</a>. Для поставки SaaS обратитесь к вашему менеджеру ELMA365, чтобы включить фича-флаг.</span></p>
-<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;внимание</span></p>
+<p style="margin: 0 0 7px 0;"><span style="font-family: Inter;">Для этого в виджете отчёта подпишитесь на события создания, удаления и изменения элементов и задайте для них функции‑обработчики. Это можно сделать с помощью клиентского скрипта.</span></p>
 <h3 class="p_Heading3"><span class="f_Heading3">Подписаться на событие</span></h3>
-<p style="margin: 0 0 7px 0;"><span style="font-family: Inter;">Для создания подписки на событие в приложении откройте вкладку </span><span style="font-family: Inter; font-weight: bold;">Скрипты</span><span style="font-family: Inter;">, перейдите в раздел клиентских скриптов и напишите скрипт:</span></p>
+<p style="margin: 0 0 7px 0;"><span style="font-family: Inter;">Для создания подписки на событие в приложении откройте вкладку </span><span style="font-family: Inter; font-weight: bold;">Скрипты</span><span style="font-family: Inter;">, перейдите в раздел клиентских скриптов и напишите скрипт:</span></p>
 <p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample">await System.events.subscribe()</span><br />
 <span class="f_CodeExample"> &nbsp; &nbsp;</span><br />
 <span class="f_CodeExample"> &nbsp; &nbsp;// Подписка на событие создания нового элемента в приложении</span><br />
@@ -291,9 +288,9 @@
 </div>
  
     </footer>
-    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jquery1.min.js"></script>
     <iframe name="hmnavigation" style="display:none!important"></iframe>
-    <script src="./jquery-ui.js"></script>
+    <!--<script src="./jquery-ui.js"></script> -->
     <script src="./jquery-ui.min.js"></script>
     <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
     <script src="./jquery.tocify.min.js"></script>

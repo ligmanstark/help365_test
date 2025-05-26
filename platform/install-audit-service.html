@@ -116,13 +116,13 @@
 <p class="p_Normal">Установка сервиса состоит из четырёх этапов:</p>
 <ol style="list-style-type:decimal">
 <li value="1" class="p_Normal"><a href="install-audit-service.html#prepare-connection-string" class="topiclink">Подготовка строки подключения к базе данных PostgreSQL</a>.</li><li value="2" class="p_Normal"><a href="install-audit-service.html#download-helm-chart-and-config-file" class="topiclink">Загрузка Helm-чарта и конфигурационного файла</a>.</li><li value="3" class="p_Normal"><a href="install-audit-service.html#fill-config-file" class="topiclink">Заполнение конфигурационного файла</a>.</li><li value="4" class="p_Normal"><a href="install-audit-service.html#install-audit-chart" class="topiclink">Установка чарта Audit с помощью Helm в Kubernetes-кластер</a>.</li></ol>
-<h2 class="p_Heading2"><a id="prepare-connection-string" class="hmanchor"></a><span class="f_Heading2">Шаг 1: Подготовка строки подключения к базе данных PostgreSQL</span></h2>
+<h2 class="p_Heading2"><a id="prepare-connection-string" class="hmanchor"></a><span class="f_Heading2">Шаг 1. Подготовка строки подключения к базе данных PostgreSQL</span></h2>
 <p class="p_Normal">Для хранения данных сервис <span style="font-weight: bold;">Аудит безопасности</span> использует СУБД PostgreSQL. Подразумевается, что данные будут храниться в отдельной базе данных, для которой требуется установка расширений <span style="font-weight: bold;">uuid-ossp</span> и <span style="font-weight: bold;">pg_trgm</span>. При первом подключении сервиса в базе данных создадутся все необходимые для работы сервиса таблицы. Объём дискового хранилища оценивается заказчиком самостоятельно или по результатам анализа деятельности компании. Подробнее о необходимой конфигурации PostgreSQL и установке расширений <span style="font-weight: bold;">uuid-ossp</span> и <span style="font-weight: bold;">pg_trgm</span> читайте в разделе <a href="configure-postgresql.html" class="topiclink">«Базы данных»</a>.</p>
 <p class="p_Normal">Определите наименование базы данных для сервиса <span style="font-weight: bold;">Аудит</span> <span style="font-weight: bold;">безопасности</span>. По умолчанию выбирается название <code><b>audit</b></code>. &nbsp;</p>
 <p class="p_Normal">Подготовьте строку подключения к PostgreSQL для операций записи и чтения в формате: <code><b>postgresql://user:password@hostname:port/databaseName?sslmode=disable</b></code>, где:</p>
 <ul style="list-style-type:disc">
 <li class="p_Normal"><code><b>user</b></code> — имя пользователя PostgreSQL, имеющего права на базу данных <code><b>databaseName</b></code>; </li><li class="p_Normal"><code><b>password</b></code> — пароль для пользователя PostgreSQL; </li><li class="p_Normal"><code><b>hostname</b></code> — IP или доменное имя сервера PostgreSQL; </li><li class="p_Normal"><code><b>port</b></code> — порт для подключения к PostgreSQL (стандартный порт — <code><b>5432</b></code>); </li><li class="p_Normal"><code><b>databaseName</b></code> — наименование базы данных (стандартное наименование — <code><b>audit</b></code>); </li><li class="p_Normal"><code><b>sslmode</b></code> — использование защищенного соединения. </li></ul>
-<h2 class="p_Heading2"><a id="download-helm-chart-and-config-file" class="hmanchor"></a><span class="f_Heading2">Шаг 2: Загрузка Helm-чарта и конфигурационного файла</span></h2>
+<h2 class="p_Heading2"><a id="download-helm-chart-and-config-file" class="hmanchor"></a><span class="f_Heading2">Шаг 2. Загрузка Helm-чарта и конфигурационного файла</span></h2>
 <p class="p_Normal">Для установки через интернет получите конфигурационный файл <code><b>values-audit.yaml</b></code>, выполнив команду:</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">helm&nbsp;repo&nbsp;add&nbsp;elma365&nbsp;</span><span class="f_CodeExample">https://charts.elma365.tech</span><br />
 <span class="f_CodeExample">helm&nbsp;repo&nbsp;update</span><br />
@@ -146,7 +146,7 @@
 </tr>
 </table>
 </div>
-<h2 class="p_Heading2"><a id="fill-config-file" class="hmanchor"></a><span class="f_Heading2">Шаг 3: Заполнение конфигурационного файла</span></h2>
+<h2 class="p_Heading2"><a id="fill-config-file" class="hmanchor"></a><span class="f_Heading2">Шаг 3. Заполнение конфигурационного файла</span></h2>
 <p class="p_Normal">Заполните конфигурационный файл <code><b>values-audit.yaml</b></code> для установки сервиса Audit.</p>
 <p class="p_Normal">Для параметра <code><b>psql_url</b></code> укажите строку подключения к PostgreSQL, полученную на шаге 1. В этой статье задана строка подключения к PostgreSQL, развёрнутому в кластере Kubernetes. </p>
 <p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample"># Настройки audit</span><br />
@@ -176,17 +176,16 @@
 </tr>
 </table>
 </div>
-<h2 class="p_Heading2"><a id="install-audit-chart" class="hmanchor"></a><span class="f_Heading2">Шаг 4: Установка чарта Audit с помощью Helm в Kubernetes-кластер</span></h2>
+<h2 class="p_Heading2"><a id="install-audit-chart" class="hmanchor"></a><span class="f_Heading2">Шаг 4. Установка чарта Audit с помощью Helm в Kubernetes-кластер</span></h2>
 <p class="p_Normal">Выполните установку чарта audit в <code><b>namespace</b></code>, наименование которого указали на шаге 3 в конфигурационном файле <code><b>values-audit.yaml</b></code>. Namespace будет создан во время установки, если не был создан ранее.</p>
 <p class="p_Normal">Для установки через интернет:</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">helm&nbsp;upgrade&nbsp;--install&nbsp;elma365-audit&nbsp;elma365/audit&nbsp;-f&nbsp;values-audit.yaml&nbsp;-n&nbsp;audit&nbsp;--create-namespace&nbsp;</span></p>
 <p class="p_Normal">Для установки без доступа в интернет:</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">helm&nbsp;upgrade&nbsp;--install&nbsp;elma365-audit&nbsp;./audit&nbsp;-f&nbsp;values-audit.yaml&nbsp;-n&nbsp;audit&nbsp;--create-namespace</span></p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">Начало&nbsp;внимание</span></p>
-<p class="p_Normal">Установка компонента дополнений сервис <span style="font-weight: bold;">Аудит безопасности</span> автоматически не включает и не устанавливает модуль <span style="font-weight: bold;">Аудит безопасности</span> на стороне приложения ELMA365.</p>
-<p class="p_Normal">После установки сервиса загрузите модуль <span style="font-weight: bold;">Аудит безопасности</span> из каталога <a href="https://store.elma365.ru/component/ext_3d37e007_ce67_4672_9fd9_1f477e9e4fe4-103" class="weblink">ELMA365 Store</a>.</p>
-<p class="p_Normal">Подробнее об установке модуля и работе с ним читайте в статье <a href="/ru/help/business_solutions/audit_service.html" target="_blank" class="weblink">«Аудит безопасности»</a>.</p>
+<p class="p_Normal">Установка сервиса <span style="font-weight: bold;">Аудит безопасности</span> автоматически не включает и не устанавливает модуль <span style="font-weight: bold;">Аудит безопасности</span> на стороне приложения ELMA365.</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">Конец&nbsp;внимание</span></p>
+<p class="p_Normal">После установки сервиса загрузите модуль <span style="font-weight: bold;">Аудит безопасности</span> из каталога <a href="https://store.elma365.ru/component/ext_3d37e007_ce67_4672_9fd9_1f477e9e4fe4-103" class="weblink">ELMA365 Store</a>. Подробнее об установке модуля и работе с ним читайте в статье <a href="/ru/help/business_solutions/audit_service.html" target="_blank" class="weblink">«Аудит безопасности»</a>.</p>
 <h2 class="p_Heading2"><span class="f_Heading2">Удалить чарт Audit с помощью Helm в Kubernetes-кластере</span></h2>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">Начало&nbsp;внимание</span></p>
 <p class="p_Normal">Перед удалением компонента дополнений <span style="font-weight: bold;">Аудит безопасности</span> отключите использование <a href="/ru/help/business_solutions/audit_service.html" target="_blank" class="weblink">модуля Аудит безопасности</a> на стороне приложения ELMA365.</p>
@@ -281,9 +280,9 @@
 </div>
  
     </footer>
-    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jquery1.min.js"></script>
     <iframe name="hmnavigation" style="display:none!important"></iframe>
-    <script src="./jquery-ui.js"></script>
+    <!--<script src="./jquery-ui.js"></script> -->
     <script src="./jquery-ui.min.js"></script>
     <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
     <script src="./jquery.tocify.min.js"></script>

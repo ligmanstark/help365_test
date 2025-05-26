@@ -113,285 +113,227 @@
                         <!-- Placeholder for topic body. -->
                         <p style="line-height: 1.28; margin: 0 0 11px 0;">Чтобы <a href="spark-process-blocks.html" class="topiclink">смоделировать пользовательский процесс</a> с блоками решения <span style="font-weight: bold;">Интеграция СПАРК</span>, в контекст процесса добавляются определённые переменные. С ними сопоставляются поля из настроек блока, которые подразделяются на следующие типы:</p>
 <ul style="list-style-type:disc">
-<li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold;">входные атрибуты</span> — в них передаются переменные, содержащие данные о компании, по которой создаётся запрос;</li><li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold;">выходные атрибуты</span> — сопоставляются с переменными, в которые записывается результат выполнения запроса в блоке. </li></ul>
-<p style="line-height: 1.28; margin: 0 0 11px 0;">Это позволяет идентифицировать компанию при отправке запроса в СПАРК, а также передавать данные по ней в ELMA365. </p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;">К графическим элементам, используемым в решении <span style="font-weight: bold;">Интеграция СПАРК</span> относятся:</p>
-<ul style="list-style-type:disc">
-<li style="margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold; color: #394149;">Включение мониторинга по компании</span><span style="color: #394149;">;</span></li><li style="margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold; color: #394149;">Выключение мониторинга по компании</span><span style="color: #394149;">;</span></li><li style="margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold; color: #394149;">Получение информации об актуальных совладельцах российской компании</span><span style="color: #394149;">;</span></li><li style="margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold; color: #394149;">Получение информации о структуре российской компании</span><span style="color: #394149;">;</span></li><li style="margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold; color: #394149;">Получение отчета СПАРК-Риски по российской компании PDF</span><span style="color: #394149;">;</span><span style="font-weight: bold; color: #394149;"> </span></li><li style="margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold; color: #394149;">Получение списка событий мониторинга по компании</span><span style="color: #394149;">; </span></li><li style="margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold; color: #394149;">Получение списка событий мониторинга по компаниям</span><span style="color: #394149;">; </span></li><li style="margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold; color: #394149;">Расширенная справка по российской компании</span><span style="color: #394149;">.</span></li></ul>
+<li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold;">входные атрибуты</span> — в них передаются переменные, содержащие данные о контрагенте, по которому создаётся запрос;</li><li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold;">выходные атрибуты</span> — сопоставляются с переменными, в которые записывается результат выполнения запроса в блоке. </li></ul>
+<p style="line-height: 1.28; margin: 0 0 11px 0;">Это позволяет идентифицировать компанию или физическое лицо при отправке запроса в СПАРК, а также передавать данные по контрагенту в ELMA365. </p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;">Список всех графических элементов решения приведён <span style="color: #394149;">в статье </span><a href="spark-requests-types.html#applications-for-requests" class="topiclink">«Типы запросов в сервис СПАРК»</a><span style="color: #394149;">.</span></p>
 <p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="color: #394149;">Перед настройкой блоков в контекст процесса нужно добавить переменные, которые соответствуют входным и выходным атрибутам по типу данных. Чтобы упростить настройку, для переменных рекомендуем использовать названия, совпадающие с атрибутами.</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;">Рассмотрим подробнее входные и выходные атрибуты, необходимые для настройки блоков.</p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;">Рассмотрим подробнее входные и выходные атрибуты для настройки блоков.</p>
 <h2 class="p_Heading2"><a id="input-parameters" class="hmanchor"></a><span class="f_Heading2">Входные атрибуты блоков решения «Интеграция СПАРК»</span></h2>
-<p style="line-height: 1.28; margin: 0 0 11px 0;">Входные атрибуты сопоставляются с переменными, в которых содержится информация о компании, по которой направляется запрос. В контексте процесса должны присутствовать переменные: </p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;">Входные атрибуты сопоставляются с переменными, в которых содержится информация о контрагенте, по которому направляется запрос. Добавьте эти переменные в контекст процесса.</p>
+<div style="text-align: left; text-indent: 0; line-height: 1.28; padding: 0 0 0 0; margin: 0 0 11px 0;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; height:13px; padding:0; border:none"><p style="text-align: center; line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 13px; font-family: Inter; font-weight: bold; color: #394149;">Графические блоки</span></p>
+</td>
+<td style="vertical-align:top; height:13px; padding:0; border:none"><p style="text-align: center; line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 13px; font-family: Inter; font-weight: bold; color: #394149;">Входные атрибуты</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 13px; font-family: Inter; color: #394149;">Большинство блоков.</span></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 13px; font-family: Inter; color: #394149;">Исключения: </span><span style="font-size: 13px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">у</span><span style="font-size: 13px; font-family: Inter;">ниверсальный блок получения данных из СПАРК, </span><span style="font-size: 13px; font-family: Inter; color: #394149;">блоки с запросами по санкционным спискам и рискам ПДЛ, а также остаткам платных запросов.</span></p>
+</td>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 13px; font-family: Inter; color: #394149;">Атрибуты с типом </span><span style="font-size: 13px; font-family: Inter; font-weight: bold; color: #394149;">Строка</span><span style="font-size: 13px; font-family: Inter; color: #394149;">:</span></p>
 <ul style="list-style-type:disc">
-<li style="margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-weight: bold;">СПАРК ID</span> — идентификатор компании в СПАРК, свойство типа <span style="font-weight: bold;">Строка</span>;</li><li style="margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-weight: bold;">ИНН</span> — регистрационный код ИНН российской компании, свойство типа <span style="font-weight: bold;">Строка</span>;</li><li style="margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-weight: bold;">ОГРН</span> — регистрационный код ОГРН российской компании, свойство типа <span style="font-weight: bold;">Строка</span>;</li></ul>
-<p style="margin: 16px 0 11px 36px;">Для выполнения запроса достаточно добавить одну из этих переменных. </p>
+<li style="margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-size: 13px; font-family: Inter; font-weight: bold; color: #394149;">СПАРК ID</span><span style="font-size: 13px; font-family: Inter; color: #394149;"> — идентификатор контрагента в СПАРК;</span></li><li style="margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-size: 13px; font-family: Inter; font-weight: bold; color: #394149;">ИНН</span><span style="font-size: 13px; font-family: Inter; color: #394149;"> — регистрационный код ИНН контрагента;</span></li><li style="margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-size: 13px; font-family: Inter; font-weight: bold; color: #394149;">ОГРН </span><span style="font-size: 13px; font-family: Inter; color: #394149;">или </span><span style="font-size: 13px; font-family: Inter; font-weight: bold; color: #394149;">ОГРНИП</span><span style="font-size: 13px; font-family: Inter; color: #394149;"> — регистрационный код ОГРН российской компании или &nbsp;ОГРНИП физического лица.</span></li></ul>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 13px; font-family: Inter; color: #394149;">Из этого набора переменных для выполнения запроса достаточно добавить одну.</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 13px; font-family: Inter;">Получение данных по остатку платных запросов</span></p>
+</td>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 13px; font-family: Inter;">Не содержит входных параметров.</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 13px; font-family: Inter;">Получение данных из СПАРК</span><span style="font-size: 13px; font-family: Inter; font-weight: bold; color: #394149;"> </span></p>
+</td>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 13px; font-family: Inter; font-weight: bold; color: #394149;">Метод</span><span style="font-size: 13px; font-family: Inter; color: #394149;">, </span><span style="font-size: 13px; font-family: Inter; font-weight: bold; color: #394149;">Тело запроса</span><span style="font-size: 13px; font-family: Inter; color: #394149;"> — свойства с типом </span><span style="font-size: 13px; font-family: Inter; font-weight: bold; color: #394149;">Строка</span><span style="font-size: 13px; font-family: Inter; color: #394149;">. Пример заполнения этих параметров читайте в статье </span><span style="font-size: 13px; font-family: Inter; color: #3f8fc8;"><a href="send-spark-requests.html#universal-request" class="topiclink">«Отправка запросов в сервис из раздела „СПАРК”»</a></span><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">.</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 13px; font-family: Inter; color: #394149;">Получение списка событий мониторинга по компании / по компаниям</span></p>
+</td>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 13px; font-family: Inter; font-weight: bold; color: #394149;">Изменения</span><span style="font-size: 13px; font-family: Inter; color: #394149;"> — свойство с типом </span><span style="font-size: 13px; font-family: Inter; font-weight: bold; color: #394149;">Выбор «да/нет»</span><span style="font-size: 13px; font-family: Inter; color: #394149;">, в вариантах указываются опции: </span><span style="font-size: 13px; font-family: Inter; font-weight: bold; color: #394149;">Все</span><span style="font-size: 13px; font-family: Inter; color: #394149;">, </span><span style="font-size: 13px; font-family: Inter; font-weight: bold; color: #394149;">Только неотправленные</span><span style="font-size: 13px; font-family: Inter; color: #394149;">.</span></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 13px; font-family: Inter; color: #394149;">Выбранный вариант определяет, какие изменения нужно получить из сервиса. Можно установить вариант по умолчанию или разместить пользовательскую задачу на схеме процесса перед блоками для выбора варианта.</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><ul style="list-style-type:disc">
+<li style="margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-size: 13px; font-family: Inter; color: #394149;">Получение данных по санкционным рискам ПДЛ;</span></li><li style="margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-size: 13px; font-family: Inter; color: #394149;">Получение информации о вхождении физического лица в санкционные списки и списки наблюдения</span></li></ul>
+</td>
+<td style="vertical-align:top; padding:0; border:none"><ul style="list-style-type:disc">
+<li style="margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-size: 13px; font-weight: bold; color: #1e1e1e;">Идентификатор X-Compliance</span><span style="font-size: 13px; color: #1e1e1e;"> </span><span style="font-size: 13px; font-family: Inter; color: #394149;">—</span><span style="font-size: 13px; color: #1e1e1e;"> идентификатор физического лица в X-Compliance, тип </span><span style="font-size: 13px; font-weight: bold; color: #1e1e1e;">Строка</span><span style="font-size: 13px; color: #1e1e1e;">;</span></li><li style="margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-size: 13px; font-weight: bold; color: #1e1e1e;">ФИО</span><span style="font-size: 13px; font-weight: bold;"> физического</span><span style="font-size: 13px; font-weight: bold; color: #1e1e1e;"> лица</span><span style="font-size: 13px; color: #1e1e1e;"> </span><span style="font-size: 13px; font-family: Inter; color: #394149;">— свойство с типом </span><span style="font-size: 13px; font-family: Inter; font-weight: bold; color: #394149;">Строка</span><span style="font-size: 13px; font-family: Inter; color: #394149;">;</span></li><li style="margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-size: 13px; font-weight: bold; color: #1e1e1e;">Дата рождения </span><span style="font-size: 13px; font-weight: bold;">физического</span><span style="font-size: 13px; font-weight: bold; color: #1e1e1e;"> лица</span><span style="font-size: 13px; color: #1e1e1e;"> </span><span style="font-size: 13px; font-family: Inter; color: #394149;">— свойство с типом </span><span style="font-size: 13px; font-family: Inter; font-weight: bold; color: #394149;">Дата</span><span style="font-size: 13px; font-family: Inter; color: #394149;">.</span></li></ul>
+<p style="text-indent: 1px; margin: 0 0 11px 2px;"><span style="font-size: 13px; font-family: Inter;">Из этого набора обязательно указывается переменная </span><span style="font-size: 13px; font-weight: bold; color: #1e1e1e;">Идентификатор X-Compliance </span><span style="font-size: 13px; color: #1e1e1e;">или </span><span style="font-size: 13px; font-weight: bold; color: #1e1e1e;">ФИО</span><span style="font-size: 13px; font-weight: bold;"> физического</span><span style="font-size: 13px; font-weight: bold; color: #1e1e1e;"> лица</span><span style="font-size: 13px; color: #1e1e1e;">.</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 13px; font-family: Inter; color: #394149;">Получение информации о вхождении компании в санкционные списки, а также список санкций по Правилу 50%</span></p>
+</td>
+<td style="vertical-align:top; padding:0; border:none"><p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 13px; font-family: Inter; color: #394149;">Атрибуты с типом </span><span style="font-size: 13px; font-family: Inter; font-weight: bold; color: #394149;">Строка</span><span style="font-size: 13px; font-family: Inter; color: #394149;">:</span></p>
 <ul style="list-style-type:disc">
-<li style="margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold;">Изменения</span> — свойство необходимо для блоков <span style="font-weight: bold; color: #394149;">Получение списка событий мониторинга по компании / по компаниям</span><span style="color: #394149;">. Свойство создаётся с типом </span><span style="font-weight: bold;">Выбор «да/нет»</span><span style="color: #394149;">, в вариантах указываются опции: </span><span style="font-weight: bold; color: #394149;">Все</span><span style="color: #394149;">, </span><span style="font-weight: bold; color: #394149;">Только неотправленные</span><span style="color: #394149;">. Выбранный вариант определяет, какие изменения запрашиваются из базы сервиса. В настройках свойства можно установить вариант по умолчанию, чтобы автоматически определить, какие события получать. Также на схеме процесса перед блоками можно разместить пользовательскую задачу для выбора варианта в переменной. </span></li></ul>
+<li style="margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-size: 13px; font-weight: bold; color: #1e1e1e;">Идентификатор X-Compliance</span><span style="font-size: 13px; color: #1e1e1e;"> </span><span style="font-size: 13px; font-family: Inter; color: #394149;">— и</span><span style="font-size: 13px; color: #1e1e1e;">дентификатор компании в X-Compliance;</span></li><li style="margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-size: 13px; font-weight: bold; color: #1e1e1e;">Идентификатор СПАРК</span><span style="font-size: 13px; color: #1e1e1e;"> </span><span style="font-size: 13px; font-family: Inter; color: #394149;">— и</span><span style="font-size: 13px; color: #1e1e1e;">дентификатор компании в СПАРК;</span></li><li style="margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-size: 13px; font-weight: bold; color: #1e1e1e;">Регистрационный код</span><span style="font-size: 13px; color: #1e1e1e;"> </span><span style="font-size: 13px; font-family: Inter; color: #394149;">— р</span><span style="font-size: 13px; color: #1e1e1e;">егистрационный код ИНН или ОГРН российской компании;</span></li><li style="margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-size: 13px; font-weight: bold; color: #1e1e1e;">Наименование компании</span><span style="font-size: 13px; color: #1e1e1e;">.</span></li></ul>
+<p style="line-height: 1.28; margin: 16px 0 16px 0;"><span style="font-size: 13px;">Хотя бы один параметр из этого набора должен быть задан.</span></p>
+<p style="line-height: 1.28; margin: 16px 0 16px 0;"><span style="font-size: 13px;">Поиск иностранной компании осуществляется по значению идентификатора X-Compliance или наименованию.</span></p>
+</td>
+</tr>
+</table>
+</div>
 <h2 class="p_Heading2"><a id="output-parameters" class="hmanchor"></a><span class="f_Heading2">Выходные атрибуты блоков решения «Интеграция СПАРК»</span></h2>
-<p style="margin: 0 0 11px 0;"><span style="color: #394149;">В выходные атрибуты передаются переменные, в которые записывается результат, полученный из сервиса. Список выходных атрибутов для каждого блока различается и приведён в таблице.</span></p>
+<p style="margin: 0 0 11px 0;"><span style="color: #394149;">В выходные атрибуты передаются переменные, в которые записывается результат, полученный из сервиса. Схожие параметры имеют одинаковый тип данных. Для примера в таблице приведены выходные параметры некоторых блоков.</span></p>
 <div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0 0 11px 0;"><table style="border:none; border-spacing:0;">
 <tr>
-<td style="vertical-align:top; padding:0; border:none"><p><span style="font-weight: bold;">Наименование выходного атрибута в настройках блока</span></p>
+<td style="vertical-align:top; width:380px; padding:0; border:none"><p style="text-align: center; line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 13px; font-family: Inter; font-weight: bold; color: #394149;">Графические блоки</span></p>
 </td>
-<td style="vertical-align:top; padding:0; border:none"><p><span style="font-weight: bold;">Тип сопоставляемой переменной &nbsp;</span></p>
+<td style="vertical-align:top; width:482px; padding:0; border:none"><p style="text-align: center; margin: 7px 0 7px 0;"><span style="font-family: 'Times New Roman',Times,Georgia,serif; font-weight: bold;">Выходные атрибуты в настройках блоков</span></p>
 </td>
-</tr>
-<tr>
-<td colspan="2"  style="vertical-align:top; padding:0; border:none"><p style="text-align: center;"><span style="font-weight: bold;">Одинаковые для всех блоков атрибуты</span></p>
+<td style="vertical-align:top; width:288px; padding:0; border:none"><p style="text-align: center; margin: 7px 0 7px 0;"><span style="font-family: 'Times New Roman',Times,Georgia,serif; font-weight: bold;">Тип сопоставляемой переменной &nbsp;</span></p>
 </td>
 </tr>
 <tr>
-<td style="vertical-align:top; padding:0; border:none"><p>СПАРК id</p>
+<td style="vertical-align:top; width:380px; padding:0; border:none"><p style="margin: 7px 0 7px 0;"><span style="font-family: 'Times New Roman',Times,Georgia,serif;">Все блоки</span></p>
 </td>
-<td style="vertical-align:top; padding:0; border:none"><p>Строка</p>
+<td style="vertical-align:top; width:482px; padding:0; border:none"><p style="margin: 7px 0 7px 0;"><span style="font-family: 'Times New Roman',Times,Georgia,serif;">Атрибуты, которые присутствуют во всех блоках:</span></p>
+<p style="margin: 7px 0 7px 0;"><span style="font-family: 'Times New Roman',Times,Georgia,serif;">Результат выполнения, Текст ошибки, Код ошибки СПАРК, Код ответа</span></p>
 </td>
-</tr>
-<tr>
-<td style="vertical-align:top; padding:0; border:none"><p>ИНН</p>
-</td>
-<td style="vertical-align:top; padding:0; border:none"><p>Строка</p>
+<td style="vertical-align:top; width:288px; padding:0; border:none"><p style="margin: 7px 0 7px 0;"><span style="font-family: 'Times New Roman',Times,Georgia,serif;">Строка</span></p>
 </td>
 </tr>
 <tr>
-<td style="vertical-align:top; padding:0; border:none"><p>ОГРН</p>
+<td style="vertical-align:top; width:380px; padding:0; border:none"><p style="margin: 7px 0 7px 0;"><span style="font-family: 'Times New Roman',Times,Georgia,serif;">Большинство блоков.</span></p>
+<p style="margin: 7px 0 7px 0;"><span style="font-family: 'Times New Roman',Times,Georgia,serif;">Исключения: </span><span style="font-size: 13px; font-family: Inter;">универсальный блок получения данных из СПАРК, </span><span style="font-size: 13px; font-family: Inter; color: #394149;">блоки с запросами по санкционным спискам и рискам ПДЛ, а также остаткам платных запросов.</span></p>
 </td>
-<td style="vertical-align:top; padding:0; border:none"><p>Строка</p>
+<td style="vertical-align:top; width:482px; padding:0; border:none"><p style="margin: 7px 0 7px 0;"><span style="font-family: 'Times New Roman',Times,Georgia,serif;">Атрибуты, которые присутствуют в большинстве блоков:</span></p>
+<ul style="list-style-type:disc">
+<li style="margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-family: 'Times New Roman',Times,Georgia,serif;">СПАРК id (отсутствует также в блоке с запросом о факторах риска по физическому лицу);</span></li><li style="margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-family: 'Times New Roman',Times,Georgia,serif;">ИНН, ОГРН или ОГРНИП</span></li></ul>
 </td>
-</tr>
-<tr>
-<td style="vertical-align:top; padding:0; border:none"><p>Результат выполнения</p>
-</td>
-<td style="vertical-align:top; padding:0; border:none"><p>Строка</p>
-</td>
-</tr>
-<tr>
-<td style="vertical-align:top; padding:0; border:none"><p>Текст ошибки </p>
-</td>
-<td style="vertical-align:top; padding:0; border:none"><p>Строка</p>
+<td style="vertical-align:top; width:288px; padding:0; border:none"><p style="margin: 7px 0 7px 0;"><span style="font-family: 'Times New Roman',Times,Georgia,serif;">Строка</span></p>
 </td>
 </tr>
 <tr>
-<td style="vertical-align:top; padding:0; border:none"><p>Код ошибки СПАРК</p>
+<td style="vertical-align:top; width:380px; padding:0; border:none"><p class="p_Normal"><span style="font-family: 'Times New Roman',Times,Georgia,serif;">Включение/Выключение мониторинга по компании</span></p>
 </td>
-<td style="vertical-align:top; padding:0; border:none"><p>Строка</p>
+<td style="vertical-align:top; width:482px; padding:0; border:none"><p style="margin: 7px 0 7px 0;"><span style="font-family: 'Times New Roman',Times,Georgia,serif;">Включение/Выключение мониторинга по компании</span></p>
 </td>
-</tr>
-<tr>
-<td style="vertical-align:top; padding:0; border:none"><p>Код ответа</p>
-</td>
-<td style="vertical-align:top; padding:0; border:none"><p>Строка</p>
+<td style="vertical-align:top; width:288px; padding:0; border:none"><p style="margin: 7px 0 7px 0;"><span style="font-family: 'Times New Roman',Times,Georgia,serif;">Приложение &gt; </span><span style="font-family: 'Times New Roman',Times,Georgia,serif; font-weight: bold;">Включение/Выключение мониторинга по компании</span><span style="font-family: 'Times New Roman',Times,Georgia,serif;"> с опцией </span><span style="font-family: 'Times New Roman',Times,Georgia,serif; font-weight: bold;">Один</span></p>
 </td>
 </tr>
 <tr>
-<td colspan="2"  style="vertical-align:top; padding:0; border:none"><p style="text-align: center;"><span style="font-weight: bold;">Атрибуты блоков Включение/Выключение мониторинга по компании</span></p>
+<td style="vertical-align:top; width:380px; padding:0; border:none"><p class="p_Normal"><span style="font-family: 'Times New Roman',Times,Georgia,serif;">Получение данных из СПАРК</span></p>
+</td>
+<td style="vertical-align:top; width:482px; padding:0; border:none"><p style="margin: 7px 0 7px 0;"><span style="font-family: 'Times New Roman',Times,Georgia,serif;">Получение данных из СПАРК</span></p>
+</td>
+<td style="vertical-align:top; width:288px; padding:0; border:none"><p style="margin: 7px 0 7px 0;"><span style="font-family: 'Times New Roman',Times,Georgia,serif;">Приложение &gt; </span><span style="font-family: 'Times New Roman',Times,Georgia,serif; font-weight: bold;">Получение данных из СПАРК</span><span style="font-family: 'Times New Roman',Times,Georgia,serif;"> с опцией </span><span style="font-family: 'Times New Roman',Times,Georgia,serif; font-weight: bold;">Один</span></p>
 </td>
 </tr>
 <tr>
-<td style="vertical-align:top; padding:0; border:none"><p>Включение/Выключение мониторинга по компании</p>
+<td rowspan="2"  style="vertical-align:top; width:380px; padding:0; border:none"><p class="p_Normal"><span style="font-family: 'Times New Roman',Times,Georgia,serif;">Получение данных из СПАРК: Отчет СПАРК-Риски по российской компании PDF</span></p>
 </td>
-<td style="vertical-align:top; padding:0; border:none"><p>Приложение &gt; <span style="font-weight: bold;">Включение/Выключение мониторинга по компании</span> с опцией <span style="font-weight: bold;">Один</span></p>
+<td style="vertical-align:top; width:482px; padding:0; border:none"><p style="margin: 7px 0 7px 0;"><span style="font-family: 'Times New Roman',Times,Georgia,serif;">Свойства из настроек элемента </span><span style="font-family: 'Times New Roman',Times,Georgia,serif; font-weight: bold;">Получение информации об актуальных совладельцах российской компании</span><span style="font-family: 'Times New Roman',Times,Georgia,serif;">: ОКПО, ОКАТО, Признак действующей компании, Код статуса, Текст статуса, Идентификатор группы статусов, Наименование группы статусов, Дата актуальности статуса</span></p>
 </td>
-</tr>
-<tr>
-<td colspan="2"  style="vertical-align:top; padding:0; border:none"><p style="text-align: center;"><span style="font-weight: bold;">Атрибуты блока Получение информации об актуальных совладельцах российской компании</span></p>
+<td style="vertical-align:top; width:288px; padding:0; border:none"><p style="margin: 7px 0 7px 0;"><span style="font-family: 'Times New Roman',Times,Georgia,serif;">Типы указаны в таблице ниже</span></p>
 </td>
 </tr>
 <tr>
-<td style="vertical-align:top; padding:0; border:none"><p>Краткое наименование </p>
+<td style="vertical-align:top; width:482px; padding:0; border:none"><p style="margin: 7px 0 7px 0;"><span style="font-family: 'Times New Roman',Times,Georgia,serif;">Отчет «СПАРК-Риски»</span></p>
 </td>
-<td style="vertical-align:top; padding:0; border:none"><p>Строка</p>
-</td>
-</tr>
-<tr>
-<td style="vertical-align:top; padding:0; border:none"><p>ОКПО</p>
-</td>
-<td style="vertical-align:top; padding:0; border:none"><p>Строка</p>
+<td style="vertical-align:top; width:288px; padding:0; border:none"><p style="margin: 7px 0 7px 0;"><span style="font-family: 'Times New Roman',Times,Georgia,serif;">Файлы</span></p>
 </td>
 </tr>
 <tr>
-<td style="vertical-align:top; padding:0; border:none"><p>ОКАТО</p>
+<td rowspan="3"  style="vertical-align:top; width:380px; padding:0; border:none"><p class="p_Normal"><span style="font-family: 'Times New Roman',Times,Georgia,serif;">Получение данных из СПАРК: Структура российской компании</span></p>
 </td>
-<td style="vertical-align:top; padding:0; border:none"><p>Строка</p>
+<td style="vertical-align:top; width:482px; padding:0; border:none"><p style="margin: 7px 0 7px 0;"><span style="font-family: 'Times New Roman',Times,Georgia,serif;">Свойства для обозначения данных о совладельцах из настроек элемента </span><span style="font-family: 'Times New Roman',Times,Georgia,serif; font-weight: bold;">Получение информации об актуальных совладельцах российской компании</span></p>
 </td>
-</tr>
-<tr>
-<td style="vertical-align:top; padding:0; border:none"><p>Признак действующей компании</p>
-</td>
-<td style="vertical-align:top; padding:0; border:none"><p>Выбор «да/нет»</p>
+<td style="vertical-align:top; width:288px; padding:0; border:none"><p style="margin: 7px 0 7px 0;"><span style="font-family: 'Times New Roman',Times,Georgia,serif;">Строка</span></p>
 </td>
 </tr>
 <tr>
-<td style="vertical-align:top; padding:0; border:none"><p>Код статуса</p>
+<td style="vertical-align:top; width:482px; padding:0; border:none"><p style="margin: 7px 0 7px 0;"><span style="font-family: 'Times New Roman',Times,Georgia,serif;">Краткое наименование компании, Признак включения в ЕГРПО (Росстат)</span></p>
 </td>
-<td style="vertical-align:top; padding:0; border:none"><p>Число</p>
-</td>
-</tr>
-<tr>
-<td style="vertical-align:top; padding:0; border:none"><p>Текст статуса</p>
-</td>
-<td style="vertical-align:top; padding:0; border:none"><p>Строка</p>
+<td style="vertical-align:top; width:288px; padding:0; border:none"><p style="margin: 7px 0 7px 0;"><span style="font-family: 'Times New Roman',Times,Georgia,serif;">Строка</span></p>
 </td>
 </tr>
 <tr>
-<td style="vertical-align:top; padding:0; border:none"><p>Идентификатор группы статусов </p>
+<td style="vertical-align:top; width:482px; padding:0; border:none"><p style="margin: 7px 0 7px 0;"><span style="font-family: 'Times New Roman',Times,Georgia,serif;">Атрибуты с отметкой </span><span style="font-family: 'Times New Roman',Times,Georgia,serif; font-weight: bold;">Сериализованный ответ</span><span style="font-family: 'Times New Roman',Times,Georgia,serif;">: Дочерние компании по данным Росстата, Дочерние компании по данным компании, Дочерние компании по данным ЕГРЮЛ, Филиалы по данным компании, Филиалы по данным Росстата, Филиалы по данным ЕГРЮЛ, Участие в фондах, холдингах, некоммерческих партнерствах и объединениях, Список событий мониторинга</span></p>
 </td>
-<td style="vertical-align:top; padding:0; border:none"><p>Число</p>
-</td>
-</tr>
-<tr>
-<td style="vertical-align:top; padding:0; border:none"><p>Наименование группы статусов</p>
-</td>
-<td style="vertical-align:top; padding:0; border:none"><p>Строка</p>
+<td style="vertical-align:top; width:288px; padding:0; border:none"><p style="margin: 7px 0 7px 0;"><span style="font-family: 'Times New Roman',Times,Georgia,serif;">Строка</span></p>
 </td>
 </tr>
 <tr>
-<td style="vertical-align:top; padding:0; border:none"><p>Дата актуальности статуса </p>
+<td rowspan="4"  style="vertical-align:top; width:380px; padding:0; border:none"><p class="p_Normal"><span style="font-size: 13px; font-family: Inter;">Получение информации о факторах риска по физическому лицу</span></p>
 </td>
-<td style="vertical-align:top; padding:0; border:none"><p>Дата/время</p>
+<td style="vertical-align:top; width:482px; padding:0; border:none"><p style="margin: 7px 0 7px 0;"><span style="font-family: 'Times New Roman',Times,Georgia,serif;">ФИО, Место рождения</span></p>
 </td>
-</tr>
-<tr>
-<td style="vertical-align:top; padding:0; border:none"><p>Совладельцы по данным Раскрытия (Сериализованный ответ)</p>
-</td>
-<td style="vertical-align:top; padding:0; border:none"><p>Строка</p>
+<td style="vertical-align:top; width:288px; padding:0; border:none"><p style="margin: 7px 0 7px 0;"><span style="font-family: 'Times New Roman',Times,Georgia,serif;">Строка</span></p>
 </td>
 </tr>
 <tr>
-<td style="vertical-align:top; padding:0; border:none"><p>Совладельцы по данным ЕГРЮЛ (Сериализованный ответ)</p>
+<td style="vertical-align:top; width:482px; padding:0; border:none"><p style="margin: 7px 0 7px 0;"><span style="font-family: 'Times New Roman',Times,Georgia,serif;">Атрибуты с отметкой </span><span style="font-family: 'Times New Roman',Times,Georgia,serif; font-weight: bold;">Сериализованный ответ</span><span style="font-family: 'Times New Roman',Times,Georgia,serif;">: Пол, Гражданство, Другие ФИО, Индивидуальный предприниматель, Факторы риска, Связанные ИП по ИНН, Дисквалификации ФЛ, Совладелец, Руководитель, Бенефициар</span></p>
 </td>
-<td style="vertical-align:top; padding:0; border:none"><p>Строка</p>
-</td>
-</tr>
-<tr>
-<td style="vertical-align:top; padding:0; border:none"><p>Совладельцы по данным Росстата (Сериализованный ответ)</p>
-</td>
-<td style="vertical-align:top; padding:0; border:none"><p>Строка</p>
+<td style="vertical-align:top; width:288px; padding:0; border:none"><p style="margin: 7px 0 7px 0;"><span style="font-family: 'Times New Roman',Times,Georgia,serif;">Строка</span></p>
 </td>
 </tr>
 <tr>
-<td style="vertical-align:top; padding:0; border:none"><p>Признак ограничения доступа к данным о совладельцах</p>
+<td style="vertical-align:top; width:482px; padding:0; border:none"><p style="margin: 7px 0 7px 0;"><span style="font-family: 'Times New Roman',Times,Georgia,serif;">Дата рождения, Дата потери правоспособности</span></p>
 </td>
-<td style="vertical-align:top; padding:0; border:none"><p>Выбор «да/нет»</p>
-</td>
-</tr>
-<tr>
-<td style="vertical-align:top; padding:0; border:none"><p>Основание для ограничения доступа к данным о совладельцах</p>
-</td>
-<td style="vertical-align:top; padding:0; border:none"><p>Строка</p>
+<td style="vertical-align:top; width:288px; padding:0; border:none"><p style="margin: 7px 0 7px 0;"><span style="font-family: 'Times New Roman',Times,Georgia,serif;">Дата</span></p>
 </td>
 </tr>
 <tr>
-<td style="vertical-align:top; padding:0; border:none"><p>Информация об актуальных совладельцах российской компании</p>
+<td style="vertical-align:top; width:482px; padding:0; border:none"><p style="margin: 7px 0 7px 0;"><span style="font-family: 'Times New Roman',Times,Georgia,serif;">Факторы риска физического лица</span></p>
 </td>
-<td style="vertical-align:top; padding:0; border:none"><p>Приложение &gt; <span style="font-weight: bold;">Информация об актуальных совладельцах российской компании</span> с опцией <span style="font-weight: bold;">Один</span></p>
-</td>
-</tr>
-<tr>
-<td colspan="2"  style="vertical-align:top; padding:0; border:none"><p style="text-align: center;"><span style="font-weight: bold;">Атрибуты блока Получение информации </span><span style="font-weight: bold; color: #394149;">о структуре российской компании</span></p>
+<td style="vertical-align:top; width:288px; padding:0; border:none"><p style="margin: 7px 0 7px 0;"><span style="font-family: 'Times New Roman',Times,Georgia,serif;">Приложение &gt; </span><span style="font-family: 'Times New Roman',Times,Georgia,serif; font-weight: bold;">Факторы риска физического лица</span><span style="font-family: 'Times New Roman',Times,Georgia,serif;"> с опцией </span><span style="font-family: 'Times New Roman',Times,Georgia,serif; font-weight: bold;">Один</span></p>
 </td>
 </tr>
 <tr>
-<td style="vertical-align:top; padding:0; border:none"><p>Краткое наименование компании</p>
+<td rowspan="6"  style="vertical-align:top; width:380px; padding:0; border:none"><p class="p_Normal"><span style="font-family: 'Times New Roman',Times,Georgia,serif;">Получение информации об актуальных совладельцах российской компании</span></p>
 </td>
-<td style="vertical-align:top; padding:0; border:none"><p>Строка</p>
+<td style="vertical-align:top; width:482px; padding:0; border:none"><p style="margin: 7px 0 7px 0;"><span style="font-family: 'Times New Roman',Times,Georgia,serif;">Краткое наименование, ОКПО, ОКАТО, Текст статуса, Наименование группы статусов, Основание для ограничения доступа к данным о совладельцах</span></p>
 </td>
-</tr>
-<tr>
-<td style="vertical-align:top; padding:0; border:none"><p>Признак включения в ЕГРПО (Росстат)</p>
-</td>
-<td style="vertical-align:top; padding:0; border:none"><p>Строка</p>
+<td style="vertical-align:top; width:288px; padding:0; border:none"><p style="margin: 7px 0 7px 0;"><span style="font-family: 'Times New Roman',Times,Georgia,serif;">Строка</span></p>
 </td>
 </tr>
 <tr>
-<td style="vertical-align:top; padding:0; border:none"><p>Дочерние компании по данным Росстата (Сериализованный ответ)</p>
+<td style="vertical-align:top; width:482px; padding:0; border:none"><p style="margin: 7px 0 7px 0;"><span style="font-family: 'Times New Roman',Times,Georgia,serif;">Атрибуты с отметкой </span><span style="font-family: 'Times New Roman',Times,Georgia,serif; font-weight: bold;">Сериализованный ответ</span><span style="font-family: 'Times New Roman',Times,Georgia,serif;">: &nbsp;Совладельцы по данным Раскрытия, Совладельцы по данным ЕГРЮЛ, Совладельцы по данным Росстата</span></p>
 </td>
-<td style="vertical-align:top; padding:0; border:none"><p>Строка</p>
-</td>
-</tr>
-<tr>
-<td style="vertical-align:top; padding:0; border:none"><p>Дочерние компании по данным компании (Сериализованный ответ)</p>
-</td>
-<td style="vertical-align:top; padding:0; border:none"><p>Строка</p>
+<td style="vertical-align:top; width:288px; padding:0; border:none"><p style="margin: 7px 0 7px 0;"><span style="font-family: 'Times New Roman',Times,Georgia,serif;">Строка</span></p>
 </td>
 </tr>
 <tr>
-<td style="vertical-align:top; padding:0; border:none"><p>Дочерние компании по данным ЕГРЮЛ (Сериализованный ответ)</p>
+<td style="vertical-align:top; width:482px; padding:0; border:none"><p style="margin: 7px 0 7px 0;"><span style="font-family: 'Times New Roman',Times,Georgia,serif;">Признак действующей компании, Признак ограничения доступа к данным о совладельцах</span></p>
 </td>
-<td style="vertical-align:top; padding:0; border:none"><p>Строка</p>
-</td>
-</tr>
-<tr>
-<td style="vertical-align:top; padding:0; border:none"><p>Свойства для обозначения данных о совладельцах из настроек элемента <span style="font-weight: bold;">Получение информации об актуальных совладельцах российской компании</span></p>
-</td>
-<td style="vertical-align:top; padding:0; border:none"><p>Строка</p>
+<td style="vertical-align:top; width:288px; padding:0; border:none"><p style="margin: 7px 0 7px 0;"><span style="font-family: 'Times New Roman',Times,Georgia,serif;">Выбор «да/нет»</span></p>
 </td>
 </tr>
 <tr>
-<td style="vertical-align:top; padding:0; border:none"><p>Филиалы по данным компании (Сериализованный ответ)</p>
+<td style="vertical-align:top; width:482px; padding:0; border:none"><p style="margin: 7px 0 7px 0;"><span style="font-family: 'Times New Roman',Times,Georgia,serif;">Код статуса, Идентификатор группы статусов</span></p>
 </td>
-<td style="vertical-align:top; padding:0; border:none"><p>Строка</p>
-</td>
-</tr>
-<tr>
-<td style="vertical-align:top; padding:0; border:none"><p>Филиалы по данным Росстата (Сериализованный ответ)</p>
-</td>
-<td style="vertical-align:top; padding:0; border:none"><p>Строка</p>
+<td style="vertical-align:top; width:288px; padding:0; border:none"><p style="margin: 7px 0 7px 0;"><span style="font-family: 'Times New Roman',Times,Georgia,serif;">Число</span></p>
 </td>
 </tr>
 <tr>
-<td style="vertical-align:top; padding:0; border:none"><p>Филиалы по данным ЕГРЮЛ (Сериализованный ответ)</p>
+<td style="vertical-align:top; width:482px; padding:0; border:none"><p style="margin: 7px 0 7px 0;"><span style="font-family: 'Times New Roman',Times,Georgia,serif;">Дата актуальности статуса</span></p>
 </td>
-<td style="vertical-align:top; padding:0; border:none"><p>Строка</p>
-</td>
-</tr>
-<tr>
-<td style="vertical-align:top; padding:0; border:none"><p>Участие в фондах, холдингах, некоммерческих партнерствах и объединениях (Сериализованный ответ)</p>
-</td>
-<td style="vertical-align:top; padding:0; border:none"><p>Строка</p>
+<td style="vertical-align:top; width:288px; padding:0; border:none"><p style="margin: 7px 0 7px 0;"><span style="font-family: 'Times New Roman',Times,Georgia,serif;">Дата/время</span></p>
 </td>
 </tr>
 <tr>
-<td style="vertical-align:top; padding:0; border:none"><p>Список событий мониторинга (Сериализованный ответ)</p>
+<td style="vertical-align:top; width:482px; padding:0; border:none"><p style="margin: 7px 0 7px 0;"><span style="font-family: 'Times New Roman',Times,Georgia,serif;">Информация об актуальных совладельцах российской компании</span></p>
 </td>
-<td style="vertical-align:top; padding:0; border:none"><p>Строка</p>
-</td>
-</tr>
-<tr>
-<td colspan="2"  style="vertical-align:top; padding:0; border:none"><p style="text-align: center;"><span style="font-weight: bold;">Атрибуты блока </span><span style="font-weight: bold; color: #394149;">Получение отчета СПАРК-Риски по российской компании PDF</span></p>
+<td style="vertical-align:top; width:288px; padding:0; border:none"><p style="margin: 7px 0 7px 0;"><span style="font-family: 'Times New Roman',Times,Georgia,serif;">Приложение &gt; </span><span style="font-family: 'Times New Roman',Times,Georgia,serif; font-weight: bold;">Информация об актуальных совладельцах российской компании</span><span style="font-family: 'Times New Roman',Times,Georgia,serif;"> с опцией </span><span style="font-family: 'Times New Roman',Times,Georgia,serif; font-weight: bold;">Один</span></p>
 </td>
 </tr>
 <tr>
-<td style="vertical-align:top; padding:0; border:none"><p>Свойства из настроек элемента <span style="font-weight: bold;">Получение информации об актуальных совладельцах российской компании</span>: ОКПО, ОКАТО, Признак действующей компании, Код статуса, Текст статуса, Идентификатор группы статусов, Наименование группы статусов, Дата актуальности статуса</p>
+<td rowspan="2"  style="vertical-align:top; width:380px; padding:0; border:none"><p class="p_Normal"><span style="font-family: 'Times New Roman',Times,Georgia,serif; color: #394149;">Получение списка событий мониторинга по компании/компаниям</span></p>
 </td>
-<td style="vertical-align:top; padding:0; border:none"><p>Типы, указанные в таблице выше</p>
+<td style="vertical-align:top; width:482px; padding:0; border:none"><p style="margin: 7px 0 7px 0;"><span style="font-family: 'Times New Roman',Times,Georgia,serif;">События, Название компании</span></p>
 </td>
-</tr>
-<tr>
-<td style="vertical-align:top; padding:0; border:none"><p>Отчет «СПАРК-Риски»</p>
-</td>
-<td style="vertical-align:top; padding:0; border:none"><p>Файлы</p>
+<td style="vertical-align:top; width:288px; padding:0; border:none"><p style="margin: 7px 0 7px 0;"><span style="font-family: 'Times New Roman',Times,Georgia,serif;">Строка</span></p>
 </td>
 </tr>
 <tr>
-<td colspan="2"  style="vertical-align:top; padding:0; border:none"><p style="text-align: center;"><span style="font-weight: bold;">Атрибуты блоков </span><span style="font-weight: bold; color: #394149;">Получение списка событий мониторинга по компании/компаниям</span></p>
+<td style="vertical-align:top; width:482px; padding:0; border:none"><p style="margin: 7px 0 7px 0;"><span style="font-family: 'Times New Roman',Times,Georgia,serif;">Получения списка событий мониторинга по компании/компаниям</span></p>
 </td>
-</tr>
-<tr>
-<td style="vertical-align:top; padding:0; border:none"><p>События</p>
-</td>
-<td style="vertical-align:top; padding:0; border:none"><p>Строка</p>
-</td>
-</tr>
-<tr>
-<td style="vertical-align:top; padding:0; border:none"><p>Получения списка событий мониторинга по компании/компаниям</p>
-</td>
-<td style="vertical-align:top; padding:0; border:none"><p>Приложение &gt; <span style="font-weight: bold;">Получения списка событий мониторинга по компании/компаниям</span> с опцией <span style="font-weight: bold;">Один</span></p>
-</td>
-</tr>
-<tr>
-<td style="vertical-align:top; padding:0; border:none"><p>Название компании</p>
-</td>
-<td style="vertical-align:top; padding:0; border:none"><p>Строка</p>
+<td style="vertical-align:top; width:288px; padding:0; border:none"><p style="margin: 7px 0 7px 0;"><span style="font-family: 'Times New Roman',Times,Georgia,serif;">Приложение &gt; </span><span style="font-family: 'Times New Roman',Times,Georgia,serif; font-weight: bold;">Получения списка событий мониторинга по компании/компаниям</span><span style="font-family: 'Times New Roman',Times,Georgia,serif;"> с опцией </span><span style="font-family: 'Times New Roman',Times,Georgia,serif; font-weight: bold;">Один</span></p>
 </td>
 </tr>
 </table>
@@ -484,9 +426,9 @@
 </div>
  
     </footer>
-    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jquery1.min.js"></script>
     <iframe name="hmnavigation" style="display:none!important"></iframe>
-    <script src="./jquery-ui.js"></script>
+    <!--<script src="./jquery-ui.js"></script> -->
     <script src="./jquery-ui.min.js"></script>
     <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
     <script src="./jquery.tocify.min.js"></script>

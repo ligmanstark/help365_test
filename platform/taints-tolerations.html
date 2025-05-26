@@ -98,7 +98,7 @@
                         <span id="subcategory" class="search-res__item-category search-res__item-category_subcategory subcategory article__badge"></span>
                         
                             <div class="topic__breadcrumbs">     
-                                <p><a href="elma365-on-premises.html">ELMA365 On-Premises</a> &gt; <a href="elma365-enterprise.html">ELMA365 On-Premises Enterprise</a> &gt; <a href="advanced-kubernetes-settings.html">Продвинутое изменение параметров ELMA365 Enterprise</a> / Размещение подов на узлах с ограничениями</p>
+                                <p><a href="elma365-on-premises.html">ELMA365 On-Premises</a> &gt; <a href="elma365-enterprise.html">ELMA365 On-Premises Enterprise</a> &gt; <a href="advanced-kubernetes-settings.html">Продвинутые параметры ELMA365 Enterprise</a> / Размещение подов на узлах с ограничениями</p>
                             </div>
                         
                     </div>
@@ -113,11 +113,7 @@
                         <!-- Placeholder for topic body. -->
                         <p class="p_Normal">Когда нужно выделить узлы для критически важных сервисов и предотвратить рапределение на эти узлы другой нагрузки, можно использовать инструменты <span style="font-weight: bold;">taints</span> и <span style="font-weight: bold;">tolerations</span>. </p>
 <p class="p_Normal">С их помощью вы можете пометить узлы специальными ограничениями (taints), а поды — соответствующими разрешениями на обход ограничений (tolerations). Тогда на узлах с заданными taints запустятся только поды, для которых вы задали нужные tolerations. </p>
-<p class="p_Normal">Также для настройки размещения подов можно использовать:</p>
-<ul style="list-style-type:disc">
-<li class="p_Normal"><a href="node-selector.html" class="topiclink">параметр nodeSelector</a> — задать базовое размещение по меткам узлов;</li></ul>
-<ul style="list-style-type:disc">
-<li class="p_Normal"><a href="affinity-antiaffinity.html" class="topiclink">параметры nodeAffinity и podAntiAffinity</a> — задать гибкие правила для размещения подов на узлах.</li></ul>
+<p class="p_Normal">Перед настройкой taints и tolerations ознакомьтесь со всеми инструментами для размещения подов и с рекомендациями по их совместному использованию в статье <a href="advanced-kubernetes-settings.html" class="topiclink">«Продвинутые параметры ELMA365 Enterprise»</a>. </p>
 <h2 class="p_Heading2"><span class="f_Heading2">Настройка инструментов taints и tolerations</span></h2>
 <p class="p_Normal">Допустим, нужно разделить рабочую нагрузку между двумя группами узлов: для мониторинга (<code><b>monitoring</b></code>) и для основного приложения (<code><b>elma365</b></code>). Рассмотрим, как это можно реализовать:</p>
 <ol style="list-style-type:upper-roman">
@@ -244,9 +240,9 @@
 </div>
  
     </footer>
-    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jquery1.min.js"></script>
     <iframe name="hmnavigation" style="display:none!important"></iframe>
-    <script src="./jquery-ui.js"></script>
+    <!--<script src="./jquery-ui.js"></script> -->
     <script src="./jquery-ui.min.js"></script>
     <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
     <script src="./jquery.tocify.min.js"></script>

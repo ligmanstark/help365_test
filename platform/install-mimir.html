@@ -115,7 +115,7 @@
 <p style="background: #ffffff; margin: 10px 0 0 0;"><span style="font-weight: bold;">Установка и настройка Mimir на вашем сервере состоит из нескольких этапов:</span></p>
 <ol style="list-style-type:decimal">
 <li value="1" style="margin-top: 0; margin-right: 0; margin-bottom: 0;"><a href="install-mimir.html#download-helm-chart" class="topiclink">Скачивание Helm-чарта и конфигурационного файла</a>.</li><li value="2" style="margin-top: 0; margin-right: 0; margin-bottom: 0;"><a href="install-mimir.html#create-minio-backets" class="topiclink">Создание бакетов в Minio</a>.</li><li value="3" style="margin-top: 0; margin-right: 0; margin-bottom: 0;"><a href="install-mimir.html#filling-out-config-file" class="topiclink">Заполнение конфигурационного файла</a>.</li><li value="4" style="margin-top: 0; margin-right: 0; margin-bottom: 0;"><a href="install-mimir.html#install-chart-mimir" class="topiclink">Установка с помощью Helm в Kubernetes-кластер чарта Mimir</a>.</li><li value="5" style="margin-top: 0; margin-right: 0; margin-bottom: 0;"><a href="install-mimir.html#enable-grafana" class="topiclink">Настройка подключения Mimir в источниках данных Grafana</a>.</li></ol>
-<h2 class="p_Heading2"><a id="download-helm-chart" class="hmanchor"></a><span class="f_Heading2">Шаг 1: Скачивание Helm-чарта и конфигурационного файла</span></h2>
+<h2 class="p_Heading2"><a id="download-helm-chart" class="hmanchor"></a><span class="f_Heading2">Шаг 1. Скачивание Helm-чарта и конфигурационного файла</span></h2>
 <p style="background: #ffffff; margin: 10px 0 0 0;">Для установки через интернет получите конфигурационный файла <code><b>values-mimir.yaml</b></code><span style="color: #172b4d;">, </span>выполнив следующую команду:</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">helm&nbsp;repo&nbsp;add&nbsp;elma365&nbsp;https://charts.elma365.tech</span><br />
 <span class="f_CodeExample">helm&nbsp;repo&nbsp;update</span><br />
@@ -136,7 +136,7 @@
 </tr>
 </table>
 </div>
-<h2 class="p_Heading2"><a id="create-minio-backets" class="hmanchor"></a><span class="f_Heading2">Шаг 2: Создание бакетов в Minio</span></h2>
+<h2 class="p_Heading2"><a id="create-minio-backets" class="hmanchor"></a><span class="f_Heading2">Шаг 2. Создание бакетов в Minio</span></h2>
 <p class="p_Normal" style="background: #ffffff; margin: 10px 0 0 0;"><span style="color: #172b4d;">На данном этапе необходимо создать бакет в S3 хранилище.</span></p>
 <ol style="list-style-type:upper-roman">
 <li value="1" class="p_Normal" style="background: #ffffff; margin-top: 10px; margin-right: 0; margin-bottom: 0;"><span style="color: #172b4d;">Создайте </span><code><b>alias</b></code><span style="font-weight: bold; color: #172b4d;"> </span><span style="color: #172b4d;">для Minio командой:</span></li></ol>
@@ -144,7 +144,7 @@
 <ol style="list-style-type:upper-roman" start="2">
 <li value="2" class="p_Normal" style="background: #ffffff; margin-top: 10px; margin-right: 0; margin-bottom: 0;"><span style="color: #172b4d;">Создайте бакеты с наименованием </span><span style="font-weight: bold; color: #172b4d;">admins</span><span style="color: #172b4d;">,</span><span style="font-weight: bold; color: #172b4d;"> chunks</span><span style="color: #172b4d;"> и </span><span style="font-weight: bold; color: #172b4d;">rules</span><span style="color: #172b4d;">, выполнив команду:</span></li></ol>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">mc&nbsp;mb&nbsp;-p&nbsp;my_alias/mimir&nbsp;--region=ru-central-1</span></p>
-<h2 class="p_Heading2"><a id="filling-out-config-file" class="hmanchor"></a><span class="f_Heading2">Шаг 3: Заполнение конфигурационного файла</span></h2>
+<h2 class="p_Heading2"><a id="filling-out-config-file" class="hmanchor"></a><span class="f_Heading2">Шаг 3. Заполнение конфигурационного файла</span></h2>
 <p class="p_Normal"><a class="dropdown-toggle" style="font-style: normal; font-weight: normal; color: #000000; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186A2')">Заполнение конфигурационного файла values-mimir.yaml для установки Mimir</a></p>
 <div id="TOGGLE0186A2" class="dropdown-toggle-body" style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0 0 0 0;"><table style="border:none; border-spacing:0;">
 <tr>
@@ -259,13 +259,13 @@
 </tr>
 </table>
 </div>
-<h2 class="p_Heading2"><a id="install-chart-mimir" class="hmanchor"></a><span class="f_Heading2">Шаг 4: Установка с помощью Helm в Kubernetes-кластер чарта Mimir</span></h2>
+<h2 class="p_Heading2"><a id="install-chart-mimir" class="hmanchor"></a><span class="f_Heading2">Шаг 4. Установка с помощью Helm в Kubernetes-кластер чарта Mimir</span></h2>
 <p class="p_Normal" style="margin: 10px 0 0 0;">Выполните установку чарта <span style="font-weight: bold;">Mimir</span> в <code><b>namespace monitoring</b></code>.</p>
 <p class="p_Normal" style="margin: 10px 0 0 0;">Для установки через интернет:</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">helm&nbsp;upgrade&nbsp;--install&nbsp;-n&nbsp;monitoring&nbsp;mimir&nbsp;elma365/mimir&nbsp;-f&nbsp;values-mimir.yaml</span></p>
 <p class="p_Normal">Для офлайн-установки без доступа в интернет перейдите в каталог с загруженным чартом и выполните команду:</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">helm&nbsp;upgrade&nbsp;--install&nbsp;mimir&nbsp;./mimir&nbsp;-f&nbsp;values-mimir.yaml&nbsp;-n&nbsp;monitoring</span></p>
-<h2 class="p_Heading2"><a id="enable-grafana" class="hmanchor"></a><span class="f_Heading2">Шаг 5: Настройка подключения Mimir в источниках данных Grafana</span></h2>
+<h2 class="p_Heading2"><a id="enable-grafana" class="hmanchor"></a><span class="f_Heading2">Шаг 5. Настройка подключения Mimir в источниках данных Grafana</span></h2>
 <ol style="list-style-type:upper-roman">
 <li value="1" class="p_Normal">Добавьте источник Mimir при установке <a href="install-monitoring-tools.html" class="topiclink">средства мониторинга</a>, заполнив путь: <span style="font-weight: bold;">Home &gt; Administration &gt; Data source</span>.</li><li value="2" class="p_Normal">Добавьте источник данных Prometheus и заполните поле <span style="font-weight: bold;">URL</span>, указав адрес сервиса Mimir: <code><b>http://mimir-nginx:80/prometheus</b></code>.</li></ol>
 
@@ -356,9 +356,9 @@
 </div>
  
     </footer>
-    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jquery1.min.js"></script>
     <iframe name="hmnavigation" style="display:none!important"></iframe>
-    <script src="./jquery-ui.js"></script>
+    <!--<script src="./jquery-ui.js"></script> -->
     <script src="./jquery-ui.min.js"></script>
     <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
     <script src="./jquery.tocify.min.js"></script>
