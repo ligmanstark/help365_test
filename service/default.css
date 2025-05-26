@@ -456,7 +456,7 @@ input[type="text"]:not(.ReportTypo input):not(.ReportTypo-comment) {
   position: sticky;
   top: 80px;
   /*display: flex;  */
-  max-height: calc(100vh - 80px);
+  /*max-height: calc(100vh - 80px);*/
   transition: top .2s linear;
 }
 
@@ -1967,7 +1967,7 @@ code {
  .article__header{
    min-height: 58px;
  }
- 
+
 .article__badge {
   height: 26px;
   min-width: 34px;
