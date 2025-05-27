@@ -36,3 +36,7 @@
 .table-of-contents.quick-right .tocify-item.active a {
   color: #1E6599 !important;
 }
+
+p > span + code {
+  display: inline-block;
+}

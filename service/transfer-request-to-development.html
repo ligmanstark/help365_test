@@ -1,0 +1,324 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>Кейс: автоматизация и фиксирование передачи обращения в разработку</title>
+    <meta name="generator" content="Help+Manual" />
+    <meta name="keywords" content="" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Задача: техподдержка в ИТ-компании принимает обращения от клиентов через ServiceDesk. Если для решения запроса нужно исправить ошибку в работе программного продукта, создаётся..." />
+    <meta name="picture" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Cправка по Low-code платформе ELMA365" />
+    <meta property="og:url" content="https://elma365.com/ru/help" />
+    <meta property="og:image" content="" />
+    <meta property="og:site_name" content="ELMA365" />                                                              
+    <link rel="icon" href="favicon.png" type="image/png" />
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./jquery-ui.min.css" />
+    <link rel="stylesheet" href="default.css" />
+    <link rel="stylesheet" href="./search-yandex.css" />
+    <link rel="stylesheet" href="./article.css" />
+    <link rel="stylesheet" href="./glossary.css" />
+    <link rel="stylesheet" href="./theme.css" />
+    
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+
+<body>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-M6ETBEC1R9"></script><script>window.dataLayer=window.dataLayer || []; function gtag(){dataLayer.push(arguments);}gtag('js', new Date()); gtag('config', 'G-M6ETBEC1R9');</script>
+    <script>!function(e,t,c,n,r,a,m){e.ym=e.ym||function(){(e.ym.a=e.ym.a||[]).push(arguments)},e.ym.l=1*new Date;for(var s=0;s<document.scripts.length;s++)if(document.scripts[s].src===n)return;a=t.createElement(c),m=t.getElementsByTagName(c)[0],a.async=1,a.src=n,m.parentNode.insertBefore(a,m)}(window,document,"script","https://mc.yandex.ru/metrika/tag.js"),ym(83179930,"init",{clickmap:!0,trackLinks:!0,accurateTrackBounce:!0,webvisor:!0})</script><noscript><div><img alt=""src=https://mc.yandex.ru/watch/83179930 style=position:absolute;left:-9999px></div></noscript> 
+    
+    ﻿<header class="header elma-365">
+  <div class="container">
+    <a class="header__logo" href="https://elma365.com/ru/help">
+      <img src="./logo.svg" alt="header logo">
+    </a>
+ <!-- <div class="hero__search-form" id="search-panel">
+   <form class="search-form" onsubmit="ym(83179930,'reachGoal','poisk')">
+     <label class="search-form__label">
+       <span id="reset-search" class="search__icon"></span>
+       <input class="search-form__input" type="text">
+     </label>
+     <input class="search-form__submit" type="submit" value="Submit">
+   </form>
+  </div>       -->
+  
+     <div class="hero__search-form" id="search-panel"> <form class="search-form"> <label class="search-form__label"> <span id="reset-search" class="search__icon"></span> <input class="search-form__input" type="text"> </label> <input class="search-form__submit" type="submit" value="Submit"> </form> </div> 
+  <div class="hero__search">
+      <a href="#" id="search-icon" class="hero__search-icon">
+        <img src="search-icon-white.svg" alt="search string">
+      </a>
+      <a href="#" id="side-menu-icon" class="hero__side-icon">
+        <img src="side_menu.svg" alt="side menu">
+      </a>
+    </div>  
+  <div class="header__navi">
+        
+        <ul class="header__list"><li><span class="solution-select"><span class="solution-select__selected"></span><svg width="7" height="4" viewBox="0 0 7 4" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L3.5 3.5L6 1" stroke="white" stroke-linecap="round" stroke-linejoin="round"/></svg><ul class="solution-select__list"><li><a class="project-link" href="https://elma365.com/ru/help/platform/get-trial.html">Платформа</a></li><li><a class="project-link" href="https://elma365.com/ru/help/ecm/ecm-functions.html">ECM</a></li><li><a class="project-link" href="https://elma365.com/ru/help/crm/crm_overview.html">CRM</a></li><li><a class="project-link" href="https://elma365.com/ru/help/service/service-functions.html">Service</a></li><li><a class="project-link" href="https://elma365.com/ru/help/projects/projects-functions.html">Проекты</a></li><li><a class="project-link" href="https://elma365.com/ru/help/business_solutions/-elma365-store.html">Бизнес-решения</a></li></ul></span></li><li><a href="https://api.elma365.com/ru/"target="_blank">API</a></li><li><a href="https://tssdk.elma365.com/"target="_blank">SDK</a></li><li><a href="https://community.elma365.com/" target="_blank">Community</a></li><li><a href="https://elma-academy.com/ru/" target="_blank">Академия</a></li><li><a href="https://elma365.com/ru/" target="_blank">Сайт ELMA365</a></li></ul> 
+        
+        
+   </div>
+  </div>
+
+</header>
+
+
+
+    
+    <main class="main container">
+
+        <aside class="sidebar" id="sidebar">
+        <div class="sidebar__header">
+                 <a class="header__logo" href="https://elma365.com/ru/help">
+                    <img src="./logo-light.svg">
+                 </a>
+                    <span class="sidebar__close elma-365-close" id="close"></span>
+            </div>
+            <div class="sidebar__wrapper" id="side-menu">
+                
+            </div>
+        </aside>
+
+        <article class="article" id="article">
+            <div class="article-inner">           
+                <div class="content">
+                    <header class="article__header">
+                    <div class="article__bread" style="display:flex; gap:10px;">
+                        <span id="subcategory" class="search-res__item-category search-res__item-category_subcategory subcategory article__badge"></span>
+                        
+                            <div class="topic__breadcrumbs">     
+                                <p><a href="servicedesk.html">ServiceDesk</a> &gt; Настройка интерфейса и бизнес-логики / Кейс: автоматизация и фиксирование передачи обращения в разработку</p>
+                            </div>
+                        
+                    </div>
+                        <div class="topic__title"><h1 class="p_Heading1"><span class="f_Heading1">Кейс: автоматизация и фиксирование передачи обращения в разработку</span></h1>
+</div>
+                    
+</header>
+                    <section class="article__content">
+                        <div class="scroll-top-inner">
+                            <a href="#h1-article" class="scroll-top"></a>
+                        </div>
+                        <!-- Placeholder for topic body. -->
+                        <p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif; font-weight: bold;">Задача</span><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">: техподдержка в ИТ-компании принимает обращения от клиентов через ServiceDesk. Если для решения запроса нужно исправить ошибку в работе программного продукта, создаётся задача для отдела разработки. Оператор ServiceDesk создает её вручную в баг-трекере, который используется в компании. В карточке обращения он фиксирует передачу информации техническим специалистам и приостанавливает обработку обращения.</span></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif; font-weight: bold;">Решение</span><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">: добавить для приложения </span><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif; font-weight: bold;">Обращения</span><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> новый статус «Передано в разработку», создать бизнес-процесс «Передать в разработку» и добавить на карточку обращения кнопку для его запуска.</span></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Такой бизнес-процесс позволяет:</span></p>
+<ul style="list-style-type:disc">
+<li class="p_Normal">приостанавливать обработку обращения, если по нему ведутся работы в отделе разработки;</li><li class="p_Normal">автоматически устанавливать для обращения статус «Передано в разработку»;</li><li class="p_Normal">фиксировать в карточке обращения ссылку на задачу для технических специалистов;</li><li class="p_Normal">уведомлять автора обращения о том, что по его запросу ведутся работы в отделе разработки. Обращения может создавать любой сотрудник компании, который является пользователем ELMA365 (например, бухгалтер), или <a href="external-users.html" class="topiclink">внешний пользователь портала</a>.</li></ul>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Рассмотрим этапы реализации такой возможности при работе с обращениями в разделе </span><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif; font-weight: bold;">ServiceDesk</span><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">.</span></p>
+<h2 class="p_Heading2"><span class="f_Heading2">Добавление статуса «Передано в разработку»</span></h2>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Чтобы зафиксировать информацию о передаче обращения в отдел разработки и приостановить отсчёт времени на обработку обращения, для приложения </span><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif; font-weight: bold;">Обращения</span><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> нужно создать новый статус «Передано в разработку».</span></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Для этого выполните следующие действия.</span></p>
+<ol style="list-style-type:decimal">
+<li value="1" class="p_Normal">Откройте раздел <span style="font-weight: bold;">ServiceDesk</span>.</li><li value="2" class="p_Normal">Нажмите на значок <img alt="360004420960-1" width="22" height="19" style="margin:0;width:22px;height:19px;border:none" src="360004420960-1.png"/> рядом с названием приложения <span style="font-weight: bold;">Обращения</span>, выберите пункт меню <span style="font-weight: bold;">Поле «Статус»</span> и добавьте статус «Передано в разработку». Статусу будет присвоен код, который используется при работе с <a href="https://elma365.com/ru/help/360009921431.html" target="_blank" class="weblink">API</a>. Подробнее читайте в статье <a href="360009920611.html" class="topiclink">«Поле „Статус“»</a>.</li><li value="3" class="p_Normal">Нажмите на значок <img alt="360004420960-1" width="22" height="19" style="margin:0;width:22px;height:19px;border:none" src="360004420960-1.png"/> рядом с названием приложения <span style="font-weight: bold;">Обращения</span>, выберите пункт меню <span style="font-weight: bold;">Настройка формы</span>.</li><li value="4" class="p_Normal">Перейдите на вкладку <span style="font-weight: bold;">Просмотр</span> и нажмите кнопку <span style="font-weight: bold;">Редактировать форму</span>. Откроется дизайнер интерфейсов.</li><li value="5" class="p_Normal">Откройте настройки виджета <span style="font-weight: bold;">Оставшееся время</span>, нажав <img alt="setting-icon-1" width="20" height="21" style="margin:0;width:20px;height:21px;border:none" src="setting-icon-1.png"/> и выбрав <span style="font-weight: bold;">Перейти в конструктор</span>. Перейдите на вкладку <span style="font-weight: bold;">Контекст</span>.</li><li value="6" class="p_Normal">Для каждого обращения рассчитывается время на его обработку. При установке определённых статусов отсчёт этого времени приостанавливается. Такие статусы обращения определяются в контекстной переменной «Список замораживающих статусов». Добавьте в эту переменную созданный статус. Для этого нажмите на её название и в поле <span style="font-weight: bold;">Значения</span> добавьте статус «Передано в разработку». Коды статуса в этой переменной и в приложении должны совпадать.</li><li value="7" class="p_Normal">Сохраните и опубликуйте виджет <span style="font-weight: bold;">Оставшееся время</span>.</li><li value="8" class="p_Normal">После публикации вернитесь к настройкам виджета <span style="font-weight: bold;">Оставшееся время</span> на форме просмотра приложения <span style="font-weight: bold;">Обращения</span>. Нажмите <img alt="setting-icon-1" width="20" height="21" style="margin:0;width:20px;height:21px;border:none" src="setting-icon-1.png"/> и выберите <span style="font-weight: bold;">Настроить</span>.</li><li value="9" class="p_Normal">В открывшемся окне на вкладке <span style="font-weight: bold;">Основные</span> в поле <span style="font-weight: bold;">Список замораживающих статусов</span> установите флажок напротив созданного статуса «Передано в разработку» и нажмите <span style="font-weight: bold;">Сохранить</span>.</li></ol>
+<p><img alt="transfer-request-to-development-1" width="637" height="450" style="margin:0;width:637px;height:450px;border:none" src="transfer-request-to-development-1.png"/></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Теперь отсчёт времени на обработку обращений со статусом «Передано в разработку» будет приостанавливаться.</span></p>
+<h2 class="p_Heading2"><span class="f_Heading2">Создание бизнес-процесса</span></h2>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">На уровне приложения </span><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif; font-weight: bold;">Обращения</span><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> создайте бизнес-процесс «Передать в разработку». Этот процесс запускает оператор ServiceDesk, если по запросу была создана задача для отдела разработки. Это можно сделать, нажав в карточке обращения на кнопку </span><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif; font-weight: bold;">Передать в разработку</span><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">. В рамках этого процесса:</span></p>
+<ul style="list-style-type:disc">
+<li class="p_Normal">оператор ServiceDesk добавляет в карточку обращения ссылку на задачу для отдела разработки;</li><li class="p_Normal">для обращения устанавливается статус «Передано в разработку»;</li><li class="p_Normal">автор обращения получает на электронную почту письмо с информацией о том, что его обращение было направлено в отдел разработки.</li></ul>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Чтобы создать бизнес-процесс, выполните следующие действия:</span></p>
+<ol style="list-style-type:decimal">
+<li value="1" class="p_Normal">Откройте раздел <span style="font-weight: bold;">ServiceDesk</span>.</li><li value="2" class="p_Normal">Нажмите на значок <img alt="360004420960-1" width="22" height="19" style="margin:0;width:22px;height:19px;border:none" src="360004420960-1.png"/> рядом с названием приложения <span style="font-weight: bold;">Обращения</span>, выберите пункт меню <span style="font-weight: bold;">Бизнес-процессы</span> и добавьте новый процесс, нажав кнопку <span style="font-weight: bold;">+ Процесс</span>. Подробнее читайте в статье <a href="360009921131.html" class="topiclink">«Бизнес-процессы на уровне приложения»</a>.</li></ol>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Рассмотрим, каким образом можно настроить такой процесс.</span></p>
+<h2 class="p_Heading2"><span class="f_Heading2">Модель бизнес-процесса</span></h2>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">На рисунке ниже представлена модель бизнес-процесса «Передать в разработку».</span></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><img alt="transfer-request-to-development-2" width="1254" height="847" style="margin:0;width:1254px;height:847px;border:none" src="transfer-request-to-development-2.png"/></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Когда вы создаете новый процесс, автоматически добавляется динамическая зона ответственности </span><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif; font-weight: bold;">Инициатор</span><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">. Разместите все элементы внутри неё. Подробнее читайте в статье <a href="360012263032.html" class="topiclink">«Зоны ответственности»</a>.</span></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Рассмотрим, из каких элементов состоит модель.</span></p>
+<h3 class="p_Heading3"><a id="start" class="hmanchor"></a><span class="f_Heading3">Стартовое событие</span></h3>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">При запуске процесса передачи обращения оператор ServiceDesk указывает ссылку на задачу, созданную по этому обращению для отдела разработки, и добавляет комментарий. Чтобы реализовать такую возможность, нужно настроить форму запуска процесса. Для этого выполните следующие действия.</span></p>
+<ol style="list-style-type:decimal">
+<li value="1" class="p_Normal">На модели процесса откройте окно настроек стартового события, перейдите на вкладку <span style="font-weight: bold;">Форма</span> и создайте новую форму. Подробнее читайте в статье <a href="360012495991.html" class="topiclink">«Вкладка &quot;Формы&quot;»</a>.</li><li value="2" class="p_Normal">Удалите с формы виджет <span style="font-weight: bold;">Стандартная форма элемента</span>.</li><li value="3" class="p_Normal">Чтобы зафиксировать ссылку на задачу для отдела разработки и комментарий оператора ServiceDesk, нужно добавить в <a href="process_context.html" class="topiclink">контекст бизнес-процесса</a> переменные «Ссылка на тикет» типа <span style="font-weight: bold;">Ссылка</span> и Комментарий типа <span style="font-weight: bold;">Строка</span>. Далее вы можете добавить их на форму запуска процесса или на форму просмотра элемента приложения <span style="font-weight: bold;">Обращения</span>.</li><li value="4" class="p_Normal">В дизайнере бизнес-процессов перейдите на вкладку <span style="font-weight: bold;">Контекст</span> и нажмите кнопку <span style="font-weight: bold;">+ Добавить</span>.</li><li value="5" class="p_Normal">В открывшемся окне укажите отображаемое имя переменной, имя свойства и выберите тип данных.</li><li value="6" class="p_Normal">Нажмите кнопку <span style="font-weight: bold;">Создать</span>.</li><li value="7" class="p_Normal">Разместите на форме запуска поля <span style="font-weight: bold;">Ссылка на тикет</span> и <span style="font-weight: bold;">Комментарий</span> и сделайте их обязательными для заполнения. При запуске процесса оператор ServiceDesk должен будет добавить ссылку на тикет для отдела разработки и комментарий.</li></ol>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><img alt="transfer-request-to-development-3" width="246" height="345" style="margin:0;width:246px;height:345px;border:none" src="transfer-request-to-development-3.png"/></p>
+<ol style="list-style-type:decimal" start="5">
+<li value="5" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;">На вкладке <span style="font-weight: bold;">Скрипты</span> можно создать клиентский скрипт, в котором проверяется наличие ссылки на задачу для отдела разработки. Если ссылку указали в карточке обращения, то поле будет заполнено автоматически.</li></ol>
+<p class="p_CodeExample" style="page-break-inside: auto; page-break-after: avoid;"><span class="f_CodeExample">async function onInit() {</span><br />
+<span class="f_CodeExample"> </span><span class="f_CodeExample" style="color: #ffffff;">&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">const</span><span class="f_CodeExample"> ticket = await Context.data.obrasheniya!.fetch();</span><br />
+<span class="f_CodeExample"> </span><span class="f_CodeExample" style="color: #ffffff;">&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">if</span><span class="f_CodeExample"> (ticket.data.link_on_tiket)</span><br />
+<span class="f_CodeExample"> </span><span class="f_CodeExample" style="color: #ffffff;">&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample">{</span><br />
+<span class="f_CodeExample"> </span><span class="f_CodeExample" style="color: #ffffff;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample">Context.data.ssylka_na_tiket_v_team = ticket.data.link_on_tiket;</span><br />
+<span class="f_CodeExample"> </span><span class="f_CodeExample" style="color: #ffffff;">&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample">}</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample">}</span></p>
+<p class="p_Normal">где,</p>
+<ul style="list-style-type:disc">
+<li class="p_Normal"><span style="font-weight: bold;">obrasheniya</span> — <a href="process_context.html" class="topiclink">контекстная переменная процесса</a> типа <span style="font-weight: bold;">Приложение</span>, которая ссылается на приложение <span style="font-weight: bold;">Обращения</span>;</li><li class="p_Normal"><span style="font-weight: bold;">ssylka_na_tiket_v_team</span> — контекстная переменная процесса, в которой сохраняется ссылка на задачу для отдела разработки.</li></ul>
+<h3 class="p_Heading3"><span class="f_Heading3">Блок «Скрипт»</span></h3>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">В этом скрипте вычисляется время, которое осталось для работы с обращением. Расчёт оставшегося времени необходим, так как при установке статуса «Передано в разработку» отсчёт времени приостанавливается.</span></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Чтобы настроить этот элемент, выполните следующие действия.</span></p>
+<ol style="list-style-type:decimal">
+<li value="1" class="p_Normal">В настройках элемента на вкладке <span style="font-weight: bold;">Основное</span> в поле <span style="font-weight: bold;">Название</span><span style="font-weight: bold; color: #ff0000;">*</span> укажите название операции, которое будет отображаться в системе.</li><li value="2" class="p_Normal">В поле <span style="font-weight: bold;">Функция</span> нужно привязать к блоку конкретную функцию. Чтобы создать новую функцию, нажмите кнопку <span style="font-weight: bold;">Создать</span>. Введите её название. При этом можно использовать только латинские буквы, цифры и знак подчеркивания. Нажмите <span style="font-weight: bold;">Создать</span>, а затем <span style="font-weight: bold;">Открыть</span>.</li><li value="3" class="p_Normal">Откроется <a href="360028476691.html" class="topiclink">редактор</a>, в котором вы можете написать скрипт. Пример скрипта для вычисления оставшегося времени приведён ниже.</li></ol>
+<p class="p_CodeExample" style="page-break-inside: auto;"><span class="f_CodeExample">async&nbsp;function&nbsp;calcLastTimeSecondMethod():&nbsp;Promise&lt;void&gt;&nbsp;{</span><br />
+<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;const&nbsp;request&nbsp;=&nbsp;await&nbsp;Context.data.obrasheniya!.fetch();</span><br />
+<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;if&nbsp;(request)&nbsp;{</span><br />
+<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;const&nbsp;lastTime&nbsp;=&nbsp;request.data.lastTime;</span><br />
+<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;const&nbsp;changeDate&nbsp;=&nbsp;request.data.statusChangeDate;</span><br />
+<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;const&nbsp;date_now&nbsp;=&nbsp;new&nbsp;Datetime();</span><br />
+<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(lastTime&nbsp;!==&nbsp;undefined&nbsp;&amp;&amp;&nbsp;changeDate)&nbsp;{ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;const&nbsp;workedDuration&nbsp;=&nbsp;await&nbsp;System.productionSchedule.getWorkingTime(changeDate,&nbsp;date_now);</span><br />
+<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;const&nbsp;workedTime&nbsp;=&nbsp;workedDuration?.seconds&nbsp;??&nbsp;0;</span><br />
+<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;const&nbsp;newLastTime&nbsp;=&nbsp;lastTime&nbsp;-&nbsp;workedTime;</span><br />
+<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Context.data.ostavsheesya_vremya&nbsp;=&nbsp;newLastTime&nbsp;&gt;=&nbsp;0&nbsp;?&nbsp;newLastTime&nbsp;:&nbsp;0;</span><br />
+<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;request.data.lastTime&nbsp;=&nbsp;newLastTime&nbsp;&gt;=&nbsp;0&nbsp;?&nbsp;newLastTime&nbsp;:&nbsp;0;</span><br />
+<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span><br />
+<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;request.data.statusChangeDate&nbsp;=&nbsp;date_now;</span><br />
+<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;await&nbsp;request.save();</span><br />
+<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;}</span><br />
+<span class="f_CodeExample">}</span></p>
+<p class="p_Normal">где,</p>
+<ul style="list-style-type:disc">
+<li class="p_Normal"><span style="font-weight: bold;">obrasheniya</span> — контекстная переменная процесса типа <span style="font-weight: bold;">Приложение</span>, которая ссылается на приложение <span style="font-weight: bold;">Обращения</span>;</li><li class="p_Normal"><span style="font-weight: bold;">statusChangeDate</span> — <a href="360028941112.html" class="topiclink">свойство приложения</a> <span style="font-weight: bold;">Обращения</span>, в котором сохраняется дата, когда для обращения был установлен статус «В ожидании»;</li><li class="p_Normal"><span style="font-weight: bold;">ostavsheesya_vremya</span> — контекстная переменная процесса, в которой сохраняется время, оставшееся на обработку обращения.</li></ul>
+<ol style="list-style-type:decimal" start="4">
+<li value="4" class="p_Normal">Во время исполнения процесса может возникнуть ошибка скрипта. Чтобы определить, какие действия должны выполняться в этом случае, перейдите на вкладку <span style="font-weight: bold;">Обработка ошибок</span>.</li><li value="5" class="p_Normal">Включите опцию <span style="font-weight: bold;">Повторить выполнение</span>, чтобы скрипт выполнялся повторно.</li><li value="6" class="p_Normal">В поле <span style="font-weight: bold;">Количество повторений</span> укажите, сколько попыток выполнения скрипта будет предприниматься.</li><li value="7" class="p_Normal">В поле <span style="font-weight: bold;">Время задержки между повторениями (сек)</span> определите частоту попыток воспроизведения скрипта.</li><li value="8" class="p_Normal">Нажмите кнопку <span style="font-weight: bold;">Сохранить</span>.</li></ol>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Подробнее читайте в статье <a href="360027203731.html" class="topiclink">«Скрипт»</a>.</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Блок «Изменение элемента»</span></h3>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Чтобы зафиксировать ссылку на задачу для отдела разработки, в контекст бизнес-процесса была добавлена переменная «Ссылка на тикет» типа </span><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif; font-weight: bold;">Ссылка</span><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">. Подробнее об этом можно прочитать в пункте<a href="transfer-request-to-development.html#start" class="topiclink"> «Стартовое событие»</a>.</span></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Блок «Изменение элемента» позволяет сохранить в карточке обращения ссылку на задачу для отдела разработки. Ссылка добавляется в карточку, как только оператор ServiceDesk указал её при запуске процесса.</span></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Выполните следующие действия:</span></p>
+<ol style="list-style-type:decimal">
+<li value="1" class="p_Normal">В настройках элемента на вкладке <span style="font-weight: bold;">Основное</span> укажите название операции и переменную «Обращение», которая ссылается на приложение <span style="font-weight: bold;">Обращения</span>. Эта переменная уже создана в контексте, так как процесс «Передать в разработку» был создан на уровне приложения.</li><li value="2" class="p_Normal">Перейдите на вкладку <span style="font-weight: bold;">Значение полей</span>. В колонке <span style="font-weight: bold;">Поле Приложения</span> укажите поле, которое необходимо будет изменить. В нашем случае это «Ссылка на тикет». В колонке <span style="font-weight: bold;">Переменная процесса</span> укажите соответствующую переменную процесса, в которой будет хранится ссылка.</li><li value="3" class="p_Normal">Нажмите кнопку  <span style="font-weight: bold;">Сохранить</span>.</li></ol>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Подробнее читайте в статье <a href="360012454020.html" class="topiclink">«Изменение элемента»</a>.</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Блок «Управление статусом»</span></h3>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Этот элемент позволяет изменить статус обращения.</span></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">В настройках элемента укажите название, контекстную переменную «Обращение», которая ссылается на приложение </span><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif; font-weight: bold;">Обращения</span><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">, и выберите статус, который будет установлен на этом этапе бизнес-процесса. В данном случае нужно указать статус «Передано в разработку».</span></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">После завершения настроек нажмите </span><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif; font-weight: bold;">Сохранить</span><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">.</span></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Подробнее читайте в статье <a href="360012263332.html" class="topiclink">«Управление статусом»</a>.</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Блок «Присваивание»</span></h3>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 13px; color: #394149;">После того как для обращения был установлен статус «Передано в разработку», автор запроса должен получить письмо о том, что по его обращению ведутся работы в отделе разработки. Сначала в рамках процесса определяется автор обращения, а на следующем этапе ему отправляется письмо.</span></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Обращения может создавать любой сотрудник компании, который является пользователем ELMA365 (например, бухгалтер), или <a href="external-users.html" class="topiclink">внешний пользователь портала</a>. </span><span style="font-size: 13px; color: #394149;">Автор обращения сохраняется в свойстве </span><span style="font-size: 13px; font-weight: bold; color: #394149;">Автор</span><span style="font-size: 13px; color: #394149;"> приложения </span><span style="font-size: 13px; font-weight: bold; color: #394149;">Обращения</span><span style="font-size: 13px; color: #394149;">. Адрес электронной почты автора обращения хранится во вложенном свойстве </span><span style="font-size: 13px; font-weight: bold; color: #394149;">Эл. почта</span><span style="font-size: 13px; color: #394149;">. Если обращение создал пользователь ELMA365, адрес почты передается из его </span><span style="font-size: 13px;"><a href="360016398552.html" class="topiclink">профиля</a></span><span style="font-size: 13px; color: #394149;">.</span><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> Если обращение создал внешний пользователь портала, адрес почты передается из системного справочника </span><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif; font-weight: bold;">Внешние пользователи</span><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">.</span></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Для определения автора обращения можно использовать элемент </span><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif; font-weight: bold;">Присваивание</span><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">. Для работы с ним нужно добавить в процессе контекстную переменную «Автор обращения» типа </span><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif; font-weight: bold;">Пользователи</span><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">.</span></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 13px; color: #394149;">Выполните следующие действия.</span></p>
+<ol style="list-style-type:decimal">
+<li value="1" class="p_Normal">В дизайнере бизнес-процессов перейдите на вкладку <span style="font-weight: bold;">Контекст</span> и нажмите кнопку <span style="font-weight: bold;">+ Добавить</span>.</li><li value="2" class="p_Normal">В открывшемся окне укажите отображаемое имя переменной, имя свойства и выберите тип данных.</li><li value="3" class="p_Normal">Нажмите кнопку<span style="font-weight: bold;"> Создать</span>.</li><li value="4" class="p_Normal">Откройте вкладку <span style="font-weight: bold;">Схема</span> в настройках элемента <span style="font-weight: bold;">Присваивание</span> на вкладке <span style="font-weight: bold;">Основное</span> укажите его название.</li><li value="5" class="p_Normal">Перейдите на вкладку <span style="font-weight: bold;">Таблица соответствия</span>.</li><li value="6" class="p_Normal">В колонке <span style="font-weight: bold;">Поля контекста</span> выберите добавленную контекстную переменную процесса «Автор обращения», в которой будет храниться пользователь, который создал запрос.</li><li value="7" class="p_Normal">В колонке <span style="font-weight: bold;">Значения</span> выберите поле <span style="font-weight: bold;">Автор</span> приложения <span style="font-weight: bold;">Обращения</span>. Значение этого поля будет присваиваться контекстной переменной «Автор обращения».</li><li value="8" class="p_Normal">Нажмите <span style="font-weight: bold;">Сохранить</span>.</li></ol>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Подробнее читайте в статье <a href="360020300571.html" class="topiclink">«Присваивание»</a>.</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Блок «Оповещение»</span></h3>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 13px; color: #394149;">Этот элемент позволяет отправлять в ленту оповещение о том, что обращение было передано в отдел разработки.</span></p>
+<ol style="list-style-type:decimal">
+<li value="1" class="p_Normal">В настройках элемента на вкладке <span style="font-weight: bold;">Основное</span> укажите название, тему и текст сообщения. В теме и тексте сообщения можно использовать контекстные переменные. Для этого нажмите на значок <span style="font-weight: bold;">{+}</span> в правом углу поля. Например, в текст можно добавить комментарий, добавленный при запуске процесса «Передать в разработку».</li><li value="2" class="p_Normal">В поле <span style="font-weight: bold;">Автор</span> укажите пользователя, от имени которого будет отправлено сообщение. Выберите опцию <span style="font-weight: bold;">Текущий пользователь</span>. При этом автором сообщения будет оператор ServiceDesk, который запустил этот процесс.</li><li value="3" class="p_Normal">В поле <span style="font-weight: bold;">Ассоциированный объект</span> укажите контекстную переменную, в которой хранится приложение <span style="font-weight: bold;">Обращение</span>. Оповещения будут сохраняться в ленту, ассоциированную с этим приложением. Просмотреть ленту можно в карточке обращения на вкладке<span style="font-weight: bold;"> История</span>.</li><li value="4" class="p_Normal">Перейдите на вкладку <span style="font-weight: bold;">Получатели</span> и укажите пользователей, которым придёт оповещение о смене статуса обращения. В нашем случае оповещение должен получить автор обращения. Для этого нажмите кнопку <span style="font-weight: bold;">Добавить</span> и выберите контекстную переменную «Автор обращения».</li><li value="5" class="p_Normal">Нажмите <span style="font-weight: bold;">Сохранить</span>.</li></ol>
+<p style="margin: 7px 0 7px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Подробнее читайте в статье <a href="360012495791.html" class="topiclink">«Оповещение»</a>.</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Блок «Оповещение на email»</span></h3>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 13px; color: #394149;">После смена статуса автор обращения должен получить на электронную почту письмо о том, что его обращение направлено в отдел разработки.</span></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Автор обращения определяется при помощи блока </span><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif; font-weight: bold;">Присваивание</span><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">.</span></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 13px; color: #394149;">Отправить письмо на электронную почту можно при помощи элемента </span><span style="font-size: 13px; font-weight: bold; color: #394149;">Оповещение на email</span><span style="font-size: 13px; color: #394149;">.</span></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 13px; color: #394149;">Чтобы использовать эту функцию в </span><span style="font-size: 13px;">бизнес-процессе</span><span style="font-size: 13px; color: #394149;">, сначала нужно подключить её в настройках системы. Подробнее об этом читайте в статье </span><span style="font-size: 13px;"><a href="360011443400.html" class="topiclink">«Оповещение на email»</a></span><span style="font-size: 13px; color: #394149;">.</span></p>
+<ol style="list-style-type:decimal">
+<li value="1" class="p_Normal">В настройках блока укажите название, в поле <span style="font-weight: bold;">Получатель</span><span style="font-weight: bold; color: #ff0000;">*</span> укажите контекстную переменную, в которой хранится адрес электронной почты автора обращения. Для этого нажмите на <span style="font-weight: bold;">{+}</span> и выберите переменную «Эл. почта», к которой можно перейти, раскрыв в списке <span style="font-weight: bold;">Обращение — Автор</span>.</li><li value="2" class="p_Normal">В поле <span style="font-weight: bold;">Тема письма</span><span style="font-weight: bold; color: #ff0000;">*</span> напишите короткую и информативную тему. Например, «Обращение передано в отдел разработки». Также в теме можно использовать контекстные переменные.</li><li value="3" class="p_Normal">В поле <span style="font-weight: bold;">Текст письма</span> впишите более подробную информацию. Можно добавлять контекстные переменные. Вы можете использовать HTML разметку, чтобы отформатировать текст нужным образом.</li><li value="4" class="p_Normal">Нажмите <span style="font-weight: bold;">Сохранить</span>.</li></ol>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Чтобы процесс можно было использовать в работе, его нужно опубликовать. Для этого нажмите на верхней панели кнопки </span><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif; font-weight: bold;">Сохранить</span><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> и </span><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif; font-weight: bold;">Опубликовать</span><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">. Подробнее можно прочитать в статье <a href="360012495291.html" class="topiclink">«Публикация бизнес-процесса»</a>.</span></p>
+<h2 class="p_Heading2"><span class="f_Heading2">Добавление кнопки на карточку обращения</span></h2>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Процесс «Передать в разработку» запускает оператор ServiceDesk, если по обращению была создана задача для отдела разработки. Для этого он должен перейти в карточку обращения и нажать кнопку </span><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif; font-weight: bold;">Передать в разработку</span><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">.</span></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Чтобы реализовать такую возможность, требуется добавить на карточку обращения кнопку для запуска процесса. Для этого выполните следующие действия.</span></p>
+<ol style="list-style-type:decimal">
+<li value="1" class="p_Normal">Откройте карточку обращения и в левом нижнем углу нажмите на значок <img alt="setting-icon-2" width="22" height="25" style="margin:0;width:22px;height:25px;border:none" src="setting-icon-2.png"/> .</li><li value="2" class="p_Normal">Нажмите на значок <img alt="setting-icon-3" width="18" height="20" style="margin:0;width:18px;height:20px;border:none" src="setting-icon-3.png"/> и выберите <span style="font-weight: bold;">Добавить кнопку запуска процесса</span>.</li><li value="3" class="p_Normal">Перейдите к настройкам кнопки, нажав <img alt="360004420960-1" width="22" height="19" style="margin:0;width:22px;height:19px;border:none" src="360004420960-1.png"/> справа от её названия.</li><li value="4" class="p_Normal">Укажите текст, цвет кнопки.</li><li value="5" class="p_Normal">В поле <span style="font-weight: bold;">Показывать</span> выберите <span style="font-weight: bold;">Если есть доступ к редактированию</span>.</li><li value="6" class="p_Normal">Выберите созданный бизнес-процесс «Передать в разработку».</li><li value="7" class="p_Normal">В поле <span style="font-weight: bold;">Связать с полем</span> укажите контекстную переменную «Обращение», в которую будет передаваться элемент приложения.</li><li value="8" class="p_Normal">Чтобы форма запуска процесса отображалась над кнопкой, а не в отдельном окне, установите флажок <span style="font-weight: bold;">Рисовать форму рядом с кнопкой</span>.</li><li value="9" class="p_Normal">Выберите стандартный размер формы запуска бизнес-процесса.</li><li value="10" class="p_Normal">Кнопка <span style="font-weight: bold;">Передать в разработку</span> будет отображаться только в карточке обращения со статусами «Принято», «В работе» и «В ожидании». Для этого установите флажок <span style="font-weight: bold;">Только для выбранных статусов</span> и выберите статусы.</li></ol>
+<p style="line-height: 1.28; margin: 0 0 11px 34px;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Подробнее читайте в статье <a href="button-types-settings.html#start-proccess-button" class="topiclink">«Типы и настройки кнопок»</a>.</span></p>
+
+                        <div class="bottom-nav">
+                            
+                                <a id="prev-link" class="topic__navi_prev" href="change-request-page.html">
+                                    <span class="bottom-nav__arrow bottom-nav__arrow--prev"></span> <span
+                                        class="bottom-nav__link">change-request-page.html</span>
+                                </a>
+                            
+                            
+                                <a id="next-link" class="topic__navi_next" href="comparison-of-functionals-servicedesk.html">
+                                    <span class="bottom-nav__link">comparison-of-functionals-servicedesk.html</span> <span
+                                        class="bottom-nav__arrow bottom-nav__arrow--next"></span>
+                                </a>
+                            
+                        </div>
+                        <!-- добавляет на страницу строку блок Была ли статья полезной?  -->
+                          <div class="feedback-wrap"><div class="feedback" id="feedback"><span><b>Была ли статья полезной?</b></span><form action="" method="POST" class="feedback-form" id="feedback-form"><div class="feedback__popup feedback__popup-response" id="feedback__popup_thx">Спасибо за ваш отзыв!</div><div id="feedback-success-popup"><div class="wrap"><button type="button" class="feedback-popup-close">×</button><svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_212_2187)"><path d="M22 0.6875C10.2294 0.6875 0.6875 10.2294 0.6875 22C0.6875 33.7706 10.2294 43.3125 22 43.3125C33.7706 43.3125 43.3125 33.7706 43.3125 22C43.3125 10.2294 33.7706 0.6875 22 0.6875ZM22 40.5625C11.8023 40.5625 3.4375 32.3078 3.4375 22C3.4375 11.8024 11.6922 3.4375 22 3.4375C32.1977 3.4375 40.5625 11.6922 40.5625 22C40.5625 32.1976 32.3078 40.5625 22 40.5625ZM34.1713 16.933L18.6613 32.3186C18.257 32.7197 17.604 32.7171 17.203 32.3128L9.82283 24.873C9.42176 24.4686 9.42434 23.8157 9.82867 23.4146L10.5609 22.6884C10.9652 22.2873 11.6181 22.2899 12.0192 22.6942L17.9468 28.6697L31.9926 14.7366C32.3969 14.3356 33.0498 14.3382 33.4509 14.7425L34.1772 15.4747C34.5783 15.879 34.5757 16.532 34.1713 16.933Z" fill="#27AE60"></path></g><defs><clipPath id="clip0_212_2187"><rect width="44" height="44" fill="white"></rect></clipPath></defs></svg><p>Ваш отзыв успешно отправлен!</p><span>Спасибо за обратную связь.</span></div></div><div class="feedback__popup" id="feedback__popup_why"><button type="button" class="feedback-popup-close">×</button><div class="feedback__popup-header">Уточните, почему:</div><input type="radio" name="category" id="bad_recommendation" value="bad_recommendation"><label for="bad_recommendation">Рекомендации не помогли</label><input type="radio" name="category" id="difficult_text" value="difficult_text"><label for="difficult_text">Текст трудно понять</label><input type="radio" name="category" id="no_answer" value="no_answer"><label for="no_answer">Нет ответа на мой вопрос</label><input type="radio" name="category" id="bad_header" value="bad_header"><label for="bad_header">Содержание статьи не соответствует заголовку</label><input type="radio" name="category" id="other_reason" value="other_reason"><label for="other_reason">Другая причина</label></div><div class="feedback__popup" id="feedback__popup-other"><button type="button" class="feedback-popup-close">×</button>   <div class="feedback__popup-header">Расскажите, что вам не понравилось в статье:</div><textarea class="feedback__textarea" name="other" id=""></textarea><input type="submit" class="feedback__other-btn" value="Отправить"></div><div class="feedback-form__btn-group"><input type="radio" name="useful" id="feedback__useful_yes" value="true"><label for="feedback__useful_yes"><img src="like.svg"/><span class="feedback-form__btn-group_yes-btn">Да</span></label><input type="radio" name="useful" id="feedback__useful_no" value="false"><label for="feedback__useful_no"><img src="dislike.svg"/><span class="feedback-form__btn-group_no-btn">Нет</span></label></div><select name="category"><option disabled>Выберите вариант</option><option value="bad_recommendation" selected>Рекомендации не помогли</option><option value="difficult_text">Текст трудно понять</option><option value="no_answer">Нет ответа на мой вопрос</option><option value="bad_header">Содержание статьи не соответствует заголовку</option><option value="other_reason">Другая причина</option></select><input type="submit"></form></div></div>
+                           
+                    </section>
+                </div>
+                <aside class="article__sidebar" style="display:none">
+                    <input type="checkbox" />
+                    <div class="article__arrow"></div>
+                    <div class="table-of-contents elma365-right" id="toc2Content">
+                        <h3 class="h3-toc">В этой статье</h3>
+                        <nav id="toc2"></nav>
+                    </div>
+                </aside>
+            </div>
+        </article>
+    </main>               
+    <footer class="footer">
+        <div class="footer-container">
+  <div class="footer-mobile">
+    
+      <ul class="footer-mobile__list"><li><a href="https://api.elma365.com/ru/" target="_blank">API</a></li><li><a href="https://tssdk.elma365.com/" target="_blank">TS SDK</a></li><li><a href="https://community.elma365.com/" target="_blank">Community</a></li><li><a href="https://elma-academy.com/ru/elma365" target="_blank">Академия</a></li></ul><ul class="footer-mobile__list"><li><a href="https://elma365.com/ru/help/platform/get-trial.html">Платформа</a></li><li><a href="https://elma365.com/ru/help/ecm/ecm-functions.html">ECM</a></li><li><a href="https://elma365.com/ru/help/service/service-functions.html">Service</a></li><li><a href="https://elma365.com/ru/help/projects/projects-functions.html">Проекты</a></li></ul>
+    
+    
+  </div>
+  <div class="container">
+    <div class="footer-wrap">
+      
+        <div><span class="mobile-question-popup">Отправить фидбэк</span><form method="POST" action class="question__popup question-xs" id="question__popup"><div class="question-wrap"><span class="close"></span><span class="title">Задать вопрос</span><label for="help_question" style="display: none;"></label><textarea name="help_question" id="help_question"></textarea><input type="submit" value="Отправить"></div></form><div class="hidden fade-in question-success-xs">Ваш фидбэк отправлен.</div></div>
+      
+      <div class="footer-flex-b">
+        <div class="footer-top">
+          <span class="footer-copy">&copy; 2025 
+              ELMA365
+            
+            
+          </span>
+          
+            <a href="https://navigator.sk.ru/orn/1122971" target="_blank">
+              <img src="sk-resident.svg" alt="sk icon" class="footer-img" width="117" height="34">
+            </a>
+            
+        </div>
+        <div class="footer-line">
+          
+            <div class="footer-line-copy">
+              <span class="footer-copy">&copy; 2025 
+                  ELMA365
+                
+                
+              </span>
+            </div>
+            
+              <ul class="footer-list">
+                
+                  <li class="footer-item"><a href="https://elma365.com/ru/" target="_blank" class="footer-link" style="color: #0D4A75;"><img src="browse.svg" alt="browse icon" class="footer-img">elma365.com</a></li><li class="footer-item"><a href="https://www.youtube.com/user/ELMABPM" target="_blank" class="footer-link"><img src="yt.svg" alt="youtube icon" class="footer-img"></a></li><li class="footer-item"><a href="https://vk.com/elma_bpm" target="_blank" class="footer-link"><img src="vk.svg" alt="vk icon" class="footer-img"></a></li><li class="footer-item"><a href="https://t.me/elmaday" target="_blank" class="footer-link"><img src="tg.svg" alt="telegram icon" class="footer-img"></a></li><li class="footer-item"><a href="https://dzen.ru/elma" target="_blank" class="footer-link"><img src="dzen.svg" alt="dzen icon" class="footer-img"></a></li>
+                
+                
+                  <li class="footer-item">
+                    <a href="https://navigator.sk.ru/orn/1122971" target="_blank">
+                      <img src="sk-resident.svg" alt="sk icon" class="footer-img" width="117" height="34">
+                    </a>
+                  </li>
+                
+                
+              </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a href="#" class="arrow-top"></a>
+</div>
+ 
+    </footer>
+<!--    <script type="text/javascript" src="jquery1.min.js"></script>-->
+    <iframe name="hmnavigation" style="display:none!important"></iframe>
+    <!--<script src="./jquery-ui.js"></script> -->
+    <script src="./jquery-ui.min.js"></script>
+    <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
+    <script src="./jquery.tocify.min.js"></script>
+    <script src="./TypoReporter.min.js"></script>
+    <script src="./google-search.js"></script>
+    <script src="./main.js"></script>
+</body>
+
+</html>

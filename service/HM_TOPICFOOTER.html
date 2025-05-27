@@ -1,23 +1,62 @@
 <div class="footer-container">
   <div class="footer-mobile">
     <IFNOT_QUICKBPM>
-    <%FOOTER_LIST_MOB_DEFAULT%>
+      <%FOOTER_LIST_MOB_DEFAULT%>
     </IFNOT_QUICKBPM>
-    <IF_QUICKBPM><%FOOTER_MOBILE_LIST_QUICK%></IF_QUICKBPM>
+    <IF_QUICKBPM>
+      <%FOOTER_MOBILE_LIST_QUICK%>
+    </IF_QUICKBPM>
   </div>
-  <div class="footer-wrap">
-    <IFNOT_QUICKBPM>
-      <%FOOTER_QUESTION_POPUP%>
-    </IFNOT_QUICKBPM>
-    <div class="footer-flex-b">
-      <span class="footer-copy">&copy; <%YEAR%> <IFNOT_QUICKBPM><%AUTHOR%></IFNOT_QUICKBPM><IF_QUICKBPM><%AUTHOR_QUICK%></IF_QUICKBPM></span>
-      <ul class="footer-list">
-        <IFNOT_QUICKBPM><%HVAR_FOOTER_SOCIAL_LINKS%></IFNOT_QUICKBPM>
-        <li class="footer-item">
-            <a href="#" class="arrow-top" style="display: block;"></a>
-        </li>
-        <IF_QUICKBPM><%HVAR_FOOTER_SOCIAL_LINKS_QUICK%></IF_QUICKBPM>
-      </ul>
+  <div class="container">
+    <div class="footer-wrap">
+      <IFNOT_QUICKBPM>
+        <%FOOTER_QUESTION_POPUP%>
+      </IFNOT_QUICKBPM>
+      <div class="footer-flex-b">
+        <div class="footer-top">
+          <span class="footer-copy">&copy; 2025 <IFNOT_QUICKBPM>
+              <%AUTHOR%>
+            </IFNOT_QUICKBPM>
+            <IF_QUICKBPM>
+              <%AUTHOR_QUICK%>
+            </IF_QUICKBPM>
+          </span>
+          <IFNOT_QUICKBPM>
+            <a href="https://navigator.sk.ru/orn/1122971" target="_blank">
+              <img src="sk-resident.svg" alt="sk icon" class="footer-img" width="117" height="34">
+            </a>
+            <IFNOT_QUICKBPM>
+        </div>
+        <div class="footer-line">
+          <IFNOT_QUICKBPM>
+            <div class="footer-line-copy">
+              <span class="footer-copy">&copy; 2025 <IFNOT_QUICKBPM>
+                  <%AUTHOR%>
+                </IFNOT_QUICKBPM>
+                <IF_QUICKBPM>
+                  <%AUTHOR_QUICK%>
+                </IF_QUICKBPM>
+              </span>
+            </div>
+            <IFNOT_QUICKBPM>
+              <ul class="footer-list">
+                <IFNOT_QUICKBPM>
+                  <%HVAR_FOOTER_SOCIAL_LINKS%>
+                </IFNOT_QUICKBPM>
+                <IFNOT_QUICKBPM>
+                  <li class="footer-item">
+                    <a href="https://navigator.sk.ru/orn/1122971" target="_blank">
+                      <img src="sk-resident.svg" alt="sk icon" class="footer-img" width="117" height="34">
+                    </a>
+                  </li>
+                </IFNOT_QUICKBPM>
+                <IF_QUICKBPM>
+                  <%HVAR_FOOTER_SOCIAL_LINKS_QUICK%>
+                </IF_QUICKBPM>
+              </ul>
+        </div>
+      </div>
     </div>
   </div>
+  <a href="#" class="arrow-top"></a>
 </div>
