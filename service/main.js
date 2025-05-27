@@ -489,93 +489,12 @@ $(document).ready(function () {
 
   $("#side-menu").load("index.html #toc", function () {
     //TODO вызавает каждый раз ререндер при изменении href(добавление якоря как например)
-    // window.addEventListener("popstate", () => {
-    //   $("#article").load(`${window.location.href} .article-inner`, function () {
-    //     loadBottomLinks();
-    //     prepareContent();
-    //   });
-    // });
-    
-    
-     function onUrlChange(callback) {
-
-      const originalPushState = history.pushState;
-
-      const originalReplaceState = history.replaceState;
-
-
-
-      const trigger = () => {
-
-        callback();
-
-      };
-
-
-
-      history.pushState = function () {
-
-        originalPushState.apply(this, arguments);
-
-        trigger();
-
-      };
-
-
-
-      history.replaceState = function () {
-
-        originalReplaceState.apply(this, arguments);
-
-        trigger();
-
-      };
-
-
-
-      window.addEventListener("popstate", trigger);
-
-    }
-
-
-
-    // Использование:
-
-    let lastUrl = window.location.pathname + window.location.search;
-
-
-
-    onUrlChange(() => {
-
-      const currentUrl = window.location.pathname + window.location.search;
-
-      if (currentUrl !== lastUrl) {
-
-        lastUrl = currentUrl;
-
-
-
-        $("#article").load(
-
-          `${window.location.href} .article-inner`,
-
-          function () {
-
-            loadBottomLinks();
-
-            prepareContent();
-
-          }
-
-        );
-
-      }
-
-    });
-
-
-
-    //
+     window.addEventListener("popstate", () => {
+       $("#article").load(`${window.location.href} .article-inner`, function () {
+         loadBottomLinks();
+         prepareContent();
+       });
+     });
     
     loadBottomLinks();
     hideAllSideUls();
