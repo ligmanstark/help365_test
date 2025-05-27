@@ -1,0 +1,283 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>External app in modules</title>
+    <meta name="generator" content="Help+Manual" />
+    <meta name="keywords" content="" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="An external app can be connected as part of the module. It provides access to BRIX protected resources for external services using the OAuth2 authorization protocol." />
+    <meta name="picture" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Full documentation for BRIX365 platform. Low-code developer guide. User guide. Admin guide. Developer guide." />
+    <meta property="og:url" content="https://brix365.com/en/help" />
+    <meta property="og:image" content="" />                                                              
+    <link rel="icon" href="favicon.png" type="image/png" />
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./jquery-ui.min.css" />
+    <link rel="stylesheet" href="default.css" />
+    <link rel="stylesheet" href="./search-yandex.css" />
+    <link rel="stylesheet" href="./article.css" />
+    <link rel="stylesheet" href="./glossary.css" />
+    <link rel="stylesheet" href="./theme.css" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+
+<body>
+    
+    <script>!function(e,t,c,n,r,a,m){e.ym=e.ym||function(){(e.ym.a=e.ym.a||[]).push(arguments)},e.ym.l=1*new Date;for(var s=0;s<document.scripts.length;s++)if(document.scripts[s].src===n)return;a=t.createElement(c),m=t.getElementsByTagName(c)[0],a.async=1,a.src=n,m.parentNode.insertBefore(a,m)}(window,document,"script","https://mc.yandex.ru/metrika/tag.js"),ym(83179930,"init",{clickmap:!0,trackLinks:!0,accurateTrackBounce:!0,webvisor:!0})</script><noscript><div><img alt=""src=https://mc.yandex.ru/watch/83179930 style=position:absolute;left:-9999px></div></noscript> 
+    
+    ﻿<header class="header elma-365">
+  <div class="container">
+    <a class="header__logo" href="https://brix365.com/en/help">
+      <img src="./logo-en.svg" alt="header logo">
+    </a>
+ <!-- <div class="hero__search-form" id="search-panel">
+   <form class="search-form" onsubmit="ym(83180416,'reachGoal','poisk')">
+     <label class="search-form__label">
+       <span id="reset-search" class="search__icon"></span>
+       <input class="search-form__input" type="text">
+     </label>
+     <input class="search-form__submit" type="submit" value="Submit">
+   </form>
+  </div>       -->
+  
+     <div class="hero__search-form" id="search-panel"> <form class="search-form"> <label class="search-form__label"> <span id="reset-search" class="search__icon"></span> <input class="search-form__input" type="text"> </label> <input class="search-form__submit" type="submit" value="Submit"> </form> </div> 
+  <div class="hero__search">
+      <a href="#" id="search-icon" class="hero__search-icon">
+        <img src="search-icon-white.svg" alt="search string">
+      </a>
+      <a href="#" id="side-menu-icon" class="hero__side-icon">
+        <img src="side_menu.svg" alt="side menu">
+      </a>
+    </div>  
+  <div class="header__navi">
+        
+        <ul class="header__list"><li><span class="solution-select"><span class="solution-select__selected"></span><svg width="7" height="4" viewBox="0 0 7 4" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L3.5 3.5L6 1" stroke="white" stroke-linecap="round" stroke-linejoin="round"/></svg><ul class="solution-select__list"><li><a class="project-link" href="https://brix365.com/en/help/platform/get-trial.html">Platform</a></li><li><a class="project-link" href="https://brix365.com/en/help/ecm/ecm-functions.html">ECM</a></li><li><a class="project-link" href="https://brix365.com/en/help/crm/crm_overview.html">CRM</a></li><li><a class="project-link" href="https://brix365.com/en/help/service/service-functions.html">Service</a></li><li><a class="project-link" href="https://brix365.com/en/help/projects/projects-functions.html">Projects</a></li><li><a class="project-link" href="https://brix365.com/en/help/business_solutions/-elma365-store.html">Business Solutions</a></li></ul></span></li><li><a href="https://api.brix365.com/en/" target="_blank">API</a></li><li><a href="https://tssdk.brix365.com/" target="_blank">SDK</a></li></ul>
+        
+        
+   </div>
+  </div>
+
+</header>
+
+
+
+    
+    <main class="main container">
+
+        <aside class="sidebar" id="sidebar">
+        <div class="sidebar__header">
+                 <a class="header__logo" href="https://brix365.com/en/help">
+                    <img src="./logo-light-en.svg">
+                 </a>
+                    <span class="sidebar__close elma-365-close" id="close"></span>
+            </div>
+            <div class="sidebar__wrapper" id="side-menu">
+                
+            </div>
+        </aside>
+
+        <article class="article" id="article">
+            <div class="article-inner">           
+                <div class="content">
+                    <header class="article__header">
+                        
+                            <div class="topic__breadcrumbs">
+                                <p><a href="360024498352.html">Modules</a> &gt; <a href="extentions.html">Custom modules</a> / External app in modules</p>
+                            </div>
+                        
+                        <div class="topic__title"><h1 class="p_Heading1"><span class="f_Heading1">External app in modules</span></h1>
+</div>
+                    
+</header>
+                    <section class="article__content">
+                        <div class="scroll-top-inner">
+                            <a href="#h1-article" class="scroll-top"></a>
+                        </div>
+                        <!-- Placeholder for topic body. -->
+                        <p style="line-height: 1.20; margin: 7px 0 7px 0;">An external app can be connected as part of the module. It provides access to BRIX protected resources for external services using the OAuth2 authorization protocol.</p>
+<p style="line-height: 1.20; margin: 7px 0 7px 0;">You can grant access to data from BRIX to computer programs, mobile apps, web services, etc. To do this, an external app is created on the BRIX side in the module, an external service is connected during its configuration, and its access level is defined.</p>
+<p style="line-height: 1.20; margin: 7px 0 7px 0;">Once connected, the data from BRIX can serve as a way of authentication to the external service, as well as a source for access via Web API.</p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;внимание</span></p>
+<p style="line-height: 1.20; margin: 7px 0 7px 0;">Creating an external app in the module is available in BRIX On-Premises delivery. In the SaaS delivery, the feature will be enabled after the system is upgraded to version 2024.2</p>
+<p style="line-height: 1.20; margin: 7px 0 7px 0;">Only <a href="360006871932.html#administrators" class="topiclink">system administrators</a> can create and setup an external app. </p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;внимание</span></p>
+<h2 class="p_Heading2"><a id="main-info" class="hmanchor"></a><span class="f_Heading2">How an external app works</span></h2>
+<p style="line-height: 1.28; margin: 0 0 11px 0;">The external app implements the OAuth2 authorization protocol as follows: </p>
+<ol style="list-style-type:decimal">
+<li value="1" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;">On the BRIX side, <a href="module-external-app.html#enable-app" class="topiclink">the external app is enabled in the module and an OAuth2/OIDC client template is added</a>, which is used to determine the access level to be granted. </li><li value="2" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;">An <a href="module-external-app.html#create-client" class="topiclink">OAuth2/OIDC client is created</a>, i.e. the data of an external service that is allowed to access BRIX resources is specified. </li></ol>
+<p style="line-height: 1.28; margin: 0 0 11px 36px;">The service should be developed independently, implementing the client part of the OAuth2 protocol in it. Technical specifications and standards of the OAuth2 protocol can be found in the <a href="https://datatracker.ietf.org/doc/html/rfc6749" target="_blank" class="weblink">RFC documentation</a>.</p>
+<ol style="list-style-type:decimal">
+<li value="3" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><a href="module-external-app.html#add-service" class="topiclink">Connection to BRIX via OAuth2 protocol is performed in an external service</a>. The connection is made using a unique identifier and the secret of the external app, obtained when creating the client.</li><li value="4" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;">After the connection is established, the user allows external service access with the level specified in the external app settings through their account in BRIX.</li><li value="5" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;">An authorization code is generated and passed to the external service. An access token and an refresh token are created using the received authorization code. </li><li value="6" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;">The external service generates and executes requests for BRIX resources using the access token. The refresh token is used to generate a new access token in case of its expiration date.</li><li value="7" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;">The user can <a href="module-external-app.html#check-connections" class="topiclink">check the connection list and interrupt the connection</a> in their profile.</li></ol>
+<h2 class="p_Heading2"><a id="enable-app" class="hmanchor"></a><span class="f_Heading2">Enable an external app and create an access template</span></h2>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="background-color: #ffffff;">The external app is connected on the BRIX side in the module and serves as a way to integrate the platform and the external service. BRIX connection to the external service is performed via the OAuth2 protocol.</span></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="background-color: #ffffff;">One external app can be created for each user module. At the same time, several services can be connected via an external app in the module.</span></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="background-color: #ffffff;">When configuring an external app, an&nbsp;</span><span style="font-weight: bold; background-color: #ffffff;">OAuth2/OIDC client template</span><span style="background-color: #ffffff;">&nbsp;is created. It specifies the access level for the external service. Access can be granted to user data, Web API, or both.</span></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="background-color: #ffffff;">The created template is selected when connecting an external service. If several services connect to one external app, you can use one customized template to provide the same level of access.&nbsp;</span></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;">To configure an external app, follow the steps below: </p>
+<ol style="list-style-type:upper-roman">
+<li value="1" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;">Go to <span style="font-weight: bold;">Administration &gt; Modules</span> and select the <a href="extentions.html" class="topiclink">custom module you created</a>.</li><li value="2" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;">On the module page, click <span style="font-weight: bold;">Settings</span> and click the <span style="font-weight: bold;">External App</span> tab.</li><li value="3" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;">On the opened page, select <span style="font-weight: bold;">Enable</span>. An external app will be created through which the external service will be connected. </li><li value="4" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;">You can edit the name of the external app. Details are used to identify the external app when the user authorizes access to an external service to perform activities from their account. </li></ol>
+<p style="line-height: 1.28; margin: 0 0 11px 36px;">To change the name, click <span style="font-weight: bold;">Set up</span>. In the opened window, in the Inherit field, uncheck the Use<span style="font-weight: bold;"> main module data</span> checkbox and set a name, description, and icon for the external app. Save the settings. </p>
+<p style="line-height: 1.28; margin: 0 0 11px 36px;"><img alt="ext_app_01" width="814" height="520" style="margin:0;width:814px;height:520px;border:none" src="ext_app_01.png"/></p>
+<ol style="list-style-type:upper-roman">
+<li value="5" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;">Once the external app is enabled, the <span style="font-weight: bold;">OAuth2/OIDC client templates</span> section will appear on the page. Click <span style="font-weight: bold;">+Create</span> <span style="font-weight: bold;">template</span> and set the access level for the external services to be connected::</li></ol>
+<p style="line-height: 1.28; margin: 0 0 11px 36px;"><img alt="ext_app_02" width="750" height="379" style="margin:0;width:750px;height:379px;border:none" src="ext_app_02.png"/></p>
+<ul style="list-style-type:disc">
+<li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold;">Name</span><span style="font-weight: bold; color: #ff0000;">*</span>. Specify the name that will be displayed in the list of created templates when an external service is connected; </li><li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold;">Access levels</span><span style="font-weight: bold; color: #ff0000;">*</span>. Define to which BRIX resources an external service is granted access once it is connected: <ul style="list-style-type:circle">
+<li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold;">openid</span>. It grants access to user data, which authorizes the service connection to BRIX. The access is required to execute the OpenID protocol. It includes information about ID, company, and email. For example, through an external app with this level of access, you can request email addresses and synchronize accounts from BRIX with user accounts in an external service;</li><li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold;">api</span>. It grants access to performing any operations via <span style="color: #0000ff; text-decoration: underline;"><a href="https://api.brix365.com/en/public-api/guides/IntroWebAPI/" target="_blank" class="weblink">WebAPI</a></span>. For example, through an external app, you can pass requests from an external website and create app items in BRIX. </li></ul></li></ul>
+<ol style="list-style-type:upper-roman" start="6">
+<li value="6" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;">Save the client template. </li></ol>
+<p style="line-height: 1.20; margin: 7px 0 7px 0;"><span style="font-weight: bold;">Important:</span> When creating the OAuth2/OIDC client template, consider how the configured external app will be used. Depending on this, select the necessary access levels. When using a connected external service, users will not be able to change the set of provided access levels on their own. </p>
+<h2 class="p_Heading2"><a id="create-client" class="hmanchor"></a><span class="f_Heading2">Create an OAuth2/OIDC client and connect it to an external app </span></h2>
+<p style="line-height: 1.20; margin: 7px 0 7px 0;">After configuring the external app and the OAuth2/OIDC client template, you need to specify the details of the external service that is allowed to access BRIX resources.</p>
+<p style="line-height: 1.20; margin: 7px 0 7px 0;">To connect an external service, follow the steps below:</p>
+<ol style="list-style-type:upper-roman">
+<li value="1" style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;">Go to the main page of the user module for which the external app is configured and enable the module. </li><li value="2" style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;">Expand the <span style="font-weight: bold;">Tokens</span> section that appears on the module’s main page. </li><li value="3" style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;">Click <span style="font-weight: bold;">+Create OAuth/OIDC client </span>and fill in the details of the external service to be connected: </li></ol>
+<p style="line-height: 1.20; margin: 7px 0 7px 36px;"><img alt="ext_app_03" width="630" height="424" style="margin:0;width:630px;height:424px;border:none" src="ext_app_03.png"/></p>
+<ul style="list-style-type:disc">
+<li style="text-align: justify; line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold;">Name</span><span style="font-weight: bold; color: #ff0000;">*</span>. Enter the name of the external service to be connected.</li><li style="text-align: justify; line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold;">Template</span><span style="font-weight: bold; color: #ff0000;">*</span><span style="font-weight: bold;">.</span><span style="font-weight: bold; color: #ff0000;"> </span>Select any OAuth2/OIDC client template created for an external app in the module. Using the specified template, you define which BRIX resources the external service will have access to.</li><li style="text-align: justify; line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold;">Scopes</span>. Access level data from the OAuth2/OIDC client template you selected is shown for information.</li><li style="text-align: justify; line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold;">Redirect URI</span><span style="font-weight: bold; color: #ff0000;">*</span>. Specify the URL of the external service, which will be used to return the authorization code from BRIX to the service. It is possible to enter several redirection URIs. To do this, click <span style="font-weight: bold;">+ Add</span> and fill in the field.</li><li style="text-align: justify; line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold;">Expires</span>. Select the validity period of the tokens used to connect the external service and BRIX. After this period expires, work with the service will be terminated. You will be able to create the OAuth2/OIDC client again and issue new tokens.</li></ul>
+<ol style="list-style-type:upper-roman" start="4">
+<li value="4" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;">Save the settings. </li><li value="5" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;">The window with generated data from the module’s external app will appear, which will be needed to connect to the added OAuth2/OIDC client.</li></ol>
+<p style="line-height: 1.28; margin: 0 0 11px 36px;">The window is shown only once. You cannot view this data again. Copy and save the<span style="font-weight: bold;"> App unique identifier</span> and <span style="font-weight: bold;">App secret</span> and click <span style="font-weight: bold;">Done</span>.</p>
+<p style="line-height: 1.28; margin: 0 0 11px 36px;"><img alt="ext_app_04" width="662" height="333" style="margin:0;width:662px;height:333px;border:none" src="ext_app_04.png"/></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;">The settings on the BRIX side are completed. Now it is necessary to establish a connection with BRIX in the external service. </p>
+<h2 class="p_Heading2"><a id="add-service" class="hmanchor"></a><span class="f_Heading2">Connect an external service to BRIX using the OAuth2 protocol</span></h2>
+<p style="line-height: 1.20; margin: 7px 0 7px 0;">The connection is performed in an external service using the OAuth2 protocol in any way that depends on the type of service, the set of tools used, the availability of ready-made libraries with solutions, and the current security regulations.</p>
+<p style="line-height: 1.20; margin: 7px 0 7px 0;">The following is a description of one of the possible ways to establish a connection between an external service and BRIX:</p>
+<ol style="list-style-type:upper-roman">
+<li value="1" style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;">The <span style="font-weight: bold;">App unique identifier</span> and <span style="font-weight: bold;">App secret</span> obtained when creating the OAuth2/OIDC client in BRIX are stored in an external service. The data should be specified in the code in a non-explicit way, as this violates security requirements and does not allow them to be changed promptly.</li><li value="2" style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;">The external service implements redirection of the user to the BRIX page. On this page, the user authorizes the service to access BRIX resources when the data transmission is started.</li></ol>
+<p style="line-height: 1.20; margin: 7px 0 7px 36px;">Method of redirection realization:</p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">&lt;URL-address_elma365&gt;/api/o/oauth/v2/authorize/client_id=&lt;app_unique_identifier&gt;&amp;redirect_uri=&lt;redirect_link&gt;&amp;scope=&lt;Requested_access_level&gt;&amp;response_type=code&amp;response_mode=query&amp;state=&lt;security_key&gt;</span></p>
+<p style="line-height: 1.20; margin: 7px 0 7px 36px;">Where:</p>
+<ul style="list-style-type:disc">
+<li style="text-align: justify; line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-weight: bold;">&lt;URL-address_BRIX&gt;</span>. The path to the BRIX server, where the external app is enabled in the module and the OAuth2/OIDC client is added.</li><li style="text-align: justify; line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-weight: bold;">&lt;App_unique_identifier&gt;</span>. Identifier value obtained when creating OAuth2/OIDC client in BRIX.</li><li style="text-align: justify; line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-weight: bold;">&lt;Backlink&gt;</span>. The link to switch back to the external service after the user has granted permission to access BRIX resources.</li><li style="text-align: justify; line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-weight: bold;">&lt;</span><span style="font-size: 15px;"> </span><span style="font-weight: bold;">Requested_level_access &gt;</span>. Name of the requested access level specified in the OAuth2/OIDC client template: <span style="font-weight: bold;">api</span> or <span style="font-weight: bold;">openid</span>. If several access levels are configured in the template, each of them is specified.</li><li style="text-align: justify; line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-weight: bold;">&lt;Security_key&gt;</span>. Verification security key, which is an arbitrary string value.</li></ul>
+<p style="text-align: justify; text-indent: -1px; line-height: 1.20; margin: 7px 0 7px 36px;">For the user, the page of authorizing access to an external service to execute requests will be displayed. It displays the requested access levels. The user can grant permission or leave the page.</p>
+<p style="line-height: 1.20; margin: 7px 0 7px 0;">After access is granted, the following steps should be followed: </p>
+<ul style="list-style-type:disc">
+<li style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;">On the path from the &lt;<span style="font-weight: bold;">Backlink</span>&gt; value, the external service accepts incoming data.</li><li style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;">The authorization <span style="font-weight: bold;">code</span> is extracted from the code field received in the response. It is used to obtain an access token and an update token.</li></ul>
+<ol style="list-style-type:upper-roman" start="3">
+<li value="3" style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;">To perform these actions, it is necessary to:</li></ol>
+<ol style="list-style-type:lower-latin">
+<li value="1" style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;">Write a script that sends a POST request to BRIX:</li></ol>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">&lt;URL-address_elma365&gt;/api/o/oauth/v2/token</span></p>
+<ol style="list-style-type:lower-latin" start="2">
+<li value="2" style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;">Add value to the header:</li></ol>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">Content-Type:application/x-www-form-urlencoded.</span></p>
+<ol style="list-style-type:lower-latin" start="3">
+<li value="3" style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;">In the body, pass:</li></ol>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">grant_type=authorization_code&amp;code=&lt;authorization_code&gt;&amp;client_id=&lt;app_unique_identifier&gt;&amp;client_secret=&lt;app_secret&gt;&amp;redirect_uri=&lt;backlink&gt;</span></p>
+<p style="line-height: 1.20; margin: 7px 0 7px 36px;">Where:</p>
+<ul style="list-style-type:disc">
+<li style="text-align: justify; line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;">&lt;<span style="font-weight: bold;">Authorization_code</span>&gt;. The authorization code obtained in the previous activity.</li><li style="text-align: justify; line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;">&lt;<span style="font-weight: bold;">App_unique_identifier</span>&gt;. The value of the external app identifier from BRIX.</li><li style="text-align: justify; line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;">&lt;<span style="font-weight: bold;">App_secret</span>&gt;. The value of the external app secret from BRIX.</li><li style="text-align: justify; line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;">&lt;<span style="font-weight: bold;">Backlink</span>&gt;. Backlink to the external service.</li></ul>
+<ol style="list-style-type:upper-roman" start="4">
+<li value="4" style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;">Полученный json-ответ содержит: </li></ol>
+<ul style="list-style-type:disc">
+<li style="text-align: justify; line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;">In the <span style="font-weight: bold;">access_token</span> field—access token.</li><li style="text-align: justify; line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;">In the <span style="font-weight: bold;">refresh_token</span> field—refresh token.</li><li style="text-align: justify; line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;">In the id_<span style="font-weight: bold;">token</span> field—data about the user in the form of a <span style="color: #0000ff;"><a href="https://jwt.io/introduction" target="_blank" class="weblink">JSON Web Token (JWT)</a></span> string. It will be returned if <span style="font-weight: bold;">openid</span> access level is specified.</li></ul>
+<ol style="list-style-type:upper-roman" start="5">
+<li value="5" style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;">Having received the access token, the external service requests the necessary resources from BRIX via the interface implemented for this purpose. </li></ol>
+<p style="line-height: 1.20; margin: 7px 0 7px 0;">When an access token expires, the external service sends a request, which contains an update token, to obtain a new access token.</p>
+<ol style="list-style-type:upper-roman" start="6">
+<li value="6" style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;">To update the tokens, it is necessary to:</li></ol>
+<ol style="list-style-type:lower-latin">
+<li value="1" style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;">Implement sending <code><b>POST</b></code> request to BRIX: </li></ol>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">&lt;URL-address_elma365&gt;/api/o/oauth/v2/token&nbsp;</span></p>
+<ol style="list-style-type:lower-latin">
+<li value="2" style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;">Add value to the header:</li></ol>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">Content-Type:application/x-www-form-urlencoded&nbsp;</span></p>
+<ol style="list-style-type:lower-latin">
+<li value="3" style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;">In the body, pass: </li></ol>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">grant_type=refresh_token&amp;refresh_token=&lt;refresh_token&gt;&amp;client_id=&lt;app_unique_identifier&gt;&amp;client_secret=&lt;app_secret&gt;</span></p>
+<p style="line-height: 1.20; margin: 7px 0 7px 36px;">Where:</p>
+<ul style="list-style-type:disc">
+<li style="text-align: justify; line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-weight: bold;">&lt;</span><span style="font-size: 15px;"> </span><span style="font-weight: bold;">Refresh_token&gt;</span>. Refresh token received together with the access token.</li><li style="text-align: justify; line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;">&lt;<span style="font-weight: bold;">App_unique_identifier</span>&gt;. The value of the external app identifier from BRIX obtained earlier in secrets.</li><li style="text-align: justify; line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;">&lt;<span style="font-weight: bold;">App_secret</span>&gt;. The value of the external app secret from BRIX.</li></ul>
+<p style="line-height: 1.20; margin: 7px 0 7px 0;">The received json response will contain a new access token in the <span style="font-weight: bold;">access_toke</span>n field and a new refresh token in the <span style="font-weight: bold;">refresh_token</span> field.</p>
+<h2 class="p_Heading2"><a id="data-transfer" class="hmanchor"></a><span class="f_Heading2">Features of data transmission</span></h2>
+<p style="text-align: justify; line-height: 1.20; margin: 7px 0 7px 0;">Familiarize yourself with the features of data transmission at different levels of external service access to BRIX resources:</p>
+<ul style="list-style-type:disc">
+<li style="text-align: justify; line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold;">Access to Web API</span>. Access token received for <span style="font-weight: bold;">api</span> level is used when executing requests. For more details on the token usage principle, read <span style="color: #0000ff;"><a href="https://api.brix365.com/en/public-api/guides/WebAPIAuthorization/" target="_blank" class="weblink">BRIX public API</a></span>.</li><li style="text-align: justify; line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold;">Access to user’s data</span>. Requests are made by <span style="font-weight: bold;">openid</span> level access token. The <span style="font-weight: bold;">id_token</span> field contains serialized data according to the <span style="color: #0000ff;"><a href="https://jwt.io/introduction" target="_blank" class="weblink">JSON Web Token (JWT)</a></span> standard, containing information about the user: identifier, email address, and company name. To decode the token, you can use ready-made solutions for working with JWT or implement your own parsing algorithm.</li></ul>
+<h3 class="p_Heading3"><a id="tokens-due-date" class="hmanchor"></a><span class="f_Heading3">Validity period of connection tokens</span></h3>
+<p style="text-align: justify; line-height: 1.20; margin: 7px 0 7px 0;">The authorization code and access and update tokens have a limited validity period:</p>
+<ul style="list-style-type:disc">
+<li style="text-align: justify; line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-weight: bold;">Authorization code</span>. The validity period for one request is 10 minutes. It is used once to obtain other tokens. After that the code is considered invalid, and further requests using it are rejected.</li><li style="text-align: justify; line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-weight: bold;">Access token</span>. The validity period is 10 minutes. The token allows multiple requests during this time. After the expiration date, it will be unavailable. A new access token is requested using an update token.</li><li style="text-align: justify; line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-weight: bold;">Refresh token</span>. The validity period is 14 days. After this time has expired, new access and update tokens must be obtained. To do this, the user must run the authorization process again and allow an external service to access BRIX.</li></ul>
+<h2 class="p_Heading2"><a id="check-connections" class="hmanchor"></a><span class="f_Heading2">View a list of granted accesses</span></h2>
+<p style="text-align: justify; line-height: 1.20; margin: 7px 0 7px 0;">If a connection to BRIX is implemented in an external service, the user can run data transmission. After that, the user is redirected to the page allowing the service to access BRIX resources.</p>
+<p style="text-align: justify; line-height: 1.20; margin: 7px 0 7px 0;">All granted permissions and established connections are recorded in BRIX. The user can view the list of granted accesses and revoke them in the profile settings, on the <span style="font-weight: bold;">External Apps</span> tab.</p>
+<p style="text-align: justify; line-height: 1.20; margin: 7px 0 7px 0;">Read more about it in the <span style="color: #0000ff;"><a href="360016398552.html#user-profile-tab" class="topiclink">User profile settings</a></span> article.</p>
+
+                        <div class="bottom-nav">
+                            
+                                <a id="prev-link" class="topic__navi_prev" href="portable-services.html">
+                                    <span class="bottom-nav__arrow bottom-nav__arrow--prev"></span> <span
+                                        class="bottom-nav__link">portable-services.html</span>
+                                </a>
+                            
+                            
+                                <a id="next-link" class="topic__navi_next" href="module-soap-service.html">
+                                    <span class="bottom-nav__link">module-soap-service.html</span> <span
+                                        class="bottom-nav__arrow bottom-nav__arrow--next"></span>
+                                </a>
+                            
+                        </div>
+                        <!-- добавляет на страницу строку блок Была ли статья полезной?  -->
+                          <div class="feedback" id="feedback"><div class="feedback-help"><span><b>Was this helpful?</b></span><form action="" method="POST" class="feedback-form" id="feedback-form"><div class="feedback__popup feedback__popup-response" id="feedback__popup_thx" style="display: none;">Thanks for your feedback!</div><div class="feedback__popup" id="feedback__popup_why" style="display: none;"><div class="feedback__popup-header">Please specify why:</div><input type="radio" name="category" id="bad_recommendation" value="bad_recommendation"><label for="bad_recommendation">Recommendations did not help me</label><input type="radio" name="category" id="difficult_text" value="difficult_text"><label for="difficult_text">Article is hard to understand</label><input type="radio" name="category" id="no_answer" value="no_answer"><label for="no_answer">Didn`t answer my question</label><input type="radio" name="category" id="bad_header" value="bad_header"><label for="bad_header">Content does not match the topic</label><input type="radio" name="category" id="other_reason" value="other_reason"><label for="other_reason">Other</label></div><div class="feedback__popup" id="feedback__popup-other" style="display: none;"><div class="feedback__popup-header">How we can improve it?</div><textarea class="feedback__textarea" name="other" id=""></textarea><input type="submit" class="feedback__other-btn" value="Submit"></div><div class="feedback-form__btn-group"><input type="radio" name="useful" id="feedback__useful_yes" value="true"><label for="feedback__useful_yes"><img src="like.svg" class="small-img" alt="like"><spanclass="feedback-form__btn-group_yes-btn">Yes</spanclass="feedback-form__btn-group_yes-btn"></label><input type="radio" name="useful" id="feedback__useful_no" value="false"><label for="feedback__useful_no"><img src="dislike.svg" class="small-img" alt="dislike"><spanclass="feedback-form__btn-group_no-btn">No</spanclass="feedback-form__btn-group_no-btn"></label></div><select name="category"><option disabled="">Please specify why</option><option value="bad_recommendation" selected="">Recommendations did not help me</option><option value="difficult_text">Article is hard to understand</option><option value="no_answer">Didn`t answer my question</option><option value="bad_header">Content does not match the topic</option><option value="other_reason">Other</option></select><input type="submit"></form></div><div class="found_typo"><p style="margin: 0px; margin-top: 16px !important;"><span><b>Found a typo?</b></span> Select it and press <i>Ctrl+Enter</i> to send us feedback</p></div></div>
+                           
+                    </section>
+                </div>
+                <aside class="article__sidebar" style="display:none">
+                    <input type="checkbox" />
+                    <div class="article__arrow"></div>
+                    <div class="table-of-contents elma365-right" id="toc2Content">
+                        <h3 class="h3-toc">In this topic</h3>
+                        <nav id="toc2"></nav>
+                    </div>
+                </aside>
+            </div>
+        </article>
+    </main>               
+    <footer class="footer">
+        <div class="footer-container">
+  <div class="footer-mobile">
+    
+    <ul class="footer-mobile__list"><li><a href="https://brix365.com/en/" target="_blank">BRIX</a></li><li><a href="https://tssdk.brix365.com/en/latest/" target="_blank">SDK</a></li><li><a href="https://api.brix365.com/en/" target="_blank">API</a></li></ul><ul class="footer-mobile__list"><li><a href="https://brix365.com/en/help/platform/get-trial.html">Platform</a></li><li><a href="https://brix365.com/en/help/ecm/ecm-functions.html">ECM</a></li><li><a href="https://brix365.com/en/help/service/service-functions.html">Service</a></li><li><a href="https://brix365.com/en/help/projects/projects-functions.html">Projects</a></li></ul>
+    
+    
+  </div>
+  <div class="footer-wrap">
+    
+      <div><span class="mobile-question-popup">Send feedback</span><form method="POST" action class="question__popup question-xs" id="question__popup"><div class="question-wrap"><span class="close"></span><span class="title">Ask a question</span><label for="help_question" style="display: none;"></label><textarea name="help_question" id="help_question"></textarea><input type="submit" value="Send"></div></form><div class="hidden fade-in question-success-xs">Sent</div></div>
+    
+    <div class="footer-flex-b">
+      <span class="footer-copy">&copy; 2025 BRIX</span>
+      <ul class="footer-list">
+        
+        <li class="footer-item">
+            <a href="#" class="arrow-top" style="display: block;"></a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+ 
+    </footer>
+    <iframe name="hmnavigation" style="display:none!important"></iframe>
+    <script src="./jquery-ui.js"></script>
+    <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
+    <script src="./jquery.tocify.min.js"></script>
+    <script src="./TypoReporter.min.js"></script>
+    <script src="./google-search.js"></script>
+    <script src="./main.js"></script>
+</body>
+
+</html>

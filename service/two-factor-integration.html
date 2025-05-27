@@ -1,0 +1,311 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Custom module for two-factor authentication</title>
+    <meta name="generator" content="Help+Manual" />
+    <meta name="keywords" content="" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="You can enable two‑step authentication when logging&nbsp;in to the system or the external portal, so that a user enters a verification code as the second factor. The user will..." />
+    <meta name="picture" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Full documentation for BRIX365 platform. Low-code developer guide. User guide. Admin guide. Developer guide." />
+    <meta property="og:url" content="https://brix365.com/en/help" />
+    <meta property="og:image" content="" />                                                              
+    <link rel="icon" href="favicon.png" type="image/png" />
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./jquery-ui.min.css" />
+    <link rel="stylesheet" href="default.css" />
+    <link rel="stylesheet" href="./search-yandex.css" />
+    <link rel="stylesheet" href="./article.css" />
+    <link rel="stylesheet" href="./glossary.css" />
+    <link rel="stylesheet" href="./theme.css" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+
+<body>
+    
+    <script>!function(e,t,c,n,r,a,m){e.ym=e.ym||function(){(e.ym.a=e.ym.a||[]).push(arguments)},e.ym.l=1*new Date;for(var s=0;s<document.scripts.length;s++)if(document.scripts[s].src===n)return;a=t.createElement(c),m=t.getElementsByTagName(c)[0],a.async=1,a.src=n,m.parentNode.insertBefore(a,m)}(window,document,"script","https://mc.yandex.ru/metrika/tag.js"),ym(83179930,"init",{clickmap:!0,trackLinks:!0,accurateTrackBounce:!0,webvisor:!0})</script><noscript><div><img alt=""src=https://mc.yandex.ru/watch/83179930 style=position:absolute;left:-9999px></div></noscript> 
+    
+    ﻿<header class="header elma-365">
+  <div class="container">
+    <a class="header__logo" href="https://brix365.com/en/help">
+      <img src="./logo-en.svg" alt="header logo">
+    </a>
+ <!-- <div class="hero__search-form" id="search-panel">
+   <form class="search-form" onsubmit="ym(83180416,'reachGoal','poisk')">
+     <label class="search-form__label">
+       <span id="reset-search" class="search__icon"></span>
+       <input class="search-form__input" type="text">
+     </label>
+     <input class="search-form__submit" type="submit" value="Submit">
+   </form>
+  </div>       -->
+  
+     <div class="hero__search-form" id="search-panel"> <form class="search-form"> <label class="search-form__label"> <span id="reset-search" class="search__icon"></span> <input class="search-form__input" type="text"> </label> <input class="search-form__submit" type="submit" value="Submit"> </form> </div> 
+  <div class="hero__search">
+      <a href="#" id="search-icon" class="hero__search-icon">
+        <img src="search-icon-white.svg" alt="search string">
+      </a>
+      <a href="#" id="side-menu-icon" class="hero__side-icon">
+        <img src="side_menu.svg" alt="side menu">
+      </a>
+    </div>  
+  <div class="header__navi">
+        
+        <ul class="header__list"><li><span class="solution-select"><span class="solution-select__selected"></span><svg width="7" height="4" viewBox="0 0 7 4" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L3.5 3.5L6 1" stroke="white" stroke-linecap="round" stroke-linejoin="round"/></svg><ul class="solution-select__list"><li><a class="project-link" href="https://brix365.com/en/help/platform/get-trial.html">Platform</a></li><li><a class="project-link" href="https://brix365.com/en/help/ecm/ecm-functions.html">ECM</a></li><li><a class="project-link" href="https://brix365.com/en/help/crm/crm_overview.html">CRM</a></li><li><a class="project-link" href="https://brix365.com/en/help/service/service-functions.html">Service</a></li><li><a class="project-link" href="https://brix365.com/en/help/projects/projects-functions.html">Projects</a></li><li><a class="project-link" href="https://brix365.com/en/help/business_solutions/-elma365-store.html">Business Solutions</a></li></ul></span></li><li><a href="https://api.brix365.com/en/" target="_blank">API</a></li><li><a href="https://tssdk.brix365.com/" target="_blank">SDK</a></li></ul>
+        
+        
+   </div>
+  </div>
+
+</header>
+
+
+
+    
+    <main class="main container">
+
+        <aside class="sidebar" id="sidebar">
+        <div class="sidebar__header">
+                 <a class="header__logo" href="https://brix365.com/en/help">
+                    <img src="./logo-light-en.svg">
+                 </a>
+                    <span class="sidebar__close elma-365-close" id="close"></span>
+            </div>
+            <div class="sidebar__wrapper" id="side-menu">
+                
+            </div>
+        </aside>
+
+        <article class="article" id="article">
+            <div class="article-inner">           
+                <div class="content">
+                    <header class="article__header">
+                        
+                            <div class="topic__breadcrumbs">
+                                <p><a href="360024498352.html">Modules</a> &gt; Examples of BRIX integration modules / Custom module for two-factor authentication</p>
+                            </div>
+                        
+                        <div class="topic__title"><h1 class="p_Heading1"><span class="f_Heading1">Custom module for two-factor authentication</span></h1>
+</div>
+                    
+</header>
+                    <section class="article__content">
+                        <div class="scroll-top-inner">
+                            <a href="#h1-article" class="scroll-top"></a>
+                        </div>
+                        <!-- Placeholder for topic body. -->
+                        <p class="p_Normal">You can enable two‑step authentication when logging in to the system or the <a href="service-portal.html" class="topiclink">external portal</a>, so that a user enters a verification code as the second factor. The user will receive this code through a third‑party service, for example a messenger.</p>
+<p class="p_Normal">To do this, create <a href="extentions.html" class="topiclink">a custom module</a> and then select it:</p>
+<ul style="list-style-type:disc">
+<li class="p_Normal">In <a href="security_settings.html#two-factor-authentication" class="topiclink">the security settings</a> to enable two-factor authentication when logging in to the system.</li><li class="p_Normal">In <a href="portal-login-page.html#two-factor" class="topiclink">the settings of the external portal</a> on the <span style="font-weight: bold;">Authentication</span> tab to enable two-factor authentication for internal users when they log in to the portal.</li></ul>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;внимание</span></p>
+<p class="p_Normal">Only users included in the <a href="360006871932.html#administrators" class="topiclink">Administrators</a> group can work with modules and configure them.</p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;внимание</span></p>
+<p class="p_Normal">For example, let's configure receiving a verification code through a Telegram bot by following these steps:</p>
+<ol style="list-style-type:decimal">
+<li value="1" class="p_Normal">Configure receiving a code from a third‑party service.</li><li value="2" class="p_Normal">Create and configure a module.</li><li value="3" class="p_Normal">Enable the module for the second authentication factor.</li></ol>
+<h2 class="p_Heading2"><span class="f_Heading2">Step 1: Configure receiving a code from a third-party service</span></h2>
+<ol style="list-style-type:upper-roman">
+<li value="1" class="p_Normal">Go to Telegram.</li><li value="2" class="p_Normal">Create a bot. Read more in <a href="https://core.telegram.org/bots/tutorial" target="_blank" class="weblink">the official Telegram documentation</a>.</li><li value="3" class="p_Normal">Copy the bot token.</li><li value="4" class="p_Normal">Use the token to get a chat ID for the user. You can use the following method:</li></ol>
+<ol style="list-style-type:decimal">
+<li value="1" class="p_Normal">A user writes any message to the created bot.</li><li value="2" class="p_Normal">After that the system administrator receives the user's chat ID with the bot.<br />
+To do this:</li></ol>
+<ul style="list-style-type:disc">
+<li class="p_Normal">Enter the following request in the browser: <code><b>https://api.telegram.org/bottoken/getUpdates</b></code>, where <code><b>token</b></code> is the token received when creating the bot.</li><li class="p_Normal">In response to this request, you see a JSON text on the browser page, which contains the chat ID.</li></ul>
+<p class="p_Normal"><a class="dropdown-toggle" style="font-style: normal; font-weight: normal; color: #000000; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186A1')">Example of JSON text</a></p>
+<div id="TOGGLE0186A1" class="dropdown-toggle-body" style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0 0 0 0;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample">{</span><br />
+<span class="f_CodeExample"> &nbsp;&quot;ok&quot;: true,</span><br />
+<span class="f_CodeExample"> &nbsp;&quot;result&quot;: [</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;{</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;&quot;update_id&quot;: 000000000,</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;&quot;message&quot;: {</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;&quot;message_id&quot;: 17,</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;&quot;from&quot;: {</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;id&quot;: 0000000001,</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;is_bot&quot;: false,</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;first_name&quot;: &quot;UserName&quot;,</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;language_code&quot;: &quot;en&quot;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;},</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;&quot;chat&quot;: {</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;id&quot;: 0000000001,</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;first_name&quot;: &quot;UserName&quot;,</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;type&quot;: &quot;private&quot;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;},</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;&quot;date&quot;: 1724073228,</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;&quot;text&quot;: &quot;Hi&quot;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;}</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;}</span><br />
+<span class="f_CodeExample"> &nbsp;]</span><br />
+<span class="f_CodeExample">}</span></p>
+</td>
+</tr>
+</table>
+</div>
+<ol style="list-style-type:upper-roman" start="5">
+<li value="5" class="p_Normal">Specify the chat ID in the <a href="360004833572.html#accounts" class="topiclink">Accounts</a> field in the user profile. If the ID is not specified, the employee will only log in using the login and password.</li></ol>
+<h2 class="p_Heading2"><span class="f_Heading2">Step 2: Create and configure a module</span></h2>
+<p class="p_Normal">Go to <span style="font-weight: bold;">Administration &gt; Modules</span> and <a href="create-extention.html" class="topiclink">create a module</a>. Then configure the settings on the <span style="font-weight: bold;">Settings</span> page that opens:</p>
+<ol style="list-style-type:upper-roman">
+<li value="1" class="p_Normal">On the <a href="extention-settings.html" class="topiclink">Settings</a> tab, create <a href="360009707032.html#string" class="topiclink">String</a>-type properties that will be used in the script for receiving a verification code via a messenger bot:</li></ol>
+<ul style="list-style-type:disc">
+<li class="p_Normal"><span style="font-weight: bold;">Account Type</span> (<code><b>accountType</b></code>). The name of a third-party service through which two-factor authentication is configured.</li><li class="p_Normal"><span style="font-weight: bold;">Bot Token</span> (<code><b>botToken</b></code>). The bot ID on the external service side. Issued when creating a bot.</li><li class="p_Normal"><span style="font-weight: bold;">Message</span> (<code><b>message</b></code>). The message that a user will receive along with the verification code. For example, “To log in to BRIX, please enter this verification code: ”.</li></ul>
+<p class="p_Normal">If all the properties are specified, go to the <span style="font-weight: bold;">Common</span> tab and click <span style="font-weight: bold;">Save</span>.</p>
+<ol style="list-style-type:upper-roman" start="2">
+<li value="2" class="p_Normal">Go to the <span style="font-weight: bold;">API Methods</span> tab and click <span style="font-weight: bold;">Edit</span>. The method editor will open. Then, on the <span style="font-weight: bold;">Scripts</span> tab, write the code using the following template:</li></ol>
+<p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample">// This interface will allow you to set conditions in the function below that will prompt the user for the second factor authentication code</span><br />
+<span class="f_CodeExample">interface SecondFactor_sendError { error: string; skip2fa: boolean; }</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample">// This function identifies a user login by the ID and receives a confirmation code</span><br />
+<span class="f_CodeExample">async function secondFactor_sendCode(userID: string, code: string): Promise&lt;SecondFactor_sendError&gt; {}</span> </p>
+<p class="p_Normal"><a class="dropdown-toggle" style="font-style: normal; font-weight: normal; color: #000000; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186A2')">Example script for searching for a user login by the chat ID with a Telegram bot</a></p>
+<div id="TOGGLE0186A2" class="dropdown-toggle-body" style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0 0 0 0;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample">interface SecondFactor_sendError {</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;error: string;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;skip2fa: boolean;</span><br />
+<span class="f_CodeExample">}</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample">async function secondFactor_sendCode(userID:string, code: string): Promise&lt;SecondFactor_sendError&gt;{</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;let accountType = Namespace.params.data.accountType;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;const result:SecondFactor_sendError={error: &quot;&quot;, skip2fa: false};</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;const user = await System.users.search().where(f =&gt; f.__id.eq(userID)).first();</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;if(!user){</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;result.error = 'no user';</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;return result</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;}</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;if (!user.data.accounts) {</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;result.error = 'user has no accounts';</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;result.skip2fa = true;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;return result;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;}</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;for (var account of user.data.accounts) {</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;if (account.type === accountType) {</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;sendToTelegram(account.login, code);</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;return result;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;}</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;}</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;result.error = 'user has no such account type';</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;result.skip2fa = true;</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;return result;</span><br />
+<span class="f_CodeExample">}</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample">function sendToTelegram(chatId: string, code: string):void {</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample"> &nbsp; </span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;let botToken = Namespace.params.data.botToken;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;let message = Namespace.params.data.message;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;const method = 'sendMessage';</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;fetch(&quot;https://api.telegram.org/bot&quot;+botToken+&quot;/&quot;+method,{</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;method:&quot;POST&quot;,</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;headers: {</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;'Content-Type': 'application/json'</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;},</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;body:JSON.stringify({'chat_id': chatId, 'text': message+code})</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;});</span><br />
+<span class="f_CodeExample">}</span></p>
+<p class="p_Normal">&nbsp;</p>
+</td>
+</tr>
+</table>
+</div>
+<h2 class="p_Heading2"><span class="f_Heading2">Step 3: Enable the module for the second authentication factor</span></h2>
+<ol style="list-style-type:upper-roman">
+<li value="1" class="p_Normal">Go to <span style="font-weight: bold;">Administration &gt; Modules</span>, open the module page and enable it.</li><li value="2" class="p_Normal">In the window that opens, fill in the fields:</li></ol>
+<ul style="list-style-type:disc">
+<li class="p_Normal"><span style="font-weight: bold;">Bot token</span>. Add the value of the copied token.</li><li class="p_Normal"><span style="font-weight: bold;">Account type</span>. Add a name of a third-party service.</li><li class="p_Normal"><span style="font-weight: bold;">Message</span>. Add the text to be displayed before the verification code.</li></ul>
+<p class="p_Normal"><img alt="two-factor-integration-1" width="787" height="209" style="margin:0;width:787px;height:209px;border:none" src="two-factor-integration-1.png"/></p>
+<ol style="list-style-type:upper-roman" start="3">
+<li value="3" class="p_Normal">Save the settings. The module is ready for use.</li><li value="4" class="p_Normal">Go to <span style="font-weight: bold;">Administration &gt; Security Settings &gt; Two-Factor Authentication</span> and select the configured <a href="security_settings.html#two-factor-authentication" class="topiclink">module for the second authentication factor</a>.</li></ol>
+<p class="p_Normal">Now, if the user has their Telegram bot chat ID specified in their profile, the employee will receive a confirmation code when logging in.</p>
+<p class="p_Normal"><img alt="two-factor-integration-2" width="478" height="250" style="margin:0;width:478px;height:250px;border:none" src="two-factor-integration-2.png"/></p>
+
+                        <div class="bottom-nav">
+                            
+                                <a id="prev-link" class="topic__navi_prev" href="external-oauth2-integration.html">
+                                    <span class="bottom-nav__arrow bottom-nav__arrow--prev"></span> <span
+                                        class="bottom-nav__link">external-oauth2-integration.html</span>
+                                </a>
+                            
+                            
+                                <a id="next-link" class="topic__navi_next" href="sms-integration.html">
+                                    <span class="bottom-nav__link">sms-integration.html</span> <span
+                                        class="bottom-nav__arrow bottom-nav__arrow--next"></span>
+                                </a>
+                            
+                        </div>
+                        <!-- добавляет на страницу строку блок Была ли статья полезной?  -->
+                          <div class="feedback" id="feedback"><div class="feedback-help"><span><b>Was this helpful?</b></span><form action="" method="POST" class="feedback-form" id="feedback-form"><div class="feedback__popup feedback__popup-response" id="feedback__popup_thx" style="display: none;">Thanks for your feedback!</div><div class="feedback__popup" id="feedback__popup_why" style="display: none;"><div class="feedback__popup-header">Please specify why:</div><input type="radio" name="category" id="bad_recommendation" value="bad_recommendation"><label for="bad_recommendation">Recommendations did not help me</label><input type="radio" name="category" id="difficult_text" value="difficult_text"><label for="difficult_text">Article is hard to understand</label><input type="radio" name="category" id="no_answer" value="no_answer"><label for="no_answer">Didn`t answer my question</label><input type="radio" name="category" id="bad_header" value="bad_header"><label for="bad_header">Content does not match the topic</label><input type="radio" name="category" id="other_reason" value="other_reason"><label for="other_reason">Other</label></div><div class="feedback__popup" id="feedback__popup-other" style="display: none;"><div class="feedback__popup-header">How we can improve it?</div><textarea class="feedback__textarea" name="other" id=""></textarea><input type="submit" class="feedback__other-btn" value="Submit"></div><div class="feedback-form__btn-group"><input type="radio" name="useful" id="feedback__useful_yes" value="true"><label for="feedback__useful_yes"><img src="like.svg" class="small-img" alt="like"><spanclass="feedback-form__btn-group_yes-btn">Yes</spanclass="feedback-form__btn-group_yes-btn"></label><input type="radio" name="useful" id="feedback__useful_no" value="false"><label for="feedback__useful_no"><img src="dislike.svg" class="small-img" alt="dislike"><spanclass="feedback-form__btn-group_no-btn">No</spanclass="feedback-form__btn-group_no-btn"></label></div><select name="category"><option disabled="">Please specify why</option><option value="bad_recommendation" selected="">Recommendations did not help me</option><option value="difficult_text">Article is hard to understand</option><option value="no_answer">Didn`t answer my question</option><option value="bad_header">Content does not match the topic</option><option value="other_reason">Other</option></select><input type="submit"></form></div><div class="found_typo"><p style="margin: 0px; margin-top: 16px !important;"><span><b>Found a typo?</b></span> Select it and press <i>Ctrl+Enter</i> to send us feedback</p></div></div>
+                           
+                    </section>
+                </div>
+                <aside class="article__sidebar" style="display:none">
+                    <input type="checkbox" />
+                    <div class="article__arrow"></div>
+                    <div class="table-of-contents elma365-right" id="toc2Content">
+                        <h3 class="h3-toc">In this topic</h3>
+                        <nav id="toc2"></nav>
+                    </div>
+                </aside>
+            </div>
+        </article>
+    </main>               
+    <footer class="footer">
+        <div class="footer-container">
+  <div class="footer-mobile">
+    
+    <ul class="footer-mobile__list"><li><a href="https://brix365.com/en/" target="_blank">BRIX</a></li><li><a href="https://tssdk.brix365.com/en/latest/" target="_blank">SDK</a></li><li><a href="https://api.brix365.com/en/" target="_blank">API</a></li></ul><ul class="footer-mobile__list"><li><a href="https://brix365.com/en/help/platform/get-trial.html">Platform</a></li><li><a href="https://brix365.com/en/help/ecm/ecm-functions.html">ECM</a></li><li><a href="https://brix365.com/en/help/service/service-functions.html">Service</a></li><li><a href="https://brix365.com/en/help/projects/projects-functions.html">Projects</a></li></ul>
+    
+    
+  </div>
+  <div class="footer-wrap">
+    
+      <div><span class="mobile-question-popup">Send feedback</span><form method="POST" action class="question__popup question-xs" id="question__popup"><div class="question-wrap"><span class="close"></span><span class="title">Ask a question</span><label for="help_question" style="display: none;"></label><textarea name="help_question" id="help_question"></textarea><input type="submit" value="Send"></div></form><div class="hidden fade-in question-success-xs">Sent</div></div>
+    
+    <div class="footer-flex-b">
+      <span class="footer-copy">&copy; 2025 BRIX</span>
+      <ul class="footer-list">
+        
+        <li class="footer-item">
+            <a href="#" class="arrow-top" style="display: block;"></a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+ 
+    </footer>
+    <iframe name="hmnavigation" style="display:none!important"></iframe>
+    <script src="./jquery-ui.js"></script>
+    <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
+    <script src="./jquery.tocify.min.js"></script>
+    <script src="./TypoReporter.min.js"></script>
+    <script src="./google-search.js"></script>
+    <script src="./main.js"></script>
+<script type="text/javascript">
+HMInitToggle('TOGGLE0186A1','hm.type','dropdown','hm.state','0');
+HMInitToggle('TOGGLE0186A2','hm.type','dropdown','hm.state','0');
+</script>
+</body>
+
+</html>

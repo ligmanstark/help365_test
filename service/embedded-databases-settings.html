@@ -1,0 +1,718 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Prepare embedded databases</title>
+    <meta name="generator" content="Help+Manual" />
+    <meta name="keywords" content="" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="For the BRIX On-Premises system to operate, database management systems such as PostgreSQL, MongoDB, Redis, the service bus RabbitMQ, and an S3 compatible object storage are..." />
+    <meta name="picture" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Full documentation for BRIX365 platform. Low-code developer guide. User guide. Admin guide. Developer guide." />
+    <meta property="og:url" content="https://brix365.com/en/help" />
+    <meta property="og:image" content="" />                                                              
+    <link rel="icon" href="favicon.png" type="image/png" />
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./jquery-ui.min.css" />
+    <link rel="stylesheet" href="default.css" />
+    <link rel="stylesheet" href="./search-yandex.css" />
+    <link rel="stylesheet" href="./article.css" />
+    <link rel="stylesheet" href="./glossary.css" />
+    <link rel="stylesheet" href="./theme.css" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+
+<body>
+    
+    <script>!function(e,t,c,n,r,a,m){e.ym=e.ym||function(){(e.ym.a=e.ym.a||[]).push(arguments)},e.ym.l=1*new Date;for(var s=0;s<document.scripts.length;s++)if(document.scripts[s].src===n)return;a=t.createElement(c),m=t.getElementsByTagName(c)[0],a.async=1,a.src=n,m.parentNode.insertBefore(a,m)}(window,document,"script","https://mc.yandex.ru/metrika/tag.js"),ym(83179930,"init",{clickmap:!0,trackLinks:!0,accurateTrackBounce:!0,webvisor:!0})</script><noscript><div><img alt=""src=https://mc.yandex.ru/watch/83179930 style=position:absolute;left:-9999px></div></noscript> 
+    
+    ﻿<header class="header elma-365">
+  <div class="container">
+    <a class="header__logo" href="https://brix365.com/en/help">
+      <img src="./logo-en.svg" alt="header logo">
+    </a>
+ <!-- <div class="hero__search-form" id="search-panel">
+   <form class="search-form" onsubmit="ym(83180416,'reachGoal','poisk')">
+     <label class="search-form__label">
+       <span id="reset-search" class="search__icon"></span>
+       <input class="search-form__input" type="text">
+     </label>
+     <input class="search-form__submit" type="submit" value="Submit">
+   </form>
+  </div>       -->
+  
+     <div class="hero__search-form" id="search-panel"> <form class="search-form"> <label class="search-form__label"> <span id="reset-search" class="search__icon"></span> <input class="search-form__input" type="text"> </label> <input class="search-form__submit" type="submit" value="Submit"> </form> </div> 
+  <div class="hero__search">
+      <a href="#" id="search-icon" class="hero__search-icon">
+        <img src="search-icon-white.svg" alt="search string">
+      </a>
+      <a href="#" id="side-menu-icon" class="hero__side-icon">
+        <img src="side_menu.svg" alt="side menu">
+      </a>
+    </div>  
+  <div class="header__navi">
+        
+        <ul class="header__list"><li><span class="solution-select"><span class="solution-select__selected"></span><svg width="7" height="4" viewBox="0 0 7 4" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L3.5 3.5L6 1" stroke="white" stroke-linecap="round" stroke-linejoin="round"/></svg><ul class="solution-select__list"><li><a class="project-link" href="https://brix365.com/en/help/platform/get-trial.html">Platform</a></li><li><a class="project-link" href="https://brix365.com/en/help/ecm/ecm-functions.html">ECM</a></li><li><a class="project-link" href="https://brix365.com/en/help/crm/crm_overview.html">CRM</a></li><li><a class="project-link" href="https://brix365.com/en/help/service/service-functions.html">Service</a></li><li><a class="project-link" href="https://brix365.com/en/help/projects/projects-functions.html">Projects</a></li><li><a class="project-link" href="https://brix365.com/en/help/business_solutions/-elma365-store.html">Business Solutions</a></li></ul></span></li><li><a href="https://api.brix365.com/en/" target="_blank">API</a></li><li><a href="https://tssdk.brix365.com/" target="_blank">SDK</a></li></ul>
+        
+        
+   </div>
+  </div>
+
+</header>
+
+
+
+    
+    <main class="main container">
+
+        <aside class="sidebar" id="sidebar">
+        <div class="sidebar__header">
+                 <a class="header__logo" href="https://brix365.com/en/help">
+                    <img src="./logo-light-en.svg">
+                 </a>
+                    <span class="sidebar__close elma-365-close" id="close"></span>
+            </div>
+            <div class="sidebar__wrapper" id="side-menu">
+                
+            </div>
+        </aside>
+
+        <article class="article" id="article">
+            <div class="article-inner">           
+                <div class="content">
+                    <header class="article__header">
+                        
+                            <div class="topic__breadcrumbs">
+                                <p><a href="elma365-on-premises.html">BRIX On-Premises</a> &gt; <a href="infrastructure-preparation.html">Prepare infrastructure</a> &gt; Databases / Prepare embedded databases</p>
+                            </div>
+                        
+                        <div class="topic__title"><h1 class="p_Heading1"><span class="f_Heading1">Prepare embedded databases</span></h1>
+</div>
+                    
+</header>
+                    <section class="article__content">
+                        <div class="scroll-top-inner">
+                            <a href="#h1-article" class="scroll-top"></a>
+                        </div>
+                        <!-- Placeholder for topic body. -->
+                        <p class="p_Normal" style="line-height: 1.20;"><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; background-color: #ffffff;">For the BRIX On-Premises system to operate, database management systems such as PostgreSQL, MongoDB, Redis, the service bus RabbitMQ, and an S3 compatible object storage are required. This article describes the installation of these databases and S3 storage in a Kubernetes cluster using the &nbsp;</span><code><b>elma365-dbs</b></code> <span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; background-color: #ffffff;">chart. It's possible to install only the required components from the&nbsp;</span><code><b>elma365-dbs</b></code><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; background-color: #ffffff;">, with unused ones being disabled.</span></p>
+<p class="p_Normal">The installation consists of four steps:</p>
+<ol style="list-style-type:decimal">
+<li value="1" style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif;"><a href="embedded-databases-settings.html#helm-chart" class="topiclink">Downloading the Helm chart and configuration file</a>.</span></li><li value="2" style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif;"><a href="embedded-databases-settings.html#file-config" class="topiclink">Filling out the configuration file</a>.</span></li><li value="3" style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif;"><a href="embedded-databases-settings.html#kubernetes-cluster" class="topiclink">Installing the elma365-dbs chart using helm in the Kubernetes cluster</a>.</span></li><li value="4" style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif;"><a href="embedded-databases-settings.html#databases-s3" class="topiclink">Connecting to the databases and S3</a>.</span></li></ol>
+<h2 class="p_Heading2"><a id="helm-chart" class="hmanchor"></a><span class="f_Heading2">Step 1: Downloading the Helm chart and configuration file</span></h2>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 10px 0 0 0;"><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif;">To install via the internet, obtain the configuration file </span><code><b>values-elma365-dbs.yaml</b></code><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif;"> by executing the following command:</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">helm&nbsp;repo&nbsp;add&nbsp;elma365&nbsp;https://charts.elma365.tech</span><br />
+<span class="f_CodeExample">helm&nbsp;repo&nbsp;update</span><br />
+<span class="f_CodeExample">helm&nbsp;show&nbsp;values&nbsp;elma365/elma365-dbs&nbsp;&gt;&nbsp;values-elma365-dbs.yaml</span></p>
+<p class="p_Normal"><a class="dropdown-toggle" style="font-style: normal; font-weight: normal; color: #000000; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186A1')">Obtaining the configuration file for installation in a closed loop without internet access</a></p>
+<div id="TOGGLE0186A1" class="dropdown-toggle-body" style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0 0 0 0;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_Normal">&nbsp;<br />
+First, download the file on a computer with internet access.</p>
+<ol style="list-style-type:decimal">
+<li value="1" class="p_Normal">Download the BRIX images and upload them to your local image registry. Read more in <a href="downloadin-images-elma365.html" class="topiclink">Download BRIX images</a>.</li><li value="2" class="p_Normal">Download the latest version archive of the chart <code><b>elma365-dbs</b></code> from the <span style="font-weight: bold;">elma365</span> repository by executing the following command:</li></ol>
+<p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample">helm</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">repo</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">add elma365</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">https://charts.elma365.tech</span><br />
+<span class="f_CodeExample">helm</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">repo</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">update</span><br />
+<span class="f_CodeExample">helm</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">pull</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">elma365/elma365-dbs</span></p>
+<ol style="list-style-type:decimal" start="3">
+<li value="3" class="p_Normal">Copy the obtained chart archive <code><b>elma365-dbs-X.Y.Z.tgz</b></code> to the server where the installation will be carried out.</li></ol>
+<ol style="list-style-type:decimal" start="4">
+<li value="4" class="p_Normal">Unpack the chart <code><b>elma365-dbs-X.Y.Z.tgz</b></code> on the server where the installation will take place and copy the default configuration file <code><b>values.yaml</b></code> to <code><b>values-elma365-dbs.yaml</b></code>:</li></ol>
+<p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample">tar</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">-xf</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">elma365-dbs-X.Y.Z.tgz</span><br />
+<span class="f_CodeExample">cp</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">elma365-dbs/values.yaml</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">values-elma365-dbs.yaml</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><br />
+</td>
+</tr>
+</table>
+</div>
+<h2 class="p_Heading2"><a id="file-config" class="hmanchor"></a><span class="f_Heading2">Step 2: Filling out the configuration file</span></h2>
+<p style="line-height: 1.20; background: #ffffff; margin: 10px 0 0 0;"><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif;">Fill out the configuration file </span><code><b>values-elma365-dbs.yaml</b></code><span style="font-size: 13px;"> </span><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif;">for the installation of databases and S3 storage.</span></p>
+<p style="line-height: 1.20; background: #ffffff; margin: 10px 0 0 0;"><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif;">This article will cover the installation of databases and S3 storage in a Kubernetes cluster using the chart </span><code><b>elma365-dbs</b></code><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif;">. For this, standard connection strings and passwords specified in the chart will be used. </span></p>
+<p style="line-height: 1.20; background: #ffffff; margin: 10px 0 0 0;"><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif;">In the chart </span><code><b>elma365-dbs</b></code><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif;">, there is the </span><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; font-weight: bold;">global</span><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif;"> section where the installation of components and chart sections is enabled or disabled. This is necessary for configuring parameters of each component: </span><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; font-weight: bold;">postgresql</span><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif;">, </span><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; font-weight: bold;">mongodb</span><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif;">, </span><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; font-weight: bold;">rabbitmq</span><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif;">, </span><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; font-weight: bold;">redis</span><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif;">, </span><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; font-weight: bold;">minio</span><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif;">, </span><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; font-weight: bold;">elasticsearch</span><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif;">. We will discuss the necessary parameters for installing databases and S3 storage for the sections of these components.</span></p>
+<p style="line-height: 1.20; background: #ffffff; margin: 10px 0 0 0;"><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif;">In the </span><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; font-weight: bold;">global</span><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif;"> section, enable the installation of databases and S3 storage.</span></p>
+<p style="line-height: 1.20; background: #ffffff; margin: 10px 0 0 0;"><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif;">Ensure that in the </span><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; font-weight: bold;">global</span><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif;"> section for the components </span><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; font-weight: bold;">postgresql</span><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif;">, </span><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; font-weight: bold;">mongodb</span><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif;">, </span><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; font-weight: bold;">rabbitmq</span><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif;">, </span><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; font-weight: bold;">redis</span><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif;">, </span><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; font-weight: bold;">minio</span><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif;">, the parameter </span><code><b>enabled</b></code><span style="font-size: 13px;"> </span><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif;">is set to </span><code><b>true</b></code><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif;">.</span></p>
+<p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample"># Selecting databases to install</span><br />
+<span class="f_CodeExample">global:</span><br />
+<span class="f_CodeExample">  postgresql:</span><br />
+<span class="f_CodeExample">  &nbsp; # Installing postgres</span><br />
+<span class="f_CodeExample">  &nbsp; enabled: true</span><br />
+<span class="f_CodeExample">  mongodb:</span><br />
+<span class="f_CodeExample">  &nbsp; # Installing mongoDB</span><br />
+<span class="f_CodeExample">  &nbsp; enabled: true</span><br />
+<span class="f_CodeExample">  redis:</span><br />
+<span class="f_CodeExample">  &nbsp; # Installing redis</span><br />
+<span class="f_CodeExample">  &nbsp; enabled: true</span><br />
+<span class="f_CodeExample">  rabbitmq:</span><br />
+<span class="f_CodeExample">  &nbsp; # Installing rabbitmq</span><br />
+<span class="f_CodeExample">  &nbsp; enabled: true</span><br />
+<span class="f_CodeExample">  minio:</span><br />
+<span class="f_CodeExample">  &nbsp; # Installing minio for S3 storage</span><br />
+<span class="f_CodeExample">  &nbsp; enabled: true</span><br />
+<span class="f_CodeExample">  elasticsearch:</span><br />
+<span class="f_CodeExample">  &nbsp; # Installing Elasticsearch (is enabled for BRIX Bot)</span><br />
+<span class="f_CodeExample">  &nbsp; enabled: false</span></p>
+<ol style="list-style-type:upper-roman" start="2">
+<li value="2" style="line-height: 1.20; background: #ffffff; margin-top: 10px; margin-right: 0; margin-bottom: 0;"><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif;">PostgreSQL configuration parameters.</span></li></ol>
+<p class="p_Normal">If necessary, change the parameters:</p>
+<ul style="list-style-type:disc">
+<li class="p_Normal"><code><b>database</b></code> &nbsp;is the name of the database that will be created in PostgreSQL at the time of installation;</li><li class="p_Normal"><code><b>username</b></code> is the name of the user for accessing the database specified in database. The user will be created in PostgreSQL at the time of installation;</li><li class="p_Normal"><code><b>postgresPassword</b></code> is the password for the user specified in <span style="font-weight: bold;">username</span>;</li><li class="p_Normal"><code><b>size</b></code> is the size of the data storage, selected individually.</li></ul>
+<p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample"># Selecting databases to install</span><br />
+<span class="f_CodeExample">global:</span><br />
+<span class="f_CodeExample">...</span><br />
+<span class="f_CodeExample"># postgres </span><span class="f_CodeExample">database</span><span class="f_CodeExample"> settings</span><br />
+<span class="f_CodeExample">postgresql:</span><br />
+<span class="f_CodeExample">  auth:</span><br />
+<span class="f_CodeExample">  &nbsp; # </span><span class="f_CodeExample">database</span><span class="f_CodeExample"> name</span><br />
+<span class="f_CodeExample">  &nbsp; database: elma365</span><br />
+<span class="f_CodeExample">  &nbsp; # user</span><br />
+<span class="f_CodeExample">  &nbsp; username: postgres</span><br />
+<span class="f_CodeExample">  &nbsp; # Postgres database password</span><br />
+<span class="f_CodeExample">  &nbsp; postgresPassword: pgpassword</span><br />
+<span class="f_CodeExample">  &nbsp; replicationUsername: repl_user</span><br />
+<span class="f_CodeExample">  &nbsp; replicationPassword: repl_password</span><br />
+<span class="f_CodeExample">  &nbsp; enablePostgresUser: true</span><br />
+<span class="f_CodeExample">  &nbsp; password: pgpassword</span><br />
+<span class="f_CodeExample">  primary:</span><br />
+<span class="f_CodeExample">  &nbsp; persistence:</span><br />
+<span class="f_CodeExample">  &nbsp; &nbsp; # data storage size (PVC)</span><br />
+<span class="f_CodeExample">  &nbsp; &nbsp; size: 100Gi</span><br />
+<span class="f_CodeExample">  &nbsp; &nbsp; enabled: true</span><br />
+<span class="f_CodeExample">...</span></p>
+<p class="p_Normal"><a class="dropdown-toggle" style="font-style: normal; font-weight: normal; color: #000000; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186A2')">Filling out clustering parameters for PostgreSQL</a></p>
+<div id="TOGGLE0186A2" class="dropdown-toggle-body" style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0 0 0 0;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_Normal">&nbsp;<br />
+To configure fault tolerance, uncomment and fill in the parameters <code><b>cluster Mode</b></code>. For the parameter <code><b>postgresql.readReplicas.replicaCount</b></code>, specify the required number of replicas.<br />
+&nbsp;</p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample">#&nbsp;Selecting&nbsp;databases&nbsp;to&nbsp;install</span><br />
+<span class="f_CodeExample">global:</span><br />
+<span class="f_CodeExample">...</span><br />
+<span class="f_CodeExample">#&nbsp;Postgres&nbsp;database&nbsp;settings</span><br />
+<span class="f_CodeExample">postgresql:</span><br />
+<span class="f_CodeExample">...</span><br />
+<span class="f_CodeExample"> &nbsp;</span><span class="f_CodeExample">#&nbsp;cluster&nbsp;Mode&nbsp;—&nbsp;uncomment&nbsp;the&nbsp;following&nbsp;lines</span><br />
+<span class="f_CodeExample"> &nbsp;</span><span class="f_CodeExample">architecture:&nbsp;replication</span><br />
+<span class="f_CodeExample"> &nbsp;</span><span class="f_CodeExample">readReplicas:</span><br />
+<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample">replicaCount:&nbsp;2</span><br />
+<span class="f_CodeExample"> &nbsp;</span><span class="f_CodeExample">replication:</span><br />
+<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample">synchronousCommit:&nbsp;'on'</span><br />
+<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample">numSynchronousReplicas:&nbsp;1</span><br />
+<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample">applicationName:&nbsp;replication</span><br />
+<span class="f_CodeExample">...</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><br />
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Normal"><a class="dropdown-toggle" style="font-style: normal; font-weight: normal; color: #000000; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186A3')">Filling out connection parameters to the private registry for installation in a closed loop without internet access</a></p>
+<div id="TOGGLE0186A3" class="dropdown-toggle-body" style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0 0 0 0;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_Normal">&nbsp;<br />
+To connect to a private registry, you need to:</p>
+<ol style="list-style-type:decimal">
+<li value="1" class="p_Normal">Specify the address and path to the private registry in the parameter <code><b>postgresql.volumePermissions.image.repository</b></code> for the initialization container.</li><li value="2" class="p_Normal">Indicate the name of the secret with access rights to the private registry in the parameter <code><b>postgresql.volumePermissions.image.pullSecrets</b></code> for the initialization container. The secret must be created manually and encrypted in Base64.</li><li value="3" class="p_Normal">Specify the address and path to the private registry in the parameter <code><b>postgresql.image.repository</b></code>.</li><li value="4" class="p_Normal">Indicate the name of the secret with access rights to the private registry in the parameter <code><b>postgresql.image.pullSecrets</b></code>. The secret must be created manually and encrypted in Base64.</li></ol>
+<p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample"># </span><span class="f_CodeExample">Selecting databases to install</span><br />
+<span class="f_CodeExample">global:</span><br />
+<span class="f_CodeExample">...</span><br />
+<span class="f_CodeExample"># </span><span class="f_CodeExample">Postgres database settings</span><br />
+<span class="f_CodeExample">postgresql:</span><br />
+<span class="f_CodeExample">...</span><br />
+<span class="f_CodeExample">  # Enabling the initialization container, which changes the owner and group of the volume mount point to `RunAsUser:fsGroup</span><br />
+<span class="f_CodeExample">  volumePermissions:</span><br />
+<span class="f_CodeExample">  &nbsp; enabled: true</span><br />
+<span class="f_CodeExample">  &nbsp; # address and secret for the private registry of initialization container images</span><br />
+<span class="f_CodeExample">  &nbsp; image:</span><br />
+<span class="f_CodeExample">  &nbsp; &nbsp; registry: registry.example.com/bitnami-shell</span><br />
+<span class="f_CodeExample">  &nbsp; &nbsp; # The secret with access rights to the private registry must be created manually, encrypted in Base64</span><br />
+<span class="f_CodeExample">  &nbsp; &nbsp; pullSecrets:</span><br />
+<span class="f_CodeExample">  &nbsp; &nbsp; &nbsp; - myRegistryKeySecretName</span><br />
+<span class="f_CodeExample">...</span><br />
+<span class="f_CodeExample">  # Address and secret for the private registry</span><br />
+<span class="f_CodeExample">  image:</span><br />
+<span class="f_CodeExample">  &nbsp; registry: registry.example.com/postgresql</span><br />
+<span class="f_CodeExample">  &nbsp; # The secret with access rights to the private registry must be created manually, encrypted in Base64</span><br />
+<span class="f_CodeExample">  &nbsp; pullSecrets:</span><br />
+<span class="f_CodeExample">  &nbsp; &nbsp; - myRegistryKeySecretName</span><br />
+<span class="f_CodeExample">...</span></p>
+<p class="p_Normal">Where repository<span style="font-weight: bold;"> </span>format is:</p>
+<ul style="list-style-type:disc">
+<li class="p_Normal">address is<span style="font-weight: bold;"> </span><code><b>registry.example.com</b></code>;</li><li class="p_Normal">path is <code><b>/postgresql</b></code> (for initialization container <code><b>/bitnami-shell</b></code>).</li></ul>
+</td>
+</tr>
+</table>
+</div>
+<ol style="list-style-type:upper-roman" start="3">
+<li value="3" style="line-height: 1.20; background: #ffffff; margin-top: 10px; margin-right: 0; margin-bottom: 0;"><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif;">MongoDB configuration parameters.</span></li></ol>
+<p style="line-height: 1.20; background: #ffffff; margin: 10px 0 0 0;"><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif;">If necessary, change the following parameters:</span></p>
+<ul style="list-style-type:disc">
+<li style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 0;"><code><b>database</b></code><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif;"> is the name of the database to be created in MongoDB during installation;</span></li><li style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 0;"><code><b>username</b></code><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif;"> is the name of the user for accessing the specified database in </span><code><b>database</b></code><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif;">. The user will be created in MongoDB during installation;</span></li><li style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 0;"><code><b>password</b></code><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif;"> is the &nbsp;password for the user mentioned in </span><code><b>username</b></code><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif;">;</span></li><li style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 0;"><code><b>size</b></code><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif;"> is the data storage size, which is selected individually.</span></li></ul>
+<p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample">#</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">Selecting databases to install</span><br />
+<span class="f_CodeExample">global:</span><br />
+<span class="f_CodeExample">...</span><br />
+<span class="f_CodeExample">#</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">MongoDB settings</span><br />
+<span class="f_CodeExample">mongodb:</span><br />
+<span class="f_CodeExample">  </span><span class="f_CodeExample">auth:</span><br />
+<span class="f_CodeExample">  &nbsp; </span><span class="f_CodeExample">#</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">user</span><br />
+<span class="f_CodeExample">  &nbsp; </span><span class="f_CodeExample">username:</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">elma365</span><br />
+<span class="f_CodeExample">  &nbsp; </span><span class="f_CodeExample">#</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">database name</span><br />
+<span class="f_CodeExample">  &nbsp; </span><span class="f_CodeExample">database:</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">elma365</span><br />
+<span class="f_CodeExample">  &nbsp; </span><span class="f_CodeExample">#</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">database</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">password</span><br />
+<span class="f_CodeExample">  &nbsp; </span><span class="f_CodeExample">password:</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">mongopassword</span><br />
+<span class="f_CodeExample">  &nbsp; </span><span class="f_CodeExample">#</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">root</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">password</span><br />
+<span class="f_CodeExample">  &nbsp; </span><span class="f_CodeExample">rootPassword:</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">mongorootpassword</span><br />
+<span class="f_CodeExample">  &nbsp; </span><span class="f_CodeExample">replicaSetKey:</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">replicapassword</span><br />
+<span class="f_CodeExample">  </span><span class="f_CodeExample">persistence:</span><br />
+<span class="f_CodeExample">  &nbsp; </span><span class="f_CodeExample">#</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">data storage size</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">(PVC)</span><br />
+<span class="f_CodeExample">  &nbsp; </span><span class="f_CodeExample">size:</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">20Gi</span><br />
+<span class="f_CodeExample">...</span></p>
+<p class="p_Normal"><a class="dropdown-toggle" style="font-style: normal; font-weight: normal; color: #000000; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186A4')">Filling out clustering parameters for MongoDB</a></p>
+<div id="TOGGLE0186A4" class="dropdown-toggle-body" style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0 0 0 0;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_Normal">&nbsp;<br />
+To configure fault tolerance, uncomment and fill in the parameters <code><b>cluster Mode</b></code>. For the parameter <code><b>mongodb.replicaCount</b></code>, specify the required number of nodes in the cluster.</p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample">#&nbsp;Selecting&nbsp;databases&nbsp;to&nbsp;install</span><br />
+<span class="f_CodeExample">global:</span><br />
+<span class="f_CodeExample">...</span><br />
+<span class="f_CodeExample">#&nbsp;MongoDB&nbsp;settings</span><br />
+<span class="f_CodeExample">mongodb:</span><br />
+<span class="f_CodeExample">...</span><br />
+<span class="f_CodeExample"> &nbsp;</span><span class="f_CodeExample">#&nbsp;cluster&nbsp;Mode&nbsp;—&nbsp;uncomment&nbsp;the&nbsp;following&nbsp;lines</span><br />
+<span class="f_CodeExample"> &nbsp;</span><span class="f_CodeExample">architecture:&nbsp;replicaset</span><br />
+<span class="f_CodeExample"> &nbsp;</span><span class="f_CodeExample">replicaCount:&nbsp;3</span><br />
+<span class="f_CodeExample">...</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Normal"><a class="dropdown-toggle" style="font-style: normal; font-weight: normal; color: #000000; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186A5')">Filling out parameters for connecting to a private registry for offline installation</a></p>
+<div id="TOGGLE0186A5" class="dropdown-toggle-body" style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0 0 0 0;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_Normal">&nbsp;<br />
+To connect to a private registry, you need to:</p>
+<ol style="list-style-type:decimal">
+<li value="1" class="p_Normal">Specify the address and path to the private registry in the parameter <code><b>mongodb.volumePermissions.image.repository</b></code> for the initialization container.</li><li value="2" class="p_Normal">Indicate the name of the secret with access rights to the private registry in the parameter <code><b>mongodb.volumePermissions.image.pullSecrets</b></code> for the initialization container. The secret must be created manually and encrypted in Base64.</li><li value="3" class="p_Normal">Specify the address and path to the private registry in the parameter <code><b>mongodb.image.repository</b></code>.</li><li value="4" class="p_Normal">Indicate the name of the secret with access rights to the private registry in the parameter <code><b>mongodb.image.pullSecrets</b></code>. The secret must be created manually and encrypted in Base64.</li></ol>
+<p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample"># Selecting databases to install</span><br />
+<span class="f_CodeExample">global:</span><br />
+<span class="f_CodeExample">...</span><br />
+<span class="f_CodeExample"># MongoDB settings</span><br />
+<span class="f_CodeExample">mongodb:</span><br />
+<span class="f_CodeExample">...</span><br />
+<span class="f_CodeExample">  </span><span class="f_CodeExample"># </span><span class="f_CodeExample">Enabling the initialization container, which changes the owner and group of the volume mount point to</span><span class="f_CodeExample"> `RunAsUser:fsGroup</span><br />
+<span class="f_CodeExample">  </span><span class="f_CodeExample">volumePermissions:</span><br />
+<span class="f_CodeExample">  &nbsp; </span><span class="f_CodeExample">enabled:</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample" style="font-weight: bold;">true</span><br />
+<span class="f_CodeExample">  &nbsp; </span><span class="f_CodeExample"># </span><span class="f_CodeExample">address and secret for the private registry of initialization container images</span><br />
+<span class="f_CodeExample">  &nbsp; </span><span class="f_CodeExample">image:</span><br />
+<span class="f_CodeExample">  &nbsp; &nbsp; </span><span class="f_CodeExample">registry:</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">registry.example.com/bitnami-shell</span><br />
+<span class="f_CodeExample">  &nbsp; &nbsp; </span><span class="f_CodeExample"># </span><span class="f_CodeExample">The secret with access rights to the private registry must be created manually, encrypted in Base64</span><br />
+<span class="f_CodeExample">  &nbsp; &nbsp; </span><span class="f_CodeExample">pullSecrets:</span><br />
+<span class="f_CodeExample">  &nbsp; &nbsp; &nbsp; </span><span class="f_CodeExample">-</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">myRegistryKeySecretName</span><br />
+<span class="f_CodeExample">...</span><br />
+<span class="f_CodeExample">  </span><span class="f_CodeExample"># address and secret for the private registry of initialization container images</span><br />
+<span class="f_CodeExample">  </span><span class="f_CodeExample">image:</span><br />
+<span class="f_CodeExample">  &nbsp; </span><span class="f_CodeExample">registry:</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">registry.example.com/mongodb</span><br />
+<span class="f_CodeExample">  &nbsp; </span><span class="f_CodeExample"># </span><span class="f_CodeExample">The secret with access rights to the private registry must be created manually, encrypted in Base64</span><br />
+<span class="f_CodeExample">  &nbsp; </span><span class="f_CodeExample">pullSecrets:</span><br />
+<span class="f_CodeExample">  &nbsp; &nbsp; </span><span class="f_CodeExample">-</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">myRegistryKeySecretName</span><br />
+<span class="f_CodeExample">...</span></p>
+<p class="p_Normal">Where repository<span style="font-weight: bold;"> </span>format is:</p>
+<ul style="list-style-type:disc">
+<li class="p_Normal">address is <code><b>registry.example.com</b></code>;</li><li class="p_Normal">path is <code><b>/mongodb</b></code> (for initialization container <code><b>/bitnami-shell</b></code>).</li></ul>
+</td>
+</tr>
+</table>
+</div>
+<ol style="list-style-type:upper-roman" start="4">
+<li value="4" style="line-height: 1.20; background: #ffffff; margin-top: 10px; margin-right: 0; margin-bottom: 0;"><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif;">RabbitMQ configuration parameters.</span></li></ol>
+<p style="line-height: 1.20; background: #ffffff; margin: 10px 0 0 0;"><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif;">If necessary, change the following parameters:</span></p>
+<ul style="list-style-type:disc">
+<li style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 0;"><code><b>vhost</b></code><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif;"> is the name of the database to be created in RabbitMQ during installation;</span></li><li style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 0;"><code><b>username</b></code><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif;"> is the name of the user for accessing the virtual host specified in </span><code><b>vhost</b></code><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif;">. The user will be created in RabbitMQ during installation;</span></li><li style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 0;"><code><b>password</b></code><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif;"> is the &nbsp;password for the user mentioned in </span><code><b>username</b></code><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif;">;</span></li><li style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 0;"><code><b>size</b></code><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif;"> is the data storage size, which is selected individually.</span></li></ul>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">#&nbsp;Selecting&nbsp;databases&nbsp;to&nbsp;install</span><br />
+<span class="f_CodeExample">global:</span><br />
+<span class="f_CodeExample">...</span><br />
+<span class="f_CodeExample">#&nbsp;rabbitMQ&nbsp;settings</span><br />
+<span class="f_CodeExample">rabbitmq:</span><br />
+<span class="f_CodeExample"> &nbsp;</span><span class="f_CodeExample">auth:</span><br />
+<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample">#&nbsp;user</span><br />
+<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample">username:</span><span class="f_CodeExample" style="color: #ffffff;">&nbsp;</span><span class="f_CodeExample">elma365</span><br />
+<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample">#&nbsp;vhost</span><br />
+<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample">vhost:</span><span class="f_CodeExample" style="color: #ffffff;">&nbsp;</span><span class="f_CodeExample">elma365</span><br />
+<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample">#&nbsp;password</span><br />
+<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample">password:</span><span class="f_CodeExample" style="color: #ffffff;">&nbsp;</span><span class="f_CodeExample">rmqpassword</span><br />
+<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample">erlangCookie:</span><span class="f_CodeExample" style="color: #ffffff;">&nbsp;</span><span class="f_CodeExample">zk8Jdo2Kzz4ql</span><br />
+<span class="f_CodeExample"> &nbsp;</span><span class="f_CodeExample">persistence:</span><br />
+<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample">#&nbsp;</span><span class="f_CodeExample">data&nbsp;storage&nbsp;size</span><span class="f_CodeExample">&nbsp;(PVC)</span><br />
+<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample">size:</span><span class="f_CodeExample" style="color: #ffffff;">&nbsp;</span><span class="f_CodeExample">5Gi</span><br />
+<span class="f_CodeExample">...</span></p>
+<p class="p_Normal"><a class="dropdown-toggle" style="font-style: normal; font-weight: normal; color: #000000; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186A6')">Filling out clustering parameters for RabbitMQ</a></p>
+<div id="TOGGLE0186A6" class="dropdown-toggle-body" style="text-align: left; text-indent: 0; line-height: 1.0; page-break-inside: avoid; padding: 0 0 0 0; margin: 0 0 0 0;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_Normal">&nbsp;<br />
+To configure fault tolerance, uncomment and fill in the parameters <code><b>cluster Mode</b></code>. For the parameter <code><b>rabbitmq.replicaCount</b></code>, specify the required number of nodes in the cluster.</p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample">#&nbsp;Selecting&nbsp;databases&nbsp;to&nbsp;install</span><br />
+<span class="f_CodeExample">global:</span><br />
+<span class="f_CodeExample">...</span><br />
+<span class="f_CodeExample">#&nbsp;rabbitMQ&nbsp;settings</span><br />
+<span class="f_CodeExample">rabbitmq:</span><br />
+<span class="f_CodeExample">...</span><br />
+<span class="f_CodeExample"> &nbsp;</span><span class="f_CodeExample">#&nbsp;cluster&nbsp;Mode&nbsp;—&nbsp;uncomment&nbsp;the&nbsp;following&nbsp;lines</span><br />
+<span class="f_CodeExample"> &nbsp;</span><span class="f_CodeExample">replicaCount:&nbsp;3</span><br />
+<span class="f_CodeExample">...</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Normal"><a class="dropdown-toggle" style="font-style: normal; font-weight: normal; color: #000000; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186A7')">Filling out parameters for connecting to a private registry for offline installation</a></p>
+<div id="TOGGLE0186A7" class="dropdown-toggle-body" style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0 0 0 0;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_Normal">&nbsp;<br />
+To connect to a private registry, you need to:</p>
+<ol style="list-style-type:decimal">
+<li value="1" class="p_Normal">Specify the address and path to the private registry in the parameter <code><b>rabbitmq.volumePermissions.image.repository</b></code> for the initialization container.</li><li value="2" class="p_Normal">Indicate the name of the secret with access rights to the private registry in the parameter <code><b>rabbitmq.volumePermissions.image.pullSecrets</b></code> for the initialization container. The secret must be created manually and encrypted in Base64.</li><li value="3" class="p_Normal">Specify the address and path to the private registry in the parameter <code><b>rabbitmq.image.repository</b></code>.</li><li value="4" class="p_Normal">Indicate the name of the secret with access rights to the private registry in the parameter <code><b>rabbitmq.image.pullSecrets</b></code>. The secret must be created manually and encrypted in Base64.</li></ol>
+<p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample"># Selecting databases to install</span><br />
+<span class="f_CodeExample">global:</span><br />
+<span class="f_CodeExample">...</span><br />
+<span class="f_CodeExample"># rabbitMQ settings</span><br />
+<span class="f_CodeExample">rabbitmq:</span><br />
+<span class="f_CodeExample">...</span><br />
+<span class="f_CodeExample">  </span><span class="f_CodeExample"># </span><span class="f_CodeExample">Enabling the initialization container, which changes the owner and group of the volume mount point to</span><span class="f_CodeExample"> `RunAsUser:fsGroup</span><br />
+<span class="f_CodeExample">  </span><span class="f_CodeExample">volumePermissions:</span><br />
+<span class="f_CodeExample">  &nbsp; </span><span class="f_CodeExample">enabled:</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample" style="font-weight: bold;">true</span><br />
+<span class="f_CodeExample">  &nbsp; </span><span class="f_CodeExample"># address and secret for the private registry of initialization container images</span><br />
+<span class="f_CodeExample">  &nbsp; </span><span class="f_CodeExample">image:</span><br />
+<span class="f_CodeExample">  &nbsp; &nbsp; </span><span class="f_CodeExample">registry:</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">registry.example.com/bitnami-shell</span><br />
+<span class="f_CodeExample">  &nbsp; &nbsp; </span><span class="f_CodeExample"># </span><span class="f_CodeExample">The secret with access rights to the private registry must be created manually, encrypted in Base64</span><br />
+<span class="f_CodeExample">  &nbsp; &nbsp; </span><span class="f_CodeExample">pullSecrets:</span><br />
+<span class="f_CodeExample">  &nbsp; &nbsp; &nbsp; </span><span class="f_CodeExample">-</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">myRegistryKeySecretName</span><br />
+<span class="f_CodeExample">...</span><br />
+<span class="f_CodeExample">  </span><span class="f_CodeExample"># address and secret for the private registry</span><br />
+<span class="f_CodeExample">  </span><span class="f_CodeExample">image:</span><br />
+<span class="f_CodeExample">  &nbsp; </span><span class="f_CodeExample">registry:</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">registry.example.com/rabbitmq</span><br />
+<span class="f_CodeExample">  &nbsp; </span><span class="f_CodeExample"># </span><span class="f_CodeExample">The secret with access rights to the private registry must be created manually, encrypted in Base64</span><br />
+<span class="f_CodeExample">  &nbsp; </span><span class="f_CodeExample">pullSecrets:</span><br />
+<span class="f_CodeExample">  &nbsp; &nbsp; </span><span class="f_CodeExample">-</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">myRegistryKeySecretName</span><br />
+<span class="f_CodeExample">...</span></p>
+<p class="p_Normal">Where repository<span style="font-weight: bold;"> </span>format is:</p>
+<ul style="list-style-type:disc">
+<li class="p_Normal">address is <code><b>registry.example.com</b></code>;</li><li class="p_Normal">path is <code><b>/rabbitmq</b></code> (for initialization container <code><b>/bitnami-shell</b></code>).</li></ul>
+</td>
+</tr>
+</table>
+</div>
+<ol style="list-style-type:upper-roman" start="5">
+<li value="5" style="line-height: 1.20; background: #ffffff; margin-top: 10px; margin-right: 0; margin-bottom: 0;"><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif;">Redis confguration parameters.</span></li></ol>
+<p style="line-height: 1.20; background: #ffffff; margin: 10px 0 0 0;"><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif;">If necessary, change the data storage size in the parameter </span><code><b>size</b></code><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif;">, which is selected individually.</span></p>
+<p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample">#</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">Selecting databases to install</span><br />
+<span class="f_CodeExample">global:</span><br />
+<span class="f_CodeExample">...</span><br />
+<span class="f_CodeExample">#</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">Redis settings</span><br />
+<span class="f_CodeExample">redis:</span><br />
+<span class="f_CodeExample">  </span><span class="f_CodeExample">master:</span><br />
+<span class="f_CodeExample">  &nbsp; </span><span class="f_CodeExample">persistence:</span><br />
+<span class="f_CodeExample">  &nbsp; &nbsp; </span><span class="f_CodeExample">#</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">data storage size</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">(PVC)</span><br />
+<span class="f_CodeExample">  &nbsp; &nbsp; </span><span class="f_CodeExample">size:</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">10Gi</span><br />
+<span class="f_CodeExample">  &nbsp; &nbsp; </span><span class="f_CodeExample">#</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">If undefined, the default StorageClass is used</span><br />
+<span class="f_CodeExample">  &nbsp; &nbsp; </span><span class="f_CodeExample">#</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">storageClass:</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">&quot;-&quot;</span><br />
+<span class="f_CodeExample">...</span><br />
+<span class="f_CodeExample">  </span><span class="f_CodeExample">commonConfiguration:</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">|-</span><br />
+<span class="f_CodeExample">  &nbsp; </span><span class="f_CodeExample">maxclients</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">20000</span><br />
+<span class="f_CodeExample">  </span><span class="f_CodeExample">replica:</span><br />
+<span class="f_CodeExample">  &nbsp; </span><span class="f_CodeExample">persistence:</span><br />
+<span class="f_CodeExample">  &nbsp; &nbsp; </span><span class="f_CodeExample">#</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">data storage size</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">(PVC)</span><br />
+<span class="f_CodeExample">  &nbsp; &nbsp; </span><span class="f_CodeExample">size:</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">10Gi</span><br />
+<span class="f_CodeExample">...</span></p>
+<p class="p_Normal"><a class="dropdown-toggle" style="font-style: normal; font-weight: normal; color: #000000; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186A8')">Filling out clustering parameters for Redis</a></p>
+<div id="TOGGLE0186A8" class="dropdown-toggle-body" style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0 0 0 0;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_Normal">&nbsp;<br />
+To configure fault tolerance, uncomment and fill in the parameters <code><b>cluster Mode</b></code>. For the parameter <code><b>redis.replica.replicaCount</b></code>, specify the required number of nodes in the cluster.</p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample">#&nbsp;</span><span class="f_CodeExample">Selecting&nbsp;databases&nbsp;to&nbsp;install</span><span class="f_CodeExample">.</span><br />
+<span class="f_CodeExample">global:</span><br />
+<span class="f_CodeExample">...</span><br />
+<span class="f_CodeExample">#&nbsp;Redis&nbsp;settomgs</span><br />
+<span class="f_CodeExample">redis:</span><br />
+<span class="f_CodeExample">...</span><br />
+<span class="f_CodeExample"> &nbsp;replica:</span><br />
+<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;persistence:</span><br />
+<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...</span><br />
+<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;replicaCount:&nbsp;3</span><br />
+<span class="f_CodeExample"> &nbsp;#&nbsp;cluster&nbsp;Mode&nbsp;—&nbsp;</span><span class="f_CodeExample">uncomment&nbsp;the&nbsp;following&nbsp;lines</span><br />
+<span class="f_CodeExample"> &nbsp;architecture:&nbsp;replication</span><br />
+<span class="f_CodeExample"> &nbsp;sentinel:</span><br />
+<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;enabled:&nbsp;true</span><br />
+<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;quorum:&nbsp;2</span><br />
+<span class="f_CodeExample">...</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Normal"><a class="dropdown-toggle" style="font-style: normal; font-weight: normal; color: #000000; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186A9')">Filling out parameters for connecting to a private registry for offline installation</a></p>
+<div id="TOGGLE0186A9" class="dropdown-toggle-body" style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0 0 0 0;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_Normal">&nbsp;<br />
+To connect to a private registry, you need to:</p>
+<ol style="list-style-type:decimal">
+<li value="1" class="p_Normal">Specify the address and path to the private registry in the parameter <code><b>redis.volumePermissions.image.repository</b></code> for the initialization container.</li><li value="2" class="p_Normal">Indicate the name of the secret with access rights to the private registry in the parameter <code><b>redis.volumePermissions.image.pullSecrets</b></code> for the initialization container. The secret must be created manually and encrypted in Base64.</li><li value="3" class="p_Normal">Specify the address and path to the private registry in the parameter <code><b>redis.image.repository</b></code>.</li><li value="4" class="p_Normal">Indicate the name of the secret with access rights to the private registry in the parameter <code><b>redis.image.pullSecrets</b></code>. The secret must be created manually and encrypted in Base64.</li></ol>
+<p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample"># Selecting databases to install</span><br />
+<span class="f_CodeExample">global:</span><br />
+<span class="f_CodeExample">...</span><br />
+<span class="f_CodeExample"># Redis settings</span><br />
+<span class="f_CodeExample">redis:</span><br />
+<span class="f_CodeExample">...</span><br />
+<span class="f_CodeExample">  </span><span class="f_CodeExample"># </span><span class="f_CodeExample">Enabling the initialization container, which changes the owner and group of the volume mount point to</span><span class="f_CodeExample"> `RunAsUser:fsGroup</span><br />
+<span class="f_CodeExample">  </span><span class="f_CodeExample">volumePermissions:</span><br />
+<span class="f_CodeExample">  &nbsp; </span><span class="f_CodeExample">enabled:</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample" style="font-weight: bold;">true</span><br />
+<span class="f_CodeExample">  &nbsp; </span><span class="f_CodeExample"># address and secret for the private registry of initialization container images</span><br />
+<span class="f_CodeExample">  &nbsp; </span><span class="f_CodeExample">image:</span><br />
+<span class="f_CodeExample">  &nbsp; &nbsp; </span><span class="f_CodeExample">registry:</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">registry.example.com/bitnami-shell</span><br />
+<span class="f_CodeExample">  &nbsp; &nbsp; </span><span class="f_CodeExample"># </span><span class="f_CodeExample">The secret with access rights to the private registry must be created manually, encrypted in Base64</span><br />
+<span class="f_CodeExample">  &nbsp; &nbsp; </span><span class="f_CodeExample">pullSecrets:</span><br />
+<span class="f_CodeExample">  &nbsp; &nbsp; &nbsp; </span><span class="f_CodeExample">-</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">myRegistryKeySecretName</span><br />
+<span class="f_CodeExample">...</span><br />
+<span class="f_CodeExample">  </span><span class="f_CodeExample"># address and secret for the private registry</span><br />
+<span class="f_CodeExample">  </span><span class="f_CodeExample">image:</span><br />
+<span class="f_CodeExample">  &nbsp; </span><span class="f_CodeExample">registry:</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">registry.example.com/redis</span><br />
+<span class="f_CodeExample">  &nbsp; </span><span class="f_CodeExample"># </span><span class="f_CodeExample">The secret with access rights to the private registry must be created manually, encrypted in Base64</span><br />
+<span class="f_CodeExample">  &nbsp; </span><span class="f_CodeExample">pullSecrets:</span><br />
+<span class="f_CodeExample">  &nbsp; &nbsp; </span><span class="f_CodeExample">-</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">myRegistryKeySecretName</span><br />
+<span class="f_CodeExample">...</span></p>
+<p class="p_Normal">Where repository<span style="font-weight: bold;"> </span>format is:</p>
+<ul style="list-style-type:disc">
+<li class="p_Normal">address is <code><b>registry.example.com</b></code>;</li><li class="p_Normal">path is <code><b>/redis</b></code> (for initialization container <code><b>/bitnami-shell</b></code>).</li></ul>
+</td>
+</tr>
+</table>
+</div>
+<ol style="list-style-type:upper-roman" start="6">
+<li value="6" style="line-height: 1.20; background: #ffffff; margin-top: 10px; margin-right: 0; margin-bottom: 0;"><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif;"> MinIO configuration parameters.</span></li></ol>
+<p style="line-height: 1.20; background: #ffffff; margin: 10px 0 0 0;"><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif;">If necessary, modify the following parameters:</span></p>
+<ul style="list-style-type:disc">
+<li style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 0;"><code><b>rootUser</b></code><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif;"> is t</span><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif;">he name of the user for access to the S3 storage. The user will be created in MinIO during installation.</span></li><li style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 0;"><code><b>rootPassword</b></code><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif;"> is the</span><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif;"> password for the user specified in</span><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif;"> </span><code><b>rootUser</b></code><span style="font-size: 13px;">.</span></li><li style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 0;"><code><b>defaultBuckets</b></code><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif;"> is the </span><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif;">name of the bucket that will be created in MinIO during installation</span><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif;">. </span></li></ul>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">Начало&nbsp;внимание</span></p>
+<p class="p_Normal">The bucket name in S3 must follow the format <span style="font-weight: bold;">s3elma365*</span>. </p>
+<p class="p_Normal">Examples:</p>
+<ul style="list-style-type:disc">
+<li class="p_Normal"><code><b>s3elma365</b></code>.</li><li class="p_Normal"><code><b>s3elma365-dev</b></code>.</li><li class="p_Normal"><code><b>s3elma365-prod</b></code>.</li></ul>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">Конец&nbsp;внимание</span></p>
+<ul style="list-style-type:disc">
+<li style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 0;"><code><b>apiIngress.apiIngress.path</b></code><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif;"> is the name of the bucket for Ingress, which must match </span><code><b>defaultBuckets</b></code><span style="font-size: 13px;">.</span></li><li style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 0;"><code><b>apiIngress.apiIngress.name</b></code> is the domain name (FQDN) by which the S3 storage will be accessible. In the context of this article it is <code><b>elma365_server.your_domain</b></code><span style="font-size: 13px;">.</span></li><li style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 0;"><code><b>size</b></code><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif;"> is the data storage size, which is selected individually.</span></li></ul>
+<p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample">#</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">Selecting databases to install</span><br />
+<span class="f_CodeExample">global:</span><br />
+<span class="f_CodeExample">...</span><br />
+<span class="f_CodeExample">#</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">minio</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">(S3 storage)settings</span><br />
+<span class="f_CodeExample">minio:</span><br />
+<span class="f_CodeExample">  </span><span class="f_CodeExample">auth:</span><br />
+<span class="f_CodeExample">  &nbsp; </span><span class="f_CodeExample">rootUser:</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">&quot;PZSF73JG72Ksd955JKU1HIA&quot;</span><br />
+<span class="f_CodeExample">  &nbsp; </span><span class="f_CodeExample">rootPassword:</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">&quot;aFDkj28Jbs2JKbnvJH678MNwiz88zKjsuNBHHs&quot;</span><br />
+<span class="f_CodeExample">  </span><span class="f_CodeExample">#</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">BRIX bucket</span><br />
+<span class="f_CodeExample">  </span><span class="f_CodeExample">defaultBuckets:</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">s3elma365</span><br />
+<span class="f_CodeExample">  </span><span class="f_CodeExample">#</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">Additional buckets are enabled for</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">BRIX</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">+ BRIX Bot</span><br />
+<span class="f_CodeExample">  </span><span class="f_CodeExample">#</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">defaultBuckets:</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">s3elma365,s3elma365bot,elma365bot-</span><span class="f_CodeExample" style="font-weight: bold;">static</span><span class="f_CodeExample">-files,elma365bot-temporary-files</span><br />
+<span class="f_CodeExample">  </span><span class="f_CodeExample">apiIngress:</span><br />
+<span class="f_CodeExample">  &nbsp; </span><span class="f_CodeExample">extraHosts:</span><br />
+<span class="f_CodeExample">  &nbsp; &nbsp; </span><span class="f_CodeExample">-</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">path:</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">/s3elma365</span><br />
+<span class="f_CodeExample">  &nbsp; &nbsp; &nbsp; name: elma365_server.your_domain</span><br />
+<span class="f_CodeExample">...</span><br />
+<span class="f_CodeExample">  </span><span class="f_CodeExample">persistence:</span><br />
+<span class="f_CodeExample">  &nbsp; </span><span class="f_CodeExample">#</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">data storage size</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">(PVC)</span><br />
+<span class="f_CodeExample">  &nbsp; </span><span class="f_CodeExample">size:</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">100Gi</span><br />
+<span class="f_CodeExample">...</span></p>
+<p class="p_Normal"><a class="dropdown-toggle" style="font-style: normal; font-weight: normal; color: #000000; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186AA')">Filling out TLS/SSL enabling parameters for MinIO</a></p>
+<div id="TOGGLE0186AA" class="dropdown-toggle-body" style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0 0 0 0;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_Normal">&nbsp;<br />
+To enable TLS/SSL support in MinIO, follow these steps:</p>
+<ol style="list-style-type:decimal">
+<li value="1" class="p_Normal">Prepare a secret with a certificate for HTTPS operation. Read more in <a href="preparation-secret-with-certificate-https.html" class="topiclink">Create a secret with a certificate for HTTPS operation</a>.</li><li value="2" class="p_Normal">Fill in the TLS/SSL parameters for MinIO:</li></ol>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">#&nbsp;</span><span class="f_CodeExample">Selecting&nbsp;databases&nbsp;to&nbsp;install</span><br />
+<span class="f_CodeExample">global:</span><br />
+<span class="f_CodeExample">...</span><br />
+<span class="f_CodeExample">#&nbsp;minio&nbsp;(S3&nbsp;storage)&nbsp;settings</span><br />
+<span class="f_CodeExample">minio:</span><br />
+<span class="f_CodeExample">...</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;apiIngress:</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;extraHosts:</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;path:&nbsp;/s3elma365</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;enabling&nbsp;host&nbsp;in&nbsp;ingress&nbsp;(necessary&nbsp;to&nbsp;specify&nbsp;for&nbsp;TLS)</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;for&nbsp;the&nbsp;app,&nbsp;enable&nbsp;hostEnabled&nbsp;in&nbsp;the&nbsp;file&nbsp;values-elma365.yaml</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name:&nbsp;elma365_server.your_domain</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;TLS&nbsp;settings&nbsp;for&nbsp;minio</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;extraTls:</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;hosts:</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;elma365_server.your_domain</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;secretName:&nbsp;&quot;elma365-onpremise-tls&quot;</span><br />
+<span class="f_CodeExample">...</span></p>
+<p class="p_Normal">where:</p>
+<ul style="list-style-type:disc">
+<li class="p_Normal"><code><b>global.minio.extraTls.secretName</b></code> is the name of the secret created in the previous step. In the context of this article it is <code><b>elma365-onpremise-tls</b></code>;</li><li class="p_Normal"><code><b>global.minio.extraHosts.name</b></code> and <code><b>global.minio.extraTls.hosts</b></code> ishe domain name (FQDN) by which the MinIO S3 storage is accessible. In the context of this article it is <code><b>elma365_server.your_domain</b></code>.</li></ul>
+<p class="p_Normal">If you used a self-signed certificate created with OpenSSL or a certificate issued by a local certification authority when creating the secret for HTTPS operation, you need to configure trust support for the user's CA certificate. For built-in databases, you can do this using the Kyverno add-ons module.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Normal"><a class="dropdown-toggle" style="font-style: normal; font-weight: normal; color: #000000; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186AB')">Filling out parameters for connecting to a private registry for offline installation</a></p>
+<div id="TOGGLE0186AB" class="dropdown-toggle-body" style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0 0 0 0;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_Normal">&nbsp;<br />
+To connect to a private registry, you need to:</p>
+<ol style="list-style-type:decimal">
+<li value="1" class="p_Normal">Specify the address and path to the private registry in the parameter <code><b>minio.volumePermissions.image.repository</b></code> for the initialization container.</li><li value="2" class="p_Normal">Indicate the name of the secret with access rights to the private registry in the parameter <code><b>minio.volumePermissions.image.pullSecrets</b></code> for the initialization container. The secret must be created manually and encrypted in Base64.</li><li value="3" class="p_Normal">Specify the address and path to the private registry in the parameter <code><b>minio.image.repository</b></code>.</li><li value="4" class="p_Normal">Indicate the name of the secret with access rights to the private registry in the parameter <code><b>minio.image.pullSecrets</b></code>. The secret must be created manually and encrypted in Base64.</li></ol>
+<p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample"># Selecting databases to install</span><br />
+<span class="f_CodeExample">global:</span><br />
+<span class="f_CodeExample">...</span><br />
+<span class="f_CodeExample"># minio (S3 storage) settings</span><br />
+<span class="f_CodeExample">minio:</span><br />
+<span class="f_CodeExample">...</span><br />
+<span class="f_CodeExample">  </span><span class="f_CodeExample"># </span><span class="f_CodeExample">Enabling the initialization container, which changes the owner and group of the volume mount point to</span><span class="f_CodeExample"> `RunAsUser:fsGroup</span><br />
+<span class="f_CodeExample">  </span><span class="f_CodeExample">volumePermissions:</span><br />
+<span class="f_CodeExample">  &nbsp; </span><span class="f_CodeExample">enabled:</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample" style="font-weight: bold;">true</span><br />
+<span class="f_CodeExample">  &nbsp; </span><span class="f_CodeExample"># address and secret for the private registry of initialization container images</span><br />
+<span class="f_CodeExample">  &nbsp; </span><span class="f_CodeExample">image:</span><br />
+<span class="f_CodeExample">  &nbsp; &nbsp; </span><span class="f_CodeExample">registry:</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">registry.example.com/bitnami-shell</span><br />
+<span class="f_CodeExample">  &nbsp; &nbsp; </span><span class="f_CodeExample"># </span><span class="f_CodeExample">The secret with access rights to the private registry must be created manually, encrypted in Base64</span><br />
+<span class="f_CodeExample">  &nbsp; &nbsp; </span><span class="f_CodeExample">pullSecrets:</span><br />
+<span class="f_CodeExample">  &nbsp; &nbsp; &nbsp; </span><span class="f_CodeExample">-</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">myRegistryKeySecretName</span><br />
+<span class="f_CodeExample">...</span><br />
+<span class="f_CodeExample">  </span><span class="f_CodeExample"># address and secret for the private registry</span><br />
+<span class="f_CodeExample">  </span><span class="f_CodeExample">image:</span><br />
+<span class="f_CodeExample">  &nbsp; </span><span class="f_CodeExample">registry:</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">registry.example.com/minio</span><br />
+<span class="f_CodeExample">  &nbsp; </span><span class="f_CodeExample"># </span><span class="f_CodeExample">The secret with access rights to the private registry must be created manually, encrypted in Base64</span><br />
+<span class="f_CodeExample">  &nbsp; </span><span class="f_CodeExample">pullSecrets:</span><br />
+<span class="f_CodeExample">  &nbsp; &nbsp; </span><span class="f_CodeExample">-</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">myRegistryKeySecretName</span><br />
+<span class="f_CodeExample">...</span></p>
+<p class="p_Normal">Where repository<span style="font-weight: bold;"> </span>format is:</p>
+<ul style="list-style-type:disc">
+<li class="p_Normal">address is <code><b>registry.example.com</b></code>;</li><li class="p_Normal">path is <code><b>/minio</b></code> (for initialization container <code><b>/bitnami-shell</b></code>).</li></ul>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2"><a id="kubernetes-cluster" class="hmanchor"></a><span class="f_Heading2">Step 3: Installing the elma365-dbs chart using helm in the Kubernetes cluster</span></h2>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 10px 0 0 0;"><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif;">Install the </span><code><b>elma365-dbs</b></code> <span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif;">chart in the </span><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; font-weight: bold;">elma365-dbs</span><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif;"> namespace.</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 10px 0 0 0;"><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif;">For online installation</span><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; color: #172b4d;">:</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">helm&nbsp;upgrade&nbsp;--install&nbsp;elma365-dbs&nbsp;elma365/elma365-dbs&nbsp;-f&nbsp;values-elma365-dbs.yaml&nbsp;-n&nbsp;elma365-dbs&nbsp;--create-namespace</span></p>
+<p class="p_Normal">For offline installation without internet access, go to the directory with the downloaded chart and execute the command:</p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">helm&nbsp;upgrade&nbsp;--install&nbsp;elma365-dbs&nbsp;./elma365-dbs&nbsp;-f&nbsp;values-elma365-dbs.yaml&nbsp;-n&nbsp;</span><span class="f_CodeExample">elma365-dbs&nbsp;--create-namespace</span><span class="f_CodeExample" style="color: #ffffff;">&nbsp;</span></p>
+<h2 class="p_Heading2"><a id="databases-s3" class="hmanchor"></a><span class="f_Heading2">Step 4: Connecting to the databases and S3</span></h2>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 10px 0 0 0;"><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif;">The domain name for the Kubernetes cluster is assumed to be </span><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; font-weight: bold;">cluster.local</span><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif;">.</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 10px 0 0 0;"><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif;">Connection string for PostgreSQL:</span></p>
+<p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample">postgresql://elma365:SecretPassword@postgres.elma365-dbs.svc.cluster.local:5432/elma365?sslmode=disable</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 10px 0 0 0;"><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif;">Connection string for MongoDB:</span></p>
+<p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample">mongodb://elma365:SecretPassword@mongo.elma365-dbs.svc.cluster.local:27017/elma365?ssl=false&amp;replicaSet=rs0&amp;readPreference=nearest</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 10px 0 0 0;"><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif;">Connection string for RabbitMQ:</span></p>
+<p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample">amqp://elma365user:SecretPassword@rabbitmq.elma365-dbs.svc.cluster.local:5672/elma365vhost</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 10px 0 0 0;"><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif;">Connection string for Redis:</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">redis://redis.elma365-dbs.svc.cluster.local:6379/0</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 10px 0 0 0;"><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif;">Connection string for Redis for a cluster mode:</span></p>
+<p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample">redis://redis.elma365-dbs.svc.cluster.local:26379/0?masterName=mymaster</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 10px 0 0 0;"><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif;">Connection string for MinIO:</span></p>
+<ul style="list-style-type:disc">
+<li style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; font-weight: bold;">address</span><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif;"> — </span><code><b>elma365_your_domain</b></code><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif;">;</span></li><li style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; font-weight: bold;">bucket</span><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif;"> — </span><code><b>s3elma365</b></code><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif;">;</span></li><li style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; font-weight: bold;">region</span><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif;"> — </span><code><b>ru-central-1</b></code><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif;">;</span></li><li style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; font-weight: bold;">access key ID</span><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif;"> — </span><code><b>PZSF73JG72Ksd955JKU1HIA</b></code><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif;">;</span></li><li style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; font-weight: bold;">secret access key</span><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif;"> — </span><code><b>aFDkj28Jbs2JKbnvJH678MNwiz88zKjsuNBHHs</b></code><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif;">;</span></li><li style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; font-weight: bold;">upload method</span><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif;"> — </span><code><b>PUT</b></code><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif;">;</span></li><li style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif; font-weight: bold;">enable SSL</span><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif;"> — </span><code><b>No</b></code><span style="font-size: 15px; font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif;">.</span></li></ul>
+<h2 class="p_Heading2"><span class="f_Heading2">Deleting elma365-dbs chart using helm in the Kubernetes cluster</span></h2>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">Начало&nbsp;внимание</span></p>
+<p class="p_Normal">Before deleting the chart <code><b>elma365-dbs</b></code>, perform a backup of the databases and S3 storage. Deleting the chart <code><b>elma365-dbs</b></code> will lead to a complete loss of data by the BRIX application.</p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">Конец&nbsp;внимание</span></p>
+<p class="p_Normal">Delete chart <code><b>elma365-dbs</b></code> in namespace <span style="font-weight: bold;">elma365-dbs</span>:</p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">helm&nbsp;uninstall&nbsp;elma365-dbs&nbsp;-n&nbsp;elma365-dbs</span></p>
+<p class="p_Normal">&nbsp;</p>
+
+                        <div class="bottom-nav">
+                            
+                                <a id="prev-link" class="topic__navi_prev" href="fail-safe-kubernetes-cluster.html">
+                                    <span class="bottom-nav__arrow bottom-nav__arrow--prev"></span> <span
+                                        class="bottom-nav__link">fail-safe-kubernetes-cluster.html</span>
+                                </a>
+                            
+                            
+                                <a id="next-link" class="topic__navi_next" href="postgresql.html">
+                                    <span class="bottom-nav__link">postgresql.html</span> <span
+                                        class="bottom-nav__arrow bottom-nav__arrow--next"></span>
+                                </a>
+                            
+                        </div>
+                        <!-- добавляет на страницу строку блок Была ли статья полезной?  -->
+                          <div class="feedback" id="feedback"><div class="feedback-help"><span><b>Was this helpful?</b></span><form action="" method="POST" class="feedback-form" id="feedback-form"><div class="feedback__popup feedback__popup-response" id="feedback__popup_thx" style="display: none;">Thanks for your feedback!</div><div class="feedback__popup" id="feedback__popup_why" style="display: none;"><div class="feedback__popup-header">Please specify why:</div><input type="radio" name="category" id="bad_recommendation" value="bad_recommendation"><label for="bad_recommendation">Recommendations did not help me</label><input type="radio" name="category" id="difficult_text" value="difficult_text"><label for="difficult_text">Article is hard to understand</label><input type="radio" name="category" id="no_answer" value="no_answer"><label for="no_answer">Didn`t answer my question</label><input type="radio" name="category" id="bad_header" value="bad_header"><label for="bad_header">Content does not match the topic</label><input type="radio" name="category" id="other_reason" value="other_reason"><label for="other_reason">Other</label></div><div class="feedback__popup" id="feedback__popup-other" style="display: none;"><div class="feedback__popup-header">How we can improve it?</div><textarea class="feedback__textarea" name="other" id=""></textarea><input type="submit" class="feedback__other-btn" value="Submit"></div><div class="feedback-form__btn-group"><input type="radio" name="useful" id="feedback__useful_yes" value="true"><label for="feedback__useful_yes"><img src="like.svg" class="small-img" alt="like"><spanclass="feedback-form__btn-group_yes-btn">Yes</spanclass="feedback-form__btn-group_yes-btn"></label><input type="radio" name="useful" id="feedback__useful_no" value="false"><label for="feedback__useful_no"><img src="dislike.svg" class="small-img" alt="dislike"><spanclass="feedback-form__btn-group_no-btn">No</spanclass="feedback-form__btn-group_no-btn"></label></div><select name="category"><option disabled="">Please specify why</option><option value="bad_recommendation" selected="">Recommendations did not help me</option><option value="difficult_text">Article is hard to understand</option><option value="no_answer">Didn`t answer my question</option><option value="bad_header">Content does not match the topic</option><option value="other_reason">Other</option></select><input type="submit"></form></div><div class="found_typo"><p style="margin: 0px; margin-top: 16px !important;"><span><b>Found a typo?</b></span> Select it and press <i>Ctrl+Enter</i> to send us feedback</p></div></div>
+                           
+                    </section>
+                </div>
+                <aside class="article__sidebar" style="display:none">
+                    <input type="checkbox" />
+                    <div class="article__arrow"></div>
+                    <div class="table-of-contents elma365-right" id="toc2Content">
+                        <h3 class="h3-toc">In this topic</h3>
+                        <nav id="toc2"></nav>
+                    </div>
+                </aside>
+            </div>
+        </article>
+    </main>               
+    <footer class="footer">
+        <div class="footer-container">
+  <div class="footer-mobile">
+    
+    <ul class="footer-mobile__list"><li><a href="https://brix365.com/en/" target="_blank">BRIX</a></li><li><a href="https://tssdk.brix365.com/en/latest/" target="_blank">SDK</a></li><li><a href="https://api.brix365.com/en/" target="_blank">API</a></li></ul><ul class="footer-mobile__list"><li><a href="https://brix365.com/en/help/platform/get-trial.html">Platform</a></li><li><a href="https://brix365.com/en/help/ecm/ecm-functions.html">ECM</a></li><li><a href="https://brix365.com/en/help/service/service-functions.html">Service</a></li><li><a href="https://brix365.com/en/help/projects/projects-functions.html">Projects</a></li></ul>
+    
+    
+  </div>
+  <div class="footer-wrap">
+    
+      <div><span class="mobile-question-popup">Send feedback</span><form method="POST" action class="question__popup question-xs" id="question__popup"><div class="question-wrap"><span class="close"></span><span class="title">Ask a question</span><label for="help_question" style="display: none;"></label><textarea name="help_question" id="help_question"></textarea><input type="submit" value="Send"></div></form><div class="hidden fade-in question-success-xs">Sent</div></div>
+    
+    <div class="footer-flex-b">
+      <span class="footer-copy">&copy; 2025 BRIX</span>
+      <ul class="footer-list">
+        
+        <li class="footer-item">
+            <a href="#" class="arrow-top" style="display: block;"></a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+ 
+    </footer>
+    <iframe name="hmnavigation" style="display:none!important"></iframe>
+    <script src="./jquery-ui.js"></script>
+    <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
+    <script src="./jquery.tocify.min.js"></script>
+    <script src="./TypoReporter.min.js"></script>
+    <script src="./google-search.js"></script>
+    <script src="./main.js"></script>
+<script type="text/javascript">
+HMInitToggle('TOGGLE0186A1','hm.type','dropdown','hm.state','0');
+HMInitToggle('TOGGLE0186A2','hm.type','dropdown','hm.state','0');
+HMInitToggle('TOGGLE0186A3','hm.type','dropdown','hm.state','0');
+HMInitToggle('TOGGLE0186A4','hm.type','dropdown','hm.state','0');
+HMInitToggle('TOGGLE0186A5','hm.type','dropdown','hm.state','0');
+HMInitToggle('TOGGLE0186A6','hm.type','dropdown','hm.state','0');
+HMInitToggle('TOGGLE0186A7','hm.type','dropdown','hm.state','0');
+HMInitToggle('TOGGLE0186A8','hm.type','dropdown','hm.state','0');
+HMInitToggle('TOGGLE0186A9','hm.type','dropdown','hm.state','0');
+HMInitToggle('TOGGLE0186AA','hm.type','dropdown','hm.state','0');
+HMInitToggle('TOGGLE0186AB','hm.type','dropdown','hm.state','0');
+</script>
+</body>
+
+</html>

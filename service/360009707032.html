@@ -1,0 +1,387 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>System data types</title>
+    <meta name="generator" content="Help+Manual" />
+    <meta name="keywords" content="" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="To store data on forms as well as in widgets, tasks, or business process start events, you can use sets of fields. The information you want to display determines the field..." />
+    <meta name="picture" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Full documentation for BRIX365 platform. Low-code developer guide. User guide. Admin guide. Developer guide." />
+    <meta property="og:url" content="https://brix365.com/en/help" />
+    <meta property="og:image" content="" />                                                              
+    <link rel="icon" href="favicon.png" type="image/png" />
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./jquery-ui.min.css" />
+    <link rel="stylesheet" href="default.css" />
+    <link rel="stylesheet" href="./search-yandex.css" />
+    <link rel="stylesheet" href="./article.css" />
+    <link rel="stylesheet" href="./glossary.css" />
+    <link rel="stylesheet" href="./theme.css" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+
+<body>
+    
+    <script>!function(e,t,c,n,r,a,m){e.ym=e.ym||function(){(e.ym.a=e.ym.a||[]).push(arguments)},e.ym.l=1*new Date;for(var s=0;s<document.scripts.length;s++)if(document.scripts[s].src===n)return;a=t.createElement(c),m=t.getElementsByTagName(c)[0],a.async=1,a.src=n,m.parentNode.insertBefore(a,m)}(window,document,"script","https://mc.yandex.ru/metrika/tag.js"),ym(83179930,"init",{clickmap:!0,trackLinks:!0,accurateTrackBounce:!0,webvisor:!0})</script><noscript><div><img alt=""src=https://mc.yandex.ru/watch/83179930 style=position:absolute;left:-9999px></div></noscript> 
+    
+    ﻿<header class="header elma-365">
+  <div class="container">
+    <a class="header__logo" href="https://brix365.com/en/help">
+      <img src="./logo-en.svg" alt="header logo">
+    </a>
+ <!-- <div class="hero__search-form" id="search-panel">
+   <form class="search-form" onsubmit="ym(83180416,'reachGoal','poisk')">
+     <label class="search-form__label">
+       <span id="reset-search" class="search__icon"></span>
+       <input class="search-form__input" type="text">
+     </label>
+     <input class="search-form__submit" type="submit" value="Submit">
+   </form>
+  </div>       -->
+  
+     <div class="hero__search-form" id="search-panel"> <form class="search-form"> <label class="search-form__label"> <span id="reset-search" class="search__icon"></span> <input class="search-form__input" type="text"> </label> <input class="search-form__submit" type="submit" value="Submit"> </form> </div> 
+  <div class="hero__search">
+      <a href="#" id="search-icon" class="hero__search-icon">
+        <img src="search-icon-white.svg" alt="search string">
+      </a>
+      <a href="#" id="side-menu-icon" class="hero__side-icon">
+        <img src="side_menu.svg" alt="side menu">
+      </a>
+    </div>  
+  <div class="header__navi">
+        
+        <ul class="header__list"><li><span class="solution-select"><span class="solution-select__selected"></span><svg width="7" height="4" viewBox="0 0 7 4" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L3.5 3.5L6 1" stroke="white" stroke-linecap="round" stroke-linejoin="round"/></svg><ul class="solution-select__list"><li><a class="project-link" href="https://brix365.com/en/help/platform/get-trial.html">Platform</a></li><li><a class="project-link" href="https://brix365.com/en/help/ecm/ecm-functions.html">ECM</a></li><li><a class="project-link" href="https://brix365.com/en/help/crm/crm_overview.html">CRM</a></li><li><a class="project-link" href="https://brix365.com/en/help/service/service-functions.html">Service</a></li><li><a class="project-link" href="https://brix365.com/en/help/projects/projects-functions.html">Projects</a></li><li><a class="project-link" href="https://brix365.com/en/help/business_solutions/-elma365-store.html">Business Solutions</a></li></ul></span></li><li><a href="https://api.brix365.com/en/" target="_blank">API</a></li><li><a href="https://tssdk.brix365.com/" target="_blank">SDK</a></li></ul>
+        
+        
+   </div>
+  </div>
+
+</header>
+
+
+
+    
+    <main class="main container">
+
+        <aside class="sidebar" id="sidebar">
+        <div class="sidebar__header">
+                 <a class="header__logo" href="https://brix365.com/en/help">
+                    <img src="./logo-light-en.svg">
+                 </a>
+                    <span class="sidebar__close elma-365-close" id="close"></span>
+            </div>
+            <div class="sidebar__wrapper" id="side-menu">
+                
+            </div>
+        </aside>
+
+        <article class="article" id="article">
+            <div class="article-inner">           
+                <div class="content">
+                    <header class="article__header">
+                        
+                            <div class="topic__breadcrumbs">
+                                <p>Low-code designer &gt; App builder / System data types</p>
+                            </div>
+                        
+                        <div class="topic__title"><h1 class="p_Heading1" style="text-align: center; line-height: 1.20; margin: 19px 0 19px 0;"><span class="f_Heading1" style="font-size: 32px;">System data types</span></h1>
+</div>
+                    
+</header>
+                    <section class="article__content">
+                        <div class="scroll-top-inner">
+                            <a href="#h1-article" class="scroll-top"></a>
+                        </div>
+                        <!-- Placeholder for topic body. -->
+                        <p style="line-height: 1.20; margin: 14px 0 0 0;"><span style="font-family: Inter;">To store data on forms as well as in widgets, tasks, or business process start events, you can use sets of fields. The information you want to display determines the field types you need to use. For example, you can create a </span><span style="font-family: Inter; font-weight: bold;">String</span><span style="font-family: Inter;"> type field for a comment and a </span><span style="font-family: Inter; font-weight: bold;">Money</span><span style="font-family: Inter;"> type field for a contract amount.</span></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-family: Inter;">Read more about adding fields to forms in the <a href="360028941112.html" class="topiclink">Context tab</a> article. Below you can find the description of all the data types available in the system. Read about working with different types in scripts in <a href="https://tssdk.brix365.com/en/latest/pages/quick-start/intro_types.html" target="_blank" class="weblink">BRIX TS SDK</a>.</span></p>
+<h2 class="p_Heading2" style="line-height: 1.20; margin: 19px 0 0 0;"><a id="string" class="hmanchor"></a><span class="f_Heading2" style="font-size: 24px;">String</span></h2>
+<p style="line-height: 1.20; margin: 19px 0 0 0;"><span style="font-family: Inter;">This type is used to add text information.</span></p>
+<p style="line-height: 1.20; margin: 14px 0 0 0;"><img alt="data-types-1" width="504" height="108" style="margin:0;width:504px;height:108px;border:none" src="data-types-1.png"/></p>
+<p style="line-height: 1.20; margin: 14px 0 0 0;"><span style="font-family: Inter;">The content can be displayed as a string or as text. The </span><span style="font-family: Inter; font-weight: bold;">Markdown</span><span style="font-family: Inter;"> option allows you to format the text you enter. Read more in the <a href="markdown.html" class="topiclink">Markdown</a> article.</span></p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;"><img alt="data-types-2" width="588" height="308" style="margin:0;width:588px;height:308px;border:none" src="data-types-2.png"/></p>
+<p style="line-height: 1.20; margin: 14px 0 0 0;"><span style="font-family: Inter;">Apart from <a href="360009918011.html#common_fields" class="topiclink">general settings</a>, this type has an additional setting:</span></p>
+<ul style="list-style-type:disc">
+<li style="line-height: 1.20; margin-top: 14px; margin-right: 0; margin-bottom: 0;"><span style="font-family: Inter; font-weight: bold;">Validators</span><span style="font-family: Inter;">. Here you can set a template to validate the text that the user enters.</span></li><li style="line-height: 1.20; margin-top: 14px; margin-right: 0; margin-bottom: 0;"><span style="font-family: Inter; font-weight: bold;">Input mask</span><span style="font-family: Inter;">. An input mask is a set of regular expressions. Only expressions without flags are available in masks. Read more about writing regular expressions in the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions" target="_blank" class="weblink">MDN Web Docs</a> documentation.</span></li><li style="line-height: 1.20; margin-top: 14px; margin-right: 0; margin-bottom: 0;"><span style="font-family: Inter; font-weight: bold;">Message shown when the input does not comply with the mask</span><span style="font-family: Inter;">. Write a message shown when the user enters text that doesn’t comply with the input mask. Read more in the <a href="field-masks.html" class="topiclink">Create input masks for Strings using regular expressions</a> article.</span></li></ul>
+<h2 class="p_Heading2" style="line-height: 1.20; margin: 19px 0 0 0;"><a id="number" class="hmanchor"></a><span class="f_Heading2" style="font-size: 24px;">Number</span></h2>
+<p style="line-height: 1.20; margin: 19px 0 0 0;"><span style="font-family: Inter;">This field is used for entering numbers. It is not possible to enter other characters than digits.</span></p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;"><img alt="data-types-3" width="421" height="48" style="margin:0;width:421px;height:48px;border:none" src="data-types-3.png"/></p>
+<p style="line-height: 1.20; margin: 14px 0 0 0;"><span style="font-size: 13px; color: #000000;">&nbsp;</span></p>
+<p style="line-height: 1.20; margin: 14px 0 0 0;"><span style="font-family: Inter;">When adding the property, select its type:</span></p>
+<p style="line-height: 1.20; margin: 14px 0 0 0;"><img alt="number-brix-01" width="569" height="240" style="margin:0;width:569px;height:240px;border:none" src="number-brix-01.png"/></p>
+<ul style="list-style-type:disc">
+<li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-family: Inter; font-weight: bold;">Integer </span><span style="font-family: Inter;">or</span><span style="font-family: Inter; font-weight: bold;"> Non-integer</span><span style="font-family: Inter;">. Here you can select the number format.</span></li><li style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 7px;"><span style="font-family: Inter; font-weight: bold;">Maximum number of digits after separator</span><span style="font-family: Inter;">. This option is available only for non-integers and allows you to specify how many decimal places will be displayed on the form. The limit is selected from the list ranging from two to ten. Let</span><span style="color: #202122; background-color: #ffffff;">’</span><span style="font-family: Inter;">s say a field is <a href="360013448740.html" class="topiclink">calculated using a formula</a>, and you set the maximum number to digits after separator to </span><span style="font-family: Inter; font-weight: bold;">2</span><span style="font-family: Inter;">. If the result of the calculation is 3.14159, only </span><span style="font-family: Inter; font-weight: bold;">3.14</span><span style="font-family: Inter;"> will be displayed on the form.</span><br />
+<span style="font-family: Inter;">If a user types the number manually on the create or edit form, they will not be able to enter more decimal places than specified by the limit.</span></li></ul>
+<p class="p_Normal">The calculation of a non-integer in the system may be inaccurate due to the peculiarities of JavaScript language execution in the user’s browser and in NodeJS on the server. Read more about it in the article <a href="js-imprecise-calculations.html" class="topiclink">Inaccurate calculations in JavaScript</a>.</p>
+<h2 class="p_Heading2" style="line-height: 1.20; margin: 19px 0 0 0;"><a id="yes-no-switch" class="hmanchor"></a><span class="f_Heading2" style="font-size: 24px;">Yes/No switch</span></h2>
+<p style="line-height: 1.20; margin: 19px 0 0 0;"><span style="font-family: Inter;">This type adds a checkbox or a radio button that allows the user to mark one of two options.</span></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-family: Inter;">The default options are </span><span style="font-family: Inter; font-weight: bold;">Yes</span><span style="font-family: Inter;"> and </span><span style="font-family: Inter; font-weight: bold;">No</span><span style="font-family: Inter;">, but you can rename them.</span><br />
+<span style="font-family: Inter;">To display one of the values on the form by default, select the check box next to it. If necessary, you can change the field value on the form.</span></p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;"><img alt="data-types-5" width="567" height="285" style="margin:0;width:567px;height:285px;border:none" src="data-types-5.png"/></p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;">Choose a selection type:</p>
+<ul style="list-style-type:disc">
+<li style="line-height: 1.20;"><span style="font-weight: bold;">Checkbox</span></li></ul>
+<p style="line-height: 1.20; margin: 14px 0 0 0;"><img alt="data-types-6" width="210" height="36" style="margin:0;width:210px;height:36px;border:none" src="data-types-6.png"/></p>
+<ul style="list-style-type:disc">
+<li style="line-height: 1.20;"><span style="font-weight: bold;">Radio button</span></li></ul>
+<p style="line-height: 1.20; margin: 14px 0 0 0;"><img alt="data-types-7" width="340" height="43" style="margin:0;width:340px;height:43px;border:none" src="data-types-7.png"/></p>
+<p style="line-height: 1.20; margin: 14px 0 0 0;"><span style="font-family: Inter;">You can configure the selection type you chose when creating the field. To do that, open the <a href="360009918011.html#configuringformfields" class="topiclink">Form Settings</a>, select the field, and change the type.</span></p>
+<h2 class="p_Heading2" style="line-height: 1.20; margin: 19px 0 0 0;"><a id="date-time" class="hmanchor"></a><span class="f_Heading2" style="font-size: 24px;">Date/time</span></h2>
+<p style="line-height: 1.20; margin: 19px 0 0 0;"><span style="font-family: Inter;">This type is used to add a date and/or time to a form.</span></p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;"><img alt="sdt 9" width="416" height="327" style="margin:0;width:416px;height:327px;border:none" src="hmfile_hash_3d6423d9.png"/></p>
+<p style="line-height: 1.20; margin: 14px 0 0 0;"><span style="font-family: Inter;">The display format can be configured only when creating the property or context variable</span><span style="font-family: Inter; font-weight: bold;">.</span></p>
+<ol style="list-style-type:decimal">
+<li value="1" style="line-height: 1.20; margin-top: 14px; margin-right: 0; margin-bottom: 0;"><span style="font-family: Inter; font-weight: bold;">Date/time</span><span style="font-family: Inter;">. The user will need to specify a date and time.</span></li><li value="2" style="line-height: 1.20; margin-top: 14px; margin-right: 0; margin-bottom: 0;"><span style="font-family: Inter; font-weight: bold;">Date</span><span style="font-family: Inter;">.</span><span style="font-family: Inter; font-weight: bold;"> </span><span style="font-family: Inter;">The user will need to specify only a date. The time is automatically set to</span><span style="font-size: 15px; color: #394149;"> </span><span style="font-weight: bold;">00:00</span><span style="font-size: 15px; color: #394149;">.</span></li><li value="3" style="line-height: 1.20; margin-top: 14px; margin-right: 0; margin-bottom: 0;"><span style="font-family: Inter; font-weight: bold;">Time</span><span style="font-family: Inter;">.</span><span style="font-family: Inter; font-weight: bold;"> </span><span style="font-family: Inter;">The user will need to specify only the time.</span></li></ol>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;"><img alt="sdt 10" width="514" height="229" style="margin:0;width:514px;height:229px;border:none" src="hmfile_hash_1834fa4a.png"/></p>
+<p style="line-height: 1.20; margin: 14px 0 0 0;"><span style="font-family: Inter;">You can also enable the following options:</span></p>
+<ul style="list-style-type:disc">
+<li style="line-height: 1.20; margin-top: 14px; margin-right: 0; margin-bottom: 0;"><span style="font-family: Inter; font-weight: bold;">Set current date and time</span><span style="font-family: Inter;">. The current date and time will be specified in the field by default. If you select this option for a <a href="process_context.html" class="topiclink">business process variable</a>, the date of the process start will be specified in the field.</span></li><li style="line-height: 1.20; margin-top: 14px; margin-right: 0; margin-bottom: 0;"><span style="font-family: Inter; font-weight: bold;">Do not require to specify time</span><span style="font-family: Inter;">. Apart from the date, the user will be able to specify the time if needed. This option is available for the </span><span style="font-family: Inter; font-weight: bold;">Date/time</span><span style="font-family: Inter;"> format. You can also define the default time:</span></li></ul>
+<ul style="list-style-type:disc"><ul style="list-style-type:circle">
+<li style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-family: Inter; font-weight: bold;">Day Start</span><span style="font-family: Inter;">. The default time will be 12:00 AM.</span></li><li style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-family: Inter; font-weight: bold;">Day End</span><span style="font-family: Inter;">. The default time will be 11:59 PM.</span></li></ul></li></ul>
+<p style="line-height: 1.20; margin: 14px 0 0 14px;"><img alt="data-types-8" width="374" height="50" style="margin:0;width:374px;height:50px;border:none" src="data-types-8.png"/></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-family: Inter;">The time you choose will be shown in the </span><span style="font-family: Inter; font-weight: bold;">Time</span><span style="font-family: Inter;"> field by default.</span></p>
+<h2 class="p_Heading2" style="line-height: 1.20; margin: 19px 0 0 0;"><a id="category" class="hmanchor"></a><span class="f_Heading2" style="font-size: 24px;">Category</span></h2>
+<p style="line-height: 1.20; margin: 19px 0 0 0;"><span style="font-family: Inter;">This type of field allows you to let the user choose one or more options from a drop-down list. The list of options is defined when configuring or editing a <a href="360009918011.html" class="topiclink">form</a> or when creating a <a href="process_context.html#add_new_variable" class="topiclink">context variable</a>.</span></p>
+<p style="line-height: 1.20; margin: 19px 0 0 0;"><span style="font-family: Inter;">Specify how many options a user can choose by enabling either the </span><span style="font-family: Inter; font-weight: bold;">Single</span><span style="font-family: Inter;"> or </span><span style="font-family: Inter; font-weight: bold;">Multiple</span><span style="font-family: Inter;"> option.</span></p>
+<p style="line-height: 1.20; margin: 14px 0 0 0;"><img alt="data-types-9" width="508" height="323" style="margin:0;width:508px;height:323px;border:none" src="data-types-9.png"/></p>
+<p style="line-height: 1.20; margin: 14px 0 0 0;"><span style="font-family: Inter;">To select an option on the configured form, open the drop-down list.</span></p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;"><img alt="category_select_01" width="508" height="191" style="margin:0;width:508px;height:191px;border:none" src="category_select_01.png"/></p>
+<p class="p_Normal">You can reset the value by clicking the <img alt="clip0235" width="16" height="20" style="margin:0;width:16px;height:20px;border:none" src="clip0235.png"/> icon or by selecting an empty row.</p>
+<p class="p_Normal">When working with a <a href="https://tssdk.brix365.com/en/latest/interfaces/_02_types_.enumfield.html" target="_blank" class="weblink">Category</a> field, you can use scripts to automatically fill out the options in the list, for example, with <a href="360009920611.html" class="topiclink">app statuses</a>. To do that, you have to configure a dynamic list and use a variable that will collect the statuses and their values sent to the <span style="font-weight: bold;">Category</span> field as an array. This configuration also ensures that the list is automatically updated when app statuses change, eliminating the need for manual adjustments. </p>
+<h2 class="p_Heading2" style="line-height: 1.20; margin: 19px 0 0 0;"><a id="money" class="hmanchor"></a><span class="f_Heading2" style="font-size: 24px;">Money</span></h2>
+<p style="line-height: 1.20; margin: 19px 0 0 0;"><span style="font-family: Inter;">A field for entering numbers with a currency code.</span></p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;"><img alt="sdt 17" width="536" height="278" style="margin:0;width:536px;height:278px;border:none" src="hmfile_hash_b92f5b62.png"/></p>
+<ul style="list-style-type:disc">
+<li style="line-height: 1.20; margin-top: 14px; margin-right: 0; margin-bottom: 0;"><span style="font-family: Inter; font-weight: bold;">Currency</span><span style="font-family: Inter;">. Select the currency type from the drop-down list to the right of the field name. You can change the currency when you edit the field after saving. However, the values entered by users before that will not change until somebody edits the field and saves the data. The currency names and codes are in accordance with the ISO 4217 standard.</span></li><li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-family: Inter; font-weight: bold;">Digits after decimal point to be displayed</span><span style="font-family: Inter;">. Specify the number of digits to be displayed after the decimal point on an app item form. This feature is available for integers as well. For example, if you enter 2 in this field, the data on a form will be displayed in the following way: $100.00.</span><br />
+<span style="font-family: Inter;">The maximum number of digits depends on the currency type. If it is exceeded, you see the </span><img alt="clip0236" width="27" height="26" style="margin:0;width:27px;height:26px;border:none" src="clip0236.png"/><span class="f_ImageCaption"> </span>icon<span style="font-family: Inter;">. Hover over it to see the number of digits allowed.</span></li></ul>
+<h2 class="p_Heading2"><a id="account" class="hmanchor"></a><span class="f_Heading2">Account</span></h2>
+<p style="line-height: 1.20; margin: 14px 0 0 0;"><span style="font-family: Inter;">This field type is used to store messenger accounts. An app that has this type of field in its context can be linked with sessions in <a href="chat_lines.html" class="topiclink">live chats</a> from the </span><span style="font-family: Inter; font-weight: bold;">Live Chats</span><span style="font-family: Inter;"> workspace.</span></p>
+<p style="line-height: 1.20; margin: 14px 0 0 0;"><span style="font-family: Inter;">You can specify the </span><span style="font-family: Inter; font-weight: bold;">Account type</span><span style="font-family: Inter;">: Telegram, WhatsApp, etc. You can also select </span><span style="font-family: Inter; font-weight: bold;">Other</span><span style="font-family: Inter;">. This format can be used to store an account not included in the list, for example, an additional email address.</span></p>
+<p style="line-height: 1.20; margin: 14px 0 0 0;"><img alt="data-types-12" width="547" height="219" style="margin:0;width:547px;height:219px;border:none" src="data-types-12.png"/></p>
+<p style="line-height: 1.20; margin: 14px 0 0 0;"><span style="font-family: Inter;">If you select </span><span style="font-family: Inter; font-weight: bold;">Several</span><span style="font-family: Inter;">, the user will be able to select the account type on their own and add several accounts when entering information in this field on the form.</span></p>
+<p style="line-height: 1.20; margin: 14px 0 0 0;"><img alt="data-types-13" width="383" height="178" style="margin:0;width:383px;height:178px;border:none" src="data-types-13.png"/></p>
+<h2 class="p_Heading2" style="line-height: 1.20; margin: 19px 0 0 0;"><a id="phone-number" class="hmanchor"></a><span class="f_Heading2" style="font-size: 24px;">Phone number</span></h2>
+<p style="line-height: 1.20; margin: 19px 0 0 0;"><span style="font-family: Inter;">The field is used to enter the phone number.</span></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-family: Inter;">You can specify the </span><span style="font-family: Inter; font-weight: bold;">Phone number type</span><span style="font-family: Inter;">: main, home, work, etc.</span></p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;"><img alt="sdt 19" width="560" height="226" style="margin:0;width:560px;height:226px;border:none" src="hmfile_hash_53f170a5.png"/></p>
+<p style="line-height: 1.20; margin: 14px 0 0 0;"><span style="font-family: Inter;">If you select </span><span style="font-family: Inter; font-weight: bold;">Several</span><span style="font-family: Inter;">, the user will be able to select the phone number type on their own when entering information in this field on the form.</span></p>
+<p style="line-height: 1.20; margin: 14px 0 0 0;"><span style="font-family: Inter;">The </span><span style="font-family: Inter; font-weight: bold;">Validation level</span><span style="font-family: Inter;"> option allows you to determine how the number entered on the form is checked against the format of numbers in the selected country:</span></p>
+<ul style="list-style-type:disc">
+<li style="line-height: 1.20; margin-top: 14px; margin-right: 0; margin-bottom: 0;"><span style="font-family: Inter; font-weight: bold;">Warn About Invalid Value</span><span style="font-family: Inter;">. If the user enters a number in an incorrect format, the </span><img alt="clip0236" width="27" height="26" style="margin:0;width:27px;height:26px;border:none" src="clip0236.png"/><span style="font-family: Inter;"> icon will appear to the right of the field. At the same time, the app item with such a value in the field can be saved.</span></li><li style="line-height: 1.20; margin-top: 14px; margin-right: 0; margin-bottom: 0;"><span style="font-family: Inter; font-weight: bold;">Forbid Invalid Values</span><span style="font-family: Inter;">. If the number format is incorrect, a warning message will appear below the field. To save the app item, the user needs to correct the phone number.</span></li></ul>
+<p style="line-height: 1.20; margin: 14px 0 0 0;"><img alt="data_types_01" width="550" height="252" style="margin:0;width:550px;height:252px;border:none" src="data_types_01.png"/></p>
+<p style="line-height: 1.20; margin: 14px 0 0 0;"><span style="font-family: Inter;">You can add a phone extension using a separator. For example:</span></p>
+<ul style="list-style-type:disc">
+<li style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-family: Inter;">+14841234567 x1234</span></li><li style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-family: Inter;">+14841234567 ext 1234</span></li><li style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-family: Inter;">+14841234567;1234</span></li></ul>
+<p style="text-align: justify; line-height: 1.20; margin: 0 0 11px 0;">The view form will display the extension number as follows: +14841234567 x1234.</p>
+<h2 class="p_Heading2" style="line-height: 1.20; margin: 19px 0 0 0;"><a id="email" class="hmanchor"></a><span class="f_Heading2" style="font-size: 24px;">Email</span></h2>
+<p style="line-height: 1.20; margin: 19px 0 0 0;"><span style="font-family: Inter;">This type of field is used to enter an email address.</span></p>
+<p style="line-height: 1.20; margin: 14px 0 0 0;"><span style="font-family: Inter;">You can select the </span><span style="font-family: Inter; font-weight: bold;">Email type</span><span style="font-family: Inter;">: main, home, or work.</span></p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;"><img alt="data-types-18" width="621" height="256" style="margin:0;width:621px;height:256px;border:none" src="data-types-18.png"/></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-family: Inter;">If you select </span><span style="font-family: Inter; font-weight: bold;">Several</span><span style="font-family: Inter;">, the user will be able to select the type on their own.</span></p>
+<p style="line-height: 1.20; margin: 14px 0 0 0;"><span style="font-family: Inter;">The </span><span style="font-family: Inter; font-weight: bold;">Validation level</span><span style="font-family: Inter;"> option allows you to how the email address entered on the form is checked:</span></p>
+<ul style="list-style-type:disc">
+<li style="line-height: 1.20; margin-top: 14px; margin-right: 0; margin-bottom: 0;"><span style="font-family: Inter; font-weight: bold;">Warn About Invalid Value</span><span style="font-family: Inter;">. If the user enters an email address in an incorrect format, the </span><img alt="clip0236" width="27" height="26" style="margin:0;width:27px;height:26px;border:none" src="clip0236.png"/><span style="font-family: Inter;"> icon will appear to the right of the field. At the same time, the app item with such a value in the field can be saved.</span></li><li style="line-height: 1.20; margin-top: 14px; margin-right: 0; margin-bottom: 0;"><span style="font-family: Inter; font-weight: bold;">Forbid Invalid Values</span><span style="font-family: Inter;">. If the address format is incorrect, a warning message will appear below the field. To save the app item, the user needs to correct the address.</span></li></ul>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;"><img alt="data_types_02" width="625" height="271" style="margin:0;width:625px;height:271px;border:none" src="data_types_02.png"/></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-family: Inter;">When this field is filled in, additional options are available on the view form: the user can quickly proceed to add and send an email to the specified address, as well as copy the email to the clipboard. To do that, click the </span><img alt="arrow-down-icon" width="16" height="10" style="margin:0;width:16px;height:10px;border:none" src="arrow-down-icon.png"/> <span style="font-family: Inter;">icon next to the entered email and select the option you need.</span></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><img alt="data-types-19" width="499" height="187" style="margin:0;width:499px;height:187px;border:none" src="data-types-19.png"/></p>
+<ul style="list-style-type:disc">
+<li style="line-height: 1.20; margin-top: 14px; margin-right: 0; margin-bottom: 0;"><span style="font-family: Inter; font-weight: bold;">Default Email Client</span><span style="font-family: Inter;">. Select this option to open the page of the main email client installed on your PC. The recipient’s address will be filled out automatically.</span></li><li style="line-height: 1.20; margin-top: 14px; margin-right: 0; margin-bottom: 0;"><span style="font-family: Inter; font-weight: bold;">BRIX</span><span style="font-family: Inter;">. If you linked an email address to the BRIX built-in email client in the <a href="email-workspace.html" class="topiclink">Email</a> workspace, you can create and send an email directly in the BRIX interface. The </span><span style="font-family: Inter; font-weight: bold;">Write message</span><span style="font-family: Inter;"> window will open if you click it. The </span><span style="font-family: Inter; font-weight: bold;">To</span><span style="font-family: Inter;"> field will be filled in automatically.</span></li><li style="line-height: 1.20; margin-top: 14px; margin-right: 0; margin-bottom: 0;"><span style="font-family: Inter; font-weight: bold;">Copy to Clipboard</span><span style="font-family: Inter;">. Copy the email address to the clipboard.</span></li></ul>
+<h2 class="p_Heading2" style="line-height: 1.20; margin: 19px 0 0 0;"><a id="image" class="hmanchor"></a><span class="f_Heading2" style="font-size: 24px;">Image</span></h2>
+<p style="line-height: 1.20; margin: 19px 0 0 0;"><span style="font-family: Inter;">In an</span><span style="font-family: Inter; font-weight: bold;"> Image </span><span style="font-family: Inter;">type field, you can attach a </span><span style="font-family: Inter; font-weight: bold;">.jpg</span><span style="font-family: Inter;">, </span><span style="font-family: Inter; font-weight: bold;">.tif</span><span style="font-family: Inter;">, </span><span style="font-family: Inter; font-weight: bold;">.tiff</span><span style="font-family: Inter;">, </span><span style="font-family: Inter; font-weight: bold;">.avif</span><span style="font-family: Inter;">, </span><span style="font-family: Inter; font-weight: bold;">.webp</span><span style="font-family: Inter;">, </span><span style="font-family: Inter; font-weight: bold;">.gif</span><span style="font-family: Inter;">, </span><span style="font-family: Inter; font-weight: bold;">.bmp</span><span style="font-family: Inter;">, or </span><span style="font-family: Inter; font-weight: bold;">.png</span><span style="font-family: Inter;"> file. When setting up this field, you can select how many images can be attached to it: </span><span style="font-family: Inter; font-weight: bold;">One</span><span style="font-family: Inter;"> or </span><span style="font-family: Inter; font-weight: bold;">Many</span><span style="font-family: Inter;">.</span></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-family: Inter;">If you check the </span><span style="font-family: Inter; font-weight: bold;">Clip image when uploading</span><span style="font-family: Inter;"> box, the user will be able to select an area of the image to display when uploading it.</span></p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;"><img alt="sdt 25" width="578" height="325" style="margin:0;width:578px;height:325px;border:none" src="hmfile_hash_fa05fc4e.png"/></p>
+<p style="line-height: 1.20; margin: 14px 0 0 0;"><span style="font-family: Inter;">This is how it is displayed on the form.</span></p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;"><img alt="data-types-21" width="220" height="79" style="margin:0;width:220px;height:79px;border:none" src="data-types-21.png"/></p>
+<h2 class="p_Heading2" style="line-height: 1.20; margin: 19px 0 0 0;"><a id="file_type" class="hmanchor"></a><span class="f_Heading2" style="font-size: 24px;">Files</span></h2>
+<p style="line-height: 1.20; margin: 14px 0 0 0;"><span style="font-family: Inter;">A </span><span style="font-family: Inter; font-weight: bold;">Files</span><span style="font-family: Inter;"> type field allows you to attach files of any type, such as invoices, documents, videos, etc.</span></p>
+<p style="line-height: 1.20; margin: 19px 0 0 0;"><span style="font-family: Inter;">You can specify if the user can attach </span><span style="font-family: Inter; font-weight: bold;">One</span><span style="font-family: Inter;"> or </span><span style="font-family: Inter; font-weight: bold;">Many</span><span style="font-family: Inter;"> files.</span></p>
+<p class="p_Normal" style="line-height: 1.20; margin: 19px 0 0 0;"><img alt="sdt 28" width="584" height="199" style="margin:0;width:584px;height:199px;border:none" src="hmfile_hash_d8b7a5d2.png"/></p>
+<p class="p_Normal" style="line-height: 1.20; margin: 19px 0 0 0;">Please note that if you change the type from <span style="font-weight: bold;">Many</span> to <span style="font-weight: bold;">One</span>, you will be able to keep only one file in the field when editing a previously created item storing various files. Once you save the app item, the excessive files will be removed.</p>
+<p style="text-align: justify; line-height: 1.20; margin: 19px 0 0 0;">To attach a file, drag it from your computer or click the <span style="font-weight: bold;">three dots</span> icon and then add it from the <span style="color: #0000ff;"><a href="360014164452.html" class="topiclink">Files</a></span> workspace or clipboard.</p>
+<p style="text-align: justify; line-height: 1.20; margin: 19px 0 0 0;"><img alt="attach-file" width="580" height="196" style="margin:0;width:580px;height:196px;border:none" src="attach-file.png"/></p>
+<p style="text-align: justify; line-height: 1.20; margin: 19px 0 0 0;">Please note that the Mozilla Firefox browser does not support pasting multiple files from the clipboard. In this case, only the first file will be added.</p>
+<p class="p_Normal" style="line-height: 1.20; margin: 19px 0 0 0;">Here is what an uploaded file looks like:</p>
+<p class="p_Normal" style="line-height: 1.20; margin: 19px 0 0 0;"><img alt="doc_scan" width="455" height="58" style="margin:0;width:455px;height:58px;border:none" src="doc_scan.png"/></p>
+<p style="line-height: 1.20; margin: 14px 0 0 0;">You can copy a link to a file to share with a colleague. To do this, click the <img alt="clip0270" width="20" height="21" style="margin:0;width:20px;height:21px;border:none" src="clip0270.png"/> icon. Another employee will be able to download the file via the link if they have the appropriate permissions.<br />
+By clicking on the file on an app item or task form, you can open its <a href="preview-and-edit-files.html#view" class="topiclink">preview</a> page. On the preview page, you can:</p>
+<ul style="list-style-type:disc">
+<li style="line-height: 1.20; margin-top: 14px; margin-right: 0; margin-bottom: 0;">Download the file to your PC by clicking  <img alt="save-doc-icon" title="save-doc-icon" width="23" height="27" style="margin:0;width:23px;height:27px;border:none" src="save-doc-icon.png"/><span class="f_ImageCaption" style="font-size: 16px; font-weight: normal;">.</span></li><li style="line-height: 1.20; margin-top: 14px; margin-right: 0; margin-bottom: 0;">Open a menu with more options by clicking <img alt="doc-options-icon" title="doc-options-icon" width="14" height="21" style="margin:0;width:14px;height:21px;border:none" src="doc-options-icon.png"/>:<ul style="list-style-type:circle">
+<li style="line-height: 1.20; margin-top: 14px; margin-right: 0; margin-bottom: 0;"><span style="font-weight: bold;">Create Shortcut</span>. Place a link to a file in the selected folder in the <a href="360014164452.html" class="topiclink">Files</a> workspace. This helps you organize data and quickly find the documents you need. Select an option, then navigate to the folder where you want to create a link to this file and click <span style="font-weight: bold;">+Paste Shortcut</span> or press <span style="font-weight: bold;">Ctrl+V</span> keys. </li><li style="line-height: 1.20; margin-top: 14px; margin-right: 0; margin-bottom: 0;"><span style="font-weight: bold;">Compare with File</span>. Upload a file from your computer to <a href="versions-compare.html" class="topiclink">compare</a> it to the current version of the file in on the item or task page. The option is available for <span style="font-weight: bold;">.doc</span> and <span style="font-weight: bold;">.docx</span> files. Only files of the same formats can be compared.</li><li style="line-height: 1.20; margin-top: 14px; margin-right: 0; margin-bottom: 0;"><span style="font-weight: bold;">Create Copy</span>. You can save a copy of this file to a folder in the <span style="font-weight: bold;">Files</span> workspace. All the <a href="360014353991.html" class="topiclink">actions</a> available for files will also become available for this file.</li><li style="line-height: 1.20; margin-top: 14px; margin-right: 0; margin-bottom: 0;"><span style="font-weight: bold;">Compare with Version</span>. This action is available if<a href="360009707032.html#file_versions" class="topiclink"> the file version history</a> for documents from the <span style="font-weight: bold;">File</span>-type properties is enabled and configured in the system. The option will be displayed for <span style="font-weight: bold;">.doc</span> and <span style="font-weight: bold;">.docx</span> files on the item or task page when you add multiple versions. Only files of the same formats can be compared.</li></ul></li></ul>
+<p style="line-height: 1.20; margin: 14px 0 0 0;">Access to the file is determined by the access settings of the app item to which it is added. To allow other users to work with the file, you can provide them with <a href="element-right.html#permissions-on-item-page" class="topiclink">additional permissions</a> to the item.</p>
+<h3 class="p_Heading3"><a id="file_versions" class="hmanchor"></a><span class="f_Heading3">File version history for the Files type fields</span></h3>
+<p class="p_Normal" style="line-height: 1.36;">For files uploaded to the <span style="font-weight: bold;">Files</span> field, <a href="docs-versions.html" class="topiclink">version history</a> is available. </p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;внимание</span></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;">For the version history to become available, the <a href="360006871932.html#administrators" class="topiclink">system administrator</a> has to enable the <code><b>allowAddVersionFileFields</b></code> feature flag. To learn more, see <a href="change-settings-enterprise.html#enable-feature-flag-enterpeise" class="topiclink">Modify BRIX Enterprise parameters</a> and <a href="change-elma365standard-parameters.html#enable-feature-flag-standard" class="topiclink">Modify BRIX Standard parameters</a>. If you are using the SaaS edition, to enable the feature flag, please contact your BRIX sales rep.</p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;внимание</span></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;">To add a new file version to the field, upload the file from your PC when editing the app item, or attach the version in the course of a business process via the <a href="360020300571.html" class="topiclink">Assign Value</a> and <a href="360012454020.html" class="topiclink">Edit App Item</a> activities. </p>
+<p style="line-height: 1.28; page-break-after: avoid; margin: 0 0 11px 0;"><span style="font-family: Inter;">Keep in mind that:</span></p>
+<ul style="list-style-type:disc">
+<li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-family: Inter;">If you upload a new file to a field of the </span><span style="font-family: Inter; font-weight: bold;">One</span><span style="font-family: Inter;"> type, it will be added as a version for the existing file.</span></li><li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-family: Inter;">If you upload files with the same name and format to a field </span>of the <span style="font-weight: bold;">Many</span> type<span style="font-family: Inter;">, they will be added as versions to the existing files.</span></li><li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-family: Inter;">If during a business process or script execution a file is added to a field that matches exactly with the last version of an existing file, a new version will not be added.</span></li></ul>
+<p class="p_Normal">All uploaded versions of the file are saved in the system. To display the list of versions on a task page or app item page, add the <a href="document-version.html" class="topiclink">Document versions</a> widget to the form, and in its settings, specify the property that stores the file.</p>
+<p class="p_Normal"><img alt="file_versioning_widget" width="631" height="396" style="margin:0;width:631px;height:396px;border:none" src="file_versioning_widget.png"/></p>
+<h2 class="p_Heading2" style="line-height: 1.20; margin: 19px 0 0 0;"><a id="full-name" class="hmanchor"></a><span class="f_Heading2" style="font-size: 24px;">Full Name</span></h2>
+<p style="line-height: 1.20; margin: 19px 0 0 0;"><span style="font-family: Inter;">This field allows the user to enter the last name, first name, and middle name.</span></p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;"><img alt="sdt 29" width="736" height="42" style="margin:0;width:736px;height:42px;border:none" src="hmfile_hash_24556bd9.png"/></p>
+<h2 class="p_Heading2"><a id="arbitrary-app" class="hmanchor"></a><span class="f_Heading2">Arbitrary app</span></h2>
+<p style="line-height: 1.20; margin: 14px 0 0 0;"><span style="font-family: Inter;">This type allows the user to select an item from any app.</span></p>
+<p style="line-height: 1.20; margin: 14px 0 0 0;"><span style="font-family: Inter;">You can specify if the user can select </span><span style="font-family: Inter; font-weight: bold;">One</span><span style="font-family: Inter;"> or </span><span style="font-family: Inter; font-weight: bold;">Many</span><span style="font-family: Inter;"> app items.</span></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-family: Inter;">If </span><span style="font-family: Inter; font-weight: bold;">Many</span><span style="font-family: Inter;"> is selected, items from different apps can be specified on the form.</span></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><img alt="data-types-25" width="560" height="218" style="margin:0;width:560px;height:218px;border:none" src="data-types-25.png"/></p>
+<p style="line-height: 1.20; margin: 14px 0 0 0;"><span style="font-family: Inter;">To select an app item, click the field on the form or the magnifying glass icon in it. In the window that opens, an app from the list needs to be selected.</span></p>
+<p style="line-height: 1.20; margin: 14px 0 0 0;"><img alt="data-types-26" width="353" height="302" style="margin:0;width:353px;height:302px;border:none" src="data-types-26.png"/></p>
+<p style="line-height: 1.20; margin: 14px 0 0 0;"><span style="font-family: Inter;">A window with app items will open, and you will be able to select an app item by clicking on it. On the form, the app item will be displayed as a link. Click it to access the app item page.</span></p>
+<p style="line-height: 1.20; margin: 14px 0 0 0;"><span style="font-family: Inter;">To select another app item, click the recycle bin icon to the right of the link. The field will be cleared.</span></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><img alt="data-types-27" width="448" height="57" style="margin:0;width:448px;height:57px;border:none" src="data-types-27.png"/></p>
+<p style="line-height: 1.20; margin: 14px 0 0 0;"><span style="font-family: Inter;">If the recycle bin icon is not displayed, the field is </span><span style="font-family: Inter; font-weight: bold;">read-only</span><span style="font-family: Inter;">. It is impossible to change its value.</span></p>
+<p style="line-height: 1.20; margin: 14px 0 0 0;"><span style="font-family: Inter;">You can add an </span><span style="font-family: Inter; font-weight: bold;">Arbitrary App</span><span style="font-family: Inter;"> type field to a widget. Then you can use it as a universal component on different forms.</span></p>
+<p style="line-height: 1.20; margin: 14px 0 0 0;"><span style="font-family: Inter;">Please note that when you configure input and output variables or bind settings to an </span><span style="font-family: Inter; font-weight: bold;">Arbitrary App</span><span style="font-family: Inter;"> type field, you can specify variables of the following types: </span><span style="font-family: Inter; font-weight: bold;">Arbitrary App</span><span style="font-family: Inter;">, </span><span style="font-family: Inter; font-weight: bold;">App</span><span style="font-family: Inter;">, </span><span style="font-family: Inter; font-weight: bold;">File</span><span style="font-family: Inter;">, or </span><span style="font-family: Inter; font-weight: bold;">Users</span><span style="font-family: Inter;">.</span></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-family: Inter;">Read more about <a href="360012266792.html" class="topiclink">input and output variables</a> and <a href="common_widget_settings.html" class="topiclink">binding fields</a>.</span></p>
+<h2 class="p_Heading2" style="line-height: 1.20; margin: 19px 0 0 0;"><a id="link" class="hmanchor"></a><span class="f_Heading2" style="font-size: 24px;">Link</span></h2>
+<p style="line-height: 1.20; margin: 19px 0 0 0;"><span style="font-family: Inter;">This field allows displaying a link to a website, a document, or workspace in BRIX, or to other internet sources.</span></p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;"><img alt="data-types-28" width="258" height="55" style="margin:0;width:258px;height:55px;border:none" src="data-types-28.png"/></p>
+<h2 class="p_Heading2" style="line-height: 1.20; margin: 19px 0 0 0;"><a id="table" class="hmanchor"></a><span class="f_Heading2" style="font-size: 24px;">Table</span></h2>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-family: Inter;">With the </span><span style="font-family: Inter; font-weight: bold;">Table</span><span style="font-family: Inter;"> field, you can structure data by rows and columns, change its design, and insert special formulas that will perform calculations. Learn more about working with fields of this type in the <a href="360010201779.html" class="topiclink">Table data type</a> article.</span></p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;"><img alt="sdt 33" width="558" height="133" style="margin:0;width:558px;height:133px;border:none" src="hmfile_hash_60d44412.png"/></p>
+<h2 class="p_Heading2"><a id="role" class="hmanchor"></a><span class="f_Heading2">Role</span></h2>
+<p style="line-height: 1.20; margin: 14px 0 0 0;"><span style="font-family: Inter;">In a </span><span style="font-family: Inter; font-weight: bold;">Role</span><span style="font-family: Inter;"> type field, you can specify a user, a <a href="360007146071.html" class="topiclink">group</a> of users, or an <a href="360003861992.html" class="topiclink">org chart</a> item.</span></p>
+<p style="line-height: 1.20; margin: 14px 0 0 0;"><img alt="data-types-30" width="522" height="93" style="margin:0;width:522px;height:93px;border:none" src="data-types-30.png"/></p>
+<p style="line-height: 1.20; margin: 14px 0 0 0;"><span style="font-family: Inter;">Using a </span><span style="font-family: Inter; font-weight: bold;">Role</span><span style="font-family: Inter;"> type field is convenient when you need to specify a whole group of users of an org chart item. You don’t need to select each specific user. You only need to select the necessary group or position.</span></p>
+<p style="text-align: justify; line-height: 1.20; margin: 14px 0 0 0;">You can allow employees to specify locked users and those who have received an invitation to the company but have not yet logged in to the field.</p>
+<p style="line-height: 1.20; margin: 14px 0 0 0;"><img alt="checking" width="363" height="245" style="margin:0;width:363px;height:245px;border:none" src="checking.png"/></p>
+<h2 class="p_Heading2" style="line-height: 1.20; margin: 19px 0 0 0;"><a id="users" class="hmanchor"></a><span class="f_Heading2" style="font-size: 24px;">Users</span></h2>
+<p style="line-height: 1.20; margin: 19px 0 0 0;"><span style="font-family: Inter;">In this field, you can select one or more specific system users.</span></p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;"><img alt="sdt 31" width="673" height="84" style="margin:0;width:673px;height:84px;border:none" src="hmfile_hash_0502a32c.png"/></p>
+<p style="line-height: 1.20; margin: 14px 0 0 0;"><span style="font-family: Inter;">After adding the field to the form, specify the settings:</span></p>
+<p style="line-height: 1.20; margin: 14px 0 0 0;"><img alt="data-types-33" width="541" height="302" style="margin:0;width:541px;height:302px;border:none" src="data-types-33.png"/></p>
+<ul style="list-style-type:disc">
+<li style="line-height: 1.20; margin-top: 14px; margin-right: 0; margin-bottom: 0;"><span style="font-family: Inter;">Enter the field name and code.</span></li><li style="line-height: 1.20; margin-top: 14px; margin-right: 0; margin-bottom: 0;"><span style="font-family: Inter;">Select the number of users you can specify in the field: </span><span style="font-family: Inter; font-weight: bold;">One</span><span style="font-family: Inter;"> or </span><span style="font-family: Inter; font-weight: bold;">Many</span><span style="font-family: Inter;">.</span></li></ul>
+<p style="line-height: 1.20; margin: 14px 0 0 34px;"><span style="font-family: Inter;">For the </span><span style="font-family: Inter; font-weight: bold;">Users (One)</span><span style="font-family: Inter;"> property in the <a href="360029250931.html#addingpropertytotheform" class="topiclink">interface designer</a>, you can place nested fields, such as </span><span style="font-family: Inter; font-weight: bold;">Full Name</span><span style="font-family: Inter;">, </span><span style="font-family: Inter; font-weight: bold;">Position</span><span style="font-family: Inter;">, etc., on a widget template or app form.</span></p>
+<p style="line-height: 1.20; margin: 14px 0 0 34px;"><span style="font-family: Inter;">For the </span><span style="font-family: Inter; font-weight: bold;">Users (Many)</span><span style="font-family: Inter;"> type property, you can configure <a href="360009669952.html" class="topiclink">search by parameters</a> and select users from the list by clicking the magnifying glass icon.</span></p>
+<ul style="list-style-type:disc">
+<li style="line-height: 1.20; margin-top: 14px; margin-right: 0; margin-bottom: 0;"><span style="font-family: Inter;">Check the following options:</span></li></ul>
+<ul style="list-style-type:disc"><ul style="list-style-type:circle">
+<li style="line-height: 1.20; margin-top: 14px; margin-right: 0; margin-bottom: 0;"><span style="font-weight: bold;">Show locked users</span> and <span style="font-weight: bold;">Show invited users</span>. The employees will be able to specify locked users and &nbsp;those who have received an invitation to the company but have not yet logged in in the field.</li><li style="line-height: 1.20; margin-top: 14px; margin-right: 0; margin-bottom: 0;"><span style="font-family: Inter; font-weight: bold;">Add filter</span><span style="font-family: Inter;">. Configure conditions for filtering entries when selecting users in the field. For example, to show only employees of a certain position. Read more about it in the </span><a href="limit-selection-of-elements.html" class="topiclink">Add a filter for users and app items on the item form</a> article.</li></ul></li></ul>
+<h2 class="p_Heading2" style="line-height: 1.20; margin: 19px 0 0 0;"><a id="app" class="hmanchor"></a><span class="f_Heading2" style="font-size: 24px;">App</span></h2>
+<p style="line-height: 1.20; margin: 19px 0 0 0;"><span style="font-family: Inter;">If you place a field of this type on an app form, you can use it to specify one or more app items of another app. This creates a link between the two apps. The link to the associated app item is displayed on the page of the main app item. Click on it to open the page of the associated item.</span></p>
+<p class="p_Normal">The app is selected when configuring the form or creating the context variable. To determine how many app items the user will be able to specify in the field, select <span style="font-weight: bold;">One</span> or <span style="font-weight: bold;">Many</span> in the variable’s settings.</p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;"><img alt="sdt 34" width="603" height="279" style="margin:0;width:603px;height:279px;border:none" src="hmfile_hash_1d60d0d6.png"/></p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;внимание</span></p>
+<p class="p_Normal">If the field is placed on the form of an app that already contains app items, you cannot change the type from <span style="font-weight: bold;">Many</span> to <span style="font-weight: bold;">One</span>.</p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;внимание</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;примечание</span></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Inter; font-weight: bold;">Note</span></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Inter;">When configuring the <a href="360009923311.html" class="topiclink">display of items on an app page</a>, a field with the subtype </span><span style="font-size: 15px; font-family: Inter; font-weight: bold;">Many</span><span style="font-size: 15px; font-family: Inter;"> can be added to a table, tiles, or a kanban board. In this case, when the app is opened, data is loaded for all links from this field for each displayed item page. This increases the system load, especially if there are many such links. To optimize the display of app pages, you can <a href="360009923311.html#eager-load" class="topiclink">enable eager data loading</a>.</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;примечание</span></p>
+<p style="line-height: 1.20; margin: 14px 0 0 0;"><span style="font-family: Inter;">When the app is selected, additional options become available:</span></p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;"><img alt="sdt 35" width="617" height="328" style="margin:0;width:617px;height:328px;border:none" src="hmfile_hash_1720d629.png"/></p>
+<ul style="list-style-type:disc">
+<li style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-family: Inter; font-weight: bold;">Default values for new items</span><span style="font-family: Inter;">. Enable the option and configure the app to make it possible for users to create new app items with pre-filled fields directly from the form. For example, the user can create supplementary agreements directly on the form of a contract they relate to. Their fields will be pre-filled with values form the contract. To learn more, see <a href="360022129191.html" class="topiclink">Default values for new items</a>.</span></li><li style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-family: Inter; font-weight: bold;">Bound app</span><span style="font-family: Inter;">. Check the option to add child app items when creating an app item and save them only after saving the main item. To learn more, see <a href="360020016471.html" class="topiclink">Bound apps</a>.</span></li><li style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-family: Inter; font-weight: bold;">Add filter</span><span style="font-family: Inter;">. Enable the option and configure conditions for filtering entries when selecting items of the linked app. For example, show only items created later than a specified date or items that were added by the current user. To learn more, see </span><a href="limit-selection-of-elements.html" class="topiclink">Add a filter for users and app items on the item form</a><span style="font-family: 'Times New Roman',Times,Georgia,serif;">.</span></li></ul>
+<p style="line-height: 1.20; margin: 14px 0 0 0;"><span style="font-family: Inter;">In the <a href="360029250931.html#addingpropertytotheform" class="topiclink">interface designer</a>, you can place nested fields of the </span><span style="font-family: Inter; font-weight: bold;">App</span><span style="font-family: Inter;"> type with the </span><span style="font-family: Inter; font-weight: bold;">One</span><span style="font-family: Inter;"> subtype on a widget template or app form.</span></p>
+<p style="line-height: 1.20; margin: 14px 0 0 0;"><img alt="app-5" width="687" height="413" style="margin:0;width:687px;height:413px;border:none" src="app-5.png"/></p>
+<p style="line-height: 1.20; margin: 7px 0 7px 0;"><span style="font-family: Inter;">To fill in a field on a configured form, start typing the name of an item or click the magnifying glass icon to go to the list of available items and <a href="search-on-app-form.html" class="topiclink">search by options</a>.</span></p>
+<p style="line-height: 1.20; margin: 7px 0 7px 0;"><span style="font-family: Inter;">If you have <a href="360007527512.html#assign" class="topiclink">permissions to create app items</a> in the selected app, you will be able to create a new app item as you fill out the fields on the form. To do that, click the </span><span style="font-family: Inter; font-weight: bold;">+Create</span><span style="font-family: Inter;"> button.</span></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><img alt="app_type_1" width="551" height="178" style="margin:0;width:551px;height:178px;border:none" src="app_type_1.png"/></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-family: Inter;">In the <a href="360028941032.html" class="topiclink">advanced mode</a>, the </span><span style="font-family: Inter; font-weight: bold;">Read-only</span><span style="font-family: Inter;"> option is automatically enabled for fields of the </span><span style="font-family: Inter; font-weight: bold;">App</span><span style="font-family: Inter;"> type. When filling out a field on the form, users will only see a button to create a new item. You can configure how it will look like. Read more about it in</span><span style="font-size: 15px; color: #394149;"> </span><span style="font-size: 15px; color: #394149;"><a href="360029148471.html#plus_create" class="topiclink">Create an app item on the page of another app</a></span><span style="font-size: 15px; color: #394149;">.</span></p>
+<p class="p_Normal">To allow users to select an item from the list of existing items when filling out a field, go to the app form settings and disable the <span style="font-weight: bold;">Read-only</span> option for this property. Read more in <a href="360029250871.html" class="topiclink">Create, View, and Edit tabs</a>.</p>
+<h2 class="p_Heading2"><a id="arbitrary-type" class="hmanchor"></a><span class="f_Heading2">Arbitrary type</span></h2>
+<p class="p_Normal">You can use this type to pass or store arbitrary data in the context. You can read more about it in <a href="https://tssdk.brix365.com/en/latest/modules/_02_types_.html#tjson" target="_blank" class="weblink">BRIX TS SDK</a>. You can use this type as an auxiliary variable in scripts. For example, use it to record the results of a client script to create a dynamic form. For more information about this example, read the <a href="activities-features.html#arbitrary-type" class="topiclink">Use business process activities</a> article.</p>
+<h2 class="p_Heading2"><a id="event" class="hmanchor"></a><span class="f_Heading2">Event</span></h2>
+<p class="p_Normal">You can use this data type in the context of a custom widget to send an event from a child widget to a parent one. Events are a button click, data entry in a field, etc. When placing a widget on a form or a page, you can find a custom event in the widget settings on the <a href="common_widget_settings.html#events-tab" class="topiclink">Events</a> tab. You can work with it in the same way as with system events available by default.</p>
+<p class="p_Normal">In this way, you can set up a script to run in the parent widget when an action occurs in the child widget. For example, if in the child widget a field value changes or the user clicks a button, then calculations with a formula or data filtering are performed in the parent widget.</p>
+<p class="p_Normal">To do this, you need to add an <span style="font-weight: bold;">Event</span> type variable in the child widget and link a script to it in the parent widget. Then the following happens:</p>
+<ul style="list-style-type:disc">
+<li class="p_Normal">In a child widget, it records an event, for example, the user clicks a button.</li><li class="p_Normal">In a parent widget, it starts an action, for example, data filtering is performed after clicking a button.</li></ul>
+<p class="p_Normal">You can read more information about the property of the <span style="font-weight: bold;">Event</span> type and how to use it in <a href="https://tssdk.brix365.com/en/latest/interfaces/_02_types_.tclientevent.html" target="_blank" class="weblink">BRIX TS SDK</a>. See the use cases with this data type in the <a href="event-in-widgets.html" class="topiclink">Send an event from a child widget to a parent one</a> and <a href="child-widget-event.html" class="topiclink">Send an event between two child widgets</a> articles.</p>
+<h2 class="p_Heading2"><a id="report" class="hmanchor"></a><span class="f_Heading2">Report</span></h2>
+<p class="p_Normal">A report is a system component that displays data from several source apps in the form of a table. For example, in the <span style="font-weight: bold;">Order Register</span> report you can link different apps of the system and display information about an order, customer, contract, and invoice. Read more <span style="font-family: Inter;">in <a href="report.html" class="topiclink">Report</a>.</span></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-family: Inter;">The </span><span style="font-family: Inter; font-weight: bold;">Report</span><span style="font-family: Inter;"> type field allows to add a link to the report created in the system to the app form or page. When you click on the link, the page with the configured report table will be opened.</span></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><img alt="data_types_03" width="431" height="180" style="margin:0;width:431px;height:180px;border:none" src="data_types_03.png"/></p>
+<p class="p_Normal">Creating a <span style="font-weight: bold;">Report</span> type field is available only in the <a href="interface_designer.html" class="topiclink">interface designer</a> on the <span style="font-weight: bold;">Context</span> tab.</p>
+<p class="p_Normal">To add a <span style="font-weight: bold;">Report</span> type field:</p>
+<ol style="list-style-type:upper-roman">
+<li value="1" class="p_Normal">In the app, enable <span style="font-family: Inter;"><a href="360028941032.html" class="topiclink">advanced mode</a></span>.</li><li value="2" class="p_Normal">Go to the interface designer of the selected app form or page and click +<span style="font-weight: bold;">Add</span> on the <span style="font-weight: bold;">Context</span> tab.</li><li value="3" class="p_Normal">Specify a name and property type, select the report created in the system, and click <span style="font-weight: bold;">Create</span>.</li></ol>
+<p class="p_Normal" style="margin: 0 0 0 34px;"><img alt="data_types_04" width="537" height="440" style="margin:0;width:537px;height:440px;border:none" src="data_types_04.png"/></p>
+<p class="p_Normal" style="margin: 0 0 0 34px;">Now you will be able to refer to the fields of the selected report in scripts using <a href="https://tssdk.brix365.com/en/latest/interfaces/_02_types_.reportfield.html" target="_blank" class="weblink">TS SDK methods</a> or add a link to the report on a form or page.</p>
+<ol style="list-style-type:upper-roman" start="4">
+<li value="4" class="p_Normal">Click the <span style="font-weight: bold;">Template</span> tab, select <span style="font-weight: bold;">Properties</span> in the right panel, and drag the <span style="font-weight: bold;">Report</span> type property to the field to be modeled.</li><li value="5" class="p_Normal">In the opened window, name the field on the form and click <span style="font-weight: bold;">Save</span>.</li><li value="6" class="p_Normal">To edit the report link name, change the field name on the <span style="font-weight: bold;">Context</span> tab.</li><li value="7" class="p_Normal">Save and publish the configured form or page.</li></ol>
+<p class="p_Normal">For the <span style="font-weight: bold;">Report</span> type field, the <span style="font-weight: bold;">Read-only</span> option is enabled. Users will be able to navigate to the report page using the specified link, but will not be able to change the field value.</p>
+
+                        <div class="bottom-nav">
+                            
+                                <a id="prev-link" class="topic__navi_prev" href="360009918011.html">
+                                    <span class="bottom-nav__arrow bottom-nav__arrow--prev"></span> <span
+                                        class="bottom-nav__link">360009918011.html</span>
+                                </a>
+                            
+                            
+                                <a id="next-link" class="topic__navi_next" href="360010201779.html">
+                                    <span class="bottom-nav__link">360010201779.html</span> <span
+                                        class="bottom-nav__arrow bottom-nav__arrow--next"></span>
+                                </a>
+                            
+                        </div>
+                        <!-- добавляет на страницу строку блок Была ли статья полезной?  -->
+                          <div class="feedback" id="feedback"><div class="feedback-help"><span><b>Was this helpful?</b></span><form action="" method="POST" class="feedback-form" id="feedback-form"><div class="feedback__popup feedback__popup-response" id="feedback__popup_thx" style="display: none;">Thanks for your feedback!</div><div class="feedback__popup" id="feedback__popup_why" style="display: none;"><div class="feedback__popup-header">Please specify why:</div><input type="radio" name="category" id="bad_recommendation" value="bad_recommendation"><label for="bad_recommendation">Recommendations did not help me</label><input type="radio" name="category" id="difficult_text" value="difficult_text"><label for="difficult_text">Article is hard to understand</label><input type="radio" name="category" id="no_answer" value="no_answer"><label for="no_answer">Didn`t answer my question</label><input type="radio" name="category" id="bad_header" value="bad_header"><label for="bad_header">Content does not match the topic</label><input type="radio" name="category" id="other_reason" value="other_reason"><label for="other_reason">Other</label></div><div class="feedback__popup" id="feedback__popup-other" style="display: none;"><div class="feedback__popup-header">How we can improve it?</div><textarea class="feedback__textarea" name="other" id=""></textarea><input type="submit" class="feedback__other-btn" value="Submit"></div><div class="feedback-form__btn-group"><input type="radio" name="useful" id="feedback__useful_yes" value="true"><label for="feedback__useful_yes"><img src="like.svg" class="small-img" alt="like"><spanclass="feedback-form__btn-group_yes-btn">Yes</spanclass="feedback-form__btn-group_yes-btn"></label><input type="radio" name="useful" id="feedback__useful_no" value="false"><label for="feedback__useful_no"><img src="dislike.svg" class="small-img" alt="dislike"><spanclass="feedback-form__btn-group_no-btn">No</spanclass="feedback-form__btn-group_no-btn"></label></div><select name="category"><option disabled="">Please specify why</option><option value="bad_recommendation" selected="">Recommendations did not help me</option><option value="difficult_text">Article is hard to understand</option><option value="no_answer">Didn`t answer my question</option><option value="bad_header">Content does not match the topic</option><option value="other_reason">Other</option></select><input type="submit"></form></div><div class="found_typo"><p style="margin: 0px; margin-top: 16px !important;"><span><b>Found a typo?</b></span> Select it and press <i>Ctrl+Enter</i> to send us feedback</p></div></div>
+                           
+                    </section>
+                </div>
+                <aside class="article__sidebar" style="display:none">
+                    <input type="checkbox" />
+                    <div class="article__arrow"></div>
+                    <div class="table-of-contents elma365-right" id="toc2Content">
+                        <h3 class="h3-toc">In this topic</h3>
+                        <nav id="toc2"></nav>
+                    </div>
+                </aside>
+            </div>
+        </article>
+    </main>               
+    <footer class="footer">
+        <div class="footer-container">
+  <div class="footer-mobile">
+    
+    <ul class="footer-mobile__list"><li><a href="https://brix365.com/en/" target="_blank">BRIX</a></li><li><a href="https://tssdk.brix365.com/en/latest/" target="_blank">SDK</a></li><li><a href="https://api.brix365.com/en/" target="_blank">API</a></li></ul><ul class="footer-mobile__list"><li><a href="https://brix365.com/en/help/platform/get-trial.html">Platform</a></li><li><a href="https://brix365.com/en/help/ecm/ecm-functions.html">ECM</a></li><li><a href="https://brix365.com/en/help/service/service-functions.html">Service</a></li><li><a href="https://brix365.com/en/help/projects/projects-functions.html">Projects</a></li></ul>
+    
+    
+  </div>
+  <div class="footer-wrap">
+    
+      <div><span class="mobile-question-popup">Send feedback</span><form method="POST" action class="question__popup question-xs" id="question__popup"><div class="question-wrap"><span class="close"></span><span class="title">Ask a question</span><label for="help_question" style="display: none;"></label><textarea name="help_question" id="help_question"></textarea><input type="submit" value="Send"></div></form><div class="hidden fade-in question-success-xs">Sent</div></div>
+    
+    <div class="footer-flex-b">
+      <span class="footer-copy">&copy; 2025 BRIX</span>
+      <ul class="footer-list">
+        
+        <li class="footer-item">
+            <a href="#" class="arrow-top" style="display: block;"></a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+ 
+    </footer>
+    <iframe name="hmnavigation" style="display:none!important"></iframe>
+    <script src="./jquery-ui.js"></script>
+    <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
+    <script src="./jquery.tocify.min.js"></script>
+    <script src="./TypoReporter.min.js"></script>
+    <script src="./google-search.js"></script>
+    <script src="./main.js"></script>
+</body>
+
+</html>

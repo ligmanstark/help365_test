@@ -1,0 +1,215 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Selecting nodes for pod placement</title>
+    <meta name="generator" content="Help+Manual" />
+    <meta name="keywords" content="" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="You can restrict pod placement to specific nodes using the &nbsp;parameter. This is a simple Kubernetes tool that allows you to assign pods only to nodes with certain labels." />
+    <meta name="picture" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Full documentation for BRIX365 platform. Low-code developer guide. User guide. Admin guide. Developer guide." />
+    <meta property="og:url" content="https://brix365.com/en/help" />
+    <meta property="og:image" content="" />                                                              
+    <link rel="icon" href="favicon.png" type="image/png" />
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./jquery-ui.min.css" />
+    <link rel="stylesheet" href="default.css" />
+    <link rel="stylesheet" href="./search-yandex.css" />
+    <link rel="stylesheet" href="./article.css" />
+    <link rel="stylesheet" href="./glossary.css" />
+    <link rel="stylesheet" href="./theme.css" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+
+<body>
+    
+    <script>!function(e,t,c,n,r,a,m){e.ym=e.ym||function(){(e.ym.a=e.ym.a||[]).push(arguments)},e.ym.l=1*new Date;for(var s=0;s<document.scripts.length;s++)if(document.scripts[s].src===n)return;a=t.createElement(c),m=t.getElementsByTagName(c)[0],a.async=1,a.src=n,m.parentNode.insertBefore(a,m)}(window,document,"script","https://mc.yandex.ru/metrika/tag.js"),ym(83179930,"init",{clickmap:!0,trackLinks:!0,accurateTrackBounce:!0,webvisor:!0})</script><noscript><div><img alt=""src=https://mc.yandex.ru/watch/83179930 style=position:absolute;left:-9999px></div></noscript> 
+    
+    ﻿<header class="header elma-365">
+  <div class="container">
+    <a class="header__logo" href="https://brix365.com/en/help">
+      <img src="./logo-en.svg" alt="header logo">
+    </a>
+ <!-- <div class="hero__search-form" id="search-panel">
+   <form class="search-form" onsubmit="ym(83180416,'reachGoal','poisk')">
+     <label class="search-form__label">
+       <span id="reset-search" class="search__icon"></span>
+       <input class="search-form__input" type="text">
+     </label>
+     <input class="search-form__submit" type="submit" value="Submit">
+   </form>
+  </div>       -->
+  
+     <div class="hero__search-form" id="search-panel"> <form class="search-form"> <label class="search-form__label"> <span id="reset-search" class="search__icon"></span> <input class="search-form__input" type="text"> </label> <input class="search-form__submit" type="submit" value="Submit"> </form> </div> 
+  <div class="hero__search">
+      <a href="#" id="search-icon" class="hero__search-icon">
+        <img src="search-icon-white.svg" alt="search string">
+      </a>
+      <a href="#" id="side-menu-icon" class="hero__side-icon">
+        <img src="side_menu.svg" alt="side menu">
+      </a>
+    </div>  
+  <div class="header__navi">
+        
+        <ul class="header__list"><li><span class="solution-select"><span class="solution-select__selected"></span><svg width="7" height="4" viewBox="0 0 7 4" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L3.5 3.5L6 1" stroke="white" stroke-linecap="round" stroke-linejoin="round"/></svg><ul class="solution-select__list"><li><a class="project-link" href="https://brix365.com/en/help/platform/get-trial.html">Platform</a></li><li><a class="project-link" href="https://brix365.com/en/help/ecm/ecm-functions.html">ECM</a></li><li><a class="project-link" href="https://brix365.com/en/help/crm/crm_overview.html">CRM</a></li><li><a class="project-link" href="https://brix365.com/en/help/service/service-functions.html">Service</a></li><li><a class="project-link" href="https://brix365.com/en/help/projects/projects-functions.html">Projects</a></li><li><a class="project-link" href="https://brix365.com/en/help/business_solutions/-elma365-store.html">Business Solutions</a></li></ul></span></li><li><a href="https://api.brix365.com/en/" target="_blank">API</a></li><li><a href="https://tssdk.brix365.com/" target="_blank">SDK</a></li></ul>
+        
+        
+   </div>
+  </div>
+
+</header>
+
+
+
+    
+    <main class="main container">
+
+        <aside class="sidebar" id="sidebar">
+        <div class="sidebar__header">
+                 <a class="header__logo" href="https://brix365.com/en/help">
+                    <img src="./logo-light-en.svg">
+                 </a>
+                    <span class="sidebar__close elma-365-close" id="close"></span>
+            </div>
+            <div class="sidebar__wrapper" id="side-menu">
+                
+            </div>
+        </aside>
+
+        <article class="article" id="article">
+            <div class="article-inner">           
+                <div class="content">
+                    <header class="article__header">
+                        
+                            <div class="topic__breadcrumbs">
+                                <p><a href="elma365-on-premises.html">BRIX On-Premises</a> &gt; <a href="elma365-enterprise.html">BRIX On-Premises Enterprise</a> &gt; <a href="advanced-kubernetes-settings.html">BRIX Enterprise advanced settings</a> / Selecting nodes for pod placement</p>
+                            </div>
+                        
+                        <div class="topic__title"><h1 class="p_Heading1"><span class="f_Heading1">Selecting nodes for pod placement</span></h1>
+</div>
+                    
+</header>
+                    <section class="article__content">
+                        <div class="scroll-top-inner">
+                            <a href="#h1-article" class="scroll-top"></a>
+                        </div>
+                        <!-- Placeholder for topic body. -->
+                        <p class="p_Normal">You can restrict pod placement to specific nodes using the <code><b>nodeSelector</b></code> parameter. This is a simple Kubernetes tool that allows you to assign pods only to nodes with certain labels.</p>
+<p class="p_Normal">Before configuring the <code><b>nodeSelector</b></code> parameter, please read the <a href="advanced-kubernetes-settings.html" class="topiclink">BRIX Enterprise advanced settings</a> article to learn about all the pod placement tools and recommendations for using them together.</p>
+<h2 class="p_Heading2"><span class="f_Heading2">How to configure the nodeSelector parameter</span> </h2>
+<p class="p_Normal">For basic pod placement on nodes using the <code><b>nodeSelector</b></code> parameter, follow the steps:</p>
+<ol style="list-style-type:decimal">
+<li value="1" class="p_Normal">Add labels on the nodes.<br />
+&nbsp;<br />
+To place pods in specific Kubernetes cluster nodes, set labels for the desired nodes, e.g. <code><b>environment = production</b></code>.</li></ol>
+<ol style="list-style-type:decimal" start="2">
+<li value="2" class="p_Normal">Configure verification of label matching.<br />
+&nbsp;<br />
+In the pod manifest, specify a <code><b>nodeSelector</b></code> parameter with the added labels. If a node does not have a matching label, the pod is not scheduled for that node.</li></ol>
+<p class="p_Normal">Let's look at an example. Suppose there are two environments configured: <span style="font-weight: bold;">develop</span> and <span style="font-weight: bold;">production</span>. The load of the production environment is distributed on the <code><b>node-1</b></code> node, and the load of the develop environment is distributed on the <code><b>node-2</b></code> node. To do this:</p>
+<ol style="list-style-type:upper-roman">
+<li value="1" class="p_Normal">Add environment labels to the nodes:</li></ol>
+<ul style="list-style-type:disc">
+<li class="p_Normal"><code><b>environment = production</b></code> on <code><b>node-1</b></code>.</li><li class="p_Normal"><code><b>environment = develop</b></code> on <code><b>node-2</b></code>.</li></ul>
+<p class="p_Normal">To do this, run the commands:</p>
+<p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample">kubectl label nodes node-1 environment=production</span><br />
+<span class="f_CodeExample">kubectl label nodes node-2 environment=development</span></p>
+<ol style="list-style-type:upper-roman" start="2">
+<li value="2" class="p_Normal">Specify the labels created for the pods so that they run in the correct nodes. In each environment, open the <code><b>values-elma365.yaml</b></code> file and set the value for the <code><b>nodeSelector</b></code> parameter:</li></ol>
+<ul style="list-style-type:disc">
+<li class="p_Normal">for production environment:</li></ul>
+<p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample">global:</span><br />
+<span class="f_CodeExample"> &nbsp;nodeSelector:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;environment</span> </p>
+<ul style="list-style-type:disc">
+<li class="p_Normal">for development environment:</li></ul>
+<p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample">global:</span><br />
+<span class="f_CodeExample"> &nbsp;nodeSelector:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;environment: develop</span></p>
+<ol style="list-style-type:upper-roman" start="3">
+<li value="3" class="p_Normal">Once the parameter is configured, apply it as described in the <a href="change-settings-enterprise.html#apply-new-parameters" class="topiclink">Modify BRIX Enterprise parameters</a> article.</li></ol>
+<p class="p_Normal">As a result:</p>
+<ol style="list-style-type:decimal">
+<li value="1" class="p_Normal">All pods with the <code><b>environment = production</b></code> configuration will run only on the nodes labeled <code><b>environment = production</b></code>.</li><li value="2" class="p_Normal">All pods with the <code><b>environment = develop</b></code> configuration will only run on the nodes labeled <code><b>environment = develop</b></code>.</li></ol>
+<h3 class="p_Heading3"><span class="f_Heading3">Default values for the nodeSelector parameter</span></h3>
+<p class="p_Normal">By default, no values are set in the <code><b>.Values.global.nodeSelector</b></code> field. Therefore, pods are allocated to any available nodes in the cluster without restriction.</p>
+<p class="p_Normal">&nbsp;</p>
+
+                        <div class="bottom-nav">
+                            
+                                <a id="prev-link" class="topic__navi_prev" href="pod-topology-spread-constraints.html">
+                                    <span class="bottom-nav__arrow bottom-nav__arrow--prev"></span> <span
+                                        class="bottom-nav__link">pod-topology-spread-constraints.html</span>
+                                </a>
+                            
+                            
+                                <a id="next-link" class="topic__navi_next" href="taints-tolerations.html">
+                                    <span class="bottom-nav__link">taints-tolerations.html</span> <span
+                                        class="bottom-nav__arrow bottom-nav__arrow--next"></span>
+                                </a>
+                            
+                        </div>
+                        <!-- добавляет на страницу строку блок Была ли статья полезной?  -->
+                          <div class="feedback" id="feedback"><div class="feedback-help"><span><b>Was this helpful?</b></span><form action="" method="POST" class="feedback-form" id="feedback-form"><div class="feedback__popup feedback__popup-response" id="feedback__popup_thx" style="display: none;">Thanks for your feedback!</div><div class="feedback__popup" id="feedback__popup_why" style="display: none;"><div class="feedback__popup-header">Please specify why:</div><input type="radio" name="category" id="bad_recommendation" value="bad_recommendation"><label for="bad_recommendation">Recommendations did not help me</label><input type="radio" name="category" id="difficult_text" value="difficult_text"><label for="difficult_text">Article is hard to understand</label><input type="radio" name="category" id="no_answer" value="no_answer"><label for="no_answer">Didn`t answer my question</label><input type="radio" name="category" id="bad_header" value="bad_header"><label for="bad_header">Content does not match the topic</label><input type="radio" name="category" id="other_reason" value="other_reason"><label for="other_reason">Other</label></div><div class="feedback__popup" id="feedback__popup-other" style="display: none;"><div class="feedback__popup-header">How we can improve it?</div><textarea class="feedback__textarea" name="other" id=""></textarea><input type="submit" class="feedback__other-btn" value="Submit"></div><div class="feedback-form__btn-group"><input type="radio" name="useful" id="feedback__useful_yes" value="true"><label for="feedback__useful_yes"><img src="like.svg" class="small-img" alt="like"><spanclass="feedback-form__btn-group_yes-btn">Yes</spanclass="feedback-form__btn-group_yes-btn"></label><input type="radio" name="useful" id="feedback__useful_no" value="false"><label for="feedback__useful_no"><img src="dislike.svg" class="small-img" alt="dislike"><spanclass="feedback-form__btn-group_no-btn">No</spanclass="feedback-form__btn-group_no-btn"></label></div><select name="category"><option disabled="">Please specify why</option><option value="bad_recommendation" selected="">Recommendations did not help me</option><option value="difficult_text">Article is hard to understand</option><option value="no_answer">Didn`t answer my question</option><option value="bad_header">Content does not match the topic</option><option value="other_reason">Other</option></select><input type="submit"></form></div><div class="found_typo"><p style="margin: 0px; margin-top: 16px !important;"><span><b>Found a typo?</b></span> Select it and press <i>Ctrl+Enter</i> to send us feedback</p></div></div>
+                           
+                    </section>
+                </div>
+                <aside class="article__sidebar" style="display:none">
+                    <input type="checkbox" />
+                    <div class="article__arrow"></div>
+                    <div class="table-of-contents elma365-right" id="toc2Content">
+                        <h3 class="h3-toc">In this topic</h3>
+                        <nav id="toc2"></nav>
+                    </div>
+                </aside>
+            </div>
+        </article>
+    </main>               
+    <footer class="footer">
+        <div class="footer-container">
+  <div class="footer-mobile">
+    
+    <ul class="footer-mobile__list"><li><a href="https://brix365.com/en/" target="_blank">BRIX</a></li><li><a href="https://tssdk.brix365.com/en/latest/" target="_blank">SDK</a></li><li><a href="https://api.brix365.com/en/" target="_blank">API</a></li></ul><ul class="footer-mobile__list"><li><a href="https://brix365.com/en/help/platform/get-trial.html">Platform</a></li><li><a href="https://brix365.com/en/help/ecm/ecm-functions.html">ECM</a></li><li><a href="https://brix365.com/en/help/service/service-functions.html">Service</a></li><li><a href="https://brix365.com/en/help/projects/projects-functions.html">Projects</a></li></ul>
+    
+    
+  </div>
+  <div class="footer-wrap">
+    
+      <div><span class="mobile-question-popup">Send feedback</span><form method="POST" action class="question__popup question-xs" id="question__popup"><div class="question-wrap"><span class="close"></span><span class="title">Ask a question</span><label for="help_question" style="display: none;"></label><textarea name="help_question" id="help_question"></textarea><input type="submit" value="Send"></div></form><div class="hidden fade-in question-success-xs">Sent</div></div>
+    
+    <div class="footer-flex-b">
+      <span class="footer-copy">&copy; 2025 BRIX</span>
+      <ul class="footer-list">
+        
+        <li class="footer-item">
+            <a href="#" class="arrow-top" style="display: block;"></a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+ 
+    </footer>
+    <iframe name="hmnavigation" style="display:none!important"></iframe>
+    <script src="./jquery-ui.js"></script>
+    <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
+    <script src="./jquery.tocify.min.js"></script>
+    <script src="./TypoReporter.min.js"></script>
+    <script src="./google-search.js"></script>
+    <script src="./main.js"></script>
+</body>
+
+</html>

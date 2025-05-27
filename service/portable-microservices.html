@@ -1,0 +1,241 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Portable services in modules</title>
+    <meta name="generator" content="Help+Manual" />
+    <meta name="keywords" content="" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="When the Low-code platform cannot provide the functionality needed for efficient integration of processes into the existing information landscape, it is recommended to create..." />
+    <meta name="picture" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Full documentation for BRIX365 platform. Low-code developer guide. User guide. Admin guide. Developer guide." />
+    <meta property="og:url" content="https://brix365.com/en/help" />
+    <meta property="og:image" content="" />                                                              
+    <link rel="icon" href="favicon.png" type="image/png" />
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./jquery-ui.min.css" />
+    <link rel="stylesheet" href="default.css" />
+    <link rel="stylesheet" href="./search-yandex.css" />
+    <link rel="stylesheet" href="./article.css" />
+    <link rel="stylesheet" href="./glossary.css" />
+    <link rel="stylesheet" href="./theme.css" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+
+<body>
+    
+    <script>!function(e,t,c,n,r,a,m){e.ym=e.ym||function(){(e.ym.a=e.ym.a||[]).push(arguments)},e.ym.l=1*new Date;for(var s=0;s<document.scripts.length;s++)if(document.scripts[s].src===n)return;a=t.createElement(c),m=t.getElementsByTagName(c)[0],a.async=1,a.src=n,m.parentNode.insertBefore(a,m)}(window,document,"script","https://mc.yandex.ru/metrika/tag.js"),ym(83179930,"init",{clickmap:!0,trackLinks:!0,accurateTrackBounce:!0,webvisor:!0})</script><noscript><div><img alt=""src=https://mc.yandex.ru/watch/83179930 style=position:absolute;left:-9999px></div></noscript> 
+    
+    ﻿<header class="header elma-365">
+  <div class="container">
+    <a class="header__logo" href="https://brix365.com/en/help">
+      <img src="./logo-en.svg" alt="header logo">
+    </a>
+ <!-- <div class="hero__search-form" id="search-panel">
+   <form class="search-form" onsubmit="ym(83180416,'reachGoal','poisk')">
+     <label class="search-form__label">
+       <span id="reset-search" class="search__icon"></span>
+       <input class="search-form__input" type="text">
+     </label>
+     <input class="search-form__submit" type="submit" value="Submit">
+   </form>
+  </div>       -->
+  
+     <div class="hero__search-form" id="search-panel"> <form class="search-form"> <label class="search-form__label"> <span id="reset-search" class="search__icon"></span> <input class="search-form__input" type="text"> </label> <input class="search-form__submit" type="submit" value="Submit"> </form> </div> 
+  <div class="hero__search">
+      <a href="#" id="search-icon" class="hero__search-icon">
+        <img src="search-icon-white.svg" alt="search string">
+      </a>
+      <a href="#" id="side-menu-icon" class="hero__side-icon">
+        <img src="side_menu.svg" alt="side menu">
+      </a>
+    </div>  
+  <div class="header__navi">
+        
+        <ul class="header__list"><li><span class="solution-select"><span class="solution-select__selected"></span><svg width="7" height="4" viewBox="0 0 7 4" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L3.5 3.5L6 1" stroke="white" stroke-linecap="round" stroke-linejoin="round"/></svg><ul class="solution-select__list"><li><a class="project-link" href="https://brix365.com/en/help/platform/get-trial.html">Platform</a></li><li><a class="project-link" href="https://brix365.com/en/help/ecm/ecm-functions.html">ECM</a></li><li><a class="project-link" href="https://brix365.com/en/help/crm/crm_overview.html">CRM</a></li><li><a class="project-link" href="https://brix365.com/en/help/service/service-functions.html">Service</a></li><li><a class="project-link" href="https://brix365.com/en/help/projects/projects-functions.html">Projects</a></li><li><a class="project-link" href="https://brix365.com/en/help/business_solutions/-elma365-store.html">Business Solutions</a></li></ul></span></li><li><a href="https://api.brix365.com/en/" target="_blank">API</a></li><li><a href="https://tssdk.brix365.com/" target="_blank">SDK</a></li></ul>
+        
+        
+   </div>
+  </div>
+
+</header>
+
+
+
+    
+    <main class="main container">
+
+        <aside class="sidebar" id="sidebar">
+        <div class="sidebar__header">
+                 <a class="header__logo" href="https://brix365.com/en/help">
+                    <img src="./logo-light-en.svg">
+                 </a>
+                    <span class="sidebar__close elma-365-close" id="close"></span>
+            </div>
+            <div class="sidebar__wrapper" id="side-menu">
+                
+            </div>
+        </aside>
+
+        <article class="article" id="article">
+            <div class="article-inner">           
+                <div class="content">
+                    <header class="article__header">
+                        
+                            <div class="topic__breadcrumbs">
+                                <p><a href="solutions-building.html">Build solutions in BRIX</a> / Portable services in modules</p>
+                            </div>
+                        
+                        <div class="topic__title"><h1 class="p_Heading1"><span class="f_Heading1">Portable services in modules</span></h1>
+</div>
+                    
+</header>
+                    <section class="article__content">
+                        <div class="scroll-top-inner">
+                            <a href="#h1-article" class="scroll-top"></a>
+                        </div>
+                        <!-- Placeholder for topic body. -->
+                        <p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-family: Inter;">When the Low-code platform cannot provide the functionality needed for efficient integration of processes into the existing information landscape, it is recommended to create <a href="custom_services.html" class="topiclink">custom microservices</a>. These services can be used in a variety of ways and for the most demanding business needs.</span></p>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;">When installing a service independently of the BRIX platform and supporting it separately, the end developer and administrator may face difficulties in installing and operating the solution.</p>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;">To simplify and speed up the development of your own microservices, you can create a portable service inside a custom module.</p>
+<p class="p_Normal">The connection method of the portable service is selected depending on the required functionality of its execution and on the BRIX edition used:</p>
+<ol style="list-style-type:decimal">
+<li value="1" class="p_Normal">The service can be a <a href="https://www.docker.com/" target="_blank" class="weblink">Docker container</a>. It is installed in a separate space in the Kubernetes environment. The method is available in On-Premises and SaaS Enterprise editions.</li><li value="2" class="p_Normal">The service runs on a third-party website with a public access address. In this case, you can only make requests to the service. This method is available for all versions, but it is used mainly in SaaS Standard.</li></ol>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><img alt="portable-microservices-1" width="756" height="341" style="margin:0;width:756px;height:341px;border:none" src="portable-microservices-1.png"/></p>
+<h2 class="p_Heading2"><span class="f_Heading2">Features of adding services to modules</span></h2>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-family: Inter;">Services and containers that can be installed in a module have a number of special properties and limitations:</span></p>
+<ol style="list-style-type:decimal">
+<li value="1" style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-family: Inter;">On-Premises and SaaS Enterprise editions support specifying a container URL. In this case, the Docker service image is not part of the module. This means that you have to store the image of your service in a public or private Docker Hub repository before adding it. Moreover, the service image is not included in the </span><span style="font-family: Inter; font-weight: bold;">.e365</span><span style="font-family: Inter;"> package when the module is exported, so it cannot be transferred into another company. For the moment, when a ready-to-use module with services is installed, the system needs to have access to the specified repository URL to download the Docker image.</span></li><li value="2" style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-family: Inter;">In order for a module with a portable service to be used in the SaaS Standard edition, an alternative service address should be specified. This means that you should ensure the work of the service on a third-party website with a public access address.</span></li><li value="3" style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-family: Inter;">If the On-Premises and SaaS Enterprise editions include both microservice connection options in the module settings, the image address is predominantly used to set up communication. Connection via an alternative address is used when the connection is disconnected.</span></li><li value="4" style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-family: Inter;">By default, the portable services have no resource limitations.</span></li><li value="5" style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-family: Inter;">In the BRIX On‑Premises and SaaS Enterprise editions, you can <a href="configmap.html" class="topiclink">set microservice deployment parameters using ConfigMap</a>. For example, limit resource consumption, configure autoscaling of the service, etc.</span></li><li value="6" style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-family: Inter;">Interaction with the portable service is only available from the module’s server scripts (widgets, processes, business process activities, API methods, event handlers) and only with HTTP requests. But the service itself can interact with any external service by any communication channels and protocols.</span></li></ol>
+<p style="text-indent: -24px; line-height: 1.20; margin: 7px 0 7px 24px;">Additional information about portable services can be found in the following articles:</p>
+<ul style="list-style-type:disc">
+<li style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="color: #0000ff;"><a href="portable-services.html" class="topiclink">Configure a portable service in a module</a></span>. Create a service in a custom module.</li><li style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="color: #0000ff;"><a href="enable-portable-services.html" class="topiclink">Enable portable services</a></span>. Enable portable services in BRIX Enterprise.</li><li style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="color: #0000ff;"><a href="development-key-points.html" class="topiclink">Guidelines for developing microservices for portable services</a></span>. Develop your own microservice.</li><li style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><a href="configmap.html" class="topiclink">Configure parameters of portable services using ConfigMap</a>. Configure additional microservice deployment parameters using ConfigMap.</li></ul>
+<h2 class="p_Heading2"><span class="f_Heading2">Use case of portable service configuration</span></h2>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;">Suppose you want to use one of your solutions to generate and display mathematical formulas. Users are proficient in the LaTeX markup language. In the solution, it is necessary to implement the generation of images from LaTeX formulas.</p>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-family: Inter;">To do this, let</span><span style="color: #202122; background-color: #ffffff;">’</span><span style="font-family: Inter;">s create a module and connect the portable service. To use this module in all BRIX versions, we will configure two ways to connect the service via: </span></p>
+<ul style="list-style-type:disc">
+<li style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 16px;"><span style="font-family: Inter;">Microservice image address in the On‑Premises and SaaS Enterprise editions.</span></li><li style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 16px;"><span style="font-family: Inter;">Alternative service address in the SaaS Standard edition.</span></li></ul>
+<h3 class="p_Heading3"><span class="f_Heading3">Configure the service image address in On-Premises and SaaS Enterprise</span></h3>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-family: Inter;">In the On‑Premises and SaaS Enterprise editions, you can download and install the service as a Docker container. To configure how the service loads when the module is enabled, add the image address.</span></p>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-family: Inter;">For example, let</span><span style="color: #202122; background-color: #ffffff;">’</span><span style="font-family: Inter;">s take a <a href="https://github.com/chialab/math-api" target="_blank" class="weblink">ready-made container with the service of image generation by formula</a>. You can build this container yourself from source code and place it in your private repository or use a ready-made one from the <a href="https://hub.docker.com/r/chialab/math-api" target="_blank" class="weblink">public Docker Hub repository</a>.</span></p>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-family: Inter;">To configure the service connection, follow these steps:</span></p>
+<ol style="list-style-type:upper-roman">
+<li value="1" style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 16px;"><span style="font-family: Inter;"><a href="create-extention.html" class="topiclink">Create a custom module</a> and click the </span><span style="font-family: Inter; font-weight: bold;">Services</span><span style="font-family: Inter;"> tab.</span></li><li value="2" style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 16px;"><span style="font-family: Inter;"><a href="portable-services.html#add-service" class="topiclink">Add a new service</a> and specify:</span></li></ol>
+<ul style="list-style-type:disc">
+<li style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 16px;"><span style="font-family: Inter;">Service name.</span></li><li style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 16px;"><span style="font-family: Inter;">Image address indicating the path to the repository. Depending on the location of the Docker image, you can specify <a href="portable-services.html#image-address-formats" class="topiclink">short or full address</a>.</span></li><li style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 16px;">Authentication data if <a href="portable-services.html#image-address" class="topiclink">login and token</a> are required to access the repository with the Docker image of the service.</li><li style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 16px;"><span style="font-family: Inter;">The port for communication with the microservice.</span></li></ul>
+<ol style="list-style-type:upper-roman" start="3">
+<li value="3" style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 16px;"><span style="font-family: Inter;">After saving the parameters, the </span><span style="font-family: Inter; font-weight: bold;">Edit Service</span><span style="font-family: Inter;"> window will open. Here you can <a href="portable-services.html#main-tab" class="topiclink">specify connection settings</a>, such as additional ports and the number of microservice instances. To do this, click the gear icon next to the </span><span style="font-family: Inter; font-weight: bold;">Docker Container</span><span style="font-family: Inter;"> option.</span><br />
+<img alt="portable-microservices-2" width="526" height="353" style="margin:0;width:526px;height:353px;border:none" src="portable-microservices-2.png"/></li><li value="4" style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 16px;">Save the settings.</li></ol>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;">Now with the module enabled, you can <a href="portable-microservices.html#use-service" class="topiclink">use the service</a> and access it in scripts.</p>
+<h3 class="p_Heading3"><span class="f_Heading3">Configure an alternative service address in SaaS Standard</span></h3>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;">This method of configuration assumes that the service is pre-installed on an external hosting with public access. When configuring the service, an alternative address is specified in the module to send requests to the third-party resource where the service is running.</p>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;">This method is available in all BRIX editions, but it is mostly used in SaaS Standard because in this version you cannot download the service using the image address.</p>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;">To configure the service connection via an alternative address, follow the steps below:</p>
+<ol style="list-style-type:upper-roman">
+<li value="1" style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 16px;"><a href="create-extention.html" class="topiclink">Create a custom module</a> and click the <span style="font-weight: bold;">Services</span> tab.</li><li value="2" style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 16px;">Add a service and fill in its name in the window that opens.</li><li value="3" style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 16px;">Then enter the address of the third-party website where the service is configured. It can be specified as a string or you can use the <a href="portable-services.html#alternative-address" class="topiclink">address template</a>.</li></ol>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;">In this example, the following template is used: <span style="font-weight: bold;">{$protocol}{$base_math_url}</span>. For this purpose, two parameters are created in the module settings:</p>
+<ul style="list-style-type:disc">
+<li style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 16px;"><span style="font-weight: bold;">Service address protocol</span> (<code><b>protocol</b></code>). This field specifies the data transfer protocol, for example, <span style="font-weight: bold;">https://</span>.</li><li style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 16px;"><span style="font-weight: bold;">Service address name</span> (<code><b>base_math_url</b></code>). This field specifies the path to the resource where the portable service is located, for example, <span style="font-weight: bold;">example.mathcalculation.com</span>.<br />
+<img alt="portable-microservices-5" width="588" height="293" style="margin:0;width:588px;height:293px;border:none" src="portable-microservices-5.png"/></li></ul>
+<ol style="list-style-type:upper-roman" start="4">
+<li value="4" style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 16px;">Save the settings.</li></ol>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;">Now with the module enabled, you can <a href="portable-microservices.html#use-service" class="topiclink">use the service</a> and access it in scripts.</p>
+<h3 class="p_Heading3"><a id="use-service" class="hmanchor"></a><span class="f_Heading3">Use the service in a widget</span></h3>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-family: Inter;">Now you can use the service you created in a server script of a widget to generate images. Images can be generated with the </span><code><b>GET /render</b></code><span style="font-family: Inter;"> HTTP method, as specified in the <a href="https://hub.docker.com/r/chialab/math-api#get-render" target="_blank" class="weblink">service’s description</a>.</span></p>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;">In the widget, the user specifies a formula in a field of the <span style="color: #0000ff;"><a href="360009707032.html" class="topiclink">String</a></span> type and the desired width of the image in a field of the <span style="color: #0000ff;"><a href="360009707032.html#number" class="topiclink">Number</a></span> type.</p>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-family: Inter;">Here is an example of a script you can write to use the service:</span></p>
+<p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample">async function renderImage(): Promise&lt;</span><span class="f_CodeExample" style="font-weight: bold;">void</span><span class="f_CodeExample">&gt; {</span><br />
+<span class="f_CodeExample"> </span><span class="f_CodeExample" style="color: #ffffff;"> &nbsp; </span><span class="f_CodeExample">let source = encodeURIComponent(Context.data.formula!);</span><br />
+<span class="f_CodeExample"> </span><span class="f_CodeExample" style="color: #ffffff;"> &nbsp; </span><span class="f_CodeExample">let width = encodeURIComponent((Context.data.image_width || 400).toString());</span><br />
+<span class="f_CodeExample"> </span><span class="f_CodeExample" style="color: #ffffff;"> &nbsp; </span><span class="f_CodeExample">let imgResp = await Namespace.services.math.fetch(`/render?input=latex&amp;</span><span class="f_CodeExample" style="font-weight: bold;">inline</span><span class="f_CodeExample">=1&amp;output=png&amp;source=${source}&amp;width=${width}`, {</span><br />
+<span class="f_CodeExample"> </span><span class="f_CodeExample" style="color: #ffffff;"> &nbsp; &nbsp; &nbsp; </span><span class="f_CodeExample">headers: {</span><br />
+<span class="f_CodeExample"> </span><span class="f_CodeExample" style="color: #ffffff;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="f_CodeExample">&quot;Accept&quot; : &quot;image/png&quot;</span><br />
+<span class="f_CodeExample"> </span><span class="f_CodeExample" style="color: #ffffff;"> &nbsp; &nbsp; &nbsp; </span><span class="f_CodeExample">}</span><br />
+<span class="f_CodeExample"> </span><span class="f_CodeExample" style="color: #ffffff;"> &nbsp; </span><span class="f_CodeExample">});</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample"> </span><span class="f_CodeExample" style="color: #ffffff;"> &nbsp; </span><span class="f_CodeExample">let buff = await imgResp.arrayBuffer();</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample"> </span><span class="f_CodeExample" style="color: #ffffff;"> &nbsp; </span><span class="f_CodeExample">Context.data.formula_image = await Context.fields.formula_image.create(`render-${Date.now()}.png`, buff);</span><br />
+<span class="f_CodeExample">}</span></p>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-family: Inter;">In this example,  </span><code><b>Namespace.services.math</b></code><span style="font-family: Inter;"> is used to access the service. This allows calling HTTP methods of the service in TS SDK server scripts. The relative address of the method is specified for the invocation, the rest is implemented by BRIX capabilities.</span></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-family: Inter;">In the script itself, a method of the service is called. In the response an image is given in the buffer. It should be saved as a file and specified in a variable of the <a href="360009707032.html#file_type" class="topiclink">Files</a> type.</span></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><img alt="portable-microservices-3" width="424" height="176" style="margin:0;width:424px;height:176px;border:none" src="portable-microservices-3.png"/></p>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-family: Inter;">The rendered image will look like this:</span></p>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><img alt="portable-microservices-4" width="386" height="126" style="margin:0;width:386px;height:126px;border:none" src="portable-microservices-4.png"/></p>
+
+                        <div class="bottom-nav">
+                            
+                                <a id="prev-link" class="topic__navi_prev" href="npm-package.html">
+                                    <span class="bottom-nav__arrow bottom-nav__arrow--prev"></span> <span
+                                        class="bottom-nav__link">npm-package.html</span>
+                                </a>
+                            
+                            
+                                <a id="next-link" class="topic__navi_next" href="development-key-points.html">
+                                    <span class="bottom-nav__link">development-key-points.html</span> <span
+                                        class="bottom-nav__arrow bottom-nav__arrow--next"></span>
+                                </a>
+                            
+                        </div>
+                        <!-- добавляет на страницу строку блок Была ли статья полезной?  -->
+                          <div class="feedback" id="feedback"><div class="feedback-help"><span><b>Was this helpful?</b></span><form action="" method="POST" class="feedback-form" id="feedback-form"><div class="feedback__popup feedback__popup-response" id="feedback__popup_thx" style="display: none;">Thanks for your feedback!</div><div class="feedback__popup" id="feedback__popup_why" style="display: none;"><div class="feedback__popup-header">Please specify why:</div><input type="radio" name="category" id="bad_recommendation" value="bad_recommendation"><label for="bad_recommendation">Recommendations did not help me</label><input type="radio" name="category" id="difficult_text" value="difficult_text"><label for="difficult_text">Article is hard to understand</label><input type="radio" name="category" id="no_answer" value="no_answer"><label for="no_answer">Didn`t answer my question</label><input type="radio" name="category" id="bad_header" value="bad_header"><label for="bad_header">Content does not match the topic</label><input type="radio" name="category" id="other_reason" value="other_reason"><label for="other_reason">Other</label></div><div class="feedback__popup" id="feedback__popup-other" style="display: none;"><div class="feedback__popup-header">How we can improve it?</div><textarea class="feedback__textarea" name="other" id=""></textarea><input type="submit" class="feedback__other-btn" value="Submit"></div><div class="feedback-form__btn-group"><input type="radio" name="useful" id="feedback__useful_yes" value="true"><label for="feedback__useful_yes"><img src="like.svg" class="small-img" alt="like"><spanclass="feedback-form__btn-group_yes-btn">Yes</spanclass="feedback-form__btn-group_yes-btn"></label><input type="radio" name="useful" id="feedback__useful_no" value="false"><label for="feedback__useful_no"><img src="dislike.svg" class="small-img" alt="dislike"><spanclass="feedback-form__btn-group_no-btn">No</spanclass="feedback-form__btn-group_no-btn"></label></div><select name="category"><option disabled="">Please specify why</option><option value="bad_recommendation" selected="">Recommendations did not help me</option><option value="difficult_text">Article is hard to understand</option><option value="no_answer">Didn`t answer my question</option><option value="bad_header">Content does not match the topic</option><option value="other_reason">Other</option></select><input type="submit"></form></div><div class="found_typo"><p style="margin: 0px; margin-top: 16px !important;"><span><b>Found a typo?</b></span> Select it and press <i>Ctrl+Enter</i> to send us feedback</p></div></div>
+                           
+                    </section>
+                </div>
+                <aside class="article__sidebar" style="display:none">
+                    <input type="checkbox" />
+                    <div class="article__arrow"></div>
+                    <div class="table-of-contents elma365-right" id="toc2Content">
+                        <h3 class="h3-toc">In this topic</h3>
+                        <nav id="toc2"></nav>
+                    </div>
+                </aside>
+            </div>
+        </article>
+    </main>               
+    <footer class="footer">
+        <div class="footer-container">
+  <div class="footer-mobile">
+    
+    <ul class="footer-mobile__list"><li><a href="https://brix365.com/en/" target="_blank">BRIX</a></li><li><a href="https://tssdk.brix365.com/en/latest/" target="_blank">SDK</a></li><li><a href="https://api.brix365.com/en/" target="_blank">API</a></li></ul><ul class="footer-mobile__list"><li><a href="https://brix365.com/en/help/platform/get-trial.html">Platform</a></li><li><a href="https://brix365.com/en/help/ecm/ecm-functions.html">ECM</a></li><li><a href="https://brix365.com/en/help/service/service-functions.html">Service</a></li><li><a href="https://brix365.com/en/help/projects/projects-functions.html">Projects</a></li></ul>
+    
+    
+  </div>
+  <div class="footer-wrap">
+    
+      <div><span class="mobile-question-popup">Send feedback</span><form method="POST" action class="question__popup question-xs" id="question__popup"><div class="question-wrap"><span class="close"></span><span class="title">Ask a question</span><label for="help_question" style="display: none;"></label><textarea name="help_question" id="help_question"></textarea><input type="submit" value="Send"></div></form><div class="hidden fade-in question-success-xs">Sent</div></div>
+    
+    <div class="footer-flex-b">
+      <span class="footer-copy">&copy; 2025 BRIX</span>
+      <ul class="footer-list">
+        
+        <li class="footer-item">
+            <a href="#" class="arrow-top" style="display: block;"></a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+ 
+    </footer>
+    <iframe name="hmnavigation" style="display:none!important"></iframe>
+    <script src="./jquery-ui.js"></script>
+    <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
+    <script src="./jquery.tocify.min.js"></script>
+    <script src="./TypoReporter.min.js"></script>
+    <script src="./google-search.js"></script>
+    <script src="./main.js"></script>
+</body>
+
+</html>

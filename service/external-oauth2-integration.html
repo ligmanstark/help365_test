@@ -1,0 +1,380 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Custom OAuth2 module for authentication via an external service</title>
+    <meta name="generator" content="Help+Manual" />
+    <meta name="keywords" content="" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="By default, users sign in to BRIX or external portals using their login and password, but you can set up registration and authentication via external services, such as social..." />
+    <meta name="picture" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Full documentation for BRIX365 platform. Low-code developer guide. User guide. Admin guide. Developer guide." />
+    <meta property="og:url" content="https://brix365.com/en/help" />
+    <meta property="og:image" content="" />                                                              
+    <link rel="icon" href="favicon.png" type="image/png" />
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./jquery-ui.min.css" />
+    <link rel="stylesheet" href="default.css" />
+    <link rel="stylesheet" href="./search-yandex.css" />
+    <link rel="stylesheet" href="./article.css" />
+    <link rel="stylesheet" href="./glossary.css" />
+    <link rel="stylesheet" href="./theme.css" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+
+<body>
+    
+    <script>!function(e,t,c,n,r,a,m){e.ym=e.ym||function(){(e.ym.a=e.ym.a||[]).push(arguments)},e.ym.l=1*new Date;for(var s=0;s<document.scripts.length;s++)if(document.scripts[s].src===n)return;a=t.createElement(c),m=t.getElementsByTagName(c)[0],a.async=1,a.src=n,m.parentNode.insertBefore(a,m)}(window,document,"script","https://mc.yandex.ru/metrika/tag.js"),ym(83179930,"init",{clickmap:!0,trackLinks:!0,accurateTrackBounce:!0,webvisor:!0})</script><noscript><div><img alt=""src=https://mc.yandex.ru/watch/83179930 style=position:absolute;left:-9999px></div></noscript> 
+    
+    ﻿<header class="header elma-365">
+  <div class="container">
+    <a class="header__logo" href="https://brix365.com/en/help">
+      <img src="./logo-en.svg" alt="header logo">
+    </a>
+ <!-- <div class="hero__search-form" id="search-panel">
+   <form class="search-form" onsubmit="ym(83180416,'reachGoal','poisk')">
+     <label class="search-form__label">
+       <span id="reset-search" class="search__icon"></span>
+       <input class="search-form__input" type="text">
+     </label>
+     <input class="search-form__submit" type="submit" value="Submit">
+   </form>
+  </div>       -->
+  
+     <div class="hero__search-form" id="search-panel"> <form class="search-form"> <label class="search-form__label"> <span id="reset-search" class="search__icon"></span> <input class="search-form__input" type="text"> </label> <input class="search-form__submit" type="submit" value="Submit"> </form> </div> 
+  <div class="hero__search">
+      <a href="#" id="search-icon" class="hero__search-icon">
+        <img src="search-icon-white.svg" alt="search string">
+      </a>
+      <a href="#" id="side-menu-icon" class="hero__side-icon">
+        <img src="side_menu.svg" alt="side menu">
+      </a>
+    </div>  
+  <div class="header__navi">
+        
+        <ul class="header__list"><li><span class="solution-select"><span class="solution-select__selected"></span><svg width="7" height="4" viewBox="0 0 7 4" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L3.5 3.5L6 1" stroke="white" stroke-linecap="round" stroke-linejoin="round"/></svg><ul class="solution-select__list"><li><a class="project-link" href="https://brix365.com/en/help/platform/get-trial.html">Platform</a></li><li><a class="project-link" href="https://brix365.com/en/help/ecm/ecm-functions.html">ECM</a></li><li><a class="project-link" href="https://brix365.com/en/help/crm/crm_overview.html">CRM</a></li><li><a class="project-link" href="https://brix365.com/en/help/service/service-functions.html">Service</a></li><li><a class="project-link" href="https://brix365.com/en/help/projects/projects-functions.html">Projects</a></li><li><a class="project-link" href="https://brix365.com/en/help/business_solutions/-elma365-store.html">Business Solutions</a></li></ul></span></li><li><a href="https://api.brix365.com/en/" target="_blank">API</a></li><li><a href="https://tssdk.brix365.com/" target="_blank">SDK</a></li></ul>
+        
+        
+   </div>
+  </div>
+
+</header>
+
+
+
+    
+    <main class="main container">
+
+        <aside class="sidebar" id="sidebar">
+        <div class="sidebar__header">
+                 <a class="header__logo" href="https://brix365.com/en/help">
+                    <img src="./logo-light-en.svg">
+                 </a>
+                    <span class="sidebar__close elma-365-close" id="close"></span>
+            </div>
+            <div class="sidebar__wrapper" id="side-menu">
+                
+            </div>
+        </aside>
+
+        <article class="article" id="article">
+            <div class="article-inner">           
+                <div class="content">
+                    <header class="article__header">
+                        
+                            <div class="topic__breadcrumbs">
+                                <p><a href="360024498352.html">Modules</a> &gt; Examples of BRIX integration modules / Custom OAuth2 module for authentication via an external service</p>
+                            </div>
+                        
+                        <div class="topic__title"><h1 class="p_Heading1"><span class="f_Heading1">Custom OAuth2 module for authentication via an external service</span></h1>
+</div>
+                    
+</header>
+                    <section class="article__content">
+                        <div class="scroll-top-inner">
+                            <a href="#h1-article" class="scroll-top"></a>
+                        </div>
+                        <!-- Placeholder for topic body. -->
+                        <p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-family: Inter;">By default, users sign in to BRIX or <a href="service-portal.html" class="topiclink">external portals</a> using their login and password, but you can set up registration and authentication via external services, such as social networks or a Google account. To do that, you need to create and configure an OAuth2 <a href="extentions.html" class="topiclink">custom module</a>. When the module is enabled, a new sign-in method will become available to users in BRIX. You can also connect the module to each portal in the company. In addition, you can configure the <a href="external-oauth2-integration.html#inbox-auth-module" class="topiclink">authentication module when connecting email</a>.</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;внимание</span></p>
+<p style="line-height: 1.20; margin: 7px 0 7px 0;"><span style="font-family: Inter;">Only users included in the <a href="360006871932.html#administrators" class="topiclink">Administrators</a> group can create and configure modules.</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;внимание</span></p>
+<h2 class="p_Heading2"><a id="create-module" class="hmanchor"></a><span class="f_Heading2">Create and configure the module</span></h2>
+<p style="line-height: 1.38; margin: 0 0 8px 0;"><span style="font-family: Inter;">To create a new module, go to </span><span style="font-family: Inter; font-weight: bold;">Administration &gt; Modules</span><span style="font-family: Inter;"> and click </span><span style="font-family: Inter; font-weight: bold;">+Module</span><span style="font-family: Inter;">. In the opened window, select </span><span style="font-family: Inter; font-weight: bold;">Create</span><span style="font-family: Inter;">. Enter information about the module and click the </span><span style="font-family: Inter; font-weight: bold;">Create</span><span style="font-family: Inter;"> button. Read more in the <a href="create-extention.html" class="topiclink">Create a custom module</a> article.</span></p>
+<h3 class="p_Heading3"><a id="add-mandatory-parameters" class="hmanchor"></a><span class="f_Heading3">Add necessary settings</span></h3>
+<p style="line-height: 1.20; margin: 0 0 11px 0;"><span style="font-family: Inter; background-color: #ffffff;">Add the necessary settings to the module. These are global parameters that will be used in module scripts.</span></p>
+<p style="line-height: 1.20; margin: 0 0 11px 0;"><span style="font-family: Inter; background-color: #ffffff;">Go to the&nbsp;</span><span style="font-family: Inter; font-weight: bold; background-color: #ffffff;">Settings</span><span style="font-family: Inter; background-color: #ffffff;">&nbsp;tab, click&nbsp;</span><span style="font-family: Inter; font-weight: bold; background-color: #ffffff;">+Add</span><span style="font-family: Inter; background-color: #ffffff;">, and create the required number of properties to store the settings values.</span></p>
+<p style="text-align: justify; line-height: 1.20; margin: 0 0 11px 0;">The displayed property names are arbitrary. However, the property names must match the names given below in brackets, as they are used to identify the module type.</p>
+<p style="text-align: justify; line-height: 1.20; margin: 0 0 11px 0;">For the module to work correctly, add the following properties of the <span style="color: #0000ff;"><a href="360009707032.html#string" class="topiclink">String</a></span> type:</p>
+<ul style="list-style-type:disc">
+<li style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-family: Inter; font-weight: bold;">Client ID </span><span style="font-family: Inter;">(</span><code><b>client_id</b></code><span style="font-family: Inter;">). ID of the application that will request data on the external service. You will get it when you <a href="external-oauth2-integration.html#external-service-registration" class="topiclink">register your application</a> on the external service</span><span style="font-family: Inter; color: #303030;">. </span></li><li style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-family: Inter; font-weight: bold;">Client secret</span><span style="font-family: Inter;"> (</span><code><b>client_secret</b></code><span style="font-family: Inter; background-color: #ffffff;">). Application secret. You will get it when you register your application in the external service. It is used along with the&nbsp;</span><code><b>client_id</b></code><span style="font-family: Inter; font-weight: bold;"> </span><span style="font-family: Inter;">to get an access token for the external service’s API.</span></li><li style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-family: Inter; font-weight: bold;">Authentication URL</span><span style="font-family: Inter;"> (</span><code><b>auth_url</b></code><span style="font-family: Inter;">). URL of the authentication page of the external service. The user will be redirected to this page from the application.</span></li><li style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-family: Inter; font-weight: bold;">Token URL</span><span style="font-family: Inter; background-color: #ffffff;"> (</span><code><b>token_url</b></code><span style="font-family: Inter; background-color: #ffffff;">). URL in the service. The request for an API access key (access token) will be sent to this address. The request will contain&nbsp;</span><code><b>client_id</b></code><span style="font-family: Inter; font-weight: bold;"> </span><span style="font-family: Inter;">and </span><code><b>client_secret</b></code><span style="font-family: Inter; background-color: #ffffff;">.</span></li><li style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-family: Inter; font-weight: bold;">Scopes </span><span style="font-family: Inter; background-color: #ffffff;">(</span><code><b>scopes</b></code><span style="font-family: Inter; background-color: #ffffff;">)</span><span style="font-family: Inter;">. Access that will be granted to the application in the external service by the access token. Scopes are separated with spaces. You must request access to some data that can uniquely identify a user, for example, the email.</span></li><li style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><a id="automatic-sign-up" class="hmanchor"></a><span style="font-family: Inter; font-weight: bold;">Automatic sign-up </span><span style="font-family: Inter;">(</span><code><b>auto_signup</b></code><span style="font-family: Inter;">). A <a href="360009707032.html#yes-no-switch" class="topiclink">Yes/No switch</a> type property. If this parameter is set to </span><span style="font-family: Inter; font-weight: bold;">Yes</span><span style="font-family: Inter;">, internal or external users who don’t exist in the system will be automatically added when they sign in using the external service. In this case, the user page will contain only their email.</span></li></ul>
+<p style="line-height: 1.20; margin: 0 0 11px 0;"><span style="font-family: Inter; background-color: #ffffff;">You can create other properties you need and set any names you want for them.</span></p>
+<p style="line-height: 1.20; margin: 0 0 11px 0;"><span style="font-family: Inter; background-color: #ffffff;">When you add all the properties, go to the&nbsp;</span><span style="font-family: Inter; font-weight: bold; background-color: #ffffff;">Main</span><span style="font-family: Inter; background-color: #ffffff;">&nbsp;tab and click&nbsp;</span><span style="font-family: Inter; font-weight: bold; background-color: #ffffff;">Save</span><span style="font-family: Inter; background-color: #ffffff;">.</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Configure the module’s connection page</span></h3>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-family: Inter;">By default, all the settings you create for a module are added to its connection page. The user sees them when clicking on the module’s name in the </span><span style="font-family: Inter; font-weight: bold;">Administration</span><span style="font-family: Inter;"> workspace.</span></p>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-family: Inter;">It is recommended that you make a connection page that includes only parameters that the user enters manually when configuring the module. To find out which parameters have to be set manually and which need to have default values, read the developer’s documentation of the external authentication service.</span></p>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-family: Inter;">Let’s see how to set up a connection page for our </span><span style="font-family: Inter; font-weight: bold;">Google OAuth2</span><span style="font-family: Inter;"> module. The list of its parameters can be found in the previous section of this article. By default, all of them are displayed on the module</span><span style="color: #202122; background-color: #ffffff;">’s</span><span style="font-family: Inter;"> page. </span></p>
+<p style="line-height: 1.20; background: #ffffff; margin: 0 0 7px 0;"><span style="font-family: Inter;">To configure the connection page so that it contains only the parameters set manually by the user, do the following:</span></p>
+<ol style="list-style-type:upper-roman">
+<li value="1" style="line-height: 1.20; background: #ffffff; margin-top: 0; margin-right: 0; margin-bottom: 7px;"><span style="font-family: Inter;">On the </span><span style="font-family: Inter; font-weight: bold;">Settings</span><span style="font-family: Inter;"> tab, click </span><span style="font-family: Inter; font-weight: bold;">Edit Form</span><span style="font-family: Inter;">. The interface designer will open. Here you need to edit the <a href="extention-settings.html" class="topiclink">module settings</a> page.</span></li></ol>
+<p style="line-height: 1.20; background: #ffffff; margin: 0 0 7px 34px;"><img alt="external-oauth2-integration-1" width="838" height="419" style="margin:0;width:838px;height:419px;border:none" src="external-oauth2-integration-1.png"/></p>
+<ol style="list-style-type:upper-roman" start="2">
+<li value="2" style="line-height: 1.20; background: #ffffff; margin-top: 0; margin-right: 0; margin-bottom: 7px;"><span style="font-family: Inter;">Delete the standard item form: select the widget, click the recycle bin icon, and confirm deletion. </span></li><li value="3" style="line-height: 1.20; background: #ffffff; margin-top: 0; margin-right: 0; margin-bottom: 7px;"><span style="font-family: Inter;">The user will have to enter the </span><span style="font-family: Inter; font-weight: bold;">Client ID</span><span style="font-family: Inter;"> (</span><code><b>client_id</b></code><span style="font-family: Inter;">) and the </span><span style="font-family: Inter; font-weight: bold;">Client secret</span><span style="font-family: Inter; background-color: #ffffff;">&nbsp;(</span><code><b>client_secret</b></code><span style="font-family: Inter; background-color: #ffffff;">)&nbsp;</span><span style="font-family: Inter;">manually. Add them to the form</span><span style="font-family: Inter; background-color: #ffffff;">. To add the fields to the form, on the right-side panel of the designer, switch to the&nbsp;</span><span style="font-family: Inter; font-weight: bold; background-color: #ffffff;">Properties</span><span style="font-family: Inter; background-color: #ffffff;">&nbsp;tab and drag them to the canvas.</span></li><li value="4" style="line-height: 1.20; background: #ffffff; margin-top: 0; margin-right: 0; margin-bottom: 7px;"><span style="font-family: Inter; background-color: #ffffff;">Mark the added fields as required. To do this, select the required property on the modeling canvas and click the gear icon. In the settings window, specify the required option and click&nbsp;</span><span style="font-family: Inter; font-weight: bold; background-color: #ffffff;">Save</span><span style="font-family: Inter; background-color: #ffffff;">.</span><br />
+<img alt="external-oauth2-integration-2" width="790" height="354" style="margin:0;width:790px;height:354px;border:none" src="external-oauth2-integration-2.png"/></li><li value="5" style="line-height: 1.20; background: #ffffff; margin-top: 0; margin-right: 0; margin-bottom: 7px;"><span style="font-family: Inter; background-color: #ffffff;">In the top panel of the interface designer, click&nbsp;</span><span style="font-family: Inter; font-weight: bold; background-color: #ffffff;">Publish</span><span style="font-family: Inter; background-color: #ffffff;">.</span></li></ol>
+<p style="line-height: 1.20; background: #ffffff; margin: 0 0 7px 34px;"><span style="font-family: Inter; background-color: #ffffff;">Now, on the module connection page, the user will only see the parameters that they need to enter manually.</span></p>
+<p style="line-height: 1.20; background: #ffffff; margin: 0 0 7px 34px;"><img alt="external-oauth2-integration-3" width="665" height="336" style="margin:0;width:665px;height:336px;border:none" src="external-oauth2-integration-3.png"/></p>
+<ol style="list-style-type:upper-roman" start="2">
+<li value="6" style="line-height: 1.20; background: #ffffff; margin-top: 0; margin-right: 0; margin-bottom: 7px;"><span style="font-family: Inter; background-color: #ffffff;">Set the default values for the rest of the parameters. To add a value, go to the&nbsp;</span><span style="font-family: Inter; font-weight: bold; background-color: #ffffff;">Settings</span><span style="font-family: Inter; background-color: #ffffff;">&nbsp;tab and click a property’s name. In the window that opens, set the desired value for it in the</span><span style="font-family: Inter; font-weight: bold; background-color: #ffffff;">&nbsp;Default</span><span style="font-family: Inter; background-color: #ffffff;">&nbsp;field.</span></li></ol>
+<p style="line-height: 1.28; margin: 0 0 11px 34px;"><img alt="external-oauth2-integration-4" width="629" height="564" style="margin:0;width:629px;height:564px;border:none" src="external-oauth2-integration-4.png"/></p>
+<p style="text-align: justify; line-height: 1.20; margin: 0 0 11px 34px;">For example, in the Google authentication module, set the following values:</p>
+<ul style="list-style-type:disc">
+<li style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><code><b>auth_url</b></code><span style="font-size: 13px;">:</span> <span style="font-weight: bold;">https://accounts.google.com/o/oauth2/v2/auth</span>.</li><li style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><code><b>token_url</b></code><span style="font-weight: bold;">: https://www.googleapis.com/oauth2/v4/token</span>.</li><li style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><code><b>scopes</b></code><span style="font-size: 13px;"> </span>for Google authorization: <span style="font-weight: bold;">https://www.googleapis.com/auth/userinfo.email</span>.</li><li style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><code><b>scopes</b></code><span style="font-size: 13px;"> </span>for Gmail <a href="external-oauth2-integration.html#inbox-auth-module" class="topiclink">email service</a> authorization: <span style="font-weight: bold;">https://mail.google.com/ https://www.googleapis.com/auth/gmail.send</span>.</li></ul>
+<ol style="list-style-type:upper-roman" start="2">
+<li value="7" style="line-height: 1.20; background: #ffffff; margin-top: 0; margin-right: 0; margin-bottom: 7px;"><span style="font-family: Inter; background-color: #ffffff;">Go to the&nbsp;</span><span style="font-family: Inter; font-weight: bold; background-color: #ffffff;">Main</span><span style="font-family: Inter; background-color: #ffffff;">&nbsp;tab and click&nbsp;</span><span style="font-family: Inter; font-weight: bold; background-color: #ffffff;">Save</span><span style="font-family: Inter; background-color: #ffffff;">.</span></li></ol>
+<h3 class="p_Heading3"><span class="f_Heading3">Add a script</span></h3>
+<p style="line-height: 1.28; margin: 0 0 8px 0;"><span style="font-family: Inter;">Now you need to add a script to the module. This script reads the values of module settings and forms an authorization request. The request is sent to the external service that returns the user’s ID. The ID is compared with the one in the BRIX database. If they match, the user is signed in.</span></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-family: Inter;">In the script, the request is sent and the response is received using the </span><code><b>oauth2_profile()</b></code><span style="font-family: Inter; font-weight: bold;"> </span><span style="font-family: Inter;">method. Please note that you cannot change the method name, as the system uses it to recognize the module type.</span></p>
+<p style="line-height: 1.38;"><span style="font-family: Inter;">To add a script:</span></p>
+<p style="line-height: 1.38; margin: 0 0 0 48px;"><span style="font-size: 13px; color: #000000;">&nbsp;</span></p>
+<ol style="list-style-type:upper-roman">
+<li value="1" style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-family: Inter;">Open module settings, go to the <a href="extention-api.html" class="topiclink">API Methods</a> tab and click </span><span style="font-family: Inter; font-weight: bold;">Edit</span><span style="font-family: Inter;">. The methods editor will open.</span></li><li value="2" style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-family: Inter;">Go to the </span><span style="font-family: Inter; font-weight: bold;">Scripts</span><span style="font-family: Inter;"> tab and write a script based on the following template:</span></li></ol>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">interface AccessTokenData { // data&nbsp;structure&nbsp;to&nbsp;store&nbsp;the&nbsp;access&nbsp;token&nbsp;of&nbsp;the&nbsp;external&nbsp;service&nbsp;</span><br />
+<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;access_token: string;</span><br />
+<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;refresh_token: string;</span><br />
+<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;token_type: string;</span><br />
+<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;expires_in: number;</span><br />
+<span class="f_CodeExample">}</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample">interface OAuth2Profile { &nbsp;// data&nbsp;structure&nbsp;to&nbsp;store&nbsp;the&nbsp;user’s&nbsp;ID</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;user_id: string;</span><br />
+<span class="f_CodeExample">}</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample">interface OAuth2ResponseFail { // data&nbsp;structure&nbsp;to&nbsp;store&nbsp;the&nbsp;error&nbsp;message</span><br />
+<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;error: string;</span><br />
+<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;error_description: string; </span><br />
+<span class="f_CodeExample">}</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample">async function oauth2_profile (tokenData: AccessTokenData): Promise&lt;OAuth2Profile | OAuth2ResponseFail&gt; {</span><br />
+<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-style: italic;">code&nbsp;of&nbsp;the&nbsp;method&nbsp;that&nbsp;returns&nbsp;the&nbsp;user’s&nbsp;ID&nbsp;or&nbsp;the&nbsp;error&nbsp;message&nbsp;text&nbsp;from&nbsp;the&nbsp;OAuth2&nbsp;provider</span><br />
+<span class="f_CodeExample">}</span></p>
+<p style="line-height: 1.20; margin: 0 0 11px 48px;"><span style="font-size: 13px; color: #000000;">&nbsp;</span></p>
+<p style="line-height: 1.20; margin: 0 0 11px 0;"><span style="font-size: 13px; font-family: Inter; font-weight: bold; color: #394149;"><a class="dropdown-toggle" style="font-style: normal; font-weight: bold; color: #394149; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186A1')">Example script for the Google authentication module</a></span></p>
+<div id="TOGGLE0186A1" class="dropdown-toggle-body" style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0 0 11px 0;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">interface&nbsp;AccessTokenData&nbsp;{</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;access_token:&nbsp;string;</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;refresh_token:&nbsp;string;</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;token_type:&nbsp;string;</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;expires_in:&nbsp;number;</span><br />
+<span class="f_CodeExample">}</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample">interface&nbsp;OAuth2Profile&nbsp;{</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;user_id:&nbsp;string;</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;email:&nbsp;string;</span><br />
+<span class="f_CodeExample">}</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample">interface&nbsp;OAuth2ResponseFail&nbsp;{</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;error:&nbsp;string;</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;error_description:&nbsp;string;</span><br />
+<span class="f_CodeExample">}</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample">//&nbsp;logout&nbsp;interface</span><br />
+<span class="f_CodeExample">interface&nbsp;OAuth2LogoutResponse&nbsp;{</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;redirect_url:&nbsp;string;</span><br />
+<span class="f_CodeExample">}</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample">async&nbsp;function&nbsp;oauth2_profile&nbsp;(tokenData:&nbsp;AccessTokenData):&nbsp;Promise&lt;OAuth2Profile&nbsp;|&nbsp;OAuth2ResponseFail&gt;&nbsp;{</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;const&nbsp;resp&nbsp;=&nbsp;await&nbsp;fetch(`https://www.googleapis.com/oauth2/v1/userinfo?alt=json&amp;access_token=${tokenData.access_token.toString()}`)</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(resp.ok)&nbsp;{</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;const&nbsp;result&nbsp;=&nbsp;await&nbsp;resp.json()</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;&lt;OAuth2Profile&gt;{</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;user_id:&nbsp;result.id.toString(),</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;email:&nbsp;result.email.toString()</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;}</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;else&nbsp;{</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;&lt;OAuth2ResponseFail&gt;{</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;error:&nbsp;&quot;user_not_found&quot;,</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;error_description:&nbsp;await&nbsp;resp.text()</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;}</span><br />
+<span class="f_CodeExample">}</span><br />
+<span class="f_CodeExample">//&nbsp;logout</span><br />
+<span class="f_CodeExample">async&nbsp;function&nbsp;oauth2_logout():&nbsp;Promise&lt;OAuth2LogoutResponse&nbsp;|&nbsp;OAuth2ResponseFail&gt;&nbsp;{</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;&lt;OAuth2LogoutResponse&gt;&nbsp;{</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;redirect_url:&nbsp;&quot;https://www.google.com/accounts/Logout&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;};</span><br />
+<span class="f_CodeExample">}</span></p>
+</td>
+</tr>
+</table>
+</div>
+<ol style="list-style-type:upper-roman" start="3">
+<li value="3" style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-family: Inter;">Save and publish the script.</span></li></ol>
+<h3 class="p_Heading3"><a id="external-service-registration" class="hmanchor"></a><span class="f_Heading3">Configure the application in the external service</span></h3>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-family: Inter;">For the module authentication to run, configure the web-application on the provider side and connect it to the module.</span></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-family: Inter;">To configure the integration in Google, do the following:</span></p>
+<ol style="list-style-type:upper-roman">
+<li value="1" style="line-height: 1.38; margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-family: Inter;">Go to </span><span style="font-family: Inter; color: #0563c1;"><a href="https://console.cloud.google.com/apis/dashboard" target="_blank" class="weblink">Google Cloud Platform</a></span><span style="font-family: Inter; color: #394149;">.</span></li><li value="2" style="line-height: 1.38; margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-family: Inter;">Create a project or select an existing one. Learn about creating projects in the <a href="https://developers.google.com/workspace/guides/create-project" target="_blank" class="weblink">official Google documentation</a>.</span></li><li value="3" style="line-height: 1.38; margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-family: Inter;">Configure the OAuth consent screen if you haven’t done so before. Learn more in the <a href="https://developers.google.com/workspace/guides/configure-oauth-consent" target="_blank" class="weblink">official Google documentation</a>.</span></li><li value="4" style="line-height: 1.38; margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-family: Inter;">In the left-hand menu, select </span><span style="font-family: Inter; font-weight: bold;">Credentials</span><span style="font-family: Inter;">. At the top of the page, click </span><span style="font-family: Inter; font-weight: bold;">+Create Credentials</span><span style="font-family: Inter;"> and select </span><span style="font-family: Inter; font-weight: bold;">OAuth client ID</span><span style="font-family: Inter;"> in the drop-down.</span></li><li value="5" style="line-height: 1.38; margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-family: Inter;">In the </span><span style="font-family: Inter; font-weight: bold;">Application type</span><span style="font-family: Inter;"> field, select </span><span style="font-family: Inter; font-weight: bold;">Web application </span><span style="font-family: Inter;">and specify the application name.</span></li><li value="6" style="line-height: 1.38; margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-family: Inter;">In the </span><span style="font-family: Inter; font-weight: bold;">Authorized redirect URIs</span><span style="font-family: Inter;"> section, click </span><span style="font-family: Inter; font-weight: bold;">+Add URI</span><span style="font-family: Inter;"> and enter the redirect URL where the user will be redirected in case of successful authentication. Use the following format: </span><span style="font-family: Inter; font-weight: bold;">&lt;host&gt;/_oauth2/post-message?provider=XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX</span><span style="font-family: Inter;">. As </span><span style="font-family: Inter; font-weight: bold;">&lt;host&gt;</span><span style="font-family: Inter;">, paste your company’s ID. As the provider’s ID, use the module’s ID.</span></li></ol>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;примечание</span></p>
+<p class="p_Normal"><span style="font-weight: bold;">Note</span></p>
+<p class="p_Normal">To allow a user to sign in to BRIX using both the company’s address and an additional one (alias), specify two corresponding URLs for the redirect in the settings on the side of the external service.</p>
+<p class="p_Normal">If you configure integration with an <a href="external-oauth2-integration.html#inbox-auth-module" class="topiclink">email service</a>, enter the redirect address in the following format: <span style="font-weight: bold;">&lt;host&gt;/_oauth2/post-message</span>.</p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;примечание</span></p>
+<ol style="list-style-type:upper-roman">
+<li value="7" style="line-height: 1.38; margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-family: Inter;">Click </span><span style="font-family: Inter; font-weight: bold;">Create</span><span style="font-family: Inter;">.</span></li><li value="8" style="line-height: 1.38; margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-family: Inter;">In the window that opens, copy the</span><span style="font-family: Inter; font-weight: bold;"> Client ID </span><span style="font-family: Inter;">and the</span><span style="font-family: Inter; font-weight: bold;"> Client secret</span><span style="font-family: Inter;">.</span></li><li value="9" style="line-height: 1.38; margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-family: Inter;">Go to BRIX, open the module page, and enable it.</span></li><li value="10" style="line-height: 1.38; margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-family: Inter;">Specify </span><span style="font-family: Inter; font-weight: bold;">Client ID</span><span style="font-family: Inter;"> and </span><span style="font-family: Inter; font-weight: bold;">Client secret</span><span style="font-family: Inter;">.</span></li></ol>
+<h2 class="p_Heading2" style="margin: 0 0 0 34px;"><img alt="external-oauth2-integration-6" width="701" height="302" style="margin:0;width:701px;height:302px;border:none" src="external-oauth2-integration-6.png"/></h2>
+<ol style="list-style-type:upper-roman">
+<li value="11" style="line-height: 1.38; margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-family: Inter;">Save the settings.</span></li></ol>
+<p>The module is ready for use. Now users will be able to log in to BRIX using the account of the connected service if OAuth2 authentication is enabled in the <a href="security_settings.html" class="topiclink">security settings</a>.</p>
+<p>You can also configure login via an <a href="portal-login-page.html" class="topiclink">external service</a> for an external portal. Module operation when clients are authenticated on the portal is described in <a href="external-oauth2-integration.html#example" class="topiclink">Example of using the module</a>.</p>
+<h2 class="p_Heading2"><span class="f_Heading2">Configure logout in the OAuth2 module</span></h2>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-family: Inter;">For additional security, you can set up the </span><span style="font-family: Inter; font-weight: bold;">logout</span><span style="font-family: Inter;"> mechanism in your custom OAuth2 module. With this mechanism, the user will be logged out of the linked external provider’s account when they sign out of BRIX.</span></p>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-family: Inter;">To configure </span><span style="font-family: Inter; font-weight: bold;">logout</span><span style="font-family: Inter;"> for the module, do the following:</span></p>
+<ol style="list-style-type:upper-roman">
+<li value="1" style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-family: Inter;">On the module’s settings page, open the</span><span style="font-family: Inter; color: #394149;"> <a href="extention-api.html" class="topiclink">API Methods</a> </span><span style="font-family: Inter;">tab and click </span><span style="font-family: Inter; font-weight: bold;">Edit</span><span style="font-family: Inter;">. The method editor will open.</span></li><li value="2" style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-family: Inter;">Go to the </span><span style="font-family: Inter; font-weight: bold;">Scripts</span><span style="font-family: Inter;"> tab and describe the </span><span style="font-family: Inter; font-weight: bold;">logout</span><span style="font-family: Inter;"> interface:</span></li></ol>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample" style="font-weight: bold;">interface</span><span class="f_CodeExample"> OAuth2LogoutResponse {</span><br />
+<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;redirect_url: string;</span><br />
+<span class="f_CodeExample">}</span></p>
+<ol style="list-style-type:upper-roman" start="3">
+<li value="3" style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-family: Inter;">After that, add the </span><code><b>oauth2_logout</b></code> <span style="font-family: Inter;">method:</span></li></ol>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">async </span><span class="f_CodeExample" style="font-weight: bold;">function</span><span class="f_CodeExample"> oauth2_logout(): Promise&lt;OAuth2LogoutResponse | OAuth2ResponseFail&gt; {</span><br />
+<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">return</span><span class="f_CodeExample"> &lt;OAuth2LogoutResponse&gt; {</span><br />
+<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;redirect_url: &quot;https://my_idp.com/logout&quot; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;};</span><br />
+<span class="f_CodeExample">}</span></p>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-family: Inter;">As the</span><span style="font-family: Inter; color: #394149;"> </span><code><b>redirect_url</b></code><span style="font-family: Inter;">, use the external provider’s address. A logout request will be sent from BRIX to this address.</span></p>
+<ol style="list-style-type:upper-roman" start="4">
+<li value="4" style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-family: Inter;">Save and publish the script.</span></li></ol>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-family: Inter;">Now when a user clicks </span><span style="font-family: Inter; font-weight: bold;">Sign out</span><span style="font-family: Inter;"> in BRIX, they will be redirected to the logout page of the OAuth2 provider.</span></p>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-family: Inter;">You can also add a redirect in the OAuth2 provider’s settings so that the user is redirected back to the BRIX login page after signing out.</span></p>
+<h2 class="p_Heading2"><span class="f_Heading2">Link an OAuth2 account to a BRIX profile using scripts</span></h2>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-family: Inter;">You can use scripts to manage account linking, that is, how BRIX profiles are bound with accounts in the OAuth2 provider's system. The following methods are available:</span></p>
+<ul style="list-style-type:disc">
+<li style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><code><b>createWithAuthData</b></code>.<span style="font-size: 13px; font-family: 'Courier New',Courier,monospace; color: #394149;"> </span><span style="font-family: Inter;">The method allows you to create a new BRIX user, automatically linking their profile to an existing account in the OAuth2 provider. Users added with this method are automatically assigned the </span><span style="font-family: Inter; font-weight: bold;">Active</span><span style="font-family: Inter; color: #394149;"> <a href="360004833572.html" class="topiclink">status</a>.</span></li></ul>
+<p style="line-height: 1.20; margin: 0 0 0 34px;"><span style="font-family: Inter;">Please note that a user added in this way will only be able to sign in to BRIX using the OAuth2 provider’s login details. Other authentication methods will not be available.</span></p>
+<ul style="list-style-type:disc">
+<li style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><code><b>addOAuth2Data</b></code>.<span style="font-family: Inter;"> This method allows you to link an account in the OAuth2 provider’s system to an existing BRIX profile. After that, the user will be able to sign in to BRIX using their external provider’s login details. The method is identical to manually adding the external account in the user’s profile settings on the</span><span style="font-family: Inter; color: #394149;"> <a href="360016398552.html#authenticationtab" class="topiclink">Authentication</a> </span><span style="font-family: Inter;">tab.</span></li><li style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><code><b>removeOAuth2Data</b></code>.<span style="font-family: Inter; color: #394149;"> </span><span style="font-family: Inter;">This method unbinds an external account from a BRIX profile. It is identical to removing the linked account in the user’s profile settings.</span></li></ul>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-family: Inter;">Read more about these methods in BRIX TS SDK in the</span><span style="font-family: Inter; color: #394149;"> <a href="https://tssdk.brix365.com/en/latest/interfaces/_03_globals_.users.html#createwithauthdata" target="_blank" class="weblink">User object</a> </span><span style="font-family: Inter;">article.</span></p>
+<h2 class="p_Heading2"><a id="inbox-auth-module" class="hmanchor"></a><span class="f_Heading2">Configure the module for authentication in email services</span></h2>
+<p class="p_Normal">The OAuth2 module can be used when setting up integration with the mailbox in <a href="inbox.html" class="topiclink">live chats</a> and when connecting <a href="email-workspace.html" class="topiclink">personal email</a> to a user profile. In this case, it is not required to enter the email password in BRIX as authentication is performed on the side of the mail service, which provides convenience for the user and additional security of account data.</p>
+<p class="p_Normal">To make the module suitable for mailbox binding, add the required properties to it. To do this, go to the module’s settings, then on the <span style="font-weight: bold;">Settings</span> tab:</p>
+<ol style="list-style-type:upper-roman">
+<li value="1" style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-family: Inter;">Create properties of the <a href="https://api.brix365.com/en/public-api/guides/DataType/" target="_blank" class="weblink">String</a> type that are required for any OAuth2 module. Specify the property names given below in brackets as they are used to identify the module type:</span><ul style="list-style-type:disc">
+<li style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-size: 15px; font-family: Inter; font-weight: bold;">Client ID</span><span style="font-size: 15px; font-family: Inter;"> (</span><code><b>client_id</b></code><span style="font-size: 15px; font-family: Inter;">).</span></li><li style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-size: 15px; font-family: Inter; font-weight: bold;">Client secret</span><span style="font-size: 15px; font-family: Inter;"> (</span><code><b>client_secret</b></code><span style="font-size: 15px; font-family: Inter; background-color: #ffffff;">).</span></li><li style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-size: 15px; font-family: Inter; font-weight: bold;">Authentication URL</span><span style="font-size: 15px; font-family: Inter;"> (</span><code><b>auth_url</b></code><span style="font-size: 15px; font-family: Inter;">).</span></li><li style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-size: 15px; font-family: Inter; font-weight: bold;">Token URL</span><span style="font-size: 15px; font-family: Inter; background-color: #ffffff;"> (</span><code><b>token_url</b></code><span style="font-size: 15px; font-family: Inter; background-color: #ffffff;">).</span></li><li style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-size: 15px; font-family: Inter; font-weight: bold;">Scopes </span><span style="font-size: 15px; font-family: Inter; background-color: #ffffff;">(</span><code><b>scopes</b></code><span style="font-size: 15px; font-family: Inter; background-color: #ffffff;">)</span><span style="font-size: 15px; font-family: Inter;">.</span></li></ul></li></ol>
+<p style="line-height: 1.20; margin: 0 0 11px 34px;"><span style="font-family: Inter;">For a detailed description of the properties, see <a href="external-oauth2-integration.html#add-mandatory-parameters" class="topiclink">above</a>.</span></p>
+<ol style="list-style-type:upper-roman" start="2">
+<li value="2" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;">Add a property of the <span style="font-weight: bold;">String</span> type that is unique for email authentication modules, <span style="font-weight: bold;">Authentication type</span> (<code><b>auth_type</b></code>). It specifies the authentication method used: OAUTHBEARER or XOAuth2, possible values are <span style="font-weight: bold;">bearer</span> and <span style="font-weight: bold;">xoauth2</span>. If the field is left blank or an invalid value is entered, the OAUTHBEARER method is used by default. </li></ol>
+<p style="text-align: justify; line-height: 1.20; margin: 0 0 11px 34px;">You can set the default value in the property settings to avoid specifying the authentication type manually on the module connection page.</p>
+<p style="text-align: justify; line-height: 1.20; margin: 0 0 11px 0;">Adding scripts is not required for the module to work.</p>
+<p style="text-align: justify; line-height: 1.20; margin: 0 0 11px 0;">After the module is enabled, you can use it when connecting a mailbox in the user profile and in the live chat settings. Read more in<span style="color: #394149;"> </span><span style="color: #0000ff;"><a href="connect-email.html#oauth2" class="topiclink">Connect an email to an account</a></span><span style="color: #394149;"> </span>and<span style="color: #394149;"> </span><span style="color: #0000ff;"><a href="inbox.html#oauth2" class="topiclink">Connect an email account to a live chat</a></span><span style="color: #394149;">.</span></p>
+<h2 class="p_Heading2"><a id="example" class="hmanchor"></a><span class="f_Heading2">Example of using the module</span></h2>
+<p style="line-height: 1.20; margin: 0 0 11px 0;"><span style="font-family: Inter;">Let’s see how a user can register on the portal and sign in using the Google authentication module that we’ve created. Read more about creating such a module in the <a href="external-oauth2-integration.html#create-module" class="topiclink">Create and configure the module</a> paragraph.</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Preparation</span></h3>
+<p class="p_Normal">To allow a user to log in to an external portal using an external service account, you must specify the OAuth2 module in the <a href="portal-login-page.html#authorization" class="topiclink">portal authentication settings</a>:</p>
+<ol style="list-style-type:upper-roman">
+<li value="1" class="p_Normal">Go to the workspace where the portal is configured.</li><li value="2" class="p_Normal">Click on the portal in the left menu and on the page that opens, select the gear icon next to its name.</li><li value="3" class="p_Normal">In the settings window on the <span style="font-weight: bold;">Authentication</span> tab, allow OAuth2 authentication and add the created module to the list of providers.</li></ol>
+<p class="p_Normal" style="margin: 0 0 0 34px;"><img alt="oauth2-authorization-5" width="563" height="492" style="margin:0;width:563px;height:492px;border:none" src="oauth2-authorization-5.png"/></p>
+<p style="margin: 0 0 0 34px;">For security purposes, you can prohibit signing in to the portal with login and password. To do this, in the <span style="font-weight: bold;">Allow sign-in with login/password</span> field, set the switch to <span style="font-weight: bold;">No</span>. In this case, users will be able to log in to the portal only through an external service.</p>
+<ol style="list-style-type:upper-roman">
+<li value="4" class="p_Normal">Save the portal settings.</li></ol>
+<h3 class="p_Heading3"><span class="f_Heading3">How the module works</span></h3>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-family: Inter;">Let’s see how the module works. We’ll take signing in to the external portal as an example.</span></p>
+<ol style="list-style-type:upper-roman">
+<li value="1" style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 16px;"><span style="font-family: Inter;">The user follows the invite link to the portal and clicks </span><span style="font-family: Inter; font-weight: bold;">Use a different sign‑in method</span><span style="font-family: Inter;">.</span></li></ol>
+<p style="line-height: 1.20; margin: 0 0 11px 34px;"><img alt="external-oauth2-integration-7" width="491" height="235" style="margin:0;width:491px;height:235px;border:none" src="external-oauth2-integration-7.png"/></p>
+<ol style="list-style-type:upper-roman" start="2">
+<li value="2" style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-family: Inter;">In the window listing the available external services, the user clicks </span><span style="font-family: Inter; font-weight: bold;">Google OAuth2</span><span style="font-family: Inter;">.</span></li></ol>
+<p style="text-indent: -24px; line-height: 1.20; margin: 0 0 11px 36px;"><img alt="external-oauth2-integration-8" width="549" height="229" style="margin:0;width:549px;height:229px;border:none" src="external-oauth2-integration-8.png"/></p>
+<ol style="list-style-type:upper-roman" start="3">
+<li value="3" style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-family: Inter;">In the Google sign-in window, the user selects their Google account.</span></li></ol>
+<ol style="list-style-type:upper-roman" start="4">
+<li value="4" style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-family: Inter;">In the next window, the user needs to allow access to the account.</span></li></ol>
+<p style="line-height: 1.20; margin: 0 0 11px 34px;"><img alt="external-oauth2-integration-9" width="771" height="313" style="margin:0;width:771px;height:313px;border:none" src="external-oauth2-integration-9.png"/></p>
+<ol style="list-style-type:upper-roman" start="4">
+<li value="5" style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-family: Inter;">Then the portal invite page opens. The user enters their name and clicks </span><span style="font-family: Inter; font-weight: bold;">Save</span><span style="font-family: Inter;">.</span></li><li value="6" style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-family: Inter;">The registration is complete. Now the user only needs to sign in to their Google account to sign in to the portal.</span></li></ol>
+<p style="line-height: 1.20; margin: 0 0 11px 34px;"><img alt="external-oauth2-integration-10" width="395" height="237" style="margin:0;width:395px;height:237px;border:none" src="external-oauth2-integration-10.png"/></p>
+
+                        <div class="bottom-nav">
+                            
+                                <a id="prev-link" class="topic__navi_prev" href="360009906679.html">
+                                    <span class="bottom-nav__arrow bottom-nav__arrow--prev"></span> <span
+                                        class="bottom-nav__link">360009906679.html</span>
+                                </a>
+                            
+                            
+                                <a id="next-link" class="topic__navi_next" href="two-factor-integration.html">
+                                    <span class="bottom-nav__link">two-factor-integration.html</span> <span
+                                        class="bottom-nav__arrow bottom-nav__arrow--next"></span>
+                                </a>
+                            
+                        </div>
+                        <!-- добавляет на страницу строку блок Была ли статья полезной?  -->
+                          <div class="feedback" id="feedback"><div class="feedback-help"><span><b>Was this helpful?</b></span><form action="" method="POST" class="feedback-form" id="feedback-form"><div class="feedback__popup feedback__popup-response" id="feedback__popup_thx" style="display: none;">Thanks for your feedback!</div><div class="feedback__popup" id="feedback__popup_why" style="display: none;"><div class="feedback__popup-header">Please specify why:</div><input type="radio" name="category" id="bad_recommendation" value="bad_recommendation"><label for="bad_recommendation">Recommendations did not help me</label><input type="radio" name="category" id="difficult_text" value="difficult_text"><label for="difficult_text">Article is hard to understand</label><input type="radio" name="category" id="no_answer" value="no_answer"><label for="no_answer">Didn`t answer my question</label><input type="radio" name="category" id="bad_header" value="bad_header"><label for="bad_header">Content does not match the topic</label><input type="radio" name="category" id="other_reason" value="other_reason"><label for="other_reason">Other</label></div><div class="feedback__popup" id="feedback__popup-other" style="display: none;"><div class="feedback__popup-header">How we can improve it?</div><textarea class="feedback__textarea" name="other" id=""></textarea><input type="submit" class="feedback__other-btn" value="Submit"></div><div class="feedback-form__btn-group"><input type="radio" name="useful" id="feedback__useful_yes" value="true"><label for="feedback__useful_yes"><img src="like.svg" class="small-img" alt="like"><spanclass="feedback-form__btn-group_yes-btn">Yes</spanclass="feedback-form__btn-group_yes-btn"></label><input type="radio" name="useful" id="feedback__useful_no" value="false"><label for="feedback__useful_no"><img src="dislike.svg" class="small-img" alt="dislike"><spanclass="feedback-form__btn-group_no-btn">No</spanclass="feedback-form__btn-group_no-btn"></label></div><select name="category"><option disabled="">Please specify why</option><option value="bad_recommendation" selected="">Recommendations did not help me</option><option value="difficult_text">Article is hard to understand</option><option value="no_answer">Didn`t answer my question</option><option value="bad_header">Content does not match the topic</option><option value="other_reason">Other</option></select><input type="submit"></form></div><div class="found_typo"><p style="margin: 0px; margin-top: 16px !important;"><span><b>Found a typo?</b></span> Select it and press <i>Ctrl+Enter</i> to send us feedback</p></div></div>
+                           
+                    </section>
+                </div>
+                <aside class="article__sidebar" style="display:none">
+                    <input type="checkbox" />
+                    <div class="article__arrow"></div>
+                    <div class="table-of-contents elma365-right" id="toc2Content">
+                        <h3 class="h3-toc">In this topic</h3>
+                        <nav id="toc2"></nav>
+                    </div>
+                </aside>
+            </div>
+        </article>
+    </main>               
+    <footer class="footer">
+        <div class="footer-container">
+  <div class="footer-mobile">
+    
+    <ul class="footer-mobile__list"><li><a href="https://brix365.com/en/" target="_blank">BRIX</a></li><li><a href="https://tssdk.brix365.com/en/latest/" target="_blank">SDK</a></li><li><a href="https://api.brix365.com/en/" target="_blank">API</a></li></ul><ul class="footer-mobile__list"><li><a href="https://brix365.com/en/help/platform/get-trial.html">Platform</a></li><li><a href="https://brix365.com/en/help/ecm/ecm-functions.html">ECM</a></li><li><a href="https://brix365.com/en/help/service/service-functions.html">Service</a></li><li><a href="https://brix365.com/en/help/projects/projects-functions.html">Projects</a></li></ul>
+    
+    
+  </div>
+  <div class="footer-wrap">
+    
+      <div><span class="mobile-question-popup">Send feedback</span><form method="POST" action class="question__popup question-xs" id="question__popup"><div class="question-wrap"><span class="close"></span><span class="title">Ask a question</span><label for="help_question" style="display: none;"></label><textarea name="help_question" id="help_question"></textarea><input type="submit" value="Send"></div></form><div class="hidden fade-in question-success-xs">Sent</div></div>
+    
+    <div class="footer-flex-b">
+      <span class="footer-copy">&copy; 2025 BRIX</span>
+      <ul class="footer-list">
+        
+        <li class="footer-item">
+            <a href="#" class="arrow-top" style="display: block;"></a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+ 
+    </footer>
+    <iframe name="hmnavigation" style="display:none!important"></iframe>
+    <script src="./jquery-ui.js"></script>
+    <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
+    <script src="./jquery.tocify.min.js"></script>
+    <script src="./TypoReporter.min.js"></script>
+    <script src="./google-search.js"></script>
+    <script src="./main.js"></script>
+<script type="text/javascript">
+HMInitToggle('TOGGLE0186A1','hm.type','dropdown','hm.state','0');
+</script>
+</body>
+
+</html>

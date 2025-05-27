@@ -1,0 +1,230 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Download BRIX images</title>
+    <meta name="generator" content="Help+Manual" />
+    <meta name="keywords" content="" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BRIX Enterprise can be installed in a closed environment without direct access to an external container image repository. To achieve this, download BRIX images on a computer..." />
+    <meta name="picture" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Full documentation for BRIX365 platform. Low-code developer guide. User guide. Admin guide. Developer guide." />
+    <meta property="og:url" content="https://brix365.com/en/help" />
+    <meta property="og:image" content="" />                                                              
+    <link rel="icon" href="favicon.png" type="image/png" />
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./jquery-ui.min.css" />
+    <link rel="stylesheet" href="default.css" />
+    <link rel="stylesheet" href="./search-yandex.css" />
+    <link rel="stylesheet" href="./article.css" />
+    <link rel="stylesheet" href="./glossary.css" />
+    <link rel="stylesheet" href="./theme.css" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+
+<body>
+    
+    <script>!function(e,t,c,n,r,a,m){e.ym=e.ym||function(){(e.ym.a=e.ym.a||[]).push(arguments)},e.ym.l=1*new Date;for(var s=0;s<document.scripts.length;s++)if(document.scripts[s].src===n)return;a=t.createElement(c),m=t.getElementsByTagName(c)[0],a.async=1,a.src=n,m.parentNode.insertBefore(a,m)}(window,document,"script","https://mc.yandex.ru/metrika/tag.js"),ym(83179930,"init",{clickmap:!0,trackLinks:!0,accurateTrackBounce:!0,webvisor:!0})</script><noscript><div><img alt=""src=https://mc.yandex.ru/watch/83179930 style=position:absolute;left:-9999px></div></noscript> 
+    
+    ﻿<header class="header elma-365">
+  <div class="container">
+    <a class="header__logo" href="https://brix365.com/en/help">
+      <img src="./logo-en.svg" alt="header logo">
+    </a>
+ <!-- <div class="hero__search-form" id="search-panel">
+   <form class="search-form" onsubmit="ym(83180416,'reachGoal','poisk')">
+     <label class="search-form__label">
+       <span id="reset-search" class="search__icon"></span>
+       <input class="search-form__input" type="text">
+     </label>
+     <input class="search-form__submit" type="submit" value="Submit">
+   </form>
+  </div>       -->
+  
+     <div class="hero__search-form" id="search-panel"> <form class="search-form"> <label class="search-form__label"> <span id="reset-search" class="search__icon"></span> <input class="search-form__input" type="text"> </label> <input class="search-form__submit" type="submit" value="Submit"> </form> </div> 
+  <div class="hero__search">
+      <a href="#" id="search-icon" class="hero__search-icon">
+        <img src="search-icon-white.svg" alt="search string">
+      </a>
+      <a href="#" id="side-menu-icon" class="hero__side-icon">
+        <img src="side_menu.svg" alt="side menu">
+      </a>
+    </div>  
+  <div class="header__navi">
+        
+        <ul class="header__list"><li><span class="solution-select"><span class="solution-select__selected"></span><svg width="7" height="4" viewBox="0 0 7 4" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L3.5 3.5L6 1" stroke="white" stroke-linecap="round" stroke-linejoin="round"/></svg><ul class="solution-select__list"><li><a class="project-link" href="https://brix365.com/en/help/platform/get-trial.html">Platform</a></li><li><a class="project-link" href="https://brix365.com/en/help/ecm/ecm-functions.html">ECM</a></li><li><a class="project-link" href="https://brix365.com/en/help/crm/crm_overview.html">CRM</a></li><li><a class="project-link" href="https://brix365.com/en/help/service/service-functions.html">Service</a></li><li><a class="project-link" href="https://brix365.com/en/help/projects/projects-functions.html">Projects</a></li><li><a class="project-link" href="https://brix365.com/en/help/business_solutions/-elma365-store.html">Business Solutions</a></li></ul></span></li><li><a href="https://api.brix365.com/en/" target="_blank">API</a></li><li><a href="https://tssdk.brix365.com/" target="_blank">SDK</a></li></ul>
+        
+        
+   </div>
+  </div>
+
+</header>
+
+
+
+    
+    <main class="main container">
+
+        <aside class="sidebar" id="sidebar">
+        <div class="sidebar__header">
+                 <a class="header__logo" href="https://brix365.com/en/help">
+                    <img src="./logo-light-en.svg">
+                 </a>
+                    <span class="sidebar__close elma-365-close" id="close"></span>
+            </div>
+            <div class="sidebar__wrapper" id="side-menu">
+                
+            </div>
+        </aside>
+
+        <article class="article" id="article">
+            <div class="article-inner">           
+                <div class="content">
+                    <header class="article__header">
+                        
+                            <div class="topic__breadcrumbs">
+                                <p><a href="elma365-on-premises.html">BRIX On-Premises</a> &gt; <a href="infrastructure-preparation.html">Prepare infrastructure</a> &gt; Local image registry / Download BRIX images</p>
+                            </div>
+                        
+                        <div class="topic__title"><h1 class="p_Heading1"><span class="f_Heading1">Download BRIX images</span></h1>
+</div>
+                    
+</header>
+                    <section class="article__content">
+                        <div class="scroll-top-inner">
+                            <a href="#h1-article" class="scroll-top"></a>
+                        </div>
+                        <!-- Placeholder for topic body. -->
+                        <p class="p_Normal">BRIX Enterprise can be installed in a closed environment without direct access to an external container image repository. To achieve this, download BRIX images on a computer with internet access and upload them to a local image registry. In this article, <a href="https://github.com/goharbor/harbor" target="_blank" class="weblink">Harbor</a> is chosen as the local image registry. For more details on configuring and installing Harbor, refer to <a href="installing-harbor.html" class="topiclink">Install Harbor</a>.</p>
+<p class="p_Normal">Loading BRIX images consists of three steps:</p>
+<ol style="list-style-type:decimal">
+<li value="1" class="p_Normal"><a href="downloadin-images-elma365.html" class="topiclink">Create a new project in Harbor</a>.</li><li value="2" class="p_Normal"><a href="downloadin-images-elma365.html#downloading-images" class="topiclink">Download BRIX images</a>.</li><li value="3" class="p_Normal"><a href="downloadin-images-elma365.html#uploading-images-to-harbor" class="topiclink">Upload BRIX images to Harbor</a>.</li></ol>
+<h2 class="p_Heading2"><a id="creating-new-project" class="hmanchor"></a><span class="f_Heading2">Step 1: Create a new project in Harbor</span></h2>
+<ol style="list-style-type:upper-roman">
+<li value="1" class="p_Normal">Log in to the Harbor web interface. In the main left menu, go to the <span style="font-weight: bold;">Projects</span> section. To create a new project, click <span style="font-weight: bold;">+New project</span>.</li></ol>
+<p class="p_Normal" style="text-indent: -1px; margin: 0 0 0 37px;"><img alt="creating-new-project-harbor-1" title="creating-new-project-harbor-1" width="1033" height="477" style="margin:0;width:1033px;height:477px;border:none" src="creating-new-project-harbor-1.png"/></p>
+<ol style="list-style-type:upper-roman" start="2">
+<li value="2" class="p_Normal">Enter a lowercase project name, for example, <span style="font-weight: bold;">images</span>. Specify whether the project should be public. Click <span style="font-weight: bold;">OK</span>.</li></ol>
+<p class="p_Normal" style="text-indent: -1px; margin: 0 0 0 37px;"><img alt="creating-new-project-harbor-2" title="creating-new-project-harbor-2" width="846" height="489" style="margin:0;width:846px;height:489px;border:none" src="creating-new-project-harbor-2.png"/></p>
+<h2 class="p_Heading2"><a id="downloading-images" class="hmanchor"></a><span class="f_Heading2">Step 2: Download BRIX images</span></h2>
+<ol style="list-style-type:upper-roman">
+<li value="1" class="p_Normal">On a computer with internet access, download the script to get the BRIX distribution packages for offline installation by executing the following command:</li></ol>
+<p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample">curl -fsSL -o elma365-charts-offline.sh https://dl.elma365.com/onPremise/latest/elma365-charts-offline-latest &amp;&amp; \</span><br />
+<span class="f_CodeExample">chmod +x elma365-charts-offline.sh</span></p>
+<p class="p_Normal">Please see the addresses for other BRIX versions in the <a href="links-for-install-elma365.html" class="topiclink">BRIX On-Premises distribution packages of different versions</a> article.</p>
+<ol style="list-style-type:upper-roman" start="2">
+<li value="2" class="p_Normal">Execute the script for downloading the BRIX distribution packages. When executing the script without parameters, select:</li></ol>
+<ul style="list-style-type:disc">
+<li class="p_Normal"><code><b>pull (download)</b></code> command</li><li class="p_Normal">Packages to download. Use the following keys on the keyboard: <span style="font-weight: bold;">Up</span> and <span style="font-weight: bold;">Down</span> arrow keys to navigate through the list of packages, <span style="font-weight: bold;">Space</span> to select a package:</li></ul>
+<p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample">./elma365-charts-offline.sh</span></p>
+<p class="p_Normal"><img alt="download-images-1" width="649" height="804" style="margin:0;width:649px;height:804px;border:none" src="download-images-1.png"/></p>
+<p class="p_Normal">To download images for all the packages, execute the script with the <code><b>--pull</b></code> command:</p>
+<p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample">./elma365-charts-offline.sh --pull</span></p>
+<ol style="list-style-type:upper-roman" start="2">
+<li value="3" class="p_Normal">After downloading the distribution packages, copy the obtained <code><b>elma365-X.Y.Z</b></code> directory to the server where the installation will take place.</li></ol>
+<h2 class="p_Heading2"><a id="uploading-images-to-harbor" class="hmanchor"></a><span class="f_Heading2">Step 3: Upload BRIX images to Harbor</span></h2>
+<ol style="list-style-type:upper-roman">
+<li value="1" class="p_Normal">On the server where the installation will take place, go to the <code><b>elma365-X.Y.Z</b></code> directory.</li><li value="2" class="p_Normal">Execute the script for downloading the BRIX distribution packages for offline installation and select:</li></ol>
+<ul style="list-style-type:disc">
+<li class="p_Normal"><code><b>push (upload to private registry)</b></code> command</li><li class="p_Normal">Packages which BRIX images should be downloaded to the private registry. Use the following keys on the keyboard: <span style="font-weight: bold;">Up</span> and <span style="font-weight: bold;">Down</span> arrow keys to navigate through the list of packages, <span style="font-weight: bold;">Space</span> to select a package:</li></ul>
+<p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample">./elma365-charts-offline.sh</span></p>
+<p class="p_Normal"><img alt="download-images-2" width="659" height="883" style="margin:0;width:659px;height:883px;border:none" src="download-images-2.png"/></p>
+<p class="p_Normal"><a class="dropdown-toggle" style="font-style: normal; font-weight: normal; color: #000000; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186A1')">Non-interactive download</a></p>
+<div id="TOGGLE0186A1" class="dropdown-toggle-body" style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0 0 0 0;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_Normal">To perform a non-interactive download (when you pre-specify the packages to be downloaded), do the following steps:</p>
+<ol style="list-style-type:decimal">
+<li value="1" class="p_Normal">In the <span style="font-weight: bold;">images.yaml</span> file, specify the values of the parameters in advance:</li></ol>
+<ul style="list-style-type:disc">
+<li class="p_Normal">the <code><b>.config</b></code> block defines the parameters for the private registry</li><li class="p_Normal">the <code><b>.config.charts</b></code> block defines the packages to be downloaded to the private registry<br />
+<img alt="download-images-3" width="410" height="531" style="margin:0;width:410px;height:531px;border:none" src="download-images-3.png"/></li></ul>
+<ol style="list-style-type:decimal" start="2">
+<li value="2" class="p_Normal">Execute the script with the <code><b>--push</b></code> command for non-interactive downloading of the images to the private repository:</li></ol>
+<p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample">./elma365-charts-offline.sh --push</span></p>
+</td>
+</tr>
+</table>
+</div>
+<ol style="list-style-type:upper-roman" start="3">
+<li value="3" class="p_Normal">Wait for the BRIX image download script to end.</li></ol>
+
+                        <div class="bottom-nav">
+                            
+                                <a id="prev-link" class="topic__navi_prev" href="installing-harbor.html">
+                                    <span class="bottom-nav__arrow bottom-nav__arrow--prev"></span> <span
+                                        class="bottom-nav__link">installing-harbor.html</span>
+                                </a>
+                            
+                            
+                                <a id="next-link" class="topic__navi_next" href="downloading-images-deckhouse.html">
+                                    <span class="bottom-nav__link">downloading-images-deckhouse.html</span> <span
+                                        class="bottom-nav__arrow bottom-nav__arrow--next"></span>
+                                </a>
+                            
+                        </div>
+                        <!-- добавляет на страницу строку блок Была ли статья полезной?  -->
+                          <div class="feedback" id="feedback"><div class="feedback-help"><span><b>Was this helpful?</b></span><form action="" method="POST" class="feedback-form" id="feedback-form"><div class="feedback__popup feedback__popup-response" id="feedback__popup_thx" style="display: none;">Thanks for your feedback!</div><div class="feedback__popup" id="feedback__popup_why" style="display: none;"><div class="feedback__popup-header">Please specify why:</div><input type="radio" name="category" id="bad_recommendation" value="bad_recommendation"><label for="bad_recommendation">Recommendations did not help me</label><input type="radio" name="category" id="difficult_text" value="difficult_text"><label for="difficult_text">Article is hard to understand</label><input type="radio" name="category" id="no_answer" value="no_answer"><label for="no_answer">Didn`t answer my question</label><input type="radio" name="category" id="bad_header" value="bad_header"><label for="bad_header">Content does not match the topic</label><input type="radio" name="category" id="other_reason" value="other_reason"><label for="other_reason">Other</label></div><div class="feedback__popup" id="feedback__popup-other" style="display: none;"><div class="feedback__popup-header">How we can improve it?</div><textarea class="feedback__textarea" name="other" id=""></textarea><input type="submit" class="feedback__other-btn" value="Submit"></div><div class="feedback-form__btn-group"><input type="radio" name="useful" id="feedback__useful_yes" value="true"><label for="feedback__useful_yes"><img src="like.svg" class="small-img" alt="like"><spanclass="feedback-form__btn-group_yes-btn">Yes</spanclass="feedback-form__btn-group_yes-btn"></label><input type="radio" name="useful" id="feedback__useful_no" value="false"><label for="feedback__useful_no"><img src="dislike.svg" class="small-img" alt="dislike"><spanclass="feedback-form__btn-group_no-btn">No</spanclass="feedback-form__btn-group_no-btn"></label></div><select name="category"><option disabled="">Please specify why</option><option value="bad_recommendation" selected="">Recommendations did not help me</option><option value="difficult_text">Article is hard to understand</option><option value="no_answer">Didn`t answer my question</option><option value="bad_header">Content does not match the topic</option><option value="other_reason">Other</option></select><input type="submit"></form></div><div class="found_typo"><p style="margin: 0px; margin-top: 16px !important;"><span><b>Found a typo?</b></span> Select it and press <i>Ctrl+Enter</i> to send us feedback</p></div></div>
+                           
+                    </section>
+                </div>
+                <aside class="article__sidebar" style="display:none">
+                    <input type="checkbox" />
+                    <div class="article__arrow"></div>
+                    <div class="table-of-contents elma365-right" id="toc2Content">
+                        <h3 class="h3-toc">In this topic</h3>
+                        <nav id="toc2"></nav>
+                    </div>
+                </aside>
+            </div>
+        </article>
+    </main>               
+    <footer class="footer">
+        <div class="footer-container">
+  <div class="footer-mobile">
+    
+    <ul class="footer-mobile__list"><li><a href="https://brix365.com/en/" target="_blank">BRIX</a></li><li><a href="https://tssdk.brix365.com/en/latest/" target="_blank">SDK</a></li><li><a href="https://api.brix365.com/en/" target="_blank">API</a></li></ul><ul class="footer-mobile__list"><li><a href="https://brix365.com/en/help/platform/get-trial.html">Platform</a></li><li><a href="https://brix365.com/en/help/ecm/ecm-functions.html">ECM</a></li><li><a href="https://brix365.com/en/help/service/service-functions.html">Service</a></li><li><a href="https://brix365.com/en/help/projects/projects-functions.html">Projects</a></li></ul>
+    
+    
+  </div>
+  <div class="footer-wrap">
+    
+      <div><span class="mobile-question-popup">Send feedback</span><form method="POST" action class="question__popup question-xs" id="question__popup"><div class="question-wrap"><span class="close"></span><span class="title">Ask a question</span><label for="help_question" style="display: none;"></label><textarea name="help_question" id="help_question"></textarea><input type="submit" value="Send"></div></form><div class="hidden fade-in question-success-xs">Sent</div></div>
+    
+    <div class="footer-flex-b">
+      <span class="footer-copy">&copy; 2025 BRIX</span>
+      <ul class="footer-list">
+        
+        <li class="footer-item">
+            <a href="#" class="arrow-top" style="display: block;"></a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+ 
+    </footer>
+    <iframe name="hmnavigation" style="display:none!important"></iframe>
+    <script src="./jquery-ui.js"></script>
+    <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
+    <script src="./jquery.tocify.min.js"></script>
+    <script src="./TypoReporter.min.js"></script>
+    <script src="./google-search.js"></script>
+    <script src="./main.js"></script>
+<script type="text/javascript">
+HMInitToggle('TOGGLE0186A1','hm.type','dropdown','hm.state','0');
+</script>
+</body>
+
+</html>

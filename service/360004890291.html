@@ -1,0 +1,302 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Business Calendar</title>
+    <meta name="generator" content="Help+Manual" />
+    <meta name="keywords" content="" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The Business Calendar is used to specify working and non-working days, and establish the working hours. This information is used in business processes when calculating task..." />
+    <meta name="picture" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Full documentation for BRIX365 platform. Low-code developer guide. User guide. Admin guide. Developer guide." />
+    <meta property="og:url" content="https://brix365.com/en/help" />
+    <meta property="og:image" content="" />                                                              
+    <link rel="icon" href="favicon.png" type="image/png" />
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./jquery-ui.min.css" />
+    <link rel="stylesheet" href="default.css" />
+    <link rel="stylesheet" href="./search-yandex.css" />
+    <link rel="stylesheet" href="./article.css" />
+    <link rel="stylesheet" href="./glossary.css" />
+    <link rel="stylesheet" href="./theme.css" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+
+<body>
+    
+    <script>!function(e,t,c,n,r,a,m){e.ym=e.ym||function(){(e.ym.a=e.ym.a||[]).push(arguments)},e.ym.l=1*new Date;for(var s=0;s<document.scripts.length;s++)if(document.scripts[s].src===n)return;a=t.createElement(c),m=t.getElementsByTagName(c)[0],a.async=1,a.src=n,m.parentNode.insertBefore(a,m)}(window,document,"script","https://mc.yandex.ru/metrika/tag.js"),ym(83179930,"init",{clickmap:!0,trackLinks:!0,accurateTrackBounce:!0,webvisor:!0})</script><noscript><div><img alt=""src=https://mc.yandex.ru/watch/83179930 style=position:absolute;left:-9999px></div></noscript> 
+    
+    ﻿<header class="header elma-365">
+  <div class="container">
+    <a class="header__logo" href="https://brix365.com/en/help">
+      <img src="./logo-en.svg" alt="header logo">
+    </a>
+ <!-- <div class="hero__search-form" id="search-panel">
+   <form class="search-form" onsubmit="ym(83180416,'reachGoal','poisk')">
+     <label class="search-form__label">
+       <span id="reset-search" class="search__icon"></span>
+       <input class="search-form__input" type="text">
+     </label>
+     <input class="search-form__submit" type="submit" value="Submit">
+   </form>
+  </div>       -->
+  
+     <div class="hero__search-form" id="search-panel"> <form class="search-form"> <label class="search-form__label"> <span id="reset-search" class="search__icon"></span> <input class="search-form__input" type="text"> </label> <input class="search-form__submit" type="submit" value="Submit"> </form> </div> 
+  <div class="hero__search">
+      <a href="#" id="search-icon" class="hero__search-icon">
+        <img src="search-icon-white.svg" alt="search string">
+      </a>
+      <a href="#" id="side-menu-icon" class="hero__side-icon">
+        <img src="side_menu.svg" alt="side menu">
+      </a>
+    </div>  
+  <div class="header__navi">
+        
+        <ul class="header__list"><li><span class="solution-select"><span class="solution-select__selected"></span><svg width="7" height="4" viewBox="0 0 7 4" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L3.5 3.5L6 1" stroke="white" stroke-linecap="round" stroke-linejoin="round"/></svg><ul class="solution-select__list"><li><a class="project-link" href="https://brix365.com/en/help/platform/get-trial.html">Platform</a></li><li><a class="project-link" href="https://brix365.com/en/help/ecm/ecm-functions.html">ECM</a></li><li><a class="project-link" href="https://brix365.com/en/help/crm/crm_overview.html">CRM</a></li><li><a class="project-link" href="https://brix365.com/en/help/service/service-functions.html">Service</a></li><li><a class="project-link" href="https://brix365.com/en/help/projects/projects-functions.html">Projects</a></li><li><a class="project-link" href="https://brix365.com/en/help/business_solutions/-elma365-store.html">Business Solutions</a></li></ul></span></li><li><a href="https://api.brix365.com/en/" target="_blank">API</a></li><li><a href="https://tssdk.brix365.com/" target="_blank">SDK</a></li></ul>
+        
+        
+   </div>
+  </div>
+
+</header>
+
+
+
+    
+    <main class="main container">
+
+        <aside class="sidebar" id="sidebar">
+        <div class="sidebar__header">
+                 <a class="header__logo" href="https://brix365.com/en/help">
+                    <img src="./logo-light-en.svg">
+                 </a>
+                    <span class="sidebar__close elma-365-close" id="close"></span>
+            </div>
+            <div class="sidebar__wrapper" id="side-menu">
+                
+            </div>
+        </aside>
+
+        <article class="article" id="article">
+            <div class="article-inner">           
+                <div class="content">
+                    <header class="article__header">
+                        
+                            <div class="topic__breadcrumbs">
+                                <p>System settings / Business Calendar</p>
+                            </div>
+                        
+                        <div class="topic__title"><h1 class="p_Heading1" style="text-align: center; line-height: 1.20; margin: 19px 0 19px 0;"><span class="f_Heading1" style="font-size: 32px;">Business Calendar</span></h1>
+</div>
+                    
+</header>
+                    <section class="article__content">
+                        <div class="scroll-top-inner">
+                            <a href="#h1-article" class="scroll-top"></a>
+                        </div>
+                        <!-- Placeholder for topic body. -->
+                        <p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;">The <span style="font-weight: bold;">Business Calendar</span> is used to specify working and non-working days, and establish the working hours. This information is used in business processes when calculating <a href="360012495611.html#deadline" class="topiclink">task deadlines</a> or <a href="360012496011.html#schedule" class="topiclink">running a process on schedule</a>. </p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;">For example, the payroll process should start on the 10th and 20th days of the month. If these dates fall on a non-working day, then the process start will be moved to the previous working day. To do that, you can enable business calendar tracking in the settings of the start event. </p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">Начало&nbsp;внимание</span></p>
+<p class="p_Normal">Only the <a href="360006871932.html#administrators" class="topiclink">system administrator</a> can configure the business calendar.</p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">Конец&nbsp;внимание</span></p>
+<p class="p_Normal">Go to <span style="font-weight: bold;">Administration &gt; Business Calendar</span>. The page displays the company<span style="color: #202122; background-color: #ffffff;">’</span>s default work schedule, which applies to all employees. It also includes public holidays and shortened workdays from the work calendar.</p>
+<p class="p_Normal"><img alt="business-calendar-01" width="1053" height="540" style="margin:0;width:1053px;height:540px;border:none" src="business-calendar-01.png"/> </p>
+<p class="p_Normal">Starting from version 2024.11 in BRIX, you can:</p>
+<ul style="list-style-type:disc">
+<li class="p_Normal"><a href="360004890291.html#edit-business-calendar" class="topiclink">Modify the default business calendar</a> while continuing to use it for all users.</li><li class="p_Normal"><a href="360004890291.html#create-business-calendar" class="topiclink">Create a business calendar from scratch</a> or configure multiple calendars with individual schedules and <a href="360004890291.html#personal-business-calendar" class="topiclink">assign them to different employees</a>.</li><li class="p_Normal"><a href="360004890291.html#holidays" class="topiclink">Create a work calendar</a> with holidays and shortened workdays specific to your company and link it to one or all work calendars.</li><li class="p_Normal"><a href="360004890291.html#import-business-calendar" class="topiclink">Import business and work calendars</a> configured in another program.</li></ul>
+<p class="p_Normal"><a class="dropdown-toggle" style="font-style: normal; font-weight: normal; color: #000000; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186A1')">Settings of the business calendar in versions previous to 2024.11</a></p>
+<div id="TOGGLE0186A1" class="dropdown-toggle-body" style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0 0 0 0;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><ol style="list-style-type:upper-roman">
+<li value="1" class="p_Normal" style="line-height: 1.20; margin-top: 14px; margin-right: 0; margin-bottom: 0;">To set up your business calendar, go to <span style="font-weight: bold;">Administration &gt;</span> <span style="font-weight: bold;">Business Calendar</span>.</li></ol>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;"><img alt="business-calendar-2" width="971" height="579" style="margin:0;width:971px;height:579px;border:none" src="business-calendar-2.png"/></p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;">The business calendar allows you to configure work schedules, non-working days, holidays, and short day.</p>
+<ol style="list-style-type:upper-roman">
+<li value="1" class="p_Normal">Configure the following:</li></ol>
+<ul style="list-style-type:disc">
+<li class="p_Normal">Work schedule: Specify the start and end times of the workday, as well as lunch break hours.</li><li class="p_Normal">Weekly non-working days: Define the number of days off per week by selecting the corresponding checkboxes. </li></ul>
+<ol style="list-style-type:upper-roman">
+<li value="2" class="p_Normal">Add shortened and holiday dates as follows. Click the <span style="font-weight: bold;">+Exception</span> button, enter the date and choose an option:</li></ol>
+<ul style="list-style-type:disc">
+<li style="line-height: 1.20;">For a holiday, enable the <span style="font-weight: bold;">Non-working day</span> option.</li><li style="line-height: 1.20;">For a shortened workday, specify the working hours.</li></ul>
+<p style="line-height: 1.20;"><span style="font-size: 13px; color: #000000;">&nbsp;</span></p>
+<p style="line-height: 1.20; margin: 0 0 0 13px;"><img alt="business-calendar-5" width="797" height="186" style="margin:0;width:797px;height:186px;border:none" src="business-calendar-5.png"/></p>
+<p style="text-align: justify; line-height: 1.28; margin: 0 0 11px 0;">Please note that you cannot specify a past calendar date as a short or holiday day. You can delete a set day by clicking the recycle bin icon.</p>
+<ol style="list-style-type:upper-roman" start="4">
+<li value="4" class="p_Normal">Load the information about holidays and short days over the past years.</li></ol>
+<p style="text-align: justify; line-height: 1.28; margin: 0 0 11px 0;">You can view and add short days and holidays for the previous period using the <span style="font-weight: bold;">Load current year</span> button. The data can be displayed sequentially for each year from the current year till 1970. The name of the button changes as the data is loaded.</p>
+<p style="text-align: justify; line-height: 1.28; margin: 0 0 11px 0;">Consider the example below, where 2025 is the current year:</p>
+<ol style="list-style-type:decimal">
+<li value="1" style="text-align: justify; line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;">The user has already clicked <span style="font-weight: bold;">Load current year</span>. Therefore, we see the data for the year 2025. At the same time, the name of the button has changed to <span style="font-weight: bold;">Load year 2024</span>.</li><li value="2" style="text-align: justify; line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;">By clicking this button again, the user will add short days and holidays for 2024 to the list. And the name of the button will change to <span style="font-weight: bold;">Load year 2023</span>. In this way, it is possible to load data for several previous years sequentially.</li></ol>
+<p style="text-align: justify; text-indent: -24px; line-height: 1.28; margin: 0 0 11px 48px;"><img alt="business_calendar01" width="973" height="359" style="margin:0;width:973px;height:359px;border:none" src="business_calendar01.png"/></p>
+<ol style="list-style-type:upper-roman" start="5">
+<li value="5" style="text-align: justify; line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;">When you have completed the settings, click <span style="font-weight: bold;">Save changes</span> at the bottom of the page. The calendar will now be available in the system. You can use it to define time in business processes.</li></ol>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;внимание</span></p>
+<p style="text-align: justify; line-height: 1.28; margin: 0 0 11px 0;">If you change the settings of the business calendar, you should republish the processes that have time limits set based on the business calendar. Then the new work schedule will be applied to the settings configured.</p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;внимание</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h2 class="p_Heading2"><a id="create-business-calendar" class="hmanchor"></a><span class="f_Heading2">Create a business calendar</span></h2>
+<p class="p_Normal">Starting with version 2024.11, you can configure business calendars for your company from scratch or create multiple calendars in <span style="font-weight: bold;">Administration &gt; Business Calendar</span>. Here<span style="color: #202122; background-color: #ffffff;">’</span>s how:</p>
+<ol style="list-style-type:upper-roman">
+<li value="1" class="p_Normal">In the top-right corner of the page, click <span style="font-weight: bold;">New Calendar</span>.</li><li value="2" class="p_Normal">Fill in the fields in the pop-up window:</li></ol>
+<ul style="list-style-type:disc">
+<li class="p_Normal"><span style="font-weight: bold;">Name</span><span style="color: #ff0000;">*</span>. Enter a name for the calendar.</li><li class="p_Normal"><span style="font-weight: bold;">Schedule type</span>. Choose between scheduling by work weeks or work shifts. Select the appropriate type from the drop-down.</li></ul>
+<p class="p_Normal"><img alt="business-calendar-03" width="596" height="516" style="margin:0;width:596px;height:516px;border:none" src="business-calendar-03.png"/></p>
+<ol style="list-style-type:upper-roman">
+<li value="3" class="p_Normal"><a id="weekend" class="hmanchor"></a>For week-based calendars, check the boxes for working days and leave weekends unchecked.</li></ol>
+<p class="p_Normal" style="margin: 0 0 0 36px;">For shift-based calendars, specify the number of working and off days in a shift. For instance, for 2/2 shifts, add four days and mark two as working days.</p>
+<ol style="list-style-type:upper-roman">
+<li value="4" class="p_Normal"><a id="operating_mode" class="hmanchor"></a>Configure the work schedule: Specify the working and break hours for the selected days.</li></ol>
+<p class="p_Normal" style="text-indent: -1px; margin: 0 0 0 36px;">To set different hours for each day, switch to <span style="font-weight: bold;">Advanced &nbsp;Mode</span> by clicking the relevant button in the top-right corner. Uncheck the <span style="font-weight: bold;">Standard Schedule</span> option next to a day and specify the working hours and breaks.</p>
+<p class="p_Normal"><img alt="business-calendar-04" width="1087" height="636" style="margin:0;width:1087px;height:636px;border:none" src="business-calendar-04.png"/></p>
+<p class="p_Normal" style="margin: 0 0 0 36px;">You cannot return to regular calendar settings mode once advanced editing is enabled. Future edits will always open in advanced mode. </p>
+<ol style="list-style-type:upper-roman">
+<li value="5" class="p_Normal">To include holidays and shortened days in the calendar, select a work calendar from the drop-down list.</li></ol>
+<p class="p_Normal" style="margin: 0 0 0 36px;">By default, the system uses a work calendar with official public holidays. You can customize these exceptions to fit your company<span style="color: #202122; background-color: #ffffff;">’</span>s schedule. To learn more, see <a href="360004890291.html#holidays" class="topiclink">Create a work calendar</a>. </p>
+<ol style="list-style-type:upper-roman">
+<li value="6" class="p_Normal">Click <span style="font-weight: bold;">Create</span>.</li></ol>
+<p class="p_Normal">The new calendar will appear on the page and be available in the system. You can:</p>
+<ul style="list-style-type:disc">
+<li class="p_Normal">Set it as the default calendar for all employees <a href="360004890291.html#company-business-calendar" class="topiclink">by default</a>.</li><li class="p_Normal"><a href="360004890291.html#personal-business-calendar" class="topiclink">Assign it</a> to specific users. &nbsp;</li></ul>
+<p class="p_Normal">The assigned calendar determines <a href="360012495611.html#deadline" class="topiclink">task deadlines</a> for the employee. </p>
+<h2 class="p_Heading2"><a id="holidays" class="hmanchor"></a><span class="f_Heading2">Create a work calendar</span></h2>
+<p class="p_Normal">To take public holidays and shortened days into account, set up a work calendar and link it to your business calendar. You can also set additional holidays that are celebrated in your company, such as professional holidays.</p>
+<p class="p_Normal">To create a work calendar:</p>
+<ol style="list-style-type:upper-roman">
+<li value="1" class="p_Normal">Navigate to <span style="font-weight: bold;">Administration &gt; Business Calendar</span> and click <span style="font-weight: bold;">Work Calendar</span> in the top-right corner.</li><li value="2" class="p_Normal">On the new page,<span style="font-weight: bold;"> </span>you can:</li></ol>
+<ul style="list-style-type:disc">
+<li style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;">Go to the template to fill in the <span style="font-weight: bold;">Work Calendar</span> and add holidays to it.</li><li style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;">Click the <span style="font-weight: bold;">+Work Calendar</span> button and customize the calendar from scratch.</li></ul>
+<ol style="list-style-type:upper-roman">
+<li value="3" class="p_Normal">In the settings specify the name of the calendar and select a year.</li></ol>
+<p class="p_Normal"><img alt="business-calendar-05" width="1061" height="629" style="margin:0;width:1061px;height:629px;border:none" src="business-calendar-05.png"/></p>
+<ol style="list-style-type:upper-roman">
+<li value="4" class="p_Normal">Click <span style="font-weight: bold;">Add</span> to add exceptional and non-working days:</li></ol>
+<ul style="list-style-type:disc">
+<li class="p_Normal">Select the date. Past dates cannot be marked as exceptions. </li></ul>
+<ul style="list-style-type:disc">
+<li class="p_Normal">Choose the day type:</li></ul>
+<ul style="list-style-type:circle"><ul style="list-style-type:circle"><ul style="list-style-type:square">
+<li class="p_Normal"><span style="font-weight: bold;">Exceptional</span>. A workday with non-standard hours (e.g., shortened).</li><li class="p_Normal"><span style="font-weight: bold;">Non-working</span>. A non-working day (e.g., a holiday).</li></ul></li></ul></li></ul>
+<ul style="list-style-type:disc">
+<li class="p_Normal">Add a brief description of the exception.</li><li class="p_Normal">For exceptional days, specify work hours and breaks.</li></ul>
+<ol style="list-style-type:upper-roman">
+<li value="5" class="p_Normal">Mark all exceptions for the calendar year (e.g., December 24, January 1, etc.). To delete an entry, click the recycle bin icon.</li><li value="6" class="p_Normal">Click <span style="font-weight: bold;">Create</span> to save the calendar.</li><li value="7" class="p_Normal">To apply exceptions, select the work calendar when <a href="360004890291.html#create-business-calendar" class="topiclink">creating</a> or <a href="360004890291.html#edit-business-calendar" class="topiclink">editing</a> a business calendar. </li></ol>
+<p class="p_Normal">Display of exceptions:</p>
+<ul style="list-style-type:disc">
+<li class="p_Normal">In employees’ <a href="calendar.html" class="topiclink">personal calendars</a>, holidays appear in green.</li><li class="p_Normal">In drop-down calendars for date/time fields, holidays are marked in red.</li></ul>
+<h2 class="p_Heading2"><a id="company-business-calendar" class="hmanchor"></a><span class="f_Heading2">Set the default business calendar for the company</span></h2>
+<p class="p_Normal">The business calendar affects employee schedules, task deadlines, and business processes. To set a default calendar for all employees:</p>
+<ol style="list-style-type:decimal">
+<li value="1" class="p_Normal">Go to <span style="font-weight: bold;">Administration &gt; Business Calendar</span>.</li><li value="2" class="p_Normal">Select a week-based calendar and click the three-dot menu.</li><li value="3" class="p_Normal">Click <span style="font-weight: bold;">Set As Default</span>.</li></ol>
+<p class="p_Normal">The calendar will be marked with a star icon and applied to employees without individual schedules.</p>
+<h2 class="p_Heading2"><a id="personal-business-calendar" class="hmanchor"></a><span class="f_Heading2">Assign an individual business calendar</span></h2>
+<p class="p_Normal">You can assign a specific business calendar to an employee so that their task deadlines are calculated according to this individual schedule:</p>
+<ul style="list-style-type:disc">
+<li class="p_Normal">Select an employee and open their page for <a href="360004833572.html#edit" class="topiclink">editing</a>. Select the calendar in the <span style="font-weight: bold;">Business calendar</span> field.</li><li class="p_Normal">Assign the calendar during the <a href="360004833572.html#business-calendar" class="topiclink">employee invitation process</a>.</li><li class="p_Normal">Assign a calendar to several users at once using a TypeScript script. Read more about it in <a href="https://tssdk.brix365.com/en/latest/interfaces/_12_work_calendar_.workcalendars.html#:~:text=WorkCalendar%5B%5D%3E-,setToUsers,-setToUsers" target="_blank" class="weblink">BRIX TS SDK</a>.</li></ul>
+<p class="p_Normal">You can also schedule changes to an employee’s business calendar using the <img alt="business-calendar-11" title="business-calendar-11" width="29" height="34" style="margin:0;width:29px;height:34px;border:none" src="business-calendar-11.png"/><span class="f_ImageCaption"> </span>button next to the <span style="font-weight: bold;">Business calendar</span> field.</p>
+<p class="p_Normal">The schedule and planned changes will be visible in the <a href="360016398552.html#settings" class="topiclink">employee’s profile settings</a>. </p>
+<h2 class="p_Heading2"><a id="import-business-calendar" class="hmanchor"></a><span class="f_Heading2">Import a business or work calendar</span></h2>
+<p class="p_Normal">You can import a calendar configured in another system to BRIX. For example, a work calendar with public holidays.</p>
+<p class="p_Normal">To do this:</p>
+<ol style="list-style-type:decimal">
+<li value="1" class="p_Normal">Create a <span style="font-weight: bold;">.csv</span> file with calendar data and compress it into a <span style="font-weight: bold;">.zip</span> file.</li><li value="2" class="p_Normal">In BRIX, go to <span style="font-weight: bold;">Administration &gt; Business Calendar</span>.<span style="font-weight: bold;"> </span></li></ol>
+<ul style="list-style-type:disc">
+<li class="p_Normal">For a business calendar, click the <img alt="business-calendar-12" width="27" height="25" style="margin:0;width:27px;height:25px;border:none" src="business-calendar-12.png"/><span class="f_ImageCaption"> </span>button in the upper right corner of the page.</li><li class="p_Normal">For a work calendar, click <span style="font-weight: bold;">Work Calendar </span>and click <img alt="business-calendar-12" width="28" height="26" style="margin:0;width:28px;height:26px;border:none" src="business-calendar-12.png"/><span class="f_ImageCaption"> </span>in the upper right corner of the page.</li></ul>
+<ol style="list-style-type:decimal">
+<li value="3" class="p_Normal">Upload the file from your computer and click <span style="font-weight: bold;">Import</span>.</li></ol>
+<h2 class="p_Heading2"><span class="f_Heading2">Edit, export, and delete a calendar </span></h2>
+<p class="p_Normal">You can edit, export to another program, and delete a business or work calendar.</p>
+<p class="p_Normal">For business calendars:</p>
+<ol style="list-style-type:decimal">
+<li value="1" class="p_Normal">Go to <span style="font-weight: bold;">Administration &gt; Business Calendar</span>.</li><li value="2" class="p_Normal">Click the three dots icon on the desired calendar page.</li><li value="3" class="p_Normal">Select an action:</li></ol>
+<ul style="list-style-type:disc">
+<li class="p_Normal"><a id="edit-business-calendar" class="hmanchor"></a><span style="font-weight: bold;">Edit</span>. Update the schedule or link a production calendar. Re-publish business processes if the updated calendar affects time constraints.</li><li class="p_Normal"><span style="font-weight: bold;">Export</span>. Download the calendar as a <span style="font-weight: bold;">.csv</span> file for use in another program.</li><li class="p_Normal"><span style="font-weight: bold;">Delete</span>. Remove unused calendars. If the deleted calendar was assigned to employees, their schedules will switch to the default calendar.</li></ul>
+<p class="p_Normal">All work calendars are stored under <span style="font-weight: bold;">Business Calendar &gt; Work Calendar</span>. You can perform the following actions with them using the icons:</p>
+<ul style="list-style-type:disc">
+<li class="p_Normal"><img alt="business-calendar-13" title="business-calendar-13" width="34" height="37" style="margin:0;width:34px;height:37px;border:none" src="business-calendar-13.png"/><span style="font-size: 11px; color: #394149;"> </span> Edit a work calendar.</li><li class="p_Normal"><img alt="business-calendar-14" title="business-calendar-14" width="35" height="32" style="margin:0;width:35px;height:32px;border:none" src="business-calendar-14.png"/><span style="font-size: 11px; color: #394149;"> </span>Delete a work calendar. If linked to a business calendar, exceptions will no longer apply. The <a href="360004890291.html#operating_mode" class="topiclink">set work schedule</a> will be applied.</li><li class="p_Normal"><img alt="business-calendar-15" width="27" height="33" style="margin:0;width:27px;height:33px;border:none" src="business-calendar-15.png"/><span class="f_ImageCaption"> </span>Export a work calendar. The created <span style="font-weight: bold;">.csv</span> file can be used in another application.</li></ul>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;">&nbsp;</p>
+
+                        <div class="bottom-nav">
+                            
+                                <a id="prev-link" class="topic__navi_prev" href="email-settings.html">
+                                    <span class="bottom-nav__arrow bottom-nav__arrow--prev"></span> <span
+                                        class="bottom-nav__link">email-settings.html</span>
+                                </a>
+                            
+                            
+                                <a id="next-link" class="topic__navi_next" href="360024799491.html">
+                                    <span class="bottom-nav__link">360024799491.html</span> <span
+                                        class="bottom-nav__arrow bottom-nav__arrow--next"></span>
+                                </a>
+                            
+                        </div>
+                        <!-- добавляет на страницу строку блок Была ли статья полезной?  -->
+                          <div class="feedback" id="feedback"><div class="feedback-help"><span><b>Was this helpful?</b></span><form action="" method="POST" class="feedback-form" id="feedback-form"><div class="feedback__popup feedback__popup-response" id="feedback__popup_thx" style="display: none;">Thanks for your feedback!</div><div class="feedback__popup" id="feedback__popup_why" style="display: none;"><div class="feedback__popup-header">Please specify why:</div><input type="radio" name="category" id="bad_recommendation" value="bad_recommendation"><label for="bad_recommendation">Recommendations did not help me</label><input type="radio" name="category" id="difficult_text" value="difficult_text"><label for="difficult_text">Article is hard to understand</label><input type="radio" name="category" id="no_answer" value="no_answer"><label for="no_answer">Didn`t answer my question</label><input type="radio" name="category" id="bad_header" value="bad_header"><label for="bad_header">Content does not match the topic</label><input type="radio" name="category" id="other_reason" value="other_reason"><label for="other_reason">Other</label></div><div class="feedback__popup" id="feedback__popup-other" style="display: none;"><div class="feedback__popup-header">How we can improve it?</div><textarea class="feedback__textarea" name="other" id=""></textarea><input type="submit" class="feedback__other-btn" value="Submit"></div><div class="feedback-form__btn-group"><input type="radio" name="useful" id="feedback__useful_yes" value="true"><label for="feedback__useful_yes"><img src="like.svg" class="small-img" alt="like"><spanclass="feedback-form__btn-group_yes-btn">Yes</spanclass="feedback-form__btn-group_yes-btn"></label><input type="radio" name="useful" id="feedback__useful_no" value="false"><label for="feedback__useful_no"><img src="dislike.svg" class="small-img" alt="dislike"><spanclass="feedback-form__btn-group_no-btn">No</spanclass="feedback-form__btn-group_no-btn"></label></div><select name="category"><option disabled="">Please specify why</option><option value="bad_recommendation" selected="">Recommendations did not help me</option><option value="difficult_text">Article is hard to understand</option><option value="no_answer">Didn`t answer my question</option><option value="bad_header">Content does not match the topic</option><option value="other_reason">Other</option></select><input type="submit"></form></div><div class="found_typo"><p style="margin: 0px; margin-top: 16px !important;"><span><b>Found a typo?</b></span> Select it and press <i>Ctrl+Enter</i> to send us feedback</p></div></div>
+                           
+                    </section>
+                </div>
+                <aside class="article__sidebar" style="display:none">
+                    <input type="checkbox" />
+                    <div class="article__arrow"></div>
+                    <div class="table-of-contents elma365-right" id="toc2Content">
+                        <h3 class="h3-toc">In this topic</h3>
+                        <nav id="toc2"></nav>
+                    </div>
+                </aside>
+            </div>
+        </article>
+    </main>               
+    <footer class="footer">
+        <div class="footer-container">
+  <div class="footer-mobile">
+    
+    <ul class="footer-mobile__list"><li><a href="https://brix365.com/en/" target="_blank">BRIX</a></li><li><a href="https://tssdk.brix365.com/en/latest/" target="_blank">SDK</a></li><li><a href="https://api.brix365.com/en/" target="_blank">API</a></li></ul><ul class="footer-mobile__list"><li><a href="https://brix365.com/en/help/platform/get-trial.html">Platform</a></li><li><a href="https://brix365.com/en/help/ecm/ecm-functions.html">ECM</a></li><li><a href="https://brix365.com/en/help/service/service-functions.html">Service</a></li><li><a href="https://brix365.com/en/help/projects/projects-functions.html">Projects</a></li></ul>
+    
+    
+  </div>
+  <div class="footer-wrap">
+    
+      <div><span class="mobile-question-popup">Send feedback</span><form method="POST" action class="question__popup question-xs" id="question__popup"><div class="question-wrap"><span class="close"></span><span class="title">Ask a question</span><label for="help_question" style="display: none;"></label><textarea name="help_question" id="help_question"></textarea><input type="submit" value="Send"></div></form><div class="hidden fade-in question-success-xs">Sent</div></div>
+    
+    <div class="footer-flex-b">
+      <span class="footer-copy">&copy; 2025 BRIX</span>
+      <ul class="footer-list">
+        
+        <li class="footer-item">
+            <a href="#" class="arrow-top" style="display: block;"></a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+ 
+    </footer>
+    <iframe name="hmnavigation" style="display:none!important"></iframe>
+    <script src="./jquery-ui.js"></script>
+    <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
+    <script src="./jquery.tocify.min.js"></script>
+    <script src="./TypoReporter.min.js"></script>
+    <script src="./google-search.js"></script>
+    <script src="./main.js"></script>
+<script type="text/javascript">
+HMInitToggle('TOGGLE0186A1','hm.type','dropdown','hm.state','0');
+</script>
+</body>
+
+</html>

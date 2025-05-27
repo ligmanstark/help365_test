@@ -1,0 +1,521 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Install Linkerd using Cert-manager</title>
+    <meta name="generator" content="Help+Manual" />
+    <meta name="keywords" content="" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Linkerd is a dedicated infrastructure layer that helps manage communication between services by automatically encrypting connections, handling retries, and timeouts. Installing..." />
+    <meta name="picture" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Full documentation for BRIX365 platform. Low-code developer guide. User guide. Admin guide. Developer guide." />
+    <meta property="og:url" content="https://brix365.com/en/help" />
+    <meta property="og:image" content="" />                                                              
+    <link rel="icon" href="favicon.png" type="image/png" />
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./jquery-ui.min.css" />
+    <link rel="stylesheet" href="default.css" />
+    <link rel="stylesheet" href="./search-yandex.css" />
+    <link rel="stylesheet" href="./article.css" />
+    <link rel="stylesheet" href="./glossary.css" />
+    <link rel="stylesheet" href="./theme.css" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+
+<body>
+    
+    <script>!function(e,t,c,n,r,a,m){e.ym=e.ym||function(){(e.ym.a=e.ym.a||[]).push(arguments)},e.ym.l=1*new Date;for(var s=0;s<document.scripts.length;s++)if(document.scripts[s].src===n)return;a=t.createElement(c),m=t.getElementsByTagName(c)[0],a.async=1,a.src=n,m.parentNode.insertBefore(a,m)}(window,document,"script","https://mc.yandex.ru/metrika/tag.js"),ym(83179930,"init",{clickmap:!0,trackLinks:!0,accurateTrackBounce:!0,webvisor:!0})</script><noscript><div><img alt=""src=https://mc.yandex.ru/watch/83179930 style=position:absolute;left:-9999px></div></noscript> 
+    
+    ﻿<header class="header elma-365">
+  <div class="container">
+    <a class="header__logo" href="https://brix365.com/en/help">
+      <img src="./logo-en.svg" alt="header logo">
+    </a>
+ <!-- <div class="hero__search-form" id="search-panel">
+   <form class="search-form" onsubmit="ym(83180416,'reachGoal','poisk')">
+     <label class="search-form__label">
+       <span id="reset-search" class="search__icon"></span>
+       <input class="search-form__input" type="text">
+     </label>
+     <input class="search-form__submit" type="submit" value="Submit">
+   </form>
+  </div>       -->
+  
+     <div class="hero__search-form" id="search-panel"> <form class="search-form"> <label class="search-form__label"> <span id="reset-search" class="search__icon"></span> <input class="search-form__input" type="text"> </label> <input class="search-form__submit" type="submit" value="Submit"> </form> </div> 
+  <div class="hero__search">
+      <a href="#" id="search-icon" class="hero__search-icon">
+        <img src="search-icon-white.svg" alt="search string">
+      </a>
+      <a href="#" id="side-menu-icon" class="hero__side-icon">
+        <img src="side_menu.svg" alt="side menu">
+      </a>
+    </div>  
+  <div class="header__navi">
+        
+        <ul class="header__list"><li><span class="solution-select"><span class="solution-select__selected"></span><svg width="7" height="4" viewBox="0 0 7 4" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L3.5 3.5L6 1" stroke="white" stroke-linecap="round" stroke-linejoin="round"/></svg><ul class="solution-select__list"><li><a class="project-link" href="https://brix365.com/en/help/platform/get-trial.html">Platform</a></li><li><a class="project-link" href="https://brix365.com/en/help/ecm/ecm-functions.html">ECM</a></li><li><a class="project-link" href="https://brix365.com/en/help/crm/crm_overview.html">CRM</a></li><li><a class="project-link" href="https://brix365.com/en/help/service/service-functions.html">Service</a></li><li><a class="project-link" href="https://brix365.com/en/help/projects/projects-functions.html">Projects</a></li><li><a class="project-link" href="https://brix365.com/en/help/business_solutions/-elma365-store.html">Business Solutions</a></li></ul></span></li><li><a href="https://api.brix365.com/en/" target="_blank">API</a></li><li><a href="https://tssdk.brix365.com/" target="_blank">SDK</a></li></ul>
+        
+        
+   </div>
+  </div>
+
+</header>
+
+
+
+    
+    <main class="main container">
+
+        <aside class="sidebar" id="sidebar">
+        <div class="sidebar__header">
+                 <a class="header__logo" href="https://brix365.com/en/help">
+                    <img src="./logo-light-en.svg">
+                 </a>
+                    <span class="sidebar__close elma-365-close" id="close"></span>
+            </div>
+            <div class="sidebar__wrapper" id="side-menu">
+                
+            </div>
+        </aside>
+
+        <article class="article" id="article">
+            <div class="article-inner">           
+                <div class="content">
+                    <header class="article__header">
+                        
+                            <div class="topic__breadcrumbs">
+                                <p><a href="elma365-on-premises.html">BRIX On-Premises</a> &gt; <a href="elma365-enterprise.html">BRIX On-Premises Enterprise</a> &gt; Install add-on components for BRIX / Install Linkerd using Cert-manager</p>
+                            </div>
+                        
+                        <div class="topic__title"><h1 class="p_Heading1"><span class="f_Heading1">Install Linkerd using Cert-manager</span></h1>
+</div>
+                    
+</header>
+                    <section class="article__content">
+                        <div class="scroll-top-inner">
+                            <a href="#h1-article" class="scroll-top"></a>
+                        </div>
+                        <!-- Placeholder for topic body. -->
+                        <p class="p_Normal">Linkerd is a dedicated infrastructure layer that helps manage communication between services by automatically encrypting connections, handling retries, and timeouts. Installing the Linkerd add-on ensures load balancing for gRPC traffic as BRIX services scale. It also provides telemetry (success rates, latencies) and more..</p>
+<p class="p_Normal">Linkerd is essential for enabling scalable service support on the BRIX application side. Without it, scaling BRIX microservices will not function.</p>
+<p class="p_Normal">For instructions on preparing certificates using openssl for Linkerd and its installation, read the article <a href="install-linkerd.html" class="topiclink">Install Linkerd</a>.</p>
+<p class="p_Normal">This article will cover how to:</p>
+<ul style="list-style-type:disc">
+<li class="p_Normal">Automate certificate preparation using the Cert-manager tool and install Linkerd;</li></ul>
+<ul style="list-style-type:disc">
+<li class="p_Normal"><a href="linkerd-with-cert-manager.html#delete-chart" class="topiclink">Remove the Linkerd chart using Helm in a Kubernetes cluster</a>.</li></ul>
+<p class="p_Normal">Installing Linkerd involves four steps:</p>
+<ol style="list-style-type:decimal">
+<li value="1" class="p_Normal"><a href="linkerd-with-cert-manager.html#prepare-certificate" class="topiclink">Prepare certificates for Linkerd</a>.</li><li value="2" class="p_Normal"><a href="linkerd-with-cert-manager.html#helm-chart" class="topiclink">Download the Helm chart and configuration file</a>.</li><li value="3" class="p_Normal"><a href="linkerd-with-cert-manager.html#configuration-file" class="topiclink">Fill out the configuration file</a>.</li><li value="4" class="p_Normal"><a href="linkerd-with-cert-manager.html#install-chart" class="topiclink">Install the Linkerd chart using Helm in a Kubernetes cluster</a>.</li></ol>
+<h2 class="p_Heading2"><a id="prepare-certificate" class="hmanchor"></a><span class="f_Heading2">Step 1: &nbsp;Prepare certificates for Linkerd</span></h2>
+<ol style="list-style-type:decimal">
+<li value="1" class="p_Normal">Install <a href="install-cert-manager.html" class="topiclink">Cert-manager</a> and create namespaces. Cert-manager will use these to store resources related to the web interceptor:</li></ol>
+<p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample">kubectl create namespace linkerd</span><br />
+<span class="f_CodeExample">kubectl label namespace linkerd linkerd.io/is-control-plane=true config.linkerd.io/admission-webhooks=disabled linkerd.io/control-plane-ns=linkerd</span><br />
+<span class="f_CodeExample">kubectl annotate namespace linkerd linkerd.io/inject=disabled</span></p>
+<ol style="list-style-type:decimal" start="2">
+<li value="2" class="p_Normal">Install the <a href="https://smallstep.com/cli/" target="_blank" class="weblink">step</a> tool &nbsp;to create a key pair for signing each certificate:</li></ol>
+<p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample">wget https://dl.smallstep.com/cli/docs-cli-install/latest/step-cli_amd64.deb</span><br />
+<span class="f_CodeExample">sudo dpkg -i step-cli_amd64.deb</span></p>
+<ol style="list-style-type:decimal" start="3">
+<li value="3" class="p_Normal">Generate certificates using <a href="https://smallstep.com/cli/" target="_blank" class="weblink">step</a> to use them for signing:</li></ol>
+<ul style="list-style-type:disc">
+<li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;">Web interceptor certificates;</li></ul>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><a class="dropdown-toggle" style="font-style: normal; font-weight: normal; color: #000000; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186A1')">Execute the command</a></p>
+<div id="TOGGLE0186A1" class="dropdown-toggle-body" style="text-align: left; text-indent: 0; line-height: 1.28; padding: 0 0 0 0; margin: 0 0 11px 0;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample"># &nbsp;Create CA keys</span><br />
+<span class="f_CodeExample">step certificate create webhook.linkerd.cluster.local caWebhook.crt caWebhook.key --profile root-ca --no-password --insecure --san webhook.linkerd.cluster.local --not-after=87600h</span><br />
+<span class="f_CodeExample">kubectl create secret tls webhook-issuer-tls --cert=caWebhook.crt --key=caWebhook.key --namespace=linkerd</span><br />
+<span class="f_CodeExample"># Create Issuer</span><br />
+<span class="f_CodeExample">kubectl apply -f - &lt;&lt;EOF</span><br />
+<span class="f_CodeExample">apiVersion: cert-manager.io/v1</span><br />
+<span class="f_CodeExample">kind: Issuer</span><br />
+<span class="f_CodeExample">metadata:</span><br />
+<span class="f_CodeExample"> &nbsp;name: webhook-issuer</span><br />
+<span class="f_CodeExample"> &nbsp;namespace: linkerd</span><br />
+<span class="f_CodeExample">spec:</span><br />
+<span class="f_CodeExample"> &nbsp;ca:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;secretName: webhook-issuer-tls</span><br />
+<span class="f_CodeExample">EOF</span><br />
+<span class="f_CodeExample"># Create Certificate</span><br />
+<span class="f_CodeExample">kubectl apply -f - &lt;&lt;EOF</span><br />
+<span class="f_CodeExample">apiVersion: cert-manager.io/v1</span><br />
+<span class="f_CodeExample">kind: Certificate</span><br />
+<span class="f_CodeExample">metadata:</span><br />
+<span class="f_CodeExample"> &nbsp;name: linkerd-policy-validator</span><br />
+<span class="f_CodeExample"> &nbsp;namespace: linkerd</span><br />
+<span class="f_CodeExample">spec:</span><br />
+<span class="f_CodeExample"> &nbsp;secretName: linkerd-policy-validator-k8s-tls</span><br />
+<span class="f_CodeExample"> &nbsp;duration: 24h</span><br />
+<span class="f_CodeExample"> &nbsp;renewBefore: 1h</span><br />
+<span class="f_CodeExample"> &nbsp;issuerRef:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;name: webhook-issuer</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;kind: Issuer</span><br />
+<span class="f_CodeExample"> &nbsp;commonName: linkerd-policy-validator.linkerd.svc</span><br />
+<span class="f_CodeExample"> &nbsp;dnsNames:</span><br />
+<span class="f_CodeExample"> &nbsp;- linkerd-policy-validator.linkerd.svc</span><br />
+<span class="f_CodeExample"> &nbsp;isCA: false</span><br />
+<span class="f_CodeExample"> &nbsp;privateKey:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;algorithm: ECDSA</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;encoding: PKCS8</span><br />
+<span class="f_CodeExample"> &nbsp;usages:</span><br />
+<span class="f_CodeExample"> &nbsp;- server auth</span><br />
+<span class="f_CodeExample">---</span><br />
+<span class="f_CodeExample">apiVersion: cert-manager.io/v1</span><br />
+<span class="f_CodeExample">kind: Certificate</span><br />
+<span class="f_CodeExample">metadata:</span><br />
+<span class="f_CodeExample"> &nbsp;name: linkerd-proxy-injector</span><br />
+<span class="f_CodeExample"> &nbsp;namespace: linkerd</span><br />
+<span class="f_CodeExample">spec:</span><br />
+<span class="f_CodeExample"> &nbsp;secretName: linkerd-proxy-injector-k8s-tls</span><br />
+<span class="f_CodeExample"> &nbsp;duration: 24h</span><br />
+<span class="f_CodeExample"> &nbsp;renewBefore: 1h</span><br />
+<span class="f_CodeExample"> &nbsp;issuerRef:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;name: webhook-issuer</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;kind: Issuer</span><br />
+<span class="f_CodeExample"> &nbsp;commonName: linkerd-proxy-injector.linkerd.svc</span><br />
+<span class="f_CodeExample"> &nbsp;dnsNames:</span><br />
+<span class="f_CodeExample"> &nbsp;- linkerd-proxy-injector.linkerd.svc</span><br />
+<span class="f_CodeExample"> &nbsp;isCA: false</span><br />
+<span class="f_CodeExample"> &nbsp;privateKey:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;algorithm: ECDSA</span><br />
+<span class="f_CodeExample"> &nbsp;usages:</span><br />
+<span class="f_CodeExample"> &nbsp;- server auth</span><br />
+<span class="f_CodeExample">---</span><br />
+<span class="f_CodeExample">apiVersion: cert-manager.io/v1</span><br />
+<span class="f_CodeExample">kind: Certificate</span><br />
+<span class="f_CodeExample">metadata:</span><br />
+<span class="f_CodeExample"> &nbsp;name: linkerd-sp-validator</span><br />
+<span class="f_CodeExample"> &nbsp;namespace: linkerd</span><br />
+<span class="f_CodeExample">spec:</span><br />
+<span class="f_CodeExample"> &nbsp;secretName: linkerd-sp-validator-k8s-tls</span><br />
+<span class="f_CodeExample"> &nbsp;duration: 24h</span><br />
+<span class="f_CodeExample"> &nbsp;renewBefore: 1h</span><br />
+<span class="f_CodeExample"> &nbsp;issuerRef:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;name: webhook-issuer</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;kind: Issuer</span><br />
+<span class="f_CodeExample"> &nbsp;commonName: linkerd-sp-validator.linkerd.svc</span><br />
+<span class="f_CodeExample"> &nbsp;dnsNames:</span><br />
+<span class="f_CodeExample"> &nbsp;- linkerd-sp-validator.linkerd.svc</span><br />
+<span class="f_CodeExample"> &nbsp;isCA: false</span><br />
+<span class="f_CodeExample"> &nbsp;privateKey:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;algorithm: ECDSA</span><br />
+<span class="f_CodeExample"> &nbsp;usages:</span><br />
+<span class="f_CodeExample"> &nbsp;- server auth</span><br />
+<span class="f_CodeExample">EOF</span><br />
+<span class="f_CodeExample">&nbsp;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<ul style="list-style-type:disc">
+<li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;">Control Plane certificate.</li></ul>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><a class="dropdown-toggle" style="font-style: normal; font-weight: normal; color: #000000; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186A2')">Execute the command</a></p>
+<div id="TOGGLE0186A2" class="dropdown-toggle-body" style="text-align: left; text-indent: 0; line-height: 1.28; padding: 0 0 0 0; margin: 0 0 11px 0;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample"># Create CA keys</span><br />
+<span class="f_CodeExample">step certificate create root.linkerd.cluster.local caRoot.crt caRoot.key --profile root-ca --no-password --insecure --not-after=87600h</span><br />
+<span class="f_CodeExample">kubectl create secret tls linkerd-trust-anchor --cert=caRoot.crt --key=caRoot.key --namespace=linkerd</span><br />
+<span class="f_CodeExample"># Create Issuer</span><br />
+<span class="f_CodeExample">kubectl apply -f - &lt;&lt;EOF</span><br />
+<span class="f_CodeExample">apiVersion: cert-manager.io/v1</span><br />
+<span class="f_CodeExample">kind: Issuer</span><br />
+<span class="f_CodeExample">metadata:</span><br />
+<span class="f_CodeExample"> &nbsp;name: linkerd-trust-anchor</span><br />
+<span class="f_CodeExample"> &nbsp;namespace: linkerd</span><br />
+<span class="f_CodeExample">spec:</span><br />
+<span class="f_CodeExample"> &nbsp;ca:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;secretName: linkerd-trust-anchor</span><br />
+<span class="f_CodeExample">EOF</span><br />
+<span class="f_CodeExample"># Create Certificate</span><br />
+<span class="f_CodeExample">kubectl apply -f - &lt;&lt;EOF</span><br />
+<span class="f_CodeExample">apiVersion: cert-manager.io/v1</span><br />
+<span class="f_CodeExample">kind: Certificate</span><br />
+<span class="f_CodeExample">metadata:</span><br />
+<span class="f_CodeExample"> &nbsp;name: linkerd-identity-issuer</span><br />
+<span class="f_CodeExample"> &nbsp;namespace: linkerd</span><br />
+<span class="f_CodeExample">spec:</span><br />
+<span class="f_CodeExample"> &nbsp;secretName: linkerd-identity-issuer</span><br />
+<span class="f_CodeExample"> &nbsp;duration: 48h</span><br />
+<span class="f_CodeExample"> &nbsp;renewBefore: 25h</span><br />
+<span class="f_CodeExample"> &nbsp;issuerRef:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;name: linkerd-trust-anchor</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;kind: Issuer</span><br />
+<span class="f_CodeExample"> &nbsp;commonName: identity.linkerd.cluster.local</span><br />
+<span class="f_CodeExample"> &nbsp;dnsNames:</span><br />
+<span class="f_CodeExample"> &nbsp;- identity.linkerd.cluster.local</span><br />
+<span class="f_CodeExample"> &nbsp;isCA: true</span><br />
+<span class="f_CodeExample"> &nbsp;privateKey:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;algorithm: ECDSA</span><br />
+<span class="f_CodeExample"> &nbsp;usages:</span><br />
+<span class="f_CodeExample"> &nbsp;- cert sign</span><br />
+<span class="f_CodeExample"> &nbsp;- crl sign</span><br />
+<span class="f_CodeExample"> &nbsp;- server auth</span><br />
+<span class="f_CodeExample"> &nbsp;- client auth</span><br />
+<span class="f_CodeExample">EOF</span><br />
+<span class="f_CodeExample">&nbsp;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h2 class="p_Heading2"><a id="helm-chart" class="hmanchor"></a><span class="f_Heading2">Step 2: Download the Helm chart and configuration file</span></h2>
+<p style="line-height: 1.28; margin: 0 0 11px 0;">To install Linkerd via the internet, retrieve the configuration file <code><b>values-linkerd.yaml</b></code><span style="font-size: 13px;"> </span>by executing the following command:</p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">helm&nbsp;repo&nbsp;add&nbsp;elma365&nbsp;https://charts.elma365.tech</span><br />
+<span class="f_CodeExample">helm&nbsp;repo&nbsp;update</span><br />
+<span class="f_CodeExample">helm&nbsp;show&nbsp;values&nbsp;elma365/linkerd&nbsp;&gt;&nbsp;values-linkerd.yaml</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><a class="dropdown-toggle" style="font-style: normal; font-weight: normal; color: #000000; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186A3')">Obtaining the configuration file for installation in an offline environment:
+
+</a></p>
+<div id="TOGGLE0186A3" class="dropdown-toggle-body" style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0 0 0 0;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><ol style="list-style-type:decimal">
+<li value="1" class="p_Normal">On a computer with internet access, download the latest version of the <span style="font-weight: bold;">Linkerd</span> chart archive from the BRIX repository using the command:</li></ol>
+<p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample">helm repo add elma365 https://charts.elma365.tech</span><br />
+<span class="f_CodeExample">helm repo update</span><br />
+<span class="f_CodeExample">helm pull elma365/linkerd</span></p>
+<ol style="list-style-type:decimal" start="2">
+<li value="2" class="p_Normal">Copy the downloaded <code><b>linkerd-X.Y.Z.tgz</b></code> chart archive to the server where it will be installed.</li><li value="3" class="p_Normal">Unpack the chart on the server and copy the default configuration file <code><b>values.yaml</b></code> to <code><b>values-linkerd.yaml</b></code> using the command:</li></ol>
+<p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample">tar -xf linkerd-X.Y.Z.tgz</span><br />
+<span class="f_CodeExample">cp linkerd/values.yaml values-linkerd.yaml</span></p>
+<p class="p_Normal">&nbsp;</p>
+</td>
+</tr>
+</table>
+</div>
+<h2 class="p_Heading2"><a id="configuration-file" class="hmanchor"></a><span class="f_Heading2">Step 3: Fill out the configuration file</span></h2>
+<p class="p_Normal">Fill in the configuration file <code><b>values-linkerd.yaml</b></code> for installing Linkerd:</p>
+<ol style="list-style-type:upper-roman">
+<li value="1" class="p_Normal">Specify the DNS domain name of the Kubernetes cluster in the parameter <code><b>linkerd.clusterDomain</b></code>. In this example, the domain name is <code><b>cluster.local</b></code>:</li></ol>
+<p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample"># Linkerd settings</span><br />
+<span class="f_CodeExample">linkerd:</span><br />
+<span class="f_CodeExample"> &nbsp;# DNS name of the Kubernetes domain</span><br />
+<span class="f_CodeExample"> &nbsp;clusterDomain: cluster.local</span><br />
+<span class="f_CodeExample"> &nbsp;# adds PodSecurityPolicy resource (deprecated as of k8s v1.21)</span><br />
+<span class="f_CodeExample"> &nbsp;enablePSP: false</span><br />
+<span class="f_CodeExample"> &nbsp;# disable heartbeat</span><br />
+<span class="f_CodeExample"> &nbsp;disableHeartBeat: false &nbsp;</span><br />
+<span class="f_CodeExample">...</span></p>
+<ol style="list-style-type:upper-roman" start="2">
+<li value="2" class="p_Normal">To ensure high availability, you may uncomment the parameters in the <span style="font-weight: bold;">high availability settings section</span>.</li></ol>
+<p class="p_Normal"><a class="dropdown-toggle" style="font-style: normal; font-weight: normal; color: #000000; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186A4')">Example of enabling high availability</a></p>
+<div id="TOGGLE0186A4" class="dropdown-toggle-body" style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0 0 0 0;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample"># linkerd settings</span><br />
+<span class="f_CodeExample">linkerd:</span><br />
+<span class="f_CodeExample">...</span><br />
+<span class="f_CodeExample">#</span><br />
+<span class="f_CodeExample"># parameters for high availability</span><br />
+<span class="f_CodeExample"> &nbsp;controllerReplicas: 3</span><br />
+<span class="f_CodeExample"> &nbsp;enablePodDisruptionBudget: true</span><br />
+<span class="f_CodeExample"> &nbsp;deploymentStrategy:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;rollingUpdate:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;maxUnavailable: 1</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;maxSurge: 25%</span><br />
+<span class="f_CodeExample"> &nbsp;enablePodAntiAffinity: true</span><br />
+<span class="f_CodeExample"> &nbsp;proxy:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;resources:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;cpu:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;request: 100m</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;memory:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;limit: 250Mi</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;request: 20Mi</span><br />
+<span class="f_CodeExample"> &nbsp;controllerResources: &amp;controller_resources</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;cpu: &amp;controller_resources_cpu</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;limit: &quot;&quot;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;request: 100m</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;memory:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;limit: 250Mi</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;request: 50Mi</span><br />
+<span class="f_CodeExample"> &nbsp;destinationResources: *controller_resources</span><br />
+<span class="f_CodeExample"> &nbsp;identityResources:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;cpu: *controller_resources_cpu</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;memory:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;limit: 250Mi</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;request: 10Mi</span><br />
+<span class="f_CodeExample"> &nbsp;heartbeatResources: *controller_resources</span><br />
+<span class="f_CodeExample"> &nbsp;proxyInjectorResources: *controller_resources</span><br />
+<span class="f_CodeExample"> &nbsp;webhookFailurePolicy: Ignore</span><br />
+<span class="f_CodeExample"> &nbsp;spValidatorResources: *controller_resources</span><br />
+<span class="f_CodeExample"># </span><br />
+<span class="f_CodeExample">...</span></p>
+<p class="p_Normal">&nbsp;</p>
+</td>
+</tr>
+</table>
+</div>
+<ol style="list-style-type:upper-roman" start="3">
+<li value="3" class="p_Normal"> If you have installed <a href="install-monitoring-tools.html" class="topiclink">monitoring tools</a>, specify the parameter for Linkerd metrics:</li></ol>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">#&nbsp;Connection&nbsp;parameter&nbsp;for&nbsp;metrics&nbsp;collection</span><br />
+<span class="f_CodeExample">podMonitor:</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;enabled:&nbsp;true</span></p>
+<ol style="list-style-type:upper-roman" start="3">
+<li value="4" class="p_Normal">If you install Linkerd in an isolated environment without internet access, fill out the connection parameters for the private <span style="font-weight: bold;">registry</span>.</li></ol>
+<p class="p_Normal"><a class="dropdown-toggle" style="font-style: normal; font-weight: normal; color: #000000; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186A5')">How to fill out the connection parameters for the private registry</a></p>
+<div id="TOGGLE0186A5" class="dropdown-toggle-body" style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0 0 0 0;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_Normal">&nbsp;</p>
+<ol style="list-style-type:decimal">
+<li value="1" class="p_Normal">Download the BRIX images and upload them to your local image registry. For more details, read  <a href="downloadin-images-elma365.html" class="topiclink">Download BRIX images</a>.</li><li value="2" class="p_Normal">Set the address and path in the parameters <code><b>linkerd.controllerImage</b></code>, <code><b>linkerd.policyController.image.name</b></code>, <code><b>linkerd.proxy.image.name</b></code>, <code><b>linkerd.proxyInit.image.name</b></code>.</li><li value="3" class="p_Normal">Specify the name of the secret with access rights to the private <code><b>registry</b></code> in the parameter <code><b>linkerd.imagePullSecrets</b></code>. The secret must be created manually and encrypted in Base64.</li></ol>
+<p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample"># linkerd settings</span><br />
+<span class="f_CodeExample">linkerd:</span><br />
+<span class="f_CodeExample">...</span><br />
+<span class="f_CodeExample"> &nbsp;# Parameters for connecting to a private registry</span><br />
+<span class="f_CodeExample"> &nbsp;# Address and path for the private registry</span><br />
+<span class="f_CodeExample"> &nbsp;controllerImage: registry.example.com/linkerd/controller</span><br />
+<span class="f_CodeExample"> &nbsp;policyController:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;image:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;# Address and path for the private registry</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;name: registry.example.com/linkerd/policy-controller</span><br />
+<span class="f_CodeExample"> &nbsp;proxy:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;image:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;# Address and path for the private registry</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;name: registry.example.com/linkerd/proxy</span><br />
+<span class="f_CodeExample"> &nbsp;proxyInit:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;image:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;# Address and path for the private registry</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;name: registry.example.com/linkerd/proxy-init</span><br />
+<span class="f_CodeExample"> &nbsp;# he secret with access rights to the private registry must be manually created and encrypted in Base64</span><br />
+<span class="f_CodeExample"> &nbsp;imagePullSecrets:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;- name: myRegistryKeySecretName</span></p>
+<p class="p_Normal">Where the format is:</p>
+<ul style="list-style-type:disc">
+<li class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><code><b>linkerd.controllerImage</b></code>:</li></ul>
+<ul style="list-style-type:circle">
+<li class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;">Address is <code><b>registry.example.com</b></code><span class="f_CodeExample">.</span></li><li class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;">Path is <code><b>/linkerd/controller</b></code><span class="f_CodeExample">.</span></li></ul>
+<ul style="list-style-type:disc">
+<li class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><code><b>linkerd.policyController.image.name</b></code>:</li></ul>
+<ul style="list-style-type:circle">
+<li class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;">Address is <code><b>registry.example.com</b></code><span class="f_CodeExample">.</span></li><li class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;">Path is <code><b>/linkerd/policy-controller</b></code><span class="f_CodeExample">.</span></li></ul>
+<ul style="list-style-type:disc">
+<li class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><code><b>linkerd.proxy.image.name</b></code>:</li></ul>
+<ul style="list-style-type:circle">
+<li class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;">Address is <code><b>registry.example.com</b></code><span class="f_CodeExample">.</span></li><li class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;">Path is <code><b>/linkerd/proxy</b></code><span class="f_CodeExample">.</span></li></ul>
+<ul style="list-style-type:disc">
+<li class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><code><b>linkerd.proxyInit.image.name</b></code>:</li></ul>
+<ul style="list-style-type:circle">
+<li class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;">Address: <code><b>registry.example.com</b></code><span class="f_CodeExample">.</span></li><li class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;">Path is <code><b>/linkerd/proxy-init</b></code>.</li></ul>
+</td>
+</tr>
+</table>
+</div>
+<h2 class="p_Heading2"><a id="install-chart" class="hmanchor"></a><span class="f_Heading2">Step 4: Install the Linkerd chart using Helm in a Kubernetes cluster</span></h2>
+<p class="p_Normal">Install the <span style="font-weight: bold;">Linkerd</span> chart in <code><b>namespace linkerd</b></code>. The namespace will be created during installation if it has not been created earlier. Below is the installation command from the directory where the certificates were created in <a href="linkerd-with-cert-manager.html#prepare-certificate" class="topiclink">Step 1</a>. If you are running the command from a different directory, specify the paths to the certificates created in <a href="linkerd-with-cert-manager.html#prepare-certificate" class="topiclink">Step 1</a> (<code><b>caRoot.crt</b></code>, <code><b>caWebhook.crt</b></code>).</p>
+<p class="p_Normal">For installation via the internet:</p>
+<p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample">helm upgrade --install linkerd elma365/linkerd -f values-linkerd.yaml -n linkerd --create-namespace \</span><br />
+<span class="f_CodeExample">--set-file linkerd.identityTrustAnchorsPEM=caRoot.crt \</span><br />
+<span class="f_CodeExample">--set linkerd.identity.issuer.scheme=kubernetes.io/tls \</span><br />
+<span class="f_CodeExample">--set linkerd.policyValidator.externalSecret=true \</span><br />
+<span class="f_CodeExample">--set-file linkerd.policyValidator.caBundle=caWebhook.crt \</span><br />
+<span class="f_CodeExample">--set linkerd.proxyInjector.externalSecret=true \</span><br />
+<span class="f_CodeExample">--set-file linkerd.proxyInjector.caBundle=caWebhook.crt \</span><br />
+<span class="f_CodeExample">--set linkerd.profileValidator.externalSecret=true \</span><br />
+<span class="f_CodeExample">--set-file linkerd.profileValidator.caBundle=caWebhook.crt</span></p>
+<p class="p_Normal">For offline installation without internet access:</p>
+<p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample">helm upgrade --install linkerd ./linkerd -f values-linkerd.yaml -n linkerd --create-namespace \</span><br />
+<span class="f_CodeExample">--set-file linkerd.identityTrustAnchorsPEM=caRoot.crt \</span><br />
+<span class="f_CodeExample">--set linkerd.identity.issuer.scheme=kubernetes.io/tls \</span><br />
+<span class="f_CodeExample">--set linkerd.policyValidator.externalSecret=true \</span><br />
+<span class="f_CodeExample">--set-file linkerd.policyValidator.caBundle=caWebhook.crt \</span><br />
+<span class="f_CodeExample">--set linkerd.proxyInjector.externalSecret=true \</span><br />
+<span class="f_CodeExample">--set-file linkerd.proxyInjector.caBundle=caWebhook.crt \</span><br />
+<span class="f_CodeExample">--set linkerd.profileValidator.externalSecret=true \</span><br />
+<span class="f_CodeExample">--set-file linkerd.profileValidator.caBundle=caWebhook.crt</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">Начало&nbsp;внимание</span></p>
+<p class="p_Normal">After installing Linkerd, change the BRIX application settings and set up autoscaling of services. Read more in the <a href="autoscaling-service-enterprise.html" class="topiclink">Enable service autoscaling in BRIX Enterprise</a> article.</p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">Конец&nbsp;внимание</span></p>
+<h2 class="p_Heading2"><a id="delete-chart" class="hmanchor"></a><span class="f_Heading2">Uninstall the Linkerd chart with Helm in a Kubernetes cluster</span></h2>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">Начало&nbsp;внимание</span></p>
+<p class="p_Normal">Before removing the Linkerd add-on component, disable autoscaling on the BRIX application side.</p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">Конец&nbsp;внимание</span></p>
+<p class="p_Normal">To delete the <span style="font-weight: bold;">Linkerd</span> chart in <code><b>namespace linkerd</b></code>, run the following command:</p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">helm&nbsp;uninstall&nbsp;linkerd&nbsp;-n&nbsp;linkerd</span></p>
+<p class="p_Normal">&nbsp;</p>
+
+                        <div class="bottom-nav">
+                            
+                                <a id="prev-link" class="topic__navi_prev" href="install-linkerd.html">
+                                    <span class="bottom-nav__arrow bottom-nav__arrow--prev"></span> <span
+                                        class="bottom-nav__link">install-linkerd.html</span>
+                                </a>
+                            
+                            
+                                <a id="next-link" class="topic__navi_next" href="install-hostpath-provisioner.html">
+                                    <span class="bottom-nav__link">install-hostpath-provisioner.html</span> <span
+                                        class="bottom-nav__arrow bottom-nav__arrow--next"></span>
+                                </a>
+                            
+                        </div>
+                        <!-- добавляет на страницу строку блок Была ли статья полезной?  -->
+                          <div class="feedback" id="feedback"><div class="feedback-help"><span><b>Was this helpful?</b></span><form action="" method="POST" class="feedback-form" id="feedback-form"><div class="feedback__popup feedback__popup-response" id="feedback__popup_thx" style="display: none;">Thanks for your feedback!</div><div class="feedback__popup" id="feedback__popup_why" style="display: none;"><div class="feedback__popup-header">Please specify why:</div><input type="radio" name="category" id="bad_recommendation" value="bad_recommendation"><label for="bad_recommendation">Recommendations did not help me</label><input type="radio" name="category" id="difficult_text" value="difficult_text"><label for="difficult_text">Article is hard to understand</label><input type="radio" name="category" id="no_answer" value="no_answer"><label for="no_answer">Didn`t answer my question</label><input type="radio" name="category" id="bad_header" value="bad_header"><label for="bad_header">Content does not match the topic</label><input type="radio" name="category" id="other_reason" value="other_reason"><label for="other_reason">Other</label></div><div class="feedback__popup" id="feedback__popup-other" style="display: none;"><div class="feedback__popup-header">How we can improve it?</div><textarea class="feedback__textarea" name="other" id=""></textarea><input type="submit" class="feedback__other-btn" value="Submit"></div><div class="feedback-form__btn-group"><input type="radio" name="useful" id="feedback__useful_yes" value="true"><label for="feedback__useful_yes"><img src="like.svg" class="small-img" alt="like"><spanclass="feedback-form__btn-group_yes-btn">Yes</spanclass="feedback-form__btn-group_yes-btn"></label><input type="radio" name="useful" id="feedback__useful_no" value="false"><label for="feedback__useful_no"><img src="dislike.svg" class="small-img" alt="dislike"><spanclass="feedback-form__btn-group_no-btn">No</spanclass="feedback-form__btn-group_no-btn"></label></div><select name="category"><option disabled="">Please specify why</option><option value="bad_recommendation" selected="">Recommendations did not help me</option><option value="difficult_text">Article is hard to understand</option><option value="no_answer">Didn`t answer my question</option><option value="bad_header">Content does not match the topic</option><option value="other_reason">Other</option></select><input type="submit"></form></div><div class="found_typo"><p style="margin: 0px; margin-top: 16px !important;"><span><b>Found a typo?</b></span> Select it and press <i>Ctrl+Enter</i> to send us feedback</p></div></div>
+                           
+                    </section>
+                </div>
+                <aside class="article__sidebar" style="display:none">
+                    <input type="checkbox" />
+                    <div class="article__arrow"></div>
+                    <div class="table-of-contents elma365-right" id="toc2Content">
+                        <h3 class="h3-toc">In this topic</h3>
+                        <nav id="toc2"></nav>
+                    </div>
+                </aside>
+            </div>
+        </article>
+    </main>               
+    <footer class="footer">
+        <div class="footer-container">
+  <div class="footer-mobile">
+    
+    <ul class="footer-mobile__list"><li><a href="https://brix365.com/en/" target="_blank">BRIX</a></li><li><a href="https://tssdk.brix365.com/en/latest/" target="_blank">SDK</a></li><li><a href="https://api.brix365.com/en/" target="_blank">API</a></li></ul><ul class="footer-mobile__list"><li><a href="https://brix365.com/en/help/platform/get-trial.html">Platform</a></li><li><a href="https://brix365.com/en/help/ecm/ecm-functions.html">ECM</a></li><li><a href="https://brix365.com/en/help/service/service-functions.html">Service</a></li><li><a href="https://brix365.com/en/help/projects/projects-functions.html">Projects</a></li></ul>
+    
+    
+  </div>
+  <div class="footer-wrap">
+    
+      <div><span class="mobile-question-popup">Send feedback</span><form method="POST" action class="question__popup question-xs" id="question__popup"><div class="question-wrap"><span class="close"></span><span class="title">Ask a question</span><label for="help_question" style="display: none;"></label><textarea name="help_question" id="help_question"></textarea><input type="submit" value="Send"></div></form><div class="hidden fade-in question-success-xs">Sent</div></div>
+    
+    <div class="footer-flex-b">
+      <span class="footer-copy">&copy; 2025 BRIX</span>
+      <ul class="footer-list">
+        
+        <li class="footer-item">
+            <a href="#" class="arrow-top" style="display: block;"></a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+ 
+    </footer>
+    <iframe name="hmnavigation" style="display:none!important"></iframe>
+    <script src="./jquery-ui.js"></script>
+    <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
+    <script src="./jquery.tocify.min.js"></script>
+    <script src="./TypoReporter.min.js"></script>
+    <script src="./google-search.js"></script>
+    <script src="./main.js"></script>
+<script type="text/javascript">
+HMInitToggle('TOGGLE0186A1','hm.type','dropdown','hm.state','0');
+HMInitToggle('TOGGLE0186A2','hm.type','dropdown','hm.state','0');
+HMInitToggle('TOGGLE0186A3','hm.type','dropdown','hm.state','0');
+HMInitToggle('TOGGLE0186A4','hm.type','dropdown','hm.state','0');
+HMInitToggle('TOGGLE0186A5','hm.type','dropdown','hm.state','0');
+</script>
+</body>
+
+</html>

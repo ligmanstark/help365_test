@@ -1,0 +1,194 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Dynamic forms</title>
+    <meta name="generator" content="Help+Manual" />
+    <meta name="keywords" content="" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The layout of a task form or app item can change depending on the data that the user enters into the system in the process of work. This allows not to overload forms with..." />
+    <meta name="picture" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Full documentation for BRIX365 platform. Low-code developer guide. User guide. Admin guide. Developer guide." />
+    <meta property="og:url" content="https://brix365.com/en/help" />
+    <meta property="og:image" content="" />                                                              
+    <link rel="icon" href="favicon.png" type="image/png" />
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./jquery-ui.min.css" />
+    <link rel="stylesheet" href="default.css" />
+    <link rel="stylesheet" href="./search-yandex.css" />
+    <link rel="stylesheet" href="./article.css" />
+    <link rel="stylesheet" href="./glossary.css" />
+    <link rel="stylesheet" href="./theme.css" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+
+<body>
+    
+    <script>!function(e,t,c,n,r,a,m){e.ym=e.ym||function(){(e.ym.a=e.ym.a||[]).push(arguments)},e.ym.l=1*new Date;for(var s=0;s<document.scripts.length;s++)if(document.scripts[s].src===n)return;a=t.createElement(c),m=t.getElementsByTagName(c)[0],a.async=1,a.src=n,m.parentNode.insertBefore(a,m)}(window,document,"script","https://mc.yandex.ru/metrika/tag.js"),ym(83179930,"init",{clickmap:!0,trackLinks:!0,accurateTrackBounce:!0,webvisor:!0})</script><noscript><div><img alt=""src=https://mc.yandex.ru/watch/83179930 style=position:absolute;left:-9999px></div></noscript> 
+    
+    ﻿<header class="header elma-365">
+  <div class="container">
+    <a class="header__logo" href="https://brix365.com/en/help">
+      <img src="./logo-en.svg" alt="header logo">
+    </a>
+ <!-- <div class="hero__search-form" id="search-panel">
+   <form class="search-form" onsubmit="ym(83180416,'reachGoal','poisk')">
+     <label class="search-form__label">
+       <span id="reset-search" class="search__icon"></span>
+       <input class="search-form__input" type="text">
+     </label>
+     <input class="search-form__submit" type="submit" value="Submit">
+   </form>
+  </div>       -->
+  
+     <div class="hero__search-form" id="search-panel"> <form class="search-form"> <label class="search-form__label"> <span id="reset-search" class="search__icon"></span> <input class="search-form__input" type="text"> </label> <input class="search-form__submit" type="submit" value="Submit"> </form> </div> 
+  <div class="hero__search">
+      <a href="#" id="search-icon" class="hero__search-icon">
+        <img src="search-icon-white.svg" alt="search string">
+      </a>
+      <a href="#" id="side-menu-icon" class="hero__side-icon">
+        <img src="side_menu.svg" alt="side menu">
+      </a>
+    </div>  
+  <div class="header__navi">
+        
+        <ul class="header__list"><li><span class="solution-select"><span class="solution-select__selected"></span><svg width="7" height="4" viewBox="0 0 7 4" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L3.5 3.5L6 1" stroke="white" stroke-linecap="round" stroke-linejoin="round"/></svg><ul class="solution-select__list"><li><a class="project-link" href="https://brix365.com/en/help/platform/get-trial.html">Platform</a></li><li><a class="project-link" href="https://brix365.com/en/help/ecm/ecm-functions.html">ECM</a></li><li><a class="project-link" href="https://brix365.com/en/help/crm/crm_overview.html">CRM</a></li><li><a class="project-link" href="https://brix365.com/en/help/service/service-functions.html">Service</a></li><li><a class="project-link" href="https://brix365.com/en/help/projects/projects-functions.html">Projects</a></li><li><a class="project-link" href="https://brix365.com/en/help/business_solutions/-elma365-store.html">Business Solutions</a></li></ul></span></li><li><a href="https://api.brix365.com/en/" target="_blank">API</a></li><li><a href="https://tssdk.brix365.com/" target="_blank">SDK</a></li></ul>
+        
+        
+   </div>
+  </div>
+
+</header>
+
+
+
+    
+    <main class="main container">
+
+        <aside class="sidebar" id="sidebar">
+        <div class="sidebar__header">
+                 <a class="header__logo" href="https://brix365.com/en/help">
+                    <img src="./logo-light-en.svg">
+                 </a>
+                    <span class="sidebar__close elma-365-close" id="close"></span>
+            </div>
+            <div class="sidebar__wrapper" id="side-menu">
+                
+            </div>
+        </aside>
+
+        <article class="article" id="article">
+            <div class="article-inner">           
+                <div class="content">
+                    <header class="article__header">
+                        
+                            <div class="topic__breadcrumbs">
+                                <p>Low-code designer &gt; <a href="create_form.html">Custom forms</a> &gt; <a href="360029250931.html">Form templates</a> / Dynamic forms</p>
+                            </div>
+                        
+                        <div class="topic__title"><h1 class="p_Heading1" style="text-align: center; line-height: 1.20; margin: 19px 0 19px 0;"><span class="f_Heading1" style="font-size: 32px;">Dynamic forms</span></h1>
+</div>
+                    
+</header>
+                    <section class="article__content">
+                        <div class="scroll-top-inner">
+                            <a href="#h1-article" class="scroll-top"></a>
+                        </div>
+                        <!-- Placeholder for topic body. -->
+                        <p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;">The layout of a <a href="360012495611.html#form" class="topiclink">task form</a> or <a href="360009918011.html" class="topiclink">app item</a> can change depending on the data that the user enters into the system in the process of work. This allows not to overload forms with fields and buttons. They are shown only when they are necessary. Forms that adjust to the user in this way are called dynamic forms.</p>
+<h2 class="p_Heading2" style="line-height: 1.20; margin: 19px 0 0 0;"><span class="f_Heading2" style="font-size: 24px;">How it works</span></h2>
+<p class="p_Normal" style="line-height: 1.20; margin: 19px 0 0 0;">Suppose a company sells office furniture. They keep track of all the client orders using a special app. Each order has its own page in the system that displays such information as <span style="font-weight: bold;">Description</span>, <span style="font-weight: bold;">Quantity</span>, <span style="font-weight: bold;">Price</span>,<span style="font-weight: bold;"> </span>and <span style="font-weight: bold;">Total</span>.</p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;"><img alt="DF1" width="600" height="316" style="margin:0;width:600px;height:316px;border:none" src="df1.png"/></p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;">If the total order amount is more than 250 USD, the company gives customers a discount. As soon as the sales rep specifies the <span style="font-weight: bold;">Total amount </span>of<span style="font-weight: bold;"> </span>more than 250 USD, an additional <span style="font-weight: bold;">Discount</span> field will automatically appear on the page. The sales rep will write down the discount, and BRIX will calculate the total discounted amount.</p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;"><img alt="DF2" width="609" height="322" style="margin:0;width:609px;height:322px;border:none" src="df2.png"/></p>
+<h2 class="p_Heading2" style="line-height: 1.20; margin: 19px 0 0 0;"><span class="f_Heading2" style="font-size: 24px;">Set up a dynamic form</span></h2>
+<p class="p_Normal" style="line-height: 1.20; margin: 19px 0 0 0;">Dynamic forms are configured using the <a href="code_widget.html" class="topiclink">Code widget</a>. You can use this widget both on process task forms and app item forms.</p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;">The widget is added to the task form in the form editor. You can read more about it in the following articles: <a href="360012495991.html" class="topiclink">Forms tab</a> and <a href="interface_designer.html" class="topiclink">Interface designer</a>. From them you can also learn how to set up a custom task form, and how to add and configure widgets in it.</p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;">The widget is added to the app item form in the <a href="360028941032.html" class="topiclink">advanced mode</a>. In this mode, you can configure the layout of the page and create a custom template with widgets. Please note that only the <a href="360029250871.html#create_tab" class="topiclink">creation</a> and <a href="360029250871.html#edit_tab" class="topiclink">editing</a> forms can be made dynamic since these are the forms used for the data input. </p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;">When you add the <span style="font-weight: bold;">Code</span> widget to a form, you can specify the necessary logic in it using <a href="https://tssdk.brix365.com/en/latest/index.html" target="_blank" class="weblink">scripts</a>. For this purpose, it is recommended to read the following articles:</p>
+<ul style="list-style-type:disc">
+<li style="line-height: 1.20;"><a href="https://tssdk.brix365.com/en/latest/modules/_102_ui_widgets_.html" class="weblink">“Code” widget</a>. API for working with app item forms and forms in business processes.</li><li style="line-height: 1.20;"><a href="type-script.html" class="topiclink">Scripts in TypeScript</a>. Here you can find information about scripts for working with system objects and external pages.</li></ul>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;внимание</span></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;">Using <code><b>Global</b></code> or <code><b>Namespace</b></code> constants in scripts restricts the export of system components. Read more about it in the <a href="global-constants.html" class="topiclink">Global constants in scripts</a> article<span style="font-family: Inter;">.</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;внимание</span></p>
+<h2 class="p_Heading2"><span class="f_Heading2">Filters on a dynamic form</span></h2>
+<p style="line-height: 1.20;">To simplify form filling for a user, you can set up the list of items that are available for selection in the <a href="360009707032.html#app" class="topiclink">App</a> and <a href="360009707032.html#users" class="topiclink">Users</a> type fields.</p>
+<p style="line-height: 1.20;">To do this, set filtering conditions using the <a href="limit-selection-of-elements.html" class="topiclink">Add filter</a> option. For example, for the <span style="font-weight: bold;">App</span> type property, you can show only records created after a certain date, and in the <span style="font-weight: bold;">Users</span> type field, you can show employees from a specific group.</p>
+
+                        <div class="bottom-nav">
+                            
+                                <a id="prev-link" class="topic__navi_prev" href="360029250931.html">
+                                    <span class="bottom-nav__arrow bottom-nav__arrow--prev"></span> <span
+                                        class="bottom-nav__link">360029250931.html</span>
+                                </a>
+                            
+                            
+                                <a id="next-link" class="topic__navi_next" href="display-widgets-in-reusable-template.html">
+                                    <span class="bottom-nav__link">display-widgets-in-reusable-template.html</span> <span
+                                        class="bottom-nav__arrow bottom-nav__arrow--next"></span>
+                                </a>
+                            
+                        </div>
+                        <!-- добавляет на страницу строку блок Была ли статья полезной?  -->
+                          <div class="feedback" id="feedback"><div class="feedback-help"><span><b>Was this helpful?</b></span><form action="" method="POST" class="feedback-form" id="feedback-form"><div class="feedback__popup feedback__popup-response" id="feedback__popup_thx" style="display: none;">Thanks for your feedback!</div><div class="feedback__popup" id="feedback__popup_why" style="display: none;"><div class="feedback__popup-header">Please specify why:</div><input type="radio" name="category" id="bad_recommendation" value="bad_recommendation"><label for="bad_recommendation">Recommendations did not help me</label><input type="radio" name="category" id="difficult_text" value="difficult_text"><label for="difficult_text">Article is hard to understand</label><input type="radio" name="category" id="no_answer" value="no_answer"><label for="no_answer">Didn`t answer my question</label><input type="radio" name="category" id="bad_header" value="bad_header"><label for="bad_header">Content does not match the topic</label><input type="radio" name="category" id="other_reason" value="other_reason"><label for="other_reason">Other</label></div><div class="feedback__popup" id="feedback__popup-other" style="display: none;"><div class="feedback__popup-header">How we can improve it?</div><textarea class="feedback__textarea" name="other" id=""></textarea><input type="submit" class="feedback__other-btn" value="Submit"></div><div class="feedback-form__btn-group"><input type="radio" name="useful" id="feedback__useful_yes" value="true"><label for="feedback__useful_yes"><img src="like.svg" class="small-img" alt="like"><spanclass="feedback-form__btn-group_yes-btn">Yes</spanclass="feedback-form__btn-group_yes-btn"></label><input type="radio" name="useful" id="feedback__useful_no" value="false"><label for="feedback__useful_no"><img src="dislike.svg" class="small-img" alt="dislike"><spanclass="feedback-form__btn-group_no-btn">No</spanclass="feedback-form__btn-group_no-btn"></label></div><select name="category"><option disabled="">Please specify why</option><option value="bad_recommendation" selected="">Recommendations did not help me</option><option value="difficult_text">Article is hard to understand</option><option value="no_answer">Didn`t answer my question</option><option value="bad_header">Content does not match the topic</option><option value="other_reason">Other</option></select><input type="submit"></form></div><div class="found_typo"><p style="margin: 0px; margin-top: 16px !important;"><span><b>Found a typo?</b></span> Select it and press <i>Ctrl+Enter</i> to send us feedback</p></div></div>
+                           
+                    </section>
+                </div>
+                <aside class="article__sidebar" style="display:none">
+                    <input type="checkbox" />
+                    <div class="article__arrow"></div>
+                    <div class="table-of-contents elma365-right" id="toc2Content">
+                        <h3 class="h3-toc">In this topic</h3>
+                        <nav id="toc2"></nav>
+                    </div>
+                </aside>
+            </div>
+        </article>
+    </main>               
+    <footer class="footer">
+        <div class="footer-container">
+  <div class="footer-mobile">
+    
+    <ul class="footer-mobile__list"><li><a href="https://brix365.com/en/" target="_blank">BRIX</a></li><li><a href="https://tssdk.brix365.com/en/latest/" target="_blank">SDK</a></li><li><a href="https://api.brix365.com/en/" target="_blank">API</a></li></ul><ul class="footer-mobile__list"><li><a href="https://brix365.com/en/help/platform/get-trial.html">Platform</a></li><li><a href="https://brix365.com/en/help/ecm/ecm-functions.html">ECM</a></li><li><a href="https://brix365.com/en/help/service/service-functions.html">Service</a></li><li><a href="https://brix365.com/en/help/projects/projects-functions.html">Projects</a></li></ul>
+    
+    
+  </div>
+  <div class="footer-wrap">
+    
+      <div><span class="mobile-question-popup">Send feedback</span><form method="POST" action class="question__popup question-xs" id="question__popup"><div class="question-wrap"><span class="close"></span><span class="title">Ask a question</span><label for="help_question" style="display: none;"></label><textarea name="help_question" id="help_question"></textarea><input type="submit" value="Send"></div></form><div class="hidden fade-in question-success-xs">Sent</div></div>
+    
+    <div class="footer-flex-b">
+      <span class="footer-copy">&copy; 2025 BRIX</span>
+      <ul class="footer-list">
+        
+        <li class="footer-item">
+            <a href="#" class="arrow-top" style="display: block;"></a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+ 
+    </footer>
+    <iframe name="hmnavigation" style="display:none!important"></iframe>
+    <script src="./jquery-ui.js"></script>
+    <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
+    <script src="./jquery.tocify.min.js"></script>
+    <script src="./TypoReporter.min.js"></script>
+    <script src="./google-search.js"></script>
+    <script src="./main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,305 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Configure a portable service in a module</title>
+    <meta name="generator" content="Help+Manual" />
+    <meta name="keywords" content="" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portable services allow you to integrate microservices into custom modules, extending their functionality." />
+    <meta name="picture" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Full documentation for BRIX365 platform. Low-code developer guide. User guide. Admin guide. Developer guide." />
+    <meta property="og:url" content="https://brix365.com/en/help" />
+    <meta property="og:image" content="" />                                                              
+    <link rel="icon" href="favicon.png" type="image/png" />
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./jquery-ui.min.css" />
+    <link rel="stylesheet" href="default.css" />
+    <link rel="stylesheet" href="./search-yandex.css" />
+    <link rel="stylesheet" href="./article.css" />
+    <link rel="stylesheet" href="./glossary.css" />
+    <link rel="stylesheet" href="./theme.css" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+
+<body>
+    
+    <script>!function(e,t,c,n,r,a,m){e.ym=e.ym||function(){(e.ym.a=e.ym.a||[]).push(arguments)},e.ym.l=1*new Date;for(var s=0;s<document.scripts.length;s++)if(document.scripts[s].src===n)return;a=t.createElement(c),m=t.getElementsByTagName(c)[0],a.async=1,a.src=n,m.parentNode.insertBefore(a,m)}(window,document,"script","https://mc.yandex.ru/metrika/tag.js"),ym(83179930,"init",{clickmap:!0,trackLinks:!0,accurateTrackBounce:!0,webvisor:!0})</script><noscript><div><img alt=""src=https://mc.yandex.ru/watch/83179930 style=position:absolute;left:-9999px></div></noscript> 
+    
+    ﻿<header class="header elma-365">
+  <div class="container">
+    <a class="header__logo" href="https://brix365.com/en/help">
+      <img src="./logo-en.svg" alt="header logo">
+    </a>
+ <!-- <div class="hero__search-form" id="search-panel">
+   <form class="search-form" onsubmit="ym(83180416,'reachGoal','poisk')">
+     <label class="search-form__label">
+       <span id="reset-search" class="search__icon"></span>
+       <input class="search-form__input" type="text">
+     </label>
+     <input class="search-form__submit" type="submit" value="Submit">
+   </form>
+  </div>       -->
+  
+     <div class="hero__search-form" id="search-panel"> <form class="search-form"> <label class="search-form__label"> <span id="reset-search" class="search__icon"></span> <input class="search-form__input" type="text"> </label> <input class="search-form__submit" type="submit" value="Submit"> </form> </div> 
+  <div class="hero__search">
+      <a href="#" id="search-icon" class="hero__search-icon">
+        <img src="search-icon-white.svg" alt="search string">
+      </a>
+      <a href="#" id="side-menu-icon" class="hero__side-icon">
+        <img src="side_menu.svg" alt="side menu">
+      </a>
+    </div>  
+  <div class="header__navi">
+        
+        <ul class="header__list"><li><span class="solution-select"><span class="solution-select__selected"></span><svg width="7" height="4" viewBox="0 0 7 4" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L3.5 3.5L6 1" stroke="white" stroke-linecap="round" stroke-linejoin="round"/></svg><ul class="solution-select__list"><li><a class="project-link" href="https://brix365.com/en/help/platform/get-trial.html">Platform</a></li><li><a class="project-link" href="https://brix365.com/en/help/ecm/ecm-functions.html">ECM</a></li><li><a class="project-link" href="https://brix365.com/en/help/crm/crm_overview.html">CRM</a></li><li><a class="project-link" href="https://brix365.com/en/help/service/service-functions.html">Service</a></li><li><a class="project-link" href="https://brix365.com/en/help/projects/projects-functions.html">Projects</a></li><li><a class="project-link" href="https://brix365.com/en/help/business_solutions/-elma365-store.html">Business Solutions</a></li></ul></span></li><li><a href="https://api.brix365.com/en/" target="_blank">API</a></li><li><a href="https://tssdk.brix365.com/" target="_blank">SDK</a></li></ul>
+        
+        
+   </div>
+  </div>
+
+</header>
+
+
+
+    
+    <main class="main container">
+
+        <aside class="sidebar" id="sidebar">
+        <div class="sidebar__header">
+                 <a class="header__logo" href="https://brix365.com/en/help">
+                    <img src="./logo-light-en.svg">
+                 </a>
+                    <span class="sidebar__close elma-365-close" id="close"></span>
+            </div>
+            <div class="sidebar__wrapper" id="side-menu">
+                
+            </div>
+        </aside>
+
+        <article class="article" id="article">
+            <div class="article-inner">           
+                <div class="content">
+                    <header class="article__header">
+                        
+                            <div class="topic__breadcrumbs">
+                                <p><a href="360024498352.html">Modules</a> &gt; <a href="extentions.html">Custom modules</a> / Configure a portable service in a module</p>
+                            </div>
+                        
+                        <div class="topic__title"><h1 class="p_Heading1"><span class="f_Heading1">Configure a portable service in a module</span></h1>
+</div>
+                    
+</header>
+                    <section class="article__content">
+                        <div class="scroll-top-inner">
+                            <a href="#h1-article" class="scroll-top"></a>
+                        </div>
+                        <!-- Placeholder for topic body. -->
+                        <p style="line-height: 1.20; margin: 7px 0 16px 0;">Portable services allow you to integrate microservices into custom modules, extending their functionality.</p>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;">There are several ways to connect a portable service in a module. You can select the required option depending on the environment required for the microservice, as well as the BRIX version used. When creating a service, you can send to the module the following addresses: </p>
+<ul style="list-style-type:disc">
+<li style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 16px;">The address of the microservice image hosted in a public or private Docker Hub repository, its internal settings and configurations to work in the cluster. This method is used in versions that support service deployment in Kubernetes runtime environment: BRIX On‑Premises and SaaS Enterprise.</li><li style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 16px;">The alternative address of the service installed on the external hosting with public access. The method is available for all versions, but it is often used in the BRIX SaaS Standard cloud edition, where you cannot use the service image.</li></ul>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;">In this article, we will look at the process of creating a service in a custom module.</p>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;">Read more about the use of microservices when developing custom solutions in the following articles:</p>
+<ul style="list-style-type:disc">
+<li style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 16px;">Features of portable services and use case: <span style="color: #0000ff;"><a href="portable-microservices.html" class="topiclink">Portable services in modules</a></span>.</li><li style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 16px;">Implementation of service connection stability probe: <span style="color: #0000ff;"><a href="readiness.html" class="topiclink">Example of using a Readiness probe in portable services</a></span>.</li><li style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 16px;">Enabling portable services in BRIX Enterprise: <span style="color: #0000ff;"><a href="enable-portable-services.html" class="topiclink">Enable portable services</a></span>.</li><li style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 16px;">Development of custom microservices: <span style="color: #0000ff;"><a href="development-key-points.html" class="topiclink">Guidelines for developing microservices for portable services</a></span>.</li></ul>
+<h2 class="p_Heading2"><a id="add-service" class="hmanchor"></a><span class="f_Heading2">Add and configure a portable service</span></h2>
+<ol style="list-style-type:upper-roman">
+<li value="1" style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 16px;"><span style="font-family: Inter;">Open the page of the custom module in which you want to connect a portable service and go to </span><span style="font-family: Inter; font-weight: bold;">Settings</span><span style="font-family: Inter;">.</span></li><li value="2" style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 16px;"><span style="font-family: Inter;">On the </span><span style="font-family: Inter; font-weight: bold;">Services</span><span style="font-family: Inter;"> tab, click </span><span style="font-family: Inter; font-weight: bold;">+Service</span><span style="font-family: Inter;"> and fill in the fields in the opened window:</span></li></ol>
+<h2 class="p_Heading2" style="margin: 0 0 0 34px;"><img alt="configure-portable-service-1" width="524" height="363" style="margin:0;width:524px;height:363px;border:none" src="configure-portable-service-1.png"/></h2>
+<ul style="list-style-type:disc">
+<li class="p_Normal"><span style="font-family: Inter; font-weight: bold;">Name</span><span style="font-family: Inter; font-weight: bold; color: #ff0000;">*</span><span style="font-family: Inter;">. Name that will be displayed in the user interface.</span></li><li class="p_Normal"><span style="font-weight: bold;">Unique service name</span><span style="font-weight: bold; color: #ff0000;">*</span>. Name that will be used in code or scripts to access the service. It is set once when the service is created and cannot be changed later.</li><li class="p_Normal"><span style="font-weight: bold;">Docker container</span>. This block configures the placement of the microservice image in a separate space in the Kubernetes environment. The option is available in BRIX On‑Premises and SaaS Enterprise versions:</li></ul>
+<ul style="list-style-type:disc"><ul style="list-style-type:circle">
+<li class="p_Normal"><a id="image-address" class="hmanchor"></a><span style="font-weight: bold;">Image address</span><span style="font-weight: bold; color: #ff0000;">*</span>.<span style="font-weight: bold;"> </span>The URL of the Docker image of the service. Specify in one of the formats: use a <a href="portable-services.html#image-address-formats" class="topiclink">short relative path</a> for Docker Hub, and a <a href="portable-services.html#image-address-full-path" class="topiclink">full path</a> for other registries.</li></ul></li></ul>
+<p class="p_Normal" style="margin: 0 0 0 53px;">When authentication is required for the image, specify your login and token. To do this, click the key icon next to the field and fill out the form in one of the following ways:</p>
+<ul style="list-style-type:disc"><ul style="list-style-type:circle"><ul style="list-style-type:square">
+<li class="p_Normal">Enter the values of the login and token. When exporting the module, the specified values will be saved and openly transmitted.</li><li class="p_Normal">To prevent accidental leakage of authentication data when exporting the module, use template variables of the <a href="360009707032.html#string" class="topiclink">String (string)</a> type created as <a href="extention-settings.html" class="topiclink">parameters of module settings</a>. To do this, click the <span style="font-weight: bold;">{+}</span> icon and select the added property.<br />
+In this case, the user specifies the login and token values on the <a href="extention-settings.html#module-parameters" class="topiclink">module connection page</a> instead of entering them directly in the <span style="font-weight: bold;">Authentication Data</span> window. When exporting and subsequently importing the module, confidential information will not be accidentally transmitted because the values of the module settings will be deleted. At the same time, the variables for the login and token will be preserved.<br />
+<img alt="configure-portable-service-8" width="517" height="224" style="margin:0;width:517px;height:224px;border:none" src="configure-portable-service-8.png"/></li></ul>
+<li class="p_Normal"><span style="font-weight: bold;">HTTP port</span><span style="font-weight: bold; color: #ff0000;">*</span>. The port used for interaction with the microservice. The default port is <span style="font-weight: bold;">3000</span>. When configuring, check the microservice documentation and determine which port should be selected.</li></ul></li></ul>
+<ul style="list-style-type:disc">
+<li class="p_Normal"><span style="font-family: Inter; font-weight: bold;">Alternative service address</span><span style="font-family: Inter;">. This block is filled in if the microservice is hosted and operates on a third-party server with a public access address. You can specify the URL of the service in one of the following ways:</span></li></ul>
+<ul style="list-style-type:disc"><ul style="list-style-type:circle">
+<li class="p_Normal">Enter the address as a string, for example<span style="font-weight: bold;"> https://example.mathcalculation.com</span>.</li><li class="p_Normal">Use pre-created parameters from the module settings and <a href="portable-services.html#alternative-address" class="topiclink">specify the address template</a>. In this case, if the address components change, you will be able to edit the parameter values in the module rather than re-configure the service connection.</li></ul></li></ul>
+<p class="p_Normal">Please note tnat if both addresses are specified in BRIX On‑Premises and SaaS Enterprise versions, the image address will be used.</p>
+<ol style="list-style-type:upper-roman">
+<li value="3" style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 16px;"><span style="font-family: Inter;">Click </span><span style="font-family: Inter; font-weight: bold;">Save</span><span style="font-family: Inter;">.</span></li><li value="4" style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 16px;"><span style="font-family: Inter;">The </span><span style="font-family: Inter; font-weight: bold;">Edit Service</span><span style="font-family: Inter;"> window will open, where you can configure the following settings:</span></li></ol>
+<p style="line-height: 1.20; margin: 7px 0 16px 34px;"><img alt="configure-portable-service-2" width="517" height="348" style="margin:0;width:517px;height:348px;border:none" src="configure-portable-service-2.png"/></p>
+<ul style="list-style-type:disc">
+<li style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 16px;">Edit or add the <a href="portable-services.html#image-address-formats" class="topiclink">image address</a> and port, as well as specify <a href="portable-services.html#docker-settings" class="topiclink">additional settings for the Docker container</a>. For example, you can set the number of microservice instances, add environment variables, configure Liveness and Readiness probes.</li><li style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 16px;">Edit or add the public service address by clicking the gear icon to the right of the <span style="font-weight: bold;">Alternative service address</span> field. To generate address based on the module parameters, configure the <a href="portable-services.html#alternative-address" class="topiclink">address template</a>.</li></ul>
+<h2 class="p_Heading2"><a id="image-address-formats" class="hmanchor"></a><span class="f_Heading2">Image address formats</span></h2>
+<p style="line-height: 1.38; margin: 0 0 13px 0;">Depending on the location of the Docker image, specify the following in the service settings:</p>
+<ul style="">
+<li style="line-height: 1.38; margin-top: 0; margin-right: 0; margin-bottom: 13px;"><span style="font-weight: bold;">Short relative path</span>.<span style="font-weight: bold;"> </span>It is applied if the image is located in the default registry<span style="color: #394149;">, </span>which is<span style="color: #394149;"> </span>Docker Hub.</li></ul>
+<p style="line-height: 1.38; margin: 0 0 13px 34px;">Format: <span style="font-weight: bold;">&lt;image_path&gt;:&lt;tag&gt;</span>, where:</p>
+<ul style=""><ul style="list-style-type:circle">
+<li style="line-height: 1.38; margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-weight: bold;">&lt;image_path&gt; </span>is the path to the image in the registry. It is required.</li><li style="line-height: 1.38; margin-top: 0; margin-right: 0; margin-bottom: 13px;"><span style="font-weight: bold;">&lt;tag&gt;</span> is the image tag. It is optional.</li></ul></li></ul>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;примера</span></p>
+<p class="p_Normal"><span style="font-weight: bold;">Examples</span></p>
+<p class="p_Normal">Container addresses in the Docker Hub repository:</p>
+<ul style="">
+<li class="p_Normal"><span style="font-weight: bold;">nginx</span>.</li><li class="p_Normal"><span style="font-weight: bold;">nginx:latest</span>.</li><li class="p_Normal"><span style="font-weight: bold;">chialab/math-api</span>.</li><li class="p_Normal"><span style="font-weight: bold;">chialab/math-api:latest</span>.</li><li class="p_Normal"><span style="font-weight: bold;">company/service</span>.</li><li class="p_Normal"><span style="font-weight: bold;">company/service:v1.0.0</span>.</li></ul>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;примера</span></p>
+<ul style="">
+<li style="line-height: 1.38; background: #ffffff; margin-top: 0; margin-right: 0; margin-bottom: 13px;"><a id="image-address-full-path" class="hmanchor"></a><span style="font-weight: bold;">Full path</span>.<span style="font-weight: bold;">  </span>It is applied to a public or private repository located on a separate server.</li></ul>
+<p style="line-height: 1.38; background: #ffffff; margin: 0 0 13px 34px;">Format: <span style="font-weight: bold;">&lt;registry&gt;:&lt;port&gt;/&lt;image_path&gt;:&lt;tag&gt;</span>, where:</p>
+<ul style=""><ul style="list-style-type:circle">
+<li style="line-height: 1.38; margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-weight: bold;">&lt;registry&gt;</span> is the domain address of the image registry. It is required.</li><li style="line-height: 1.38; margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-weight: bold;">&lt;port&gt; </span>is the port on which the image registry can be accessed. It is optional.</li><li style="line-height: 1.38; margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-weight: bold;">&lt;image_path&gt; </span>is the path to the image in the registry. It is required.</li><li style="line-height: 1.38; margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-weight: bold;">&lt;tag&gt;</span> is the image tag. It is optional.</li></ul></li></ul>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;примера</span></p>
+<p class="p_Normal"><span style="font-weight: bold;">Examples</span></p>
+<p class="p_Normal">Container addresses in third-party registries:</p>
+<ul style="">
+<li class="p_Normal"><span style="font-weight: bold;">company.goharbor.io/math-api</span>.</li><li class="p_Normal"><span style="font-weight: bold;">company.goharbor.io:5005/math-api:v1.0.0</span>.</li><li class="p_Normal"><span style="font-weight: bold;">registry.company.com/service/app</span>.</li><li class="p_Normal"><span style="font-weight: bold;">registry.company.com:5005/service/app:latest</span>.</li></ul>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;примера</span></p>
+<p style="line-height: 1.38; margin: 0 0 13px 0;">Read more about image addresses in the <span style="color: #0563c1;"><a href="https://kubernetes.io/docs/concepts/containers/images/#image-names" target="_blank" class="weblink">official Kubernetes documentation.</a></span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Verify the address validity</span></h3>
+<p class="p_Normal">To verify the address, load the microservice image using the following command:</p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">docker&nbsp;pull&nbsp;&lt;image_address&gt;</span></p>
+<p class="p_Normal">Where <code><b>&lt;image_address&gt;</b></code> is the address of the image.</p>
+<p class="p_Normal">If the download is successful, the address can be used for the service in the BRIX module.</p>
+<h2 class="p_Heading2"><a id="alternative-address" class="hmanchor"></a><span class="f_Heading2">Template for the alternative service address</span></h2>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;">The alternative service address can be specified using the module parameters. This method allows you to manage the portable service in a more flexible way. For example, you can change the address components on the <a href="extention-settings.html#module-parameters" class="topiclink">module connection page</a>. </p>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;">To configure the service address template, follow these steps:</p>
+<ol style="list-style-type:upper-roman">
+<li value="1" style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 16px;">Open the settings page of the custom module where you want to add the portable service.</li><li value="2" style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 16px;">Go to the <span style="font-weight: bold;">Settings</span> tab and create properties of the <span style="font-weight: bold;">String (string) </span>type that will make up the service address. For example, it can be two parameters: to record the data transfer protocol and to specify the base address of the service.</li><li value="3" style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 16px;">In the settings, when creating a service in the module, specify a template in the <span style="font-weight: bold;">Service address</span> field. To do this, click the <span style="font-weight: bold;">{+}</span> icon, select the previously created parameters, and save the settings.<br />
+<img alt="configure-portable-service-6" width="613" height="300" style="margin:0;width:613px;height:300px;border:none" src="configure-portable-service-6.png"/></li><li value="4" style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 16px;">To edit the specified address, in the service settings, click the gear icon to the right of the <span style="font-weight: bold;">Alternative Service Address</span> option. Edit the template or set a new address and save the changes.</li><li value="5" style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 16px;">Save the service settings. The service address can now be specified, modified, or deleted in the enabled module settings. If the fields are empty, communication with the service is unavailable.<br />
+<img alt="configure-portable-service-7" width="719" height="172" style="margin:0;width:719px;height:172px;border:none" src="configure-portable-service-7.png"/></li></ol>
+<h2 class="p_Heading2"><a id="docker-settings" class="hmanchor"></a><span class="f_Heading2">Docker container settings</span></h2>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;">In BRIX On-Premises and SaaS Enterprise editions, a microservice image can be placed in the Kubernetes environment. To configure settings for microservice deployment, click the gear icon to the right of the <span style="font-weight: bold;">Docker container</span> block. In the window opened, the settings are performed on the following tabs: <span style="font-family: Inter;"><a href="portable-services.html#main-tab" class="topiclink">Main Settings</a>, <a href="portable-services.html#variables-tab" class="topiclink">Environment Variables</a>, <a href="portable-services.html#liveness-tab" class="topiclink">Liveness</a>, <a href="portable-services.html#readiness-tab" class="topiclink">Readiness</a>.</span></p>
+<h3 class="p_Heading3"><a id="main-tab" class="hmanchor"></a><span class="f_Heading3">Main Settings tab</span></h3>
+<h3 class="p_Heading3"><img alt="configure-portable-service-5" width="551" height="304" style="margin:0;width:551px;height:304px;border:none" src="configure-portable-service-5.png"/></h3>
+<ul style="list-style-type:disc">
+<li style="text-align: justify; line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-weight: bold;">Image address</span><span style="font-weight: bold; color: #ff0000;">*</span>, <span style="font-weight: bold;">HTTP port</span><span style="font-weight: bold; color: #ff0000;">*</span>. You can edit the image address, login and token to access the repository and the connection port specified when creating the portable service.</li><li style="text-align: justify; line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-weight: bold;">Additional ports</span>. You can specify additional ports for the microservice which will be used for connection with other module microservices. Maximum 10 additional ports are available for one microservice.</li></ul>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;внимание</span></p>
+<p style="line-height: 1.20; margin: 7px 0 7px 0;">To specify additional ports in the portable services settings, enable the <code><b>allowBabysitterOptionalPorts</b></code> flag. For more information, see the <a href="change-settings-enterprise.html#enable-feature-flag-enterpeise" class="topiclink">Modify BRIX Enterprise parameters</a> and <a href="change-elma365standard-parameters.html#enable-feature-flag-standard" class="topiclink">Modify BRIX Standard parameters</a> articles.</p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;внимание</span></p>
+<ul style="list-style-type:disc">
+<li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-family: Inter; font-weight: bold;">Number of instances</span><span style="font-family: Inter;">. Specify how many microservice instances to deploy and launch. When you change the number of instances, please note that BRIX itself doesn’t support any type of service replication. If it is not incorporated in the microservice, each of the instances will be entirely separate from others.</span></li></ul>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-family: Inter;">You can configure additional parameters of the portable service using ConfigMap. For example, you can set resource utilization limits, enable autoscaling of the microservice, and configure pod placement on cluster nodes. For more details, see the <a href="configmap.html" class="topiclink">Configure parameters of portable services using ConfigMap</a> article.</span></p>
+<h3 class="p_Heading3"><a id="variables-tab" class="hmanchor"></a><span class="f_Heading3">Environment Variables tab</span></h3>
+<p style="text-align: justify; line-height: 1.20; margin: 7px 0 7px 0;">On this tab, you can create environment variables for the microservice image. They are used if the microservice allows configuration via environment variables. The availability of configuration can be defined in the documentation. To create a variable on the tab, click <span style="font-weight: bold;">+Environment Variable</span> and fill in the service parameter template in the opened window.</p>
+<p style="text-align: justify; line-height: 1.20; margin: 7px 0 7px 0;"><img alt="configure-portable-service-3" width="685" height="305" style="margin:0;width:685px;height:305px;border:none" src="configure-portable-service-3.png"/></p>
+<p style="text-align: justify; line-height: 1.20; margin: 7px 0 16px 0;">Please note that when you add or edit environment variables, the microservice is restarted.</p>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-family: Inter;">Environment variables can be set during development, but you can also give the end user an opportunity to change them. To do that, you can create a template when filling out the value, specifying a property of the module. </span>To do this, you can use <span style="color: #0000ff;"><a href="extention-settings.html" class="topiclink">module settings</a></span> when creating a variable in a template.</p>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-family: Inter;">For example, there is a </span><span style="font-family: Inter; font-weight: bold;">ServiceTimeout</span><span style="font-family: Inter;"> property in the module settings. You can create an environment variable </span><span style="font-family: Inter; font-weight: bold;">RequestTimeout</span><span style="font-family: Inter;"> and specify </span><code><b>{$serviceTimeout}</b></code><span style="font-size: 13px;"> </span>in its template. Then users will change the value of the property in the module settings and at the same time set the value for the environment variable in the microservice.</p>
+<p style="text-align: justify; line-height: 1.20; margin: 7px 0 16px 0;">If module settings are used in the environment variables template, you can enable the <span style="font-weight: bold;">Restart when module settings are changed</span> option. In this case, when the parameter values on the main page of the module settings change, the service will be restarted, i.e., completely removed from the Kubernetes cluster and deployed again.</p>
+<h3 class="p_Heading3"><a id="liveness-tab" class="hmanchor"></a><span class="f_Heading3">Liveness tab</span></h3>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-family: Inter;">This option allows you to use a Kubernetes probe to automatically restart a microservice in case of failure. </span>The following options are available in the drop-down list: <span style="font-weight: bold;">Command</span>, <span style="font-weight: bold;">HTTP</span>, and <span style="font-weight: bold;">TCP</span>.<span style="font-family: Inter;"> Read its documentation before including Liveness probes and selecting their types.</span></p>
+<h3 class="p_Heading3"><a id="readiness-tab" class="hmanchor"></a><span class="f_Heading3">Readiness tab</span></h3>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-family: Inter;">This option allows you to use a Kubernetes probe to prevent the microservice from accepting requests before it is fully initialized. </span>The following options are available in the drop-down list: <span style="font-weight: bold;">Command</span>, <span style="font-weight: bold;">HTTP</span>, and <span style="font-weight: bold;">TCP</span>.<span style="font-family: Inter;"> Read its documentation before including Readiness probes and selecting their types.</span></p>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-family: Inter;">Please take your time to carefully configure </span>the parameters on the <span style="font-weight: bold;">Liveness</span> and <span style="font-weight: bold;">Readiness</span> tabs.<span style="font-family: Inter;"> If the settings are incorrect, and the Kubernetes response is invalid, the microservice will be considered inoperable and restarted no matter what its status actually is. We recommend avoiding probes if possible if you aren’t fully aware of why and how you need to use them and what the consequences are.</span></p>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;">To finish configuring the added service, click <span style="font-weight: bold;">Save</span> in the editing window.</p>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;">All created services will be displayed in the module settings, on the <span style="font-weight: bold;">Services</span> tab. To reopen the window of editing a service, click on its name in the list. To delete a service, select its checkbox and click the <span style="font-weight: bold;">Delete</span> button that appears in the right corner of the page.</p>
+<h2 class="p_Heading2"><span class="f_Heading2">Enable or disable a microservice</span></h2>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-family: Inter;">When a module is enabled, all the microservices added to it are started. When the module is disabled, the microservices will be stopped and deleted.</span></p>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-family: Inter;">If one microservice image is deployed from different modules within one company, there will be two different microservice instances.</span></p>
+<h2 class="p_Heading2"><span class="f_Heading2">Microservice monitor</span></h2>
+<p style="text-align: justify; line-height: 1.20; margin: 7px 0 16px 0;">When the module is enabled, the status of microservices added to it can be monitored on its page. To do this, the <span style="font-weight: bold;">Service Monitor</span> is displayed next to the module name.</p>
+<p style="text-align: justify; line-height: 1.20; margin: 7px 0 16px 0;"><img alt="configure-portable-service-4" width="787" height="220" style="margin:0;width:787px;height:220px;border:none" src="configure-portable-service-4.png"/></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;">By clicking on the button, you’ll see a list of <span style="font-family: Inter;">all the microservices set by portable services. The information includes data about the image that the container is deployed from and about the number and current status of the replicas. If the Kubernetes cluster can provide metrics, data about resource consumption will also be shown.</span></p>
+<h2 class="p_Heading2"><span class="f_Heading2">Access to microservices</span></h2>
+<h3 class="p_Heading3"><span class="f_Heading3">Scripts</span></h3>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-family: Inter;">To access microservices, you can use the API provided in scripts. It is available in server scripts and only within the module that the microservice belongs to, for example, in its widgets and business processes. Microservices cannot be accessed in client scripts. </span></p>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-family: Inter;">Services can be accessed using </span><code><b>Namespace.services</b></code><span style="font-family: Inter;">. If the module doesn’t contain portable services, this namespace will not appear among the autocomplete suggestions in the script.</span></p>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-family: Inter;">To access a microservice, use the </span><code><b>fetch()</b></code><span style="font-family: Inter;"> method.</span></p>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-family: Inter;">You can send a simple </span><code><b>GET</b></code><span style="font-family: Inter;"> request without additional parameters specifying a relative path to the microservice API as the main parameter.</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">const res = await Namespace.services.vap.fetch(&quot;/SayHello&quot;);</span><br />
+<span class="f_CodeExample">if (res.ok) {</span><br />
+<span class="f_CodeExample">const resText = await res.text();</span><br />
+<span class="f_CodeExample">}</span></p>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-family: Inter;">If you want to send a request of a different type, specify additional parameters, or set the request’s headers and body, use the </span><code><b>fetch()</b></code><span style="font-family: Inter;"> method and pass </span><code><b>FetchRequest</b></code><span style="font-family: Inter;"> as its second parameter:</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">const res = await Namespace.services.vap.fetch(&quot;/RememberMe&quot;, {</span><br />
+<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;method: 'POST',</span><br />
+<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;headers: {</span><br />
+<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Authorization: 'myToken',</span><br />
+<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},</span><br />
+<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;body: JSON.stringify({</span><br />
+<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name: 'John',</span><br />
+<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;age: 27,</span><br />
+<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;})</span><br />
+<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;} );</span></p>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-family: Inter;">When writing scripts, you may need to check a microservice’s state. To do that, you can use the </span><code><b>status()</b></code><span style="font-family: Inter;"> method. It will return the </span><code><b>ServiceStatus</b></code><span style="font-family: Inter; font-weight: bold;"> </span><span style="font-family: Inter;">enum value with the information about the current status.</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">const info = await Namespace.services.vap.status();</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Communication between two portable services</span></h3>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-family: Inter;">In BRIX On-Premises and SaaS Enterprise editions, you can arrange communication between microservices within a module. Configure the access address using the environment variables.</span></p>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-family: Inter;">Read more about it in the <a href="development-key-points.html#communication-between-services" class="topiclink">Guidelines for developing microservices for portable services</a> article.</span></p>
+<h2 class="p_Heading2"><span class="f_Heading2">Export and import</span></h2>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-family: Inter;">You can only export or import a module with portable services if </span><span style="font-family: Inter; font-weight: bold;">Portable services</span><span style="font-family: Inter;"> are unlocked.</span></p>
+
+                        <div class="bottom-nav">
+                            
+                                <a id="prev-link" class="topic__navi_prev" href="events_processing.html">
+                                    <span class="bottom-nav__arrow bottom-nav__arrow--prev"></span> <span
+                                        class="bottom-nav__link">events_processing.html</span>
+                                </a>
+                            
+                            
+                                <a id="next-link" class="topic__navi_next" href="module-external-app.html">
+                                    <span class="bottom-nav__link">module-external-app.html</span> <span
+                                        class="bottom-nav__arrow bottom-nav__arrow--next"></span>
+                                </a>
+                            
+                        </div>
+                        <!-- добавляет на страницу строку блок Была ли статья полезной?  -->
+                          <div class="feedback" id="feedback"><div class="feedback-help"><span><b>Was this helpful?</b></span><form action="" method="POST" class="feedback-form" id="feedback-form"><div class="feedback__popup feedback__popup-response" id="feedback__popup_thx" style="display: none;">Thanks for your feedback!</div><div class="feedback__popup" id="feedback__popup_why" style="display: none;"><div class="feedback__popup-header">Please specify why:</div><input type="radio" name="category" id="bad_recommendation" value="bad_recommendation"><label for="bad_recommendation">Recommendations did not help me</label><input type="radio" name="category" id="difficult_text" value="difficult_text"><label for="difficult_text">Article is hard to understand</label><input type="radio" name="category" id="no_answer" value="no_answer"><label for="no_answer">Didn`t answer my question</label><input type="radio" name="category" id="bad_header" value="bad_header"><label for="bad_header">Content does not match the topic</label><input type="radio" name="category" id="other_reason" value="other_reason"><label for="other_reason">Other</label></div><div class="feedback__popup" id="feedback__popup-other" style="display: none;"><div class="feedback__popup-header">How we can improve it?</div><textarea class="feedback__textarea" name="other" id=""></textarea><input type="submit" class="feedback__other-btn" value="Submit"></div><div class="feedback-form__btn-group"><input type="radio" name="useful" id="feedback__useful_yes" value="true"><label for="feedback__useful_yes"><img src="like.svg" class="small-img" alt="like"><spanclass="feedback-form__btn-group_yes-btn">Yes</spanclass="feedback-form__btn-group_yes-btn"></label><input type="radio" name="useful" id="feedback__useful_no" value="false"><label for="feedback__useful_no"><img src="dislike.svg" class="small-img" alt="dislike"><spanclass="feedback-form__btn-group_no-btn">No</spanclass="feedback-form__btn-group_no-btn"></label></div><select name="category"><option disabled="">Please specify why</option><option value="bad_recommendation" selected="">Recommendations did not help me</option><option value="difficult_text">Article is hard to understand</option><option value="no_answer">Didn`t answer my question</option><option value="bad_header">Content does not match the topic</option><option value="other_reason">Other</option></select><input type="submit"></form></div><div class="found_typo"><p style="margin: 0px; margin-top: 16px !important;"><span><b>Found a typo?</b></span> Select it and press <i>Ctrl+Enter</i> to send us feedback</p></div></div>
+                           
+                    </section>
+                </div>
+                <aside class="article__sidebar" style="display:none">
+                    <input type="checkbox" />
+                    <div class="article__arrow"></div>
+                    <div class="table-of-contents elma365-right" id="toc2Content">
+                        <h3 class="h3-toc">In this topic</h3>
+                        <nav id="toc2"></nav>
+                    </div>
+                </aside>
+            </div>
+        </article>
+    </main>               
+    <footer class="footer">
+        <div class="footer-container">
+  <div class="footer-mobile">
+    
+    <ul class="footer-mobile__list"><li><a href="https://brix365.com/en/" target="_blank">BRIX</a></li><li><a href="https://tssdk.brix365.com/en/latest/" target="_blank">SDK</a></li><li><a href="https://api.brix365.com/en/" target="_blank">API</a></li></ul><ul class="footer-mobile__list"><li><a href="https://brix365.com/en/help/platform/get-trial.html">Platform</a></li><li><a href="https://brix365.com/en/help/ecm/ecm-functions.html">ECM</a></li><li><a href="https://brix365.com/en/help/service/service-functions.html">Service</a></li><li><a href="https://brix365.com/en/help/projects/projects-functions.html">Projects</a></li></ul>
+    
+    
+  </div>
+  <div class="footer-wrap">
+    
+      <div><span class="mobile-question-popup">Send feedback</span><form method="POST" action class="question__popup question-xs" id="question__popup"><div class="question-wrap"><span class="close"></span><span class="title">Ask a question</span><label for="help_question" style="display: none;"></label><textarea name="help_question" id="help_question"></textarea><input type="submit" value="Send"></div></form><div class="hidden fade-in question-success-xs">Sent</div></div>
+    
+    <div class="footer-flex-b">
+      <span class="footer-copy">&copy; 2025 BRIX</span>
+      <ul class="footer-list">
+        
+        <li class="footer-item">
+            <a href="#" class="arrow-top" style="display: block;"></a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+ 
+    </footer>
+    <iframe name="hmnavigation" style="display:none!important"></iframe>
+    <script src="./jquery-ui.js"></script>
+    <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
+    <script src="./jquery.tocify.min.js"></script>
+    <script src="./TypoReporter.min.js"></script>
+    <script src="./google-search.js"></script>
+    <script src="./main.js"></script>
+</body>
+
+</html>

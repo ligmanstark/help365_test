@@ -1,0 +1,243 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Connectors</title>
+    <meta name="generator" content="Help+Manual" />
+    <meta name="keywords" content="" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Connectors determine the order of activities and events in the process. Naming connectors improves the&nbsp;readability of the flow chart and also serve as button names on task..." />
+    <meta name="picture" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Full documentation for BRIX365 platform. Low-code developer guide. User guide. Admin guide. Developer guide." />
+    <meta property="og:url" content="https://brix365.com/en/help" />
+    <meta property="og:image" content="" />                                                              
+    <link rel="icon" href="favicon.png" type="image/png" />
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./jquery-ui.min.css" />
+    <link rel="stylesheet" href="default.css" />
+    <link rel="stylesheet" href="./search-yandex.css" />
+    <link rel="stylesheet" href="./article.css" />
+    <link rel="stylesheet" href="./glossary.css" />
+    <link rel="stylesheet" href="./theme.css" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+
+<body>
+    
+    <script>!function(e,t,c,n,r,a,m){e.ym=e.ym||function(){(e.ym.a=e.ym.a||[]).push(arguments)},e.ym.l=1*new Date;for(var s=0;s<document.scripts.length;s++)if(document.scripts[s].src===n)return;a=t.createElement(c),m=t.getElementsByTagName(c)[0],a.async=1,a.src=n,m.parentNode.insertBefore(a,m)}(window,document,"script","https://mc.yandex.ru/metrika/tag.js"),ym(83179930,"init",{clickmap:!0,trackLinks:!0,accurateTrackBounce:!0,webvisor:!0})</script><noscript><div><img alt=""src=https://mc.yandex.ru/watch/83179930 style=position:absolute;left:-9999px></div></noscript> 
+    
+    ﻿<header class="header elma-365">
+  <div class="container">
+    <a class="header__logo" href="https://brix365.com/en/help">
+      <img src="./logo-en.svg" alt="header logo">
+    </a>
+ <!-- <div class="hero__search-form" id="search-panel">
+   <form class="search-form" onsubmit="ym(83180416,'reachGoal','poisk')">
+     <label class="search-form__label">
+       <span id="reset-search" class="search__icon"></span>
+       <input class="search-form__input" type="text">
+     </label>
+     <input class="search-form__submit" type="submit" value="Submit">
+   </form>
+  </div>       -->
+  
+     <div class="hero__search-form" id="search-panel"> <form class="search-form"> <label class="search-form__label"> <span id="reset-search" class="search__icon"></span> <input class="search-form__input" type="text"> </label> <input class="search-form__submit" type="submit" value="Submit"> </form> </div> 
+  <div class="hero__search">
+      <a href="#" id="search-icon" class="hero__search-icon">
+        <img src="search-icon-white.svg" alt="search string">
+      </a>
+      <a href="#" id="side-menu-icon" class="hero__side-icon">
+        <img src="side_menu.svg" alt="side menu">
+      </a>
+    </div>  
+  <div class="header__navi">
+        
+        <ul class="header__list"><li><span class="solution-select"><span class="solution-select__selected"></span><svg width="7" height="4" viewBox="0 0 7 4" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L3.5 3.5L6 1" stroke="white" stroke-linecap="round" stroke-linejoin="round"/></svg><ul class="solution-select__list"><li><a class="project-link" href="https://brix365.com/en/help/platform/get-trial.html">Platform</a></li><li><a class="project-link" href="https://brix365.com/en/help/ecm/ecm-functions.html">ECM</a></li><li><a class="project-link" href="https://brix365.com/en/help/crm/crm_overview.html">CRM</a></li><li><a class="project-link" href="https://brix365.com/en/help/service/service-functions.html">Service</a></li><li><a class="project-link" href="https://brix365.com/en/help/projects/projects-functions.html">Projects</a></li><li><a class="project-link" href="https://brix365.com/en/help/business_solutions/-elma365-store.html">Business Solutions</a></li></ul></span></li><li><a href="https://api.brix365.com/en/" target="_blank">API</a></li><li><a href="https://tssdk.brix365.com/" target="_blank">SDK</a></li></ul>
+        
+        
+   </div>
+  </div>
+
+</header>
+
+
+
+    
+    <main class="main container">
+
+        <aside class="sidebar" id="sidebar">
+        <div class="sidebar__header">
+                 <a class="header__logo" href="https://brix365.com/en/help">
+                    <img src="./logo-light-en.svg">
+                 </a>
+                    <span class="sidebar__close elma-365-close" id="close"></span>
+            </div>
+            <div class="sidebar__wrapper" id="side-menu">
+                
+            </div>
+        </aside>
+
+        <article class="article" id="article">
+            <div class="article-inner">           
+                <div class="content">
+                    <header class="article__header">
+                        
+                            <div class="topic__breadcrumbs">
+                                <p>Business process designer &gt; Graphical elements / Connectors</p>
+                            </div>
+                        
+                        <div class="topic__title"><h1 class="p_Heading1" style="text-align: center; line-height: 1.20; margin: 19px 0 19px 0;"><span class="f_Heading1" style="font-size: 32px;">Connectors</span></h1>
+</div>
+                    
+</header>
+                    <section class="article__content">
+                        <div class="scroll-top-inner">
+                            <a href="#h1-article" class="scroll-top"></a>
+                        </div>
+                        <!-- Placeholder for topic body. -->
+                        <p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;"><span style="font-weight: bold;">Connectors</span> determine the order of activities and events in the process. Naming connectors improves the readability of the flow chart and also serve as button names on task forms.</p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;">For example, the task <span style="font-weight: bold;">Fill in leave request</span> has two outgoing connectors, <span style="font-weight: bold;">Send for approval</span> and <span style="font-weight: bold;">End process</span>.</p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;"><img alt="360019708472-mceclip2" width="625" height="466" style="margin:0;width:625px;height:466px;border:none" src="360019708472-mceclip2.png"/></p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;"> On the task form, these connectors look like this:</p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;"><img alt="connectors 1" width="538" height="403" style="margin:0;width:538px;height:403px;border:none" src="hmfile_hash_b0dd0203.png"/></p>
+<h2 class="p_Heading2"><span class="f_Heading2">Create and set up a connector</span></h2>
+<p style="text-align: justify; line-height: 1.20; margin: 14px 0 0 0;">To connect items, hover over one of them, and then, holding down the left mouse button, draw a connection line from one of the points located on its edges.</p>
+<p style="text-align: justify; line-height: 1.20; margin: 19px 0 0 0;">To open the settings of a connector, double-click on it in the process diagram.</p>
+<p style="text-align: justify; line-height: 1.20; margin: 19px 0 0 0;">On the <span style="font-weight: bold;">General</span> tab in the settings, you can rename the connector and add its description. Additional settings depend on what element the connector is going out of:</p>
+<ul style="list-style-type:disc">
+<li style="text-align: justify; line-height: 1.20; margin-top: 19px; margin-right: 0; margin-bottom: 0;"><span style="color: #0000ff;"><a href="360012495611.html" class="topiclink">Task</a></span>. You can select the color of the button, configure data validation, specify the type of the connector and enable signing of the app item.</li><li style="text-align: justify; line-height: 1.20; margin-top: 19px; margin-right: 0; margin-bottom: 0;"><span style="color: #0000ff;"><a href="360012495911.html" class="topiclink">Gateway</a></span>. You can set the conditions of the process transition to a particular path.</li></ul>
+<p style="text-align: justify; line-height: 1.20; margin: 19px 0 0 0;">Let’s consider all the settings in detail below.</p>
+<h3 class="p_Heading3" style="line-height: 1.20; margin: 19px 0 0 0;"><span class="f_Heading3" style="font-size: 19px;">General tab</span></h3>
+<h3 class="p_Heading3" style="line-height: 1.20; margin: 19px 0 0 0;"><img alt="connectors 2" width="466" height="271" style="margin:0;width:466px;height:271px;border:none" src="hmfile_hash_ca9f1c42.png"/></h3>
+<ul style="list-style-type:disc">
+<li style="line-height: 1.20;"><span style="font-weight: bold;">Name</span>.<span style="font-weight: bold;"> </span>Specify the name to be displayed on the connector button in the task. </li></ul>
+<ul style="list-style-type:disc">
+<li style="line-height: 1.20;"><span style="font-weight: bold;">Description</span>. Enter the text of the tooltip that will be shown on the task form.</li></ul>
+<p style="line-height: 1.20;"><img alt="connectors 11" width="144" height="76" style="margin:0;width:144px;height:76px;border:none" src="hmfile_hash_57861251.png"/></p>
+<h2 class="p_Heading2"><a id="connector-standard-task" class="hmanchor"></a><span class="f_Heading2">Connector going out of a standard task</span></h2>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;">For connectors going out of <span style="color: #0000ff;"><a href="360012495611.html" class="topiclink">Tasks</a></span>, you can choose the color of the button, as well as set parameters for checking data in the task, confirming the transition, signing the app item, etc.</p>
+<h3 class="p_Heading3" style="line-height: 1.20; margin: 19px 0 0 0;"><span class="f_Heading3" style="font-size: 19px;">Transition Button tab </span></h3>
+<h3 class="p_Heading3" style="line-height: 1.20; margin: 19px 0 0 0;"><img alt="connectors 3" width="688" height="454" style="margin:0;width:688px;height:454px;border:none" src="hmfile_hash_3384bd27.png"/></h3>
+<ul style="list-style-type:disc">
+<li style="line-height: 1.20;"><span style="font-weight: bold;">Transition Button Color</span>.<span style="font-weight: bold;"> </span> Select the color of the button that will be displayed on the task form.</li></ul>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 38px;">  <img alt="connectors 4" width="353" height="40" style="margin:0;width:353px;height:40px;border:none" src="hmfile_hash_3f89b25e.png"/></p>
+<ul style="list-style-type:disc">
+<li style="line-height: 1.20;"><span style="font-weight: bold;">Transition Validation</span>.<span style="font-weight: bold;"> </span>Select a validation option. The task will be validated when the user clicks on the transition button.<ul style="list-style-type:circle">
+<li style="line-height: 1.20;"><span style="font-weight: bold;">Validate task form</span>. The user will not be able to finish the task without filling out all required fields on the task form.</li><li style="line-height: 1.20;"><span style="font-weight: bold;">Check for active subtasks</span>. The user will not be able to finish the task if there are unfinished subtasks associated with it.</li></ul></li></ul>
+<p style="line-height: 1.20; margin: 0 0 0 34px;">You can select both options or entirely disable form validation.</p>
+<ul style="list-style-type:disc">
+<li style="line-height: 1.20;"><span style="font-weight: bold;">Confirmation</span>. You can set up a confirmation dialog box that will appear when the user clicks on the transition button. Select one of the following options:<ul style="list-style-type:circle">
+<li style="line-height: 1.20;"><span style="font-weight: bold;">Without confirmation</span>. The task will be finished as soon as the user clicks on the transition button, without confirmation.</li><li style="line-height: 1.20;"><span style="font-weight: bold;">Confirmation Dialog Box</span>. Specify the window size and enter the confirmation text in the fields that appear below.</li></ul></li></ul>
+<p style="line-height: 1.20; margin: 0 0 0 53px;"><img alt="connectors 12" width="262" height="212" style="margin:0;width:262px;height:212px;border:none" src="hmfile_hash_8b5a6a7e.png"/></p>
+<ul style="list-style-type:disc"><ul style="list-style-type:circle">
+<li style="line-height: 1.20;"><span style="font-weight: bold;">Form</span>. Set up a complex confirmation form and add <a href="process_context.html" class="topiclink">process context variables</a> to it. For example, you can ask a user to leave a comment before finishing the task. Select the dialog box, specify the confirmation text, and click the <span style="font-weight: bold;">Configure Form</span> button to add new fields to the form.</li></ul></li></ul>
+<p class="p_Normal" style="margin: 0 0 0 53px;">On the opened <span style="font-weight: bold;">Form Settings</span> tab, select a variable from the process context or add a new one.</p>
+<ul style="list-style-type:disc"><ul style="list-style-type:circle">
+<li style="line-height: 1.20;"><span style="font-weight: bold;">Signature</span>. Select this connector to customize the window for signing the app item with which the task has been associated. The <a href="360015835331.html#signature-settings" class="topiclink">Signature Settings</a> tab will be added. On this tab, define the app item and its signing parameters.</li></ul></li></ul>
+<h2 class="p_Heading2"><a id="signature-settings" class="hmanchor"></a><span class="f_Heading2">Signing in a connector going out of a task. Signature Settings tab</span></h2>
+<p style="text-align: justify; line-height: 1.20; margin: 7px 0 7px 0;">You can enable signing in the settings of a connector going out of a task. Use this option when a task is assigned for an app item. In this case, the user will sign the item and complete the task in one action. At the same time, you can sign attributes and a document file, leave a comment, or change the provider.</p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;"><img alt="connectors 5" width="302" height="268" style="margin:0;width:302px;height:268px;border:none" src="hmfile_hash_91b8febb.png"/></p>
+<p style="text-align: justify; line-height: 1.20; margin: 7px 0 7px 0;">Setting up signing in a connector going out of a task requires some preliminary steps:</p>
+<ol style="list-style-type:decimal">
+<li value="1" style="text-align: justify; line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;">Create a context variable of the <span style="font-weight: bold;">App</span> type that will store the item to be signed. It is filled in by the user on the task form on which you are customizing the connector, or it can be filled in previous steps of the process.</li><li value="2" style="text-align: justify; line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;">On the task form, add fields to select, create, or change the attributes of the app item to be signed. If the item is set before the process goes to the current task, display its value in the task.</li></ol>
+<p style="text-align: justify; line-height: 1.20; margin: 7px 0 7px 0;">For example, a user starts an application process and is assigned with a task in which the user creates the <span style="font-weight: bold;">Application</span> app item. Then on the form of the same task the user clicks the <span style="font-weight: bold;">Sign Application</span> button. In the signing window that opens, they select the certificate and click <span style="font-weight: bold;">Sign</span>. After that, the process moves to the next step and the <span style="color: #0000ff;"><a href="digital_signtature_in_apps.html#signed-card" class="topiclink">signature information</a></span> will be displayed in the application page.</p>
+<p style="text-align: justify; line-height: 1.20; margin: 7px 0 7px 0;">Please note that you can also configure the app item signing using the <span style="color: #0000ff;"><a href="sign.html" class="topiclink">Sign</a></span> activity. Keep in mind the following differences between the two signing options:</p>
+<ul style="list-style-type:disc">
+<li style="text-align: justify; line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;">Only two resolutions are available in the <span style="font-weight: bold;">Sign</span> activity, sign or reject. You can add additional connectors in the task, for example, send for revision, sign with comments, delegate signing.</li><li style="text-align: justify; line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;">In the <span style="font-weight: bold;">Sign</span> activity, toy can only the view the item. In a task, the user can create or select a document and sign it immediately. In this way, the path to the result is shortened, two actions are performed in one activity.</li></ul>
+<p style="text-align: justify; line-height: 1.20; margin: 7px 0 7px 0;"><span style="font-weight: bold;">Important</span>: the user must have an electronic signature certificate of one of the providers available in the system installed on their computer. Also enable the modules of providers whose certificates will be used by employees. Read more in the <span style="color: #0000ff;"><a href="set-up-digital-signature.html" class="topiclink">Set up digital signatures</a></span> article.</p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;">On the <span style="color: #0000ff;"><a href="360015835331.html#signature-settings" class="topiclink">Signature Settings</a></span> tab, fill in the fields:</p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><img alt="connectors 7" width="658" height="489" style="margin:0;width:658px;height:489px;border:none" src="hmfile_hash_2913fa96.png"/></p>
+<ul style="list-style-type:disc">
+<li style="text-align: justify; line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-weight: bold;">Application</span><span style="color: #ff0000;">*</span>. Select the variable that specifies the app item to be signed.</li><li style="text-align: justify; line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-weight: bold;">Default provider</span>. Select the provider whose certificate will be applied for signing by default.</li><li style="text-align: justify; line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-weight: bold;">Sign attributes</span>. Set whether it is mandatory to sign the attributes of the app item:<ul style="list-style-type:circle">
+<li style="text-align: justify; line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-weight: bold;">Do not use</span>. When signing the app item, the attributes will not be signed.</li><li style="text-align: justify; line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-weight: bold;">Optional</span>. The user will be able to define the type of signing: with or without attributes. By default, attribute signing is disabled. To enable it, the <span style="font-weight: bold;">Attributes</span> option must be checked in the item signing window.</li><li style="text-align: justify; line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-weight: bold;">Preferred</span>. The user will be able to define the signing method. By default, attribute signing is enabled. In the signing window the user will be able to turn off the <span style="font-weight: bold;">Attributes</span> option.</li><li style="text-align: justify; line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-weight: bold;">Required</span>. When signing an app item, the user will automatically sign the attributes.</li></ul>
+<li style="text-align: justify; line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-weight: bold;">Sign file</span>. If an app item of the <span style="color: #0000ff;"><a href="360009923631.html" class="topiclink">Document type</a></span> is set for signing, the option to sign its file will be displayed in the signing window. The settings in this field are similar to those of the <span style="font-weight: bold;">Sign attributes</span> field.</li><li style="text-align: justify; line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-weight: bold;">Comment</span>. Configure the option to leave a comment on the signature. Select an option from the list: <span style="font-weight: bold;">Do not use</span>, <span style="font-weight: bold;">Optional</span>, <span style="font-weight: bold;">Preferred</span>, or <span style="font-weight: bold;">Required</span>. You can also save the user's comment to a context variable. To do this, select or create it in the field below.</li><li style="text-align: justify; line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-weight: bold;">Available providers</span>. You can limit the list of available providers. Enable the option and in the appeared <span style="font-weight: bold;">Providers</span> field, select values.</li></ul>
+<h2 class="p_Heading2" style="line-height: 1.20; margin: 19px 0 0 0;"><a id="gateway" class="hmanchor"></a><span class="f_Heading2" style="font-size: 24px;">Connector going out of a gateway or a multiple instance task </span></h2>
+<p class="p_Normal" style="line-height: 1.20; margin: 19px 0 0 0;">For connectors that go out of <a href="360012495911.html" class="topiclink">gateways</a> or <a href="360012495611.html#multi" class="topiclink">multiple instance tasks</a>, the <span style="font-weight: bold;">Conditions</span> button becomes available. The process will go down one path or another depending on the connector conditions.</p>
+<h3 class="p_Heading3"><span class="f_Heading3">Conditions tab</span></h3>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;"> <img alt="connectors-8" width="768" height="319" style="margin:0;width:768px;height:319px;border:none" src="connectors-8.png"/></p>
+<ul style="list-style-type:disc">
+<li class="p_Normal" style="line-height: 1.20; margin-top: 14px; margin-right: 0; margin-bottom: 0;"><span style="font-weight: bold;">Process Variable</span>. Specify a variable from the process context. Certain values are available for connectors going out of certain tasks, for example, for the <span style="font-weight: bold;">Approval</span> activity you can specify the percentage of approval or rejection.</li><li class="p_Normal" style="line-height: 1.20; margin-top: 14px; margin-right: 0; margin-bottom: 0;"><span style="font-weight: bold;">Operation</span>. Specify a comparison operator to check a specific condition.</li><li class="p_Normal" style="line-height: 1.20; margin-top: 14px; margin-right: 0; margin-bottom: 0;"><span style="font-weight: bold;">Field Value</span>. Enter the value at which the condition will be executed.</li><li class="p_Normal" style="line-height: 1.20; margin-top: 14px; margin-right: 0; margin-bottom: 0;"><span style="font-weight: bold;">Logical Operator</span> is used to determine how several conditions are checked. If the result evaluates to <span style="font-weight: bold;">True</span>, the process continues down this connector:</li></ul>
+<ul style="list-style-type:disc"><ul style="list-style-type:circle">
+<li style="line-height: 1.20;"><span style="font-weight: bold;">AND</span>.<span style="font-weight: bold;"> </span>The result is <span style="font-weight: bold;">True </span>if both conditions that this operator connects are met.</li><li style="line-height: 1.20;"><span style="font-weight: bold;">OR</span>.<span style="font-weight: bold;"> </span>The result is<span style="font-weight: bold;"> True </span>if at least one of the conditions that this operator connects is met.</li><li style="line-height: 1.20;"><span style="font-weight: bold;">OR NOT</span>.<span style="font-weight: bold;"> </span>The result is <span style="font-weight: bold;">True</span> if the first condition is met and does not correspond with the second condition.</li><li style="line-height: 1.20;"><span style="font-weight: bold;">AND NOT</span>.<span style="font-weight: bold;"> </span>The result is <span style="font-weight: bold;">True </span>if one condition is met or the other one is not met.</li></ul></li></ul>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;">For more information about using connectors with conditions in processes, see the <a href="connectors-use-cases.html" class="topiclink">Connector use cases</a> article.</p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;">Please note that the conditions are checked in the order they are listed in the connector settings.</p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;">In multiple instance tasks, conditions are checked each time one of the executors completes the task.</p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;">If you don’t specify conditions for the connectors going out of a gateway or a multiple instance task, you will see a warning at the bottom of the page when <a href="360012267032.html" class="topiclink">validating the process</a>.</p>
+
+                        <div class="bottom-nav">
+                            
+                                <a id="prev-link" class="topic__navi_prev" href="360012263052.html">
+                                    <span class="bottom-nav__arrow bottom-nav__arrow--prev"></span> <span
+                                        class="bottom-nav__link">360012263052.html</span>
+                                </a>
+                            
+                            
+                                <a id="next-link" class="topic__navi_next" href="connectors-use-cases.html">
+                                    <span class="bottom-nav__link">connectors-use-cases.html</span> <span
+                                        class="bottom-nav__arrow bottom-nav__arrow--next"></span>
+                                </a>
+                            
+                        </div>
+                        <!-- добавляет на страницу строку блок Была ли статья полезной?  -->
+                          <div class="feedback" id="feedback"><div class="feedback-help"><span><b>Was this helpful?</b></span><form action="" method="POST" class="feedback-form" id="feedback-form"><div class="feedback__popup feedback__popup-response" id="feedback__popup_thx" style="display: none;">Thanks for your feedback!</div><div class="feedback__popup" id="feedback__popup_why" style="display: none;"><div class="feedback__popup-header">Please specify why:</div><input type="radio" name="category" id="bad_recommendation" value="bad_recommendation"><label for="bad_recommendation">Recommendations did not help me</label><input type="radio" name="category" id="difficult_text" value="difficult_text"><label for="difficult_text">Article is hard to understand</label><input type="radio" name="category" id="no_answer" value="no_answer"><label for="no_answer">Didn`t answer my question</label><input type="radio" name="category" id="bad_header" value="bad_header"><label for="bad_header">Content does not match the topic</label><input type="radio" name="category" id="other_reason" value="other_reason"><label for="other_reason">Other</label></div><div class="feedback__popup" id="feedback__popup-other" style="display: none;"><div class="feedback__popup-header">How we can improve it?</div><textarea class="feedback__textarea" name="other" id=""></textarea><input type="submit" class="feedback__other-btn" value="Submit"></div><div class="feedback-form__btn-group"><input type="radio" name="useful" id="feedback__useful_yes" value="true"><label for="feedback__useful_yes"><img src="like.svg" class="small-img" alt="like"><spanclass="feedback-form__btn-group_yes-btn">Yes</spanclass="feedback-form__btn-group_yes-btn"></label><input type="radio" name="useful" id="feedback__useful_no" value="false"><label for="feedback__useful_no"><img src="dislike.svg" class="small-img" alt="dislike"><spanclass="feedback-form__btn-group_no-btn">No</spanclass="feedback-form__btn-group_no-btn"></label></div><select name="category"><option disabled="">Please specify why</option><option value="bad_recommendation" selected="">Recommendations did not help me</option><option value="difficult_text">Article is hard to understand</option><option value="no_answer">Didn`t answer my question</option><option value="bad_header">Content does not match the topic</option><option value="other_reason">Other</option></select><input type="submit"></form></div><div class="found_typo"><p style="margin: 0px; margin-top: 16px !important;"><span><b>Found a typo?</b></span> Select it and press <i>Ctrl+Enter</i> to send us feedback</p></div></div>
+                           
+                    </section>
+                </div>
+                <aside class="article__sidebar" style="display:none">
+                    <input type="checkbox" />
+                    <div class="article__arrow"></div>
+                    <div class="table-of-contents elma365-right" id="toc2Content">
+                        <h3 class="h3-toc">In this topic</h3>
+                        <nav id="toc2"></nav>
+                    </div>
+                </aside>
+            </div>
+        </article>
+    </main>               
+    <footer class="footer">
+        <div class="footer-container">
+  <div class="footer-mobile">
+    
+    <ul class="footer-mobile__list"><li><a href="https://brix365.com/en/" target="_blank">BRIX</a></li><li><a href="https://tssdk.brix365.com/en/latest/" target="_blank">SDK</a></li><li><a href="https://api.brix365.com/en/" target="_blank">API</a></li></ul><ul class="footer-mobile__list"><li><a href="https://brix365.com/en/help/platform/get-trial.html">Platform</a></li><li><a href="https://brix365.com/en/help/ecm/ecm-functions.html">ECM</a></li><li><a href="https://brix365.com/en/help/service/service-functions.html">Service</a></li><li><a href="https://brix365.com/en/help/projects/projects-functions.html">Projects</a></li></ul>
+    
+    
+  </div>
+  <div class="footer-wrap">
+    
+      <div><span class="mobile-question-popup">Send feedback</span><form method="POST" action class="question__popup question-xs" id="question__popup"><div class="question-wrap"><span class="close"></span><span class="title">Ask a question</span><label for="help_question" style="display: none;"></label><textarea name="help_question" id="help_question"></textarea><input type="submit" value="Send"></div></form><div class="hidden fade-in question-success-xs">Sent</div></div>
+    
+    <div class="footer-flex-b">
+      <span class="footer-copy">&copy; 2025 BRIX</span>
+      <ul class="footer-list">
+        
+        <li class="footer-item">
+            <a href="#" class="arrow-top" style="display: block;"></a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+ 
+    </footer>
+    <iframe name="hmnavigation" style="display:none!important"></iframe>
+    <script src="./jquery-ui.js"></script>
+    <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
+    <script src="./jquery.tocify.min.js"></script>
+    <script src="./TypoReporter.min.js"></script>
+    <script src="./google-search.js"></script>
+    <script src="./main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,259 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Chats</title>
+    <meta name="generator" content="Help+Manual" />
+    <meta name="keywords" content="" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Both Chats and channels are used to facilitate internal communications in a company. However, there is a slight difference between them:" />
+    <meta name="picture" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Full documentation for BRIX365 platform. Low-code developer guide. User guide. Admin guide. Developer guide." />
+    <meta property="og:url" content="https://brix365.com/en/help" />
+    <meta property="og:image" content="" />                                                              
+    <link rel="icon" href="favicon.png" type="image/png" />
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./jquery-ui.min.css" />
+    <link rel="stylesheet" href="default.css" />
+    <link rel="stylesheet" href="./search-yandex.css" />
+    <link rel="stylesheet" href="./article.css" />
+    <link rel="stylesheet" href="./glossary.css" />
+    <link rel="stylesheet" href="./theme.css" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+
+<body>
+    
+    <script>!function(e,t,c,n,r,a,m){e.ym=e.ym||function(){(e.ym.a=e.ym.a||[]).push(arguments)},e.ym.l=1*new Date;for(var s=0;s<document.scripts.length;s++)if(document.scripts[s].src===n)return;a=t.createElement(c),m=t.getElementsByTagName(c)[0],a.async=1,a.src=n,m.parentNode.insertBefore(a,m)}(window,document,"script","https://mc.yandex.ru/metrika/tag.js"),ym(83179930,"init",{clickmap:!0,trackLinks:!0,accurateTrackBounce:!0,webvisor:!0})</script><noscript><div><img alt=""src=https://mc.yandex.ru/watch/83179930 style=position:absolute;left:-9999px></div></noscript> 
+    
+    ﻿<header class="header elma-365">
+  <div class="container">
+    <a class="header__logo" href="https://brix365.com/en/help">
+      <img src="./logo-en.svg" alt="header logo">
+    </a>
+ <!-- <div class="hero__search-form" id="search-panel">
+   <form class="search-form" onsubmit="ym(83180416,'reachGoal','poisk')">
+     <label class="search-form__label">
+       <span id="reset-search" class="search__icon"></span>
+       <input class="search-form__input" type="text">
+     </label>
+     <input class="search-form__submit" type="submit" value="Submit">
+   </form>
+  </div>       -->
+  
+     <div class="hero__search-form" id="search-panel"> <form class="search-form"> <label class="search-form__label"> <span id="reset-search" class="search__icon"></span> <input class="search-form__input" type="text"> </label> <input class="search-form__submit" type="submit" value="Submit"> </form> </div> 
+  <div class="hero__search">
+      <a href="#" id="search-icon" class="hero__search-icon">
+        <img src="search-icon-white.svg" alt="search string">
+      </a>
+      <a href="#" id="side-menu-icon" class="hero__side-icon">
+        <img src="side_menu.svg" alt="side menu">
+      </a>
+    </div>  
+  <div class="header__navi">
+        
+        <ul class="header__list"><li><span class="solution-select"><span class="solution-select__selected"></span><svg width="7" height="4" viewBox="0 0 7 4" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L3.5 3.5L6 1" stroke="white" stroke-linecap="round" stroke-linejoin="round"/></svg><ul class="solution-select__list"><li><a class="project-link" href="https://brix365.com/en/help/platform/get-trial.html">Platform</a></li><li><a class="project-link" href="https://brix365.com/en/help/ecm/ecm-functions.html">ECM</a></li><li><a class="project-link" href="https://brix365.com/en/help/crm/crm_overview.html">CRM</a></li><li><a class="project-link" href="https://brix365.com/en/help/service/service-functions.html">Service</a></li><li><a class="project-link" href="https://brix365.com/en/help/projects/projects-functions.html">Projects</a></li><li><a class="project-link" href="https://brix365.com/en/help/business_solutions/-elma365-store.html">Business Solutions</a></li></ul></span></li><li><a href="https://api.brix365.com/en/" target="_blank">API</a></li><li><a href="https://tssdk.brix365.com/" target="_blank">SDK</a></li></ul>
+        
+        
+   </div>
+  </div>
+
+</header>
+
+
+
+    
+    <main class="main container">
+
+        <aside class="sidebar" id="sidebar">
+        <div class="sidebar__header">
+                 <a class="header__logo" href="https://brix365.com/en/help">
+                    <img src="./logo-light-en.svg">
+                 </a>
+                    <span class="sidebar__close elma-365-close" id="close"></span>
+            </div>
+            <div class="sidebar__wrapper" id="side-menu">
+                
+            </div>
+        </aside>
+
+        <article class="article" id="article">
+            <div class="article-inner">           
+                <div class="content">
+                    <header class="article__header">
+                        
+                            <div class="topic__breadcrumbs">
+                                <p>Basic features &gt; Messages / Chats</p>
+                            </div>
+                        
+                        <div class="topic__title"><h1 class="p_Heading1" style="text-align: center; line-height: 1.20; margin: 19px 0 19px 0;"><span class="f_Heading1" style="font-size: 32px;">Chats</span></h1>
+</div>
+                    
+</header>
+                    <section class="article__content">
+                        <div class="scroll-top-inner">
+                            <a href="#h1-article" class="scroll-top"></a>
+                        </div>
+                        <!-- Placeholder for topic body. -->
+                        <p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;"><a id="create_chat" class="hmanchor"></a>Both <span style="font-weight: bold;">Chats</span> and <span style="font-weight: bold;">channels</span> are used to facilitate internal communications in a company. However, there is a slight difference between them:</p>
+<ul style="list-style-type:disc">
+<li class="p_Normal" style="line-height: 1.20; margin-top: 14px; margin-right: 0; margin-bottom: 0;"><a href="360014817172.html" class="topiclink">Channels</a> are primarily a tool for informing employees about important events in the company<span style="color: #202122; background-color: #ffffff;">’</span>s life.</li><li class="p_Normal" style="line-height: 1.20; margin-top: 14px; margin-right: 0; margin-bottom: 0;"><span style="font-weight: bold;">Chats</span> are used for personal interaction between employees: to timely exchange important data, coordinate activities, and quickly discuss work issues.</li></ul>
+<h2 class="p_Heading2" style="line-height: 1.20; margin: 19px 0 0 0;"><span class="f_Heading2" style="font-size: 24px;">Create a chat</span></h2>
+<p class="p_Normal" style="line-height: 1.20; margin: 19px 0 0 0;">There are several ways to start a conversation with a coworker in a chat.</p>
+<ol style="list-style-type:upper-roman">
+<li value="1" style="line-height: 1.20;">Use the search box.<span style="font-weight: bold;"> </span>Go to the <span style="font-weight: bold;">Messages</span> workspace. In the search box for channels and chats, enter the first few letters of the coworker<span style="color: #202122; background-color: #ffffff;">’</span>s name and select a person from the drop-down list.</li><li value="2" style="line-height: 1.20;">Click on the user<span style="color: #202122; background-color: #ffffff;">’</span>s name. In the <a href="360014162972.html" class="topiclink">#Activity stream</a>, a channel, or a <a href="360014352951.html" class="topiclink">task page</a>, click on the person<span style="color: #202122; background-color: #ffffff;">’</span>s name and select the <span style="font-weight: bold;">Send Message </span>option.</li></ol>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 34px;"><img alt="chats 3" width="628" height="490" style="margin:0;width:628px;height:490px;border:none" src="hmfile_hash_e2e6dd64.png"/></p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;">All your personal chats are displayed in the <span style="font-weight: bold;">Messages</span> workspace. Your recent chats are shown right under the <span style="font-weight: bold;">#Activity stream</span>.</p>
+<p style="line-height: 1.20;">Sent messages are marked as follows:</p>
+<ul style="list-style-type:disc">
+<li style="line-height: 1.20;"><img alt="chats-sent-icon" title="chats-sent-icon" width="17" height="16" style="margin:0;width:17px;height:16px;border:none" src="chats-sent-icon.png"/> The message has been sent.</li><li style="line-height: 1.20;"><img alt="chats-read-icon" title="chats-read-icon" width="20" height="19" style="margin:0;width:20px;height:19px;border:none" src="chats-read-icon.png"/> The message has been read.</li></ul>
+<p style="line-height: 1.20; margin: 0 0 16px 0;"><span style="background-color: #ffffff;">In group chats a message is marked as read if at least one person has seen it.</span></p>
+<h2 class="p_Heading2"><span class="f_Heading2">Actions with messages in chats</span></h2>
+<p style="line-height: 1.20; margin: 0 0 16px 0;"><span style="background-color: #ffffff;">Actions with messages are available in chats:</span></p>
+<ul style="list-style-type:disc">
+<li style="text-align: justify; line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 16px;"><span style="font-weight: bold;">Post a reaction</span>. The selected emoji will be displayed below the message. The author of the comment will receive a <span style="font-weight: bold;">push notification</span> about your reaction.</li><li style="text-align: justify; line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 16px;"><span style="font-weight: bold;">Copy</span>.<span style="font-size: 15px;"> </span>Save the message to the clipboard.</li><li style="text-align: justify; line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 16px;"><span style="font-weight: bold;">Edit</span>. Edit the message you have sent. The edited message is marked in the chat with the <img alt="clip0219" width="16" height="14" style="margin:0;width:16px;height:14px;border:none" src="clip0219.png"/><span class="f_ImageCaption" style="font-size: 16px;"> </span>icon.</li><li style="text-align: justify; line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 16px;"><span style="font-weight: bold;">Quote</span>. Re-send and complete your message or reply to the message of the other person.</li><li style="text-align: justify; line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 16px;"><span style="font-weight: bold;">Mark as Unread</span>. Mark received messages unread so that you can return to the chat later. Such a chat will be marked with a red counter and you can easily find it when you need it.</li><li style="text-align: justify; line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 16px;"><span style="font-weight: bold;">Forward</span>. Share the message and comment on it. Select this action, then choose a chat and forward the message.</li><li style="text-align: justify; line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 16px;"><span style="font-weight: bold;">Select</span>. Select multiple messages to forward to another chat.</li><li style="text-align: justify; line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 16px;"><span style="font-weight: bold;">View the list of reactions</span>. Using the <span style="font-weight: bold;">Reactions</span> option, you can open the list of users who have reacted to the message.</li></ul>
+<p style="line-height: 1.20; margin: 0 0 16px 0;"><span style="background-color: #ffffff;">Please note that message actions are not available in channels.</span></p>
+<p style="line-height: 1.20; margin: 0 0 16px 0;">To send an edited, quoted, or forwarded message, press the <span style="font-weight: bold;">Enter</span> key or the <span style="font-weight: bold;">Send</span> button in the text entry field. To cancel the <span style="font-weight: bold;">Edit</span>, <span style="font-weight: bold;">Forward</span>, and <span style="font-weight: bold;">Quote</span> actions, click the cross icon.</p>
+<p style="line-height: 1.20; margin: 0 0 16px 0;"><span style="background-color: #ffffff;">You can go to the quoted message in the chat by clicking on it.</span></p>
+<h2 class="p_Heading2"><a id="share" class="hmanchor"></a><span class="f_Heading2">Share files</span></h2>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;">In chats and channels, you can share files: presentations, documents, or photos, as well as audio and video files.</p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;">To do this: </p>
+<ul style="list-style-type:disc">
+<li class="p_Normal" style="line-height: 1.20; margin-top: 14px; margin-right: 0; margin-bottom: 0;">Drag one or several files from a folder on your computer into the input box.</li><li class="p_Normal" style="line-height: 1.20; margin-top: 14px; margin-right: 0; margin-bottom: 0;">Click on the paperclip icon in the right corner of the box and select the desired file in the opened window. To add more files, click the paperclip icon again in the upload window.</li></ul>
+<p class="p_Normal">After you share a file, it will appear:</p>
+<ul style="list-style-type:disc">
+<li class="p_Normal">Next to your message in the conversation.</li><li class="p_Normal">In the list of all the files you have shared in the chat. To see the file, click <span style="font-weight: bold;">Attachments</span> in the upper right corner of the chat.</li></ul>
+<p class="p_Normal">Hover over the file to select one of the available actions:</p>
+<ul style="list-style-type:disc">
+<li class="p_Normal"><img alt="clip0220" width="33" height="33" style="margin:0;width:33px;height:33px;border:none" src="clip0220.png"/> Download the file to your computer.</li><li class="p_Normal"><img alt="clip0221" width="33" height="35" style="margin:0;width:33px;height:35px;border:none" src="clip0221.png"/> Select a folder from the <a href="360014164452.html" class="topiclink">Files</a> workspace and save a copy of the document in it.</li></ul>
+<ul style="list-style-type:disc">
+<li class="p_Normal"><img alt="link-to-file-icon-on-blue" width="32" height="32" style="margin:0;width:32px;height:32px;border:none" src="link-to-file-icon-on-blue.png"/><span class="f_ImageCaption"> </span>Copy a link to download the file.</li></ul>
+<ul style="list-style-type:disc">
+<li class="p_Normal">Click on the blue area to open the file in <a href="360014164452.html" class="topiclink">viewing mode</a>.</li></ul>
+<p class="p_Normal">For more information about working with files in messages, see <a href="360014351271.html" class="topiclink">Share files in chats and channels</a>.</p>
+<h2 class="p_Heading2"><span class="f_Heading2">New message notifications</span></h2>
+<p class="p_Normal"><a id="notifications" class="hmanchor"></a>With notifications, you will never miss important messages and will be able to timely resolve all the issues that might arise.</p>
+<p class="p_Normal">There are several ways to find out that someone wrote to you in the chat:</p>
+<ol style="list-style-type:decimal">
+<li value="1" style="line-height: 1.20;">A pop-up window appears in the lower right corner of the screen. Click on it to go to the chat.</li></ol>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 34px;"><img alt="chats 5" width="1100" height="506" style="margin:0;width:1100px;height:506px;border:none" src="hmfile_hash_5f50e607.png"/></p>
+<ol style="list-style-type:decimal" start="2">
+<li value="2" class="p_Normal" style="line-height: 1.20; margin-top: 14px; margin-right: 0; margin-bottom: 0;">If the browser window with BRIX is minimized, a push notification will be displayed in the bottom right corner of the screen.</li></ol>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 34px;"><img alt="chats 8" width="380" height="199" style="margin:0;width:380px;height:199px;border:none" src="hmfile_hash_55076dd4.png"/></p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;внимание</span></p>
+<p style="line-height: 1.20; margin: 14px 0 0 0;">You will receive push notifications only if you allow the system to send them to you. For more information about push notifications, see <a href="360014352211.html" class="topiclink">Notifications</a>.</p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;внимание</span></p>
+<p style="line-height: 1.20;"><span style="font-size: 13px; color: #000000;">&nbsp;</span></p>
+<ol style="list-style-type:decimal" start="3">
+<li value="3" style="line-height: 1.20;">You will see a new message counter in:</li></ol>
+<ul style="list-style-type:disc">
+<li style="line-height: 1.20;">The <span style="font-weight: bold;">Messages</span> workspace, to the right of the name of a person who has sent you a message.</li></ul>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 34px;"><img alt="chats 9" width="208" height="283" style="margin:0;width:208px;height:283px;border:none" src="hmfile_hash_1a8084b9.png"/></p>
+<ul style="list-style-type:disc">
+<li style="line-height: 1.20;">On the main page on the envelope icon of the <span style="font-weight: bold;">Messages</span> workspace.</li></ul>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 34px;"><img alt="chats 10" width="96" height="329" style="margin:0;width:96px;height:329px;border:none" src="hmfile_hash_d10db973.png"/></p>
+<p style="line-height: 1.20;"><span style="font-size: 13px; color: #000000;">&nbsp;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;внимание</span></p>
+<p style="line-height: 1.20; margin: 14px 0 0 0;">The counter next to the letter icon does not show how many new messages you have, but indicates the number of chats or channels with unread messages.</p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;внимание&nbsp;</span></p>
+<h2 class="p_Heading2" style="line-height: 1.20; margin: 19px 0 0 0;"><span class="f_Heading2" style="font-size: 24px;">Silent mode</span></h2>
+<p class="p_Normal" style="line-height: 1.20; margin: 19px 0 0 0;">If you don’t want to receive notifications, simply switch the chat to silent mode. To do that, go to the chat window and click <span style="font-weight: bold;">Notifications</span> in the upper right corner.</p>
+<h2 class="p_Heading2" style="line-height: 1.20; margin: 19px 0 0 0;"><span class="f_Heading2" style="font-size: 24px;">Invite someone to join a chat</span></h2>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;"><a id="search" class="hmanchor"></a>You can invite other people to a chat to discuss an issue together, coordinate plans, or share information. To do this, click <span style="font-weight: bold;">Add participant</span> in the upper right corner of the chat and select new participants in the window that opens. You can read more about chats for multiple people in <a href="360014162732.html" class="topiclink">Group chats</a>.</p>
+<h2 class="p_Heading2" style="line-height: 1.20; margin: 19px 0 0 0;"><span class="f_Heading2" style="font-size: 24px;">Find a chat</span></h2>
+<p class="p_Normal" style="line-height: 1.20; margin: 19px 0 0 0;">To quickly find a chat, start typing the user's first or last name in the search box in the <span style="font-weight: bold;">Messages</span> workspace. A drop-down list with prompts will appear below the box. Just click on the name of the person to go to the chat.</p>
+<p style="text-align: justify; line-height: 1.20; margin: 19px 0 0 0;"><img alt="clip0225" width="22" height="19" style="margin:0;width:22px;height:19px;border:none" src="clip0225.png"/><span class="f_ImageCaption"> </span>To display a list of available live chats. This icon will display if <a href="create_line.html" class="topiclink">live chats</a> have been created in the system.</p>
+<p style="text-align: justify; line-height: 1.20; margin: 19px 0 0 0;"><img alt="clip0226" width="22" height="19" style="margin:0;width:22px;height:19px;border:none" src="clip0226.png"/><span class="f_ImageCaption"> </span>To show a list of all channels and chats available to you.</p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;"><span style="font-weight: bold;"> </span><img alt="chats hash" width="22" height="25" style="margin:0;width:22px;height:25px;border:none" src="hmfile_hash_7118687d.png"/><span class="f_ImageCaption"> </span>To display a list of available channels.</p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;"><img alt="chats_actions_01" width="610" height="63" style="margin:0;width:610px;height:63px;border:none" src="chats_actions_01.png"/></p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;"> To find a particular message in a chat, go to the chat, and in the search bar enter the phrase or word you want to find. From the drop-down list, select <span style="font-weight: bold;">Search in this chat</span>.<span class="f_ImageCaption"> <img alt="chats 15" width="823" height="477" style="margin:0;width:823px;height:477px;border:none" src="hmfile_hash_abe26572.png"/></span></p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;">Matches found will be highlighted in dark yellow. To go to the next match, use the navigation buttons that appear in the right corner of the search box.<span class="f_ImageCaption"> <img alt="chats 16" width="749" height="456" style="margin:0;width:749px;height:456px;border:none" src="hmfile_hash_67b70fbe.png"/></span></p>
+<h2 class="p_Heading2"><span class="f_Heading2">Create an event in a chat</span></h2>
+<p style="line-height: 1.20;">You can quickly create an event for all the chat participants. To do that, click <span style="font-weight: bold;">+Event</span> in the header.</p>
+<p style="line-height: 1.20;">In the opened window, fill in the event parameters. Please note that all participants of the chat or <a href="360014191132" target="_blank" class="weblink">channel</a> are automatically added to the <span style="font-weight: bold;">Participants</span> field.</p>
+<p style="line-height: 1.20;"><img alt="chats_actions_03" width="681" height="552" style="margin:0;width:681px;height:552px;border:none" src="chats_actions_03.png"/></p>
+<p style="line-height: 1.20; margin: 11px 0 0 0;">When saved, the event will appear in the <a href="calendar.html" class="topiclink">personal calendar</a> of every participant and in the <a href="360014162972.html" class="topiclink">#Activity stream</a>.</p>
+<h2 class="p_Heading2"><a id="hide_chat" class="hmanchor"></a><span class="f_Heading2">Hide a chat </span></h2>
+<p class="p_Normal" style="line-height: 1.36;">If you no longer need a chat, you can remove it from your list of chats and channels. It will still remain available to all the other participants. As soon as someone sends a new message to the chat, it will re-appear in your list.</p>
+<p class="p_Normal" style="line-height: 1.36; margin: 11px 0 0 0;">To hide a chat from the list, right-click on the name and select <span style="font-weight: bold;">Hide Chat</span>.</p>
+<h2 class="p_Heading2"><span class="f_Heading2">Add a chat to Favorites</span></h2>
+<p class="p_Normal">If you have enabled <a href="object-based-activity-stream.html" class="topiclink">object-based activity stream</a>, you can mark a chat as important. To do this, right-click on it and select <span style="font-weight: bold;">Add to Favorites</span>.</p>
+<p>To exclude a chat from favorites, click <span style="font-weight: bold;">Delete from Favorites</span> in its context menu.</p>
+
+                        <div class="bottom-nav">
+                            
+                                <a id="prev-link" class="topic__navi_prev" href="object-based-activity-stream.html">
+                                    <span class="bottom-nav__arrow bottom-nav__arrow--prev"></span> <span
+                                        class="bottom-nav__link">object-based-activity-stream.html</span>
+                                </a>
+                            
+                            
+                                <a id="next-link" class="topic__navi_next" href="360014162732.html">
+                                    <span class="bottom-nav__link">360014162732.html</span> <span
+                                        class="bottom-nav__arrow bottom-nav__arrow--next"></span>
+                                </a>
+                            
+                        </div>
+                        <!-- добавляет на страницу строку блок Была ли статья полезной?  -->
+                          <div class="feedback" id="feedback"><div class="feedback-help"><span><b>Was this helpful?</b></span><form action="" method="POST" class="feedback-form" id="feedback-form"><div class="feedback__popup feedback__popup-response" id="feedback__popup_thx" style="display: none;">Thanks for your feedback!</div><div class="feedback__popup" id="feedback__popup_why" style="display: none;"><div class="feedback__popup-header">Please specify why:</div><input type="radio" name="category" id="bad_recommendation" value="bad_recommendation"><label for="bad_recommendation">Recommendations did not help me</label><input type="radio" name="category" id="difficult_text" value="difficult_text"><label for="difficult_text">Article is hard to understand</label><input type="radio" name="category" id="no_answer" value="no_answer"><label for="no_answer">Didn`t answer my question</label><input type="radio" name="category" id="bad_header" value="bad_header"><label for="bad_header">Content does not match the topic</label><input type="radio" name="category" id="other_reason" value="other_reason"><label for="other_reason">Other</label></div><div class="feedback__popup" id="feedback__popup-other" style="display: none;"><div class="feedback__popup-header">How we can improve it?</div><textarea class="feedback__textarea" name="other" id=""></textarea><input type="submit" class="feedback__other-btn" value="Submit"></div><div class="feedback-form__btn-group"><input type="radio" name="useful" id="feedback__useful_yes" value="true"><label for="feedback__useful_yes"><img src="like.svg" class="small-img" alt="like"><spanclass="feedback-form__btn-group_yes-btn">Yes</spanclass="feedback-form__btn-group_yes-btn"></label><input type="radio" name="useful" id="feedback__useful_no" value="false"><label for="feedback__useful_no"><img src="dislike.svg" class="small-img" alt="dislike"><spanclass="feedback-form__btn-group_no-btn">No</spanclass="feedback-form__btn-group_no-btn"></label></div><select name="category"><option disabled="">Please specify why</option><option value="bad_recommendation" selected="">Recommendations did not help me</option><option value="difficult_text">Article is hard to understand</option><option value="no_answer">Didn`t answer my question</option><option value="bad_header">Content does not match the topic</option><option value="other_reason">Other</option></select><input type="submit"></form></div><div class="found_typo"><p style="margin: 0px; margin-top: 16px !important;"><span><b>Found a typo?</b></span> Select it and press <i>Ctrl+Enter</i> to send us feedback</p></div></div>
+                           
+                    </section>
+                </div>
+                <aside class="article__sidebar" style="display:none">
+                    <input type="checkbox" />
+                    <div class="article__arrow"></div>
+                    <div class="table-of-contents elma365-right" id="toc2Content">
+                        <h3 class="h3-toc">In this topic</h3>
+                        <nav id="toc2"></nav>
+                    </div>
+                </aside>
+            </div>
+        </article>
+    </main>               
+    <footer class="footer">
+        <div class="footer-container">
+  <div class="footer-mobile">
+    
+    <ul class="footer-mobile__list"><li><a href="https://brix365.com/en/" target="_blank">BRIX</a></li><li><a href="https://tssdk.brix365.com/en/latest/" target="_blank">SDK</a></li><li><a href="https://api.brix365.com/en/" target="_blank">API</a></li></ul><ul class="footer-mobile__list"><li><a href="https://brix365.com/en/help/platform/get-trial.html">Platform</a></li><li><a href="https://brix365.com/en/help/ecm/ecm-functions.html">ECM</a></li><li><a href="https://brix365.com/en/help/service/service-functions.html">Service</a></li><li><a href="https://brix365.com/en/help/projects/projects-functions.html">Projects</a></li></ul>
+    
+    
+  </div>
+  <div class="footer-wrap">
+    
+      <div><span class="mobile-question-popup">Send feedback</span><form method="POST" action class="question__popup question-xs" id="question__popup"><div class="question-wrap"><span class="close"></span><span class="title">Ask a question</span><label for="help_question" style="display: none;"></label><textarea name="help_question" id="help_question"></textarea><input type="submit" value="Send"></div></form><div class="hidden fade-in question-success-xs">Sent</div></div>
+    
+    <div class="footer-flex-b">
+      <span class="footer-copy">&copy; 2025 BRIX</span>
+      <ul class="footer-list">
+        
+        <li class="footer-item">
+            <a href="#" class="arrow-top" style="display: block;"></a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+ 
+    </footer>
+    <iframe name="hmnavigation" style="display:none!important"></iframe>
+    <script src="./jquery-ui.js"></script>
+    <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
+    <script src="./jquery.tocify.min.js"></script>
+    <script src="./TypoReporter.min.js"></script>
+    <script src="./google-search.js"></script>
+    <script src="./main.js"></script>
+</body>
+
+</html>

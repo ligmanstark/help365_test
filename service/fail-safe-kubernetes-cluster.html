@@ -1,0 +1,767 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>High-availability Kubernetes cluster</title>
+    <meta name="generator" content="Help+Manual" />
+    <meta name="keywords" content="" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Deckhouse is a full-featured platform based on Open Source components that, in addition to Kubernetes, includes additional modules for monitoring, traffic balancing,..." />
+    <meta name="picture" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Full documentation for BRIX365 platform. Low-code developer guide. User guide. Admin guide. Developer guide." />
+    <meta property="og:url" content="https://brix365.com/en/help" />
+    <meta property="og:image" content="" />                                                              
+    <link rel="icon" href="favicon.png" type="image/png" />
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./jquery-ui.min.css" />
+    <link rel="stylesheet" href="default.css" />
+    <link rel="stylesheet" href="./search-yandex.css" />
+    <link rel="stylesheet" href="./article.css" />
+    <link rel="stylesheet" href="./glossary.css" />
+    <link rel="stylesheet" href="./theme.css" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+
+<body>
+    
+    <script>!function(e,t,c,n,r,a,m){e.ym=e.ym||function(){(e.ym.a=e.ym.a||[]).push(arguments)},e.ym.l=1*new Date;for(var s=0;s<document.scripts.length;s++)if(document.scripts[s].src===n)return;a=t.createElement(c),m=t.getElementsByTagName(c)[0],a.async=1,a.src=n,m.parentNode.insertBefore(a,m)}(window,document,"script","https://mc.yandex.ru/metrika/tag.js"),ym(83179930,"init",{clickmap:!0,trackLinks:!0,accurateTrackBounce:!0,webvisor:!0})</script><noscript><div><img alt=""src=https://mc.yandex.ru/watch/83179930 style=position:absolute;left:-9999px></div></noscript> 
+    
+    ﻿<header class="header elma-365">
+  <div class="container">
+    <a class="header__logo" href="https://brix365.com/en/help">
+      <img src="./logo-en.svg" alt="header logo">
+    </a>
+ <!-- <div class="hero__search-form" id="search-panel">
+   <form class="search-form" onsubmit="ym(83180416,'reachGoal','poisk')">
+     <label class="search-form__label">
+       <span id="reset-search" class="search__icon"></span>
+       <input class="search-form__input" type="text">
+     </label>
+     <input class="search-form__submit" type="submit" value="Submit">
+   </form>
+  </div>       -->
+  
+     <div class="hero__search-form" id="search-panel"> <form class="search-form"> <label class="search-form__label"> <span id="reset-search" class="search__icon"></span> <input class="search-form__input" type="text"> </label> <input class="search-form__submit" type="submit" value="Submit"> </form> </div> 
+  <div class="hero__search">
+      <a href="#" id="search-icon" class="hero__search-icon">
+        <img src="search-icon-white.svg" alt="search string">
+      </a>
+      <a href="#" id="side-menu-icon" class="hero__side-icon">
+        <img src="side_menu.svg" alt="side menu">
+      </a>
+    </div>  
+  <div class="header__navi">
+        
+        <ul class="header__list"><li><span class="solution-select"><span class="solution-select__selected"></span><svg width="7" height="4" viewBox="0 0 7 4" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L3.5 3.5L6 1" stroke="white" stroke-linecap="round" stroke-linejoin="round"/></svg><ul class="solution-select__list"><li><a class="project-link" href="https://brix365.com/en/help/platform/get-trial.html">Platform</a></li><li><a class="project-link" href="https://brix365.com/en/help/ecm/ecm-functions.html">ECM</a></li><li><a class="project-link" href="https://brix365.com/en/help/crm/crm_overview.html">CRM</a></li><li><a class="project-link" href="https://brix365.com/en/help/service/service-functions.html">Service</a></li><li><a class="project-link" href="https://brix365.com/en/help/projects/projects-functions.html">Projects</a></li><li><a class="project-link" href="https://brix365.com/en/help/business_solutions/-elma365-store.html">Business Solutions</a></li></ul></span></li><li><a href="https://api.brix365.com/en/" target="_blank">API</a></li><li><a href="https://tssdk.brix365.com/" target="_blank">SDK</a></li></ul>
+        
+        
+   </div>
+  </div>
+
+</header>
+
+
+
+    
+    <main class="main container">
+
+        <aside class="sidebar" id="sidebar">
+        <div class="sidebar__header">
+                 <a class="header__logo" href="https://brix365.com/en/help">
+                    <img src="./logo-light-en.svg">
+                 </a>
+                    <span class="sidebar__close elma-365-close" id="close"></span>
+            </div>
+            <div class="sidebar__wrapper" id="side-menu">
+                
+            </div>
+        </aside>
+
+        <article class="article" id="article">
+            <div class="article-inner">           
+                <div class="content">
+                    <header class="article__header">
+                        
+                            <div class="topic__breadcrumbs">
+                                <p><a href="elma365-on-premises.html">BRIX On-Premises</a> &gt; <a href="infrastructure-preparation.html">Prepare infrastructure</a> &gt; Kubernetes / High-availability Kubernetes cluster</p>
+                            </div>
+                        
+                        <div class="topic__title"><h1 class="p_Heading1"><span class="f_Heading1">High-availability Kubernetes cluster</span></h1>
+</div>
+                    
+</header>
+                    <section class="article__content">
+                        <div class="scroll-top-inner">
+                            <a href="#h1-article" class="scroll-top"></a>
+                        </div>
+                        <!-- Placeholder for topic body. -->
+                        <p class="p_Normal"><a href="https://deckhouse.io/" target="_blank" class="weblink">Deckhouse</a> is a full-featured platform based on Open Source components that, in addition to Kubernetes, includes additional modules for monitoring, traffic balancing, autoscaling, secure access, and more. The modules are pre-configured, integrated with each other, and ready to use. Management of all cluster components and the platform, as well as their updates, are fully automated.</p>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-family: Inter;">Deckhouse is <a href="https://landscape.cncf.io/card-mode?category=certified-kubernetes-distribution,certified-kubernetes-hosted,certified-kubernetes-installer&amp;grouping=category&amp;selected=flant-deckhouse" target="_blank" class="weblink">certified by CNCF</a>.</span></p>
+<p class="p_Normal">The installation consists of the following steps: </p>
+<ol style="list-style-type:decimal">
+<li value="1" class="p_Normal"><a href="fail-safe-kubernetes-cluster.html#cluster-architecture" class="topiclink">Kubernetes cluster architecture</a>.</li><li value="2" class="p_Normal"><a href="fail-safe-kubernetes-cluster.html#system-requirements" class="topiclink">Recommended system requirements</a>.</li><li value="3" class="p_Normal"><a href="fail-safe-kubernetes-cluster.html#preparation-config-file" class="topiclink">Preparation of the configuration file</a>.</li><li value="4" class="p_Normal"><a href="fail-safe-kubernetes-cluster.html#installation" class="topiclink">Installation of Kubernetes cluster based on Deckhouse</a>.</li><li value="5" class="p_Normal"><a href="fail-safe-kubernetes-cluster.html#addition-frontend-nodes" class="topiclink">Adding frontend nodes</a>.</li><li value="6" class="p_Normal"><a href="fail-safe-kubernetes-cluster.html#addition-system-nodes" class="topiclink">Adding system nodes</a>.</li><li value="7" class="p_Normal"><a href="fail-safe-kubernetes-cluster.html#addition-worke-nodes" class="topiclink">Adding worker nodes</a>.</li><li value="8" class="p_Normal"><a href="fail-safe-kubernetes-cluster.html#addition-master-nodes" class="topiclink">Adding master nodes</a>.</li><li value="9" class="p_Normal"><a href="fail-safe-kubernetes-cluster.html#addition-local-path-provisioner" class="topiclink">Adding Local Path Provisioner</a>.</li><li value="10" class="p_Normal"><a href="fail-safe-kubernetes-cluster.html#addition-balancer" class="topiclink">Adding OpenELB load balancer - VIP</a>.</li><li value="11" class="p_Normal"><a href="fail-safe-kubernetes-cluster.html#addition-ingress-nginx-controller" class="topiclink">Adding Ingress Nginx Controller - LoadBalancer</a>.</li><li value="12" class="p_Normal"><a href="fail-safe-kubernetes-cluster.html#addition-user" class="topiclink">Adding a user for access to the cluster web interface</a>.</li><li value="13" class="p_Normal"><a href="fail-safe-kubernetes-cluster.html#pivileges" class="topiclink">Privileges of the launched loads</a>.</li><li value="14" class="p_Normal"><a href="fail-safe-kubernetes-cluster.html#installation-helm" class="topiclink">Install Helm</a>.</li></ol>
+<h2 class="p_Heading2"><a id="cluster-architecture" class="hmanchor"></a><span class="f_Heading2">Step 1: Kubernetes cluster architecture</span></h2>
+<p class="p_Normal">This article describes the implementation of an infrastructure for a high-availability Kubernetes cluster based on the Deckhouse platform.</p>
+<ol style="list-style-type:upper-roman">
+<li value="1" class="p_Normal">Structure of the Kubernetes cluster.</li></ol>
+<p class="p_Normal"><img alt="fail-safe-kubernetes-cluster-1" width="1042" height="450" style="margin:0;width:1042px;height:450px;border:none" src="fail-safe-kubernetes-cluster-1.png"/></p>
+<p class="p_Normal">To deploy a minimal structure of a Kubernetes cluster based on the Deckhouse platform, you will need:</p>
+<ul style="list-style-type:disc">
+<li class="p_Normal">A personal computer.</li><li class="p_Normal">Three nodes for the master node.</li><li class="p_Normal">Three nodes for the worker node.</li><li class="p_Normal">Two nodes for the system node.</li><li class="p_Normal">Two nodes for the frontend node.</li></ul>
+<p class="p_Normal">In the example considered, web traffic from users arrives at the virtual IP address 192.168.1.13, hosted on frontend nodes. Choose the domain name template for accessing web services of the Deckhouse platform as <span style="font-weight: bold;">%s.example.com</span></p>
+<p class="p_Normal">Deckhouse automatically configures and manages the cluster nodes and its control plane components, constantly maintaining their up-to-date configuration. When deploying master nodes, all necessary components for the control plane are automatically created using the <a href="https://deckhouse.io/documentation/latest/modules/040-control-plane-manager/" target="_blank" class="weblink">control-plane-manager</a> module.</p>
+<p class="p_Normal">Deckhouse creates and deletes Kubernetes entities as needed. For example, if your cluster has no frontend nodes and the master nodes have not had the <span style="font-weight: bold;">taint</span> restriction removed, you will not be able to install <span style="font-weight: bold;">IngressNginxController</span>. Necessary entities such as <span style="font-weight: bold;">ingressClass</span> and so on will be missing from the cluster. When adding system nodes, Deckhouse will automatically deploy monitoring components and web services for accessing the platform interface. Web services will automatically bind to <span style="font-weight: bold;">%s.example.com</span>.</p>
+<ol style="list-style-type:upper-roman" start="2">
+<li value="2" class="p_Normal">Load Deckhouse images into the local image registry.</li></ol>
+<p class="p_Normal">A Kubernetes cluster using Deckhouse can be deployed in a closed environment with no internet access. To do this, download the Deckhouse platform images on a computer with internet access and upload them to the local image registry. Read more in <a href="downloading-images-deckhouse.html" class="topiclink">Download Deckhouse Images</a>.</p>
+<h2 class="p_Heading2"><a id="system-requirements" class="hmanchor"></a><span class="f_Heading2">Step 2: Recommended system requirements</span></h2>
+<ol style="list-style-type:upper-roman">
+<li value="1" class="p_Normal">Personal computer:</li></ol>
+<ul style="list-style-type:disc">
+<li class="p_Normal">ОS: Windows 10+, macOS 10.15+, Linux (Ubuntu 18.04+, Fedora 35+).</li><li class="p_Normal">Installed Docker to run the Deckhouse installer.</li><li class="p_Normal">Access to a proxy registry or a private container image repository with Deckhouse container images.</li><li class="p_Normal">SSH key-based access to the node that will become the master node of the future cluster.</li></ul>
+<ol style="list-style-type:upper-roman" start="2">
+<li value="2" class="p_Normal">Kubernetes nodes:</li></ol>
+<ul style="list-style-type:disc">
+<li class="p_Normal"><a href="https://deckhouse.io/documentation/v1/supported_versions.html" target="_blank" class="weblink">Supported OS</a>.</li><li class="p_Normal">Node configuration:</li></ul>
+<div style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0 0 0 0;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_Normal" style="text-align: center;"><span style="font-weight: bold;">Name</span></p>
+</td>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_Normal" style="text-align: center;"><span style="font-weight: bold;">vCPU</span></p>
+</td>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_Normal" style="text-align: center;"><span style="font-weight: bold;">RAM (GB)</span></p>
+</td>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_Normal" style="text-align: center;"><span style="font-weight: bold;">HDD (GB)</span></p>
+</td>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_Normal" style="text-align: center;"><span style="font-weight: bold;">LAN (Gbit/s)</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_Normal" style="text-align: center;">Kubernetes worker</p>
+</td>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_Normal" style="text-align: center;">8</p>
+</td>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_Normal" style="text-align: center;">16</p>
+</td>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_Normal" style="text-align: center;">60</p>
+</td>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_Normal" style="text-align: center;">1</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_Normal" style="text-align: center;">Kubernetes system</p>
+</td>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_Normal" style="text-align: center;">8</p>
+</td>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_Normal" style="text-align: center;">16</p>
+</td>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_Normal" style="text-align: center;">200</p>
+</td>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_Normal" style="text-align: center;">1</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_Normal" style="text-align: center;">Kubernetes master</p>
+</td>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_Normal" style="text-align: center;">4</p>
+</td>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_Normal" style="text-align: center;">8</p>
+</td>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_Normal" style="text-align: center;">60</p>
+</td>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_Normal" style="text-align: center;">1</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_Normal" style="text-align: center;">Kubernetes frontend</p>
+</td>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_Normal" style="text-align: center;">4</p>
+</td>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_Normal" style="text-align: center;">6</p>
+</td>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_Normal" style="text-align: center;">60</p>
+</td>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_Normal" style="text-align: center;">1</p>
+</td>
+</tr>
+</table>
+</div>
+<ul style="list-style-type:disc">
+<li class="p_Normal">Access to a proxy registry or a private container image repository with Deckhouse container images.</li></ul>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">Начало&nbsp;внимание</span></p>
+<p class="p_Normal">Deckhouse only supports working with Bearer token authentication scheme in the <span style="font-weight: bold;">registry</span>.</p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">Конец&nbsp;внимание</span></p>
+<ul style="list-style-type:disc">
+<li class="p_Normal">Access to a proxy server for downloading deb/rpm packages of the OS as needed.</li><li class="p_Normal">The node should not have container runtime packages installed, such as containerd or Docker.</li></ul>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">Начало&nbsp;примечание</span></p>
+<p class="p_Normal"><span style="font-weight: bold;">Note</span></p>
+<p class="p_Normal">Installation directly from the master node is currently not supported. The Docker image installer cannot be run on the same node where the master node is planned to be deployed because there should be no container runtime packages installed on the node, such as containerd or Docker. In the absence of management nodes, install Docker on any other node of the future cluster, run the Docker image installer, install Deckhouse, and remove the Docker image installer from the node along with Docker.</p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">Конец&nbsp;примечание</span></p>
+<h2 class="p_Heading2"><a id="preparation-config-file" class="hmanchor"></a><span class="f_Heading2">Step 3: Preparation of the configuration file</span></h2>
+<p class="p_Normal">To install Deckhouse, prepare a YAML configuration file for the installation. To obtain the YAML configuration file, use the the <a href="https://deckhouse.io/gs/" target="_blank" class="weblink">Getting Started</a> service on the Deckhouse website. The service will generate an up-to-date YAML file for the current platform version.</p>
+<ol style="list-style-type:upper-roman">
+<li value="1" class="p_Normal">Generate a YAML file using the <a href="https://deckhouse.io/gs/" target="_blank" class="weblink">Getting Started</a> service by following these steps:</li></ol>
+<ol style="list-style-type:decimal">
+<li value="1" class="p_Normal">Select the infrastructure - Bare Metal.</li><li value="2" class="p_Normal">Review the installation information.</li><li value="3" class="p_Normal">Specify the template for the cluster's DNS names. In our case - <span style="font-weight: bold;">%s.example.com</span>.</li><li value="4" class="p_Normal">Save <code><b>config.yml</b></code>.</li></ol>
+<ol style="list-style-type:upper-roman" start="2">
+<li value="2" class="p_Normal">Make the necessary changes to <code><b>config.yml</b></code>. To do this, follow these steps:</li></ol>
+<ol style="list-style-type:decimal">
+<li value="1" class="p_Normal">Set the Pod network space for the cluster in <span style="font-weight: bold;">podSubnetCIDR</span>.</li><li value="2" class="p_Normal">Set the Service network space for the cluster in <span style="font-weight: bold;">serviceSubnetCIDR</span>.</li><li value="3" class="p_Normal">Specify the desired Kubernetes version in <span style="font-weight: bold;">kubernetesVersion</span>.</li><li value="4" class="p_Normal">Check the update channel in <span style="font-weight: bold;">releaseChannel</span> (Stable).</li><li value="5" class="p_Normal">Check the domain name template in <span style="font-weight: bold;">publicDomainTemplate</span> (%s.example.com).</li><li value="6" class="p_Normal">Used to form domain names for system applications in the cluster. For example, Grafana for the template %s.example.com will be accessible as <span style="font-weight: bold;">grafana.example.com</span>.</li><li value="7" class="p_Normal">Check the operation mode of the cni-flannel module in <span style="font-weight: bold;">podNetworkMode</span>.</li><li value="8" class="p_Normal">Flannel mode, acceptable values are <span style="font-weight: bold;">VXLAN</span> (if your servers have L3 connectivity) or <span style="font-weight: bold;">HostGW</span> (for L2 networks).</li><li value="9" class="p_Normal">Specify the local network that cluster nodes will use in <span style="font-weight: bold;">internalNetworkCIDRs</span>.</li><li value="10" class="p_Normal">A list of internal network ranges, for example <code><b>'192.168.1.0/24'</b></code>, used by cluster nodes for communication between Kubernetes components (kube-apiserver, kubelet, etc.).</li></ol>
+<p class="p_Normal">Here's an example of a primary cluster configuration file: <code><b>config.yml</b></code>.</p>
+<p class="p_Normal">For installation via the internet:</p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">apiVersion:&nbsp;deckhouse.io/v1</span><br />
+<span class="f_CodeExample">kind:&nbsp;ClusterConfiguration</span><br />
+<span class="f_CodeExample">clusterType:&nbsp;Static</span><br />
+<span class="f_CodeExample">podSubnetCIDR:&nbsp;10.111.0.0/16</span><br />
+<span class="f_CodeExample">serviceSubnetCIDR:&nbsp;10.222.0.0/16</span><br />
+<span class="f_CodeExample">kubernetesVersion:&nbsp;&quot;1.23&quot;</span><br />
+<span class="f_CodeExample">clusterDomain:&nbsp;&quot;cluster.local&quot;</span><br />
+<span class="f_CodeExample">---</span><br />
+<span class="f_CodeExample">apiVersion:&nbsp;deckhouse.io/v1</span><br />
+<span class="f_CodeExample">kind:&nbsp;InitConfiguration</span><br />
+<span class="f_CodeExample">deckhouse:</span><br />
+<span class="f_CodeExample"> &nbsp;releaseChannel:&nbsp;Stable</span><br />
+<span class="f_CodeExample"> &nbsp;configOverrides:</span><br />
+<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;global:</span><br />
+<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modules:</span><br />
+<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;publicDomainTemplate:&nbsp;&quot;%s.example.com&quot;</span><br />
+<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;cniFlannelEnabled:&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">true</span><br />
+<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;cniFlannel:</span><br />
+<span class="f_CodeExample"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;podNetworkMode:&nbsp;VXLAN</span><br />
+<span class="f_CodeExample">---</span><br />
+<span class="f_CodeExample">apiVersion:&nbsp;deckhouse.io/v1</span><br />
+<span class="f_CodeExample">kind:&nbsp;StaticClusterConfiguration</span><br />
+<span class="f_CodeExample">internalNetworkCIDRs:</span><br />
+<span class="f_CodeExample"> &nbsp;-&nbsp;192.168.1.0/24</span></p>
+<p class="p_Normal"><a class="dropdown-toggle" style="font-style: normal; font-weight: normal; color: #000000; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186A1')">For offline installation without internet access</a></p>
+<div id="TOGGLE0186A1" class="dropdown-toggle-body" style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0 0 0 0;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">Начало&nbsp;внимание</span></p>
+<p class="p_Normal">To generate the YAML file using the <a href="https://deckhouse.io/gs/" target="_blank" class="weblink">Getting Started</a> service, choose the <span style="font-weight: bold;">Private environment</span> infrastructure.</p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">Конец&nbsp;внимание</span></p>
+<p class="p_Normal">Set the following parameters in the <span style="font-weight: bold;">InitConfiguration</span> resource:</p>
+<ul style="list-style-type:disc">
+<li class="p_Normal"><span style="font-weight: bold;">devBranch</span>: &nbsp;If there are no images in the isolated private repository containing information about update channels, use the exact image tag of Deckhouse to install the Deckhouse Platform. For example, if you want to install release v1.46.3, use the image <code><b>registry.example.com/images/deckhouse/install:v1.46.3</b></code>. Also, specify <code><b>devBranch: v1.46.3</b></code> instead of <code><b>releaseChannel: XXX</b></code>;</li></ul>
+<ul style="list-style-type:disc">
+<li class="p_Normal"><span style="font-weight: bold;">imagesRepo</span>: <code><b>&lt;PROXY_REGISTRY&gt;/&lt;DECKHOUSE_REPO_PATH&gt;/&lt;DECKHOUSE_REVISION&gt;</b></code> is the address of the Deckhouse image in the private repository, taking into account the edition used. In this article, the images were loaded into <code><b>registry.example.com/images/deckhouse</b></code> Read more in <a href="downloading-images-deckhouse.html" class="topiclink">Download Deckhouse Images</a>.;</li></ul>
+<ul style="list-style-type:disc">
+<li class="p_Normal"><span style="font-weight: bold;">registryDockerCfg</span>: <code><b>&lt;BASE64&gt;</b></code> — access rights to the private repository, encrypted in Base64. Examples of filling in <span style="font-weight: bold;">registryDockerCfg</span> can be found in the access rights to the private repository, encrypted in Base64. Examples of filling in <span style="font-weight: bold;">registryDockerCfg</span> can be found in the official <a href="https://deckhouse.io/documentation/v1/deckhouse-faq.html" target="_blank" class="weblink">Deckhouse Kubernetes Platform documentation</a>. In this article, anonymous access to Deckhouse images in an external registry is allowed. Generate <span style="font-weight: bold;">registryDockerCfg</span> by executing the following command:. In this article, anonymous access to Deckhouse images in an external registry is allowed. Generate <span style="font-weight: bold;">registryDockerCfg</span> by executing the following command:</li></ul>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">echo&nbsp;-n&nbsp;&quot;{\&quot;auths\&quot;:&nbsp;{&nbsp;\&quot;registry.example.com:443/images/deckhouse\&quot;:&nbsp;{}}}&quot;&nbsp;|&nbsp;base64</span></p>
+<ul style="list-style-type:disc">
+<li class="p_Normal"><span style="font-weight: bold;">registryScheme</span>: specify the protocol (HTTP or HTTPS) used by the private repository;</li></ul>
+<ul style="list-style-type:disc">
+<li class="p_Normal"><span style="font-weight: bold;">registryCA</span>: oot SSL certificate that can verify the SSL certificate of the private registry, for example, if the storage uses a self-signed certificate. If you are using a non-self-signed certificate or the storage works via the HTTP protocol, remove this parameter.</li></ul>
+<p class="p_Normal">Example of the initial cluster configuration file, <code><b>config.yml</b></code>:</p>
+<p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample">apiVersion: deckhouse.io/v1</span><br />
+<span class="f_CodeExample">kind: ClusterConfiguration</span><br />
+<span class="f_CodeExample">clusterType: Static</span><br />
+<span class="f_CodeExample">podSubnetCIDR: 10.111.0.0/16</span><br />
+<span class="f_CodeExample">serviceSubnetCIDR: 10.222.0.0/16</span><br />
+<span class="f_CodeExample">kubernetesVersion: &quot;1.23&quot;</span><br />
+<span class="f_CodeExample">clusterDomain: &quot;cluster.local&quot;</span><br />
+<span class="f_CodeExample">---</span><br />
+<span class="f_CodeExample">apiVersion: deckhouse.io/v1</span><br />
+<span class="f_CodeExample">kind: InitConfiguration</span><br />
+<span class="f_CodeExample">deckhouse:</span><br />
+<span class="f_CodeExample">  devBranch: v1.46.3</span><br />
+<span class="f_CodeExample">  configOverrides:</span><br />
+<span class="f_CodeExample">  &nbsp; global:</span><br />
+<span class="f_CodeExample">  &nbsp; &nbsp; modules:</span><br />
+<span class="f_CodeExample">  &nbsp; &nbsp; &nbsp; publicDomainTemplate: &quot;%s.example.com&quot;</span><br />
+<span class="f_CodeExample">  &nbsp; cniFlannelEnabled: </span><span class="f_CodeExample" style="font-weight: bold;">true</span><br />
+<span class="f_CodeExample">  &nbsp; cniFlannel:</span><br />
+<span class="f_CodeExample">  &nbsp; &nbsp; podNetworkMode: VXLAN</span><br />
+<span class="f_CodeExample">  imagesRepo: registry.example.com:443/images/deckhouse</span><br />
+<span class="f_CodeExample">  registryDockerCfg: eyJhdXRocyI6IHsgInJlZ2lzdHJ5LmV4YW1wbGUuY29tOjQ0My9pbWFnZXMvZGVja2hvdXNlIjoge319fQ==</span><br />
+<span class="f_CodeExample">  registryScheme: HTTPS</span><br />
+<span class="f_CodeExample">  registryCA: |</span><br />
+<span class="f_CodeExample">  &nbsp; -----BEGIN CERTIFICATE-----</span><br />
+<span class="f_CodeExample">  &nbsp; MIIFBzCCGu+gAwIBAgIUBZ37mm02QGGcmd5pZvWwnpCfQUowDQYGKoZIhvcNAQEL</span><br />
+<span class="f_CodeExample">  &nbsp; BQAwHjEcMBoGA1UEAwwTaW1hZ2VzLnByb2FjdG9yLnBybzAeFw0yMjA5MjkxNDUw</span><br />
+<span class="f_CodeExample">  &nbsp; ...</span><br />
+<span class="f_CodeExample">  &nbsp; 9UpckrwxPhctmln5/Awd/2gcaRAxI3qBL7SyDFT0YpnGcAiGPY4Z67HhZ7h6y+2F</span><br />
+<span class="f_CodeExample">  &nbsp; fQDSXli0r61/Fenkh5OLMihLYTm+5gjZlG1LCXpaGIpjAf16Q+3/pIqapQ==</span><br />
+<span class="f_CodeExample">  &nbsp; -----END CERTIFICATE-----</span><br />
+<span class="f_CodeExample">---</span><br />
+<span class="f_CodeExample">apiVersion: deckhouse.io/v1</span><br />
+<span class="f_CodeExample">kind: StaticClusterConfiguration</span><br />
+<span class="f_CodeExample">internalNetworkCIDRs:</span><br />
+<span class="f_CodeExample">  - 192.168.1.0/24</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h2 class="p_Heading2"><a id="installation" class="hmanchor"></a><span class="f_Heading2">Step 4: Installation of Kubernetes cluster based on Deckhouse</span></h2>
+<p class="p_Normal">The installation of Deckhouse Platform Community Edition involves setting up a cluster (using a Docker-image-based installer) consisting of a single master node. The Deckhouse installer is available as a container image, which requires the configuration files and SSH keys for accessing the master node. It is assumed that the SSH key used is <code><b>~/.ssh/id_rsa</b></code>. The installer is based on the <a href="https://github.com/deckhouse/deckhouse/tree/main/dhctl/" target="_blank" class="weblink">dhctl</a> utility.</p>
+<ol style="list-style-type:upper-roman">
+<li value="1" class="p_Normal">Start the installer.</li></ol>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">Начало&nbsp;примечание</span></p>
+<p class="p_Normal"><span style="font-weight: bold;">Note</span></p>
+<p class="p_Normal">Direct installation from the master node is currently not supported. The installer, in the form of a Docker image, cannot be run on the same node where the master node deployment is planned, as container runtime packages like containerd or docker should not be installed on the node.</p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">Конец&nbsp;примечание</span></p>
+<p class="p_Normal">The installer is run on a personal computer prepared in the <a href="fail-safe-kubernetes-cluster.html#cluster-architecture" class="topiclink">Kubernetes cluster architecture</a> step. On the PC, navigate to the directory with the configuration file <code><b>config.yml</b></code>, prepared during the <a href="fail-safe-kubernetes-cluster.html#preparation-config-file" class="topiclink">configuration file preparation</a> step.</p>
+<p class="p_Normal">To launch the installer via the internet:</p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">sudo&nbsp;docker&nbsp;run&nbsp;--pull=always&nbsp;-it&nbsp;-v&nbsp;&quot;$PWD/config.yml:/config.yml&quot;&nbsp;-v&nbsp;&quot;$HOME/.ssh/:/tmp/.ssh/&quot;&nbsp;registry.deckhouse.io/deckhouse/ce/install:stable&nbsp;bash</span></p>
+<p class="p_Normal"><a class="dropdown-toggle" style="font-style: normal; font-weight: normal; color: #000000; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186A2')">For offline installation without internet access</a></p>
+<div id="TOGGLE0186A2" class="dropdown-toggle-body" style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0 0 0 0;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_Normal">&nbsp;<br />
+Execute the command:</p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">sudo&nbsp;docker&nbsp;run&nbsp;--pull=always&nbsp;-it&nbsp;-v&nbsp;&quot;$PWD/config.yml:/config.yml&quot;&nbsp;-v&nbsp;&quot;$HOME/.ssh/:/tmp/.ssh/&quot;&nbsp;example.com:443/images/deckhouse/install:v1.46.3&nbsp;bash</span></p>
+<p class="p_Normal">&nbsp;<br />
+Where <code><b>example.com:443/images/deckhouse/install:v1.46.3</b></code> is the version of the release being installed.</p>
+</td>
+</tr>
+</table>
+</div>
+<ol style="list-style-type:upper-roman" start="2">
+<li value="2" class="p_Normal">Install Deckhouse. Inside the installer container, execute the command:</li></ol>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">dhctl&nbsp;bootstrap&nbsp;--ssh-user=&lt;username&gt;&nbsp;--ssh-host=&lt;master_ip&gt;&nbsp;--ssh-agent-</span><span class="f_CodeExample" style="font-weight: bold;">private</span><span class="f_CodeExample">-keys=/tmp/.ssh/id_rsa&nbsp;\</span><br />
+<span class="f_CodeExample">--config=/config.yml&nbsp;\</span><br />
+<span class="f_CodeExample">--ask-become-pass</span></p>
+<p class="p_Normal">Where:</p>
+<ul style="list-style-type:disc">
+<li class="p_CodeExample" style="white-space: normal; page-break-inside: auto;"><code><b>&lt;username&gt;</b></code>. In parameter <code><b>--ssh-user</b></code>, specify the name of the user who generated the SSH key for installation.</li><li class="p_CodeExample" style="white-space: normal; page-break-inside: auto;"><code><b>&lt;master_ip&gt;</b></code>. The IP address of the master node prepared during the <a href="fail-safe-kubernetes-cluster.html#cluster-architecture" class="topiclink">Kubernetes cluster architecture</a> step.</li></ul>
+<p class="p_Normal">The installation process may take 15-30 minutes with a good connection.</p>
+<h2 class="p_Heading2"><a id="addition-frontend-nodes" class="hmanchor"></a><span class="f_Heading2">Step 5: Adding frontend nodes</span></h2>
+<p class="p_Normal">Before adding frontend nodes, create a new custom resource <a href="https://deckhouse.io/documentation/latest/modules/040-node-manager/cr.html#nodegroup" target="_blank" class="weblink">NodeGroup</a> with the name  <code><b>frontend</b></code>. Set the parameter <code><b>nodeType</b></code> in the custom resource NodeGroup to<code><b>Static</b></code>.</p>
+<ol style="list-style-type:upper-roman">
+<li value="1" class="p_Normal">Create file <code><b>frontend.yaml</b></code> on the master node 1 with the description of the static NodeGroup named <code><b>frontend</b></code>:</li></ol>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">apiVersion:&nbsp;deckhouse.io/v1</span><br />
+<span class="f_CodeExample">kind:&nbsp;NodeGroup</span><br />
+<span class="f_CodeExample">metadata:</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;name:&nbsp;frontend</span><br />
+<span class="f_CodeExample">spec:</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;nodeTemplate:</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;labels:</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;node-role.deckhouse.io/frontend:&nbsp;&quot;&quot;</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;taints:</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;effect:&nbsp;NoExecute</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;key:&nbsp;dedicated.deckhouse.io</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value:&nbsp;frontend</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;nodeType:&nbsp;Static</span></p>
+<ol style="list-style-type:upper-roman" start="2">
+<li value="2" class="p_Normal">Apply file <code><b>frontend.yaml</b></code> by executing the command:</li></ol>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">kubectl&nbsp;create&nbsp;-f&nbsp;frontend.yaml</span></p>
+<ol style="list-style-type:upper-roman" start="3">
+<li value="3" class="p_Normal">To add frontend nodes, follow these steps:</li></ol>
+<ol style="list-style-type:decimal">
+<li value="1" class="p_Normal">Obtain the script code in Base64 encoding for adding and configuring a new frontend node by running the command on master node 1:</li></ol>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">kubectl&nbsp;-n&nbsp;d8-cloud-instance-manager&nbsp;get&nbsp;secret&nbsp;manual-bootstrap-</span><span class="f_CodeExample" style="font-weight: bold;">for</span><span class="f_CodeExample">-frontend&nbsp;-o&nbsp;json&nbsp;|&nbsp;jq&nbsp;'.data.&quot;bootstrap.sh&quot;'&nbsp;-r</span></p>
+<ol style="list-style-type:decimal" start="2">
+<li value="2" class="p_Normal">Log in to the node you want to add via SSH (in this case, frontend 1) and paste the Base64-encoded string obtained in the first step:</li></ol>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">echo&nbsp;&lt;Base64-SCRIPT-CODE&gt;&nbsp;|&nbsp;base64&nbsp;-d&nbsp;|&nbsp;bash</span></p>
+<p class="p_Normal">Wait for the script to finish execution. The node has been added.</p>
+<p class="p_Normal">To add new frontend nodes, repeat the steps in step 3.</p>
+<h2 class="p_Heading2"><a id="addition-system-nodes" class="hmanchor"></a><span class="f_Heading2">Step 6: Adding system nodes</span></h2>
+<p class="p_Normal">Before adding system nodes, create a new custom resource  <a href="https://deckhouse.io/documentation/latest/modules/040-node-manager/cr.html#nodegroup" target="_blank" class="weblink">NodeGroup</a> with the name <code><b>system</b></code>. Set the parameter <code><b>nodeType</b></code> in the custom resource NodeGroup to <code><b>Static</b></code>.</p>
+<ol style="list-style-type:upper-roman">
+<li value="1" class="p_Normal">Create file <code><b>system.yaml</b></code> on the master node 1 with the description of the static NodeGroup named <code><b>system</b></code>:</li></ol>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">apiVersion:&nbsp;deckhouse.io/v1</span><br />
+<span class="f_CodeExample">kind:&nbsp;NodeGroup</span><br />
+<span class="f_CodeExample">metadata:</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;name:&nbsp;system</span><br />
+<span class="f_CodeExample">spec:</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;nodeTemplate:</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;labels:</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;node-role.deckhouse.io/system:&nbsp;&quot;&quot;</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;taints:</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;effect:&nbsp;NoExecute</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;key:&nbsp;dedicated.deckhouse.io</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value:&nbsp;system</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;nodeType:&nbsp;Static</span></p>
+<ol style="list-style-type:upper-roman" start="2">
+<li value="2" class="p_Normal">Apply file <code><b>system.yaml</b></code> by executing the command:</li></ol>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">kubectl&nbsp;create&nbsp;-f&nbsp;system.yaml</span></p>
+<ol style="list-style-type:upper-roman" start="3">
+<li value="3" class="p_Normal">To add system nodes, follow these steps:</li></ol>
+<ol style="list-style-type:decimal">
+<li value="1" class="p_Normal">Obtain the script code in Base64 encoding for adding and configuring a new system node by running the command on master node 1:</li></ol>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">kubectl&nbsp;-n&nbsp;d8-cloud-instance-manager&nbsp;get&nbsp;secret&nbsp;manual-bootstrap-</span><span class="f_CodeExample" style="font-weight: bold;">for</span><span class="f_CodeExample">-system&nbsp;-o&nbsp;json&nbsp;|&nbsp;jq&nbsp;'.data.&quot;bootstrap.sh&quot;'&nbsp;-r</span></p>
+<ol style="list-style-type:decimal" start="2">
+<li value="2" class="p_Normal">Log in to the node you want to add via SSH (in this case, system 1) and paste the Base64-encoded string obtained in the first step:</li></ol>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">echo&nbsp;&lt;Base64-SCRIPT-CODE&gt;&nbsp;|&nbsp;base64&nbsp;-d&nbsp;|&nbsp;bash</span></p>
+<p class="p_Normal">Wait for the script to finish execution. The node has been added.</p>
+<p class="p_Normal">To add new system nodes, repeat the steps in step 3.</p>
+<h2 class="p_Heading2"><a id="addition-worke-nodes" class="hmanchor"></a><span class="f_Heading2">Step 7: Adding worker nodes</span></h2>
+<p class="p_Normal">Before adding worker nodes, create a new custom resource  <a href="https://deckhouse.io/documentation/latest/modules/040-node-manager/cr.html#nodegroup" target="_blank" class="weblink">NodeGroup</a> with the name <code><b>worker</b></code>. Set the parameter <code><b>nodeType</b></code> in the custom resource NodeGroup to <code><b>Static</b></code>.</p>
+<ol style="list-style-type:upper-roman">
+<li value="1" class="p_Normal">Create file <code><b>worker.yaml</b></code> on the master node 1 with the description of the static NodeGroup called  <code><b>worker</b></code>:</li></ol>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">apiVersion:&nbsp;deckhouse.io/v1</span><br />
+<span class="f_CodeExample">kind:&nbsp;NodeGroup</span><br />
+<span class="f_CodeExample">metadata:</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;name:&nbsp;worker</span><br />
+<span class="f_CodeExample">spec:</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;nodeType:&nbsp;Static</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;kubelet:</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;maxPods:&nbsp;200</span></p>
+<ol style="list-style-type:upper-roman" start="2">
+<li value="2" class="p_Normal">Apply file <code><b>worker.yaml</b></code> by executing the command:</li></ol>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">kubectl&nbsp;create&nbsp;-f&nbsp;worker.yaml</span></p>
+<ol style="list-style-type:upper-roman" start="3">
+<li value="3" class="p_Normal">To add worker nodes, follow these steps:</li></ol>
+<ol style="list-style-type:decimal">
+<li value="1" class="p_Normal">Obtain the script code in Base64 encoding for adding and configuring a new worker node by running the command on master node 1:</li></ol>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">kubectl&nbsp;-n&nbsp;d8-cloud-instance-manager&nbsp;get&nbsp;secret&nbsp;manual-bootstrap-</span><span class="f_CodeExample" style="font-weight: bold;">for</span><span class="f_CodeExample">-worker&nbsp;-o&nbsp;json&nbsp;|&nbsp;jq&nbsp;'.data.&quot;bootstrap.sh&quot;'&nbsp;-r</span></p>
+<ol style="list-style-type:decimal" start="2">
+<li value="2" class="p_Normal">Log in to the node you want to add via SSH (in this case, worker 1) and paste the Base64-encoded string obtained in the first step:</li></ol>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">echo&nbsp;&lt;Base64-CODE-SCRIPT&gt;&nbsp;|&nbsp;base64&nbsp;-d&nbsp;|&nbsp;bash</span></p>
+<p class="p_Normal">Wait for the script to finish execution. The node has been added.</p>
+<p class="p_Normal">To add new system nodes, repeat the steps in step 3.</p>
+<h2 class="p_Heading2"><a id="addition-master-nodes" class="hmanchor"></a><span class="f_Heading2">Step 8: Adding master nodes</span></h2>
+<ol style="list-style-type:upper-roman">
+<li value="1" class="p_Normal">Obtain the script code in Base64 encoding for adding and configuring a new master node by running the command on master node 1:</li></ol>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">kubectl&nbsp;-n&nbsp;d8-cloud-instance-manager&nbsp;get&nbsp;secret&nbsp;manual-bootstrap-</span><span class="f_CodeExample" style="font-weight: bold;">for</span><span class="f_CodeExample">-master&nbsp;-o&nbsp;json&nbsp;|&nbsp;jq&nbsp;'.data.&quot;bootstrap.sh&quot;'&nbsp;-r</span></p>
+<ol style="list-style-type:upper-roman" start="2">
+<li value="2" class="p_Normal">Log in to the node you want to add via SSH (in this case, master 2) and paste the Base64-encoded string obtained in the first step:</li></ol>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">echo&nbsp;&lt;Base64-SCRIPT-CODE&gt;&nbsp;|&nbsp;base64&nbsp;-d&nbsp;|&nbsp;bash</span></p>
+<p class="p_Normal">Wait for the script to finish execution. The node has been added.</p>
+<p class="p_Normal">To add new master nodes, repeat step 8.</p>
+<h2 class="p_Heading2"><a id="addition-local-path-provisioner" class="hmanchor"></a><span class="f_Heading2">Step 9: Adding Local Path Provisioner</span></h2>
+<p class="p_Normal">By default, there is no storageclass in Deckhouse. Create a custom resource called <span style="font-weight: bold;">LocalPathProvisioner</span>, allowing Kubernetes users to use local storage on nodes. Follow these steps:</p>
+<ol style="list-style-type:upper-roman">
+<li value="1" class="p_Normal">Create a configuration file <code><b>local-path-provisioner.yaml</b></code> for <span style="font-weight: bold;">LocalPathProvisioner</span> on the master node.</li></ol>
+<ol style="list-style-type:upper-roman" start="2">
+<li value="2" class="p_Normal">Set the desired Reclaim policy (the default is Retain). In this article, the parameter <code><b>reclaimPolicy</b></code> is set to <code><b>&quot;Delete&quot;</b></code>(PVs are deleted after PVCs are deleted).</li></ol>
+<p class="p_Normal">Example of file <code><b>local-path-provisioner.yaml</b></code>:</p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">apiVersion:&nbsp;deckhouse.io/v1alpha1</span><br />
+<span class="f_CodeExample">kind:&nbsp;LocalPathProvisioner</span><br />
+<span class="f_CodeExample">metadata:</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;name:&nbsp;localpath-deckhouse-system</span><br />
+<span class="f_CodeExample">spec:</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;nodeGroups:</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;-&nbsp;system</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;-&nbsp;worker</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;path:&nbsp;&quot;/opt/local-path-provisioner&quot;</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;reclaimPolicy:&nbsp;&quot;Delete&quot;</span></p>
+<ol style="list-style-type:upper-roman" start="3">
+<li value="3" class="p_Normal">Apply file <code><b>local-path-provisioner.yaml</b></code> in Kubernetes. To that, run the following command:</li></ol>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">kubectl&nbsp;apply&nbsp;-f&nbsp;local-path-provisioner.yaml</span></p>
+<ol style="list-style-type:upper-roman" start="4">
+<li value="4" class="p_Normal">Set the created <span style="font-weight: bold;">LocalPathProvisioner</span> as the default storageclass (default class) by running the command:</li></ol>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">kubectl&nbsp;patch&nbsp;storageclass&nbsp;localpath-deckhouse-system&nbsp;-p&nbsp;'{&quot;metadata&quot;:&nbsp;{&quot;annotations&quot;:{&quot;storageclass.kubernetes.io/is-default-class&quot;:&quot;true&quot;}}}'</span></p>
+<p class="p_Normal">or</p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">sudo&nbsp;-i&nbsp;d8&nbsp;k&nbsp;patch&nbsp;mc&nbsp;global&nbsp;--type&nbsp;merge&nbsp;-p&nbsp;“{&quot;spec&quot;:&nbsp;{&quot;settings&quot;:{&quot;defaultClusterStorageClass&quot;:&quot;localpath-deckhouse-system&quot;}}}”</span></p>
+<p class="p_Normal"><span style="font-weight: bold;">LocalPathProvisioner</span> with the name localpath-deckhouse-system is created nd ready to provide local storage on nodes with the NodeGroup system and worker.</p>
+<h2 class="p_Heading2"><a id="addition-balancer" class="hmanchor"></a><span class="f_Heading2">Step 10: Adding OpenELB load balancer -VIP</span></h2>
+<p class="p_Normal">To ensure proper functioning of the Ingress controller, you need a direct internet connection with a white IP address on the Ingress node using NodePort. Alternatively, you can install the <a href="https://openelb.io/docs/getting-started/installation/" target="_blank" class="weblink">OpenELB</a> load balancer, which handles traffic balancing like cloud providers. This balancer uses Speaker to support the service<span style="color: #202122; background-color: #ffffff;">’</span>s IP address.</p>
+<p class="p_Normal">Deploy OpenELB in VIP Mode as follows:</p>
+<ol style="list-style-type:upper-roman">
+<li value="1" class="p_Normal">Obtain the configuration file <code><b>values-openelb.yaml</b></code>.</li></ol>
+<p class="p_Normal"><span style="font-weight: bold;">For installation via the internel:</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">helm&nbsp;repo&nbsp;add&nbsp;elma365&nbsp;https:</span><span class="f_CodeExample">//charts.</span><span class="f_CodeExample">elma365</span><span class="f_CodeExample">.tech</span><br />
+<span class="f_CodeExample">helm&nbsp;repo&nbsp;update</span><br />
+<span class="f_CodeExample">helm&nbsp;show&nbsp;values&nbsp;elma365/openelb&nbsp;&gt;&nbsp;values-openelb.yaml</span></p>
+<p class="p_Normal"><a class="dropdown-toggle" style="font-style: normal; font-weight: normal; color: #000000; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186A3')">Get the configuration file for installation in a closed network without internet access</a></p>
+<div id="TOGGLE0186A3" class="dropdown-toggle-body" style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0 0 0 0;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><ol style="list-style-type:decimal">
+<li value="1" class="p_Normal">On a computer with internet access, download the archive of the latest version of the OpenELB chart from the BRIX repository:</li></ol>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">helm&nbsp;repo&nbsp;add&nbsp;elma365&nbsp;https:</span><span class="f_CodeExample">//charts.elma365.tech</span><br />
+<span class="f_CodeExample">helm&nbsp;repo&nbsp;update</span><br />
+<span class="f_CodeExample">helm&nbsp;pull&nbsp;elma365/openelb</span></p>
+<ol style="list-style-type:decimal" start="2">
+<li value="2" class="p_Normal">Copy the downloaded chart archive <code><b>openelb-X.Y.Z.tgz</b></code> to the server where you'll perform the installation.</li></ol>
+<ol style="list-style-type:decimal" start="3">
+<li value="3" class="p_Normal">Unpack the chart <code><b>openelb-X.Y.Z.tgz</b></code> on the installation server and copy the default configuration file <code><b>values.yaml</b></code> to <code><b>values-openelb.yaml</b></code>.</li></ol>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">tar&nbsp;-xf&nbsp;openelb-X.Y.Z.tgz</span><br />
+<span class="f_CodeExample">cp&nbsp;openelb/values.yaml&nbsp;values-openelb.yaml</span></p>
+</td>
+</tr>
+</table>
+</div>
+<ol style="list-style-type:upper-roman" start="2">
+<li value="2" class="p_Normal">Modify configuration file <code><b>values-openelb.yaml</b></code>.</li></ol>
+<p class="p_Normal">Plan the placement of openelb-controller pods on frontend nodes by changing <span style="font-weight: bold;">tolerations</span> and <span style="font-weight: bold;">nodeSelector</span> sections:</p>
+<p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample">## openelb settings</span><br />
+<span class="f_CodeExample">openelb:</span><br />
+<span class="f_CodeExample">  speaker:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;enable: true</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;vip: true</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;apiHosts: &quot;:50051&quot;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;tolerations:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;- key: CriticalAddonsOnly</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;operator: Exists</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;- effect: NoExecute</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;key: dedicated.deckhouse.io</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;operator: Equal</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;value: frontend</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;nodeSelector:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;kubernetes.io/os: linux</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;node-role.deckhouse.io/frontend: &quot;&quot;</span><br />
+<span class="f_CodeExample"> &nbsp;controller:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;webhookPort: 443</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;tolerations:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;- key: CriticalAddonsOnly</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;operator: Exists</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;- effect: NoExecute</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;key: dedicated.deckhouse.io</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;operator: Equal</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;value: frontend</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;nodeSelector:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;kubernetes.io/os: linux</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;node-role.deckhouse.io/frontend: &quot;&quot;</span><br />
+<span class="f_CodeExample">...</span></p>
+<p class="p_Normal"><a class="dropdown-toggle" style="font-style: normal; font-weight: normal; color: #000000; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186A4')">Configure connection parameters to a private registry for installation in a closed network without internet access</a></p>
+<div id="TOGGLE0186A4" class="dropdown-toggle-body" style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0 0 0 0;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_Normal">&nbsp;<br />
+To connect to a private <span style="font-weight: bold;">registry</span>:</p>
+<ol style="list-style-type:decimal">
+<li value="1" class="p_Normal">Set the address and path for the <code><b>openelb.global.imageRegistry</b></code> parameter.</li></ol>
+<ol style="list-style-type:decimal" start="2">
+<li value="2" class="p_Normal">Specify the secret name with access rights to the private <span style="font-weight: bold;">registry</span> in parameter <code><b>imagePullSecrets</b></code>. The secret must be created manually and encrypted in Base64.</li></ol>
+<p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample">## openelb settings</span><br />
+<span class="f_CodeExample">openelb:</span><br />
+<span class="f_CodeExample"> &nbsp;manager:</span><br />
+<span class="f_CodeExample">...</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;## parameters for connecting to the registry</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;global:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;## address and path for the private registry</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;imageRegistry: registry.example.com/docker/addons</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;## The secret with access rights to the private registry must be created manually and encrypted in Base64</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;imagePullSecrets:</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;- name: myRegistryKeySecretName</span></p>
+<p class="p_Normal">Where <code><b>imageRepository</b></code><span style="font-weight: bold;"> </span>format is the address — <code><b>registry.example.com</b></code>.</p>
+</td>
+</tr>
+</table>
+</div>
+<ol style="list-style-type:upper-roman" start="3">
+<li value="3" class="p_Normal">Install OpenELB in Kubernetes.</li></ol>
+<p class="p_Normal">For installation via internet:</p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">helm&nbsp;upgrade&nbsp;--install&nbsp;openelb&nbsp;elma365/openelb&nbsp;-f&nbsp;values-openelb.yaml&nbsp;-n&nbsp;openelb-system&nbsp;--create-namespace</span></p>
+<p class="p_Normal"><a class="dropdown-toggle" style="font-style: normal; font-weight: normal; color: #000000; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186A5')">For offline installation without internet access</a></p>
+<div id="TOGGLE0186A5" class="dropdown-toggle-body" style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0 0 0 0;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_Normal">&nbsp;<br />
+Navigate to the directory with the downloaded chart and run the command:</p>
+<p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample">helm upgrade --install openelb ./openelb -f values-openelb.yaml -n openelb-system --create-namespace</span></p>
+</td>
+</tr>
+</table>
+</div>
+<ol style="list-style-type:upper-roman" start="4">
+<li value="4" class="p_Normal">Configure the high availability of openelb-controller.</li></ol>
+<p class="p_Normal">To ensure high availability, increase the number of openelb-controller replicas, by running the following command on master node 1:</p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">kubectl&nbsp;scale&nbsp;--replicas=2&nbsp;deployment&nbsp;openelb-controller&nbsp;-n&nbsp;openelb-system</span></p>
+<p class="p_Normal">Run the following command to check if openelb-controller is <span style="font-weight: bold;">READY:1/1 </span>and status is <span style="font-weight: bold;">STATUS: Running</span>. If so, OpenELB is successfully installed.</p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">kubectl&nbsp;get&nbsp;po&nbsp;-n&nbsp;openelb-system</span></p>
+<ol style="list-style-type:upper-roman" start="5">
+<li value="5" class="p_Normal">Create a pool of IP addresses for OpenELB.</li></ol>
+<p class="p_Normal">Create file <code><b>vip-eip.yaml</b></code> describing the EIP object on master node 1. The EIP object functions as a pool of IP addresses for OpenELB.</p>
+<p class="p_Normal">Example of file <code><b>vip-eip.yaml</b></code>:</p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">apiVersion:&nbsp;network.kubesphere.io/v1alpha2</span><br />
+<span class="f_CodeExample">kind:&nbsp;Eip</span><br />
+<span class="f_CodeExample">metadata:</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;name:&nbsp;vip-eip</span><br />
+<span class="f_CodeExample">annotations:</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;eip.openelb.kubesphere.io/is-default-eip:&nbsp;&quot;true&quot;</span><br />
+<span class="f_CodeExample">spec:</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;address:&nbsp;192.168.1.13</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;protocol:&nbsp;vip</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;interface:&nbsp;ens18</span></p>
+<p class="p_Normal">Apply file <code><b>vip-eip.yaml</b></code> in Kubernetes by running the following command:</p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">kubectl&nbsp;apply&nbsp;-f&nbsp;vip-eip.yaml</span></p>
+<ol style="list-style-type:upper-roman" start="6">
+<li value="6" class="p_Normal">Move keepalived pods to frontend nodes.</li></ol>
+<p class="p_Normal">By default, keepalived pods are placed by openelb-manager on worker nodes. Make sure that the keepalived pods are placed on frontend nodes.</p>
+<p class="p_Normal">Modify <span style="font-weight: bold;">DaemonSet openelb-keepalive-vip </span>by running the following command on master node 1:</p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">kubectl&nbsp;patch&nbsp;ds&nbsp;-n&nbsp;openelb-system&nbsp;openelb-keepalive-vip&nbsp;-p&nbsp;'{&quot;spec&quot;:{&quot;template&quot;:{&quot;spec&quot;:{&quot;nodeSelector&quot;:{&quot;kubernetes.io/os&quot;:&quot;linux&quot;,&quot;node-role.deckhouse.io/frontend&quot;:&quot;&quot;},&quot;tolerations&quot;:[{&quot;key&quot;:&quot;dedicated.deckhouse.io&quot;,&quot;value&quot;:&quot;frontend&quot;,&quot;effect&quot;:&quot;NoExecute&quot;}]}}}}'</span></p>
+<p class="p_Normal">Check that the changes in the <span style="font-weight: bold;">DaemonSet openelb-keepalive-vip</span> have been applied, and the pods are now on frontend nodes:</p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">kubectl&nbsp;get&nbsp;po&nbsp;-o&nbsp;wide&nbsp;-n&nbsp;openelb-system</span></p>
+<h2 class="p_Heading2"><a id="addition-ingress-nginx-controller" class="hmanchor"></a><span class="f_Heading2">Step 11: Adding Ingress Nginx Controller - LoadBalancer</span></h2>
+<p class="p_Normal">Deckhouse installs and manages the NGINX Ingress Controller using Custom Resources. If there is more than one node to host the Ingress Controller, it is installed in a high available mode and takes into account all features of cloud and bare metal infrastructure implementations, as well as Kubernetes clusters of various types.</p>
+<ol style="list-style-type:upper-roman">
+<li value="1" class="p_Normal">Create file <code><b>ingress-nginx-controller.yml</b></code> on master node 1 containing the configuration of the Ingress controller.</li></ol>
+<p class="p_Normal"><a class="dropdown-toggle" style="font-style: normal; font-weight: normal; color: #000000; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186A6')">Example of the ingress-nginx-controller.yml file</a></p>
+<div id="TOGGLE0186A6" class="dropdown-toggle-body" style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0 0 0 0;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample">#&nbsp;section&nbsp;describing&nbsp;parameters&nbsp;nginx&nbsp;ingress&nbsp;controller</span><br />
+<span class="f_CodeExample">#&nbsp;used&nbsp;version&nbsp;of&nbsp;API&nbsp;Deckhouse</span><br />
+<span class="f_CodeExample">apiVersion:&nbsp;deckhouse.io/v1</span><br />
+<span class="f_CodeExample">kind:&nbsp;IngressNginxController</span><br />
+<span class="f_CodeExample">metadata:</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;name:&nbsp;nginx</span><br />
+<span class="f_CodeExample">spec:</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;#&nbsp;name&nbsp;of&nbsp;Ingress&nbsp;class&nbsp;for&nbsp;Ingress&nbsp;NGINX&nbsp;controller</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;ingressClass:&nbsp;nginx</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;#&nbsp;Annotation&nbsp;for&nbsp;OpenELB&nbsp;into&nbsp;the&nbsp;nginx-load-balancer&nbsp;service</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;loadBalancer:</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;annotations:</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eip.openelb.kubesphere.io/v1alpha2:&nbsp;&quot;vip-eip&quot;</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lb.kubesphere.io/v1alpha1:&nbsp;&quot;openelb&quot;</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;hostPort:</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;httpPort:&nbsp;80</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;httpsPort:&nbsp;443</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;#&nbsp;describes&nbsp;on&nbsp;which&nbsp;nodes&nbsp;the&nbsp;component&nbsp;will&nbsp;be&nbsp;located</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;nodeSelector:</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;node-role.kubernetes.io/frontend:&nbsp;&quot;&quot;</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;tolerations:</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;-&nbsp;operator:&nbsp;Exists</span></p>
+</td>
+</tr>
+</table>
+</div>
+<ol style="list-style-type:upper-roman" start="2">
+<li value="2" class="p_Normal">Apply the <code><b>ingress-nginx-controller.yml</b></code> file in Kubernetes by executing the command:</li></ol>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">kubectl&nbsp;create&nbsp;-f&nbsp;ingress-nginx-controller.yml</span></p>
+<p class="p_Normal">After installing the ingress controller, Deckhouse will automatically create the nginx-load-balancer service in the namespace <code><b>d8-ingress-nginx</b></code>, but it won't associate this service with OpenELB.</p>
+<ol style="list-style-type:upper-roman" start="3">
+<li value="3" class="p_Normal">Check that the changes made to the <span style="font-weight: bold;">nginx-load-balancer</span> service have been applied. An IP address, such as 192.168.1.13, should appear in <span style="font-weight: bold;">EXTERNAL-IP</span>. To do this, execute the following command:</li></ol>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">kubectl&nbsp;get&nbsp;svc&nbsp;-n&nbsp;d8-ingress-nginx</span></p>
+<h2 class="p_Heading2"><a id="addition-user" class="hmanchor"></a><span class="f_Heading2">Step 12: Adding a user for access to the cluster web interface</span></h2>
+<ol style="list-style-type:upper-roman">
+<li value="1" class="p_Normal">Create file <code><b>user.yml</b></code> on master node 1 containing the user account description and access rights.</li></ol>
+<p class="p_Normal"><a class="dropdown-toggle" style="font-style: normal; font-weight: normal; color: #000000; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186A7')">Example of file user.yml</a></p>
+<div id="TOGGLE0186A7" class="dropdown-toggle-body" style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0 0 0 0;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample">apiVersion:&nbsp;deckhouse.io/v1</span><br />
+<span class="f_CodeExample">kind:&nbsp;ClusterAuthorizationRule</span><br />
+<span class="f_CodeExample">metadata:</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;name:&nbsp;admin</span><br />
+<span class="f_CodeExample">spec:</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;#&nbsp;Kubernetes&nbsp;RBAC&nbsp;account&nbsp;list</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;subjects:</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;-&nbsp;kind:&nbsp;User</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;name:&nbsp;admin@deckhouse.io</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;#&nbsp;preinstalled&nbsp;access&nbsp;level&nbsp;template</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;accessLevel:&nbsp;SuperAdmin</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;#&nbsp;allow&nbsp;the&nbsp;user&nbsp;to&nbsp;perform&nbsp;kubectl&nbsp;port-forward</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;portForwarding:&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">true</span><br />
+<span class="f_CodeExample">---</span><br />
+<span class="f_CodeExample">#&nbsp;section&nbsp;describing&nbsp;the&nbsp;parameters&nbsp;of&nbsp;the&nbsp;static&nbsp;user</span><br />
+<span class="f_CodeExample">#&nbsp;used&nbsp;version&nbsp;of&nbsp;API&nbsp;Deckhouse</span><br />
+<span class="f_CodeExample">apiVersion:&nbsp;deckhouse.io/v1</span><br />
+<span class="f_CodeExample">kind:&nbsp;User</span><br />
+<span class="f_CodeExample">metadata:</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;name:&nbsp;admin</span><br />
+<span class="f_CodeExample">spec:</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;#&nbsp;user&nbsp;e-mail</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;email:&nbsp;admin@deckhouse.io</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;#&nbsp;this&nbsp;is&nbsp;the&nbsp;hash&nbsp;of&nbsp;the&nbsp;password&nbsp;xgnv5gkggd,&nbsp;generated&nbsp;now</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;#&nbsp;generate&nbsp;your&nbsp;own&nbsp;or&nbsp;use&nbsp;this&nbsp;one,&nbsp;but&nbsp;only&nbsp;for&nbsp;testin</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;#&nbsp;echo&nbsp;&quot;xgnv5gkggd&quot;&nbsp;|&nbsp;htpasswd&nbsp;-BinC&nbsp;10&nbsp;&quot;&quot;&nbsp;|&nbsp;cut&nbsp;-d:&nbsp;-f2</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;#&nbsp;you&nbsp;may&nbsp;want&nbsp;to&nbsp;change&nbsp;it</span><br />
+<span class="f_CodeExample">&nbsp;&nbsp;password:&nbsp;'$2a$10$4j4cUeyonCfX7aDJyqSHXuAxycsf/sDK0T4n9ySQ7.owE34L1uXTm'</span></p>
+</td>
+</tr>
+</table>
+</div>
+<ol style="list-style-type:upper-roman" start="2">
+<li value="2" class="p_Normal">Apply the <code><b>user.yml</b></code> file in Kubernetes by executing the command &nbsp;в Kubernetes:</li></ol>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">kubectl&nbsp;create&nbsp;-f&nbsp;user.yml</span></p>
+<h2 class="p_Heading2"><a id="pivileges" class="hmanchor"></a><span class="f_Heading2">Step 13: Privileges of the launched loads</span></h2>
+<p class="p_Normal">Allow reassigning privilege policy for the running pods:</p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">kubectl&nbsp;label&nbsp;namespace&nbsp;elma365&nbsp;security.deckhouse.io/pod-policy=privileged&nbsp;--overwrite</span></p>
+<h2 class="p_Heading2"><a id="installation-helm" class="hmanchor"></a><span class="f_Heading2">Step 14: Install Helm</span></h2>
+<ol style="list-style-type:upper-roman">
+<li value="1" class="p_Normal">Go to the <a href="https://github.com/helm/helm/releases" target="_blank" class="weblink">Helm</a> releases page and download the <code><b>helm-vX.Y.Z-linux-amd64.tar.gz</b></code> archive of the required version.</li></ol>
+<p class="p_Normal">For installation via the Internet:</p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">wget&nbsp;https://get.helm.sh/helm-vX.Y.Z-linux-amd64.tar.gz</span></p>
+<p class="p_Normal"><a class="dropdown-toggle" style="font-style: normal; font-weight: normal; color: #000000; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186A8')">For offline installation without internet access</a></p>
+<div id="TOGGLE0186A8" class="dropdown-toggle-body" style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0 0 0 0;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><ol style="list-style-type:decimal">
+<li value="1" class="p_Normal">On a computer with internet access, go to the <a href="https://github.com/helm/helm/releases" target="_blank" class="weblink">Helm</a> releases page and download the archive <code><b>helm-vX.Y.Z-linux-amd64.tar.gz</b></code> of the required version by executing the command:</li></ol>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">wget&nbsp;https://get.helm.sh/helm-vX.Y.Z-linux-amd64.tar.gz</span></p>
+<ol style="list-style-type:decimal" start="2">
+<li value="2" class="p_Normal">Copy the archive to the master node.</li></ol>
+</td>
+</tr>
+</table>
+</div>
+<ol style="list-style-type:upper-roman" start="2">
+<li value="2" class="p_Normal">Unpack the archive and move the Helm binary:</li></ol>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">tar&nbsp;-zxvf&nbsp;helm-vX.Y.Z-linux-amd64.tar.gz</span><br />
+<span class="f_CodeExample">mv&nbsp;linux-amd64/helm&nbsp;/usr/local/bin/helm</span></p>
+
+                        <div class="bottom-nav">
+                            
+                                <a id="prev-link" class="topic__navi_prev" href="kubernetes-deckhouse-air-gap.html">
+                                    <span class="bottom-nav__arrow bottom-nav__arrow--prev"></span> <span
+                                        class="bottom-nav__link">kubernetes-deckhouse-air-gap.html</span>
+                                </a>
+                            
+                            
+                                <a id="next-link" class="topic__navi_next" href="embedded-databases-settings.html">
+                                    <span class="bottom-nav__link">embedded-databases-settings.html</span> <span
+                                        class="bottom-nav__arrow bottom-nav__arrow--next"></span>
+                                </a>
+                            
+                        </div>
+                        <!-- добавляет на страницу строку блок Была ли статья полезной?  -->
+                          <div class="feedback" id="feedback"><div class="feedback-help"><span><b>Was this helpful?</b></span><form action="" method="POST" class="feedback-form" id="feedback-form"><div class="feedback__popup feedback__popup-response" id="feedback__popup_thx" style="display: none;">Thanks for your feedback!</div><div class="feedback__popup" id="feedback__popup_why" style="display: none;"><div class="feedback__popup-header">Please specify why:</div><input type="radio" name="category" id="bad_recommendation" value="bad_recommendation"><label for="bad_recommendation">Recommendations did not help me</label><input type="radio" name="category" id="difficult_text" value="difficult_text"><label for="difficult_text">Article is hard to understand</label><input type="radio" name="category" id="no_answer" value="no_answer"><label for="no_answer">Didn`t answer my question</label><input type="radio" name="category" id="bad_header" value="bad_header"><label for="bad_header">Content does not match the topic</label><input type="radio" name="category" id="other_reason" value="other_reason"><label for="other_reason">Other</label></div><div class="feedback__popup" id="feedback__popup-other" style="display: none;"><div class="feedback__popup-header">How we can improve it?</div><textarea class="feedback__textarea" name="other" id=""></textarea><input type="submit" class="feedback__other-btn" value="Submit"></div><div class="feedback-form__btn-group"><input type="radio" name="useful" id="feedback__useful_yes" value="true"><label for="feedback__useful_yes"><img src="like.svg" class="small-img" alt="like"><spanclass="feedback-form__btn-group_yes-btn">Yes</spanclass="feedback-form__btn-group_yes-btn"></label><input type="radio" name="useful" id="feedback__useful_no" value="false"><label for="feedback__useful_no"><img src="dislike.svg" class="small-img" alt="dislike"><spanclass="feedback-form__btn-group_no-btn">No</spanclass="feedback-form__btn-group_no-btn"></label></div><select name="category"><option disabled="">Please specify why</option><option value="bad_recommendation" selected="">Recommendations did not help me</option><option value="difficult_text">Article is hard to understand</option><option value="no_answer">Didn`t answer my question</option><option value="bad_header">Content does not match the topic</option><option value="other_reason">Other</option></select><input type="submit"></form></div><div class="found_typo"><p style="margin: 0px; margin-top: 16px !important;"><span><b>Found a typo?</b></span> Select it and press <i>Ctrl+Enter</i> to send us feedback</p></div></div>
+                           
+                    </section>
+                </div>
+                <aside class="article__sidebar" style="display:none">
+                    <input type="checkbox" />
+                    <div class="article__arrow"></div>
+                    <div class="table-of-contents elma365-right" id="toc2Content">
+                        <h3 class="h3-toc">In this topic</h3>
+                        <nav id="toc2"></nav>
+                    </div>
+                </aside>
+            </div>
+        </article>
+    </main>               
+    <footer class="footer">
+        <div class="footer-container">
+  <div class="footer-mobile">
+    
+    <ul class="footer-mobile__list"><li><a href="https://brix365.com/en/" target="_blank">BRIX</a></li><li><a href="https://tssdk.brix365.com/en/latest/" target="_blank">SDK</a></li><li><a href="https://api.brix365.com/en/" target="_blank">API</a></li></ul><ul class="footer-mobile__list"><li><a href="https://brix365.com/en/help/platform/get-trial.html">Platform</a></li><li><a href="https://brix365.com/en/help/ecm/ecm-functions.html">ECM</a></li><li><a href="https://brix365.com/en/help/service/service-functions.html">Service</a></li><li><a href="https://brix365.com/en/help/projects/projects-functions.html">Projects</a></li></ul>
+    
+    
+  </div>
+  <div class="footer-wrap">
+    
+      <div><span class="mobile-question-popup">Send feedback</span><form method="POST" action class="question__popup question-xs" id="question__popup"><div class="question-wrap"><span class="close"></span><span class="title">Ask a question</span><label for="help_question" style="display: none;"></label><textarea name="help_question" id="help_question"></textarea><input type="submit" value="Send"></div></form><div class="hidden fade-in question-success-xs">Sent</div></div>
+    
+    <div class="footer-flex-b">
+      <span class="footer-copy">&copy; 2025 BRIX</span>
+      <ul class="footer-list">
+        
+        <li class="footer-item">
+            <a href="#" class="arrow-top" style="display: block;"></a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+ 
+    </footer>
+    <iframe name="hmnavigation" style="display:none!important"></iframe>
+    <script src="./jquery-ui.js"></script>
+    <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
+    <script src="./jquery.tocify.min.js"></script>
+    <script src="./TypoReporter.min.js"></script>
+    <script src="./google-search.js"></script>
+    <script src="./main.js"></script>
+<script type="text/javascript">
+HMInitToggle('TOGGLE0186A1','hm.type','dropdown','hm.state','0');
+HMInitToggle('TOGGLE0186A2','hm.type','dropdown','hm.state','0');
+HMInitToggle('TOGGLE0186A3','hm.type','dropdown','hm.state','0');
+HMInitToggle('TOGGLE0186A4','hm.type','dropdown','hm.state','0');
+HMInitToggle('TOGGLE0186A5','hm.type','dropdown','hm.state','0');
+HMInitToggle('TOGGLE0186A6','hm.type','dropdown','hm.state','0');
+HMInitToggle('TOGGLE0186A7','hm.type','dropdown','hm.state','0');
+HMInitToggle('TOGGLE0186A8','hm.type','dropdown','hm.state','0');
+</script>
+</body>
+
+</html>

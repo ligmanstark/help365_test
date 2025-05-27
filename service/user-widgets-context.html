@@ -1,0 +1,211 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Additional options in the context of custom widgets</title>
+    <meta name="generator" content="Help+Manual" />
+    <meta name="keywords" content="" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="When working with widget context, you can create variables that are used to configure interfaces and write scripts. But note that the context of system and custom widgets are..." />
+    <meta name="picture" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Full documentation for BRIX365 platform. Low-code developer guide. User guide. Admin guide. Developer guide." />
+    <meta property="og:url" content="https://brix365.com/en/help" />
+    <meta property="og:image" content="" />                                                              
+    <link rel="icon" href="favicon.png" type="image/png" />
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./jquery-ui.min.css" />
+    <link rel="stylesheet" href="default.css" />
+    <link rel="stylesheet" href="./search-yandex.css" />
+    <link rel="stylesheet" href="./article.css" />
+    <link rel="stylesheet" href="./glossary.css" />
+    <link rel="stylesheet" href="./theme.css" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+
+<body>
+    
+    <script>!function(e,t,c,n,r,a,m){e.ym=e.ym||function(){(e.ym.a=e.ym.a||[]).push(arguments)},e.ym.l=1*new Date;for(var s=0;s<document.scripts.length;s++)if(document.scripts[s].src===n)return;a=t.createElement(c),m=t.getElementsByTagName(c)[0],a.async=1,a.src=n,m.parentNode.insertBefore(a,m)}(window,document,"script","https://mc.yandex.ru/metrika/tag.js"),ym(83179930,"init",{clickmap:!0,trackLinks:!0,accurateTrackBounce:!0,webvisor:!0})</script><noscript><div><img alt=""src=https://mc.yandex.ru/watch/83179930 style=position:absolute;left:-9999px></div></noscript> 
+    
+    ﻿<header class="header elma-365">
+  <div class="container">
+    <a class="header__logo" href="https://brix365.com/en/help">
+      <img src="./logo-en.svg" alt="header logo">
+    </a>
+ <!-- <div class="hero__search-form" id="search-panel">
+   <form class="search-form" onsubmit="ym(83180416,'reachGoal','poisk')">
+     <label class="search-form__label">
+       <span id="reset-search" class="search__icon"></span>
+       <input class="search-form__input" type="text">
+     </label>
+     <input class="search-form__submit" type="submit" value="Submit">
+   </form>
+  </div>       -->
+  
+     <div class="hero__search-form" id="search-panel"> <form class="search-form"> <label class="search-form__label"> <span id="reset-search" class="search__icon"></span> <input class="search-form__input" type="text"> </label> <input class="search-form__submit" type="submit" value="Submit"> </form> </div> 
+  <div class="hero__search">
+      <a href="#" id="search-icon" class="hero__search-icon">
+        <img src="search-icon-white.svg" alt="search string">
+      </a>
+      <a href="#" id="side-menu-icon" class="hero__side-icon">
+        <img src="side_menu.svg" alt="side menu">
+      </a>
+    </div>  
+  <div class="header__navi">
+        
+        <ul class="header__list"><li><span class="solution-select"><span class="solution-select__selected"></span><svg width="7" height="4" viewBox="0 0 7 4" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L3.5 3.5L6 1" stroke="white" stroke-linecap="round" stroke-linejoin="round"/></svg><ul class="solution-select__list"><li><a class="project-link" href="https://brix365.com/en/help/platform/get-trial.html">Platform</a></li><li><a class="project-link" href="https://brix365.com/en/help/ecm/ecm-functions.html">ECM</a></li><li><a class="project-link" href="https://brix365.com/en/help/crm/crm_overview.html">CRM</a></li><li><a class="project-link" href="https://brix365.com/en/help/service/service-functions.html">Service</a></li><li><a class="project-link" href="https://brix365.com/en/help/projects/projects-functions.html">Projects</a></li><li><a class="project-link" href="https://brix365.com/en/help/business_solutions/-elma365-store.html">Business Solutions</a></li></ul></span></li><li><a href="https://api.brix365.com/en/" target="_blank">API</a></li><li><a href="https://tssdk.brix365.com/" target="_blank">SDK</a></li></ul>
+        
+        
+   </div>
+  </div>
+
+</header>
+
+
+
+    
+    <main class="main container">
+
+        <aside class="sidebar" id="sidebar">
+        <div class="sidebar__header">
+                 <a class="header__logo" href="https://brix365.com/en/help">
+                    <img src="./logo-light-en.svg">
+                 </a>
+                    <span class="sidebar__close elma-365-close" id="close"></span>
+            </div>
+            <div class="sidebar__wrapper" id="side-menu">
+                
+            </div>
+        </aside>
+
+        <article class="article" id="article">
+            <div class="article-inner">           
+                <div class="content">
+                    <header class="article__header">
+                        
+                            <div class="topic__breadcrumbs">
+                                <p>Low-code designer &gt; <a href="interface_settings.html">Set up interfaces</a> / Additional options in the context of custom widgets</p>
+                            </div>
+                        
+                        <div class="topic__title"><h1 class="p_Heading1"><span class="f_Heading1">Additional options in the context of custom widgets</span></h1>
+</div>
+                    
+</header>
+                    <section class="article__content">
+                        <div class="scroll-top-inner">
+                            <a href="#h1-article" class="scroll-top"></a>
+                        </div>
+                        <!-- Placeholder for topic body. -->
+                        <p class="p_Normal"><span style="font-size: 15px; color: #394149;">When working with widget context, you can create variables that are used to configure interfaces and write scripts. But note that the context of system and custom widgets are different. Read more about working with system widget context in <a href="context_types.html" class="topiclink">Context types</a>.</span></p>
+<p class="p_Normal"><span style="font-size: 15px; color: #394149;">When creating a </span><span style="font-size: 15px; color: #394149;"><a href="user_widgets.html" class="topiclink">custom widget</a></span><span style="font-size: 15px; color: #394149;">, you can specify the input and output variables, which you cannot do in system widgets. You can also edit the settings window that opens when the widget is placed on a form or page. </span></p>
+<p class="p_Normal" style="margin: 11px 0 0 0;"><span style="font-size: 15px; color: #394149;">To work with the additional options, open the widget in the </span><span style="font-size: 15px; color: #394149;"><a href="interface_designer.html" class="topiclink">interface designer</a></span><span style="font-size: 15px; color: #394149;">. On the top panel, go to the </span><span style="font-size: 15px; font-weight: bold; color: #394149;">Context</span><span style="font-size: 15px; color: #394149;"> tab.</span></p>
+<h2 class="p_Heading2"><span class="f_Heading2">Input and output variables</span></h2>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-family: Inter;">When you place a widget on a form or a page, you can use the </span><span style="font-family: Inter; font-weight: bold;">Input</span><span style="font-family: Inter;"> and </span><span style="font-family: Inter; font-weight: bold;">Output</span><span style="font-family: Inter;"> options to:</span></p>
+<ul style="list-style-type:disc">
+<li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-family: Inter;">Manage the visibility of the widget’s variables in the context of a page or a form.</span></li><li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-family: Inter;">Pass the widget’s context to the context of a page or form.</span></li></ul>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-family: Inter;">For this option to work correctly, you need to map the widget’s context variables to the properties of the form or page that it is located on.</span></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-family: Inter;">To enable the </span><span style="font-family: Inter; font-weight: bold;">Input</span><span style="font-family: Inter;"> and </span><span style="font-family: Inter; font-weight: bold;">Output</span><span style="font-family: Inter;"> options, open the widget in the</span><span style="font-size: 15px; color: #394149;"> </span><span style="font-size: 15px; color: #394149;"><a href="interface_designer.html" class="topiclink">interface designer</a></span><span style="font-family: Inter;">. On the top panel, select the </span><span style="font-family: Inter; font-weight: bold;">Context</span><span style="font-family: Inter;"> tab. Configure the options for each variable.</span></p>
+<p class="p_Normal" style="margin: 11px 0 0 0;"><img alt="context_04" width="1193" height="449" style="margin:0;width:1193px;height:449px;border:none" src="context_04.png"/></p>
+<ul style="list-style-type:disc">
+<li style="line-height: 1.20;"><span style="font-size: 15px; font-family: 'Times New Roman',Times,Georgia,serif; font-weight: bold; color: #394149;">Input</span><span style="font-size: 15px; font-family: 'Times New Roman',Times,Georgia,serif; color: #394149;">. This variable will record and store the value of a property from the form or page that the widget is located on.</span></li><li style="line-height: 1.20; margin-top: 11px; margin-right: 0; margin-bottom: 0;"><span style="font-size: 15px; font-family: 'Times New Roman',Times,Georgia,serif; font-weight: bold; color: #394149;">Output</span><span style="font-size: 15px; font-family: 'Times New Roman',Times,Georgia,serif; color: #394149;">. The value of this property will be passed to the property of the form or page that it is located on.</span></li><li style="line-height: 1.20; margin-top: 11px; margin-right: 0; margin-bottom: 0;"><span style="font-size: 15px; font-family: 'Times New Roman',Times,Georgia,serif; font-weight: bold; color: #394149;">Both options are enabled</span><span style="font-size: 15px; font-family: 'Times New Roman',Times,Georgia,serif; color: #394149;">. In this case, when the value of the widget</span><span style="font-family: Inter;">’</span><span style="font-size: 15px; font-family: 'Times New Roman',Times,Georgia,serif; color: #394149;">s variable changes, the value of the form or page property will also change, and vice versa.</span></li><li style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 16px;"><span style="font-size: 15px; font-family: 'Times New Roman',Times,Georgia,serif; font-weight: bold; color: #394149;">Both options are disabled</span><span style="font-size: 15px; font-family: 'Times New Roman',Times,Georgia,serif; color: #394149;">. In this case, the value of the widget</span><span style="font-family: Inter;">’</span><span style="font-size: 15px; font-family: 'Times New Roman',Times,Georgia,serif; color: #394149;">s variable is not passed to the form or page context. The variable is not mapped with a field of the form or page. Its value is set up in the widget</span><span style="font-family: Inter;">’</span><span style="font-size: 15px; font-family: 'Times New Roman',Times,Georgia,serif; color: #394149;">s settings when the widget is added.</span></li></ul>
+<h2 class="p_Heading2"><span class="f_Heading2">Example of configuring additional options</span></h2>
+<p class="p_Normal">To see how the <span style="font-weight: bold;">Input</span> and <span style="font-weight: bold;">Output</span> options work in real life, take a look at the following example. Let<span style="font-family: Inter;">’</span>s create a widget named <span style="font-weight: bold;">Calculator</span><span style="font-size: 15px;">:</span></p>
+<ol style="list-style-type:upper-roman">
+<li value="1" style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 16px;"><span style="font-size: 15px;">Go to </span><span style="font-size: 15px; font-weight: bold;">Administration &gt; Interfaces</span><span style="font-size: 15px;">, click </span><span style="font-size: 15px; font-weight: bold;">+Create</span><span style="font-size: 15px;">, select </span><span style="font-size: 15px; font-weight: bold;">Widget</span><span style="font-size: 15px;">, enter its name, and save the settings. </span></li><li value="2" style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 16px;"><span style="font-size: 15px;">The interface designer will open. Click </span><span style="font-size: 15px; font-weight: bold;">+Widget</span><span style="font-size: 15px;"> and drag the <a href="panel_with_heading.html" class="topiclink">Panel with header</a> widget to the modeling canvas. </span></li><li value="3" style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 16px;"><span style="font-size: 15px;">Go to the </span><span style="font-size: 15px; font-weight: bold;">Context</span><span style="font-size: 15px;"> tab and add properties of the <a href="360009707032.html#number" class="topiclink">Number</a> type:</span><span style="font-size: 15px; font-weight: bold;"> Addend 1</span><span style="font-size: 15px;">, </span><span style="font-size: 15px; font-weight: bold;">Addend 2</span><span style="font-size: 15px;">, and </span><span style="font-size: 15px; font-weight: bold;">Sum</span><span style="font-size: 15px;">. </span></li><li value="4" style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 16px;"><span style="font-size: 15px;">Set up additional options for the added properties: </span></li></ol>
+<ol style="list-style-type:upper-roman"><ul style="list-style-type:disc">
+<li style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 16px;"><span style="font-size: 15px;">For </span><span style="font-size: 15px; font-weight: bold;">Addend 1</span><span style="font-size: 15px;"> and </span><span style="font-size: 15px; font-weight: bold;">Addend 2</span><span style="font-size: 15px;">, enable the </span><span style="font-size: 15px; font-weight: bold;">Input</span><span style="font-size: 15px;"> option.</span></li><li style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 16px;"><span style="font-size: 15px;">For </span><span style="font-size: 15px; font-weight: bold;">Sum</span><span style="font-size: 15px;">, enable the </span><span style="font-size: 15px; font-weight: bold;">Output</span><span style="font-size: 15px;"> option.</span></li></ul></li></ol>
+<ol style="list-style-type:upper-roman">
+<li value="5" style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 16px;"><span style="font-size: 15px;">Go back to the </span><span style="font-size: 15px; font-weight: bold;">Template</span><span style="font-size: 15px;"> tab. On the right-side panel, switch to </span><span style="font-size: 15px; font-weight: bold;">Properties</span><span style="font-size: 15px;"> and drag the added variables to the canvas. Place them inside the </span><span style="font-size: 15px; font-weight: bold;">Panel with header</span><span style="font-size: 15px;"> widget. </span></li><li value="6" style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 16px;"><span style="font-size: 15px;">Now add a <a href="client_server_scripts.html" class="topiclink">script</a> that will calculate the sum of the </span><span style="font-size: 15px; font-weight: bold;">Addend 1</span><span style="font-size: 15px;"> and </span><span style="font-size: 15px; font-weight: bold;">Addend 2</span><span style="font-size: 15px;"> fields. To do that, select the </span><span style="font-size: 15px; font-weight: bold;">Addend 1</span><span style="font-size: 15px;"> field click on the gear icon next to its name to open the settings. Go to the </span><span style="font-size: 15px; font-weight: bold;">Events</span><span style="font-size: 15px;"> tab and click </span><span style="font-size: 15px; font-weight: bold;">Create</span><span style="font-size: 15px;"> in the </span><span style="font-size: 15px; font-weight: bold;">On value change handler</span><span style="font-size: 15px;">. Enter a name and click </span><span style="font-size: 15px; font-weight: bold;">Create</span><span style="font-size: 15px;"> and </span><span style="font-size: 15px; font-weight: bold;">Open</span><span style="font-size: 15px;">. On the </span><span style="font-size: 15px; font-weight: bold;">Scripts</span><span style="font-size: 15px;"> tab that opens, add the following: </span></li></ol>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">async function calc (): Promise&lt;</span><span class="f_CodeExample" style="font-weight: bold;">void</span><span class="f_CodeExample">&gt; {</span><br />
+<span class="f_CodeExample"> </span><span class="f_CodeExample" style="color: #ffffff;">&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample">debugger;</span><br />
+<span class="f_CodeExample"> </span><span class="f_CodeExample" style="color: #ffffff;">&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample">Context.data.sum = Context.data.addend_1 !== undefined &amp;&amp; Context.data.addend_2 !== undefined ? Context.data.addend_1 + Context.data.addend_2 : undefined;</span><br />
+<span class="f_CodeExample"> </span><span class="f_CodeExample" style="color: #ffffff;">&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample">}</span></p>
+<p style="line-height: 1.20; margin: 7px 0 16px 43px;"><span style="font-size: 15px;">Do the same for </span><span style="font-size: 15px; font-weight: bold;">Addend 2</span><span style="font-size: 15px;">.</span></p>
+<ol style="list-style-type:upper-roman" start="7">
+<li value="7" style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 16px;"><span style="font-size: 15px;">Save and publish the widget. Now you can add the custom </span><span style="font-size: 15px; font-weight: bold;">Calculator</span><span style="font-size: 15px;"> widget to pages and forms of apps.</span></li></ol>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-size: 15px;">Let</span><span style="font-family: Inter;">’</span><span style="font-size: 15px;">s say you have the </span><span style="font-size: 15px; font-weight: bold;">Clients</span><span style="font-size: 15px;"> app. </span><span style="font-family: Inter;">You can</span><span style="font-size: 15px;"> place the </span><span style="font-size: 15px; font-weight: bold;">Calculator</span><span style="font-size: 15px;"> widget on its form. In </span><span style="font-size: 15px; font-weight: bold;">Settings</span><span style="font-size: 15px;">, map the widget</span><span style="font-family: Inter;">’</span><span style="font-size: 15px;">s variables to the app</span><span style="font-family: Inter;">’s</span><span style="font-size: 15px;"> field named </span><span style="font-size: 15px; font-weight: bold;">Total</span><span style="font-size: 15px;">.</span></p>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-size: 15px;">As the </span><span style="font-size: 15px; font-weight: bold;">Input</span><span style="font-size: 15px;"> option is enabled to the </span><span style="font-size: 15px; font-weight: bold;">Addend 1</span><span style="font-size: 15px;"> and </span><span style="font-size: 15px; font-weight: bold;">Addend 2</span><span style="font-size: 15px;"> variables, the values of the mapped fields will be passed to the widget. The script will calculate the total. Since the </span><span style="font-size: 15px; font-weight: bold;">Output</span><span style="font-size: 15px;"> option is enabled for the </span><span style="font-size: 15px; font-weight: bold;">Sum</span><span style="font-size: 15px;"> field, its value will then be passed to the </span><span style="font-size: 15px; font-weight: bold;">Total</span><span style="font-size: 15px;"> field.</span><span style="font-size: 15px; font-weight: bold;"> </span></p>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><img alt="context_06" width="1220" height="729" style="margin:0;width:1220px;height:729px;border:none" src="context_06.png"/></p>
+<h2 class="p_Heading2"><a id="window" class="hmanchor"></a><span class="f_Heading2">Set up a custom widget settings window</span></h2>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;">You can create a custom settings window for each widget you create. The system administrator will use it to set the options that determine the widget<span style="font-family: Inter;">’s behavior.</span></p>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-family: Inter;">To set up a custom settings window, go to the </span><span style="font-family: Inter; font-weight: bold;">Context</span><span style="font-family: Inter;"> tab. In the top right corner, click </span><span style="font-family: Inter; font-weight: bold;">Create Form</span><span style="font-family: Inter;">. When you confirm the action, the <a href="interface_designer.html" class="topiclink">interface designer</a> will open. Here you can change the layout of the settings window, create new context variables, write scripts, etc.</span></p>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-family: Inter;">By default, the form comprises a pre-configured <a href="tabs.html" class="topiclink">Tabs</a> widget that includes the </span><span style="font-family: Inter; font-weight: bold;">Standard settings form</span><span style="font-family: Inter;"> widget. You can change the settings of these objects or delete them. You can also <a href="360027211631.html" class="topiclink">add new widgets</a> or fields.</span></p>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-family: Inter;">When you finish making changes, click </span><span style="font-family: Inter; font-weight: bold;">Save</span><span style="font-family: Inter;"> on the top panel of the interface designer. To go back to the custom widget creation page, click </span><img alt="back-arrow" width="33" height="33" style="margin:0;width:33px;height:33px;border:none" src="back-arrow.png"/><span class="f_ImageCaption"> </span><span style="font-family: Inter;">in the top left corner of the page.</span></p>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-family: Inter;">When the widget is published, the new settings page will be available to users when they place the widget on the modeling canvas.</span></p>
+
+                        <div class="bottom-nav">
+                            
+                                <a id="prev-link" class="topic__navi_prev" href="context_types.html">
+                                    <span class="bottom-nav__arrow bottom-nav__arrow--prev"></span> <span
+                                        class="bottom-nav__link">context_types.html</span>
+                                </a>
+                            
+                            
+                                <a id="next-link" class="topic__navi_next" href="client_server_scripts.html">
+                                    <span class="bottom-nav__link">client_server_scripts.html</span> <span
+                                        class="bottom-nav__arrow bottom-nav__arrow--next"></span>
+                                </a>
+                            
+                        </div>
+                        <!-- добавляет на страницу строку блок Была ли статья полезной?  -->
+                          <div class="feedback" id="feedback"><div class="feedback-help"><span><b>Was this helpful?</b></span><form action="" method="POST" class="feedback-form" id="feedback-form"><div class="feedback__popup feedback__popup-response" id="feedback__popup_thx" style="display: none;">Thanks for your feedback!</div><div class="feedback__popup" id="feedback__popup_why" style="display: none;"><div class="feedback__popup-header">Please specify why:</div><input type="radio" name="category" id="bad_recommendation" value="bad_recommendation"><label for="bad_recommendation">Recommendations did not help me</label><input type="radio" name="category" id="difficult_text" value="difficult_text"><label for="difficult_text">Article is hard to understand</label><input type="radio" name="category" id="no_answer" value="no_answer"><label for="no_answer">Didn`t answer my question</label><input type="radio" name="category" id="bad_header" value="bad_header"><label for="bad_header">Content does not match the topic</label><input type="radio" name="category" id="other_reason" value="other_reason"><label for="other_reason">Other</label></div><div class="feedback__popup" id="feedback__popup-other" style="display: none;"><div class="feedback__popup-header">How we can improve it?</div><textarea class="feedback__textarea" name="other" id=""></textarea><input type="submit" class="feedback__other-btn" value="Submit"></div><div class="feedback-form__btn-group"><input type="radio" name="useful" id="feedback__useful_yes" value="true"><label for="feedback__useful_yes"><img src="like.svg" class="small-img" alt="like"><spanclass="feedback-form__btn-group_yes-btn">Yes</spanclass="feedback-form__btn-group_yes-btn"></label><input type="radio" name="useful" id="feedback__useful_no" value="false"><label for="feedback__useful_no"><img src="dislike.svg" class="small-img" alt="dislike"><spanclass="feedback-form__btn-group_no-btn">No</spanclass="feedback-form__btn-group_no-btn"></label></div><select name="category"><option disabled="">Please specify why</option><option value="bad_recommendation" selected="">Recommendations did not help me</option><option value="difficult_text">Article is hard to understand</option><option value="no_answer">Didn`t answer my question</option><option value="bad_header">Content does not match the topic</option><option value="other_reason">Other</option></select><input type="submit"></form></div><div class="found_typo"><p style="margin: 0px; margin-top: 16px !important;"><span><b>Found a typo?</b></span> Select it and press <i>Ctrl+Enter</i> to send us feedback</p></div></div>
+                           
+                    </section>
+                </div>
+                <aside class="article__sidebar" style="display:none">
+                    <input type="checkbox" />
+                    <div class="article__arrow"></div>
+                    <div class="table-of-contents elma365-right" id="toc2Content">
+                        <h3 class="h3-toc">In this topic</h3>
+                        <nav id="toc2"></nav>
+                    </div>
+                </aside>
+            </div>
+        </article>
+    </main>               
+    <footer class="footer">
+        <div class="footer-container">
+  <div class="footer-mobile">
+    
+    <ul class="footer-mobile__list"><li><a href="https://brix365.com/en/" target="_blank">BRIX</a></li><li><a href="https://tssdk.brix365.com/en/latest/" target="_blank">SDK</a></li><li><a href="https://api.brix365.com/en/" target="_blank">API</a></li></ul><ul class="footer-mobile__list"><li><a href="https://brix365.com/en/help/platform/get-trial.html">Platform</a></li><li><a href="https://brix365.com/en/help/ecm/ecm-functions.html">ECM</a></li><li><a href="https://brix365.com/en/help/service/service-functions.html">Service</a></li><li><a href="https://brix365.com/en/help/projects/projects-functions.html">Projects</a></li></ul>
+    
+    
+  </div>
+  <div class="footer-wrap">
+    
+      <div><span class="mobile-question-popup">Send feedback</span><form method="POST" action class="question__popup question-xs" id="question__popup"><div class="question-wrap"><span class="close"></span><span class="title">Ask a question</span><label for="help_question" style="display: none;"></label><textarea name="help_question" id="help_question"></textarea><input type="submit" value="Send"></div></form><div class="hidden fade-in question-success-xs">Sent</div></div>
+    
+    <div class="footer-flex-b">
+      <span class="footer-copy">&copy; 2025 BRIX</span>
+      <ul class="footer-list">
+        
+        <li class="footer-item">
+            <a href="#" class="arrow-top" style="display: block;"></a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+ 
+    </footer>
+    <iframe name="hmnavigation" style="display:none!important"></iframe>
+    <script src="./jquery-ui.js"></script>
+    <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
+    <script src="./jquery.tocify.min.js"></script>
+    <script src="./TypoReporter.min.js"></script>
+    <script src="./google-search.js"></script>
+    <script src="./main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,271 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Use cases for customizing process indicators</title>
+    <meta name="generator" content="Help+Manual" />
+    <meta name="keywords" content="" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Indicator of the Counter type Let's see how to customize the indicator using the Draw up and approve the contract process as an example. It consists of the following steps: The..." />
+    <meta name="picture" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Full documentation for BRIX365 platform. Low-code developer guide. User guide. Admin guide. Developer guide." />
+    <meta property="og:url" content="https://brix365.com/en/help" />
+    <meta property="og:image" content="" />                                                              
+    <link rel="icon" href="favicon.png" type="image/png" />
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./jquery-ui.min.css" />
+    <link rel="stylesheet" href="default.css" />
+    <link rel="stylesheet" href="./search-yandex.css" />
+    <link rel="stylesheet" href="./article.css" />
+    <link rel="stylesheet" href="./glossary.css" />
+    <link rel="stylesheet" href="./theme.css" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+
+<body>
+    
+    <script>!function(e,t,c,n,r,a,m){e.ym=e.ym||function(){(e.ym.a=e.ym.a||[]).push(arguments)},e.ym.l=1*new Date;for(var s=0;s<document.scripts.length;s++)if(document.scripts[s].src===n)return;a=t.createElement(c),m=t.getElementsByTagName(c)[0],a.async=1,a.src=n,m.parentNode.insertBefore(a,m)}(window,document,"script","https://mc.yandex.ru/metrika/tag.js"),ym(83179930,"init",{clickmap:!0,trackLinks:!0,accurateTrackBounce:!0,webvisor:!0})</script><noscript><div><img alt=""src=https://mc.yandex.ru/watch/83179930 style=position:absolute;left:-9999px></div></noscript> 
+    
+    ﻿<header class="header elma-365">
+  <div class="container">
+    <a class="header__logo" href="https://brix365.com/en/help">
+      <img src="./logo-en.svg" alt="header logo">
+    </a>
+ <!-- <div class="hero__search-form" id="search-panel">
+   <form class="search-form" onsubmit="ym(83180416,'reachGoal','poisk')">
+     <label class="search-form__label">
+       <span id="reset-search" class="search__icon"></span>
+       <input class="search-form__input" type="text">
+     </label>
+     <input class="search-form__submit" type="submit" value="Submit">
+   </form>
+  </div>       -->
+  
+     <div class="hero__search-form" id="search-panel"> <form class="search-form"> <label class="search-form__label"> <span id="reset-search" class="search__icon"></span> <input class="search-form__input" type="text"> </label> <input class="search-form__submit" type="submit" value="Submit"> </form> </div> 
+  <div class="hero__search">
+      <a href="#" id="search-icon" class="hero__search-icon">
+        <img src="search-icon-white.svg" alt="search string">
+      </a>
+      <a href="#" id="side-menu-icon" class="hero__side-icon">
+        <img src="side_menu.svg" alt="side menu">
+      </a>
+    </div>  
+  <div class="header__navi">
+        
+        <ul class="header__list"><li><span class="solution-select"><span class="solution-select__selected"></span><svg width="7" height="4" viewBox="0 0 7 4" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L3.5 3.5L6 1" stroke="white" stroke-linecap="round" stroke-linejoin="round"/></svg><ul class="solution-select__list"><li><a class="project-link" href="https://brix365.com/en/help/platform/get-trial.html">Platform</a></li><li><a class="project-link" href="https://brix365.com/en/help/ecm/ecm-functions.html">ECM</a></li><li><a class="project-link" href="https://brix365.com/en/help/crm/crm_overview.html">CRM</a></li><li><a class="project-link" href="https://brix365.com/en/help/service/service-functions.html">Service</a></li><li><a class="project-link" href="https://brix365.com/en/help/projects/projects-functions.html">Projects</a></li><li><a class="project-link" href="https://brix365.com/en/help/business_solutions/-elma365-store.html">Business Solutions</a></li></ul></span></li><li><a href="https://api.brix365.com/en/" target="_blank">API</a></li><li><a href="https://tssdk.brix365.com/" target="_blank">SDK</a></li></ul>
+        
+        
+   </div>
+  </div>
+
+</header>
+
+
+
+    
+    <main class="main container">
+
+        <aside class="sidebar" id="sidebar">
+        <div class="sidebar__header">
+                 <a class="header__logo" href="https://brix365.com/en/help">
+                    <img src="./logo-light-en.svg">
+                 </a>
+                    <span class="sidebar__close elma-365-close" id="close"></span>
+            </div>
+            <div class="sidebar__wrapper" id="side-menu">
+                
+            </div>
+        </aside>
+
+        <article class="article" id="article">
+            <div class="article-inner">           
+                <div class="content">
+                    <header class="article__header">
+                        
+                            <div class="topic__breadcrumbs">
+                                <p>Business process designer &gt; Graphical elements &gt; <a href="set-process-metrics-value.html">Set Indicator’s Values</a> / Use cases for customizing process indicators</p>
+                            </div>
+                        
+                        <div class="topic__title"><h1 class="p_Heading1"><span class="f_Heading1">Use cases for customizing process indicators</span></h1>
+</div>
+                    
+</header>
+                    <section class="article__content">
+                        <div class="scroll-top-inner">
+                            <a href="#h1-article" class="scroll-top"></a>
+                        </div>
+                        <!-- Placeholder for topic body. -->
+                        <h2 class="p_Heading2"><span class="f_Heading2">Indicator of the Counter type</span></h2>
+<p class="p_Normal">Let's see how to customize the indicator using the <span style="font-weight: bold;">Draw up and approve the contract</span> process as an example. It consists of the following steps:</p>
+<ol style="list-style-type:decimal">
+<li value="1" class="p_Normal">The sales rep prepares the contract and sends it to the manager for approval.</li><li value="2" class="p_Normal">After the manager reads the contract, they can reject it, send it for revision, or approve it.</li><li value="3" class="p_Normal">If the contract has been sent for revision, the sales rep will get a task for making corrections. Then, the contract will be resubmitted to the manager for approval.</li><li value="4" class="p_Normal">If the contract has been approved, the sales rep will arrange a meeting with the customer and the parties will sign the contract.</li></ol>
+<p class="p_Normal">You can add an indicator to the process to count how many times the sales rep has resubmitted the contract for approval after revision. This will allow you to analyze the employee's work by tracking the number of iterations until the contract is correctly executed.</p>
+<h3 class="p_Heading3"><span class="f_Heading3">Step 1: Create an indicator of the Counter type</span></h3>
+<p class="p_Normal"><a href="business-process-metrics.html#create-indicator" class="topiclink">Create an indicator</a> of the <span style="font-weight: bold;">Counter</span> type, e.g. <span style="font-weight: bold;">Number of rejections</span>, and publish it.</p>
+<h3 class="p_Heading3"><span class="f_Heading3">Step 2: Set up a business process with an indicator of the Counter type</span></h3>
+<ol style="list-style-type:upper-roman">
+<li value="1" class="p_Normal">Go to the designer of the <span style="font-weight: bold;">Draw up and approve the contract</span> business process.</li><li value="2" class="p_Normal">To find out how many times the sales rep has resubmitted the contract for approval after revision, use the <a href="set-process-metrics-value.html" class="topiclink">Set Indicator’s Value</a> activity. Place it on the process diagram after the <span style="font-weight: bold;">Make corrections to the contract</span> task.<br />
+<img alt="business-process-metrics-examples-1" width="802" height="599" style="margin:0;width:802px;height:599px;border:none" src="business-process-metrics-examples-1.png"/></li><li value="3" class="p_Normal">Double-click the activity and open its settings. Then enter a name and specify the<span style="font-weight: bold;"> Number of rejections</span> indicator. <br />
+&nbsp;<br />
+For an indicator of the <span style="font-weight: bold;">Counter</span> type, fill in the <span style="font-weight: bold;">Action</span> field. To record how many times the contract has been resubmitted for approval, select <span style="font-weight: bold;">Incrementing the counter</span>.<br />
+<img alt="business-process-metrics-examples-2" width="615" height="364" style="margin:0;width:615px;height:364px;border:none" src="business-process-metrics-examples-2.png"/></li></ol>
+<p class="p_Normal">You do not need to fill in the data on the <span style="font-weight: bold;">Field Values</span> tab. In this example, only the <a href="business-process-metrics.html#context-property" class="topiclink">system properties of the indicator</a> are used, into which the values from the process are automatically written.</p>
+<ol style="list-style-type:upper-roman">
+<li value="4" class="p_Normal">Save the activity settings and publish the process.</li></ol>
+<h3 class="p_Heading3"><span class="f_Heading3">Step 3: Customize the chart for the Counter type indicator</span></h3>
+<ol style="list-style-type:upper-roman">
+<li value="1" class="p_Normal">Create a separate page and place the <a href="chart.html" class="topiclink">Chart</a> widget on it. This way you will be able to visualize the data after the execution of a process instance with an indicator.</li><li value="2" class="p_Normal">In the widget settings on the <span style="font-weight: bold;">Chart</span> tab, fill in the fields:<br />
+<img alt="business-process-metrics-examples-3" width="728" height="670" style="margin:0;width:728px;height:670px;border:none" src="business-process-metrics-examples-3.png"/></li></ol>
+<ul style="list-style-type:disc">
+<li class="p_Normal"><span style="font-weight: bold;">Data source</span>. Select <span style="font-weight: bold;">Indicator</span>.</li><li class="p_Normal"><span style="font-weight: bold;">Indicator</span>. From the list of published indicators, select <span style="font-weight: bold;">Number of rejections</span>.</li><li class="p_Normal"><span style="font-weight: bold;">Category</span>. Specify the <span style="font-weight: bold;">Event author</span> property to see which sales reps performed the task to revise the contract.</li><li class="p_Normal"><span style="font-weight: bold;">Chart indicator</span>. Select <span style="font-weight: bold;">Amount</span> to display how many times the event author performed the task.</li><li class="p_Normal"><span style="font-weight: bold;">Data display</span>. Select <span style="font-weight: bold;">Units</span>.</li><li class="p_Normal">Leave the rest of the settings as they are by default.</li></ul>
+<ol style="list-style-type:upper-roman" start="3">
+<li value="3" class="p_Normal">On the <span style="font-weight: bold;">Custom Filters</span> tab, you can select the properties of the indicator to filter the data on the chart. To track the number of times an employee worked on a task over a certain period, select <span style="font-weight: bold;">Event time</span>.</li><li value="4" class="p_Normal">Save the widget settings and publish the page.</li></ol>
+<p class="p_Normal">A manager can specify a period and view on the chart how many times a sales rep has performed a task to revise a contract. The indicator includes all completed instances of the process during this period. If several sales reps are involved in contract finalization, you can compare the efficiency of their work. &nbsp;</p>
+<p class="p_Normal"><img alt="business-process-metrics-examples-4" width="664" height="404" style="margin:0;width:664px;height:404px;border:none" src="business-process-metrics-examples-4.png"/></p>
+<h2 class="p_Heading2"><span class="f_Heading2">Indicator of the Value type</span></h2>
+<p class="p_Normal">Let's see how to customize the indicator using the<span style="font-weight: bold;"> Approve the deal amount</span> process as an example. It consists of the following steps:</p>
+<ol style="list-style-type:decimal">
+<li value="1" class="p_Normal">The sales rep prepares a draft contract and specifies a preliminary deal amount in it. To do this, they fill in the <span style="font-weight: bold;">Amount</span> field on the task form.</li><li value="2" class="p_Normal">Then they discuss the draft contract with the customer and offer additional services.</li><li value="3" class="p_Normal">If the customer agrees to purchase the services, the sales rep changes the deal amount. To do this, they use the same <span style="font-weight: bold;">Amount</span> field as for the preliminary amount.</li></ol>
+<p class="p_Normal">With the help of the indicator, we can track the difference between the preliminary and the final amount of the deal and display it on the chart.</p>
+<h3 class="p_Heading3"><span class="f_Heading3">Step 1: Create an indicator of the Value type</span></h3>
+<ol style="list-style-type:upper-roman">
+<li value="1" class="p_Normal"><a href="business-process-metrics.html#create-indicator" class="topiclink">Create an indicator</a> of the <span style="font-weight: bold;">Value</span> type. For example, <span style="font-weight: bold;">Deal amount change</span>.</li><li value="2" class="p_Normal">Add properties to the <a href="business-process-metrics.html#context-property" class="topiclink">context of the indicator</a> to record two amounts from the process. To do this, go to the <span style="font-weight: bold;">Context</span> tab and add the <span style="font-weight: bold;">Deal amount</span> variable of the <a href="360009707032.html#category" class="topiclink">Category</a> type. Set the values: <span style="font-weight: bold;">Preliminary deal</span> <span style="font-weight: bold;">amount</span> and <span style="font-weight: bold;">Final deal amount</span>.</li><li value="3" class="p_Normal">Publish the indicator.</li></ol>
+<h3 class="p_Heading3"><span class="f_Heading3">Step 2: Set up a business process with an indicator of the Value type</span> </h3>
+<ol style="list-style-type:upper-roman">
+<li value="1" class="p_Normal">Go to the designer of the <span style="font-weight: bold;">Approve the deal amount</span> business process.</li><li value="2" class="p_Normal">To record the value of the preliminary and the final amount, place the <a href="set-process-metrics-value.html" class="topiclink">Set Indicator’s Value</a> activity before and after the <span style="font-weight: bold;">Offer additional services to the customer</span> task on the flow chart.<br />
+<img alt="business-process-metrics-examples-5" width="541" height="232" style="margin:0;width:541px;height:232px;border:none" src="business-process-metrics-examples-5.png"/></li><li value="3" class="p_Normal">Double-click the activity that is placed before the discussion of the additional services and go to its settings. Name it <span style="font-weight: bold;">Preliminary amount</span> and specify the <span style="font-weight: bold;">Deal amount change</span> indicator.<br />
+&nbsp;<br />
+Then, on the <span style="font-weight: bold;">Field Values</span> tab, fill in the data so that the values from the process are passed to the indicator:<br />
+<img alt="business-process-metrics-examples-6" width="459" height="277" style="margin:0;width:459px;height:277px;border:none" src="business-process-metrics-examples-6.png"/></li></ol>
+<ul style="list-style-type:disc">
+<li class="p_Normal"><span style="font-weight: bold;">Deal amount</span>. Select the indicator variable and map it to the <span style="font-weight: bold;">Preliminary deal amount</span> value. Thus, the amount before the discussion with the customer will be recorded as the <span style="font-weight: bold;">Preliminary deal amount</span>.</li><li class="p_Normal"><span style="font-weight: bold;">Value</span>. Select the system property of the indicator and map it to the process context <span style="font-weight: bold;">Amount</span> variable, in which the sales rep specifies the deal amount at this step. &nbsp;</li></ul>
+<ol style="list-style-type:upper-roman">
+<li value="4" class="p_Normal">Double-click the activity that is placed after the discussion of the additional services and go to its settings. Name it <span style="font-weight: bold;">Final amount</span> and specify the <span style="font-weight: bold;">Deal amount change</span> indicator.<br />
+&nbsp;<br />
+On the <span style="font-weight: bold;">Field Values</span> tab, specify the variables:</li></ol>
+<ul style="list-style-type:disc">
+<li class="p_Normal"><span style="font-weight: bold;">Deal amount</span>. Map the indicator variable to the <span style="font-weight: bold;">Final deal amount</span> value. As a result, the deal amount after the discussion with the customer will be recorded as<span style="font-weight: bold;"> Final deal amount</span>.</li><li class="p_Normal"><span style="font-weight: bold;">Value</span>. Map the system property of the indicator to the process context <span style="font-weight: bold;">Amount</span> variable, where the sales rep enters the new amount after revising the contract.</li></ul>
+<ol style="list-style-type:upper-roman">
+<li value="5" class="p_Normal">Publish the process.</li></ol>
+<h3 class="p_Heading3"><span class="f_Heading3">Step 3: Customize the chart for the Value type indicator</span></h3>
+<ol style="list-style-type:upper-roman">
+<li value="1" class="p_Normal">Create a separate page and place the <a href="chart.html" class="topiclink">Chart</a> widget on it to visualize the indicator.</li><li value="2" class="p_Normal">In the widget settings on the <span style="font-weight: bold;">Chart</span> tab, fill in the fields:<br />
+<img alt="business-process-metrics-examples-7" width="730" height="674" style="margin:0;width:730px;height:674px;border:none" src="business-process-metrics-examples-7.png"/></li></ol>
+<ul style="list-style-type:disc">
+<li class="p_Normal"><span style="font-weight: bold;">Data source</span>. Select <span style="font-weight: bold;">Indicator</span>.</li><li class="p_Normal"><span style="font-weight: bold;">Indicator</span>. From the list of published indicators, select <span style="font-weight: bold;">Deal amount change</span>.</li><li class="p_Normal"><span style="font-weight: bold;">Category</span>. Specify the context variable of the <span style="font-weight: bold;">Deal amount</span> indicator to display the preliminary and the final amount on the chart.</li><li class="p_Normal"><span style="font-weight: bold;">Chart indicator</span>. Specify the <span style="font-weight: bold;">Value</span> indicator field and select <span style="font-weight: bold;">Value</span>. Then the chart will display the numeric values entered by the sales rep in the <span style="font-weight: bold;">Amount</span> field on the <span style="font-weight: bold;">Prepare the contract draft</span> and <span style="font-weight: bold;">Offer additional</span> <span style="font-weight: bold;">services to the customer</span> task forms.</li><li class="p_Normal"><span style="font-weight: bold;">Data display</span>. Select <span style="font-weight: bold;">Units</span>.</li><li class="p_Normal">Leave the rest of the settings as they are by default.</li></ul>
+<ol style="list-style-type:upper-roman">
+<li value="3" class="p_Normal">On the <span style="font-weight: bold;">Custom Filters</span> tab, you can select indicator properties to filter data on the chart. To track the difference between the preliminary and the final deal amounts for the period, select <span style="font-weight: bold;">Event time</span>.</li><li value="4" class="p_Normal">Save the widget settings and publish the page.</li></ol>
+<p class="p_Normal">The manager can specify a period and view the values recorded for the preliminary and the final deal amounts on the chart. The indicator includes all completed process instances for that period.</p>
+<p class="p_Normal"><img alt="business-process-metrics-examples-8" width="622" height="379" style="margin:0;width:622px;height:379px;border:none" src="business-process-metrics-examples-8.png"/></p>
+<h2 class="p_Heading2"><span class="f_Heading2">Indicator of the Time Interval type</span></h2>
+<p class="p_Normal">Let's see how to customize the indicator using the <span style="font-weight: bold;">Issue a contract</span> process as an example.</p>
+<p class="p_Normal">With the help of this indicator, you can find out how much time a sales rep spent on the task for issuing the contract. You can record the task start and end dates using a script.</p>
+<h3 class="p_Heading3"><span class="f_Heading3">Step 1: Create an indicator of the Time Interval type</span></h3>
+<p class="p_Normal"><a href="business-process-metrics.html#create-indicator" class="topiclink">Create an indicator</a> of the <span style="font-weight: bold;">Time Interval</span> type. Name it, e.g <span style="font-weight: bold;">Task execution duration</span>, and publish it.</p>
+<h3 class="p_Heading3"><span class="f_Heading3">Step 2: Set up a business process with an indicator of the Time Interval type</span></h3>
+<ol style="list-style-type:upper-roman">
+<li value="1" class="p_Normal">Go to the designer of the <span style="font-weight: bold;">Issue a contract</span> business process.</li><li value="2" class="p_Normal">On the <span style="font-weight: bold;">Context</span> tab, add the <span style="font-weight: bold;">Task start date</span> and <span style="font-weight: bold;">Task end date</span> variables of the <a href="360009707032.html#date-time" class="topiclink">Date/time</a> type. The task start and end times will be recorded in them.</li><li value="3" class="p_Normal">On the <span style="font-weight: bold;">Scripts</span> tab, add the following commands:</li></ol>
+<p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample">async function start_time(): Promise&lt;void&gt; {</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;Context.data.task_start_date = new Datetime();</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;}</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;async function finish_time(): Promise&lt;void&gt; {</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;Context.data.task_end_date = new Datetime();</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;}</span></p>
+<ol style="list-style-type:upper-roman" start="4">
+<li value="4" class="p_Normal">Go to the process flow chart. Add the <a href="360027203731.html" class="topiclink">Script</a> activities: place one before the <span style="font-weight: bold;">Issue a contract</span> task and the second one after it.<br />
+<img alt="business-process-metrics-examples-9" width="649" height="270" style="margin:0;width:649px;height:270px;border:none" src="business-process-metrics-examples-9.png"/></li><li value="5" class="p_Normal">In the settings of the <span style="font-weight: bold;">Script</span> activity for recording the date of task assignment, specify the <code><b>start_time</b></code> function. In the activity settings for recording the completion date, specify the <code><b>finish_time</b></code> function. </li><li value="6" class="p_Normal">To pass to the indicator the time from the assignment and to the completion of the task, use the <a href="set-process-metrics-value.html" class="topiclink">Set Indicator’s Value</a> activity. Place it on the scheme of the business process after the script and task activities.</li><li value="7" class="p_Normal">Double-click the activity and customize its settings. On the <span style="font-weight: bold;">Main</span> tab, enter a name, e.g. <span style="font-weight: bold;">Record time interval</span>, and select the <span style="font-weight: bold;">Task execution duration</span> indicator.<br />
+&nbsp;<br />
+On the <span style="font-weight: bold;">Field Values</span> tab, fill in the data to pass the values from the process to the indicator:</li></ol>
+<ul style="list-style-type:disc">
+<li class="p_Normal"><span style="font-weight: bold;">Beginning of interval</span>. Select the <a href="business-process-metrics.html#context-property" class="topiclink">system property of the indicator</a> and map it to the process context <span style="font-weight: bold;">Task start date</span> variable. This way you will pass the task assignment date to the indicator.</li><li class="p_Normal"><span style="font-weight: bold;">Interval end</span>. Select the indicator property and map it to the process <span style="font-weight: bold;">Task end date</span> variable. Then you will pass the task completion date into it.<br />
+<img alt="business-process-metrics-examples-10" width="524" height="314" style="margin:0;width:524px;height:314px;border:none" src="business-process-metrics-examples-10.png"/></li></ul>
+<ol style="list-style-type:upper-roman" start="4">
+<li value="8" class="p_Normal">Publish the process.</li></ol>
+<h3 class="p_Heading3"><span class="f_Heading3">Step 3: Customize the chart for the Time Interval indicator</span></h3>
+<ol style="list-style-type:upper-roman">
+<li value="1" class="p_Normal">Create a separate page and place a <a href="chart.html" class="topiclink">Chart</a> widget on it to visualize the indicator.</li><li value="2" class="p_Normal">In the widget settings on the <span style="font-weight: bold;">Chart</span> tab, fill in the fields:<br />
+<img alt="business-process-metrics-examples-11" width="690" height="671" style="margin:0;width:690px;height:671px;border:none" src="business-process-metrics-examples-11.png"/></li></ol>
+<ul style="list-style-type:disc">
+<li class="p_Normal"><span style="font-weight: bold;">Data source</span>. Select <span style="font-weight: bold;">Indicator</span>.</li><li class="p_Normal"><span style="font-weight: bold;">Indicator</span>. From the list of published indicators, select <span style="font-weight: bold;">Task execution duration</span>.</li><li class="p_Normal"><span style="font-weight: bold;">Category</span>. Specify <span style="font-weight: bold;">Event time</span> and select <span style="font-weight: bold;">By dates</span>. This way you will be able to see how long an employee performed a task on a certain day.</li><li class="p_Normal"><span style="font-weight: bold;">Chart indicator</span>. Specify <span style="font-weight: bold;">Value</span> and select <span style="font-weight: bold;">Average</span>.</li><li class="p_Normal"><span style="font-weight: bold;">Data display</span>. Select <span style="font-weight: bold;">Units</span>.</li><li class="p_Normal"><span style="font-weight: bold;">Chart type</span>. Select <span style="font-weight: bold;">Number cards</span>.</li><li class="p_Normal">Leave the rest of the settings as they are by default.</li></ul>
+<ol style="list-style-type:upper-roman" start="3">
+<li value="3" class="p_Normal">On the <span style="font-weight: bold;">Custom Filters</span> tab, you can select the indicator properties to filter the data on the chart. To track a specific employee's work on a task, select <span style="font-weight: bold;">Event author</span>.</li><li value="4" class="p_Normal">Save the widget settings and publish the page.</li></ol>
+<p class="p_Normal">The manager can select a sales rep’s name and view on the chart how many hours elapsed from the time the task was assigned until the employee closed it. The indicator includes all completed process instances for the day.</p>
+<p class="p_Normal"><img alt="business-process-metrics-examples-12" width="525" height="337" style="margin:0;width:525px;height:337px;border:none" src="business-process-metrics-examples-12.png"/></p>
+
+                        <div class="bottom-nav">
+                            
+                                <a id="prev-link" class="topic__navi_prev" href="set-process-metrics-value.html">
+                                    <span class="bottom-nav__arrow bottom-nav__arrow--prev"></span> <span
+                                        class="bottom-nav__link">set-process-metrics-value.html</span>
+                                </a>
+                            
+                            
+                                <a id="next-link" class="topic__navi_next" href="360024383972.html">
+                                    <span class="bottom-nav__link">360024383972.html</span> <span
+                                        class="bottom-nav__arrow bottom-nav__arrow--next"></span>
+                                </a>
+                            
+                        </div>
+                        <!-- добавляет на страницу строку блок Была ли статья полезной?  -->
+                          <div class="feedback" id="feedback"><div class="feedback-help"><span><b>Was this helpful?</b></span><form action="" method="POST" class="feedback-form" id="feedback-form"><div class="feedback__popup feedback__popup-response" id="feedback__popup_thx" style="display: none;">Thanks for your feedback!</div><div class="feedback__popup" id="feedback__popup_why" style="display: none;"><div class="feedback__popup-header">Please specify why:</div><input type="radio" name="category" id="bad_recommendation" value="bad_recommendation"><label for="bad_recommendation">Recommendations did not help me</label><input type="radio" name="category" id="difficult_text" value="difficult_text"><label for="difficult_text">Article is hard to understand</label><input type="radio" name="category" id="no_answer" value="no_answer"><label for="no_answer">Didn`t answer my question</label><input type="radio" name="category" id="bad_header" value="bad_header"><label for="bad_header">Content does not match the topic</label><input type="radio" name="category" id="other_reason" value="other_reason"><label for="other_reason">Other</label></div><div class="feedback__popup" id="feedback__popup-other" style="display: none;"><div class="feedback__popup-header">How we can improve it?</div><textarea class="feedback__textarea" name="other" id=""></textarea><input type="submit" class="feedback__other-btn" value="Submit"></div><div class="feedback-form__btn-group"><input type="radio" name="useful" id="feedback__useful_yes" value="true"><label for="feedback__useful_yes"><img src="like.svg" class="small-img" alt="like"><spanclass="feedback-form__btn-group_yes-btn">Yes</spanclass="feedback-form__btn-group_yes-btn"></label><input type="radio" name="useful" id="feedback__useful_no" value="false"><label for="feedback__useful_no"><img src="dislike.svg" class="small-img" alt="dislike"><spanclass="feedback-form__btn-group_no-btn">No</spanclass="feedback-form__btn-group_no-btn"></label></div><select name="category"><option disabled="">Please specify why</option><option value="bad_recommendation" selected="">Recommendations did not help me</option><option value="difficult_text">Article is hard to understand</option><option value="no_answer">Didn`t answer my question</option><option value="bad_header">Content does not match the topic</option><option value="other_reason">Other</option></select><input type="submit"></form></div><div class="found_typo"><p style="margin: 0px; margin-top: 16px !important;"><span><b>Found a typo?</b></span> Select it and press <i>Ctrl+Enter</i> to send us feedback</p></div></div>
+                           
+                    </section>
+                </div>
+                <aside class="article__sidebar" style="display:none">
+                    <input type="checkbox" />
+                    <div class="article__arrow"></div>
+                    <div class="table-of-contents elma365-right" id="toc2Content">
+                        <h3 class="h3-toc">In this topic</h3>
+                        <nav id="toc2"></nav>
+                    </div>
+                </aside>
+            </div>
+        </article>
+    </main>               
+    <footer class="footer">
+        <div class="footer-container">
+  <div class="footer-mobile">
+    
+    <ul class="footer-mobile__list"><li><a href="https://brix365.com/en/" target="_blank">BRIX</a></li><li><a href="https://tssdk.brix365.com/en/latest/" target="_blank">SDK</a></li><li><a href="https://api.brix365.com/en/" target="_blank">API</a></li></ul><ul class="footer-mobile__list"><li><a href="https://brix365.com/en/help/platform/get-trial.html">Platform</a></li><li><a href="https://brix365.com/en/help/ecm/ecm-functions.html">ECM</a></li><li><a href="https://brix365.com/en/help/service/service-functions.html">Service</a></li><li><a href="https://brix365.com/en/help/projects/projects-functions.html">Projects</a></li></ul>
+    
+    
+  </div>
+  <div class="footer-wrap">
+    
+      <div><span class="mobile-question-popup">Send feedback</span><form method="POST" action class="question__popup question-xs" id="question__popup"><div class="question-wrap"><span class="close"></span><span class="title">Ask a question</span><label for="help_question" style="display: none;"></label><textarea name="help_question" id="help_question"></textarea><input type="submit" value="Send"></div></form><div class="hidden fade-in question-success-xs">Sent</div></div>
+    
+    <div class="footer-flex-b">
+      <span class="footer-copy">&copy; 2025 BRIX</span>
+      <ul class="footer-list">
+        
+        <li class="footer-item">
+            <a href="#" class="arrow-top" style="display: block;"></a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+ 
+    </footer>
+    <iframe name="hmnavigation" style="display:none!important"></iframe>
+    <script src="./jquery-ui.js"></script>
+    <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
+    <script src="./jquery.tocify.min.js"></script>
+    <script src="./TypoReporter.min.js"></script>
+    <script src="./google-search.js"></script>
+    <script src="./main.js"></script>
+</body>
+
+</html>

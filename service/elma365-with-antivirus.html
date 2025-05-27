@@ -1,0 +1,779 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>BRIX and antivirus software</title>
+    <meta name="generator" content="Help+Manual" />
+    <meta name="keywords" content="" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="To maximize the performance and security of the BRIX system, it is important to properly configure the firewall and deploy key components such as the BRIX application and DBMS." />
+    <meta name="picture" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Full documentation for BRIX365 platform. Low-code developer guide. User guide. Admin guide. Developer guide." />
+    <meta property="og:url" content="https://brix365.com/en/help" />
+    <meta property="og:image" content="" />                                                              
+    <link rel="icon" href="favicon.png" type="image/png" />
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./jquery-ui.min.css" />
+    <link rel="stylesheet" href="default.css" />
+    <link rel="stylesheet" href="./search-yandex.css" />
+    <link rel="stylesheet" href="./article.css" />
+    <link rel="stylesheet" href="./glossary.css" />
+    <link rel="stylesheet" href="./theme.css" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+
+<body>
+    
+    <script>!function(e,t,c,n,r,a,m){e.ym=e.ym||function(){(e.ym.a=e.ym.a||[]).push(arguments)},e.ym.l=1*new Date;for(var s=0;s<document.scripts.length;s++)if(document.scripts[s].src===n)return;a=t.createElement(c),m=t.getElementsByTagName(c)[0],a.async=1,a.src=n,m.parentNode.insertBefore(a,m)}(window,document,"script","https://mc.yandex.ru/metrika/tag.js"),ym(83179930,"init",{clickmap:!0,trackLinks:!0,accurateTrackBounce:!0,webvisor:!0})</script><noscript><div><img alt=""src=https://mc.yandex.ru/watch/83179930 style=position:absolute;left:-9999px></div></noscript> 
+    
+    ﻿<header class="header elma-365">
+  <div class="container">
+    <a class="header__logo" href="https://brix365.com/en/help">
+      <img src="./logo-en.svg" alt="header logo">
+    </a>
+ <!-- <div class="hero__search-form" id="search-panel">
+   <form class="search-form" onsubmit="ym(83180416,'reachGoal','poisk')">
+     <label class="search-form__label">
+       <span id="reset-search" class="search__icon"></span>
+       <input class="search-form__input" type="text">
+     </label>
+     <input class="search-form__submit" type="submit" value="Submit">
+   </form>
+  </div>       -->
+  
+     <div class="hero__search-form" id="search-panel"> <form class="search-form"> <label class="search-form__label"> <span id="reset-search" class="search__icon"></span> <input class="search-form__input" type="text"> </label> <input class="search-form__submit" type="submit" value="Submit"> </form> </div> 
+  <div class="hero__search">
+      <a href="#" id="search-icon" class="hero__search-icon">
+        <img src="search-icon-white.svg" alt="search string">
+      </a>
+      <a href="#" id="side-menu-icon" class="hero__side-icon">
+        <img src="side_menu.svg" alt="side menu">
+      </a>
+    </div>  
+  <div class="header__navi">
+        
+        <ul class="header__list"><li><span class="solution-select"><span class="solution-select__selected"></span><svg width="7" height="4" viewBox="0 0 7 4" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L3.5 3.5L6 1" stroke="white" stroke-linecap="round" stroke-linejoin="round"/></svg><ul class="solution-select__list"><li><a class="project-link" href="https://brix365.com/en/help/platform/get-trial.html">Platform</a></li><li><a class="project-link" href="https://brix365.com/en/help/ecm/ecm-functions.html">ECM</a></li><li><a class="project-link" href="https://brix365.com/en/help/crm/crm_overview.html">CRM</a></li><li><a class="project-link" href="https://brix365.com/en/help/service/service-functions.html">Service</a></li><li><a class="project-link" href="https://brix365.com/en/help/projects/projects-functions.html">Projects</a></li><li><a class="project-link" href="https://brix365.com/en/help/business_solutions/-elma365-store.html">Business Solutions</a></li></ul></span></li><li><a href="https://api.brix365.com/en/" target="_blank">API</a></li><li><a href="https://tssdk.brix365.com/" target="_blank">SDK</a></li></ul>
+        
+        
+   </div>
+  </div>
+
+</header>
+
+
+
+    
+    <main class="main container">
+
+        <aside class="sidebar" id="sidebar">
+        <div class="sidebar__header">
+                 <a class="header__logo" href="https://brix365.com/en/help">
+                    <img src="./logo-light-en.svg">
+                 </a>
+                    <span class="sidebar__close elma-365-close" id="close"></span>
+            </div>
+            <div class="sidebar__wrapper" id="side-menu">
+                
+            </div>
+        </aside>
+
+        <article class="article" id="article">
+            <div class="article-inner">           
+                <div class="content">
+                    <header class="article__header">
+                        
+                            <div class="topic__breadcrumbs">
+                                <p>System architecture and requirements / BRIX and antivirus software</p>
+                            </div>
+                        
+                        <div class="topic__title"><h1 class="p_Heading1"><span class="f_Heading1">BRIX and antivirus software</span></h1>
+</div>
+                    
+</header>
+                    <section class="article__content">
+                        <div class="scroll-top-inner">
+                            <a href="#h1-article" class="scroll-top"></a>
+                        </div>
+                        <!-- Placeholder for topic body. -->
+                        <p class="p_Normal">To maximize the performance and security of the BRIX system, it is important to properly configure the firewall and deploy key components such as the BRIX application and DBMS.</p>
+<p class="p_Normal">BRIX is a microservice solution that utilizes Golang, NodeJS, Angular, PostgreSQL, MongoDB, RabbitMQ, Redis, Docker, Kubernetes, and S3 MinIO protocol for file storage.</p>
+<p class="p_Normal">This article describes the key aspects that help optimize and secure application performance.</p>
+<ol style="list-style-type:upper-roman">
+<li value="1" class="p_Normal">The location of the application and DBMS in the DMZ (Demilitarized Zone) minimizes risks of unauthorized access to internal resources.<br />
+&nbsp;<br />
+Access should be strictly controlled with the help of a firewall. This way you will limit access to the internal network and reduce the risks of attacks. The interaction between the application and DBMS must be performed through secure communication channels.<br />
+<img alt="elma365-with-antivirus" title="elma365-with-antivirus" width="1454" height="895" style="margin:0;width:1454px;height:895px;border:none" src="elma365-with-antivirus.png"/></li></ol>
+<ol style="list-style-type:upper-roman" start="2">
+<li value="2" class="p_Normal">Firewall configuration that controls incoming and outgoing traffic, blocking potentially dangerous connections. For BRIX, it is recommended that you configure the firewall as follows:</li></ol>
+<ul style="list-style-type:disc">
+<li class="p_Normal">Open only those ports that are necessary for system operation. For example: port 443 (HTTPS) for communication with users, internal ports for communication between microservices (e.g. RabbitMQ, Redis, MinIO).</li><li class="p_Normal">Close all ports that are not used by the system to minimize the attack surface.</li><li class="p_Normal">Restrict access to the DMZ to only certain IP addresses or subnets using restriction rules or VPN. This will help prevent unauthorized access to the application.</li><li class="p_Normal">Add ports 443 to exceptions for access to the registry (<code><b>hub.elma365.tech</b></code>) and repository (<code><b>repo.elma365.tech</b></code>).</li></ul>
+<ol style="list-style-type:upper-roman" start="3">
+<li value="3" class="p_Normal">Antivirus software may slow down system performance, especially if it inspects traffic between containers and DBMS. To minimize this impact, it is recommended to:</li></ol>
+<ul style="list-style-type:disc">
+<li class="p_Normal">Install antivirus on the reverse proxy. This will allow only incoming and outgoing traffic on the DMZ boundary to be inspected without affecting internal communications between the application and DBMS.</li><li class="p_Normal">Exclude internal ports from inspection. Add ports used for communication between microservices (for example, RabbitMQ, Redis, MinIO ports) to antivirus exclusions. This will speed up data exchange within the system.</li><li class="p_Normal">Exclude DBMS files from inspection. Since database files do not contain malicious code, scanning them with antivirus is not useful and slows down the DBMS.</li></ul>
+<ol style="list-style-type:upper-roman" start="4">
+<li value="4" class="p_Normal">To improve the security, performance, and manageability of the system, we recommend using Linkerd - lightweight service mesh. It adds features to Kubernetes such as transparent traffic encryption, load balancing, and traffic management. Linkerd automatically encrypts all traffic between microservices using mTLS (mutual TLS). This protects data in transit between containers within a Kubernetes cluster.</li><li value="5" class="p_Normal">To ensure system high availability, set up regular data backups.</li></ol>
+<p class="p_Normal">For network communication between servers at the infrastructure level, open the ports listed below. For more details, please refer to <a href="https://deckhouse.io/products/kubernetes-platform/documentation/v1/network_security_setup.html" target="_blank" class="weblink">the official Deckhouse documentation</a>.</p>
+<h2 class="p_Heading2"><span class="f_Heading2">Traffic between master nodes</span></h2>
+<div style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0 0 0 0;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; width:145px; padding:0; border:none"><p class="p_Normal"><span style="font-weight: bold;">Port</span></p>
+</td>
+<td style="vertical-align:top; width:103px; padding:0; border:none"><p class="p_Normal"><span style="font-weight: bold;">Protocol</span></p>
+</td>
+<td style="vertical-align:top; width:528px; padding:0; border:none"><p class="p_Normal"><span style="font-weight: bold;">Purpose</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:145px; padding:0; border:none"><p class="p_Normal">2379, 2380</p>
+</td>
+<td style="vertical-align:top; width:103px; padding:0; border:none"><p class="p_Normal">TCP</p>
+</td>
+<td style="vertical-align:top; width:528px; padding:0; border:none"><p class="p_Normal"><span style="font-weight: bold;">etcd</span> replication</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:145px; padding:0; border:none"><p class="p_Normal">4200</p>
+</td>
+<td style="vertical-align:top; width:103px; padding:0; border:none"><p class="p_Normal">TCP</p>
+</td>
+<td style="vertical-align:top; width:528px; padding:0; border:none"><p class="p_Normal">Cluster API webhook handler</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:145px; padding:0; border:none"><p class="p_Normal">4201</p>
+</td>
+<td style="vertical-align:top; width:103px; padding:0; border:none"><p class="p_Normal">TCP</p>
+</td>
+<td style="vertical-align:top; width:528px; padding:0; border:none"><p class="p_Normal">VMware Cloud Director cloud provider webhook handler</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:145px; padding:0; border:none"><p class="p_Normal">4223</p>
+</td>
+<td style="vertical-align:top; width:103px; padding:0; border:none"><p class="p_Normal">TCP</p>
+</td>
+<td style="vertical-align:top; width:528px; padding:0; border:none"><p class="p_Normal">Deckhouse controller webhook handler</p>
+</td>
+</tr>
+</table>
+</div>
+<h2 class="p_Heading2"><span class="f_Heading2">Masters to nodes traffic</span></h2>
+<div style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0 0 0 0;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; width:97px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal"><span style="font-weight: bold;">Port</span></p>
+</td>
+<td style="vertical-align:top; width:149px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal"><span style="font-weight: bold;">Protocol</span> </p>
+</td>
+<td style="vertical-align:top; width:310px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal"> <span style="font-weight: bold;">Purpose</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:97px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">22</p>
+</td>
+<td style="vertical-align:top; width:149px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">TCP</p>
+</td>
+<td style="vertical-align:top; width:310px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">SSH for Static nodes bootstrapping by static provider</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:97px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">10250</p>
+</td>
+<td style="vertical-align:top; width:149px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">TCP</p>
+</td>
+<td style="vertical-align:top; width:310px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal"><span style="font-weight: bold;">kubelet</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:97px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">4221</p>
+</td>
+<td style="vertical-align:top; width:149px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">TCP</p>
+</td>
+<td style="vertical-align:top; width:310px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal"><span style="font-weight: bold;">apiserver bashible</span> for delivering node congifurations</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:97px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">4227</p>
+</td>
+<td style="vertical-align:top; width:149px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">TCP</p>
+</td>
+<td style="vertical-align:top; width:310px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal"><span style="font-weight: bold;">runtime-audit-engine</span> webhook handler</p>
+</td>
+</tr>
+</table>
+</div>
+<h2 class="p_Heading2"><span class="f_Heading2">Nodes to masters traffic</span></h2>
+<div style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0 0 0 0;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; width:96px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal"><span style="font-weight: bold;">Port</span></p>
+</td>
+<td style="vertical-align:top; width:150px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal"><span style="font-weight: bold;">Protocol </span></p>
+</td>
+<td style="vertical-align:top; width:526px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal"><span style="font-weight: bold;"> Purpose</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:96px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">4234</p>
+</td>
+<td style="vertical-align:top; width:150px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">UDP</p>
+</td>
+<td style="vertical-align:top; width:526px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">NTP for time synchronization between nodes</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:96px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">6443</p>
+</td>
+<td style="vertical-align:top; width:150px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">TCP</p>
+</td>
+<td style="vertical-align:top; width:526px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal"><span style="font-weight: bold;">kube-apiserver</span> for controllers working in node’s host network namespace</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:96px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">4203</p>
+</td>
+<td style="vertical-align:top; width:150px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">TCP</p>
+</td>
+<td style="vertical-align:top; width:526px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal"><span style="font-weight: bold;">machine-controller-manager</span> metrics</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:96px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">4219</p>
+</td>
+<td style="vertical-align:top; width:150px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">TCP</p>
+</td>
+<td style="vertical-align:top; width:526px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">Proxy for registry packages <span style="font-weight: bold;">registry-packages-proxy</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:96px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">4222</p>
+</td>
+<td style="vertical-align:top; width:150px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">TCP</p>
+</td>
+<td style="vertical-align:top; width:526px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">Deckhouse controller metrics</p>
+</td>
+</tr>
+</table>
+</div>
+<h2 class="p_Heading2"><span class="f_Heading2">Nodes to nodes traffic</span></h2>
+<div style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0 0 0 0;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; width:220px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal"><span style="font-weight: bold;">Port</span></p>
+</td>
+<td style="vertical-align:top; width:145px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal"><span style="font-weight: bold;">Protocol </span></p>
+</td>
+<td style="vertical-align:top; width:409px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal"><span style="font-weight: bold;"> Purpose</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:220px; background-color:#FFFFFF; padding:1px; border:none"><br />
+</td>
+<td style="vertical-align:top; width:145px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">ICMP</p>
+</td>
+<td style="vertical-align:top; width:409px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">ICMP for node-to-node connectivity monitoring</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:220px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">7000–7999</p>
+</td>
+<td style="vertical-align:top; width:145px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">TCP</p>
+</td>
+<td style="vertical-align:top; width:409px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">DRBD replication for <span style="font-weight: bold;">sds-replicated-volume</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:220px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">8469, 8472, 4299, 4298</p>
+</td>
+<td style="vertical-align:top; width:145px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">UDP</p>
+</td>
+<td style="vertical-align:top; width:409px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">VXLAN for pod-to-pod traffic encapsulation</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:220px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">4204</p>
+</td>
+<td style="vertical-align:top; width:145px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">TCP</p>
+</td>
+<td style="vertical-align:top; width:409px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">Debug for Deckhouse controller</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:220px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">4205</p>
+</td>
+<td style="vertical-align:top; width:145px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">TCP</p>
+</td>
+<td style="vertical-align:top; width:409px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal"><span style="font-weight: bold;">ebpf-exporter</span> module metrics</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:220px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">4206</p>
+</td>
+<td style="vertical-align:top; width:145px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">TCP</p>
+</td>
+<td style="vertical-align:top; width:409px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal"><span style="font-weight: bold;">node-exporter</span> module metrics</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:220px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">4207, 4208</p>
+</td>
+<td style="vertical-align:top; width:145px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">TCP</p>
+</td>
+<td style="vertical-align:top; width:409px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal"><span style="font-weight: bold;">ingress-nginx</span> controller metrics for <span style="font-weight: bold;">HostWithFailover</span> inlet</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:220px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">4209</p>
+</td>
+<td style="vertical-align:top; width:145px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">TCP</p>
+</td>
+<td style="vertical-align:top; width:409px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">Kubernetes control plane metrics</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:220px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">4210</p>
+</td>
+<td style="vertical-align:top; width:145px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">TCP</p>
+</td>
+<td style="vertical-align:top; width:409px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal"><span style="font-weight: bold;">kube-proxy</span> metrics</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:220px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">4211</p>
+</td>
+<td style="vertical-align:top; width:145px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">TCP</p>
+</td>
+<td style="vertical-align:top; width:409px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">Cluster API metrics</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:220px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">4212</p>
+</td>
+<td style="vertical-align:top; width:145px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">TCP</p>
+</td>
+<td style="vertical-align:top; width:409px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal"><span style="font-weight: bold;">runtime-audit-engine</span> module metrics</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:220px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">4213</p>
+</td>
+<td style="vertical-align:top; width:145px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">TCP</p>
+</td>
+<td style="vertical-align:top; width:409px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal"><span style="font-weight: bold;">kube-router</span> metrics</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:220px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">9695</p>
+</td>
+<td style="vertical-align:top; width:145px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">TCP</p>
+</td>
+<td style="vertical-align:top; width:409px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal"><span style="font-weight: bold;">sds-node-configurator</span> agent metrics</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:220px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">3367</p>
+</td>
+<td style="vertical-align:top; width:145px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">TCP</p>
+</td>
+<td style="vertical-align:top; width:409px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">API of the <span style="font-weight: bold;">sds-replicated-volume</span> module agent</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:220px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">9942</p>
+</td>
+<td style="vertical-align:top; width:145px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">TCP</p>
+</td>
+<td style="vertical-align:top; width:409px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal"><span style="font-weight: bold;">sds-replicated-volume</span> agent metrics</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:220px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">49152, 49153</p>
+</td>
+<td style="vertical-align:top; width:145px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">TCP</p>
+</td>
+<td style="vertical-align:top; width:409px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">VM live migration port in Deckhouse Virtualization Platform</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:220px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">4218, 4225</p>
+</td>
+<td style="vertical-align:top; width:145px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">TCP</p>
+</td>
+<td style="vertical-align:top; width:409px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">Synchronization via the <span style="font-weight: bold;">memberlist</span> protocol for the <span style="font-weight: bold;">speaker</span> components of the <span style="font-weight: bold;">metallb</span> modules</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:220px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">4218, 4225</p>
+</td>
+<td style="vertical-align:top; width:145px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">UDP</p>
+</td>
+<td style="vertical-align:top; width:409px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">Synchronization via the <span style="font-weight: bold;">memberlist</span> protocol for the <span style="font-weight: bold;">speaker</span> components of the <span style="font-weight: bold;">metallb</span> modules</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:220px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">4220, 4226</p>
+</td>
+<td style="vertical-align:top; width:145px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">TCP</p>
+</td>
+<td style="vertical-align:top; width:409px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">Metrics of the <span style="font-weight: bold;">speaker</span> components of the <span style="font-weight: bold;">metallb</span> modules</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:220px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">4224</p>
+</td>
+<td style="vertical-align:top; width:145px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">TCP</p>
+</td>
+<td style="vertical-align:top; width:409px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal"><span style="font-weight: bold;">node-local-dns</span> metrics</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:220px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">4240</p>
+</td>
+<td style="vertical-align:top; width:145px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">TCP</p>
+</td>
+<td style="vertical-align:top; width:409px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">Port for the healthcheck of neighboring nodes in CNI Cilium</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:220px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">4241</p>
+</td>
+<td style="vertical-align:top; width:145px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">TCP</p>
+</td>
+<td style="vertical-align:top; width:409px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">Metrics of CNI Cilium agents</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:220px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">4242</p>
+</td>
+<td style="vertical-align:top; width:145px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">TCP</p>
+</td>
+<td style="vertical-align:top; width:409px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">Metrics of CNI Cilium operator</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:220px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">4244</p>
+</td>
+<td style="vertical-align:top; width:145px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">TCP</p>
+</td>
+<td style="vertical-align:top; width:409px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">API for the <span style="font-weight: bold;">cilium-hubble</span> module</p>
+</td>
+</tr>
+</table>
+</div>
+<h2 class="p_Heading2"><span class="f_Heading2">External traffic to master nodes</span></h2>
+<div style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0 0 0 0;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; width:122px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal"><span style="font-weight: bold;">Port</span></p>
+</td>
+<td style="vertical-align:top; width:146px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal"><span style="font-weight: bold;">Protocol </span></p>
+</td>
+<td style="vertical-align:top; width:504px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal"><span style="font-weight: bold;"> Purpose</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:122px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">22, 22322</p>
+</td>
+<td style="vertical-align:top; width:146px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">TCP</p>
+</td>
+<td style="vertical-align:top; width:504px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">SSH for Deckhouse Kubernetes Platform initialization </p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:122px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">6443</p>
+</td>
+<td style="vertical-align:top; width:146px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">TCP</p>
+</td>
+<td style="vertical-align:top; width:504px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">Direct access to <span style="font-weight: bold;">apiserver</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h2 class="p_Heading2"><span class="f_Heading2">External traffic to frontend nodes</span></h2>
+<div style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0 0 0 0;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; width:141px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal"><span style="font-weight: bold;">Port</span></p>
+</td>
+<td style="vertical-align:top; width:129px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal"><span style="font-weight: bold;">Protocol </span></p>
+</td>
+<td style="vertical-align:top; width:487px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal"><span style="font-weight: bold;"> Purpose</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:141px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">80, 443</p>
+</td>
+<td style="vertical-align:top; width:129px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">TCP</p>
+</td>
+<td style="vertical-align:top; width:487px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">Application ports for requests to Ingress controller over HTTP and HTTPS. Please note that these ports are configured in the<span style="font-weight: bold;"> IngressNginxController</span> resources and may vary in different setups</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:141px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">5416</p>
+</td>
+<td style="vertical-align:top; width:129px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">UDP</p>
+</td>
+<td style="vertical-align:top; width:487px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">OpenVPN</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:141px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">5416</p>
+</td>
+<td style="vertical-align:top; width:129px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">TCP</p>
+</td>
+<td style="vertical-align:top; width:487px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">OpenVPN</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:141px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">10256</p>
+</td>
+<td style="vertical-align:top; width:129px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">TCP</p>
+</td>
+<td style="vertical-align:top; width:487px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">Healthcheck port for external balancers</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:141px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">30000–32767</p>
+</td>
+<td style="vertical-align:top; width:129px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">TCP</p>
+</td>
+<td style="vertical-align:top; width:487px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">NodePort range</p>
+</td>
+</tr>
+</table>
+</div>
+<h2 class="p_Heading2"><span class="f_Heading2">External traffic for all nodes</span></h2>
+<div style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0 0 0 0;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; width:97px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal"><span style="font-weight: bold;">Port</span></p>
+</td>
+<td style="vertical-align:top; width:150px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal"><span style="font-weight: bold;">Protocol </span></p>
+</td>
+<td style="vertical-align:top; width:509px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal"><span style="font-weight: bold;"> Purpose</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:97px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">53</p>
+</td>
+<td style="vertical-align:top; width:150px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">UDP</p>
+</td>
+<td style="vertical-align:top; width:509px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">DNS</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:97px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">53</p>
+</td>
+<td style="vertical-align:top; width:150px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">TCP</p>
+</td>
+<td style="vertical-align:top; width:509px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">DNS</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:97px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">123</p>
+</td>
+<td style="vertical-align:top; width:150px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">UDP</p>
+</td>
+<td style="vertical-align:top; width:509px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">NTP for external time server synchronization</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:97px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">443</p>
+</td>
+<td style="vertical-align:top; width:150px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">TCP</p>
+</td>
+<td style="vertical-align:top; width:509px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">Container registry</p>
+</td>
+</tr>
+</table>
+</div>
+<h2 class="p_Heading2"><span class="f_Heading2">Connection to DB</span></h2>
+<div style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0 0 0 0;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; width:97px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal"><span style="font-weight: bold;">Port</span></p>
+</td>
+<td style="vertical-align:top; width:151px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal"><span style="font-weight: bold;">Protocol </span></p>
+</td>
+<td style="vertical-align:top; width:511px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal"><span style="font-weight: bold;"> Purpose</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:97px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">5432</p>
+</td>
+<td style="vertical-align:top; width:151px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">TCP</p>
+</td>
+<td style="vertical-align:top; width:511px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">Standard port for connection to PostgreSQL databases</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:97px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">5000</p>
+</td>
+<td style="vertical-align:top; width:151px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">TCP</p>
+</td>
+<td style="vertical-align:top; width:511px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">Standard port for communication with the master node in the Patroni cluster</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:97px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">5001</p>
+</td>
+<td style="vertical-align:top; width:151px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">TCP</p>
+</td>
+<td style="vertical-align:top; width:511px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">Standard port for communication with the slave node in the Patroni cluster</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:97px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">8008</p>
+</td>
+<td style="vertical-align:top; width:151px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">TCP</p>
+</td>
+<td style="vertical-align:top; width:511px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">Standard port for access to REST API Patroni used for cluster management</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:97px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">27017</p>
+</td>
+<td style="vertical-align:top; width:151px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">TCP</p>
+</td>
+<td style="vertical-align:top; width:511px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">Standard port for connection to MongoDB databases</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:97px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">6379</p>
+</td>
+<td style="vertical-align:top; width:151px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">TCP</p>
+</td>
+<td style="vertical-align:top; width:511px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">Standard port for connection to Redis databases</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:97px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">26379</p>
+</td>
+<td style="vertical-align:top; width:151px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">TCP</p>
+</td>
+<td style="vertical-align:top; width:511px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">Standard port for connection to Redis Sentinel databases</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:97px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">5672</p>
+</td>
+<td style="vertical-align:top; width:151px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">TCP</p>
+</td>
+<td style="vertical-align:top; width:511px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">Standard port for AMQP (Advanced Message Queuing Protocol) used by RabbitMQ for sending messages between apps</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:97px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">5671</p>
+</td>
+<td style="vertical-align:top; width:151px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">TCP</p>
+</td>
+<td style="vertical-align:top; width:511px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">Standard port for AMQP, protected version of port 5672 used for AMQP with encryption over TLS/SSL</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:97px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">15672</p>
+</td>
+<td style="vertical-align:top; width:151px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">TCP</p>
+</td>
+<td style="vertical-align:top; width:511px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">Standard port for RabbitMQ control web-interface</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:97px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">15671</p>
+</td>
+<td style="vertical-align:top; width:151px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">TCP</p>
+</td>
+<td style="vertical-align:top; width:511px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">Standard port, protected version of port 15672 used for RabbitMQ web-interface with encryption over TLS/SSL</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:97px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">9000</p>
+</td>
+<td style="vertical-align:top; width:151px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">TCP</p>
+</td>
+<td style="vertical-align:top; width:511px; background-color:#FFFFFF; padding:1px; border:none"><p class="p_Normal">Standard port for connection to S3 compatible Minio object storage</p>
+</td>
+</tr>
+</table>
+</div>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 13px; font-family: Inter; color: #394149;">The directories </span><code><b>/opt/elma365/</b></code> and <code><b>/var/lib/docker/overlay2/</b></code><span style="font-size: 13px; font-family: Inter; color: #394149;">, as well as the following databases and processes, should also be included in the exceptions:</span></p>
+<ol style="list-style-type:decimal">
+<li value="1" class="p_Normal"><span style="font-weight: bold;">BRIX application databases:</span></li></ol>
+<ul style="">
+<li class="p_Normal">/opt/bitnami/postgresql/bin/postgres</li><li class="p_Normal">/opt/bitnami/mongodb/bin/mongod</li><li class="p_Normal">/opt/bitnami/mongodb/bin/mongo</li><li class="p_Normal">redis-server</li><li class="p_Normal">/opt/bitnami/redis/bin/redis-server</li><li class="p_Normal">/opt/bitnami/erlang/lib/erlang/erts-12.3.1/bin/beam.smp</li><li class="p_Normal">/opt/bitnami/rabbitmq/sbin/rabbitmq-server</li><li class="p_Normal">minio</li><li class="p_Normal">/opt/bitnami/minio/bin/minio server</li></ul>
+<ol style="list-style-type:decimal" start="2">
+<li value="2" class="p_Normal"><span style="font-weight: bold;">BRIX application processes:</span></li></ol>
+<ul style="">
+<li class="p_Normal">/bin/sh</li><li class="p_Normal">/coredns</li><li class="p_Normal">/hostpath-provisioner</li><li class="p_Normal">/nginx-ingress-controller</li><li class="p_Normal">/opt/bitnami/erlang/lib/erlang/erts-12.3.1/bin/epmd</li><li class="p_Normal">/sbin/dinit</li><li class="p_Normal">/snap/microk8s/3410/bin/containerd</li><li class="p_Normal">/snap/microk8s/3410/bin/containerd-shim-runc-v1</li><li class="p_Normal">/snap/microk8s/3410/kubelite</li><li class="p_Normal">/srv/elma365ctl-server</li><li class="p_Normal">/usr/bin/dumb-init</li><li class="p_Normal">/usr/bin/kube-controllers</li><li class="p_Normal">/usr/libexec/git-core/git-daemon</li><li class="p_Normal">/usr/local/bin/node</li><li class="p_Normal">/usr/local/bin/runsvdir</li><li class="p_Normal">calico-node</li><li class="p_Normal">git daemon</li><li class="p_Normal">gpg-agent</li><li class="p_Normal">nginx: cache manager process</li><li class="p_Normal">nginx: master process</li><li class="p_Normal">nginx: worker process</li><li class="p_Normal">runsv</li><li class="p_Normal">sh</li><li class="p_Normal">BRIX internal processes.</li></ul>
+
+                        <div class="bottom-nav">
+                            
+                                <a id="prev-link" class="topic__navi_prev" href="data-protection.html">
+                                    <span class="bottom-nav__arrow bottom-nav__arrow--prev"></span> <span
+                                        class="bottom-nav__link">data-protection.html</span>
+                                </a>
+                            
+                            
+                                <a id="next-link" class="topic__navi_next" href="elma365-on-premises.html">
+                                    <span class="bottom-nav__link">elma365-on-premises.html</span> <span
+                                        class="bottom-nav__arrow bottom-nav__arrow--next"></span>
+                                </a>
+                            
+                        </div>
+                        <!-- добавляет на страницу строку блок Была ли статья полезной?  -->
+                          <div class="feedback" id="feedback"><div class="feedback-help"><span><b>Was this helpful?</b></span><form action="" method="POST" class="feedback-form" id="feedback-form"><div class="feedback__popup feedback__popup-response" id="feedback__popup_thx" style="display: none;">Thanks for your feedback!</div><div class="feedback__popup" id="feedback__popup_why" style="display: none;"><div class="feedback__popup-header">Please specify why:</div><input type="radio" name="category" id="bad_recommendation" value="bad_recommendation"><label for="bad_recommendation">Recommendations did not help me</label><input type="radio" name="category" id="difficult_text" value="difficult_text"><label for="difficult_text">Article is hard to understand</label><input type="radio" name="category" id="no_answer" value="no_answer"><label for="no_answer">Didn`t answer my question</label><input type="radio" name="category" id="bad_header" value="bad_header"><label for="bad_header">Content does not match the topic</label><input type="radio" name="category" id="other_reason" value="other_reason"><label for="other_reason">Other</label></div><div class="feedback__popup" id="feedback__popup-other" style="display: none;"><div class="feedback__popup-header">How we can improve it?</div><textarea class="feedback__textarea" name="other" id=""></textarea><input type="submit" class="feedback__other-btn" value="Submit"></div><div class="feedback-form__btn-group"><input type="radio" name="useful" id="feedback__useful_yes" value="true"><label for="feedback__useful_yes"><img src="like.svg" class="small-img" alt="like"><spanclass="feedback-form__btn-group_yes-btn">Yes</spanclass="feedback-form__btn-group_yes-btn"></label><input type="radio" name="useful" id="feedback__useful_no" value="false"><label for="feedback__useful_no"><img src="dislike.svg" class="small-img" alt="dislike"><spanclass="feedback-form__btn-group_no-btn">No</spanclass="feedback-form__btn-group_no-btn"></label></div><select name="category"><option disabled="">Please specify why</option><option value="bad_recommendation" selected="">Recommendations did not help me</option><option value="difficult_text">Article is hard to understand</option><option value="no_answer">Didn`t answer my question</option><option value="bad_header">Content does not match the topic</option><option value="other_reason">Other</option></select><input type="submit"></form></div><div class="found_typo"><p style="margin: 0px; margin-top: 16px !important;"><span><b>Found a typo?</b></span> Select it and press <i>Ctrl+Enter</i> to send us feedback</p></div></div>
+                           
+                    </section>
+                </div>
+                <aside class="article__sidebar" style="display:none">
+                    <input type="checkbox" />
+                    <div class="article__arrow"></div>
+                    <div class="table-of-contents elma365-right" id="toc2Content">
+                        <h3 class="h3-toc">In this topic</h3>
+                        <nav id="toc2"></nav>
+                    </div>
+                </aside>
+            </div>
+        </article>
+    </main>               
+    <footer class="footer">
+        <div class="footer-container">
+  <div class="footer-mobile">
+    
+    <ul class="footer-mobile__list"><li><a href="https://brix365.com/en/" target="_blank">BRIX</a></li><li><a href="https://tssdk.brix365.com/en/latest/" target="_blank">SDK</a></li><li><a href="https://api.brix365.com/en/" target="_blank">API</a></li></ul><ul class="footer-mobile__list"><li><a href="https://brix365.com/en/help/platform/get-trial.html">Platform</a></li><li><a href="https://brix365.com/en/help/ecm/ecm-functions.html">ECM</a></li><li><a href="https://brix365.com/en/help/service/service-functions.html">Service</a></li><li><a href="https://brix365.com/en/help/projects/projects-functions.html">Projects</a></li></ul>
+    
+    
+  </div>
+  <div class="footer-wrap">
+    
+      <div><span class="mobile-question-popup">Send feedback</span><form method="POST" action class="question__popup question-xs" id="question__popup"><div class="question-wrap"><span class="close"></span><span class="title">Ask a question</span><label for="help_question" style="display: none;"></label><textarea name="help_question" id="help_question"></textarea><input type="submit" value="Send"></div></form><div class="hidden fade-in question-success-xs">Sent</div></div>
+    
+    <div class="footer-flex-b">
+      <span class="footer-copy">&copy; 2025 BRIX</span>
+      <ul class="footer-list">
+        
+        <li class="footer-item">
+            <a href="#" class="arrow-top" style="display: block;"></a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+ 
+    </footer>
+    <iframe name="hmnavigation" style="display:none!important"></iframe>
+    <script src="./jquery-ui.js"></script>
+    <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
+    <script src="./jquery.tocify.min.js"></script>
+    <script src="./TypoReporter.min.js"></script>
+    <script src="./google-search.js"></script>
+    <script src="./main.js"></script>
+</body>
+
+</html>

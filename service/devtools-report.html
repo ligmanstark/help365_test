@@ -1,0 +1,262 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Widget debugging in developer tools report</title>
+    <meta name="generator" content="Help+Manual" />
+    <meta name="keywords" content="" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This report allows diagnosing the execution of scripts for custom widgets, forms, and pages in terms of their performance. You can pinpoint why a page might be hanging or an..." />
+    <meta name="picture" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Full documentation for BRIX365 platform. Low-code developer guide. User guide. Admin guide. Developer guide." />
+    <meta property="og:url" content="https://brix365.com/en/help" />
+    <meta property="og:image" content="" />                                                              
+    <link rel="icon" href="favicon.png" type="image/png" />
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./jquery-ui.min.css" />
+    <link rel="stylesheet" href="default.css" />
+    <link rel="stylesheet" href="./search-yandex.css" />
+    <link rel="stylesheet" href="./article.css" />
+    <link rel="stylesheet" href="./glossary.css" />
+    <link rel="stylesheet" href="./theme.css" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+
+<body>
+    
+    <script>!function(e,t,c,n,r,a,m){e.ym=e.ym||function(){(e.ym.a=e.ym.a||[]).push(arguments)},e.ym.l=1*new Date;for(var s=0;s<document.scripts.length;s++)if(document.scripts[s].src===n)return;a=t.createElement(c),m=t.getElementsByTagName(c)[0],a.async=1,a.src=n,m.parentNode.insertBefore(a,m)}(window,document,"script","https://mc.yandex.ru/metrika/tag.js"),ym(83179930,"init",{clickmap:!0,trackLinks:!0,accurateTrackBounce:!0,webvisor:!0})</script><noscript><div><img alt=""src=https://mc.yandex.ru/watch/83179930 style=position:absolute;left:-9999px></div></noscript> 
+    
+    ﻿<header class="header elma-365">
+  <div class="container">
+    <a class="header__logo" href="https://brix365.com/en/help">
+      <img src="./logo-en.svg" alt="header logo">
+    </a>
+ <!-- <div class="hero__search-form" id="search-panel">
+   <form class="search-form" onsubmit="ym(83180416,'reachGoal','poisk')">
+     <label class="search-form__label">
+       <span id="reset-search" class="search__icon"></span>
+       <input class="search-form__input" type="text">
+     </label>
+     <input class="search-form__submit" type="submit" value="Submit">
+   </form>
+  </div>       -->
+  
+     <div class="hero__search-form" id="search-panel"> <form class="search-form"> <label class="search-form__label"> <span id="reset-search" class="search__icon"></span> <input class="search-form__input" type="text"> </label> <input class="search-form__submit" type="submit" value="Submit"> </form> </div> 
+  <div class="hero__search">
+      <a href="#" id="search-icon" class="hero__search-icon">
+        <img src="search-icon-white.svg" alt="search string">
+      </a>
+      <a href="#" id="side-menu-icon" class="hero__side-icon">
+        <img src="side_menu.svg" alt="side menu">
+      </a>
+    </div>  
+  <div class="header__navi">
+        
+        <ul class="header__list"><li><span class="solution-select"><span class="solution-select__selected"></span><svg width="7" height="4" viewBox="0 0 7 4" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L3.5 3.5L6 1" stroke="white" stroke-linecap="round" stroke-linejoin="round"/></svg><ul class="solution-select__list"><li><a class="project-link" href="https://brix365.com/en/help/platform/get-trial.html">Platform</a></li><li><a class="project-link" href="https://brix365.com/en/help/ecm/ecm-functions.html">ECM</a></li><li><a class="project-link" href="https://brix365.com/en/help/crm/crm_overview.html">CRM</a></li><li><a class="project-link" href="https://brix365.com/en/help/service/service-functions.html">Service</a></li><li><a class="project-link" href="https://brix365.com/en/help/projects/projects-functions.html">Projects</a></li><li><a class="project-link" href="https://brix365.com/en/help/business_solutions/-elma365-store.html">Business Solutions</a></li></ul></span></li><li><a href="https://api.brix365.com/en/" target="_blank">API</a></li><li><a href="https://tssdk.brix365.com/" target="_blank">SDK</a></li></ul>
+        
+        
+   </div>
+  </div>
+
+</header>
+
+
+
+    
+    <main class="main container">
+
+        <aside class="sidebar" id="sidebar">
+        <div class="sidebar__header">
+                 <a class="header__logo" href="https://brix365.com/en/help">
+                    <img src="./logo-light-en.svg">
+                 </a>
+                    <span class="sidebar__close elma-365-close" id="close"></span>
+            </div>
+            <div class="sidebar__wrapper" id="side-menu">
+                
+            </div>
+        </aside>
+
+        <article class="article" id="article">
+            <div class="article-inner">           
+                <div class="content">
+                    <header class="article__header">
+                        
+                            <div class="topic__breadcrumbs">
+                                <p>System settings &gt; <a href="devtools.html">Developer tools</a> / Widget debugging in developer tools report</p>
+                            </div>
+                        
+                        <div class="topic__title"><h1 class="p_Heading1"><span class="f_Heading1">Widget debugging in developer tools report</span></h1>
+</div>
+                    
+</header>
+                    <section class="article__content">
+                        <div class="scroll-top-inner">
+                            <a href="#h1-article" class="scroll-top"></a>
+                        </div>
+                        <!-- Placeholder for topic body. -->
+                        <p class="p_Normal">This report allows diagnosing the execution of scripts for custom widgets, forms, and pages in terms of their performance. You can pinpoint why a page might be hanging or an app item page takes a long time to open.</p>
+<p class="p_Normal">Use the report both in debugging mode when creating interface elements and after their publication.</p>
+<p class="p_Normal">Users who have been granted access rights on the <span style="font-weight: bold;">Administration</span> &gt; <span style="font-weight: bold;">Developer Tools</span> page can work with this report. To do so, select users in the <span style="font-weight: bold;">Widget Debugging</span> section.</p>
+<p class="p_Normal">If you have access, you can go to the report on any system page opened in the browser. To do this, click the <img alt="devtools-report-1" width="30" height="26" style="margin:0;width:30px;height:26px;border:none" src="devtools-report-1.png"/> button in the bottom right corner of the page and select <span style="font-weight: bold;">Developer Tools</span>. For convenience, the button can be moved up.</p>
+<p class="p_Normal"><img alt="devtools2" width="1011" height="596" style="margin:0;width:1011px;height:596px;border:none" src="devtools2.png"/></p>
+<p class="p_Normal">Note that if you have access to the report, all actions and events on the current page are recorded from the moment you navigate to it or from when the page is refreshed. If there's no access, events are not logged.</p>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2"><a id="dev_tools" class="hmanchor"></a><span class="f_Heading2">Working with the Developer Tools report</span></h2>
+<p class="p_Normal">The system administrator can check the execution of scripts for custom widgets, forms, and pages in terms of their performance. To do this:</p>
+<ol style="list-style-type:decimal">
+<li value="1" class="p_Normal">Open the page, task, or app item page whose action you need to analyze.</li><li value="2" class="p_Normal">Reload the current page to clear the history of previous actions and events.</li><li value="3" class="p_Normal">Perform the action you want to diagnose. For instance, open an app item page if this action takes a long time.</li><li value="4" class="p_Normal">Click on  <img alt="devtools-report-1" width="29" height="25" style="margin:0;width:29px;height:25px;border:none" src="devtools-report-1.png"/> &nbsp;and select the <span style="font-weight: bold;">Developer Tools</span> option. The corresponding report will open.</li><li value="5" class="p_Normal">Analyze the report data.</li><li value="6" class="p_Normal">Repeat steps 2-5 to rule out factors like server or network load, user PC processor load, etc.</li><li value="7" class="p_Normal">If you repeatedly see a long load time and execution for specific events on a single interface element, this is a basis for code optimization. In the interface designer, go to the widget settings, analyze the scripts, and make changes to them.</li></ol>
+<p class="p_Normal">If you've received a text log file from a user to analyze a performance issue on their system page, upload it to the report. To do this, on the report page, click <span style="font-weight: bold;">Upload Logs</span> and then attach the received log file. The file's contents will be displayed in the report.</p>
+<p class="p_Normal">You can also download the log file from the report to your PC by clicking <span style="font-weight: bold;">Download Logs</span> on the report page.</p>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2"><span class="f_Heading2">Content of the Developer Tools report</span></h2>
+<p class="p_Normal">The report contains data about events that occurred from the time the page was refreshed in the browser or navigated to until the time you opened the report. Read about how to access the report and which preliminary actions to take in order to gather the necessary analysis in the <a href="devtools-report.html#dev_tools" class="topiclink">Working with the Developer Tools report</a> section.</p>
+<p class="p_Normal">The left column displays a list of custom widgets that were loaded while displaying the page, app form, or task page. System widgets are not displayed in the report. Hovering over an interface element's name will show its full system name.</p>
+<p class="p_Normal"><img alt="devtools-report-3" width="254" height="57" style="margin:0;width:254px;height:57px;border:none" src="devtools-report-3.png"/></p>
+<p class="p_Normal">The report also includes the following information:</p>
+<p class="p_Normal"><img alt="devtools_report1" width="1033" height="640" style="margin:0;width:1033px;height:640px;border:none" src="devtools_report1.png"/></p>
+<ol style="list-style-type:upper-roman">
+<li value="1" class="p_Normal"><span style="font-weight: bold;">Timeline</span>. Allows you to determine the duration of events in milliseconds or seconds. You can adjust the scale and view earlier or later events. The yellow highlight indicates the period from the moment an action was called to the moment its result was displayed. For example, if a user clicked on an app element and its card was displayed after one second, this period would be highlighted. In the report's left column, you'll see all the widgets that were loaded for display on the page.</li><li value="2" class="p_Normal"><a id="tracing" class="hmanchor"></a><span style="font-weight: bold;">Events</span>. These correspond to a specific interface element and are positioned to its right as segments along the timeline. The longer the segment, the longer the event lasted. Click on a segment to display detailed event information on the report's side panel. Pay attention to the <span style="font-weight: bold;">duration</span> metric, which represents the event's duration in milliseconds.<br />
+&nbsp;<br />
+If in <span style="font-weight: bold;">Administration &gt; Developer Tools</span>, tracing is enabled for the component to which the event relates, you can analyze the execution of server scripts included in it. This helps you evaluate the execution speed of individual functions to optimize the script and identify the causes of errors. Select a segment with a server script on the scale and click <span style="font-weight: bold;">Go to Trace</span> in the sidebar. Read more about tracing settings and trace information in the <a href="server-script-tracing.html" class="topiclink">Trace server scripts</a> article.</li><li value="3" class="p_Normal"><span style="font-weight: bold;">Groups of events</span>. Expanding the interface element row reveals three groups of events that occurred during this element's loading:</li></ol>
+<ul style="list-style-type:disc">
+<li class="p_Normal"><span style="font-weight: bold;">render</span>. User-side events on their browser page;</li><li class="p_Normal"><span style="font-weight: bold;">backend</span>. Sending requests to the server. This includes requests through TS SDK and server script calls;</li><li class="p_Normal"><span style="font-weight: bold;">system</span>. Events related to the display of system widgets. The user cannot influence the speed of these events. This information is for reference.</li></ul>
+<p class="p_Normal">&nbsp;</p>
+<h3 class="p_Heading3"><span class="f_Heading3">Render</span></h3>
+<p class="p_Normal">Examples of the <span style="font-weight: bold;">render</span> event group displayed in the report:</p>
+<ul style="list-style-type:disc">
+<li class="p_Normal">Execution of the <a href="widget_functions.html#oninit" class="topiclink">onInit</a> function. Most often, performance issues can be identified by analyzing data retrieval logic in this event.</li></ul>
+<p class="p_Normal"><img alt="devtools-report-5" width="688" height="390" style="margin:0;width:688px;height:390px;border:none" src="devtools-report-5.png"/></p>
+<ul style="list-style-type:disc">
+<li class="p_Normal">Execution of the <a href="widget_functions.html#canrender" class="topiclink">canRender</a> function. Server calls are rarely used here, but they might occur.</li></ul>
+<p class="p_Normal"><img alt="devtools-report-6" width="687" height="357" style="margin:0;width:687px;height:357px;border:none" src="devtools-report-6.png"/></p>
+<ul style="list-style-type:disc">
+<li class="p_Normal">Rendering the <span style="font-weight: bold;">Code</span> widget named <span style="font-weight: bold;">getData</span>.</li></ul>
+<p class="p_Normal"><img alt="devtools-report-7" width="689" height="315" style="margin:0;width:689px;height:315px;border:none" src="devtools-report-7.png"/></p>
+<p class="p_Normal">Events that don't have a duration and are denoted in the report by a point, like updating a context variable during script execution:</p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">Context.data.phones.push({</span><span class="f_CodeExample" style="color: #ffffff;">&nbsp;</span><span class="f_CodeExample">tel:</span><span class="f_CodeExample" style="color: #ffffff;">&nbsp;</span><span class="f_CodeExample">'+58067700',</span><span class="f_CodeExample" style="color: #ffffff;">&nbsp;</span><span class="f_CodeExample">type:</span><span class="f_CodeExample" style="color: #ffffff;">&nbsp;</span><span class="f_CodeExample">PhoneType.Main</span><span class="f_CodeExample" style="color: #ffffff;">&nbsp;</span><span class="f_CodeExample">});</span></p>
+<p class="p_Normal"><img alt="devtools-report-8" width="764" height="389" style="margin:0;width:764px;height:389px;border:none" src="devtools-report-8.png"/></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Backend</span></h3>
+<p class="p_Normal">For the <span style="font-weight: bold;">backend</span> event group, the report's side panel displays both the <span style="font-weight: bold;">duration</span> metric and the URL to which the request was sent, as well as the request's methods and keys. Examples of events:</p>
+<ul style="list-style-type:disc">
+<li class="p_Normal">Server request via TS SDK.</li></ul>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample" style="font-weight: bold;">const&nbsp;</span><span class="f_CodeExample">roles&nbsp;=&nbsp;await&nbsp;System.userGroups.search()</span><br />
+<span class="f_CodeExample" style="color: #ffffff;">&nbsp;&nbsp;</span><span class="f_CodeExample">.where((f,&nbsp;g)&nbsp;=&gt;&nbsp;g.and(</span><br />
+<span class="f_CodeExample" style="color: #ffffff;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample">f.__deletedAt.eq(</span><span class="f_CodeExample" style="font-weight: bold;">null</span><span class="f_CodeExample">),</span><br />
+<span class="f_CodeExample" style="color: #ffffff;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample">f.isRole.eq(</span><span class="f_CodeExample" style="font-weight: bold;">true</span><span class="f_CodeExample">)</span><br />
+<span class="f_CodeExample" style="color: #ffffff;">&nbsp;&nbsp;</span><span class="f_CodeExample">))</span><br />
+<span class="f_CodeExample" style="color: #ffffff;">&nbsp;&nbsp;</span><span class="f_CodeExample">.size(1000)</span><br />
+<span class="f_CodeExample" style="color: #ffffff;">&nbsp;&nbsp;</span><span class="f_CodeExample">.all();</span></p>
+<p class="p_Normal"><img alt="devtools-report-9" width="803" height="371" style="margin:0;width:803px;height:371px;border:none" src="devtools-report-9.png"/></p>
+<ul style="list-style-type:disc">
+<li class="p_Normal">executing server script <code><b>await Server.rpc.LoadSkills();</b></code></li></ul>
+<p class="p_Normal"><img alt="devtools-report-10" width="702" height="290" style="margin:0;width:702px;height:290px;border:none" src="devtools-report-10.png"/></p>
+<h3 class="p_Heading3"><span class="f_Heading3">System</span></h3>
+<p style="line-height: 1.20; margin: 0 0 16px 0;"><span style="font-size: 15px; color: #394149;">System widgets, such as </span><span style="font-size: 15px; font-weight: bold; color: #394149;">Button</span><span style="font-size: 15px; color: #394149;">, </span><span style="font-size: 15px; font-weight: bold; color: #394149;">Column</span><span style="font-size: 15px; color: #394149;">, </span><span style="font-size: 15px; font-weight: bold; color: #394149;">Modal window</span><span style="font-size: 15px; color: #394149;"> are displayed in the following manner:</span></p>
+<p style="line-height: 1.20; margin: 0 0 16px 0;"><img alt="devtools-report-11" width="685" height="326" style="margin:0;width:685px;height:326px;border:none" src="devtools-report-11.png"/></p>
+<h2 class="p_Heading2"><span class="f_Heading2">Example of working with the Developer Tools report</span></h2>
+<p style="line-height: 1.20; margin: 0 0 16px 0;">Let's analyze the events that will occur if we open the <span style="font-weight: bold;">Leave Request</span> app page:</p>
+<ol style="list-style-type:upper-roman">
+<li value="1" style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 16px;">Navigate to the app page and refresh it to reset the history of previous actions. Then, open the app item page.</li></ol>
+<p style="line-height: 1.20; margin: 0 0 16px 0;"><img alt="leave1" width="884" height="466" style="margin:0;width:884px;height:466px;border:none" src="leave1.png"/></p>
+<ol style="list-style-type:upper-roman">
+<li value="2" style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 16px;">Click on <img alt="devtools-report-1" width="25" height="22" style="margin:0;width:25px;height:22px;border:none" src="devtools-report-1.png"/> in the bottom right corner of the page to open the <span style="font-weight: bold;">Developer Tools</span> report. The button to access the report is available if you have permissions under <span style="font-weight: bold;">Administration</span> &gt; <span style="font-weight: bold;">Developer Tools</span> in the <span style="font-weight: bold;">Widgets Debugging</span> section.<br />
+<img alt="devtools-report-13" width="857" height="369" style="margin:0;width:857px;height:369px;border:none" src="devtools-report-13.png"/></li><li value="3" style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 16px;">Expand the line with the <span style="font-weight: bold;">days_count</span> widget and see what events took place during its loading.</li><li value="4" style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 16px;">In the <span style="font-weight: bold;">backend</span> group, one server request was executed. Click on this event to display detailed information on the right panel:</li></ol>
+<ul style="list-style-type:disc">
+<li style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 16px;">The <span style="font-weight: bold;">duration</span> field shows a value of 163.7 ms. This is quite fast, considering there are no complex widgets on the app form.</li><li style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 16px;">The <span style="font-weight: bold;">args.stackTree</span> field indicates that the corresponding method is called from the <code><b>calcWorkHours()</b></code> method, which was invoked during widget initialization, in the <code><b>onInit()</b></code> function.</li></ul>
+<p style="line-height: 1.20; margin: 0 0 16px 0;">The server request is the most prolonged event in the report. Let's try optimizing the method used for this request.</p>
+<p style="line-height: 1.20; margin: 0 0 16px 0;"><img alt="devtools-report-14" width="856" height="437" style="margin:0;width:856px;height:437px;border:none" src="devtools-report-14.png"/></p>
+<ol style="list-style-type:upper-roman" start="5">
+<li value="5" style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 16px;">To account for measurement errors, open the app page several times and compare the results. If the operation consistently takes a long time, proceed to improve the script.</li><li value="6" style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 16px;"> If the <span style="font-weight: bold;">days_coun</span>t widget used the <code>await</code> key parameter, the page will only be displayed after calculating the total hours. To optimize loading, go to the widget's source code and remove the <code>await</code> parameter from the <code><b>calcWorkHours()</b></code> method:</li></ol>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">​​async&nbsp;function&nbsp;onInit():&nbsp;Promise&lt;</span><span class="f_CodeExample" style="font-weight: bold;">void</span><span class="f_CodeExample">&gt;&nbsp;{</span><br />
+<span class="f_CodeExample">​​</span><span class="f_CodeExample" style="color: #ffffff;">&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample">...</span><br />
+<span class="f_CodeExample">​​</span><span class="f_CodeExample" style="color: #ffffff;">&nbsp;&nbsp;&nbsp;</span><span class="f_CodeExample">calcWorkHours();</span><br />
+<span class="f_CodeExample">​​}</span></p>
+<ol style="list-style-type:upper-roman" start="5">
+<li value="7" style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 16px;">Now, the form will load before the method finishes, but without data. As soon as the method completes and updates the context, the changes will automatically be reflected in the widget.</li><li value="8" style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 16px;">Publish the widget and redo steps 1-2.</li></ol>
+<p style="line-height: 1.20; margin: 0 0 16px 0;"><img alt="devtools-report-15" width="832" height="467" style="margin:0;width:832px;height:467px;border:none" src="devtools-report-15.png"/></p>
+<p style="line-height: 1.20; margin: 0 0 16px 0;">The server request event now falls outside the form loading period. This means the method executed without waiting, and the form began loading before the <code><b>calcWorkHours()</b></code> method finished executing.</p>
+<p style="line-height: 1.20; margin: 0 0 16px 0;">The report also displays the <span style="font-weight: bold;">worklog_report_button</span>, <span style="font-weight: bold;">online_timer</span>, and <span style="font-weight: bold;">button</span> widgets. These are <a href="toolbar-extension-zone.html" class="topiclink">Toolbar Extension Zone</a> widgets. They load asynchronously and do not affect the page display time.</p>
+<h2 class="p_Heading2"><span class="f_Heading2">Examples of data for optimization</span></h2>
+<p style="line-height: 1.20; margin: 0 0 16px 0;">Here's a brief list of other ways data is displayed in the <span style="font-weight: bold;">Developer Tools</span> report, where interface element loading optimization might be possible:</p>
+<ul style="list-style-type:disc">
+<li style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 16px;">Long duration of the <span style="font-weight: bold;">render:onlnit</span> event.</li><li style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 16px;">Multiple requests in the <span style="font-weight: bold;">backend</span> group, retrieving a significant amount of data.</li><li style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 16px;">Data filtering on the user's side.</li><li style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 16px;">Fetching data in a loop.</li><li style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 16px;">Duplicate requests.</li></ul>
+<p style="line-height: 1.20; margin: 0 0 16px 0;"><img alt="devtools-report-16" width="1001" height="617" style="margin:0;width:1001px;height:617px;border:none" src="devtools-report-16.png"/></p>
+
+                        <div class="bottom-nav">
+                            
+                                <a id="prev-link" class="topic__navi_prev" href="devtools.html">
+                                    <span class="bottom-nav__arrow bottom-nav__arrow--prev"></span> <span
+                                        class="bottom-nav__link">devtools.html</span>
+                                </a>
+                            
+                            
+                                <a id="next-link" class="topic__navi_next" href="download-logs.html">
+                                    <span class="bottom-nav__link">download-logs.html</span> <span
+                                        class="bottom-nav__arrow bottom-nav__arrow--next"></span>
+                                </a>
+                            
+                        </div>
+                        <!-- добавляет на страницу строку блок Была ли статья полезной?  -->
+                          <div class="feedback" id="feedback"><div class="feedback-help"><span><b>Was this helpful?</b></span><form action="" method="POST" class="feedback-form" id="feedback-form"><div class="feedback__popup feedback__popup-response" id="feedback__popup_thx" style="display: none;">Thanks for your feedback!</div><div class="feedback__popup" id="feedback__popup_why" style="display: none;"><div class="feedback__popup-header">Please specify why:</div><input type="radio" name="category" id="bad_recommendation" value="bad_recommendation"><label for="bad_recommendation">Recommendations did not help me</label><input type="radio" name="category" id="difficult_text" value="difficult_text"><label for="difficult_text">Article is hard to understand</label><input type="radio" name="category" id="no_answer" value="no_answer"><label for="no_answer">Didn`t answer my question</label><input type="radio" name="category" id="bad_header" value="bad_header"><label for="bad_header">Content does not match the topic</label><input type="radio" name="category" id="other_reason" value="other_reason"><label for="other_reason">Other</label></div><div class="feedback__popup" id="feedback__popup-other" style="display: none;"><div class="feedback__popup-header">How we can improve it?</div><textarea class="feedback__textarea" name="other" id=""></textarea><input type="submit" class="feedback__other-btn" value="Submit"></div><div class="feedback-form__btn-group"><input type="radio" name="useful" id="feedback__useful_yes" value="true"><label for="feedback__useful_yes"><img src="like.svg" class="small-img" alt="like"><spanclass="feedback-form__btn-group_yes-btn">Yes</spanclass="feedback-form__btn-group_yes-btn"></label><input type="radio" name="useful" id="feedback__useful_no" value="false"><label for="feedback__useful_no"><img src="dislike.svg" class="small-img" alt="dislike"><spanclass="feedback-form__btn-group_no-btn">No</spanclass="feedback-form__btn-group_no-btn"></label></div><select name="category"><option disabled="">Please specify why</option><option value="bad_recommendation" selected="">Recommendations did not help me</option><option value="difficult_text">Article is hard to understand</option><option value="no_answer">Didn`t answer my question</option><option value="bad_header">Content does not match the topic</option><option value="other_reason">Other</option></select><input type="submit"></form></div><div class="found_typo"><p style="margin: 0px; margin-top: 16px !important;"><span><b>Found a typo?</b></span> Select it and press <i>Ctrl+Enter</i> to send us feedback</p></div></div>
+                           
+                    </section>
+                </div>
+                <aside class="article__sidebar" style="display:none">
+                    <input type="checkbox" />
+                    <div class="article__arrow"></div>
+                    <div class="table-of-contents elma365-right" id="toc2Content">
+                        <h3 class="h3-toc">In this topic</h3>
+                        <nav id="toc2"></nav>
+                    </div>
+                </aside>
+            </div>
+        </article>
+    </main>               
+    <footer class="footer">
+        <div class="footer-container">
+  <div class="footer-mobile">
+    
+    <ul class="footer-mobile__list"><li><a href="https://brix365.com/en/" target="_blank">BRIX</a></li><li><a href="https://tssdk.brix365.com/en/latest/" target="_blank">SDK</a></li><li><a href="https://api.brix365.com/en/" target="_blank">API</a></li></ul><ul class="footer-mobile__list"><li><a href="https://brix365.com/en/help/platform/get-trial.html">Platform</a></li><li><a href="https://brix365.com/en/help/ecm/ecm-functions.html">ECM</a></li><li><a href="https://brix365.com/en/help/service/service-functions.html">Service</a></li><li><a href="https://brix365.com/en/help/projects/projects-functions.html">Projects</a></li></ul>
+    
+    
+  </div>
+  <div class="footer-wrap">
+    
+      <div><span class="mobile-question-popup">Send feedback</span><form method="POST" action class="question__popup question-xs" id="question__popup"><div class="question-wrap"><span class="close"></span><span class="title">Ask a question</span><label for="help_question" style="display: none;"></label><textarea name="help_question" id="help_question"></textarea><input type="submit" value="Send"></div></form><div class="hidden fade-in question-success-xs">Sent</div></div>
+    
+    <div class="footer-flex-b">
+      <span class="footer-copy">&copy; 2025 BRIX</span>
+      <ul class="footer-list">
+        
+        <li class="footer-item">
+            <a href="#" class="arrow-top" style="display: block;"></a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+ 
+    </footer>
+    <iframe name="hmnavigation" style="display:none!important"></iframe>
+    <script src="./jquery-ui.js"></script>
+    <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
+    <script src="./jquery.tocify.min.js"></script>
+    <script src="./TypoReporter.min.js"></script>
+    <script src="./google-search.js"></script>
+    <script src="./main.js"></script>
+</body>
+
+</html>
