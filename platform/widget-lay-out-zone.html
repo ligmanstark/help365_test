@@ -1,20 +1,19 @@
 ﻿<!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 
 <head>
-    <title>Область для вставки виджета</title>
+    <title>Widget container</title>
     <meta name="generator" content="Help+Manual" />
     <meta name="keywords" content="" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="При разработке собственного решения или модуля вы можете разместить Область для вставки виджета на формах приложений, задач или страниц. Она представляет собой контейнер для..." />
+    <meta name="description" content="Use the Widget container on forms of apps, tasks, and pages when configuring a custom solution or module. The container serves for laying out other objects and itself is not..." />
     <meta name="picture" content="" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Cправка по Low-code платформе ELMA365" />
-    <meta property="og:url" content="https://elma365.com/ru/help" />
-    <meta property="og:image" content="" />
-    <meta property="og:site_name" content="ELMA365" />                                                              
+    <meta property="og:title" content="Full documentation for BRIX365 platform. Low-code developer guide. User guide. Admin guide. Developer guide." />
+    <meta property="og:url" content="https://brix365.com/en/help" />
+    <meta property="og:image" content="" />                                                              
     <link rel="icon" href="favicon.png" type="image/png" />
     
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -24,7 +23,6 @@
     <link rel="stylesheet" href="./article.css" />
     <link rel="stylesheet" href="./glossary.css" />
     <link rel="stylesheet" href="./theme.css" />
-    
    <script type="text/javascript" src="jquery.js"></script>
    <script type="text/javascript" src="helpman_settings.js"></script>
    <script type="text/javascript" src="helpman_topicinit.js"></script>
@@ -36,16 +34,16 @@
 </head>
 
 <body>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-M6ETBEC1R9"></script><script>window.dataLayer=window.dataLayer || []; function gtag(){dataLayer.push(arguments);}gtag('js', new Date()); gtag('config', 'G-M6ETBEC1R9');</script>
+    
     <script>!function(e,t,c,n,r,a,m){e.ym=e.ym||function(){(e.ym.a=e.ym.a||[]).push(arguments)},e.ym.l=1*new Date;for(var s=0;s<document.scripts.length;s++)if(document.scripts[s].src===n)return;a=t.createElement(c),m=t.getElementsByTagName(c)[0],a.async=1,a.src=n,m.parentNode.insertBefore(a,m)}(window,document,"script","https://mc.yandex.ru/metrika/tag.js"),ym(83179930,"init",{clickmap:!0,trackLinks:!0,accurateTrackBounce:!0,webvisor:!0})</script><noscript><div><img alt=""src=https://mc.yandex.ru/watch/83179930 style=position:absolute;left:-9999px></div></noscript> 
     
     ﻿<header class="header elma-365">
   <div class="container">
-    <a class="header__logo" href="https://elma365.com/ru/help">
-      <img src="./logo.svg" alt="header logo">
+    <a class="header__logo" href="https://brix365.com/en/help">
+      <img src="./logo-en.svg" alt="header logo">
     </a>
  <!-- <div class="hero__search-form" id="search-panel">
-   <form class="search-form" onsubmit="ym(83179930,'reachGoal','poisk')">
+   <form class="search-form" onsubmit="ym(83180416,'reachGoal','poisk')">
      <label class="search-form__label">
        <span id="reset-search" class="search__icon"></span>
        <input class="search-form__input" type="text">
@@ -65,7 +63,7 @@
     </div>  
   <div class="header__navi">
         
-        <ul class="header__list"><li><span class="solution-select"><span class="solution-select__selected"></span><svg width="7" height="4" viewBox="0 0 7 4" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L3.5 3.5L6 1" stroke="white" stroke-linecap="round" stroke-linejoin="round"/></svg><ul class="solution-select__list"><li><a class="project-link" href="https://elma365.com/ru/help/platform/get-trial.html">Платформа</a></li><li><a class="project-link" href="https://elma365.com/ru/help/ecm/ecm-functions.html">ECM</a></li><li><a class="project-link" href="https://elma365.com/ru/help/crm/crm_overview.html">CRM</a></li><li><a class="project-link" href="https://elma365.com/ru/help/service/service-functions.html">Service</a></li><li><a class="project-link" href="https://elma365.com/ru/help/projects/projects-functions.html">Проекты</a></li><li><a class="project-link" href="https://elma365.com/ru/help/business_solutions/-elma365-store.html">Бизнес-решения</a></li></ul></span></li><li><a href="https://api.elma365.com/ru/"target="_blank">API</a></li><li><a href="https://tssdk.elma365.com/"target="_blank">SDK</a></li><li><a href="https://community.elma365.com/" target="_blank">Community</a></li><li><a href="https://elma-academy.com/ru/" target="_blank">Академия</a></li><li><a href="https://elma365.com/ru/" target="_blank">Сайт ELMA365</a></li></ul> 
+        <ul class="header__list"><li><span class="solution-select"><span class="solution-select__selected"></span><svg width="7" height="4" viewBox="0 0 7 4" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L3.5 3.5L6 1" stroke="white" stroke-linecap="round" stroke-linejoin="round"/></svg><ul class="solution-select__list"><li><a class="project-link" href="https://brix365.com/en/help/platform/get-trial.html">Platform</a></li><li><a class="project-link" href="https://brix365.com/en/help/ecm/ecm-functions.html">ECM</a></li><li><a class="project-link" href="https://brix365.com/en/help/crm/crm_overview.html">CRM</a></li><li><a class="project-link" href="https://brix365.com/en/help/service/service-functions.html">Service</a></li><li><a class="project-link" href="https://brix365.com/en/help/projects/projects-functions.html">Projects</a></li><li><a class="project-link" href="https://brix365.com/en/help/business_solutions/-elma365-store.html">Business Solutions</a></li></ul></span></li><li><a href="https://api.brix365.com/en/" target="_blank">API</a></li><li><a href="https://tssdk.brix365.com/" target="_blank">SDK</a></li></ul>
         
         
    </div>
@@ -80,8 +78,8 @@
 
         <aside class="sidebar" id="sidebar">
         <div class="sidebar__header">
-                 <a class="header__logo" href="https://elma365.com/ru/help">
-                    <img src="./logo-light.svg">
+                 <a class="header__logo" href="https://brix365.com/en/help">
+                    <img src="./logo-light-en.svg">
                  </a>
                     <span class="sidebar__close elma-365-close" id="close"></span>
             </div>
@@ -94,15 +92,12 @@
             <div class="article-inner">           
                 <div class="content">
                     <header class="article__header">
-                    <div class="article__bread" style="display:flex; gap:10px;">
-                        <span id="subcategory" class="search-res__item-category search-res__item-category_subcategory subcategory article__badge"></span>
                         
-                            <div class="topic__breadcrumbs">     
-                                <p>Low-code дизайнер &gt; <a href="interface_settings.html">Создание интерфейсов</a> &gt; Типы виджетов &gt; Размещение элементов / Область для вставки виджета</p>
+                            <div class="topic__breadcrumbs">
+                                <p>Low-code designer &gt; <a href="interface_settings.html">Set up interfaces</a> &gt; Widget types &gt; <a href="360028901811.html">Element layout</a> / Widget container</p>
                             </div>
                         
-                    </div>
-                        <div class="topic__title"><h1 class="p_Heading1"><span class="f_Heading1">Область для вставки виджета</span></h1>
+                        <div class="topic__title"><h1 class="p_Heading1"><span class="f_Heading1">Widget container</span></h1>
 </div>
                     
 </header>
@@ -111,29 +106,29 @@
                             <a href="#h1-article" class="scroll-top"></a>
                         </div>
                         <!-- Placeholder for topic body. -->
-                        <p class="p_Normal">При разработке собственного решения или модуля вы можете разместить <span style="font-weight: bold;">Область для вставки виджета</span> на формах приложений, задач или страниц. Она представляет собой контейнер для других объектов и не отображается в пользовательском интерфейсе. В область можно добавить стандартные и пользовательские виджеты, а также свойства из контекста приложения. </p>
-<p class="p_Normal">При установке вашего решения или модуля в другую компанию, разработчики могут расширить его функциональные возможности с помощью области для вставки. Например, поместить в неё дополнительные поля для ввода данных, различные <a href="button_widget.html" class="topiclink">кнопки</a> для обработки или поиска информации, <a href="tabs.html" class="topiclink">вкладки</a> с дополнительной информацией и т. д. </p>
-<p class="p_Normal"><span style="font-weight: bold;">Область для вставки виджета</span> помогает избежать проблем с обновлением загруженных компонентов. Виджеты и поля, добавленные в область для вставки, при обновлении решения или модуля сохранятся на форме приложения. Если область для вставки не использовалась, данные будут утеряны. </p>
-<p class="p_Normal">Этот виджет удобно использовать для создания распространяемых компонентов через файлы формата <span style="font-weight: bold;">.e365</span> или <a href="https://store.elma365.ru/" target="_blank" class="weblink">ELMA365 Store</a>. &nbsp; </p>
-<h2 class="p_Heading2"><span class="f_Heading2">Добавление виджета </span></h2>
-<p class="p_Normal">Чтобы разместить виджет на форме или странице, перетащите его с правой панели <a href="interface_designer.html" class="topiclink">дизайнера интерфейсов</a> на поле для моделирования или нажмите на нём кнопку <span style="font-weight: bold;">+Виджет</span>. Подробнее читайте в статьях <a href="360029250931.html" class="topiclink">«Шаблон формы»</a> и <a href="360027211631.html" class="topiclink">«Добавление виджета на страницу»</a>. </p>
-<p class="p_Normal">В открывшемся окне выполните настройку.</p>
-<p class="p_Normal"><img alt="widget-lay-out-zone-1" width="482" height="216" style="margin:0;width:482px;height:216px;border:none" src="widget-lay-out-zone-1.png"/></p>
-<p class="p_Normal">В поле <span style="font-weight: bold;">Идентификатор</span> задайте произвольное название для виджета <span style="font-weight: bold;">Область для вставки</span>. Идентификаторы используются в системе для определения уникальности области. &nbsp;</p>
-<p class="p_Normal">Если впоследствии вы измените идентификатор, добавленные в область объекты перестанут отображаться на формах приложений и страницах. Однако эти объекты останутся доступными в дизайнере интерфейсов и будут выделены красным цветом. Чтобы продолжить работу с такими объектами, необходимо перейти в дизайнер интерфейсов и заново поместить их в область. </p>
-<p class="p_Normal">Поскольку <span style="font-weight: bold;">Область для вставки виджета</span> не отображается на страницах и в карточках элементов приложений, указывать настройки на вкладках <span style="font-weight: bold;">Событие</span> и <span style="font-weight: bold;">Системные</span> не нужно. </p>
-<p class="p_Normal">Для завершения настройки виджета нажмите на кнопку <span style="font-weight: bold;">Сохранить</span>, а затем <span style="font-weight: bold;">Опубликовать</span> на верхней панели дизайнера интерфейсов. </p>
-<h2 class="p_Heading2"><span class="f_Heading2">Удаление виджета </span></h2>
-<p class="p_Normal">Чтобы удалить область для вставки с формы или страницы, выделите её и нажмите на значок корзины. Удалённый виджет можно добавить заново, как описано выше. </p>
-<p class="p_Normal">При удалении области для вставки добавленные в неё объекты перестанут отображаться на формах приложений и страницах, но будут доступны в дизайнере интерфейсов и выделены красным цветом. Чтобы продолжить работу с такими объектами, их необходимо перенести в другую область для вставки. </p>
-<h2 class="p_Heading2"><span class="f_Heading2">Пример использования </span></h2>
-<p class="p_Normal">Предположим, пользователь установил решение, в составе которого есть приложение <span style="font-weight: bold;">Контрагенты</span>. На форме просмотра контрагента расположены две области для вставки виджета.</p>
-<p class="p_Normal"><img alt="widget-lay-out-zone-2" width="644" height="294" style="margin:0;width:644px;height:294px;border:none" src="widget-lay-out-zone-2.png"/></p>
-<p class="p_Normal"><a href="360006871932.html#administrators" class="topiclink">Администратор</a> системы может добавить в обозначенные области любые виджеты из правой панели дизайнера интерфейса, например, кнопки <span style="font-weight: bold;">Внести в чёрный список</span> и <span style="font-weight: bold;">Проверить контрагента</span>. </p>
-<p class="p_Normal"><img alt="widget-lay-out-zone-3" width="684" height="284" style="margin:0;width:684px;height:284px;border:none" src="widget-lay-out-zone-3.png"/></p>
-<p class="p_Normal">После настройки и сохранения формы добавленные кнопки будут отображаться в карточке элемента приложения. </p>
-<p class="p_Normal">Если разработчик решения внесёт изменения в другие компоненты формы, после обновления решения у пользователей содержимое области для вставки сохранится в прежнем виде. Если же разработчик решения изменит идентификатор области для вставки или удалит её, добавленные в область объекты перестанут отображаться на формах приложений и страницах. Однако эти объекты останутся доступными в дизайнере интерфейсов и будут выделены красным цветом. Чтобы возобновить работу с такими объектами, необходимо перенести их в другую область для вставки.</p>
-<p class="p_Normal"><img alt="widget-lay-out-zone-4" width="655" height="322" style="margin:0;width:655px;height:322px;border:none" src="widget-lay-out-zone-4.png"/></p>
+                        <p style="line-height: 1.20;">Use the <span style="font-weight: bold;">Widget container</span> on forms of apps, tasks, and pages when configuring a custom solution or module. The container serves for laying out other objects and itself is not displayed in the user interface. The widget container can hold standard and custom widgets as well as app context properties.</p>
+<p style="line-height: 1.20; margin: 16px 0 0 0;">When a custom solution or module is installed to another company, the widget container can be used to expand the functionality. For example, inside the container, you can place additional data entry fields, different <a href="button_widget.html" class="topiclink">buttons</a> for search and processing data, <a href="tabs.html" class="topiclink">tabs</a> for better layout of information.</p>
+<p style="line-height: 1.20; margin: 16px 0 0 0;">Widget containers help avoid issues with update of downloaded components. The widgets and fields placed in a widget container are saved on the app form when the solution or module is updated. If the widget container has not been in use, the data will be lost.</p>
+<p style="line-height: 1.20; margin: 16px 0 0 0;">The widget container is useful for creating components distributed as <span style="font-weight: bold;">.e365</span> files or via <span style="font-weight: bold;">BRIX Store</span>.</p>
+<h2 class="p_Heading2"><span class="f_Heading2">Add widget</span></h2>
+<p style="line-height: 1.20; background: #ffffff; margin: 7px 0 16px 0;"><span style="color: #394149;">To configure the widget, drag it to the canvas from the right panel of the <a href="interface_designer.html" class="topiclink">interface designer</a> or click </span><span style="font-weight: bold; color: #394149;">+Widget</span><span style="color: #394149;">. </span><span style="font-size: 15px; color: #394149; background-color: #ffffff;">To learn more, see&nbsp;</span><span style="font-size: 15px; color: #394149;"><a href="360029250931.html" class="topiclink">Form templates</a> and <a href="360027211631.html" class="topiclink">Add a widget to a page</a></span><span style="font-size: 15px; color: #394149; background-color: #ffffff;">.</span></p>
+<p style="line-height: 1.20; background: #ffffff; margin: 7px 0 16px 0;"><span style="font-size: 15px; color: #394149; background-color: #ffffff;">Fill out the settings in the pop-up.</span></p>
+<p style="line-height: 1.20; margin: 16px 0 16px 0;"><img alt="container_wdgt" width="547" height="318" style="margin:0;width:547px;height:318px;border:none" src="container_wdgt.png"/></p>
+<p style="line-height: 1.20;"><span style="font-size: 15px; color: #394149;">In the </span><span style="font-size: 15px; font-weight: bold; color: #394149;">ID</span><span style="font-size: 15px; color: #394149;"> field, enter a name for the widget container. The IDs are used in the system for identification of unique containers. &nbsp;</span></p>
+<p style="line-height: 1.20; margin: 16px 0 0 0;"><span style="font-size: 15px; color: #394149;">If later on you change the ID, all the objects stored in the container will be removed from app forms and pages. However, they will still remain available on the canvas in the interface designer, and will be highlighted red. To continue working with such objects, go to the interface designer and place them into the widget container once again.</span></p>
+<p style="line-height: 1.20; margin: 16px 0 0 0;"><span style="font-size: 15px; color: #394149;">Since the widget container is not displayed on pages and app forms, you do not need to configure the settings on the </span><span style="font-size: 15px; font-weight: bold; color: #394149;">Events</span><span style="font-size: 15px; color: #394149;"> and </span><span style="font-size: 15px; font-weight: bold; color: #394149;">System</span><span style="font-size: 15px; color: #394149;"> tabs.</span></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 13px; font-family: Inter; color: #394149;">To apply the changes, click </span><span style="font-size: 13px; font-family: Inter; font-weight: bold; color: #394149;">Save</span><span style="font-size: 13px; font-family: Inter; color: #394149;"> and </span><span style="font-size: 13px; font-family: Inter; font-weight: bold; color: #394149;">Publish</span><span style="font-size: 13px; font-family: Inter; color: #394149;"> in the designer's toolbar.</span></p>
+<h2 class="p_Heading2"><span class="f_Heading2">Delete widget</span></h2>
+<p style="line-height: 1.20;"><span style="font-size: 15px; color: #394149;">To delete a widget container from a page or form, select it on the canvas and click on the recycle bin icon. A deleted widget can be placed back on the canvas as described above.</span></p>
+<p style="line-height: 1.20; margin: 16px 0 0 0;"><span style="font-size: 15px; color: #394149;">After a container is deleted, the objects that it stored will no longer be shown in the interface, but they will still be available in the interface designer and will be highlighted red. To make them available to the users again, place them inside a different widget container.</span></p>
+<p style="line-height: 1.20; margin: 16px 0 0 0;"><span style="font-size: 13px; color: #000000;">&nbsp;</span></p>
+<h2 class="p_Heading2"><span class="f_Heading2">Use case</span></h2>
+<p style="line-height: 1.20; margin: 0 0 16px 0;"><span style="font-size: 15px; color: #394149;">Let's say a user has installed a solution that contains the </span><span style="font-size: 15px; font-weight: bold; color: #394149;">Contractors</span><span style="font-size: 15px; color: #394149;"> app. On the view form of the app there are two widget containers.</span></p>
+<p style="line-height: 1.20; margin: 0 0 16px 0;"><img alt="use_case1" width="990" height="469" style="margin:0;width:990px;height:469px;border:none" src="use_case1.png"/></p>
+<p class="p_Normal"><span style="font-size: 15px; color: #394149;">The </span><span style="font-size: 15px;"><a href="360006871932.html#administrator" class="topiclink">Administrator</a></span><span style="font-size: 15px; color: #394149;"> can add any widgets from the right panel of the designer to these containers, for example, the </span><span style="font-size: 15px; font-weight: bold; color: #394149;">Blacklist</span><span style="font-size: 15px; color: #394149;"> and </span><span style="font-size: 15px; font-weight: bold; color: #394149;">Verify contractor</span><span style="font-size: 15px; color: #394149;"> buttons</span><span style="font-size: 15px; color: #394149;">.</span></p>
+<p class="p_Normal"><img alt="use_case2" width="997" height="435" style="margin:0;width:997px;height:435px;border:none" src="use_case2.png"/></p>
+<p style="line-height: 1.20;"><span style="font-size: 15px; color: #394149;">After the form is saved, these added buttons will be displayed on the app form.</span></p>
+<p style="line-height: 1.20; margin: 16px 0 16px 0;"><span style="font-size: 15px; color: #394149;">If the developer of the solution decides to introduce changes into other components of the form, after the solution is updated, the widgets located in the widget container will remain unchanged. However, if the developer changes the ID of the widget container or deletes it, the objects stored in it will be removed from app item forms. They will still be available on the modeling canvas in the interface designer, and will be highlighted red. To make them available to users again, place them into another widget container.</span></p>
 
                         <div class="bottom-nav">
                             
@@ -150,7 +145,7 @@
                             
                         </div>
                         <!-- добавляет на страницу строку блок Была ли статья полезной?  -->
-                          <div class="feedback-wrap"><div class="feedback" id="feedback"><span><b>Была ли статья полезной?</b></span><form action="" method="POST" class="feedback-form" id="feedback-form"><div class="feedback__popup feedback__popup-response" id="feedback__popup_thx">Спасибо за ваш отзыв!</div><div id="feedback-success-popup"><div class="wrap"><button type="button" class="feedback-popup-close">×</button><svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_212_2187)"><path d="M22 0.6875C10.2294 0.6875 0.6875 10.2294 0.6875 22C0.6875 33.7706 10.2294 43.3125 22 43.3125C33.7706 43.3125 43.3125 33.7706 43.3125 22C43.3125 10.2294 33.7706 0.6875 22 0.6875ZM22 40.5625C11.8023 40.5625 3.4375 32.3078 3.4375 22C3.4375 11.8024 11.6922 3.4375 22 3.4375C32.1977 3.4375 40.5625 11.6922 40.5625 22C40.5625 32.1976 32.3078 40.5625 22 40.5625ZM34.1713 16.933L18.6613 32.3186C18.257 32.7197 17.604 32.7171 17.203 32.3128L9.82283 24.873C9.42176 24.4686 9.42434 23.8157 9.82867 23.4146L10.5609 22.6884C10.9652 22.2873 11.6181 22.2899 12.0192 22.6942L17.9468 28.6697L31.9926 14.7366C32.3969 14.3356 33.0498 14.3382 33.4509 14.7425L34.1772 15.4747C34.5783 15.879 34.5757 16.532 34.1713 16.933Z" fill="#27AE60"></path></g><defs><clipPath id="clip0_212_2187"><rect width="44" height="44" fill="white"></rect></clipPath></defs></svg><p>Ваш отзыв успешно отправлен!</p><span>Спасибо за обратную связь.</span></div></div><div class="feedback__popup" id="feedback__popup_why"><button type="button" class="feedback-popup-close">×</button><div class="feedback__popup-header">Уточните, почему:</div><input type="radio" name="category" id="bad_recommendation" value="bad_recommendation"><label for="bad_recommendation">Рекомендации не помогли</label><input type="radio" name="category" id="difficult_text" value="difficult_text"><label for="difficult_text">Текст трудно понять</label><input type="radio" name="category" id="no_answer" value="no_answer"><label for="no_answer">Нет ответа на мой вопрос</label><input type="radio" name="category" id="bad_header" value="bad_header"><label for="bad_header">Содержание статьи не соответствует заголовку</label><input type="radio" name="category" id="other_reason" value="other_reason"><label for="other_reason">Другая причина</label></div><div class="feedback__popup" id="feedback__popup-other"><button type="button" class="feedback-popup-close">×</button>   <div class="feedback__popup-header">Расскажите, что вам не понравилось в статье:</div><textarea class="feedback__textarea" name="other" id=""></textarea><input type="submit" class="feedback__other-btn" value="Отправить"></div><div class="feedback-form__btn-group"><input type="radio" name="useful" id="feedback__useful_yes" value="true"><label for="feedback__useful_yes"><img src="like.svg"/><span class="feedback-form__btn-group_yes-btn">Да</span></label><input type="radio" name="useful" id="feedback__useful_no" value="false"><label for="feedback__useful_no"><img src="dislike.svg"/><span class="feedback-form__btn-group_no-btn">Нет</span></label></div><select name="category"><option disabled>Выберите вариант</option><option value="bad_recommendation" selected>Рекомендации не помогли</option><option value="difficult_text">Текст трудно понять</option><option value="no_answer">Нет ответа на мой вопрос</option><option value="bad_header">Содержание статьи не соответствует заголовку</option><option value="other_reason">Другая причина</option></select><input type="submit"></form></div></div>
+                          <div class="feedback" id="feedback"><div class="feedback-help"><span><b>Was this helpful?</b></span><form action="" method="POST" class="feedback-form" id="feedback-form"><div class="feedback__popup feedback__popup-response" id="feedback__popup_thx" style="display: none;">Thanks for your feedback!</div><div class="feedback__popup" id="feedback__popup_why" style="display: none;"><div class="feedback__popup-header">Please specify why:</div><input type="radio" name="category" id="bad_recommendation" value="bad_recommendation"><label for="bad_recommendation">Recommendations did not help me</label><input type="radio" name="category" id="difficult_text" value="difficult_text"><label for="difficult_text">Article is hard to understand</label><input type="radio" name="category" id="no_answer" value="no_answer"><label for="no_answer">Didn`t answer my question</label><input type="radio" name="category" id="bad_header" value="bad_header"><label for="bad_header">Content does not match the topic</label><input type="radio" name="category" id="other_reason" value="other_reason"><label for="other_reason">Other</label></div><div class="feedback__popup" id="feedback__popup-other" style="display: none;"><div class="feedback__popup-header">How we can improve it?</div><textarea class="feedback__textarea" name="other" id=""></textarea><input type="submit" class="feedback__other-btn" value="Submit"></div><div class="feedback-form__btn-group"><input type="radio" name="useful" id="feedback__useful_yes" value="true"><label for="feedback__useful_yes"><img src="like.svg" class="small-img" alt="like"><spanclass="feedback-form__btn-group_yes-btn">Yes</spanclass="feedback-form__btn-group_yes-btn"></label><input type="radio" name="useful" id="feedback__useful_no" value="false"><label for="feedback__useful_no"><img src="dislike.svg" class="small-img" alt="dislike"><spanclass="feedback-form__btn-group_no-btn">No</spanclass="feedback-form__btn-group_no-btn"></label></div><select name="category"><option disabled="">Please specify why</option><option value="bad_recommendation" selected="">Recommendations did not help me</option><option value="difficult_text">Article is hard to understand</option><option value="no_answer">Didn`t answer my question</option><option value="bad_header">Content does not match the topic</option><option value="other_reason">Other</option></select><input type="submit"></form></div><div class="found_typo"><p style="margin: 0px; margin-top: 16px !important;"><span><b>Found a typo?</b></span> Select it and press <i>Ctrl+Enter</i> to send us feedback</p></div></div>
                            
                     </section>
                 </div>
@@ -158,7 +153,7 @@
                     <input type="checkbox" />
                     <div class="article__arrow"></div>
                     <div class="table-of-contents elma365-right" id="toc2Content">
-                        <h3 class="h3-toc">В этой статье</h3>
+                        <h3 class="h3-toc">In this topic</h3>
                         <nav id="toc2"></nav>
                     </div>
                 </aside>
@@ -169,63 +164,30 @@
         <div class="footer-container">
   <div class="footer-mobile">
     
-      <ul class="footer-mobile__list"><li><a href="https://api.elma365.com/ru/" target="_blank">API</a></li><li><a href="https://tssdk.elma365.com/" target="_blank">TS SDK</a></li><li><a href="https://community.elma365.com/" target="_blank">Community</a></li><li><a href="https://elma-academy.com/ru/elma365" target="_blank">Академия</a></li></ul><ul class="footer-mobile__list"><li><a href="https://elma365.com/ru/help/platform/get-trial.html">Платформа</a></li><li><a href="https://elma365.com/ru/help/ecm/ecm-functions.html">ECM</a></li><li><a href="https://elma365.com/ru/help/service/service-functions.html">Service</a></li><li><a href="https://elma365.com/ru/help/projects/projects-functions.html">Проекты</a></li></ul>
+    <ul class="footer-mobile__list"><li><a href="https://brix365.com/en/" target="_blank">BRIX</a></li><li><a href="https://tssdk.brix365.com/en/latest/" target="_blank">SDK</a></li><li><a href="https://api.brix365.com/en/" target="_blank">API</a></li></ul><ul class="footer-mobile__list"><li><a href="https://brix365.com/en/help/platform/get-trial.html">Platform</a></li><li><a href="https://brix365.com/en/help/ecm/ecm-functions.html">ECM</a></li><li><a href="https://brix365.com/en/help/service/service-functions.html">Service</a></li><li><a href="https://brix365.com/en/help/projects/projects-functions.html">Projects</a></li></ul>
     
     
   </div>
-  <div class="container">
-    <div class="footer-wrap">
-      
-        <div><span class="mobile-question-popup">Отправить фидбэк</span><form method="POST" action class="question__popup question-xs" id="question__popup"><div class="question-wrap"><span class="close"></span><span class="title">Задать вопрос</span><label for="help_question" style="display: none;"></label><textarea name="help_question" id="help_question"></textarea><input type="submit" value="Отправить"></div></form><div class="hidden fade-in question-success-xs">Ваш фидбэк отправлен.</div></div>
-      
-      <div class="footer-flex-b">
-        <div class="footer-top">
-          <span class="footer-copy">&copy; 2025 
-              ELMA365
-            
-            
-          </span>
-          
-            <a href="https://navigator.sk.ru/orn/1122971" target="_blank">
-              <img src="sk-resident.svg" alt="sk icon" class="footer-img" width="117" height="34">
-            </a>
-            
-        </div>
-        <div class="footer-line">
-          
-            <div class="footer-line-copy">
-              <span class="footer-copy">&copy; 2025 
-                  ELMA365
-                
-                
-              </span>
-            </div>
-            
-              <ul class="footer-list">
-                
-                  <li class="footer-item"><a href="https://elma365.com/ru/" target="_blank" class="footer-link" style="color: #0D4A75;"><img src="browse.svg" alt="browse icon" class="footer-img">elma365.com</a></li><li class="footer-item"><a href="https://www.youtube.com/user/ELMABPM" target="_blank" class="footer-link"><img src="yt.svg" alt="youtube icon" class="footer-img"></a></li><li class="footer-item"><a href="https://vk.com/elma_bpm" target="_blank" class="footer-link"><img src="vk.svg" alt="vk icon" class="footer-img"></a></li><li class="footer-item"><a href="https://t.me/elmaday" target="_blank" class="footer-link"><img src="tg.svg" alt="telegram icon" class="footer-img"></a></li><li class="footer-item"><a href="https://dzen.ru/elma" target="_blank" class="footer-link"><img src="dzen.svg" alt="dzen icon" class="footer-img"></a></li>
-                
-                
-                  <li class="footer-item">
-                    <a href="https://navigator.sk.ru/orn/1122971" target="_blank">
-                      <img src="sk-resident.svg" alt="sk icon" class="footer-img" width="117" height="34">
-                    </a>
-                  </li>
-                
-                
-              </ul>
-        </div>
-      </div>
+  <div class="footer-wrap">
+    
+      <div><span class="mobile-question-popup">Send feedback</span><form method="POST" action class="question__popup question-xs" id="question__popup"><div class="question-wrap"><span class="close"></span><span class="title">Ask a question</span><label for="help_question" style="display: none;"></label><textarea name="help_question" id="help_question"></textarea><input type="submit" value="Send"></div></form><div class="hidden fade-in question-success-xs">Sent</div></div>
+    
+    <div class="footer-flex-b">
+      <span class="footer-copy">&copy; 2025 BRIX</span>
+      <ul class="footer-list">
+        
+        <li class="footer-item">
+            <a href="#" class="arrow-top" style="display: block;"></a>
+        </li>
+        
+      </ul>
     </div>
   </div>
-  <a href="#" class="arrow-top"></a>
 </div>
  
     </footer>
-<!--    <script type="text/javascript" src="jquery1.min.js"></script>-->
     <iframe name="hmnavigation" style="display:none!important"></iframe>
-    <!--<script src="./jquery-ui.js"></script> -->
-    <script src="./jquery-ui.min.js"></script>
+    <script src="./jquery-ui.js"></script>
     <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
     <script src="./jquery.tocify.min.js"></script>
     <script src="./TypoReporter.min.js"></script>

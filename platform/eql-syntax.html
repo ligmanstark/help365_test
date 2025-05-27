@@ -1,20 +1,19 @@
 ﻿<!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 
 <head>
-    <title>Синтаксис EQL-запроса</title>
+    <title>EQL syntax</title>
     <meta name="generator" content="Help+Manual" />
-    <meta name="keywords" content="Refitem,SELECT_FROM_WHERE,Time(),Номер телефона,Произвольное приложение,создать параметр,Ссылка,Строка,Учетная запись" />
+    <meta name="keywords" content="" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Чтобы найти элемент приложения по параметрам, в EQL-запросе его свойствам задаются определённые значения. Для создания EQL‑запроса соблюдаются определённые правила и..." />
+    <meta name="description" content="To find an app item by its parameters, its properties are assigned certain values in an EQL query. The structure of an EQL query follows the rules:&nbsp;" />
     <meta name="picture" content="" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Cправка по Low-code платформе ELMA365" />
-    <meta property="og:url" content="https://elma365.com/ru/help" />
-    <meta property="og:image" content="" />
-    <meta property="og:site_name" content="ELMA365" />                                                              
+    <meta property="og:title" content="Full documentation for BRIX365 platform. Low-code developer guide. User guide. Admin guide. Developer guide." />
+    <meta property="og:url" content="https://brix365.com/en/help" />
+    <meta property="og:image" content="" />                                                              
     <link rel="icon" href="favicon.png" type="image/png" />
     
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -24,7 +23,6 @@
     <link rel="stylesheet" href="./article.css" />
     <link rel="stylesheet" href="./glossary.css" />
     <link rel="stylesheet" href="./theme.css" />
-    
    <script type="text/javascript" src="jquery.js"></script>
    <script type="text/javascript" src="helpman_settings.js"></script>
    <script type="text/javascript" src="helpman_topicinit.js"></script>
@@ -36,16 +34,16 @@
 </head>
 
 <body>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-M6ETBEC1R9"></script><script>window.dataLayer=window.dataLayer || []; function gtag(){dataLayer.push(arguments);}gtag('js', new Date()); gtag('config', 'G-M6ETBEC1R9');</script>
+    
     <script>!function(e,t,c,n,r,a,m){e.ym=e.ym||function(){(e.ym.a=e.ym.a||[]).push(arguments)},e.ym.l=1*new Date;for(var s=0;s<document.scripts.length;s++)if(document.scripts[s].src===n)return;a=t.createElement(c),m=t.getElementsByTagName(c)[0],a.async=1,a.src=n,m.parentNode.insertBefore(a,m)}(window,document,"script","https://mc.yandex.ru/metrika/tag.js"),ym(83179930,"init",{clickmap:!0,trackLinks:!0,accurateTrackBounce:!0,webvisor:!0})</script><noscript><div><img alt=""src=https://mc.yandex.ru/watch/83179930 style=position:absolute;left:-9999px></div></noscript> 
     
     ﻿<header class="header elma-365">
   <div class="container">
-    <a class="header__logo" href="https://elma365.com/ru/help">
-      <img src="./logo.svg" alt="header logo">
+    <a class="header__logo" href="https://brix365.com/en/help">
+      <img src="./logo-en.svg" alt="header logo">
     </a>
  <!-- <div class="hero__search-form" id="search-panel">
-   <form class="search-form" onsubmit="ym(83179930,'reachGoal','poisk')">
+   <form class="search-form" onsubmit="ym(83180416,'reachGoal','poisk')">
      <label class="search-form__label">
        <span id="reset-search" class="search__icon"></span>
        <input class="search-form__input" type="text">
@@ -65,7 +63,7 @@
     </div>  
   <div class="header__navi">
         
-        <ul class="header__list"><li><span class="solution-select"><span class="solution-select__selected"></span><svg width="7" height="4" viewBox="0 0 7 4" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L3.5 3.5L6 1" stroke="white" stroke-linecap="round" stroke-linejoin="round"/></svg><ul class="solution-select__list"><li><a class="project-link" href="https://elma365.com/ru/help/platform/get-trial.html">Платформа</a></li><li><a class="project-link" href="https://elma365.com/ru/help/ecm/ecm-functions.html">ECM</a></li><li><a class="project-link" href="https://elma365.com/ru/help/crm/crm_overview.html">CRM</a></li><li><a class="project-link" href="https://elma365.com/ru/help/service/service-functions.html">Service</a></li><li><a class="project-link" href="https://elma365.com/ru/help/projects/projects-functions.html">Проекты</a></li><li><a class="project-link" href="https://elma365.com/ru/help/business_solutions/-elma365-store.html">Бизнес-решения</a></li></ul></span></li><li><a href="https://api.elma365.com/ru/"target="_blank">API</a></li><li><a href="https://tssdk.elma365.com/"target="_blank">SDK</a></li><li><a href="https://community.elma365.com/" target="_blank">Community</a></li><li><a href="https://elma-academy.com/ru/" target="_blank">Академия</a></li><li><a href="https://elma365.com/ru/" target="_blank">Сайт ELMA365</a></li></ul> 
+        <ul class="header__list"><li><span class="solution-select"><span class="solution-select__selected"></span><svg width="7" height="4" viewBox="0 0 7 4" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L3.5 3.5L6 1" stroke="white" stroke-linecap="round" stroke-linejoin="round"/></svg><ul class="solution-select__list"><li><a class="project-link" href="https://brix365.com/en/help/platform/get-trial.html">Platform</a></li><li><a class="project-link" href="https://brix365.com/en/help/ecm/ecm-functions.html">ECM</a></li><li><a class="project-link" href="https://brix365.com/en/help/crm/crm_overview.html">CRM</a></li><li><a class="project-link" href="https://brix365.com/en/help/service/service-functions.html">Service</a></li><li><a class="project-link" href="https://brix365.com/en/help/projects/projects-functions.html">Projects</a></li><li><a class="project-link" href="https://brix365.com/en/help/business_solutions/-elma365-store.html">Business Solutions</a></li></ul></span></li><li><a href="https://api.brix365.com/en/" target="_blank">API</a></li><li><a href="https://tssdk.brix365.com/" target="_blank">SDK</a></li></ul>
         
         
    </div>
@@ -80,8 +78,8 @@
 
         <aside class="sidebar" id="sidebar">
         <div class="sidebar__header">
-                 <a class="header__logo" href="https://elma365.com/ru/help">
-                    <img src="./logo-light.svg">
+                 <a class="header__logo" href="https://brix365.com/en/help">
+                    <img src="./logo-light-en.svg">
                  </a>
                     <span class="sidebar__close elma-365-close" id="close"></span>
             </div>
@@ -94,15 +92,12 @@
             <div class="article-inner">           
                 <div class="content">
                     <header class="article__header">
-                    <div class="article__bread" style="display:flex; gap:10px;">
-                        <span id="subcategory" class="search-res__item-category search-res__item-category_subcategory subcategory article__badge"></span>
                         
-                            <div class="topic__breadcrumbs">     
-                                <p>Low-code дизайнер &gt; <a href="360006963072.html">Приложение</a> &gt; <a href="eql365-search.html">Поисковые запросы на языке EQL365</a> / Синтаксис EQL-запроса</p>
+                            <div class="topic__breadcrumbs">
+                                <p>Low-code designer &gt; <a href="360006963072.html">App</a> &gt; <a href="eql365-search.html">Search queries in EQL365&nbsp;</a> / EQL syntax</p>
                             </div>
                         
-                    </div>
-                        <div class="topic__title"><h1 class="p_Heading1"><span class="f_Heading1">Синтаксис EQL-запроса</span></h1>
+                        <div class="topic__title"><h1 class="p_Heading1"><span class="f_Heading1">EQL syntax</span></h1>
 </div>
                     
 </header>
@@ -111,387 +106,386 @@
                             <a href="#h1-article" class="scroll-top"></a>
                         </div>
                         <!-- Placeholder for topic body. -->
-                        <p style="line-height: 1.28; margin: 0 0 11px 0;">Чтобы найти элемент приложения по параметрам, в EQL-запросе его свойствам задаются определённые значения. Для создания EQL‑запроса соблюдаются определённые правила и применяются особенности:</p>
+                        <p style="line-height: 1.28; margin: 0 0 11px 0;">To find an app item by its parameters, its properties are assigned certain values in an EQL query. The structure of an EQL query follows the rules: </p>
 <ol style="list-style-type:decimal">
-<li value="1" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;">Для обращения к свойствам приложения используются коды, присвоенные им при создании. Указывать код переменной необходимо в квадратных скобках: <code><b>[property_name]</b></code>. </li><li value="2" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;">Указывается <a href="eql-syntax.html#operations" class="topiclink">операция поиска</a>. Используются стандартные математические знаки или ключевые слова языка EQL365. </li><li value="3" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;">Искомое значение указывается с учётом <a href="eql-syntax.html#assign-value" class="topiclink">правил присвоения значений свойствам различных типов</a>. </li><li value="4" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;">Для присвоения значения или его вычисления в запросе можно использовать <a href="eql-syntax.html#functions" class="topiclink">функции</a>, например, для указания определённой даты или поиска в свойстве типа <span style="font-weight: bold;">Пользователи</span> текущего сотрудника.</li><li value="5" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;">Для присвоения значений свойствам в рамках запроса можно <a href="eql-syntax.html#create-eql-parameters" class="topiclink">создать параметр</a> и обращаться к нему множество раз. Значение параметра указывается после составления запроса в полях, добавленных в окно поиска автоматически. </li><li value="6" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;">Чтобы осуществлять поиск по нескольким условиям, в запрос добавляются <a href="eql-syntax.html#logical-operators" class="topiclink">логические операторы</a>. При этом можно указывать условие, выполнение которого будет проверяться первым. </li><li value="7" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;">Для составления сложных выборок данных можно использовать <a href="eql-syntax.html#subquery" class="topiclink">подзапросы</a>. Внутри подзапроса можно обращаться к свойствам любого приложения в системе.</li><li value="8" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;">Все составляющие запроса указываются через пробел.  &nbsp;</li></ol>
+<li value="1" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;">To access app properties, the codes assigned to them when they were created are used. The variable code is required to be specified in square brackets: <code><b>[property_name]</b></code>. </li><li value="2" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;">The  <a href="eql-syntax.html#operations" class="topiclink">search operation</a> is specified. Standard mathematical signs or keywords of the EQL365 language are used. </li><li value="3" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;">The value you are looking for is specified according to the <a href="eql-syntax.html#assign-value" class="topiclink">rules for assigning values</a> for properties of different types. </li><li value="4" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;">You can use <a href="eql-syntax.html#functions" class="topiclink">functions</a> to assign a value or calculate it in a query, for example, to set a specific date or search for a current employee in the <span style="font-weight: bold;">Users</span> property.</li><li value="5" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;">To assign values to properties within a query, you can <a href="eql-syntax.html#create_parameters" class="topiclink">create a parameter</a> and reference it multiple times. The parameter value is specified after the query is composed, in the fields that are automatically added to the search window.</li><li value="6" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;">To search by several conditions, <a href="eql-syntax.html#logical-operators" class="topiclink">logical operators</a> are added to the query. You can also specify the condition that will be checked first. </li><li value="7" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;">You can use <a href="eql-syntax.html#subquery" class="topiclink">subqueries</a> to make complex data selections. Within a subquery, you can access the properties of any app in the system.</li><li value="8" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;">All components of the query should be separated by spaces.</li></ol>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;примера</span></p>
-<p class="p_Normal">Примеры поиска элементов по составленным EQL-запросам</p>
+<p class="p_Normal">Examples of searching for items using EQL queries</p>
 <ol style="list-style-type:decimal">
-<li value="1" class="p_Normal"><span style="font-weight: bold;">[company_name] = 'АвтоПром' or [company_name] like 'Авто'</span> — поиск элементов приложения <span style="font-weight: bold;">Компании</span>, в которых поле <span style="font-weight: bold;">Название</span> полностью совпадает с первым указанным значением или содержит второе.</li><li value="2" class="p_Normal"><span style="font-weight: bold;">[__createdAt] = Datetime(2025, 1) and [price] &gt; 4000</span> — поиск записей приложения <span style="font-weight: bold;">Заказы</span>, у которых в поле <span style="font-weight: bold;">Дата создания</span> указан январь 2025 года и поле <span style="font-weight: bold;">Стоимость</span> содержит значение большее, чем 4 000 рублей.</li><li value="3" class="p_Normal"><span style="font-weight: bold;">[contract] in (select [__id] from [documents.contracts] where [total] &gt; 10000)</span> — поиск записей приложения <span style="font-weight: bold;">Контрагенты</span>, где в поле <span style="font-weight: bold;">Договор</span> указан элемент приложения, в котором сумма превышает 10 000 рублей.</li></ol>
+<li value="1" class="p_Normal"><span style="font-weight: bold;">[company_name] = 'WoodsBricks' or [company_name] like 'Woods'</span>. Search for <span style="font-weight: bold;">Company</span> app items in which the <span style="font-weight: bold;">Name</span> field matches the first specified value completely or contains the second.</li><li value="2" class="p_Normal"><span style="font-weight: bold;">[__createdAt] = Datetime(2023, 1) and [price] &gt; 400</span>. Search for records of the <span style="font-weight: bold;">Orders</span> app that have January 2023 in the <span style="font-weight: bold;">Created</span> field and have a value greater than 400 in the <span style="font-weight: bold;">Price</span> field.</li><li value="3" class="p_Normal"><span style="font-weight: bold;">[contract] in (from [documents.contracts] select [__id] where [total] &gt; 10000)</span>. Search for records of the <span style="font-weight: bold;">Contractors</span> app, where the <span style="font-weight: bold;">Contract</span> field specifies the app item with the amount exceeding 10,000.</li></ol>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;примера</span></p>
-<h2 class="p_Heading2"><a id="assign-value" class="hmanchor"></a><span class="f_Heading2">Присвоение значения свойствам различных типов</span></h2>
-<p style="margin: 0 0 11px 0;">Для корректной обработки EQL-запроса все его составляющие указываются через пробел. При написании запроса можно использовать опцию автозаполнения строки. Чтобы вызвать выпадающее меню с доступными свойствами, функциями и операторами, нажмите <span style="font-weight: bold;">Ctrl + Пробел</span>.</p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;">Для указания значений в различных <a href="360009707032.html" class="topiclink">типах свойств</a> из контекста приложений используются определённые правила. Они приведены в таблице:</p>
+<h2 class="p_Heading2"><a id="assign-value" class="hmanchor"></a><span class="f_Heading2">Assigning values to properties of different types</span></h2>
+<p style="line-height: 1.28; margin: 0 0 11px 0;">For correct processing of an EQL query, all its components should be separated by spaces. When writing a query, you can use the autocomplete option. To bring up the dropdown menu with available properties, functions, and operators, press<span style="font-weight: bold;"> Ctrl + Space</span>.</p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;">For the correct processing of an EQL query, values for different <a href="360009707032.html" class="topiclink">types of properties</a> used in the context of the apps are assigned in specific ways. See the table below for more details:</p>
 <div style="text-align: left; text-indent: 0; line-height: 1.28; padding: 0 0 0 0; margin: 0 0 11px 0;"><table style="border:none; border-spacing:0;">
 <tr>
-<td style="vertical-align:top; width:192px; padding:0; border:none"><p><span style="font-weight: bold;">Тип данных</span></p>
+<td style="vertical-align:top; width:192px; padding:0; border:none"><p style="line-height: 1.20;"><span style="font-weight: bold;">Data type</span></p>
 </td>
-<td style="vertical-align:top; width:451px; padding:0; border:none"><p><span style="font-weight: bold;">Правило присвоения значения</span></p>
+<td style="vertical-align:top; width:451px; padding:0; border:none"><p style="line-height: 1.20;"><span style="font-weight: bold;">Rule for assigning a value</span></p>
 </td>
-<td style="vertical-align:top; width:417px; padding:0; border:none"><p><span style="font-weight: bold;">Пример</span></p>
+<td style="vertical-align:top; width:417px; padding:0; border:none"><p style="line-height: 1.20;"><span style="font-weight: bold;">Example</span></p>
 </td>
 </tr>
 <tr>
-<td style="vertical-align:top; width:192px; padding:0; border:none"><p><span style="font-weight: bold;">Строка</span></p>
+<td style="vertical-align:top; width:192px; padding:0; border:none"><p style="line-height: 1.20;"><span style="font-weight: bold;">String</span></p>
 </td>
-<td style="vertical-align:top; width:451px; padding:0; border:none"><p>Задаётся строкой в одинарных кавычках. </p>
+<td style="vertical-align:top; width:451px; padding:0; border:none"><p style="line-height: 1.20;">Assigned with a string in single quotes.</p>
 </td>
 <td style="vertical-align:top; width:417px; padding:0; border:none"><ol style="list-style-type:decimal">
-<li value="1" style="margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-weight: bold;">[authors_name] like 'Алекс'</span> — поле <span style="font-weight: bold;">Имя автора </span>содержит значение <span style="font-weight: bold;">Алекс</span>.</li><li value="2" style="margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-weight: bold;">[product] in ('вентилятор', 'холодильник')</span> — поле <span style="font-weight: bold;">Продукт</span> содержит одно из указанных значений.</li><li value="3" style="margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-weight: bold;">[authors_name] is null</span> — имя автора не указано.</li></ol>
+<li value="1" style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-weight: bold;">[authors_name] like 'Alex'</span>. The <span style="font-weight: bold;">Author’s name</span> field contains the value <span style="font-weight: bold;">Alex</span>.</li><li value="2" style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-weight: bold;">[product] in ('fan', 'freezer')</span>. The <span style="font-weight: bold;">Product</span> field contains one of the specified values.</li><li value="3" style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-weight: bold;">[authors_name] is null</span>. The author’s name is not provided.</li></ol>
 </td>
 </tr>
 <tr>
-<td style="vertical-align:top; width:192px; padding:0; border:none"><p><span style="font-weight: bold;">Число, Деньги</span></p>
+<td style="vertical-align:top; width:192px; padding:0; border:none"><p style="line-height: 1.20;"><span style="font-weight: bold;">Number, Money</span></p>
 </td>
-<td style="vertical-align:top; width:451px; padding:0; border:none"><p>Используется значение искомого числа без кавычек. </p>
-<p>Дробные числа разделяются точкой. </p>
+<td style="vertical-align:top; width:451px; padding:0; border:none"><p style="line-height: 1.20;">The value of the searched number without quotes is used.</p>
+<p style="line-height: 1.20;">Fractional numbers are separated by a period.</p>
+<p style="line-height: 1.20;"><span style="font-size: 13px; color: #000000;">&nbsp;</span></p>
 </td>
 <td style="vertical-align:top; width:417px; padding:0; border:none"><ol style="list-style-type:decimal">
-<li value="1" style="margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-weight: bold;">[size] &lt; 5.5</span> — в поле <span style="font-weight: bold;">Размер</span> указано значение меньше, чем 5,5 метров.</li><li value="2" style="margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-weight: bold;">[price] &gt;= 5000</span> — значение поля <span style="font-weight: bold;">Стоимость</span> больше или равно 5 000 рублей.</li></ol>
+<li value="1" style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-weight: bold;">[size] &lt; 5.5</span>. The <span style="font-weight: bold;">Size</span> field specifies a value less than 5.5 meters.</li><li value="2" style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-weight: bold;">[price] &gt;= 5000</span>. The value of the <span style="font-weight: bold;">Price</span> field is greater than or equal to 5,000.</li></ol>
 </td>
 </tr>
 <tr>
-<td style="vertical-align:top; width:192px; padding:0; border:none"><p><span style="font-weight: bold;">Выбор «да/нет»</span></p>
+<td style="vertical-align:top; width:192px; padding:0; border:none"><p style="line-height: 1.20;"><span style="font-weight: bold;">Yes/No switch</span></p>
 </td>
-<td style="vertical-align:top; width:451px; padding:0; border:none"><p>Задаётся значением <code><b>true</b></code> без кавычек.</p>
+<td style="vertical-align:top; width:451px; padding:0; border:none"><p style="line-height: 1.20;">Assigned with the value <code><b>true</b></code> without quotes.</p>
 </td>
 <td style="vertical-align:top; width:417px; padding:0; border:none"><ol style="list-style-type:decimal">
-<li value="1"><span style="font-weight: bold;">[prepayment] = true</span> — в поле <span style="font-weight: bold;">Предоплата</span> выбрано значение <span style="font-weight: bold;">Да</span>.</li><li value="2"><span style="font-weight: bold;">[prepayment] &lt;&gt; true</span> — в поле <span style="font-weight: bold;">Предоплата</span> не указано значение или выбрано <span style="font-weight: bold;">Нет</span>.</li><li value="3"><span style="font-weight: bold;">[prepayment] is null</span> — поле <span style="font-weight: bold;">Предоплата</span> не заполнено.</li></ol>
+<li value="1" style="line-height: 1.20;"><span style="font-weight: bold;">[prepayment] = true</span>. <span style="font-weight: bold;">Yes</span> is selected in the <span style="font-weight: bold;">Prepayment</span> field.</li><li value="2" style="line-height: 1.20;"><span style="font-weight: bold;">[prepayment] &lt;&gt; true</span>. No value is specified in the <span style="font-weight: bold;">Prepayment</span> field or <span style="font-weight: bold;">No</span> is selected.</li><li value="3" style="line-height: 1.20;"><span style="font-weight: bold;">[prepayment] is null</span>. The <span style="font-weight: bold;">Prepayment</span> field is empty.</li></ol>
 </td>
 </tr>
 <tr>
-<td style="vertical-align:top; width:192px; padding:0; border:none"><p><span style="font-weight: bold;">Дата/время</span></p>
+<td style="vertical-align:top; width:192px; padding:0; border:none"><p style="line-height: 1.20;"><span style="font-weight: bold;">Date/Time</span></p>
 </td>
-<td style="vertical-align:top; width:451px; padding:0; border:none"><p>Задаётся следующими способами:</p>
+<td style="vertical-align:top; width:451px; padding:0; border:none"><p style="line-height: 1.20;">It can be assigned in two ways:</p>
 <ul style="list-style-type:disc">
-<li style="margin-top: 0; margin-right: 0; margin-bottom: 0;">функцией <a href="eql-syntax.html#functions" class="topiclink">Datetime()</a> или <a href="eql-syntax.html#functions" class="topiclink">Time()</a>, аргументы прописываются через запятую;</li><li style="margin-top: 0; margin-right: 0; margin-bottom: 0;">строкой в одинарных кавычках, даты прописываются через тире. &nbsp;</li></ul>
-<p>Использовать можно укороченное написание части даты, а также указывать время, в том числе с использованием часового пояса.</p>
-<p><span style="font-size: 13px; color: #000000;">&nbsp;</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;">Период времени относительно текущей даты вычисляется функцией <a href="eql-syntax.html#relative-date" class="topiclink">RelativeDatetime('start', 'end')</a>. В круглых скобках указывается начало и конец периода, параметры заключаются в одинарные кавычки и разделяются запятыми.  <span style="font-family: 'Times New Roman',Times,Georgia,serif;"> </span></p>
+<li style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 0;">With the <a href="eql-syntax.html#functions" class="topiclink">Datetime()</a> or <a href="eql-syntax.html#functions" class="topiclink">Time()</a> function. The components are separated by commas.</li><li style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 0;">With a string in single quotes. The dates are separated with a dash. &nbsp;</li></ul>
+<p style="line-height: 1.20;">You can use a shortened spelling of a part of the date, and you can also specify the time, including indicating the time zone.</p>
+<p style="line-height: 1.20;"><span style="font-size: 13px; color: #000000;">&nbsp;</span></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;">A period relative to the current date is calculated using the function <a href="eql-syntax.html#relative-date" class="topiclink">RelativeDatetime('start', 'end')</a>. The start and end of the period are indicated in parentheses. Parameters are enclosed in single quotes and separated by commas.</p>
 </td>
 <td style="vertical-align:top; width:417px; padding:0; border:none"><ol style="list-style-type:decimal">
-<li value="1" style="margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-weight: bold;">[close_date] &gt; Datetime(2025, 1, 31, 12)</span>;</li><li value="2" style="margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-weight: bold;">[close_date] &gt; '2025-01-31-12'</span>.</li></ol>
-<p style="margin: 0 0 0 1px;">Оба запроса используются для поиска поля <span style="font-weight: bold;">Дата закрытия</span> со значением позднее, чем 31 января 2025 года после полудня.</p>
+<li value="1" style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-weight: bold;">[close_date] &gt; Datetime(2023, 1, 31, 12)</span>.</li><li value="2" style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-weight: bold;">[close_date] &gt; '2023-01-31-12'</span>.</li></ol>
+<p style="line-height: 1.20; margin: 0 0 0 1px;">Both queries are used to find a <span style="font-weight: bold;">Closed on</span> field with a value later than January 31, 2023 afternoon.</p>
 <ol style="list-style-type:decimal">
-<li value="3" style="margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-weight: bold;">[close_date] &lt; '2025-01-31T12:30:00'</span> — дата закрытия произошла ранее, чем 31 января 2025 года в 12:30.</li><li value="4" style="margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-weight: bold;">[close_date] &lt; '2025-01-31T12:30+09:00'</span> — дата закрытия со значением ранее, чем 31 января 2025 года в 12:30 с учётом часового пояса UTC+09:00.</li><li value="5" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold;">[__createdAt] IN RelativeDatetime('-1m','0d')</span> — поиск всех элементов, созданных с начала прошлого месяца и до текущей даты.</li></ol>
+<li value="3" style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-weight: bold;">[close_date] &lt; '2023-01-31T12:30:00'</span>. Closed earlier than January 31, 2023, at 12:30 PM.</li><li value="4" style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-weight: bold;">[close_date] &lt; '2023-01-31T12:30+09:00'</span>. Closed with a value earlier than January 31, 2023, at 12:30 PM, taking into account the time zone (UTC+09:00).</li><li value="5" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold;">[__createdAt] IN RelativeDatetime('-1m','0d')</span>. Find all items created between the first day of the past month and the current date.</li></ol>
 </td>
 </tr>
 <tr>
-<td style="vertical-align:top; width:192px; padding:0; border:none"><p><span style="font-weight: bold;">Категория</span></p>
+<td style="vertical-align:top; width:192px; padding:0; border:none"><p style="line-height: 1.20;"><span style="font-weight: bold;">Category</span></p>
 </td>
-<td style="vertical-align:top; width:451px; padding:0; border:none"><p>Задаётся кодом категории в одинарных кавычках.</p>
+<td style="vertical-align:top; width:451px; padding:0; border:none"><p style="line-height: 1.20;">Assigned with the category code in single quotes.</p>
 </td>
-<td style="vertical-align:top; width:417px; padding:0; border:none"><p><span style="font-weight: bold;">[payment] in ('half', 'full')</span> — в поле <span style="font-weight: bold;">Оплата</span> выбраны значения <span style="font-weight: bold;">Частично</span> и <span style="font-weight: bold;">Полная предоплата</span>. </p>
-</td>
-</tr>
-<tr>
-<td style="vertical-align:top; width:192px; padding:0; border:none"><p><span style="font-weight: bold;">Номер телефона </span></p>
-</td>
-<td style="vertical-align:top; width:451px; padding:0; border:none"><p>Задаётся строкой в одинарных кавычках.</p>
-</td>
-<td style="vertical-align:top; width:417px; padding:0; border:none"><p><span style="font-weight: bold;">[phone] = '+71234567890'</span> — поле <span style="font-weight: bold;">Телефон</span> заполнено указанным значением.</p>
+<td style="vertical-align:top; width:417px; padding:0; border:none"><p style="line-height: 1.20;"><span style="font-weight: bold;">[payment] in ('half', 'full')</span>. The <span style="font-weight: bold;">Partial </span>and <span style="font-weight: bold;">Full prepayment </span>are selected in the <span style="font-weight: bold;">Payment </span>field. </p>
 </td>
 </tr>
 <tr>
-<td style="vertical-align:top; width:192px; padding:0; border:none"><p><span style="font-weight: bold;">Электронная почта</span></p>
+<td style="vertical-align:top; width:192px; padding:0; border:none"><p style="line-height: 1.20;"><span style="font-weight: bold;">Phone number </span></p>
 </td>
-<td style="vertical-align:top; width:451px; padding:0; border:none"><p>Задаётся строкой в одинарных кавычках.</p>
+<td style="vertical-align:top; width:451px; padding:0; border:none"><p style="line-height: 1.20;">Assigned with a string in single quotes.</p>
 </td>
-<td style="vertical-align:top; width:417px; padding:0; border:none"><p><span style="font-weight: bold;">[email] = 'admin@example.com'</span> — поле <span style="font-weight: bold;">Электронная почта</span> заполнено указанным значением.</p>
-</td>
-</tr>
-<tr>
-<td style="vertical-align:top; width:192px; padding:0; border:none"><p><span style="font-weight: bold;">Ф.И.О</span></p>
-</td>
-<td style="vertical-align:top; width:451px; padding:0; border:none"><p>Задаётся строкой в одинарных кавычках.</p>
-</td>
-<td style="vertical-align:top; width:417px; padding:0; border:none"><p><span style="font-weight: bold;">[contact] like 'Иван'</span> — поле <span style="font-weight: bold;">Контактное лицо</span> содержит указанное значение. </p>
+<td style="vertical-align:top; width:417px; padding:0; border:none"><p style="line-height: 1.20;"><span style="font-weight: bold;">[phone] = '+71234567890'</span>. The <span style="font-weight: bold;">Phone number</span> field has the specified value</p>
 </td>
 </tr>
 <tr>
-<td style="vertical-align:top; width:192px; padding:0; border:none"><p><span style="font-weight: bold;">Пользователи</span></p>
+<td style="vertical-align:top; width:192px; padding:0; border:none"><p style="line-height: 1.20;"><span style="font-weight: bold;">Email address</span></p>
 </td>
-<td style="vertical-align:top; width:451px; padding:0; border:none"><p>Задаётся строковым представлением идентификатора в одинарных кавычках, без пробелов.</p>
-<p>Чтобы найти идентификатор пользователя, перейдите в раздел <span style="font-weight: bold;">Компания &gt; Сотрудники</span>, выберите нужную карточку и скопируйте значение<span style="font-weight: bold;"> </span>в url-адресе страницы. </p>
+<td style="vertical-align:top; width:451px; padding:0; border:none"><p style="line-height: 1.20;">Assigned with a string in single quotes.</p>
 </td>
-<td style="vertical-align:top; width:417px; padding:0; border:none"><p><span style="font-weight: bold;">[responsible] = '95806fe5-f8e8-460c-b2be-ce607068726c'</span> — в поле <span style="font-weight: bold;">Ответственный</span> указан определённый пользователь.</p>
+<td style="vertical-align:top; width:417px; padding:0; border:none"><p style="line-height: 1.20;"><span style="font-weight: bold;">[email] = 'admin@example.com'</span>. The <span style="font-weight: bold;">Email address</span> field has the specified value.</p>
 </td>
 </tr>
 <tr>
-<td style="vertical-align:top; width:192px; height:165px; padding:0; border:none"><p><span style="font-weight: bold;">Приложение</span></p>
+<td style="vertical-align:top; width:192px; padding:0; border:none"><p style="line-height: 1.20;"><span style="font-weight: bold;">Full Name</span></p>
 </td>
-<td style="vertical-align:top; width:451px; height:165px; padding:0; border:none"><ol style="list-style-type:decimal">
-<li value="1">Задаётся строковым представлением идентификатора в одинарных кавычках, без пробелов. </li></ol>
-<p style="margin: 0 0 0 25px;">Чтобы найти идентификатор элемента, перейдите на страницу нужного приложения, выберите запись и скопируйте значение<span style="font-weight: bold;"> </span>в url-адресе страницы.</p>
+<td style="vertical-align:top; width:451px; padding:0; border:none"><p style="line-height: 1.20;">Assigned with a string in single quotes.</p>
+</td>
+<td style="vertical-align:top; width:417px; padding:0; border:none"><p style="line-height: 1.20;"><span style="font-weight: bold;">[contact] like 'John'</span>. The <span style="font-weight: bold;">Contact person</span> field has the specified value. </p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:192px; padding:0; border:none"><p style="line-height: 1.20;"><span style="font-weight: bold;">Users</span></p>
+</td>
+<td style="vertical-align:top; width:451px; padding:0; border:none"><p style="line-height: 1.28; margin: 0 0 11px 0;">Assigned with a string representation of the identifier in single quotes. To find the user’s identifier, go to <span style="font-weight: bold;">Company &gt; Employees</span>, select the required page, and copy the value indicated in the page URL.</p>
+</td>
+<td style="vertical-align:top; width:417px; padding:0; border:none"><p style="line-height: 1.20;"><span style="font-weight: bold;">[responsible] = '95806fe5-f8e8-460c-b2be-ce607068726c'</span>. A certain user is specified in the <span style="font-weight: bold;">Assigned to</span><span style="font-size: 13px; font-weight: bold;"> </span>field.</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:192px; padding:0; border:none"><p style="line-height: 1.20;"><span style="font-weight: bold;">App</span></p>
+</td>
+<td style="vertical-align:top; width:451px; padding:0; border:none"><ol style="list-style-type:decimal">
+<li value="1" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;">Assigned with a string representation of the identifier in single quotes without spaces.</li></ol>
+<p style="line-height: 1.28; margin: 0 0 11px 0;">To find the item’s identifier, go to the required app<span style="color: #202122; background-color: #ffffff;">’s</span> page, select a record, and copy the value indicated in the page URL.</p>
 <ol style="list-style-type:decimal">
-<li value="2" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;">Поиск выборкой данных по критериям. Указывается с помощью подзапроса с функцией вида <a href="eql-syntax.html#subquery" class="topiclink">Select_From_Where</a>.</li></ol>
-</td>
-<td style="vertical-align:top; width:417px; height:165px; padding:0; border:none"><ol style="list-style-type:decimal">
-<li value="1"><span style="font-weight: bold;">[app] = '018a1c61-c2b9-7701-86ab-d8b39a143465'</span> — в поле выбран элемент текущего приложения с указанным идентификатором.</li><li value="2" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold;">[order] in (select [__id] from [clients] where [__name] like </span><span style="font-weight: bold;">'</span><span style="font-weight: bold;">Хол</span><span style="font-weight: bold;">'</span><span style="font-weight: bold;">)</span> — поиск заказа из приложения <span style="font-weight: bold;">Клиенты</span>, где имя компании содержит указанное значение. </li></ol>
-</td>
-</tr>
-<tr>
-<td style="vertical-align:top; width:192px; padding:0; border:none"><p><span style="font-weight: bold;">Произвольное приложение</span></p>
-</td>
-<td style="vertical-align:top; width:451px; padding:0; border:none"><p style="line-height: 1.28; margin: 0 0 11px 0;">Поиск осуществляется по коду элемента двумя способами:</p>
-<ol style="list-style-type:decimal">
-<li value="1" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;">Задаётся идентификатором определённого элемента:</li></ol>
-<ul style="list-style-type:disc">
-<li style="margin-top: 0; margin-right: 0; margin-bottom: 0;">поиск элемента коллекции с помощью функции <a href="eql-syntax.html#refitem" class="topiclink">Refitem()</a>. В скобках через запятую прописывается код раздела, приложения и идентификатор элемента. Каждое значение отделяется одинарными кавычками;</li><li style="margin-top: 0; margin-right: 0; margin-bottom: 0;">строкой в одинарных кавычках. Путь до элемента указывается без пробелов, через двоеточие.</li></ul>
-<ol style="list-style-type:decimal" start="2">
-<li value="2" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="color: #394149;">Используется выборка данных по критериям. Указывается с помощью подзапроса с функцией вида </span><a href="eql-syntax.html#subquery" class="topiclink">Select_From_Where</a>.</li></ol>
+<li value="2" class="p_Normal">Search by selecting data by criteria. It is specified using a subquery with the <a href="eql-syntax.html#subquery" class="topiclink">Select_From_Where</a> type function.</li></ol>
 </td>
 <td style="vertical-align:top; width:417px; padding:0; border:none"><ol style="list-style-type:decimal">
-<li value="1" style="margin-top: 0; margin-right: 0; margin-bottom: 0;">Запрос для поиска элементов, у которых в поле <span style="font-weight: bold;">Договор</span> указана определённая запись из раздела <span style="font-weight: bold;">Клиенты &gt; Договоры</span>:</li></ol>
-<ul style="list-style-type:disc">
-<li style="margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-weight: bold;">[contract] = Refitem('clients', 'contracts', '1415381a-1197-11ee-be56-0242ac120002')</span>; </li><li style="margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-weight: bold;">[client] = 'clients:contracts:1415381a-1197-11ee-be56-0242ac120002'</span>.</li></ul>
-<ol style="list-style-type:decimal" start="2">
-<li value="2" class="p_Normal">Запрос для поиска всех элементов из раздела <span style="font-weight: bold;">Клиенты &gt; Договоры</span>, где указан заказ с суммой более 1 000 рублей:</li></ol>
-<p class="p_Normal" style="text-indent: -1px; margin: 0 0 0 33px;"><span style="font-weight: bold;">[contract] in (select [__id] from [clients.orders] where [total] &gt; 1000)</span>.</p>
+<li value="1" style="line-height: 1.20;"><span style="font-weight: bold;">[app] = '018a1c61-c2b9-7701-86ab-d8b39a143465'</span>. An item of the current app with the specified identifier is selected in the field.</li><li value="2" class="p_Normal"><span style="font-weight: bold;">[order] in (select [__id] from [clients] where [__name] like 'Hall')</span>.<span style="font-weight: bold;"> </span>Search for an order from the <span style="font-weight: bold;">Customers</span> app, where the company’s name contains the specified value.</li></ol>
 </td>
 </tr>
 <tr>
-<td style="vertical-align:top; width:192px; padding:0; border:none"><p><span style="font-weight: bold;">Статус</span></p>
+<td style="vertical-align:top; width:192px; padding:0; border:none"><p style="line-height: 1.20;"><span style="font-weight: bold;">Arbitrary app</span></p>
 </td>
-<td style="vertical-align:top; width:451px; padding:0; border:none"><p>Задаётся числовым представлением идентификатора статуса.</p>
+<td style="vertical-align:top; width:451px; padding:0; border:none"><p class="p_Normal">The search is performed by the item’s code in two ways:</p>
+<ol style="list-style-type:decimal">
+<li value="1" class="p_Normal">It is set by the identifier of a specific item:</li></ol>
+<ul style="list-style-type:disc">
+<li style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 0;">With the <a href="eql-syntax.html#refitem" class="topiclink">Refitem()</a> function. The workspace code, app code, and item identifier are entered in parentheses, separated by commas. Each value is separated by single quotes.</li><li style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 0;">With a string in single quotes. The path to the item is specified without spaces, separated by a colon.</li></ul>
+<ol style="list-style-type:decimal">
+<li value="2" class="p_Normal">A selection of data based on criteria.<span style="font-family: 'Times New Roman',Times,Georgia,serif;"> </span>It is specified using a subquery with the <a href="eql-syntax.html#subquery" class="topiclink">Select_From_Where</a> type function.</li></ol>
 </td>
-<td style="vertical-align:top; width:417px; padding:0; border:none"><p style="text-indent: -1px; margin: 0 0 0 1px;"><span style="font-weight: bold;">[__status] = 1</span> — элементу присвоен первый по счёту статус. </p>
+<td style="vertical-align:top; width:417px; padding:0; border:none"><ol style="list-style-type:decimal">
+<li value="1" class="p_Normal">A query to search for items that have a specific record in the <span style="font-weight: bold;">Contract</span> field from the <span style="font-weight: bold;">Customers</span><span style="font-weight: bold;"> </span><span style="font-weight: bold;">&gt;</span><span style="font-weight: bold;"> </span><span style="font-weight: bold;">Contracts</span> workspace:</li></ol>
+<ul style="list-style-type:disc">
+<li style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-weight: bold;">[contract] = Refitem('clients', 'contracts', '1415381a-1197-11ee-be56-0242ac120002')</span>.</li><li style="line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-weight: bold;">[client] = 'clients:contracts:1415381a-1197-11ee-be56-0242ac120002'</span>.</li></ul>
+<ol style="list-style-type:decimal">
+<li value="2" class="p_Normal">A query to search for items that have a specific record in the <span style="font-weight: bold;">Contract</span> field from the <span style="font-weight: bold;">Customers</span><span style="font-weight: bold;"> </span><span style="font-weight: bold;">&gt;</span><span style="font-weight: bold;"> </span><span style="font-weight: bold;">Contracts</span> workspace, where an order with an amount of more than 100 dollars is specified:</li></ol>
+<p class="p_Normal"><span style="font-weight: bold; background-color: #ffffff;">[contract] in (select [__id] from [clients.orders] where [total] &gt; 100)</span><span style="background-color: #ffffff;">.</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:192px; padding:0; border:none"><p style="line-height: 1.20;"><span style="font-weight: bold;">Status</span></p>
+</td>
+<td style="vertical-align:top; width:451px; padding:0; border:none"><p style="line-height: 1.20;">Assigned with a numeric representation of the status identifier.</p>
+</td>
+<td style="vertical-align:top; width:417px; padding:0; border:none"><p style="text-indent: -1px; line-height: 1.20; margin: 0 0 0 1px;"><span style="font-weight: bold;">[__status] = 1</span>. The item is assigned the first status.</p>
 </td>
 </tr>
 </table>
 </div>
-<p style="line-height: 1.28; margin: 0 0 11px 0;">Можно искать элементы, в полях которых не указано никакого значения. Для этого в запросе используется операция <a href="eql-syntax.html#key-words" class="topiclink">Is null или Is empty</a>. Исключения составляют свойства типа <span style="font-weight: bold;">Номер телефона</span> и <span style="font-weight: bold;">Электронная почта</span>.</p>
-<h2 class="p_Heading2"><a id="create-eql-parameters" class="hmanchor"></a><span class="f_Heading2">Создание параметров в EQL-запросе и их использование</span></h2>
-<p style="line-height: 1.28; margin: 0 0 11px 0;">Чтобы указать искомое значение свойства, в рамках запроса можно создать новый параметр. Обращаться к нему в запросе можно множество раз. Значение параметра задаётся после составления запроса. Таким образом оно будет являться не постоянным, а изменяться при каждом поиске.</p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;">Параметр создаётся с помощью значка <span style="font-weight: bold;">@</span> и произвольного названия на латинице или кириллице. После добавления параметра в окне поиска отображается дополнительное поле с его названием. Составив запрос, вы можете указать в дополнительном поле значение параметра и запустить поиск.</p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><img alt="eql-syntax-1" width="894" height="606" style="margin:0;width:894px;height:606px;border:none" src="eql-syntax-1.png"/></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;">Если в дополнительных полях не заданы значения, выражение с использованием пользовательских параметров можно <span style="color: #0000ff;"><a href="360009669952.html#filter" class="topiclink">сохранить как фильтр</a></span>. Таким образом сотрудники смогут применить составленный EQL-запрос, определить значения свойств по параметру и выполнять поиск различной информации. </p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;">You can search for items with no values in their fields. For this purpose, the <a href="eql-syntax.html#key-words" class="topiclink">Is null or Is empty</a> operation is used in the query. Exceptions are <span style="font-weight: bold;">Phone number</span> and <span style="font-weight: bold;">Email address</span> properties.</p>
+<h2 class="p_Heading2"><a id="create_parameters" class="hmanchor"></a><span class="f_Heading2">Creating parameters in an EQL query and and using them</span></h2>
+<p style="line-height: 1.28; margin: 0 0 11px 0;">To specify the desired value of a property, you can create a new parameter within the query. This parameter can be referenced multiple times in the query. The parameter value is set after composing the query, making it dynamic and changeable with each search.</p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;">A parameter is created using the @ symbol followed by an arbitrary name in English characters. After adding the parameter, an additional field with its name appears in the search window. Once the query is composed, you can specify the parameter value in the additional field and run the search.</p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><img alt="eql_parameters_brix_01" width="856" height="546" style="margin:0;width:856px;height:546px;border:none" src="eql_parameters_brix_01.png"/></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;">If values are not specified in the additional fields, an expression using custom parameters can be <a href="360009669952.html#filters" class="topiclink">saved as a filter</a>. This allows employees to apply the composed EQL query, define property values through the parameter, and search for various information.</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;примера</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;">Пример запроса </p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-weight: bold;">[__createdBy] = @Пользователь AND [budget] = @Сумма </span>— в запросе поля <span style="font-weight: bold;">Автор</span> и <span style="font-weight: bold;">Бюджет</span> из приложения заданы с помощью параметров. Сотрудник может внести для них определённые значения, указав любого пользователя и сумму, и выполнить поиск элементов с различными автором и бюджетом.</p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;">Example of a query</p>
+<p class="p_Normal"><span style="font-weight: bold;">[__createdBy] = @User AND [budget] = @Amount</span>. In the query, the <span style="font-weight: bold;">Author</span> and <span style="font-weight: bold;">Budget</span> fields from the app are set using parameters. The employee can enter specific values for them, specifying any user and amount, and search for items with different authors and budget.</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;примера</span></p>
-<h2 class="p_Heading2"><a id="operations" class="hmanchor"></a><span class="f_Heading2">Операции поиска</span></h2>
-<p style="line-height: 1.28; margin: 0 0 11px 0;">Для присвоения значения в EQL-запросе используются операции поиска. Они могут обозначаться математическими знаками или ключевыми словами языка EQL365.</p>
-<h3 class="p_Heading3"><a id="symbols" class="hmanchor"></a><span class="f_Heading3">Операции с использованием знаков</span></h3>
-<p style="line-height: 1.28; margin: 0 0 11px 0;">Такие операции строятся по одинаковому принципу. В качестве первого операнда указывается код свойства. Ему присваивается определённое значение. Вторым операндом выступает заданное значение, другое свойство или функция. К таким операциям относятся:</p>
+<h2 class="p_Heading2"><a id="operations" class="hmanchor"></a><span class="f_Heading2">Search operations</span></h2>
+<p style="line-height: 1.28; margin: 0 0 11px 0;">Search operations are used to assign a value in an EQL query. They can be indicated by mathematical signs or keywords of the EQL365 language.</p>
+<h3 class="p_Heading3"><a id="symbols" class="hmanchor"></a><span class="f_Heading3">Operations using symbols</span></h3>
+<p style="line-height: 1.28; margin: 0 0 11px 0;">These operations follow a similar principle. The first operand is a property code. A certain value is assigned to it. The second operand is a given value, another property, or a function. Such operations include:</p>
 <ol style="list-style-type:upper-roman">
-<li value="1" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold;">Равенство</span> — операция <span style="font-weight: bold;">=</span>. </li></ol>
-<p style="line-height: 1.28; margin: 0 0 11px 36px;">Операция проверки точного совпадения. Не рекомендуется использовать со свойствами типа <span style="font-weight: bold;">Дата/время</span>, так как точное совпадение значения поля маловероятно. </p>
+<li value="1" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold;">Equal</span> is represented by the symbol <span style="font-weight: bold;">=</span>.</li></ol>
+<p style="line-height: 1.28; margin: 0 0 11px 34px;">This operation is used to check for an exact match. It is not recommended to use it with properties of <span style="font-weight: bold;">Date/Time</span> type, because an exact match to the field value is unlikely.</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;примера</span></p>
-<p class="p_Normal">Примеры запросов</p>
+<p class="p_Normal">Examples of queries</p>
 <ol style="list-style-type:decimal">
-<li value="1" class="p_Normal"><span style="font-weight: bold;">[client] = 'Иванов'</span> — поиск клиента с указанным именем.</li><li value="2" class="p_Normal"><span style="font-weight: bold;">[payment] = [budget]</span> — поиск полей <span style="font-weight: bold;">Оплата</span>, совпадающих с полем <span style="font-weight: bold;">Бюджет</span>.</li><li value="3" class="p_Normal"><span style="font-weight: bold;">[responsible] = CurrentUser()</span> — поиск элементов с текущим пользователем в качестве ответственного. </li></ol>
+<li value="1" class="p_Normal"><span style="font-weight: bold;">[client] = 'Smith'</span>. Search for a client with the specified name.</li><li value="2" class="p_Normal"><span style="font-weight: bold;">[payment] = [budget]</span>. Search for <span style="font-weight: bold;">Payment </span>fields that match the <span style="font-weight: bold;">Budget </span>field.</li><li value="3" class="p_Normal"><span style="font-weight: bold;">[responsible] = CurrentUser()</span>. Search for items with the current user as the responsible user. </li></ol>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;примера</span></p>
 <ol style="list-style-type:upper-roman" start="2">
-<li value="2" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold;">Неравенство</span> — операция <span style="font-weight: bold;">&lt;&gt;</span>. </li></ol>
-<p style="line-height: 1.28; margin: 0 0 11px 36px;">Операция проверки исключения точного совпадения. </p>
+<li value="2" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold;">Not equal</span> is represented by the symbol <span style="font-weight: bold;">&lt;&gt;</span>. </li></ol>
+<p style="line-height: 1.28; margin: 0 0 11px 34px;">This operation is used to check the absence of an exact match.</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;примера</span></p>
-<p class="p_Normal">Примеры запросов</p>
+<p class="p_Normal">Examples of queries</p>
 <ol style="list-style-type:decimal">
-<li value="1" class="p_Normal"><span style="font-weight: bold;">[product] &lt;&gt; 'Оборудование'</span> — поиск заказов, где в поле <span style="font-weight: bold;">Продукт</span> не значится указанное значение.</li><li value="2" class="p_Normal"><span style="font-weight: bold;">[payment] &lt;&gt; [budget]</span> — поиск заказов, где поле <span style="font-weight: bold;">Оплата</span> не совпадает с полем <span style="font-weight: bold;">Бюджет</span>.</li><li value="3" class="p_Normal"><span style="font-weight: bold;">[responsible] &lt;&gt; CurrentUser()</span> — поиск элементов, в которых в качестве ответственного не значится текущий пользователь. </li></ol>
+<li value="1" class="p_Normal"><span style="font-weight: bold;">[product] &lt;&gt; 'Equipment'</span>. Search for orders where the <span style="font-weight: bold;">Product</span> field does not contain the specified value.</li><li value="2" class="p_Normal"><span style="font-weight: bold;">[payment] &lt;&gt; [budget]</span>. Search for orders where the <span style="font-weight: bold;">Payment</span> field does not match the <span style="font-weight: bold;">Budget</span> field.</li><li value="3" class="p_Normal"><span style="font-weight: bold;">[responsible] &lt;&gt; CurrentUser()</span>. Search for items that do not specify the current user as responsible. </li></ol>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;примера</span></p>
 <ol style="list-style-type:upper-roman" start="3">
-<li value="3" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold;">Более чем</span> — операция <span style="font-weight: bold;">&gt;</span>. </li></ol>
-<p style="text-indent: 1px; line-height: 1.28; margin: 0 0 11px 36px;">Операция проверки строгого большего. </p>
+<li value="3" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold;">Greater than</span> is represented by the symbol  <span style="font-weight: bold;">&gt;</span>.</li></ol>
+<p style="line-height: 1.28; margin: 0 0 11px 34px;">This operation is used to for a strict comparison of greater values.</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;примера</span></p>
-<p class="p_Normal">Примеры запросов</p>
+<p class="p_Normal">Examples of queries</p>
 <ol style="list-style-type:decimal">
-<li value="1" class="p_Normal"><span style="font-weight: bold;">[price] &gt; 10000</span> — поиск заказов со стоимостью, превышающей указанное значение.</li><li value="2" class="p_Normal"><span style="font-weight: bold;">[payment] &gt; [budget]</span> — поиск заказов, где поле <span style="font-weight: bold;">Оплата</span> больше поля <span style="font-weight: bold;">Бюджет</span>.</li><li value="3" class="p_Normal"><span style="font-weight: bold;">[shipping_date] &gt; Datetime(2025, 1, 31, 12)</span> — поиск заказов с датой отгрузки позднее, чем указанная дата и время 12:00.</li></ol>
+<li value="1" class="p_Normal"><span style="font-weight: bold;">[price] &gt; 10000</span>. Search for orders with the cost exceeding the specified value.</li><li value="2" class="p_Normal"><span style="font-weight: bold;">[payment] &gt; [budget]</span>. Search for orders where the value in the <span style="font-weight: bold;">Payment </span>field is greater than the one in the <span style="font-weight: bold;">Budget </span>field.</li><li value="3" class="p_Normal"><span style="font-weight: bold;">[shipping_date] &gt; Datetime(2023, 1, 31, 12)</span>. Search for orders with a shipping date later than the specified date and 12 PM time.</li></ol>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;примера</span></p>
 <ol style="list-style-type:upper-roman" start="4">
-<li value="4" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold;">Больше или равно</span> — операция <span style="font-weight: bold;">&gt;=</span>. </li></ol>
-<p style="line-height: 1.28; margin: 0 0 11px 36px;">Операция проверки нестрогого большего. </p>
+<li value="4" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold;">Greater than or equal to</span> is represented by the symbol <span style="font-weight: bold;">&gt;=</span>.</li></ol>
+<p style="line-height: 1.28; margin: 0 0 11px 34px;">This is a non-strict comparison operator.</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;примера</span></p>
-<p style="text-indent: -24px; line-height: 1.28; margin: 0 0 11px 22px;">Примеры запросов</p>
+<p class="p_Normal">Examples of queries</p>
 <ol style="list-style-type:decimal">
-<li value="1" class="p_Normal"><span style="font-weight: bold;">[price] &gt;= 10000</span> — поиск заказов со стоимостью, равной или превышающей указанное значение.</li><li value="2" class="p_Normal"><span style="font-weight: bold;">[payment] &gt;= [budget]</span> — поиск заказов, где поле <span style="font-weight: bold;">Оплата</span> больше или равняется полю <span style="font-weight: bold;">Бюджет</span>.</li><li value="3" class="p_Normal"><span style="font-weight: bold;">[shipping_date] &gt;= Datetime('Today')</span> — поиск заказов с отгрузкой в текущую дату на момент времени 00:00:00 или позднее.</li></ol>
+<li value="1" class="p_Normal"><span style="font-weight: bold;">[price] &gt;= 10000</span>. Search for orders with the cost exceeding or equal to the specified value.</li><li value="2" class="p_Normal"><span style="font-weight: bold;">[payment] &gt;= [budget]</span>. Search for orders where the value in the <span style="font-weight: bold;">Payment</span> field is greater than the one in the <span style="font-weight: bold;">Budget</span> field or is equal to it.</li><li value="3" class="p_Normal"><span style="font-weight: bold;">[shipping_date] &gt;= Datetime('Today')</span>. Search for orders with shipping on or after 00:00:00 on the current date.</li></ol>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;примера</span></p>
 <ol style="list-style-type:upper-roman" start="5">
-<li value="5" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold;">Менее чем</span> — операция <span style="font-weight: bold;">&lt;</span>. </li></ol>
-<p style="line-height: 1.28; margin: 0 0 11px 36px;">Операция проверки строгого меньшего. </p>
+<li value="5" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold;">Less than</span> is represented by the symbol <span style="font-weight: bold;">&lt;</span>.</li></ol>
+<p style="line-height: 1.28; margin: 0 0 11px 34px;">This a strict comparison operator.</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;примера</span></p>
-<p style="text-indent: -24px; line-height: 1.28; margin: 0 0 11px 22px;">Примеры запросов</p>
+<p class="p_Normal">Examples of queries</p>
 <ol style="list-style-type:decimal">
-<li value="1" class="p_Normal"><span style="font-weight: bold;">[price] &lt; 10000</span> — поиск заказов со стоимостью ниже указанного значения.</li><li value="2" class="p_Normal"><span style="font-weight: bold;">[payment] &lt; [budget]</span> — поиск заказов, где поле <span style="font-weight: bold;">Оплата</span> меньше, чем поле <span style="font-weight: bold;">Бюджет</span>.</li><li value="3" class="p_Normal"><span style="font-weight: bold;">[shipping_date] &lt; Datetime('Today')</span> — поиск заказов с датой отгрузки ранее, чем текущая дата на момент времени 00:00:00.</li></ol>
+<li value="1" class="p_Normal"><span style="font-weight: bold;">[price] &lt; 10000</span>. Search for orders with a cost lower than the specified value.</li><li value="2" class="p_Normal"><span style="font-weight: bold;">[payment] &lt; [budget]</span>. Search for orders where the value in the <span style="font-weight: bold;">Payment </span>field is less than one in the <span style="font-weight: bold;">Budget </span>field.</li><li value="3" class="p_Normal"><span style="font-weight: bold;">[shipping_date] &lt; Datetime('Today')</span>. Search for orders with shipping earlier that 00:00:00 on the current date.</li></ol>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;примера</span></p>
 <ol style="list-style-type:upper-roman" start="6">
-<li value="6" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold;">Меньше или равно</span> — операция <span style="font-weight: bold;">&lt;=</span>. </li></ol>
-<p style="line-height: 1.28; margin: 0 0 11px 36px;">Операция проверки нестрогого меньшего. </p>
+<li value="6" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold;">Less than or equal to</span> is represented by the symbol <span style="font-weight: bold;">&lt;=</span>.</li></ol>
+<p style="line-height: 1.28; margin: 0 0 11px 34px;">This is a non-strict comparison operator.</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;примера</span></p>
-<p class="p_Normal">Примеры запросов</p>
+<p class="p_Normal">Examples of queries</p>
 <ol style="list-style-type:decimal">
-<li value="1" class="p_Normal"><span style="font-weight: bold;">[price] &lt;= 10000</span> — поиск заказов, в которых стоимость ниже или равняется указанному значению.</li><li value="2" class="p_Normal"><span style="font-weight: bold;">[payment] &lt;= [budget]</span> — поиск заказов, где поле <span style="font-weight: bold;">Оплата</span> меньше или равняется полю <span style="font-weight: bold;">Бюджет</span>.</li><li value="3" class="p_Normal"><span style="font-weight: bold;">[shipping_date] &lt;= Datetime('Today')</span> — поиск заказов с отгрузкой в текущую дату на момент времени 00:00:00 или ранее.</li></ol>
+<li value="1" class="p_Normal"><span style="font-weight: bold;">[price] &lt;= 10000</span>. Search for orders with a cost exceeding or equal to the specified value.</li><li value="2" class="p_Normal"><span style="font-weight: bold;">[payment] &lt;= [budget]</span>. Search for orders where the value in the <span style="font-weight: bold;">Payment </span>field is greater than one in the <span style="font-weight: bold;">Budget </span>field or is equal to it.</li><li value="3" class="p_Normal"><span style="font-weight: bold;">[shipping_date] &lt;= Datetime('Today')</span>. Search for orders with shipping on or earlier than 00:00:00 on the current date.</li></ol>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;примера</span></p>
-<h3 class="p_Heading3"><a id="key-words" class="hmanchor"></a><span class="f_Heading3">Операции с ключевыми словами языка EQL365</span></h3>
+<h3 class="p_Heading3"><a id="key-words" class="hmanchor"></a><span class="f_Heading3">Operations with EQL365 keywords</span></h3>
 <ol style="list-style-type:upper-roman">
-<li value="1" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold;">Частичное совпадение строки</span> — операция <code><b>LIKE</b></code>. </li></ol>
-<p style="margin: 0 0 11px 36px;">Операция <code><b>LIKE</b></code> используется для поиска частичного совпадения текста независимо от регистра. Она позволяет находить вхождения указанного значения в любую часть строки, возвращая все строки, содержащие искомый фрагмент.</p>
+<li value="1" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold;">Partial string match</span> is represented by the value <code><b>LIKE</b></code>.</li></ol>
+<p style="line-height: 1.28; margin: 0 0 11px 34px;">The <code><b>LIKE</b></code> operation is used to find a partial text match regardless of the case. It allows you to find occurrences of a specified value in any part of a string, returning all strings containing the searched fragment.</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;примера</span></p>
-<p style="text-indent: -24px; line-height: 1.28; margin: 0 0 11px 22px;">Пример</p>
-<p class="p_Normal"><span style="font-weight: bold;">[responsible] like 'Алекс'</span> — поиск всех элементов, где в поле <span style="font-weight: bold;">Ответственный</span> присутствует данное значение.</p>
+<p style="text-indent: -24px; line-height: 1.28; margin: 0 0 11px 22px;">Example</p>
+<p style="text-indent: -24px; line-height: 1.28; margin: 0 0 11px 22px;"><span style="font-size: 13px; font-weight: bold;">[responsible] like 'Alex'</span>. Search for all items with this value in the <span style="font-weight: bold;">Assigned to</span> field.</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;примера</span></p>
 <ol style="list-style-type:upper-roman" start="2">
-<li value="2" class="p_Normal"><span style="font-weight: bold;">Полное совпадение строки</span> — операция <code><b>LIKEF</b></code>.</li></ol>
-<p class="p_Normal" style="margin: 0 0 0 36px;">Операция <code><b>LIKEF</b></code> позволяет искать точные совпадения текста, а также задавать правила для поиска указанного значения в определённой части строки. Использование операции помогает сузить результаты поиска.</p>
-<p class="p_Normal" style="margin: 0 0 0 36px;">Доступные свойства для использования <code><b>LIKEF</b></code>:</p>
+<li value="2" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold;">Full string match </span>is represented by the value <code><b>LIKEF</b></code>.</li></ol>
+<p style="line-height: 1.28; margin: 0 0 11px 34px;">The <code><b>LIKEF</b></code> operation allows you to search for exact matches of text, as well as set rules for finding a specified value in a certain part of a string. Using the operation helps to narrow down the search results.</p>
+<p style="line-height: 1.28; margin: 0 0 11px 34px;">Available properties for using <code><b>LIKEF</b></code>:</p>
 <ul style="list-style-type:disc">
-<li class="p_Normal" style="margin-top: 0; margin-right: 0; margin-bottom: 0;"><a href="360009707032.html" class="topiclink">Строка</a>;</li><li class="p_Normal" style="margin-top: 0; margin-right: 0; margin-bottom: 0;"><a href="360009707032.html#category" class="topiclink">Категория</a>;</li><li class="p_Normal" style="margin-top: 0; margin-right: 0; margin-bottom: 0;"><a href="360009707032.html#account" class="topiclink">Учетная запись</a>;</li><li class="p_Normal" style="margin-top: 0; margin-right: 0; margin-bottom: 0;"><a href="360009707032.html#phone-number" class="topiclink">Номер телефона</a>;</li><li class="p_Normal" style="margin-top: 0; margin-right: 0; margin-bottom: 0;"><a href="360009707032.html#email" class="topiclink">Электронная почта</a>; </li><li class="p_Normal" style="margin-top: 0; margin-right: 0; margin-bottom: 0;"><a href="360009707032.html#full-name" class="topiclink">Ф.И.О</a>;</li><li class="p_Normal" style="margin-top: 0; margin-right: 0; margin-bottom: 0;"><a href="360009707032.html#link" class="topiclink">Ссылка</a>.</li></ul>
-<p class="p_Normal" style="margin: 0 0 0 36px;">Правила для создания запросов с операцией <code><b>LIKEF</b></code>:</p>
+<li class="p_Normal" style="margin-top: 0; margin-right: 0; margin-bottom: 0;"><a href="360009707032.html#string" class="topiclink">String</a>.</li><li class="p_Normal" style="margin-top: 0; margin-right: 0; margin-bottom: 0;"><a href="360009707032.html#category" class="topiclink">Category</a>.</li><li class="p_Normal" style="margin-top: 0; margin-right: 0; margin-bottom: 0;"><a href="360009707032.html#account" class="topiclink">Account</a>.</li><li class="p_Normal" style="margin-top: 0; margin-right: 0; margin-bottom: 0;"><a href="360009707032.html#phone-number" class="topiclink">Phone number</a>.</li><li class="p_Normal" style="margin-top: 0; margin-right: 0; margin-bottom: 0;"><a href="360009707032.html#email" class="topiclink">Email</a>.</li><li class="p_Normal" style="margin-top: 0; margin-right: 0; margin-bottom: 0;"><a href="360009707032.html#full-name" class="topiclink">Full name</a>.</li><li class="p_Normal" style="margin-top: 0; margin-right: 0; margin-bottom: 0;"><a href="360009707032.html#link" class="topiclink">Link</a>.</li></ul>
+<p class="p_Normal" style="margin: 0 0 0 34px;">Rules for creating queries using the <code><b>LIKEF</b></code><span style="font-size: 13px;"> </span>operation:</p>
 <ul style="list-style-type:disc">
-<li class="p_Normal" style="margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-weight: bold;">символ _</span> — нижнее подчёркивание обозначает любой один символ. Может использоваться до или после искомого значения;</li><li class="p_Normal" style="margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-weight: bold;">символ %</span> — процент указывает, что перед или после искомого значения может находиться любое количество символов;</li><li class="p_Normal" style="margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-weight: bold;">комбинирование символов</span> — символы <span style="font-weight: bold;">_</span> и <span style="font-weight: bold;">%</span> можно комбинировать и использовать в запросе множество раз для построения сложных шаблонов поиска;</li><li class="p_Normal" style="margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-weight: bold;">экранирование символов</span> — если значение содержит управляющие символы (<span style="font-weight: bold;">_</span> или <span style="font-weight: bold;">%</span>), их нужно экранировать обратной косой чертой <span style="font-weight: bold;">\</span>. </li></ul>
+<li class="p_Normal" style="margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-weight: bold;">The _ symbol</span>. The underscore means any symbol. It can be used before or after the searched value.</li><li class="p_Normal" style="margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-weight: bold;">The % symbol</span>. The percent indicates that any number of characters can be included before or after the searched value.</li><li class="p_Normal" style="margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-weight: bold;">Combined symbols</span>. The <span style="font-weight: bold;">_</span> and <span style="font-weight: bold;">%</span> symbols can be combined and used in a query multiple times to create complex search templates.</li><li class="p_Normal" style="margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-weight: bold;">Character escaping</span>. If the value contains control characters, (such as <span style="font-weight: bold;">_</span> or <span style="font-weight: bold;">%</span>), they must be escaped with a backslash <span style="font-weight: bold;">\</span>.</li></ul>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;примера</span></p>
-<p class="p_Normal">Примеры</p>
+<p class="p_Normal"><span style="font-weight: bold;">Examples</span></p>
 <ol style="list-style-type:decimal">
-<li value="1" class="p_Normal"><span style="font-weight: bold;">[client] likef </span><span style="font-weight: bold;">'</span><span style="font-weight: bold;">Иван</span><span style="font-weight: bold;">'</span> — найдёт записи, где поле Клиент содержит точное значение <span style="font-weight: bold;">Иван</span>. Например, Иван Краснов, Иван Круглов и т. д.</li><li value="2" class="p_Normal"><span style="font-weight: bold;">[string] likef '_010203'</span> — ищет строки, начинающиеся с любого символа, за которым следует указанное значение <span style="font-weight: bold;">010203</span>.</li><li value="3" class="p_Normal"><span style="font-weight: bold;">[phone] likef '7912%'</span> — вернёт все записи, номер телефона в которых начинается на <span style="font-weight: bold;">7912</span> и содержит любое количество символов.</li><li value="4" class="p_Normal"><span style="font-weight: bold;">[order_name] likef 'Продукты%10_2024'</span> — находит заказы, где название начинается на значение <span style="font-weight: bold;">Продукты</span>, содержит любое количество символов, а оканчиваются на <span style="font-weight: bold;">10</span>, любой один символ и <span style="font-weight: bold;">2024</span>.</li><li value="5" class="p_Normal"><span style="font-weight: bold;">[email] likef '_petrov\%@example%'</span> — найдёт электронные адреса, которые начинаются с одного неизвестного символа, содержат <span style="font-weight: bold;">petrov%@example</span> и оканчиваются любым доменом. Знак процента, содержащийся в адресе, экранируется <span style="font-weight: bold;">\</span>. &nbsp;</li></ol>
+<li value="1" class="p_Normal"><span style="font-weight: bold;">[client] likef 'John'</span>.<span style="font-weight: bold;"> </span>Will search for entries where the <span style="font-weight: bold;">Client</span> field contains the exact value <span style="font-weight: bold;">John</span>. For example, John Smith, John Brown, etc.</li><li value="2" class="p_Normal"><span style="font-weight: bold;">[string] likef </span><span style="font-weight: bold;">'_010203'</span>. Searches for strings starting with any character followed by the specified value <span style="font-weight: bold;">010203</span>.</li><li value="3" class="p_Normal"><span style="font-weight: bold;">[phone] likef '7912%'</span>. Will recover all the entries where the phone number starts with <span style="font-weight: bold;">7912 </span>and contains any number of symbols.</li><li value="4" class="p_Normal"><span style="font-weight: bold;">[order_name] likef 'Products%10_2024'</span>. Searches for orders whose name starts with the <span style="font-weight: bold;">Products</span> value, contains any number of symbols, ends with <span style="font-weight: bold;">10</span>, any symbol, and <span style="font-weight: bold;">2024</span>.</li><li value="5" class="p_Normal"><span style="font-weight: bold;">[email] likef '_smith\%@example%'</span>. Will search for emails that start with one unknown symbol, contain <span style="font-weight: bold;">smith%@example</span>, and end with any domain. The percent symbol, which is included in the email, is escaped by <span style="font-weight: bold;">\</span>.</li></ol>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;примера</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;">Для запросов с операциями <code><b>LIKE</b></code> и <code><b>LIKEF</b></code> может применяться <a href="360009669952.html#equivalentyoe" class="topiclink">равнозначность букв е и ё при поиске</a>.</p>
-<ol style="list-style-type:upper-roman" start="3">
-<li value="3" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold;">Проверка на отсутствие значения</span> — операция <code><b>IS NULL</b></code><span style="font-size: 13px;"> или </span><code><b>IS EMPTY</b></code>. </li></ol>
-<p class="p_Normal" style="margin: 0 0 0 36px;">Операции <code><b>IS NULL</b></code> и <code><b>IS EMPTY</b></code> используются в любом регистре для проверки отсутствия значения в указанном поле. Они позволяют находить элементы приложений, у которых поле не содержит данных. </p>
+<ol style="list-style-type:upper-roman" start="2">
+<li value="3" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold;">Check for a missing value</span> is represented by the value <code><b>IS NULL</b></code> or <code><b>IS EMPTY</b></code>.</li></ol>
+<p style="line-height: 1.28; margin: 0 0 11px 34px;">The <code><b>IS NULL</b></code> and <code><b>IS EMPTY</b></code> operations are used in any register to check for the absence of a value in a specified field. They allow you to find app items where the field does not contain any data.</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;примера</span></p>
-<p style="text-indent: -24px; line-height: 1.28; margin: 0 0 11px 22px;">Пример</p>
-<p style="text-indent: -24px; line-height: 1.28; margin: 0 0 11px 22px;"><span style="font-size: 13px; font-weight: bold;">[budget] is null </span><span style="font-size: 13px;">или </span><span style="font-size: 13px; font-weight: bold;">[budget] is empty</span> — равнозначные запросы для поиска заказов, где не указан бюджет. </p>
+<p style="text-indent: -24px; line-height: 1.28; margin: 0 0 11px 22px;">Example</p>
+<p style="text-indent: -24px; line-height: 1.28; margin: 0 0 11px 22px;"><span style="font-size: 13px; font-weight: bold;">[budget] is null</span> or <span style="font-size: 13px; font-weight: bold;">[budget] is empty</span>. Search for orders where no budget is specified. </p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;примера</span></p>
 <ol style="list-style-type:upper-roman" start="4">
-<li value="4" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold;">Вхождение в множество</span> — операция <code><b>IN</b></code>. </li></ol>
-<p style="line-height: 1.28; margin: 0 0 11px 36px;">Регистронезависимая операция проверки содержания свойства приложения. Искомые значения указываются в круглых скобках, перечисляются через запятую и не разделяются пробелами. В качестве значения может выступать подзапрос. <span style="font-size: 15px;">При использовании в запросе <a href="eql-syntax.html#current-user" class="topiclink">функции поиска текущего пользователя</a> аргументы можно указывать в любом порядке.</span></p>
+<li value="4" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold;">Inclusion in a set</span> is represented by the value <code><b>IN</b></code>.</li></ol>
+<p style="line-height: 1.28; margin: 0 0 11px 0;">This is a case-insensitive operation to check the contents of an app property. Values to be searched are enclosed in parentheses, separated by commas, and not separated by spaces. When using the <a href="eql-syntax.html#current-user" class="topiclink">current user search function</a> in a query, the arguments can be specified in any order.</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;примера</span></p>
-<p style="text-indent: -24px; line-height: 1.28; margin: 0 0 11px 22px;">Примеры запросов</p>
+<p style="text-indent: -24px; line-height: 1.28; margin: 0 0 11px 22px;">Examples</p>
 <ol style="list-style-type:decimal">
-<li value="1" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-size: 13px; font-weight: bold;">[order_number] in (6,7,8,9)</span> — поиск всех заказов, в номерах которых содержатся перечисленные числа. </li><li value="2" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-size: 13px; font-weight: bold;">[client] in ('Алексей', 'Андрей', 'Иванов')</span> — поиск всех клиентов с перечисленными именами.</li><li value="3" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-size: 13px; font-weight: bold;">[__createdBy] in CurrentUser()</span><span style="font-size: 13px;"> или </span><span style="font-size: 13px; font-weight: bold;">CurrentUser() in [__createdBy] —</span><span style="font-size: 13px;"> равнозначные запросы для поиска всех элементов, созданных текущим пользователем системы.</span></li><li value="4" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-size: 13px; font-weight: bold;">[orders] in (select [__id] from [documents.contracts] where [total] &gt; 10000)</span> — выборка всех заказов, в договорах которых в поле <span style="font-weight: bold;">Сумма</span> указано значение более 10 000 рублей. Подробнее о составлении таких выражений читайте в подзаголовке <a href="eql-syntax.html#subquery" class="topiclink">«Подзапросы»</a>. </li></ol>
+<li value="1" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-size: 13px; font-weight: bold;">[order_number] in (6,7,8,9)</span><span style="font-size: 13px;">.</span> Search for all orders with numbers containing the listed figures.</li><li value="2" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-size: 13px; font-weight: bold;">[client] in ('Maria', 'Henry', 'Smith')</span>. Search for all clients with the listed names.</li><li value="3" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-size: 13px; font-weight: bold;">[__createdBy] in CurrentUser()</span><span style="font-size: 13px;"> or </span><span style="font-size: 13px; font-weight: bold;">CurrentUser() in [__createdBy].</span><span style="font-size: 13px;"> </span>Equivalent queries to find all items created by the current system user.</li><li value="4" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-size: 13px; font-weight: bold;">[orders] in (from [documents.contracts] select [__id] where [total] &gt; 100)</span>. Select all orders with the contracts having a value of more than 100 in the <span style="font-weight: bold;">Amount</span> field. To read more about making such expressions, see <a href="eql-syntax.html#subquery" class="topiclink">Subqueries</a>. </li></ol>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;примера</span></p>
-<h2 class="p_Heading2"><a id="logical-operators" class="hmanchor"></a><span class="f_Heading2">Логические операторы-связки</span></h2>
-<p style="line-height: 1.28; margin: 0 0 11px 0;">Логические операторы используются для проверки нескольких условий в одном запросе: </p>
+<h2 class="p_Heading2"><a id="logical-operators" class="hmanchor"></a><span class="f_Heading2">Logical operators (connectives)</span></h2>
+<p style="line-height: 1.28; margin: 0 0 11px 0;">Logical operators are used to check multiple conditions in a single query: </p>
 <ol style="list-style-type:upper-roman">
-<li value="1" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold;">Логическое И</span> — оператор <code><b>AND</b></code><span style="font-size: 13px;"> </span>объединяет несколько условия. При этом все условия должны выполняться. </li></ol>
+<li value="1" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold;">Logical AND</span>. The <code><b>AND</b></code> operator combines several conditions. In this case, all conditions must be met. </li></ol>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;примера</span></p>
-<p style="text-indent: -24px; line-height: 1.28; margin: 0 0 11px 22px;">Примеры запросов </p>
+<p style="text-indent: -24px; line-height: 1.28; margin: 0 0 11px 22px;">Examples </p>
 <ol style="list-style-type:decimal">
-<li value="1" class="p_Normal"><span style="font-weight: bold;">[prepayment] = 1000 and [budget] &gt; 3000</span> — поиск заказов, за которые внесли предоплату равную 1 000 рублей и бюджет которых превышает 3 000 рублей.</li><li value="2" class="p_Normal"><span style="font-weight: bold;">[__createdAt] &gt;= Datetime(2025, 1) and [__createdAt] &lt; Datetime(2025, 3)</span> — поиск всех элементов, которые были созданы за январь и февраль 2025 года, т. е. дата равняется или больше января и не превышает март.</li></ol>
+<li value="1" class="p_Normal"><span style="font-weight: bold;">[prepayment] = 1000 and [budget] &gt; 3000</span>. Search for orders for which prepayment is equal to 1,000 and the budget exceeds 3,000.</li><li value="2" class="p_Normal"><span style="font-weight: bold;">[__createdAt] &gt;= Datetime(2023, 1) and [__createdAt] &lt; Datetime(2023, 3)</span>. Find all items that were created during January and February 2023, i.e., the date is equal to or greater than January and not greater than March.</li></ol>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;примера</span></p>
 <ol style="list-style-type:upper-roman" start="2">
-<li value="2" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold;">Логическое ИЛИ</span> — оператор <code><b>OR</b></code><span style="font-size: 13px;"> </span>объединяет несколько условий и запрашивает выполнение хотя бы одного из них. </li></ol>
+<li value="2" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold;">Logical OR</span>. The <code><b>OR</b></code><span style="font-size: 13px;"> </span>operator combines several conditions and requires at least one of them to be met. </li></ol>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;примера&nbsp;</span></p>
-<p style="text-indent: -24px; line-height: 1.28; margin: 0 0 11px 22px;">Примеры запросов </p>
+<p style="text-indent: -24px; line-height: 1.28; margin: 0 0 11px 22px;">Examples</p>
 <ol style="list-style-type:decimal">
-<li value="1" class="p_Normal"><span style="font-weight: bold;">[order_number] in (6,7) or [client] is null</span> — в результате поиска отобразятся заказы, в номерах которых присутствуют указанные числа или для которых не заполнен клиент.</li><li value="2" class="p_Normal"><span style="font-weight: bold;">[client] like 'Алекс' or [orders] in (from [documents.contracts] select [__id] where [total] &gt; 10000)</span> — поиск заказов, в которых имя клиента содержит указанное значение или сумма договора превышает 10 000 рублей.</li></ol>
+<li value="1" class="p_Normal"><span style="font-weight: bold;">[order_number] in (6,7) or [client] is null</span>. The search result will show the orders with the given numbers or for which the client is not specified.</li><li value="2" class="p_Normal"><span style="font-weight: bold;">[client] like 'Alex' or [orders] in (from [documents.contracts] select [__id] where [total] &gt; 10000)</span>. Search for orders where the client name contains the specified value or the contract amount exceeds 10,000.</li></ol>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;примера</span></p>
 <ol style="list-style-type:upper-roman" start="3">
-<li value="3" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold;">Логическое НЕ</span> —<span style="font-weight: bold;"> </span>оператор <code><b>NOT</b></code><span style="font-size: 13px;"> </span>применяется для одного условия. Оно не должно выполняться. </li></ol>
+<li value="3" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold;">Logical NOT</span>. The <code><b>NOT</b></code><span style="font-size: 13px;"> </span>operator is used for one condition. It must not be met. </li></ol>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;примера</span></p>
-<p style="text-indent: -24px; line-height: 1.28; margin: 0 0 11px 22px;">Примеры запросов</p>
+<p style="text-indent: -24px; line-height: 1.28; margin: 0 0 11px 22px;">Examples</p>
 <ol style="list-style-type:decimal">
-<li value="1" class="p_Normal"><span style="font-weight: bold;">not [payment] is null</span> — поиск всех счетов, по которым внесена оплата, т. е. в поле значится не пустое значение.</li><li value="2" class="p_Normal"><span style="font-weight: bold;">not [client_name] in ('Петров', 'Иванов')</span> — поиск заказов, в которых имя клиента не совпадает с указанным значением. </li></ol>
+<li value="1" class="p_Normal"><span style="font-weight: bold;">not [payment] is null</span>. Search for all items for which any status is set, i.e. the status contains a non-empty value.</li><li value="2" class="p_Normal"><span style="font-weight: bold;">not [client_name] in ('Smith', 'Johnson')</span>. Search for orders where the client’s name does not match the specified value. </li></ol>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;примера</span></p>
-<h3 class="p_Heading3"><a id="query-priorities" class="hmanchor"></a><span class="f_Heading3">Приоритеты логических операций</span></h3>
-<p style="background: #ffffff; margin: 10px 0 0 0;">При использовании больше двух операций в одном запросе вы можете указать, выполнение какого условия является приоритетным. Оно проверяется в первую очередь и будет отображаться в результатах поиска выше других. Для обозначения приоритетного выражения в сложных запросах используются круглые скобки. </p>
+<h3 class="p_Heading3"><a id="query-priorities" class="hmanchor"></a><span class="f_Heading3">Priorities of logical operations</span></h3>
+<p style="line-height: 1.20; background: #ffffff; margin: 10px 0 0 0;">When using more than two operations in one query, you can specify which condition is prioritized. It is checked first and will be displayed in the search results above the others. In complex queries, parentheses are used to indicate the prioritized condition. </p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;примера</span></p>
-<p class="p_Normal">Примеры запросов</p>
+<p class="p_Normal">Examples</p>
 <ol style="list-style-type:decimal">
-<li value="1" class="p_Normal"><span style="font-weight: bold;">not ([client_name] like 'Алексей' or [client_name] like 'Андрей')</span> — в результате поиска будут выбраны заказы, имена клиентов которых не содержат первое или второе указанное значение.</li><li value="2" class="p_Normal"><span style="font-weight: bold;">(not [client_name] = 'Алексей') and [client_name] like 'Ал'</span> — в результате поиска отобразятся заказы, в которых имя клиента не равняется первому значению — <span style="font-weight: bold;">Алексей</span>, но содержит второе значение — <span style="font-weight: bold;">Ал</span>. &nbsp;</li></ol>
+<li value="1" class="p_Normal"><span style="font-weight: bold;">not ([client_name] like 'Aisha' or [client_name] like 'Albert')</span>. Search for orders with client names that do not contain the first or the second indicated value.</li><li value="2" class="p_Normal"><span style="font-weight: bold;">(not [client_name] = 'Alex') and [client_name] like 'Al'</span>. Search for orders with client names that do not contain the first value <span style="font-weight: bold;">Alex</span> but have the second value <span style="font-weight: bold;">Al</span>. &nbsp;</li></ol>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;примера</span></p>
-<h2 class="p_Heading2"><a id="functions" class="hmanchor"></a><span class="f_Heading2">Функции</span></h2>
-<p style="line-height: 1.28; margin: 0 0 11px 0;">Функции в EQL-запросах можно использовать для присвоения значения свойствам приложения, а также для его вычисления:</p>
+<h2 class="p_Heading2"><a id="functions" class="hmanchor"></a><span class="f_Heading2">Functions</span></h2>
+<p style="line-height: 1.28; margin: 0 0 11px 0;">Functions in EQL queries can be used to assign a value to app properties as well as to calculate it:</p>
 <ol style="list-style-type:upper-roman">
-<li value="1" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold;">Дата</span><span style="font-size: 13px;"> — </span><code><b>Datetime()</b></code><span style="font-size: 13px;">.</span></li></ol>
-<p style="line-height: 1.28; margin: 0 0 11px 36px;">Функция определяет представление заданной даты. Параметры прописываются в круглых скобках с перечислением через запятую.</p>
-<p style="line-height: 1.28; margin: 0 0 11px 36px;">В качестве параметров указываются числовые значения года, месяца, дня, часа, минуты, секунды и строковое представление часового пояса. Обязательным параметром является только обозначение года, остальные — указываются опционально. Если вы не выбрали время, в запросе принимается значение ноль часов, минут и секунд. </p>
-<p style="line-height: 1.28; margin: 0 0 11px 36px;">Вы можете задать дату функциями, которые вычисляются в момент выполнения запроса:</p>
+<li value="1" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><code><b>Datetime()</b></code>.<span style="font-size: 13px;"> </span></li></ol>
+<p style="line-height: 1.28; margin: 0 0 11px 34px;">The function defines the representation of the date specified in the function parameters.Parameters are written in parentheses with enumeration separated by commas. <br />
+Numeric values of the year, month, day, hour, minute, and second, as well as the string representation of the time zone, are specified as parameters. The only mandatory parameter is the year, the others are specified optionally. If no time is selected, the request accepts the value of zero hours, minutes, and seconds. <br />
+You can set the date with functions that are calculated at the time the query is executed:</p>
 <ul style="list-style-type:disc">
-<li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold;">Сегодня</span> — <code><b>Today</b></code><span style="font-size: 13px;"> </span>текущая дата;<span style="font-weight: bold;"> </span></li><li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold;">Сейчас</span> — <code><b>Now</b></code><span style="font-size: 13px;"> </span>текущее время. &nbsp;</li></ul>
+<li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><code><b>Today</b></code>. Current date.</li><li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><code><b>Now</b></code>. Current time. </li></ul>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;примера</span></p>
-<p class="p_Normal">Примеры запросов &nbsp;</p>
+<p class="p_Normal">Examples &nbsp;</p>
 <ol style="list-style-type:decimal">
-<li value="1" class="p_Normal"><span style="font-weight: bold;">[__createdAt] &gt; Datetime(2024)</span> — поиск элементов с датой создания позднее 2024 года.</li><li value="2" class="p_Normal"><span style="font-weight: bold;">[__createdAt] &gt; Datetime(2025, 1, 31)</span> — поиск элементов с датой создания позднее, чем 31 января 2025 года.</li><li value="3" class="p_Normal"><span style="font-weight: bold;">[finish_date] &gt; Datetime(2025, 2, '+09:00')</span> — поиск заказов, сборку которых завершили позднее, чем февраль 2025 года с учётом часового пояса. </li><li value="4" class="p_Normal"><span style="font-weight: bold;">[__createdAt] &lt; Datetime('Now')</span> — поиск элементов с датой создания ранее, чем текущее время. </li><li value="5" class="p_Normal"><span style="font-weight: bold;">[closing_date] &gt; Datetime('Today')</span> — поиск сделок, дата закрытия которых позднее, чем текущая дата.</li></ol>
+<li value="1" class="p_Normal"><span style="font-weight: bold;">[__createdAt] &gt; Datetime(2022)</span>. Search for items with a creation date later than 2022.</li><li value="2" class="p_Normal"><span style="font-weight: bold;">[__createdAt] &gt; Datetime(2023, 1, 31)</span>. Search for items with a creation date later than January 31, 2023.</li><li value="3" class="p_Normal"><span style="font-weight: bold;">[finish_date] &gt; Datetime(2023, 2, '+09:00')</span>. Search for orders that were assembled later than February 2023 given the time zone.</li><li value="4" class="p_Normal"><span style="font-weight: bold;">[__createdAt] &lt; Datetime('Now')</span>. Search for items with creation date earlier than the current time.</li><li value="5" class="p_Normal"><span style="font-weight: bold;">[closing_date] &gt; Datetime('Today')</span>. Search for deals, the closing date of which is later than the current date.</li></ol>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;примера</span></p>
 <ol style="list-style-type:upper-roman" start="2">
-<li value="2" style="background: #ffffff; margin-top: 10px; margin-right: 0; margin-bottom: 0;"><span style="font-weight: bold;">Время</span> <span style="font-size: 13px;">— </span><code><b>Time()</b></code><span style="font-size: 13px;">. </span></li></ol>
-<p style="background: #ffffff; margin: 10px 0 0 36px;">Функция определяет представление времени, заданное в параметрах. В качестве параметров указываются числовые значения часа, минуты и секунды. Обязательным параметром является только обозначение часа. Параметры прописываются в круглых скобках с перечислением через запятую. </p>
+<li value="2" style="line-height: 1.20; background: #ffffff; margin-top: 10px; margin-right: 0; margin-bottom: 0;"><code><b>Time()</b></code>.<span style="font-size: 13px;"> </span></li></ol>
+<p style="line-height: 1.20; background: #ffffff; margin: 10px 0 0 34px;">The function defines the representation of the time specified in the parameters. Numerical values of the hour, minute, and second are specified as parameters. The only mandatory parameter is the hour. Parameters are enclosed in parentheses and separated by commas. </p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;примера</span></p>
-<p class="p_Normal">Примеры запросов &nbsp;</p>
+<p class="p_Normal">Examples</p>
 <ol style="list-style-type:decimal">
-<li value="1" class="p_Normal"><span style="font-weight: bold;">[closing_time] &lt; Time(17)</span> — поиск сделок, закрытых позднее, чем 17:00.</li><li value="2" class="p_Normal"><span style="font-weight: bold;">[closing_time] &lt; Time(12, 30, 00)</span> — поиск сделок, закрытых позднее, чем 12:30. </li></ol>
+<li value="1" class="p_Normal"><span style="font-weight: bold;">[closing_time] &lt; Time(17)</span>. Search for deals closed later than 5 PM.</li><li value="2" class="p_Normal"><span style="font-weight: bold;">[closing_time] &lt; Time(12, 30, 00)</span>. Search for deals closed later than 12:30 PM. </li></ol>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;примера</span></p>
 <ol style="list-style-type:upper-roman" start="3">
-<li value="3" style="margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><a id="relative-date" class="hmanchor"></a><span style="font-weight: bold;">Относительное время</span> <span style="font-size: 13px;">— </span><code><b>RelativeDatetime('start', 'end')</b></code><span style="font-size: 13px;">. </span></li></ol>
-<p style="margin: 7px 0 7px 36px;">Функция определяет временной промежуток, который рассчитывается относительно текущей даты, с учётом заданной в системе временной зоны. Для вычисления функции используются операторы <span style="font-weight: bold;">=</span> или <span style="font-weight: bold;">IN</span>. </p>
-<p style="margin: 7px 0 7px 37px;">Период поиска прописывается в скобках. В функции всегда указываются параметры начала и окончания периода, которые заключаются в одинарные кавычки и разделяются запятой. Для вычисления каждого параметра используется цифробуквенное выражение или их комбинация:</p>
+<li value="3" style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><a id="relative-date" class="hmanchor"></a><code><b>RelativeDatetime('start', 'end')</b></code>.<span style="font-size: 13px;"> </span> </li></ol>
+<p style="line-height: 1.20; margin: 7px 0 7px 34px;">The function determines a time interval calculated relative to the current date, taking into account the specified time zone in the system. The <span style="font-weight: bold;">=</span> or <span style="font-weight: bold;">IN</span> operators are used to calculate the function. </p>
+<p style="line-height: 1.20; margin: 7px 0 7px 37px;">The search period is specified in parentheses. The function always specifies the start and end parameters of the period, enclosed in single quotes and separated by a comma. To calculate each parameter, an alphanumeric expression or their combination is used:</p>
 <ul style="list-style-type:disc">
-<li style="margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-weight: bold;">цифровое обозначение</span> — положительный или отрицательный количественный диапазон вычисления периода. Для поиска прошедшего периода используется знак минус, для последующих во времени дат — плюс. Ноль обозначает текущую дату и не требует использования знака плюса;</li><li style="margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-weight: bold;">буквенной обозначение</span> — разряд временного промежутка: час, день, год и т. д. Может указываться на английском и русском языках. </li></ul>
-<p style="margin: 7px 0 7px 0;"><a class="dropdown-toggle" style="font-style: normal; font-weight: normal; color: #000000; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186A1')">Доступные буквенные обозначения разряда временного промежутка</a></p>
+<li style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-weight: bold;">Numeric designation</span>: a positive or negative quantitative range for calculating the period. A minus sign is used for searching past periods, and a plus sign for future dates. Zero denotes the current date and does not require the use of a plus sign.</li><li style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-weight: bold;">Letter designation</span>: a unit of time interval such as hour, day, year, etc. </li></ul>
+<p style="line-height: 1.20; margin: 7px 0 7px 0;"><a class="dropdown-toggle" style="font-style: normal; font-weight: normal; color: #000000; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186A1')">Available letter designations for the time interval</a></p>
 <div id="TOGGLE0186A1" class="dropdown-toggle-body" style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 7px 0 7px 0;"><table style="border:none; border-spacing:0;">
 <tr>
 <td style="vertical-align:top; padding:0; border:none"><ol style="list-style-type:decimal">
-<li value="1" style="margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-weight: bold;">ч / h</span> — час.</li><li value="2" style="margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-weight: bold;">д / d</span> — день.</li><li value="3" style="margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-weight: bold;">н / w</span> — неделя.</li><li value="4" style="margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-weight: bold;">м / m</span> — месяц.</li><li value="5" style="margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-weight: bold;">к / q </span>— квартал (три месяца).</li><li value="6" style="margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-weight: bold;">г / y </span>— год.</li></ol>
+<li value="1" style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-weight: bold;">h</span> for an hour.</li><li value="2" style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-weight: bold;">d</span> for a day.</li><li value="3" style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-weight: bold;">w</span> for a week.</li><li value="4" style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-weight: bold;">m</span> for a month.</li><li value="5" style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-weight: bold;">q </span>for a quarter (3 months).</li><li value="6" style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-weight: bold;">y </span>for a year.</li></ol>
 </td>
 </tr>
 </table>
 </div>
-<p style="margin: 7px 0 7px 37px;">Вычисление параметров выполняется последовательно. При этом расчёт осуществляется не в единицах от текущей даты, а по календарному периоду времени. </p>
-<p style="margin: 7px 0 7px 36px;">Например, если текущая дата — 11 декабря 2025 года, и в функции начало периода задано параметром <span style="font-weight: bold;">'-1m'</span> (минус один месяц), то вычитаться будут не 30 дней от наступившей даты, а календарный месяц. Таким образом началом периода в результатах поиска будет считаться 1 ноября 2025 года. </p>
-<p style="margin: 7px 0 7px 37px;">Особенности вычисления параметров: &nbsp; &nbsp;</p>
+<p style="line-height: 1.20; margin: 7px 0 7px 37px;">The parameters are calculated sequentially. In this case, the calculation is not based on units from the current date, but on a calendar period of time. </p>
+<p style="line-height: 1.20; margin: 7px 0 7px 36px;">For example, if the current date is December 11, 2023, and the start of the period in the function is specified as <span style="font-weight: bold;">'-1m'</span> (minus one month), then it will not subtract 30 days from the current date but rather a calendar month. Thus, the start of the period in the search results will be considered as November 1, 2023. </p>
+<p style="line-height: 1.20; margin: 7px 0 7px 37px;">When specifying period parameters, it is important to consider the peculiarities of their calculation: &nbsp; &nbsp;</p>
 <ul style="list-style-type:disc">
-<li style="margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><code><b>start</b></code> — параметр начала периода относительно текущей даты. В результат поиска включается вычисленное значение. Примеры ввода параметра:<ul style="list-style-type:circle">
-<li style="margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-size: 13px; font-weight: bold;">'0h'</span> — поиск с текущей даты и начала текущего часа;</li><li style="margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-size: 13px; font-weight: bold;">'+1m'</span> — поиск с начала следующего месяца;</li><li style="margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-size: 13px; font-weight: bold;">'-1w+1d'</span> — дата начала поиска рассчитывается следующим образом: от текущего дня отнимается календарная неделя и прибавляется один день. Так, если текущий день недели — понедельник, поиск производится с начала вторника прошлой недели.</li></ul>
-<li style="margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><code><b>end</b></code> — параметр окончания периода относительно текущей даты. При вычислении к наименьшему отрезку времени, указанному в функции, добавляется единица. Полученное временное значение не включается в поиск, т. е. учитываются все значения являющиеся меньшими, но не равными вычисленному результату. Примеры ввода параметра:<ul style="list-style-type:circle">
-<li style="margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-size: 13px; font-weight: bold;">'0h'</span> — поиск до конца текущего часа;</li><li style="margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-size: 13px; font-weight: bold;">'0d'</span> — поиск до конца текущего дня;</li><li style="margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-size: 13px; font-weight: bold;">'+1m'</span> — до конца следующего месяца;</li><li style="margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-size: 13px; font-weight: bold;">'-1w+1d'</span> — дата окончания поиска рассчитывается следующим образом: вне зависимости от текущего дня недели расчёт начинается с понедельника прошлой календарной недели. Затем прибавляется прописанный в параметре один день, а также единица наименьшего отрезка времени — в данном случае это ещё один день. При вычислении получаем среду прошлой недели. Поскольку в окончание периода включаются все значения меньшие, но не равные вычисленному параметру, поиск производится до конца вторника прошлой недели.</li></ul></li></ul>
-<p style="margin: 7px 0 7px 36px;">Обратите внимание, в результате вычисления начало периода не должно быть большим или равным его окончанию, а окончание — меньшим или равным началу. При составлении такого запроса вы увидите ошибку о неверно указанном формате относительных дат.</p>
+<li style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><code><b>start</b></code>.<span style="font-size: 13px;"> </span>The parameter represents the start of the period relative to the current date. The calculated value is included in the search result. Examples of parameter input:<ul style="list-style-type:circle">
+<li style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-size: 13px; font-weight: bold;">'0h'</span>. Search from the current date and the beginning of the current hour.</li><li style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-size: 13px; font-weight: bold;">'+1m'</span>. Search from the beginning of the next month.</li><li style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-size: 13px; font-weight: bold;">'-1w+1d'</span>. The start date of the search is calculated as follows: subtract one calendar week from the current day and add one day. Thus, if the current day is Monday, the search starts from the beginning of last Tuesday.</li></ul>
+<li style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><code><b>end</b></code>.<span style="font-size: 13px;"> </span>The parameter represents the end of the period relative to the current date. When calculating the smallest time interval specified in the function, one unit is added. The resulting time value is not included in the search, i.e., all values less than but not equal to the calculated result are considered. Examples of parameter input:<ul style="list-style-type:circle">
+<li style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-size: 13px; font-weight: bold;">'0h'</span>. Search until the end of the current hour.</li><li style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-size: 13px; font-weight: bold;">'0d'</span>. Search until the end of the current day.</li><li style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-size: 13px; font-weight: bold;">'+1m'</span>. Until the end of the next month.</li><li style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-size: 13px; font-weight: bold;">'-1w+1d'</span>. The end date of the search is calculated as follows: regardless of the current day of the week, the calculation starts from Monday of the previous calendar week. Then, the day specified in the parameter is added, as well as one unit of the smallest time interval — in this case, another day. The calculation results in the previous week's Wednesday. Since all values less than but not equal to the calculated parameter are included in the end of the period, the search is performed until the end of last Tuesday.</li></ul></li></ul>
+<p style="line-height: 1.20; margin: 7px 0 7px 36px;">Please note that the start of the period after calculation should not be greater than or equal to its end, and the end should be less than or equal to the start. When composing such a request, you will see an error indicating an incorrectly specified format for relative dates.</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;примера</span></p>
-<p style="margin: 7px 0 7px 0;">Примеры наиболее распространённых запросов</p>
+<p style="line-height: 1.20; margin: 7px 0 7px 0;">The most common examples of queries</p>
 <ol style="list-style-type:decimal">
-<li value="1" style="margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-size: 13px; font-weight: bold;">[date] IN RelativeDatetime('0d', '0d')</span> — поиск за текущую дату.</li><li value="2" style="margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-size: 13px; font-weight: bold;">[date] IN RelativeDatetime('-1d', '-1d')</span> — поиск за предыдущий день.</li><li value="3" style="margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-size: 13px; font-weight: bold;">[date] IN RelativeDatetime('0w', '0w')</span> — элементы за текущую неделю.</li><li value="4" style="margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-size: 13px; font-weight: bold;">[date] IN RelativeDatetime('-1w', '-1w')</span> — поиск за прошлую неделю.</li><li value="5" style="margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-size: 13px; font-weight: bold;">[date] IN RelativeDatetime('-7d', '-1d')</span> — элементы за предыдущие семь дней.</li><li value="6" style="margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-size: 13px; font-weight: bold;">[date] IN RelativeDatetime('+1w', '+1w')</span> — учитывается вся следующая неделя.</li><li value="7" style="margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-size: 13px; font-weight: bold;">[date] IN RelativeDatetime('-1w+2d', '-1w+3d')</span> — поиск с прошлой среды до конца прошлого четверга.</li><li value="8" style="margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-size: 13px; font-weight: bold;">[date] IN RelativeDatetime('-1m', '+1m')</span> — поиск с начала прошлого месяца и до конца следующего месяца.</li><li value="9" style="margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-size: 13px; font-weight: bold;">[date] IN RelativeDatetime('0y+3q','0y')</span> — элементы за третий и четвёртый квартал текущего года, т. е. поиск с третьего квартала по конец года.</li><li value="10" style="margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-size: 13px; font-weight: bold;">[date] IN RelativeDatetime('0y-2m', '0y-1m')</span> — поиск за последний и предпоследний месяц прошлого года.</li><li value="11" style="margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-size: 13px; font-weight: bold;">[date] IN RelativeDatetime('+1y', '+1y0m')</span> — учитывается весь первый месяц следующего года.</li></ol>
+<li value="1" style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-size: 13px; font-weight: bold;">[date] IN RelativeDatetime('0d', '0d')</span>. Search for the current date.</li><li value="2" style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-size: 13px; font-weight: bold;">[date] IN RelativeDatetime('-1d', '-1d')</span>. Search for the previous day.</li><li value="3" style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-size: 13px; font-weight: bold;">[date] IN RelativeDatetime('0w', '0w')</span>. Items for the current week.</li><li value="4" style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-size: 13px; font-weight: bold;">[date] IN RelativeDatetime('-1w', '-1w')</span>. Search for the previous week.</li><li value="5" style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-size: 13px; font-weight: bold;">[date] IN RelativeDatetime('-7d', '-1d')</span>. Items for the past seven days.</li><li value="6" style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-size: 13px; font-weight: bold;">[date] IN RelativeDatetime('+1w', '+1w')</span>. Considers the entire upcoming week.</li><li value="7" style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-size: 13px; font-weight: bold;">[date] IN RelativeDatetime('-1w+2d', '-1w+3d')</span>. Search from last Wednesday to the end of last Thursday.</li><li value="8" style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-size: 13px; font-weight: bold;">[date] IN RelativeDatetime('-1m', '+1m')</span>. Search from the beginning of last month to the end of next month.</li><li value="9" style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-size: 13px; font-weight: bold;">[date] IN RelativeDatetime('0y+3q','0y')</span>. Items for the third and fourth quarters of the current year, i.e., search from the third quarter to the end of the year.</li><li value="10" style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-size: 13px; font-weight: bold;">[date] IN RelativeDatetime('0y-2m', '0y-1m')</span>. Search for the last and second-to-last month of the previous year.</li><li value="11" style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-size: 13px; font-weight: bold;">[date] IN RelativeDatetime('+1y', '+1y0m')</span>. Considers the entire first month of the next year.</li></ol>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;примера</span></p>
 <ol style="list-style-type:upper-roman" start="4">
-<li value="4" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold;">Количество</span><span style="font-size: 13px;"> — </span><code><b>Count()</b></code><span style="font-size: 13px;">.</span></li></ol>
-<p style="line-height: 1.28; margin: 0 0 11px 36px;">Функция определяет количество элементов параметра. В качестве параметра может выступать свойство, содержащее множественное значение или подзапрос. В операциях сравнения функция указывается перед вычисляемым параметром без пробела. </p>
+<li value="4" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><code><b>Count()</b></code>.</li></ol>
+<p style="line-height: 1.28; margin: 0 0 11px 34px;">This is a case-insensitive function that determines the number of elements of a parameter. The parameter can be a property containing a multiple value or a subquery. In comparison operations, the function is specified before the calculated parameter without a space.</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;примера</span></p>
-<p class="p_Normal">Примеры запросов</p>
+<p class="p_Normal">Examples</p>
 <ol style="list-style-type:decimal">
-<li value="1" class="p_Normal"><span style="font-weight: bold;">count([orders]) &gt; 3</span> — поиск компаний, для которых создано более трёх заказов.</li><li value="2" class="p_Normal"><span style="font-weight: bold;">count(from [documents.contract] where parent.[__id] in [client] and [total] &gt; 10000) &gt; 2</span> — поиск компаний, для которых создано более двух договоров, где общая сумма превышает 10 000 рублей.</li></ol>
+<li value="1" class="p_Normal"><span style="font-weight: bold;">count([orders]) &gt; 3</span>. Search for companies for which more than three orders have been created.</li><li value="2" class="p_Normal"><span style="font-weight: bold;">count(from [documents.contract] where parent.[__id] in [client] and [total] &gt; 10000) &gt; 2</span>. Search for companies for which more than two contracts were created, with the total amount exceeding 10,000.</li></ol>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;примера</span></p>
 <ol style="list-style-type:upper-roman" start="5">
-<li value="5" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><a id="current-user" class="hmanchor"></a><span style="font-weight: bold;">Текущий пользователь</span> <span style="font-size: 13px;">— </span><code><b>CurrentUser()</b></code><span style="font-size: 13px;">.</span></li></ol>
-<p style="line-height: 1.28; margin: 0 0 11px 36px;">Функция возвращает идентификатор текущего пользователя. Используется для определения значения свойства приложения. </p>
+<li value="5" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><code><b>CurrentUser()</b></code>.<span style="font-size: 13px;"> </span></li></ol>
+<p style="text-indent: -24px; line-height: 1.28; margin: 0 0 11px 22px;">This function returns the identifier of the current user. Used to determine the value of an app property.</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;примера</span></p>
-<p class="p_Normal">Пример </p>
-<p class="p_Normal"><span style="font-weight: bold;">[responsible] = CurrentUser()</span> — заказы, за которые ответственен текущий пользователь. </p>
+<p class="p_Normal"><a id="current-user" class="hmanchor"></a>Example </p>
+<p class="p_Normal"><span style="font-weight: bold;">[responsible] = CurrentUser()</span>. Orders assigned to the current user. </p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;примера</span></p>
 <ol style="list-style-type:upper-roman" start="6">
-<li value="6" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><a id="refitem" class="hmanchor"></a><span style="font-weight: bold;">Элемент коллекции</span> — <code><b>Refitem()</b></code><span style="font-size: 13px;">.</span></li></ol>
-<p style="text-indent: -1px; line-height: 1.28; margin: 0 0 11px 36px;">Функция получения элемента из поля типа <a href="360009707032.html#arbitrary-app" class="topiclink">Произвольное приложение</a>. Возвращает элементы, поля которых ссылаются на определённый элемент другого приложения. В функции указывается путь до элемента, включая код раздела и приложения, в котором он создан, и строковое представление его идентификатора. </p>
-<p style="line-height: 1.28; margin: 0 0 11px 36px;">Параметры прописываются двумя способами. Каждое значение заключается в одинарные кавычки и разделяется запятой. Также весь путь можно указать в одинарных кавычках и объединить параметры двоеточием. &nbsp;</p>
+<li value="6" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><a id="refitem" class="hmanchor"></a><code><b>Refitem()</b></code>.<span style="font-size: 13px;"> </span></li></ol>
+<p style="line-height: 1.28; margin: 0 0 11px 34px;">This is a function for getting an item from the <a href="360009707032.html#arbitrary-app" class="topiclink">Arbitrary app</a> field. It returns items whose fields reference a specific item from another app. The function specifies the path to the item, including the section code and the app where it is created, and the string representation of its identifier. </p>
+<p style="line-height: 1.28; margin: 0 0 11px 37px;">Parameters are specified in two ways. Each value is enclosed in single quotes and separated by a comma. Also, the entire path can be specified in single quotes and parameters can be combined with a colon. &nbsp;</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;примера</span></p>
-<p class="p_Normal">Примеры запросов</p>
+<p class="p_Normal">Examples</p>
 <ol style="list-style-type:decimal">
-<li value="1" class="p_Normal"><span style="font-weight: bold;">[bill] = Refitem('documents', 'bills', '018a8dbb-04cd-7798-a363-aae245148b10')</span> или <span style="font-weight: bold;">[bill] = Refitem('documents:bills:018a8dbb-04cd-7798-a363-aae245148b10')</span> — равнозначные запросы, в которых осуществляется поиск по полю <span style="font-weight: bold;">Счет</span> в элементах приложения <span style="font-weight: bold;">Договоры</span>. В результате отобразится договор, к которому привязан определённый счёт из другого раздела и приложения.</li><li value="2" class="p_Normal"><span style="font-weight: bold;">[bill] is null</span> — поиск договоров, в которых не указан счёт, т. е. нет ссылки на элемент приложения <span style="font-weight: bold;">Счета</span>.</li></ol>
+<li value="1" class="p_Normal"><span style="font-weight: bold;">[bill] = Refitem('documents', 'bills', '018a8dbb-04cd-7798-a363-aae245148b10')</span> or <span style="font-weight: bold;">[bill] = Refitem('documents:bills:018a8dbb-04cd-7798-a363-aae245148b10')</span>. Equivalent queries where a search is conducted based on the <span style="font-weight: bold;">Bill</span> field in items of the <span style="font-weight: bold;">Contracts</span> app. As a result, the contract associated with a specific bill from another workspace and app will be displayed.</li><li value="2" class="p_Normal"><span style="font-weight: bold;">[bill] is null</span>. Search for contracts where the bill is not specified, i.e., there is no reference to an item from the <span style="font-weight: bold;">Bills</span> app.</li></ol>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;примера</span></p>
-<h2 class="p_Heading2"><a id="subquery" class="hmanchor"></a><span class="f_Heading2">Подзапросы</span></h2>
-<p style="background: #ffffff; margin: 10px 0 0 0;">Подзапрос — это вложенный EQL-запрос, который является частью другого запроса. При составлении выражения из нескольких запросов подзапрос выделяется круглыми скобками.</p>
+<h2 class="p_Heading2"><a id="subquery" class="hmanchor"></a><span class="f_Heading2">Subqueries</span></h2>
+<p style="line-height: 1.20; background: #ffffff; margin: 10px 0 0 0;">A subquery is a nested EQL query that is part of another query. When composing an expression from several queries, the subquery is marked with parentheses.</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;примера&nbsp;</span></p>
-<p class="p_Normal">Пример</p>
-<p class="p_Normal"><span style="font-weight: bold;">not ([__name] like 'Алекс' or [__name] like 'Ан')</span> — <span style="color: #394149;">найдёт все элементы, у которых название не содержит значения </span><span style="font-weight: bold; color: #394149;">Алекс</span><span style="color: #394149;"> или </span><span style="font-weight: bold; color: #394149;">Ан</span>.</p>
+<p class="p_Normal">Example</p>
+<p class="p_Normal"><span style="font-weight: bold;">not ([__name] like 'Alex' or [__name] like 'An')</span>. Items whose name does not contain the specified values.</p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;примера&nbsp;&nbsp;</span></p>
-<h3 class="p_Heading3"><span class="f_Heading3">Операторы выборки в подзапросах</span></h3>
-<p style="line-height: 1.28; margin: 0 0 11px 0;">Подзапросы позволяют обращаться к элементам из других разделов системы, а также к свойствам типа <a href="360009707032.html#arbitrary-app" class="topiclink">Произвольное приложение</a>. Для этого применяются операторы:</p>
+<h3 class="p_Heading3"><span class="f_Heading3">Selection operators in subqueries</span></h3>
+<p style="line-height: 1.20; background: #ffffff; margin: 10px 0 0 0;">In a subquery, you can access the app items from other workspaces of the system and also the <a href="360009707032.html#arbitrary-app" class="topiclink">Arbitrary app</a> properties. For this purpose, the operator of data selection by criteria is used: </p>
 <ul style="list-style-type:disc">
-<li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><code><b>SELECT_FROM_WHERE</b></code> или <code><b>FROM_SELECT_WHERE</b></code><span style="font-size: 13px;">;</span></li><li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><code><b>FROM_WHERE</b></code> — <span style="color: #394149;">используется для функции определения количества </span><code><b>Count()</b></code><span style="color: #394149;">. Уточняет, в каком приложении создано свойство, по которому осуществляется поиск.</span></li></ul>
-<h4 class="p_Heading4"><span class="f_Heading4">Синтаксис операторов выборки</span></h4>
-<p style="background: #ffffff; margin: 10px 0 0 0;">В каждом подзапросе указываются:</p>
+<li style="line-height: 1.20; background: #ffffff; margin-top: 10px; margin-right: 0; margin-bottom: 0;"><code><b>SELECT_FROM_WHERE</b></code> or <code><b>FROM_SELECT_WHERE</b></code>.</li><li style="line-height: 1.20; background: #ffffff; margin-top: 10px; margin-right: 0; margin-bottom: 0;"><code><b>FROM_WHERE</b></code>.<span style="font-size: 13px;"> </span>Is used for the <code><b>Count()</b></code> function to determine the count. Specifies in which app the property being searched is created.</li></ul>
+<h4 class="p_Heading4"><span class="f_Heading4">Selection operators syntax</span></h4>
+<p class="p_Normal">Each subquery specifies:</p>
 <ol style="list-style-type:decimal">
-<li value="1" style="margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-weight: bold;">Источник данных</span> — код приложения, из которого выбираются данные.</li><li value="2" style="margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-weight: bold;">Свойство для поиска</span> — определяет, какое именно свойство в источнике данных используется для поиска.</li><li value="3" style="margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-weight: bold;">Условие поиска</span> — критерий, по которому выполняется фильтрация данных.</li></ol>
+<li value="1" class="p_Normal"><span style="font-weight: bold;">Data Source</span>. The app code from which the data is selected.</li><li value="2" class="p_Normal"><span style="font-weight: bold;">Property to search for</span>. Defines which property in the data source is used for the search.</li><li value="3" class="p_Normal"><span style="font-weight: bold;">Search Condition</span>. The criteria by which the data is filtered.</li></ol>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;примера</span></p>
-<p class="p_Normal">Примеры</p>
+<p class="p_Normal"><span style="font-weight: bold;">Examples</span></p>
 <ol style="list-style-type:decimal">
-<li value="1" class="p_Normal"><span style="font-weight: bold;">[clients] in (select [__id] from [clients.orders] where [total] &gt; 1000)</span> — выборка элементов приложения <span style="font-weight: bold;">Клиенты</span>, для которых созданы заказы с суммой более 1 000 рублей.</li><li value="2" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold; color: #394149;">[contracts] in (select [__id] from [clients.leads] where [__name] = 'ООО Пристань')</span><span style="color: #394149;"> — поиск договоров из свойства типа </span><span style="font-weight: bold; color: #394149;">Произвольное приложение</span><span style="color: #394149;">, где имя компании совпадает с указанным в запросе.</span></li><li value="3" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-size: 13px; font-weight: bold; color: #394149;">count(from [bookstore.book] where parent.[__id] in [authors]) &gt; 0</span><span style="font-size: 13px; color: #394149;"> — поиск авторов, в карточке которых указана хотя бы одна книга.</span></li></ol>
+<li value="1" class="p_Normal"><span style="font-weight: bold;">[clients] in (from [clients.orders] select [__id] where [total] &gt; 1000)</span>. Selection of the <span style="font-weight: bold;">Customer</span> app items for whom orders with the amount of more than 1,000 have been created.</li><li value="2" class="p_Normal"><span style="font-weight: bold;">[contracts] in (select [__id] from [clients.leads] where [__name] = 'Star Inc.')</span>. Search for contracts from a property of the <span style="font-weight: bold;">Arbitrary app</span> type, where the company name matches the one specified in the query.</li><li value="3" class="p_Normal"><span style="font-weight: bold;">count(from [bookstore.book] where parent.[__id] in [authors]) &gt; 0</span>. Search for authors with at least one book in their profile.</li></ol>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;примера</span></p>
-<h3 class="p_Heading3"><span class="f_Heading3">Вложенные подзапросы</span></h3>
-<p style="background: #ffffff; margin: 10px 0 0 0;">Подзапросы могут включать в себя другие подзапросы. Чтобы понимать уровень вложенности, для обращения к свойствам приложения используются операторы:</p>
+<h3 class="p_Heading3"><span class="f_Heading3">Nested subqueries</span></h3>
+<p style="line-height: 1.20; background: #ffffff; margin: 10px 0 0 0;">Subqueries can include other subqueries. To indicate the level of nesting, the following operators are used to access app properties:</p>
 <ul style="list-style-type:disc">
-<li style="background: #ffffff; margin-top: 10px; margin-right: 0; margin-bottom: 0;"><code><b>PARENT</b></code> — используется для обращения к свойствам родительского приложения;</li><li style="background: #ffffff; margin-top: 10px; margin-right: 0; margin-bottom: 0;"><code><b>ROOT</b></code><span style="font-weight: bold;"> </span>— обращается к полям корневого приложения, которое указывается в начале запроса. Например, это приложение, на странице которого осуществляется EQL-поиск.</li></ul>
+<li style="line-height: 1.20; background: #ffffff; margin-top: 10px; margin-right: 0; margin-bottom: 0;"><code><b>PARENT</b></code> is used to access the properties of the parent app.</li><li style="line-height: 1.20; background: #ffffff; margin-top: 10px; margin-right: 0; margin-bottom: 0;"><code><b>ROOT</b></code><span style="font-weight: bold;"> </span>accesses the fields of the root app, which is specified at the beginning of the query. For example, it can be the app on whose page the EQL search is performed.</li></ul>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;примера</span></p>
-<p class="p_Normal">Примеры запросов</p>
+<p class="p_Normal">Query examples</p>
 <ol style="list-style-type:decimal">
-<li value="1" class="p_Normal"><span style="font-weight: bold;">count(from [clients.contacts] where parent.[__id] in [contact]) &gt; 1</span> — поиск заказов, в которых указано более одного клиента. </li><li value="2" class="p_Normal"><span style="font-weight: bold;">count(from [bookstore.book] where root.[__id] in [authors] and (count(from [bookstore.copyright] where parent.[__id] = [book] and [finish_date] &gt; Datetime('Now')) &gt; 0)) &gt; 1</span> — поиск авторов книг, с которыми заключено более одного действующего договора о правах на книгу. </li></ol>
+<li value="1" class="p_Normal"><span style="font-weight: bold;">count(from [clients.contacts] where parent.[__id] in [contact]) &gt; 1</span>. Search for orders with more than one client specified.</li><li value="2" class="p_Normal"><span style="font-weight: bold;">count(from [bookstore.book] where root.[__id] in [authors] and (count(from [bookstore.copyright] where parent.[__id] = [book] and [finish_date] &gt; Datetime('Now')) &gt; 0)) &gt; 1</span>. Search for book authors with more than one valid book rights agreement. </li></ol>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;примера</span></p>
 
                         <div class="bottom-nav">
@@ -509,7 +503,7 @@
                             
                         </div>
                         <!-- добавляет на страницу строку блок Была ли статья полезной?  -->
-                          <div class="feedback-wrap"><div class="feedback" id="feedback"><span><b>Была ли статья полезной?</b></span><form action="" method="POST" class="feedback-form" id="feedback-form"><div class="feedback__popup feedback__popup-response" id="feedback__popup_thx">Спасибо за ваш отзыв!</div><div id="feedback-success-popup"><div class="wrap"><button type="button" class="feedback-popup-close">×</button><svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_212_2187)"><path d="M22 0.6875C10.2294 0.6875 0.6875 10.2294 0.6875 22C0.6875 33.7706 10.2294 43.3125 22 43.3125C33.7706 43.3125 43.3125 33.7706 43.3125 22C43.3125 10.2294 33.7706 0.6875 22 0.6875ZM22 40.5625C11.8023 40.5625 3.4375 32.3078 3.4375 22C3.4375 11.8024 11.6922 3.4375 22 3.4375C32.1977 3.4375 40.5625 11.6922 40.5625 22C40.5625 32.1976 32.3078 40.5625 22 40.5625ZM34.1713 16.933L18.6613 32.3186C18.257 32.7197 17.604 32.7171 17.203 32.3128L9.82283 24.873C9.42176 24.4686 9.42434 23.8157 9.82867 23.4146L10.5609 22.6884C10.9652 22.2873 11.6181 22.2899 12.0192 22.6942L17.9468 28.6697L31.9926 14.7366C32.3969 14.3356 33.0498 14.3382 33.4509 14.7425L34.1772 15.4747C34.5783 15.879 34.5757 16.532 34.1713 16.933Z" fill="#27AE60"></path></g><defs><clipPath id="clip0_212_2187"><rect width="44" height="44" fill="white"></rect></clipPath></defs></svg><p>Ваш отзыв успешно отправлен!</p><span>Спасибо за обратную связь.</span></div></div><div class="feedback__popup" id="feedback__popup_why"><button type="button" class="feedback-popup-close">×</button><div class="feedback__popup-header">Уточните, почему:</div><input type="radio" name="category" id="bad_recommendation" value="bad_recommendation"><label for="bad_recommendation">Рекомендации не помогли</label><input type="radio" name="category" id="difficult_text" value="difficult_text"><label for="difficult_text">Текст трудно понять</label><input type="radio" name="category" id="no_answer" value="no_answer"><label for="no_answer">Нет ответа на мой вопрос</label><input type="radio" name="category" id="bad_header" value="bad_header"><label for="bad_header">Содержание статьи не соответствует заголовку</label><input type="radio" name="category" id="other_reason" value="other_reason"><label for="other_reason">Другая причина</label></div><div class="feedback__popup" id="feedback__popup-other"><button type="button" class="feedback-popup-close">×</button>   <div class="feedback__popup-header">Расскажите, что вам не понравилось в статье:</div><textarea class="feedback__textarea" name="other" id=""></textarea><input type="submit" class="feedback__other-btn" value="Отправить"></div><div class="feedback-form__btn-group"><input type="radio" name="useful" id="feedback__useful_yes" value="true"><label for="feedback__useful_yes"><img src="like.svg"/><span class="feedback-form__btn-group_yes-btn">Да</span></label><input type="radio" name="useful" id="feedback__useful_no" value="false"><label for="feedback__useful_no"><img src="dislike.svg"/><span class="feedback-form__btn-group_no-btn">Нет</span></label></div><select name="category"><option disabled>Выберите вариант</option><option value="bad_recommendation" selected>Рекомендации не помогли</option><option value="difficult_text">Текст трудно понять</option><option value="no_answer">Нет ответа на мой вопрос</option><option value="bad_header">Содержание статьи не соответствует заголовку</option><option value="other_reason">Другая причина</option></select><input type="submit"></form></div></div>
+                          <div class="feedback" id="feedback"><div class="feedback-help"><span><b>Was this helpful?</b></span><form action="" method="POST" class="feedback-form" id="feedback-form"><div class="feedback__popup feedback__popup-response" id="feedback__popup_thx" style="display: none;">Thanks for your feedback!</div><div class="feedback__popup" id="feedback__popup_why" style="display: none;"><div class="feedback__popup-header">Please specify why:</div><input type="radio" name="category" id="bad_recommendation" value="bad_recommendation"><label for="bad_recommendation">Recommendations did not help me</label><input type="radio" name="category" id="difficult_text" value="difficult_text"><label for="difficult_text">Article is hard to understand</label><input type="radio" name="category" id="no_answer" value="no_answer"><label for="no_answer">Didn`t answer my question</label><input type="radio" name="category" id="bad_header" value="bad_header"><label for="bad_header">Content does not match the topic</label><input type="radio" name="category" id="other_reason" value="other_reason"><label for="other_reason">Other</label></div><div class="feedback__popup" id="feedback__popup-other" style="display: none;"><div class="feedback__popup-header">How we can improve it?</div><textarea class="feedback__textarea" name="other" id=""></textarea><input type="submit" class="feedback__other-btn" value="Submit"></div><div class="feedback-form__btn-group"><input type="radio" name="useful" id="feedback__useful_yes" value="true"><label for="feedback__useful_yes"><img src="like.svg" class="small-img" alt="like"><spanclass="feedback-form__btn-group_yes-btn">Yes</spanclass="feedback-form__btn-group_yes-btn"></label><input type="radio" name="useful" id="feedback__useful_no" value="false"><label for="feedback__useful_no"><img src="dislike.svg" class="small-img" alt="dislike"><spanclass="feedback-form__btn-group_no-btn">No</spanclass="feedback-form__btn-group_no-btn"></label></div><select name="category"><option disabled="">Please specify why</option><option value="bad_recommendation" selected="">Recommendations did not help me</option><option value="difficult_text">Article is hard to understand</option><option value="no_answer">Didn`t answer my question</option><option value="bad_header">Content does not match the topic</option><option value="other_reason">Other</option></select><input type="submit"></form></div><div class="found_typo"><p style="margin: 0px; margin-top: 16px !important;"><span><b>Found a typo?</b></span> Select it and press <i>Ctrl+Enter</i> to send us feedback</p></div></div>
                            
                     </section>
                 </div>
@@ -517,7 +511,7 @@
                     <input type="checkbox" />
                     <div class="article__arrow"></div>
                     <div class="table-of-contents elma365-right" id="toc2Content">
-                        <h3 class="h3-toc">В этой статье</h3>
+                        <h3 class="h3-toc">In this topic</h3>
                         <nav id="toc2"></nav>
                     </div>
                 </aside>
@@ -528,63 +522,30 @@
         <div class="footer-container">
   <div class="footer-mobile">
     
-      <ul class="footer-mobile__list"><li><a href="https://api.elma365.com/ru/" target="_blank">API</a></li><li><a href="https://tssdk.elma365.com/" target="_blank">TS SDK</a></li><li><a href="https://community.elma365.com/" target="_blank">Community</a></li><li><a href="https://elma-academy.com/ru/elma365" target="_blank">Академия</a></li></ul><ul class="footer-mobile__list"><li><a href="https://elma365.com/ru/help/platform/get-trial.html">Платформа</a></li><li><a href="https://elma365.com/ru/help/ecm/ecm-functions.html">ECM</a></li><li><a href="https://elma365.com/ru/help/service/service-functions.html">Service</a></li><li><a href="https://elma365.com/ru/help/projects/projects-functions.html">Проекты</a></li></ul>
+    <ul class="footer-mobile__list"><li><a href="https://brix365.com/en/" target="_blank">BRIX</a></li><li><a href="https://tssdk.brix365.com/en/latest/" target="_blank">SDK</a></li><li><a href="https://api.brix365.com/en/" target="_blank">API</a></li></ul><ul class="footer-mobile__list"><li><a href="https://brix365.com/en/help/platform/get-trial.html">Platform</a></li><li><a href="https://brix365.com/en/help/ecm/ecm-functions.html">ECM</a></li><li><a href="https://brix365.com/en/help/service/service-functions.html">Service</a></li><li><a href="https://brix365.com/en/help/projects/projects-functions.html">Projects</a></li></ul>
     
     
   </div>
-  <div class="container">
-    <div class="footer-wrap">
-      
-        <div><span class="mobile-question-popup">Отправить фидбэк</span><form method="POST" action class="question__popup question-xs" id="question__popup"><div class="question-wrap"><span class="close"></span><span class="title">Задать вопрос</span><label for="help_question" style="display: none;"></label><textarea name="help_question" id="help_question"></textarea><input type="submit" value="Отправить"></div></form><div class="hidden fade-in question-success-xs">Ваш фидбэк отправлен.</div></div>
-      
-      <div class="footer-flex-b">
-        <div class="footer-top">
-          <span class="footer-copy">&copy; 2025 
-              ELMA365
-            
-            
-          </span>
-          
-            <a href="https://navigator.sk.ru/orn/1122971" target="_blank">
-              <img src="sk-resident.svg" alt="sk icon" class="footer-img" width="117" height="34">
-            </a>
-            
-        </div>
-        <div class="footer-line">
-          
-            <div class="footer-line-copy">
-              <span class="footer-copy">&copy; 2025 
-                  ELMA365
-                
-                
-              </span>
-            </div>
-            
-              <ul class="footer-list">
-                
-                  <li class="footer-item"><a href="https://elma365.com/ru/" target="_blank" class="footer-link" style="color: #0D4A75;"><img src="browse.svg" alt="browse icon" class="footer-img">elma365.com</a></li><li class="footer-item"><a href="https://www.youtube.com/user/ELMABPM" target="_blank" class="footer-link"><img src="yt.svg" alt="youtube icon" class="footer-img"></a></li><li class="footer-item"><a href="https://vk.com/elma_bpm" target="_blank" class="footer-link"><img src="vk.svg" alt="vk icon" class="footer-img"></a></li><li class="footer-item"><a href="https://t.me/elmaday" target="_blank" class="footer-link"><img src="tg.svg" alt="telegram icon" class="footer-img"></a></li><li class="footer-item"><a href="https://dzen.ru/elma" target="_blank" class="footer-link"><img src="dzen.svg" alt="dzen icon" class="footer-img"></a></li>
-                
-                
-                  <li class="footer-item">
-                    <a href="https://navigator.sk.ru/orn/1122971" target="_blank">
-                      <img src="sk-resident.svg" alt="sk icon" class="footer-img" width="117" height="34">
-                    </a>
-                  </li>
-                
-                
-              </ul>
-        </div>
-      </div>
+  <div class="footer-wrap">
+    
+      <div><span class="mobile-question-popup">Send feedback</span><form method="POST" action class="question__popup question-xs" id="question__popup"><div class="question-wrap"><span class="close"></span><span class="title">Ask a question</span><label for="help_question" style="display: none;"></label><textarea name="help_question" id="help_question"></textarea><input type="submit" value="Send"></div></form><div class="hidden fade-in question-success-xs">Sent</div></div>
+    
+    <div class="footer-flex-b">
+      <span class="footer-copy">&copy; 2025 BRIX</span>
+      <ul class="footer-list">
+        
+        <li class="footer-item">
+            <a href="#" class="arrow-top" style="display: block;"></a>
+        </li>
+        
+      </ul>
     </div>
   </div>
-  <a href="#" class="arrow-top"></a>
 </div>
  
     </footer>
-<!--    <script type="text/javascript" src="jquery1.min.js"></script>-->
     <iframe name="hmnavigation" style="display:none!important"></iframe>
-    <!--<script src="./jquery-ui.js"></script> -->
-    <script src="./jquery-ui.min.js"></script>
+    <script src="./jquery-ui.js"></script>
     <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
     <script src="./jquery.tocify.min.js"></script>
     <script src="./TypoReporter.min.js"></script>

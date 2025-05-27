@@ -1,20 +1,19 @@
 ﻿<!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 
 <head>
-    <title>Ограничение на уровне элементов приложения</title>
+    <title>Restrict access to specific app items</title>
     <meta name="generator" content="Help+Manual" />
     <meta name="keywords" content="" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Это самый строгий вариант разграничения доступа, который позволяет назначить разные права разным пользователям к&nbsp;отдельным элементам приложения." />
+    <meta name="description" content="This is the most specific access restriction option that allows you to assign permission rules for certain app items to different users.&nbsp;" />
     <meta name="picture" content="" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Cправка по Low-code платформе ELMA365" />
-    <meta property="og:url" content="https://elma365.com/ru/help" />
-    <meta property="og:image" content="" />
-    <meta property="og:site_name" content="ELMA365" />                                                              
+    <meta property="og:title" content="Full documentation for BRIX365 platform. Low-code developer guide. User guide. Admin guide. Developer guide." />
+    <meta property="og:url" content="https://brix365.com/en/help" />
+    <meta property="og:image" content="" />                                                              
     <link rel="icon" href="favicon.png" type="image/png" />
     
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -24,7 +23,6 @@
     <link rel="stylesheet" href="./article.css" />
     <link rel="stylesheet" href="./glossary.css" />
     <link rel="stylesheet" href="./theme.css" />
-    
    <script type="text/javascript" src="jquery.js"></script>
    <script type="text/javascript" src="helpman_settings.js"></script>
    <script type="text/javascript" src="helpman_topicinit.js"></script>
@@ -36,16 +34,16 @@
 </head>
 
 <body>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-M6ETBEC1R9"></script><script>window.dataLayer=window.dataLayer || []; function gtag(){dataLayer.push(arguments);}gtag('js', new Date()); gtag('config', 'G-M6ETBEC1R9');</script>
+    
     <script>!function(e,t,c,n,r,a,m){e.ym=e.ym||function(){(e.ym.a=e.ym.a||[]).push(arguments)},e.ym.l=1*new Date;for(var s=0;s<document.scripts.length;s++)if(document.scripts[s].src===n)return;a=t.createElement(c),m=t.getElementsByTagName(c)[0],a.async=1,a.src=n,m.parentNode.insertBefore(a,m)}(window,document,"script","https://mc.yandex.ru/metrika/tag.js"),ym(83179930,"init",{clickmap:!0,trackLinks:!0,accurateTrackBounce:!0,webvisor:!0})</script><noscript><div><img alt=""src=https://mc.yandex.ru/watch/83179930 style=position:absolute;left:-9999px></div></noscript> 
     
     ﻿<header class="header elma-365">
   <div class="container">
-    <a class="header__logo" href="https://elma365.com/ru/help">
-      <img src="./logo.svg" alt="header logo">
+    <a class="header__logo" href="https://brix365.com/en/help">
+      <img src="./logo-en.svg" alt="header logo">
     </a>
  <!-- <div class="hero__search-form" id="search-panel">
-   <form class="search-form" onsubmit="ym(83179930,'reachGoal','poisk')">
+   <form class="search-form" onsubmit="ym(83180416,'reachGoal','poisk')">
      <label class="search-form__label">
        <span id="reset-search" class="search__icon"></span>
        <input class="search-form__input" type="text">
@@ -65,7 +63,7 @@
     </div>  
   <div class="header__navi">
         
-        <ul class="header__list"><li><span class="solution-select"><span class="solution-select__selected"></span><svg width="7" height="4" viewBox="0 0 7 4" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L3.5 3.5L6 1" stroke="white" stroke-linecap="round" stroke-linejoin="round"/></svg><ul class="solution-select__list"><li><a class="project-link" href="https://elma365.com/ru/help/platform/get-trial.html">Платформа</a></li><li><a class="project-link" href="https://elma365.com/ru/help/ecm/ecm-functions.html">ECM</a></li><li><a class="project-link" href="https://elma365.com/ru/help/crm/crm_overview.html">CRM</a></li><li><a class="project-link" href="https://elma365.com/ru/help/service/service-functions.html">Service</a></li><li><a class="project-link" href="https://elma365.com/ru/help/projects/projects-functions.html">Проекты</a></li><li><a class="project-link" href="https://elma365.com/ru/help/business_solutions/-elma365-store.html">Бизнес-решения</a></li></ul></span></li><li><a href="https://api.elma365.com/ru/"target="_blank">API</a></li><li><a href="https://tssdk.elma365.com/"target="_blank">SDK</a></li><li><a href="https://community.elma365.com/" target="_blank">Community</a></li><li><a href="https://elma-academy.com/ru/" target="_blank">Академия</a></li><li><a href="https://elma365.com/ru/" target="_blank">Сайт ELMA365</a></li></ul> 
+        <ul class="header__list"><li><span class="solution-select"><span class="solution-select__selected"></span><svg width="7" height="4" viewBox="0 0 7 4" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L3.5 3.5L6 1" stroke="white" stroke-linecap="round" stroke-linejoin="round"/></svg><ul class="solution-select__list"><li><a class="project-link" href="https://brix365.com/en/help/platform/get-trial.html">Platform</a></li><li><a class="project-link" href="https://brix365.com/en/help/ecm/ecm-functions.html">ECM</a></li><li><a class="project-link" href="https://brix365.com/en/help/crm/crm_overview.html">CRM</a></li><li><a class="project-link" href="https://brix365.com/en/help/service/service-functions.html">Service</a></li><li><a class="project-link" href="https://brix365.com/en/help/projects/projects-functions.html">Projects</a></li><li><a class="project-link" href="https://brix365.com/en/help/business_solutions/-elma365-store.html">Business Solutions</a></li></ul></span></li><li><a href="https://api.brix365.com/en/" target="_blank">API</a></li><li><a href="https://tssdk.brix365.com/" target="_blank">SDK</a></li></ul>
         
         
    </div>
@@ -80,8 +78,8 @@
 
         <aside class="sidebar" id="sidebar">
         <div class="sidebar__header">
-                 <a class="header__logo" href="https://elma365.com/ru/help">
-                    <img src="./logo-light.svg">
+                 <a class="header__logo" href="https://brix365.com/en/help">
+                    <img src="./logo-light-en.svg">
                  </a>
                     <span class="sidebar__close elma-365-close" id="close"></span>
             </div>
@@ -94,15 +92,12 @@
             <div class="article-inner">           
                 <div class="content">
                     <header class="article__header">
-                    <div class="article__bread" style="display:flex; gap:10px;">
-                        <span id="subcategory" class="search-res__item-category search-res__item-category_subcategory subcategory article__badge"></span>
                         
-                            <div class="topic__breadcrumbs">     
-                                <p><a href="access_permissions.html">Система прав доступа в ELMA365</a> &gt; <a href="360007527512.html">Доступ к данным приложения</a> / Ограничение на уровне элементов приложения</p>
+                            <div class="topic__breadcrumbs">
+                                <p><a href="access_permissions.html">Access permissions in BRIX</a> &gt; <a href="360007527512.html">Access to app data</a> / Restrict access to specific app items</p>
                             </div>
                         
-                    </div>
-                        <div class="topic__title"><h1 class="p_Heading1"><span class="f_Heading1">Ограничение на уровне элементов приложения</span></h1>
+                        <div class="topic__title"><h1 class="p_Heading1"><span class="f_Heading1">Restrict access to specific app items</span></h1>
 </div>
                     
 </header>
@@ -111,83 +106,79 @@
                             <a href="#h1-article" class="scroll-top"></a>
                         </div>
                         <!-- Placeholder for topic body. -->
-                        <p style="margin: 7px 0 7px 0;">Это самый строгий вариант разграничения доступа, который позволяет назначить разные права разным пользователям к отдельным элементам приложения.</p>
-<p style="margin: 7px 0 7px 0;">Используйте этот уровень, когда нужно разграничить доступ к каждому элементу приложения. Например, в отделе продаж каждый менеджер работает только со своими договорами. Данные договоров являются конфиденциальной информацией для других сотрудников. Тогда право просматривать и редактировать договор можно назначить только его автору и сотрудникам, указанным в карточке договора руководителем и согласующим.</p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;">Также на этом уровне разграничения доступа можно выдавать <a href="element-right.html#access" class="topiclink">дополнительные права</a> к конкретным элементам для выполнения разовых задач:</p>
+                        <p style="line-height: 1.28; margin: 0 0 11px 0;">This is the most specific access restriction option that allows you to assign permission rules for certain app items to different users. </p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;">Use this option to configure permissions individually for each app item. Let’s say each sales rep in the sales department has access only to the contracts they work with. Data from contracts is considered confidential and cannot be shown to any other employees. Then you can grant the permission to view and edit a contract to its author and employees specified on the contract page as the superior and the approver.</p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-family: Inter;">With this access restriction option, you can also grant <a href="element-right.html#access" class="topiclink">additional permissions</a> for specific app items to let users complete one-time tasks. You can do so:</span></p>
 <ul style="list-style-type:disc">
-<li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;">в карточке элемента приложения;</li><li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;">в настройках бизнес-процесса.</li></ul>
-<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">Начало&nbsp;внимание</span></p>
-<p class="p_Normal">Выдавать и ограничивать права в настройках приложения на уровне его элементов могут только пользователи, входящие в группу <a href="360006871932.html#administrators" class="topiclink">Администраторы</a>.</p>
-<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">Конец&nbsp;внимание</span></p>
-<p class="p_Normal">Обратите внимание:</p>
+<li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-family: Inter;">On app item pages.</span></li><li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-family: Inter;">In business process settings.</span></li></ul>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;внимание</span></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-family: Inter;">Only users included in the <a href="360006871932.html#administrators" class="topiclink">Administrators</a> group can grant and restrict permissions to individual items in app access settings.</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;внимание</span></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-family: Inter;">Please note that:</span></p>
 <ol style="list-style-type:decimal">
-<li value="1" class="p_Normal">Вы можете выбрать другой вариант настройки доступа:</li></ol>
+<li value="1" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-family: Inter;">You can select a different access restriction option:</span><ul style="list-style-type:circle">
+<li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-family: Inter;"><a href="app-rights.html" class="topiclink">Restrict access to app items</a>. The most general option. Assign the same permissions for all app items in an app.</span></li><li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-family: Inter;"><a href="folder-rights.html" class="topiclink">Restrict access to folders</a>. Assign different users permissions for different app folders.</span></li></ul></li></ol>
+<ol style="list-style-type:decimal" start="2">
+<li value="2" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-family: Inter;">Employees who regularly work with an app should be granted access to the <a href="360009660872.html" class="topiclink">workspace</a> it belongs to and the <a href="360009919211.html" class="topiclink">app</a> itself. Then they will be able to see all the data that they have access to by opening the app via the left menu.</span></li><li value="3" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-family: Inter;">If some employees need one-time access to specific app items, for example, in business process tasks, they don’t need access to the workspace and app. They can open the app item page using a direct link, for example, from tasks.</span></li></ol>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-family: Inter;">If you want to restrict access to specific items, first set up general access permissions applied to all app items by default:</span></p>
+<ol style="list-style-type:upper-roman">
+<li value="1" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-family: Inter;">Click the gear icon to the right of the app name and select </span><span style="font-family: Inter; font-weight: bold;">Access Settings</span><span style="font-family: Inter;">.</span></li><li value="2" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-family: Inter;">Enable the following options: </span><span style="font-family: Inter; font-weight: bold;">Restrict access to data &gt; Restrict access to app items</span><span style="font-family: Inter;">.</span></li><li value="3" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-family: Inter;">Select who you want to assign permissions to. To do that, click the </span><span style="font-family: Inter; font-weight: bold;">+Add</span><span style="font-family: Inter;"> button. This can be:</span></li></ol>
+<ul style="list-style-type:disc">
+<li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-family: Inter;">A user, a <a href="360007146071.html" class="topiclink">group</a>, or an <a href="360003861992.html" class="topiclink">org chart item</a>.</span></li><li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-family: Inter; font-weight: bold;">Author</span><span style="font-family: Inter;">. The user who created the app item.</span></li><li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-family: Inter; font-weight: bold;">App property</span><span style="font-family: Inter;">. A property storing the employees to whom rights are granted. This option allows you to flexibly customize access in the app, as different employees can be stored in the selected property for each item. They will be automatically granted access, and when the value of the property changes, the permissions for the item will be updated.</span></li></ul>
+<p style="text-align: justify; line-height: 1.20; margin: 0 0 11px 34px;">You can specify a property of one of the types:</p>
 <ul style="list-style-type:disc"><ul style="list-style-type:circle">
-<li class="p_Normal"><a href="app-rights.html" class="topiclink">на уровне приложения</a> — это самый мягкий вариант. Назначенные пользователям права применяются ко всем элементам приложения;</li></ul></li></ul>
+<li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-family: Inter;"><a href="360009707032.html#users" class="topiclink">Users</a>. It allows you to select system users.</span></li><li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-family: Inter;"><a href="360009707032.html#role" class="topiclink">Role</a>. It allows you to specify users, groups, or items in the org chart.</span></li></ul></li></ul>
+<p style="text-align: justify; line-height: 1.20; margin: 0 0 11px 34px;">A property can be selected:</p>
 <ul style="list-style-type:disc"><ul style="list-style-type:circle">
-<li class="p_Normal"><a href="folder-rights.html" class="topiclink">на уровне папок приложения</a> — чтобы назначать разным пользователям разные права для данных каждой папки приложения.</li></ul></li></ul>
-<ol style="list-style-type:decimal">
-<li value="2" class="p_Normal">Для групп сотрудников, постоянно работающих с приложением, предоставьте верхнеуровневый доступ <a href="360009660872.html" class="topiclink">к разделу</a>, в котором оно размещено, и <a href="360009919211.html" class="topiclink">к самому приложению</a>. Тогда к доступным данным приложения можно перейти через левое меню.</li><li value="3" class="p_Normal">Если сотрудник работает с элементами приложения разово, например, только в рамках бизнес-процесса, можно не предоставлять доступы к разделу и приложению. Тогда сотрудник с доступом к данным приложения перейдёт в карточку элемента по прямой ссылке, например, из процессной задачи.</li></ol>
-<p class="p_Normal">Чтобы назначить права доступа для всех данных приложения на уровне его элементов: </p>
+<li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-family: Inter;">From the context of the current app. For example, in the context of the </span><span style="font-family: Inter; font-weight: bold;">Contracts</span><span style="font-family: Inter;"> app, there is the </span><span style="font-family: Inter; font-weight: bold;">Approvers</span><span style="font-family: Inter;"> property. When creating a contract, an employee specifies in this field the users to whom the contract will be submitted for approval. When configuring access rights to contracts, add the </span><span style="font-family: Inter; font-weight: bold;">Approvers</span><span style="font-family: Inter;"> property as an object for assigning rights. Then the employees who are selected as approvers on the contract page will automatically be granted access to this contract. For more information on setting such permissions, see the </span><a href="property-based-permissions.html#current-app" class="topiclink">Examples of configuring access to items using an app property</a><span style="font-family: Inter;"> article.</span></li><li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-family: Inter;">From the app context <a href="360029148471.html" class="topiclink">associated</a> with the current app. The option is available in the BRIX On-Premises edition when the </span><code><b>allowCollectionFieldPermissions</b></code><span style="font-family: Inter;"> feature flag is enabled. For example, in the context of the </span><span style="font-family: Inter; font-weight: bold;">Supplementary Agreements</span><span style="font-family: Inter;"> app, there is a property referencing the main contract. On the </span><span style="font-family: Inter; font-weight: bold;">Contracts</span><span style="font-family: Inter;"> app page, there is an </span><span style="font-family: Inter; font-weight: bold;">Approvers</span><span style="font-family: Inter;"> field. When configuring access to additional agreements, you can assign permissions to the approvers on the contract page by selecting the </span><span style="font-family: Inter; font-weight: bold;">Contracts &gt; Approvers </span><span style="font-family: Inter;">subproperty. In this case, the approvers specified when the contract was created will have access to the related supplementary agreements.</span></li></ul></li></ul>
+<p style="text-align: justify; line-height: 1.20; margin: 0 0 11px 34px;">Please note that the search and sorting option is automatically enabled in the settings of the app property selected as the object for assigning permissions. You cannot disable the option.</p>
 <ol style="list-style-type:upper-roman">
-<li value="1" class="p_Normal">Нажмите значок шестерёнки справа от названия приложения и выберите <span style="font-weight: bold;">Настройка доступа</span>. </li><li value="2" class="p_Normal">Выберите опцию <span style="font-weight: bold;">Ограничить доступ к данным &gt; На уровне элементов приложения</span>. </li><li value="3" class="p_Normal">Нажмите кнопку <span style="font-weight: bold;">+ Добавить</span>, чтобы выбрать объект для назначения прав доступа. Объектом может быть: </li></ol>
-<ul style="list-style-type:disc">
-<li class="p_Normal">пользователь, <a href="360007146071.html" class="topiclink">группа пользователей</a> и элемент <a href="360003861992.html" class="topiclink">организационной структуры</a>;</li><li class="p_Normal"><span style="font-weight: bold;">Системное поле</span> — свойство <span style="font-weight: bold;">Автор</span>, <span style="font-weight: bold;">Исполнители</span> или <span style="font-weight: bold;">Подписчики</span>. По умолчанию выбрано поле <span style="font-weight: bold;">Автор</span>. Вы можете изменить его и выдать права на элемент, например, исполнителям процессных задач;</li><li class="p_Normal"><span style="font-weight: bold;">Свойство приложения</span> — <span style="font-size: 15px; font-family: Inter;">свойство, хранящее сотрудников, которым выдаются права. Эта опция позволяет гибко настроить доступ в приложении, так как для каждого элемента в выбранном свойстве могут быть записаны разные сотрудники. Им будет автоматически предоставляться доступ, а при изменении значения свойства права на элемент будут обновляться. </span></li></ul>
-<p style="line-height: 1.28; margin: 0 0 11px 34px;"><span style="font-size: 15px; font-family: Inter;">Вы можете указать свойство одного из типов:</span></p>
-<ul style="list-style-type:disc"><ul style="list-style-type:circle">
-<li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-size: 15px; font-family: Inter; color: #0000ff;"><a href="360009707032.html#users" class="topiclink">Пользователи</a></span><span style="font-size: 15px; font-family: Inter;"> — позволяет выбрать пользователей системы;</span></li><li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-size: 15px; font-family: Inter; color: #0000ff;"><a href="360009707032.html#role" class="topiclink">Роль</a></span><span style="font-size: 15px; font-family: Inter;"> — позволяет указать пользователей, группы или элементы оргструктуры.</span></li></ul></li></ul>
-<p style="line-height: 1.28; margin: 0 0 11px 34px;"><span style="font-size: 15px; font-family: Inter;">Свойство может выбираться:</span></p>
-<ul style="list-style-type:disc"><ul style="list-style-type:circle">
-<li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-size: 15px; font-family: Inter;">из контекста текущего приложения. Например, в контексте приложения </span><span style="font-size: 15px; font-family: Inter; font-weight: bold;">Договор</span><span style="font-size: 15px; font-family: Inter;"> есть свойство </span><span style="font-size: 15px; font-family: Inter; font-weight: bold;">Согласующие</span><span style="font-size: 15px; font-family: Inter;">. При создании договора сотрудник указывает в этом поле пользователей, которым договор поступит на согласование. Во время настройки прав доступа к договорам добавьте в качестве объекта для назначения прав свойство </span><span style="font-size: 15px; font-family: Inter; font-weight: bold;">Согласующие</span><span style="font-size: 15px; font-family: Inter;">. Тогда сотрудникам, которые выбраны согласующими в карточке договора, автоматически будет предоставляться доступ к этому договору. Подробнее о такой настройке прав читайте в статье </span><span style="font-size: 15px; font-family: Inter; color: #0000ff;"><a href="property-based-permissions.html#current-app" class="topiclink">«Примеры настройки доступа к элементам через свойство приложения»</a></span><span style="font-size: 15px; font-family: Inter;">;</span></li><li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-size: 15px; font-family: Inter;">из контекста приложения, </span><span style="font-size: 15px; font-family: Inter; color: #0000ff;"><a href="360029148471.html" class="topiclink">связанного</a></span><span style="font-size: 15px; font-family: Inter;"> с текущим — опция доступна в поставке ELMA365 On‑Premises при включении фича‑флага </span><code><b>allowCollectionFieldPermissions</b></code><span style="font-size: 15px; font-family: Inter;">. Например, в контексте приложения </span><span style="font-size: 15px; font-family: Inter; font-weight: bold;">Дополнительные соглашения</span><span style="font-size: 15px; font-family: Inter;"> есть свойство, ссылающееся на основной договор. В карточке приложения </span><span style="font-size: 15px; font-family: Inter; font-weight: bold;">Договоры</span><span style="font-size: 15px; font-family: Inter;"> есть поле </span><span style="font-size: 15px; font-family: Inter; font-weight: bold;">Согласующие</span><span style="font-size: 15px; font-family: Inter;">. При настройке доступа к дополнительным соглашениям можно назначить права согласующим из карточки договора, выбрав вложенное свойство </span><span style="font-size: 15px; font-family: Inter; font-weight: bold;">Договоры &gt; Согласующие</span><span style="font-size: 15px; font-family: Inter;">. Тогда ответственные, указанные во время создания договора, будут иметь доступ к связанным с ним дополнительным соглашениям. Подробнее о такой настройке прав читайте в статье </span><span style="font-size: 15px; font-family: Inter; color: #0000ff;"><a href="property-based-permissions.html#linked-app" class="topiclink">«Примеры настройки доступа к элементам через свойство приложения»</a></span><span style="font-size: 15px; font-family: Inter;">.</span></li></ul></li></ul>
-<p style="line-height: 1.28; margin: 0 0 11px 34px;"><span style="font-size: 15px; font-family: Inter;">Обратите внимание, в настройках свойства приложения, выбранного в качестве объекта для назначения прав, автоматически включается </span><span style="font-size: 15px; font-family: Inter; color: #0000ff;"><a href="360009918011.html#search_field" class="topiclink">опция поиска и сортировки</a></span><span style="font-size: 15px; font-family: Inter;">. Отключить опцию нельзя.</span> </p>
+<li value="4" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-family: Inter;">Specify which <a href="360007527512.html#assign" class="topiclink">types of permissions</a> will be available to the selected objects.</span></li></ol>
+<p style="text-indent: -24px; line-height: 1.28; margin: 0 0 11px 48px;"><span style="font-size: 13px; color: #000000;">&nbsp;</span></p>
+<p style="line-height: 1.28; margin: 0 0 11px 34px;"><span style="font-family: Inter;">For the </span><span style="font-family: Inter; font-weight: bold;">Author</span><span style="font-family: Inter;"> and </span><span style="font-family: Inter; font-weight: bold;">App Property</span><span style="font-family: Inter;"> options, you cannot grant full access, as well as export and import permissions. These types of permissions are within the app, whereas the author and user in the property are defined after each item is created. Therefore, permissions for such employees are checked and granted individually for a specific item. Read more about applying different types of permissions to different system objects in <a href="https://tssdk.brix365.com/en/latest/pages/quick-start/intro_permissions.html" target="_blank" class="weblink">BRIX TS SDK</a>.</span></p>
 <ol style="list-style-type:upper-roman">
-<li value="4" class="p_Normal">Укажите, какие <a href="360007527512.html#assign" class="topiclink">типы прав</a> будут доступны выбранным объектам.</li></ol>
-<p class="p_Normal" style="margin: 0 0 0 34px;">Для опций <span style="font-weight: bold;">Системное поле</span> и <span style="font-weight: bold;">Свойство приложения</span> нельзя выдать полный доступ и права на экспорт и импорт. Эти типы прав задаются на уровне приложения. В свою очередь, автор и пользователь в свойстве определяются после создания каждого элемента. Поэтому права для таких сотрудников проверяются и выдаются индивидуально по определённому элементу. Подробнее о применении разных типов прав к разным объектам системы читайте в справке <a href="https://tssdk.elma365.com/ru/latest/pages/quick-start/intro_permissions.html" target="_blank" class="weblink">ELMA365 TS SDK</a>.</p>
+<li value="5" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-family: Inter;">Configure the options:</span></li></ol>
+<ul style="list-style-type:disc">
+<li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-family: Inter; font-weight: bold;">Enable permissions inheritance based on org chart subordination</span><span style="font-family: Inter;">. By default, managers are granted the same access rights to the app as their subordinates. To restrict access, disable the option.</span></li><li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-family: Inter; font-weight: bold;">If access is denied, hide the list of users who can grant access rights</span><span style="font-family: Inter;">. By default, an employee without access rights will see a list of users with the privilege of granting rights when trying to open the page of an app item. To hide the list, enable the option.</span></li></ul>
 <ol style="list-style-type:upper-roman">
-<li value="5" class="p_Normal">Настройте опции:</li></ol>
+<li value="6" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-family: Inter;">Click </span><span style="font-family: Inter; font-weight: bold;">Save</span><span style="font-family: Inter;">.</span></li></ol>
+<p class="p_Normal"><span style="font-family: Inter;">Please note that general settings are automatically applied to all items created in the app. They cannot be revoked.</span></p>
+<p class="p_Normal">You can find another example of configuring access to specific app items in the <a href="rights-combinations.html" class="topiclink">Combinations of access permissions</a> article.</p>
+<h2 class="p_Heading2"><a id="access" class="hmanchor"></a><span class="f_Heading2">Additional permissions for specific app items</span></h2>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-family: Inter;">If a user does not work with app items regularly, they may not be assigned access to the data in the app settings, as long as the restriction to the app item is applied.</span></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-family: Inter;">In this case, additional rights can be granted for one-time tasks with certain items:</span></p>
 <ul style="list-style-type:disc">
-<li class="p_Normal"><span style="font-weight: bold;">Включить наследование прав с учетом подчинения в организационной структуре</span> — по умолчанию руководители получают те же права доступа на приложение, что и их подчинённые. Чтобы ограничить доступ, отключите опцию;</li><li class="p_Normal"><span style="font-weight: bold;">При ошибке доступа скрывать список пользователей, которые могут предоставить доступ</span> — по умолчанию сотрудник без прав доступа при попытке открыть карточку элемента приложения увидит список пользователей с привилегией выдачи прав. Чтобы скрыть список, включите опцию.</li></ul>
+<li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-family: Inter;">On an app item page. Apart from the administrator, this can be done by users with the </span><span style="font-family: Inter; font-weight: bold;">Assign Permissions</span><span style="font-family: Inter;"> access option.</span></li><li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-family: Inter;">In the business process settings.</span></li></ul>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;внимание</span></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-family: Inter;">Additional permissions can only be granted if the access to app data is configured for app items.</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;внимание</span></p>
+<h3 class="p_Heading3"><a id="permissions-on-item-page" class="hmanchor"></a><span class="f_Heading3">Grant additional permissions on the app item page</span></h3>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-family: Inter;">It is possible to grant permissions to a certain app item on its page. This can be done by users with the <a href="360007527512.html#assign" class="topiclink">Assign Permissions</a> access option. Please note that this is only available if you have restricted access to specific app items.</span></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-family: Inter;">Let’s say in the </span><span style="font-family: Inter; font-weight: bold;">Job Openings</span><span style="font-family: Inter;"> app, only the HR department manager works with management positions. If this user is allowed to </span><span style="font-family: Inter; font-weight: bold;">Assign Permissions</span><span style="font-family: Inter;">, they can give another employee access to work with a certain job opening.</span></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-family: Inter;">To grant or restrict access to a specific item:</span></p>
 <ol style="list-style-type:upper-roman">
-<li value="6" class="p_Normal">Нажмите <span style="font-weight: bold;">Сохранить</span>.</li></ol>
-<p class="p_Normal">Обратите внимание, общие настройки автоматически применяются к каждому созданному внутри приложения элементу. Их нельзя отменить.</p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Inter;">Подробнее о настройке доступа на уровне элементов приложения читайте</span> в статье <a href="rights-combinations.html" class="topiclink">«Комбинации настроек доступа»</a>.</p>
-<h2 class="p_Heading2"><a id="access" class="hmanchor"></a><span class="f_Heading2">Дополнительные права к элементу приложения</span></h2>
-<p style="line-height: 1.28; margin: 0 0 11px 0;">Если пользователь не работает постоянно с элементами приложения, ему можно не назначать доступ к данным в настройках приложения, если используется ограничение на уровне элементов приложения.</p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;">В этом случае для выполнения разовых задач с отдельными элементами можно выдавать дополнительные права:</p>
+<li value="1" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-family: Inter;">Go to the app and click the app item or open it using a direct link.</span></li><li value="2" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-family: Inter;">Click the lock icon in the upper right corner. &nbsp;</span></li></ol>
+<p style="text-indent: -24px; line-height: 1.28; margin: 0 0 11px 38px;"><img alt="element-right-2" width="564" height="348" style="margin:0;width:564px;height:348px;border:none" src="element-right-2.png"/></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-family: Inter;">In the window that opens, there are two sections:</span></p>
 <ul style="list-style-type:disc">
-<li style="margin-top: 14px; margin-right: 0; margin-bottom: 0;">в карточке элемента приложения — кроме администратора, эту опцию может использовать пользователь с доступом уровня <span style="font-weight: bold;">Назначение прав</span>;</li><li style="margin-top: 14px; margin-right: 0; margin-bottom: 0;">в настройках бизнес-процесса.</li></ul>
-<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">Начало&nbsp;внимание</span></p>
-<p style="margin: 14px 0 0 0;">Дополнительные права можно назначить, только если доступ к данным приложения настроен на уровне элементов приложения.</p>
-<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">Конец&nbsp;внимание</span></p>
-<h3 class="p_Heading3"><a id="rights-in-card" class="hmanchor"></a><span class="f_Heading3">Выдать доп. права в карточке элемента</span></h3>
-<p style="margin: 7px 0 7px 0;">Выдавать права к отдельным элементам приложения в их карточках может пользователь с доступом уровня <a href="360007527512.html#assign" class="topiclink">Назначение прав</a>. Обратите внимание, назначить такие права можно только на уровне элементов приложения.</p>
-<p style="margin: 7px 0 7px 0;">Например, в приложении <span style="font-weight: bold;">Вакансии</span> с карточками вакансий по руководящим должностям работает только начальник HR‑отдела. Если в настройках доступа к приложению на уровне элементов ему назначен тип доступа <span style="font-weight: bold;">Назначение прав</span>, он может делегировать работу с определённой вакансией сотруднику своего отдела.</p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;">Чтобы ограничить или предоставить доступ к элементу приложения:</p>
-<ol style="list-style-type:upper-roman">
-<li value="1" class="p_Normal">Откройте карточку элемента на странице приложения или по прямой ссылке. </li><li value="2" class="p_Normal">Нажмите на значок замка справа от названия элемента.</li></ol>
-<p class="p_Normal" style="margin: 0 0 0 36px;"><img alt="настройка доступа 8" width="965" height="513" style="margin:0;width:965px;height:513px;border:none" src="hmfile_hash_012eea78.png"/></p>
-<p class="p_Normal">В открывшемся окне вы увидите два блока настроек доступа:</p>
-<ul style="list-style-type:disc">
-<li class="p_Normal"><span style="font-weight: bold;">Общие права для элементов приложения </span>— здесь отображаются права, применяемые ко всем данным приложения. Эти настройки нельзя отменить;</li></ul>
-<ul style="list-style-type:disc">
-<li class="p_Normal"><span style="font-weight: bold;">Дополнительные права </span>— здесь вы можете предоставить доступ к элементу приложения кому‑то ещё, дополнительно к списку сотрудников, перечисленных в первом блоке. &nbsp;</li></ul>
+<li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-family: Inter; font-weight: bold;">Common Permissions for App Items</span><span style="font-family: Inter;">. In this section, you will see access settings applied to all items of the app. Settings specified here cannot be revoked.</span></li><li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-family: Inter; font-weight: bold;">Specific Permissions</span><span style="font-family: Inter;">. Here you can grant access to the app item to someone who is not added to the first section.</span></li></ul>
 <ol style="list-style-type:upper-roman" start="3">
-<li value="3" class="p_Normal">Нажмите <span style="font-weight: bold;">+ Добавить</span>, чтобы выбрать объект для назначения дополнительных прав доступа. Объектом может быть: пользователь, <a href="360007146071.html" class="topiclink">группа пользователей</a> или элемент <a href="360003861992.html" class="topiclink">организационной структуры</a>.</li></ol>
-<p class="p_Normal" style="margin: 0 0 0 36px;"><img alt="access_settings_11" width="976" height="457" style="margin:0;width:976px;height:457px;border:none" src="access_settings_11.png"/></p>
+<li value="3" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-family: Inter;">Specify who you want to set additional permissions for. To do that, click the </span><span style="font-family: Inter; font-weight: bold;">+Add</span><span style="font-family: Inter;"> button. You can choose a user, a <a href="360007146071.html" class="topiclink">group</a>, or an <a href="360003861992.html" class="topiclink">org chart item</a>.</span></li></ol>
+<p style="text-indent: -24px; line-height: 1.28; margin: 0 0 11px 38px;"><img alt="element-right-3" width="732" height="434" style="margin:0;width:732px;height:434px;border:none" src="element-right-3.png"/></p>
 <ol style="list-style-type:upper-roman" start="4">
-<li value="4" class="p_Normal">Укажите, какие типы прав будут доступны выбранным объектам, и нажмите <span style="font-weight: bold;">Сохранить</span>.</li></ol>
-<h3 class="p_Heading3"><span class="f_Heading3">Выдать доп. права в бизнес-процессе</span></h3>
-<p class="p_Normal">В задачах бизнес-процесса пользователи работают с элементами приложений, к которым в первую очередь применяются:</p>
+<li value="4" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-family: Inter;">Tick the <a href="360007527512.html#assign" class="topiclink">types of access permissions</a> you want to grant and click </span><span style="font-family: Inter; font-weight: bold;">Save</span><span style="font-family: Inter;">.</span></li></ol>
+<h3 class="p_Heading3"><span class="f_Heading3">Grant additional permissions in a business process</span></h3>
+<p class="p_Normal">When users work with app items in business process tasks, access settings that are first checked are:</p>
 <ul style="list-style-type:disc">
-<li class="p_Normal">права, выданные в настройках <a href="360007527512.html" class="topiclink">доступа к данным приложения</a>;</li><li class="p_Normal"><a href="element-right.html#rights-in-card" class="topiclink">дополнительные права</a> к элементу приложения, выданные в его карточке.</li></ul>
-<p class="p_Normal">Для выполнения разовых задач с отдельными элементами приложения администратор системы может настроить выдачу дополнительных прав в бизнес‑процессе:</p>
+<li class="p_Normal"><a href="360007527512.html" class="topiclink">Access to app data</a> set up in the app<span style="font-family: Inter;"> access settings.</span></li><li class="p_Normal"><span style="font-family: Inter;"><a href="element-right.html#permissions-on-item-page" class="topiclink">Additional permissions</a> configured on the page of an app item.</span></li></ul>
+<p class="p_Normal"><span style="font-family: Inter;">To let a user work with certain app items for one-time tasks, the administrator can grant additional permissions in a business process:</span></p>
 <ul style="list-style-type:disc">
-<li class="p_Normal"><a href="permissions-in-swimlane.html" class="topiclink">в настройках зоны ответственности</a>;</li><li class="p_Normal">используя блок <a href="assign_permissions.html" class="topiclink">Выдача прав на элемент</a>;</li><li class="p_Normal">используя скрипт.</li></ul>
-<p class="p_Normal">Обратите внимание, настроить выдачу дополнительных прав в бизнес-процессе можно только если доступ к данным приложения настроен на уровне его элементов.</p>
-<p class="p_Normal">Например, в приложении <span style="font-weight: bold;">Договоры</span> выдача прав настроена на уровне элементов приложения. Сотрудник может просматривать только те договоры, автором которых он является. При этом в ходе процесса ему назначена задача проверить договор, созданный другим сотрудником. В этом случае настройка выдачи прав в зоне ответственности позволит просмотреть договор.</p>
-<p class="p_Normal">Права, выданные в настройках бизнес-процесса, отобразятся в настройках доступа к элементу приложения в блоке <span style="font-weight: bold;">Дополнительные права</span>.</p>
-<p class="p_Normal"><img alt="access_settings-12" width="1206" height="290" style="margin:0;width:1206px;height:290px;border:none" src="access_settings-12.png"/></p>
-<p class="p_Normal">Пример временной выдачи прав на элемент с использованием блока <span style="font-weight: bold;">Выдача прав на элемент</span> смотрите в статье <a href="rights-combinations.html#rights-to-element" class="topiclink">«Комбинации настроек доступа»</a>.</p>
+<li class="p_Normal"><span style="font-family: Inter;"><a href="permissions-in-swimlane.html" class="topiclink">In swimlane settings</a>.</span></li><li class="p_Normal"><span style="font-family: Inter;">In an <a href="assign_permissions.html" class="topiclink">App Item Permissions</a> activity.</span></li><li class="p_Normal"><span style="font-family: Inter;">In a script.</span></li></ul>
+<p class="p_Normal"><span style="font-family: Inter;">Please note that you can only assign additional permissions in a business process if the </span><span style="font-family: Inter; font-weight: bold;">Restrict access to app items</span><span style="font-size: 15px; font-family: Inter;"> </span><span style="font-family: Inter;">option is selected in the app</span><span style="font-size: 15px; font-family: Inter;"> </span><span style="font-family: Inter;">access settings.</span></p>
+<p class="p_Normal"><span style="font-family: Inter;">Let’s say access is set up for specific app items in the </span><span style="font-family: Inter; font-weight: bold;">Contracts</span><span style="font-family: Inter;"> app. Users can only view contracts that they created. An employee is assigned the task to review a contract created by another user. In this case, granting the necessary permissions in the swimlane allows the employee to view the contract.</span></p>
+<p class="p_Normal"><span style="font-family: Inter;">Permissions granted in the business process settings are displayed in an app item permissions settings, in the </span><span style="font-family: Inter; font-weight: bold;">Specific Permissions</span><span style="font-family: Inter;"> section.</span></p>
+<p class="p_Normal"><img alt="element-right-4" width="720" height="202" style="margin:0;width:720px;height:202px;border:none" src="element-right-4.png"/></p>
+<p class="p_Normal">You can find an example of granting temporary permissions using the <span style="font-weight: bold;">App Item Permissions</span> activity in the <span style="font-family: Inter;"><a href="rights-combinations.html#case-1" class="topiclink">Combinations of access permissions</a> article.</span></p>
 
                         <div class="bottom-nav">
                             
@@ -204,7 +195,7 @@
                             
                         </div>
                         <!-- добавляет на страницу строку блок Была ли статья полезной?  -->
-                          <div class="feedback-wrap"><div class="feedback" id="feedback"><span><b>Была ли статья полезной?</b></span><form action="" method="POST" class="feedback-form" id="feedback-form"><div class="feedback__popup feedback__popup-response" id="feedback__popup_thx">Спасибо за ваш отзыв!</div><div id="feedback-success-popup"><div class="wrap"><button type="button" class="feedback-popup-close">×</button><svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_212_2187)"><path d="M22 0.6875C10.2294 0.6875 0.6875 10.2294 0.6875 22C0.6875 33.7706 10.2294 43.3125 22 43.3125C33.7706 43.3125 43.3125 33.7706 43.3125 22C43.3125 10.2294 33.7706 0.6875 22 0.6875ZM22 40.5625C11.8023 40.5625 3.4375 32.3078 3.4375 22C3.4375 11.8024 11.6922 3.4375 22 3.4375C32.1977 3.4375 40.5625 11.6922 40.5625 22C40.5625 32.1976 32.3078 40.5625 22 40.5625ZM34.1713 16.933L18.6613 32.3186C18.257 32.7197 17.604 32.7171 17.203 32.3128L9.82283 24.873C9.42176 24.4686 9.42434 23.8157 9.82867 23.4146L10.5609 22.6884C10.9652 22.2873 11.6181 22.2899 12.0192 22.6942L17.9468 28.6697L31.9926 14.7366C32.3969 14.3356 33.0498 14.3382 33.4509 14.7425L34.1772 15.4747C34.5783 15.879 34.5757 16.532 34.1713 16.933Z" fill="#27AE60"></path></g><defs><clipPath id="clip0_212_2187"><rect width="44" height="44" fill="white"></rect></clipPath></defs></svg><p>Ваш отзыв успешно отправлен!</p><span>Спасибо за обратную связь.</span></div></div><div class="feedback__popup" id="feedback__popup_why"><button type="button" class="feedback-popup-close">×</button><div class="feedback__popup-header">Уточните, почему:</div><input type="radio" name="category" id="bad_recommendation" value="bad_recommendation"><label for="bad_recommendation">Рекомендации не помогли</label><input type="radio" name="category" id="difficult_text" value="difficult_text"><label for="difficult_text">Текст трудно понять</label><input type="radio" name="category" id="no_answer" value="no_answer"><label for="no_answer">Нет ответа на мой вопрос</label><input type="radio" name="category" id="bad_header" value="bad_header"><label for="bad_header">Содержание статьи не соответствует заголовку</label><input type="radio" name="category" id="other_reason" value="other_reason"><label for="other_reason">Другая причина</label></div><div class="feedback__popup" id="feedback__popup-other"><button type="button" class="feedback-popup-close">×</button>   <div class="feedback__popup-header">Расскажите, что вам не понравилось в статье:</div><textarea class="feedback__textarea" name="other" id=""></textarea><input type="submit" class="feedback__other-btn" value="Отправить"></div><div class="feedback-form__btn-group"><input type="radio" name="useful" id="feedback__useful_yes" value="true"><label for="feedback__useful_yes"><img src="like.svg"/><span class="feedback-form__btn-group_yes-btn">Да</span></label><input type="radio" name="useful" id="feedback__useful_no" value="false"><label for="feedback__useful_no"><img src="dislike.svg"/><span class="feedback-form__btn-group_no-btn">Нет</span></label></div><select name="category"><option disabled>Выберите вариант</option><option value="bad_recommendation" selected>Рекомендации не помогли</option><option value="difficult_text">Текст трудно понять</option><option value="no_answer">Нет ответа на мой вопрос</option><option value="bad_header">Содержание статьи не соответствует заголовку</option><option value="other_reason">Другая причина</option></select><input type="submit"></form></div></div>
+                          <div class="feedback" id="feedback"><div class="feedback-help"><span><b>Was this helpful?</b></span><form action="" method="POST" class="feedback-form" id="feedback-form"><div class="feedback__popup feedback__popup-response" id="feedback__popup_thx" style="display: none;">Thanks for your feedback!</div><div class="feedback__popup" id="feedback__popup_why" style="display: none;"><div class="feedback__popup-header">Please specify why:</div><input type="radio" name="category" id="bad_recommendation" value="bad_recommendation"><label for="bad_recommendation">Recommendations did not help me</label><input type="radio" name="category" id="difficult_text" value="difficult_text"><label for="difficult_text">Article is hard to understand</label><input type="radio" name="category" id="no_answer" value="no_answer"><label for="no_answer">Didn`t answer my question</label><input type="radio" name="category" id="bad_header" value="bad_header"><label for="bad_header">Content does not match the topic</label><input type="radio" name="category" id="other_reason" value="other_reason"><label for="other_reason">Other</label></div><div class="feedback__popup" id="feedback__popup-other" style="display: none;"><div class="feedback__popup-header">How we can improve it?</div><textarea class="feedback__textarea" name="other" id=""></textarea><input type="submit" class="feedback__other-btn" value="Submit"></div><div class="feedback-form__btn-group"><input type="radio" name="useful" id="feedback__useful_yes" value="true"><label for="feedback__useful_yes"><img src="like.svg" class="small-img" alt="like"><spanclass="feedback-form__btn-group_yes-btn">Yes</spanclass="feedback-form__btn-group_yes-btn"></label><input type="radio" name="useful" id="feedback__useful_no" value="false"><label for="feedback__useful_no"><img src="dislike.svg" class="small-img" alt="dislike"><spanclass="feedback-form__btn-group_no-btn">No</spanclass="feedback-form__btn-group_no-btn"></label></div><select name="category"><option disabled="">Please specify why</option><option value="bad_recommendation" selected="">Recommendations did not help me</option><option value="difficult_text">Article is hard to understand</option><option value="no_answer">Didn`t answer my question</option><option value="bad_header">Content does not match the topic</option><option value="other_reason">Other</option></select><input type="submit"></form></div><div class="found_typo"><p style="margin: 0px; margin-top: 16px !important;"><span><b>Found a typo?</b></span> Select it and press <i>Ctrl+Enter</i> to send us feedback</p></div></div>
                            
                     </section>
                 </div>
@@ -212,7 +203,7 @@
                     <input type="checkbox" />
                     <div class="article__arrow"></div>
                     <div class="table-of-contents elma365-right" id="toc2Content">
-                        <h3 class="h3-toc">В этой статье</h3>
+                        <h3 class="h3-toc">In this topic</h3>
                         <nav id="toc2"></nav>
                     </div>
                 </aside>
@@ -223,63 +214,30 @@
         <div class="footer-container">
   <div class="footer-mobile">
     
-      <ul class="footer-mobile__list"><li><a href="https://api.elma365.com/ru/" target="_blank">API</a></li><li><a href="https://tssdk.elma365.com/" target="_blank">TS SDK</a></li><li><a href="https://community.elma365.com/" target="_blank">Community</a></li><li><a href="https://elma-academy.com/ru/elma365" target="_blank">Академия</a></li></ul><ul class="footer-mobile__list"><li><a href="https://elma365.com/ru/help/platform/get-trial.html">Платформа</a></li><li><a href="https://elma365.com/ru/help/ecm/ecm-functions.html">ECM</a></li><li><a href="https://elma365.com/ru/help/service/service-functions.html">Service</a></li><li><a href="https://elma365.com/ru/help/projects/projects-functions.html">Проекты</a></li></ul>
+    <ul class="footer-mobile__list"><li><a href="https://brix365.com/en/" target="_blank">BRIX</a></li><li><a href="https://tssdk.brix365.com/en/latest/" target="_blank">SDK</a></li><li><a href="https://api.brix365.com/en/" target="_blank">API</a></li></ul><ul class="footer-mobile__list"><li><a href="https://brix365.com/en/help/platform/get-trial.html">Platform</a></li><li><a href="https://brix365.com/en/help/ecm/ecm-functions.html">ECM</a></li><li><a href="https://brix365.com/en/help/service/service-functions.html">Service</a></li><li><a href="https://brix365.com/en/help/projects/projects-functions.html">Projects</a></li></ul>
     
     
   </div>
-  <div class="container">
-    <div class="footer-wrap">
-      
-        <div><span class="mobile-question-popup">Отправить фидбэк</span><form method="POST" action class="question__popup question-xs" id="question__popup"><div class="question-wrap"><span class="close"></span><span class="title">Задать вопрос</span><label for="help_question" style="display: none;"></label><textarea name="help_question" id="help_question"></textarea><input type="submit" value="Отправить"></div></form><div class="hidden fade-in question-success-xs">Ваш фидбэк отправлен.</div></div>
-      
-      <div class="footer-flex-b">
-        <div class="footer-top">
-          <span class="footer-copy">&copy; 2025 
-              ELMA365
-            
-            
-          </span>
-          
-            <a href="https://navigator.sk.ru/orn/1122971" target="_blank">
-              <img src="sk-resident.svg" alt="sk icon" class="footer-img" width="117" height="34">
-            </a>
-            
-        </div>
-        <div class="footer-line">
-          
-            <div class="footer-line-copy">
-              <span class="footer-copy">&copy; 2025 
-                  ELMA365
-                
-                
-              </span>
-            </div>
-            
-              <ul class="footer-list">
-                
-                  <li class="footer-item"><a href="https://elma365.com/ru/" target="_blank" class="footer-link" style="color: #0D4A75;"><img src="browse.svg" alt="browse icon" class="footer-img">elma365.com</a></li><li class="footer-item"><a href="https://www.youtube.com/user/ELMABPM" target="_blank" class="footer-link"><img src="yt.svg" alt="youtube icon" class="footer-img"></a></li><li class="footer-item"><a href="https://vk.com/elma_bpm" target="_blank" class="footer-link"><img src="vk.svg" alt="vk icon" class="footer-img"></a></li><li class="footer-item"><a href="https://t.me/elmaday" target="_blank" class="footer-link"><img src="tg.svg" alt="telegram icon" class="footer-img"></a></li><li class="footer-item"><a href="https://dzen.ru/elma" target="_blank" class="footer-link"><img src="dzen.svg" alt="dzen icon" class="footer-img"></a></li>
-                
-                
-                  <li class="footer-item">
-                    <a href="https://navigator.sk.ru/orn/1122971" target="_blank">
-                      <img src="sk-resident.svg" alt="sk icon" class="footer-img" width="117" height="34">
-                    </a>
-                  </li>
-                
-                
-              </ul>
-        </div>
-      </div>
+  <div class="footer-wrap">
+    
+      <div><span class="mobile-question-popup">Send feedback</span><form method="POST" action class="question__popup question-xs" id="question__popup"><div class="question-wrap"><span class="close"></span><span class="title">Ask a question</span><label for="help_question" style="display: none;"></label><textarea name="help_question" id="help_question"></textarea><input type="submit" value="Send"></div></form><div class="hidden fade-in question-success-xs">Sent</div></div>
+    
+    <div class="footer-flex-b">
+      <span class="footer-copy">&copy; 2025 BRIX</span>
+      <ul class="footer-list">
+        
+        <li class="footer-item">
+            <a href="#" class="arrow-top" style="display: block;"></a>
+        </li>
+        
+      </ul>
     </div>
   </div>
-  <a href="#" class="arrow-top"></a>
 </div>
  
     </footer>
-<!--    <script type="text/javascript" src="jquery1.min.js"></script>-->
     <iframe name="hmnavigation" style="display:none!important"></iframe>
-    <!--<script src="./jquery-ui.js"></script> -->
-    <script src="./jquery-ui.min.js"></script>
+    <script src="./jquery-ui.js"></script>
     <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
     <script src="./jquery.tocify.min.js"></script>
     <script src="./TypoReporter.min.js"></script>

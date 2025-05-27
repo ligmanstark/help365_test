@@ -1,20 +1,19 @@
 ﻿<!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 
 <head>
-    <title>Диагностика производительности PostgreSQL</title>
+    <title>PostgreSQL performance diagnostics</title>
     <meta name="generator" content="Help+Manual" />
     <meta name="keywords" content="" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="В этой статье рассмотрим методы диагностики производительности PostgreSQL, которая состоит из трёх этапов:" />
+    <meta name="description" content="In this article, we will explore performance diagnostic methods for PostgreSQL, consisting of three key steps:" />
     <meta name="picture" content="" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Cправка по Low-code платформе ELMA365" />
-    <meta property="og:url" content="https://elma365.com/ru/help" />
-    <meta property="og:image" content="" />
-    <meta property="og:site_name" content="ELMA365" />                                                              
+    <meta property="og:title" content="Full documentation for BRIX365 platform. Low-code developer guide. User guide. Admin guide. Developer guide." />
+    <meta property="og:url" content="https://brix365.com/en/help" />
+    <meta property="og:image" content="" />                                                              
     <link rel="icon" href="favicon.png" type="image/png" />
     
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -24,7 +23,6 @@
     <link rel="stylesheet" href="./article.css" />
     <link rel="stylesheet" href="./glossary.css" />
     <link rel="stylesheet" href="./theme.css" />
-    
    <script type="text/javascript" src="jquery.js"></script>
    <script type="text/javascript" src="helpman_settings.js"></script>
    <script type="text/javascript" src="helpman_topicinit.js"></script>
@@ -36,16 +34,16 @@
 </head>
 
 <body>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-M6ETBEC1R9"></script><script>window.dataLayer=window.dataLayer || []; function gtag(){dataLayer.push(arguments);}gtag('js', new Date()); gtag('config', 'G-M6ETBEC1R9');</script>
+    
     <script>!function(e,t,c,n,r,a,m){e.ym=e.ym||function(){(e.ym.a=e.ym.a||[]).push(arguments)},e.ym.l=1*new Date;for(var s=0;s<document.scripts.length;s++)if(document.scripts[s].src===n)return;a=t.createElement(c),m=t.getElementsByTagName(c)[0],a.async=1,a.src=n,m.parentNode.insertBefore(a,m)}(window,document,"script","https://mc.yandex.ru/metrika/tag.js"),ym(83179930,"init",{clickmap:!0,trackLinks:!0,accurateTrackBounce:!0,webvisor:!0})</script><noscript><div><img alt=""src=https://mc.yandex.ru/watch/83179930 style=position:absolute;left:-9999px></div></noscript> 
     
     ﻿<header class="header elma-365">
   <div class="container">
-    <a class="header__logo" href="https://elma365.com/ru/help">
-      <img src="./logo.svg" alt="header logo">
+    <a class="header__logo" href="https://brix365.com/en/help">
+      <img src="./logo-en.svg" alt="header logo">
     </a>
  <!-- <div class="hero__search-form" id="search-panel">
-   <form class="search-form" onsubmit="ym(83179930,'reachGoal','poisk')">
+   <form class="search-form" onsubmit="ym(83180416,'reachGoal','poisk')">
      <label class="search-form__label">
        <span id="reset-search" class="search__icon"></span>
        <input class="search-form__input" type="text">
@@ -65,7 +63,7 @@
     </div>  
   <div class="header__navi">
         
-        <ul class="header__list"><li><span class="solution-select"><span class="solution-select__selected"></span><svg width="7" height="4" viewBox="0 0 7 4" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L3.5 3.5L6 1" stroke="white" stroke-linecap="round" stroke-linejoin="round"/></svg><ul class="solution-select__list"><li><a class="project-link" href="https://elma365.com/ru/help/platform/get-trial.html">Платформа</a></li><li><a class="project-link" href="https://elma365.com/ru/help/ecm/ecm-functions.html">ECM</a></li><li><a class="project-link" href="https://elma365.com/ru/help/crm/crm_overview.html">CRM</a></li><li><a class="project-link" href="https://elma365.com/ru/help/service/service-functions.html">Service</a></li><li><a class="project-link" href="https://elma365.com/ru/help/projects/projects-functions.html">Проекты</a></li><li><a class="project-link" href="https://elma365.com/ru/help/business_solutions/-elma365-store.html">Бизнес-решения</a></li></ul></span></li><li><a href="https://api.elma365.com/ru/"target="_blank">API</a></li><li><a href="https://tssdk.elma365.com/"target="_blank">SDK</a></li><li><a href="https://community.elma365.com/" target="_blank">Community</a></li><li><a href="https://elma-academy.com/ru/" target="_blank">Академия</a></li><li><a href="https://elma365.com/ru/" target="_blank">Сайт ELMA365</a></li></ul> 
+        <ul class="header__list"><li><span class="solution-select"><span class="solution-select__selected"></span><svg width="7" height="4" viewBox="0 0 7 4" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L3.5 3.5L6 1" stroke="white" stroke-linecap="round" stroke-linejoin="round"/></svg><ul class="solution-select__list"><li><a class="project-link" href="https://brix365.com/en/help/platform/get-trial.html">Platform</a></li><li><a class="project-link" href="https://brix365.com/en/help/ecm/ecm-functions.html">ECM</a></li><li><a class="project-link" href="https://brix365.com/en/help/crm/crm_overview.html">CRM</a></li><li><a class="project-link" href="https://brix365.com/en/help/service/service-functions.html">Service</a></li><li><a class="project-link" href="https://brix365.com/en/help/projects/projects-functions.html">Projects</a></li><li><a class="project-link" href="https://brix365.com/en/help/business_solutions/-elma365-store.html">Business Solutions</a></li></ul></span></li><li><a href="https://api.brix365.com/en/" target="_blank">API</a></li><li><a href="https://tssdk.brix365.com/" target="_blank">SDK</a></li></ul>
         
         
    </div>
@@ -80,8 +78,8 @@
 
         <aside class="sidebar" id="sidebar">
         <div class="sidebar__header">
-                 <a class="header__logo" href="https://elma365.com/ru/help">
-                    <img src="./logo-light.svg">
+                 <a class="header__logo" href="https://brix365.com/en/help">
+                    <img src="./logo-light-en.svg">
                  </a>
                     <span class="sidebar__close elma-365-close" id="close"></span>
             </div>
@@ -94,15 +92,12 @@
             <div class="article-inner">           
                 <div class="content">
                     <header class="article__header">
-                    <div class="article__bread" style="display:flex; gap:10px;">
-                        <span id="subcategory" class="search-res__item-category search-res__item-category_subcategory subcategory article__badge"></span>
                         
-                            <div class="topic__breadcrumbs">     
-                                <p><a href="elma365-on-premises.html">ELMA365 On-Premises</a> &gt; Дополнительно &gt; Обслуживание ELMA365 / Диагностика производительности PostgreSQL</p>
+                            <div class="topic__breadcrumbs">
+                                <p><a href="elma365-on-premises.html">BRIX On-Premises</a> &gt; Other &gt; BRIX maintenance / PostgreSQL performance diagnostics</p>
                             </div>
                         
-                    </div>
-                        <div class="topic__title"><h1 class="p_Heading1"><span class="f_Heading1">Диагностика производительности PostgreSQL</span></h1>
+                        <div class="topic__title"><h1 class="p_Heading1"><span class="f_Heading1">PostgreSQL performance diagnostics</span></h1>
 </div>
                     
 </header>
@@ -111,53 +106,53 @@
                             <a href="#h1-article" class="scroll-top"></a>
                         </div>
                         <!-- Placeholder for topic body. -->
-                        <p class="p_Normal">В этой статье рассмотрим методы диагностики производительности <a href="postgresql.html" class="topiclink">PostgreSQL</a>, которая состоит из трёх этапов:</p>
+                        <p style="text-align: justify; line-height: 1.20; margin: 7px 0 0 0;">In this article, we will explore performance diagnostic methods for <a href="postgresql.html" class="topiclink">PostgreSQL</a>, consisting of three key steps:</p>
 <ol style="list-style-type:decimal">
-<li value="1" class="p_Normal"><a href="postgresql-performance-diagnostics.html#optimize-cluster" class="topiclink">Оптимизировать кластер</a>.</li><li value="2" class="p_Normal"><a href="postgresql-performance-diagnostics.html#log-analysis" class="topiclink">Анализ логов</a>.</li><li value="3" class="p_Normal"><a href="postgresql-performance-diagnostics.html#analysis-of-plans" class="topiclink">Анализ планов</a>.</li></ol>
-<h2 class="p_Heading2"><a id="optimize-cluster" class="hmanchor"></a><span class="f_Heading1">Шаг</span><span class="f_Heading2"> 1. Оптимизировать кластер</span></h2>
-<p class="p_Normal">Для улучшения работы вашей базы данных используйте следующие методы диагностики производительности PostgreSQL:</p>
+<li value="1" style="text-align: justify; line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 0;"><a href="postgresql-performance-diagnostics.html#optimize-cluster" class="topiclink">Optimize the cluster</a>.</li><li value="2" style="text-align: justify; line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 0;"><a href="postgresql-performance-diagnostics.html#log-analysis" class="topiclink">Analyze the logs</a>.</li><li value="3" style="text-align: justify; line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 0;"><a href="postgresql-performance-diagnostics.html#analysis-of-plans" class="topiclink">Analyze the plans</a>.</li></ol>
+<h2 class="p_Heading2"><a id="optimize-cluster" class="hmanchor"></a><span class="f_Heading2">Step 1: Optimize the cluster</span></h2>
+<p style="line-height: 1.20;">To enhance the performance of your database, employ the following PostgreSQL performance diagnostic methods:</p>
 <ul style="list-style-type:disc">
-<li class="p_Normal">примените вертикальное или горизонтальное масштабирование и затем проведите анализ запросов;</li><li class="p_Normal">настройте конфигурационные параметры развернутого кластера. Например, используйте онлайн генераторы конфигурационных параметров. Подробнее смотрите в сервисе <a href="https://pgconfigurator.cybertec-postgresql.com/" target="_blank" class="weblink">CYBERTEC</a>.</li></ul>
-<p style="text-align: justify;">Пример генерации оптимальных настроек для кластера по введённым характеристикам сервера:</p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><img alt="postgresql-performance-diagnostics-1" width="904" height="616" style="margin:0;width:904px;height:616px;border:none" src="postgresql-performance-diagnostics-1.png"/></p>
-<h2 class="p_Heading2"><a id="log-analysis" class="hmanchor"></a><span class="f_Heading1">Шаг</span><span class="f_Heading2"> 2. Анализ логов</span></h2>
-<p style="line-height: 1.28; margin: 0 0 11px 0;">Обратите внимание, что включение анализаторов запросов может потреблять около 10% ресурсов. Но после завершения процесса анализа и оптимизации запросов производительность может значительно вырасти.</p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;">Вы можете использовать встроенные инструменты для анализа производительности PostgreSQL, чтобы идентифицировать узкие места и медленные запросы:</p>
+<li style="line-height: 1.20;">Apply vertical or horizontal scaling and then analyze the queries;</li><li style="line-height: 1.20;">Set up the configuration parameters of the deployed cluster. For example, use online configuration parameter generators. See more details in the <a href="https://pgconfigurator.cybertec-postgresql.com/" target="_blank" class="weblink">CYBERTEC</a> service.</li></ul>
+<p style="text-align: justify; line-height: 1.20;">An example of generating optimal settings for a cluster based on entered server characteristics:</p>
+<p class="p_Normal"><img alt="postgresql-performance-diagnostics-1" title="postgresql-performance-diagnostics-1" width="1600" height="734" style="margin:0;width:1600px;height:734px;border:none" src="postgresql-performance-diagnostics-1.png"/></p>
+<h2 class="p_Heading2"><a id="log-analysis" class="hmanchor"></a><span class="f_Heading2">Step 2: Analyze the logs</span></h2>
+<p style="line-height: 1.28; margin: 0 0 11px 0;">Please note that enabling query analyzers may consume approximately 10% of resources. However, after completing the analysis and optimizing queries, performance can significantly improve.</p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;">You can use built-in tools to analyze PostgreSQL performance, identifying bottlenecks and slow queries:</p>
 <ul style="list-style-type:disc">
 <li class="p_Normal"><a href="postgresql-performance-diagnostics.html#pg-stat-statements" class="topiclink">pg_stat_statements</a>;</li><li class="p_Normal"><a href="postgresql-performance-diagnostics.html#pg-stat-kcache" class="topiclink">pg_stat_kcache</a>;</li><li class="p_Normal"><a href="postgresql-performance-diagnostics.html#auto-explain" class="topiclink">auto_explain</a>;</li><li class="p_Normal"><a href="postgresql-performance-diagnostics.html#log-min-duration-statement" class="topiclink">log_min_duration_statement</a>.</li></ul>
-<h3 class="p_Heading3"><a id="pg-stat-statements" class="hmanchor"></a><span class="f_Heading3">Инструмент «pg_stat_statements»</span></h3>
-<p style="line-height: 1.28; margin: 0 0 11px 0;">Это один из наиболее полезных инструментов для анализа производительности в PostgreSQL. Этот модуль позволяет собирать статистику о выполненных SQL-запросах, включая их текст, время выполнения и количество вызовов.</p>
+<h3 class="p_Heading3"><a id="pg-stat-statements" class="hmanchor"></a><span class="f_Heading3">pg_stat_statements tool</span></h3>
+<p style="line-height: 1.28; margin: 0 0 11px 0;">One of the most useful tools for performance analysis in PostgreSQL, this module gathers statistics on executed SQL queries, including their text, execution time, and call coun.</p>
 <ol style="list-style-type:decimal">
-<li value="1" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;">Чтобы включить <code><b>pg_stat_statements</b></code><span style="font-size: 13px;">,</span> задайте параметр в <code><b>postgresql.conf</b></code>.</li></ol>
+<li value="1" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;">To enable <code><b>pg_stat_statements</b></code><span style="font-size: 13px;">,</span> &nbsp;set the parameter in <span style="font-weight: bold;">postgresql.conf</span>:</li></ol>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">shared_preload_libraries&nbsp;=&nbsp;'pg_stat_statements';</span></p>
 <ol style="list-style-type:decimal" start="2">
-<li value="2" class="p_CodeExample" style="page-break-inside: avoid;">Перезапустите&nbsp;PostgreSQL&nbsp;и&nbsp;выполните&nbsp;запрос&nbsp;для&nbsp;анализа&nbsp;производительности.</li></ol>
+<li value="2" class="p_CodeExample" style="page-break-inside: avoid;">Restart&nbsp;PostgreSQL&nbsp;and&nbsp;execute&nbsp;a&nbsp;query&nbsp;for&nbsp;performance&nbsp;analysis:</li></ol>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">SELECT&nbsp;query,&nbsp;total_time,&nbsp;calls&nbsp;FROM&nbsp;pg_stat_statements&nbsp;ORDER&nbsp;BY&nbsp;total_time&nbsp;DESC&nbsp;LIMIT&nbsp;10;</span></p>
-<h3 class="p_Heading3"><a id="pg-stat-kcache" class="hmanchor"></a><span class="f_Heading3">Инструмент «pg_stat_kcache»</span></h3>
-<p style="line-height: 1.28; margin: 0 0 11px 0;">Это расширение, которое позволяет мониторить состояние кеша операционной системы, используемого базой данных. Инструмент полезен для определения эффективности кеширования и возможных узких мест. </p>
+<h3 class="p_Heading3"><a id="pg-stat-kcache" class="hmanchor"></a><span class="f_Heading3">pg_stat_kcache tool</span></h3>
+<p style="line-height: 1.28; margin: 0 0 11px 0;">This extension monitors the state of the operating system cache used by the database, helpful for assessing caching efficiency and potential bottlenecks. </p>
 <ol style="list-style-type:decimal">
-<li value="1" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;">Чтобы включить <code><b>pg_stat_statements</b></code><span style="font-size: 13px;">,</span> задайте параметр в <code><b>postgresql.conf</b></code>.</li></ol>
+<li value="1" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;">To enable <code><b>pg_stat_statements</b></code><span style="font-size: 13px;">,</span> set the parameter in <span style="font-weight: bold;">postgresql.conf</span>:</li></ol>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">shared_preload_libraries&nbsp;=&nbsp;'pg_stat_kcache'</span></p>
 <ol style="list-style-type:decimal" start="2">
-<li value="2" class="p_CodeExample" style="page-break-inside: avoid;">Перезапустите&nbsp;PostgreSQL&nbsp;и&nbsp;выполните&nbsp;запросы,&nbsp;чтобы&nbsp;анализировать&nbsp;производительность&nbsp;кеша.</li></ol>
-<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">SELECT&nbsp;*&nbsp;FROM&nbsp;pg_stat_kcache;&nbsp;#&nbsp;Запрос&nbsp;общей&nbsp;статистики</span><br />
-<span class="f_CodeExample">SELECT&nbsp;*&nbsp;FROM&nbsp;pg_stat_kcache_buffers;&nbsp;#&nbsp;Статистика&nbsp;по&nbsp;кешу&nbsp;буферов&nbsp;(shared&nbsp;buffers)</span><br />
-<span class="f_CodeExample">SELECT&nbsp;*&nbsp;FROM&nbsp;pg_stat_kcache_files;&nbsp;#&nbsp;Статистика&nbsp;по&nbsp;кешу&nbsp;файлов&nbsp;(file&nbsp;cache)</span><br />
-<span class="f_CodeExample">SELECT&nbsp;*&nbsp;FROM&nbsp;pg_stat_kcache_directories; &nbsp;#&nbsp;Статистика&nbsp;по&nbsp;кешу&nbsp;каталогов&nbsp;(directory&nbsp;cache)</span></p>
-<h3 class="p_Heading3"><a id="auto-explain" class="hmanchor"></a><span class="f_Heading3">Инструмент «auto_explain»</span></h3>
-<p style="line-height: 1.28; margin: 0 0 11px 0;">Это модуль, который автоматически анализирует запросы и отображение плана выполнения для запросов, выполняющихся с долгим временем выполнения. </p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;">Чтобы включить <code><b>auto_explain</b></code><span style="font-size: 13px;">,</span> задайте параметр в <code><b>postgresql.conf</b></code>:</p>
+<li value="2" class="p_CodeExample" style="page-break-inside: avoid;">Restart&nbsp;PostgreSQL&nbsp;and&nbsp;execute&nbsp;queries&nbsp;to&nbsp;analyze&nbsp;cache&nbsp;performance.</li></ol>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">SELECT&nbsp;*&nbsp;FROM&nbsp;pg_stat_kcache;&nbsp;#&nbsp;General&nbsp;statistics&nbsp;query</span><br />
+<span class="f_CodeExample">SELECT&nbsp;*&nbsp;FROM&nbsp;pg_stat_kcache_buffers;&nbsp;#&nbsp;Shared&nbsp;buffers&nbsp;cache&nbsp;statistics</span><br />
+<span class="f_CodeExample">SELECT&nbsp;*&nbsp;FROM&nbsp;pg_stat_kcache_files;&nbsp;#&nbsp;&nbsp;File&nbsp;cache&nbsp;statistics</span><br />
+<span class="f_CodeExample">SELECT&nbsp;*&nbsp;FROM&nbsp;pg_stat_kcache_directories; &nbsp;#&nbsp;Directory&nbsp;cache&nbsp;statistics</span></p>
+<h3 class="p_Heading3"><a id="auto-explain" class="hmanchor"></a><span class="f_Heading3">auto_explain tool</span></h3>
+<p style="line-height: 1.28; margin: 0 0 11px 0;">This module automatically analyzes queries and displays the execution plan for queries taking a long time to execute.</p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;">To enable <code><b>auto_explain</b></code><span style="font-size: 13px;">,</span> set the parameter in <span style="font-weight: bold;">postgresql.conf:</span></p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">session_preload_libraries&nbsp;=&nbsp;'auto_explain'</span><br />
-<span class="f_CodeExample">auto_explain.log_min_duration&nbsp;=&nbsp;1000;&nbsp;&nbsp;##&nbsp;будут&nbsp;записываться&nbsp;запросы,&nbsp;выполняющиеся&nbsp;более&nbsp;1000&nbsp;миллисекунд</span><br />
-<span class="f_CodeExample">auto_explain.log_analyze&nbsp;=&nbsp;true;&nbsp;##&nbsp;&nbsp;будет&nbsp;записываться&nbsp;вывод&nbsp;команды&nbsp;EXPLAIN&nbsp;ANALYZE</span><br />
-<span class="f_CodeExample">auto_explain.log_buffers&nbsp;=&nbsp;true;&nbsp;##&nbsp;включение&nbsp;статистики&nbsp;об&nbsp;использовании&nbsp;буферов</span></p>
-<h3 class="p_Heading3"><a id="log-min-duration-statement" class="hmanchor"></a><span class="f_Heading3">Инструмент «log_min_duration_statement»</span></h3>
-<p style="line-height: 1.28; margin: 0 0 11px 0;">Это параметр позволяет настроить журналирование запросов, выполнение которых занимает больше времени, чем указано в миллисекундах. Например, чтобы журналировать запросы, выполняющиеся более 1000 миллисекунд, задайте параметр в <code><b>postgresql.conf</b></code>:</p>
-<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">log_min_duration_statement&nbsp;=&nbsp;1000;&nbsp;##&nbsp;Журналирование&nbsp;запросов,&nbsp;выполняющихся&nbsp;более&nbsp;1000&nbsp;миллисекунд</span></p>
-<h2 class="p_Heading2"><a id="analysis-of-plans" class="hmanchor"></a><span class="f_Heading1">Шаг</span><span class="f_Heading2"> 3. Анализ планов</span></h2>
-<p style="line-height: 1.28; margin: 0 0 11px 0;">Оптимизация запросов может быть сложной и часто представляет собой итеративный процесс. Вносите изменения постепенно и измеряйте влияние каждого изменения на производительность запросов. Также рекомендуем протестировать выполненные оптимизации в промежуточной среде, прежде чем применять их к рабочей базе данных. Убедитесь в отсутствии непредвиденных последствий.</p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;">План запроса PostgreSQL описывает выполнение SQL-запроса, включая сортировку и фильтрацию, а также использование ресурсов во время выполнения.</p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><a class="dropdown-toggle" href="javascript:HMToggle('toggle','TOGGLE0186A1')">Пример плана</a></p>
+<span class="f_CodeExample">auto_explain.log_min_duration&nbsp;=&nbsp;1000;&nbsp;&nbsp;##&nbsp;Log&nbsp;queries&nbsp;taking&nbsp;more&nbsp;than&nbsp;1000&nbsp;milliseconds</span><br />
+<span class="f_CodeExample">auto_explain.log_analyze&nbsp;=&nbsp;true;&nbsp;##&nbsp;&nbsp;Log&nbsp;output&nbsp;of&nbsp;EXPLAIN&nbsp;ANALYZE&nbsp;command</span><br />
+<span class="f_CodeExample">auto_explain.log_buffers&nbsp;=&nbsp;true;&nbsp;##&nbsp;Enable&nbsp;buffer&nbsp;usage&nbsp;statistics</span></p>
+<h3 class="p_Heading3"><a id="log-min-duration-statement" class="hmanchor"></a><span class="f_Heading3">log_min_duration_statement tool</span></h3>
+<p style="line-height: 1.28; margin: 0 0 11px 0;">This parameter allows you to configure logging for queries taking longer than the specified duration in milliseconds. For example, to log queries taking more than 1000 milliseconds, set the parameter in <span style="font-weight: bold;">postgresql.conf</span>:</p>
+<p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">log_min_duration_statement&nbsp;=&nbsp;1000;&nbsp;##&nbsp;Log&nbsp;queries&nbsp;taking&nbsp;more&nbsp;than&nbsp;1000&nbsp;milliseconds</span></p>
+<h2 class="p_Heading2"><a id="analysis-of-plans" class="hmanchor"></a><span class="f_Heading2">Step 3: Analyze the plans</span></h2>
+<p style="line-height: 1.28; margin: 0 0 11px 0;">Optimizing queries can be complex and often involves an iterative process. Make changes gradually and measure the impact of each change on query performance. It is also recommended to test optimizations in a staging environment before applying them to the production database to ensure there are no unforeseen consequences.</p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;">The PostgreSQL query plan describes the execution of an SQL query, including sorting, filtering, and resource usage during execution.</p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><a class="dropdown-toggle" href="javascript:HMToggle('toggle','TOGGLE0186A1')">Plan example</a></p>
 <div id="TOGGLE0186A1" class="dropdown-toggle-body" style="text-align: left; text-indent: 0; line-height: 1.28; padding: 0 0 0 0; margin: 0 0 11px 0;"><table style="border:none; border-spacing:0;">
 <tr>
 <td style="vertical-align:top; padding:0; border:none"><p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample">Query Text: SELECT (main.body) FROM &quot;head&quot;.&quot;tasks&quot; AS main WHERE (&quot;head&quot;.f_cast_isots(main.body#&gt;&gt;'{__deletedAt}') IS NULL AND (((main.body#&gt;&gt;'{__item}')::jsonb) = &nbsp;'{&quot;namespace&quot;:&quot;service_desk&quot;,&quot;code&quot;:&quot;night_request_handling&quot;,&quot;id&quot;:&quot;018b822c-e7b0-c751-1914-2b698ad2b01d&quot;}'::jsonb) AND ((main.body#&gt;&gt;'{__parentId}')::text) IS NULL) ORDER BY &nbsp;&quot;head&quot;.f_cast_isots(main.body#&gt;&gt;'{__createdAt}') DESC, (main.body#&gt;&gt;'{__id}') LIMIT 11 OFFSET 0</span><br />
@@ -186,28 +181,21 @@
 </tr>
 </table>
 </div>
-<p style="line-height: 1.28; margin: 0 0 11px 0;">Разберём различные части плана, указанного в примере выше:</p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;">Let's break down the various parts of the plan mentioned in the above example:</p>
 <ul style="list-style-type:disc">
-<li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><code><b>Query Text</b></code> — анализируемый SQL-запрос. Выбирает данные из таблицы с именем <code><b>tasks</b></code> в схеме <code><b>head</b></code> с определенными условиями и упорядочивает результаты;</li><li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><code><b>Limit</b></code> — информация об ожидаемой стоимости запроса и количестве строк, которые он ожидает вернуть. В указанном примере запрос ожидает вернуть 11 строк;</li><li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><code><b>Output</b></code> — перечисление столбцов, которые будут включены в выходные данные запроса: <code><b>body</b></code>, вычисляемое выражение и другое вычисляемое выражение;</li><li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><code><b>Buffers</b></code> — показывает применение буферов, количество операций чтения и сколько произошло записей. Определяет общие обращения, чтения и записи;</li><li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><code><b>I/O Timings</b></code> — информация о времени, затраченном на операции чтения и записи;</li><li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><code><b>Incremental Sort</b></code> — операция сортировки, которая является частью выполнения запроса. Определяет критерии сортировки и использование памяти;</li><li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><code><b>Index Scan Backward using</b></code> — основная операция при выполнении запроса. Это сканирование индекса <code><b>tasks:f___createdAt</b></code>, которое используется для фильтрации и извлечения строк из таблицы <code><b>tasks</b></code> на основе заданных условий. Условия перечислены в разделе <code><b>Filter</b></code>, где проверяется наличие определенных значений в данных JSONB и отсутствие значения в поле <code><b>__parentId</b></code>.<code><b>Rows Removed by Filter</b></code> указывают, сколько строк было отфильтровано по этим условиям;</li><li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><code><b>JIT</b></code> — информация о JIT-компиляции функций и настройках их оптимизации.</li></ul>
-<h2 class="p_Heading2"><span class="f_Heading2">Визуализация плана</span></h2>
-<p>Вы можете также проанализировать выполнение SQL-запроса. С помощью визуализации плана вы получите подробную информацию о том, как PostgreSQL выполняет запрос, а также о возможных проблемах производительности. Для этого можно использовать pgAdmin или сторонние сервисы. </p>
-<p>Пример визуализации:</p>
+<li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><code><b>Query Text</b></code><span style="font-size: 13px;">. </span>The analyzed SQL query. Selects data from a table named <code><b>tasks</b></code> in the <code><b>head</b></code> schema with specific conditions and orders the results;</li><li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><code><b>Limit</b></code><span style="font-size: 13px;">. </span>Information about the expected cost of the query and the number of rows it expects to return. In the provided example, the query expects to return 11 rows;</li><li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><code><b>Output</b></code><span style="font-size: 13px;">.</span><span style="font-size: 13px; color: #394149;"> </span>Enumeration of columns that will be included in the query's output data: body, a computed expression, and another computed expression;</li><li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><code><b>Buffers</b></code><span style="font-size: 13px;">. </span>Shows the application of buffers, the number of read operations, and the number of write operations. It determines the overall fetches, reads, and writes;</li><li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><code><b>I/O Timings</b></code><span style="font-size: 13px;">.</span> Information about the time spent on read and write operations;</li><li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><code><b>Incremental Sort</b></code><span style="font-size: 13px;">.</span> Sorting operation, which is part of the query execution. It defines the sorting criteria and memory usage;</li><li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><code><b>Index Scan Backward using</b></code><span style="font-size: 13px;">.</span>The main operation during query execution. It's a scan of the  <code><b>tasks:f___createdAt</b></code><span style="font-size: 13px;"> </span>index sed for filtering and retrieving rows from the <code><b>tasks</b></code> table based on specified conditions. The conditions are listed in the <code><b>Filter</b></code>, section, checking for specific values in JSONB data and the absence of a value in the <code><b>__parentId</b></code><span style="font-size: 13px;"> </span>field.<code><b>Rows Removed by Filter</b></code> indicate how many rows were filtered based on these conditions.</li><li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><code><b>JIT</b></code><span style="font-size: 13px;">.</span> Information about JIT compilation of functions and optimization settings.</li></ul>
+<h2 class="p_Heading2"><span class="f_Heading2">Plan visualization</span></h2>
+<p style="line-height: 1.20;">You can also analyze the execution of the SQL query. Using plan visualization provides detailed information on how PostgreSQL executes the query and potential performance issues. You can use pgAdmin or third-party services for this purpose. </p>
+<p style="line-height: 1.20;">Example of visualization:</p>
 <ul style="list-style-type:disc">
-<li><a href="https://explain.dalibo.com/" target="_blank" class="weblink">explain.dalibo</a>:</li></ul>
-<p><img alt="postgresql-performance-diagnostics-2" width="567" height="297" style="margin:0;width:567px;height:297px;border:none" src="postgresql-performance-diagnostics-2.png"/></p>
-<ul style="list-style-type:disc">
-<li><a href="https://explain.tensor.ru/" target="_blank" class="weblink">explain PostgreSQL</a>:</li></ul>
-<p><img alt="postgresql-performance-diagnostics-3" width="1479" height="285" style="margin:0;width:1479px;height:285px;border:none" src="postgresql-performance-diagnostics-3.png"/></p>
-<p>Данный ресурс предоставляет рекомендации по оптимизации запросов:</p>
-<p><img alt="postgresql-performance-diagnostics-4" width="1137" height="783" style="margin:0;width:1137px;height:783px;border:none" src="postgresql-performance-diagnostics-4.png"/></p>
-<p>Для улучшения производительности вашей базы данных и быстрого выполнения запросов вы можете добавить индекс на любом этапе диагностики:</p>
-<p><img alt="postgresql-performance-diagnostics-5" width="928" height="279" style="margin:0;width:928px;height:279px;border:none" src="postgresql-performance-diagnostics-5.png"/></p>
+<li style="line-height: 1.20;"><a href="https://explain.dalibo.com/" target="_blank" class="weblink">explain.dalibo</a>;</li></ul>
+<p class="p_Normal"><img alt="postgresql-performance-diagnostics-2" title="postgresql-performance-diagnostics-2" width="410" height="224" style="margin:0;width:410px;height:224px;border:none" src="postgresql-performance-diagnostics-2.png"/></p>
 
                         <div class="bottom-nav">
                             
-                                <a id="prev-link" class="topic__navi_prev" href="configmap.html">
+                                <a id="prev-link" class="topic__navi_prev" href="kubernetes-air-gap.html">
                                     <span class="bottom-nav__arrow bottom-nav__arrow--prev"></span> <span
-                                        class="bottom-nav__link">configmap.html</span>
+                                        class="bottom-nav__link">kubernetes-air-gap.html</span>
                                 </a>
                             
                             
@@ -218,7 +206,7 @@
                             
                         </div>
                         <!-- добавляет на страницу строку блок Была ли статья полезной?  -->
-                          <div class="feedback-wrap"><div class="feedback" id="feedback"><span><b>Была ли статья полезной?</b></span><form action="" method="POST" class="feedback-form" id="feedback-form"><div class="feedback__popup feedback__popup-response" id="feedback__popup_thx">Спасибо за ваш отзыв!</div><div id="feedback-success-popup"><div class="wrap"><button type="button" class="feedback-popup-close">×</button><svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_212_2187)"><path d="M22 0.6875C10.2294 0.6875 0.6875 10.2294 0.6875 22C0.6875 33.7706 10.2294 43.3125 22 43.3125C33.7706 43.3125 43.3125 33.7706 43.3125 22C43.3125 10.2294 33.7706 0.6875 22 0.6875ZM22 40.5625C11.8023 40.5625 3.4375 32.3078 3.4375 22C3.4375 11.8024 11.6922 3.4375 22 3.4375C32.1977 3.4375 40.5625 11.6922 40.5625 22C40.5625 32.1976 32.3078 40.5625 22 40.5625ZM34.1713 16.933L18.6613 32.3186C18.257 32.7197 17.604 32.7171 17.203 32.3128L9.82283 24.873C9.42176 24.4686 9.42434 23.8157 9.82867 23.4146L10.5609 22.6884C10.9652 22.2873 11.6181 22.2899 12.0192 22.6942L17.9468 28.6697L31.9926 14.7366C32.3969 14.3356 33.0498 14.3382 33.4509 14.7425L34.1772 15.4747C34.5783 15.879 34.5757 16.532 34.1713 16.933Z" fill="#27AE60"></path></g><defs><clipPath id="clip0_212_2187"><rect width="44" height="44" fill="white"></rect></clipPath></defs></svg><p>Ваш отзыв успешно отправлен!</p><span>Спасибо за обратную связь.</span></div></div><div class="feedback__popup" id="feedback__popup_why"><button type="button" class="feedback-popup-close">×</button><div class="feedback__popup-header">Уточните, почему:</div><input type="radio" name="category" id="bad_recommendation" value="bad_recommendation"><label for="bad_recommendation">Рекомендации не помогли</label><input type="radio" name="category" id="difficult_text" value="difficult_text"><label for="difficult_text">Текст трудно понять</label><input type="radio" name="category" id="no_answer" value="no_answer"><label for="no_answer">Нет ответа на мой вопрос</label><input type="radio" name="category" id="bad_header" value="bad_header"><label for="bad_header">Содержание статьи не соответствует заголовку</label><input type="radio" name="category" id="other_reason" value="other_reason"><label for="other_reason">Другая причина</label></div><div class="feedback__popup" id="feedback__popup-other"><button type="button" class="feedback-popup-close">×</button>   <div class="feedback__popup-header">Расскажите, что вам не понравилось в статье:</div><textarea class="feedback__textarea" name="other" id=""></textarea><input type="submit" class="feedback__other-btn" value="Отправить"></div><div class="feedback-form__btn-group"><input type="radio" name="useful" id="feedback__useful_yes" value="true"><label for="feedback__useful_yes"><img src="like.svg"/><span class="feedback-form__btn-group_yes-btn">Да</span></label><input type="radio" name="useful" id="feedback__useful_no" value="false"><label for="feedback__useful_no"><img src="dislike.svg"/><span class="feedback-form__btn-group_no-btn">Нет</span></label></div><select name="category"><option disabled>Выберите вариант</option><option value="bad_recommendation" selected>Рекомендации не помогли</option><option value="difficult_text">Текст трудно понять</option><option value="no_answer">Нет ответа на мой вопрос</option><option value="bad_header">Содержание статьи не соответствует заголовку</option><option value="other_reason">Другая причина</option></select><input type="submit"></form></div></div>
+                          <div class="feedback" id="feedback"><div class="feedback-help"><span><b>Was this helpful?</b></span><form action="" method="POST" class="feedback-form" id="feedback-form"><div class="feedback__popup feedback__popup-response" id="feedback__popup_thx" style="display: none;">Thanks for your feedback!</div><div class="feedback__popup" id="feedback__popup_why" style="display: none;"><div class="feedback__popup-header">Please specify why:</div><input type="radio" name="category" id="bad_recommendation" value="bad_recommendation"><label for="bad_recommendation">Recommendations did not help me</label><input type="radio" name="category" id="difficult_text" value="difficult_text"><label for="difficult_text">Article is hard to understand</label><input type="radio" name="category" id="no_answer" value="no_answer"><label for="no_answer">Didn`t answer my question</label><input type="radio" name="category" id="bad_header" value="bad_header"><label for="bad_header">Content does not match the topic</label><input type="radio" name="category" id="other_reason" value="other_reason"><label for="other_reason">Other</label></div><div class="feedback__popup" id="feedback__popup-other" style="display: none;"><div class="feedback__popup-header">How we can improve it?</div><textarea class="feedback__textarea" name="other" id=""></textarea><input type="submit" class="feedback__other-btn" value="Submit"></div><div class="feedback-form__btn-group"><input type="radio" name="useful" id="feedback__useful_yes" value="true"><label for="feedback__useful_yes"><img src="like.svg" class="small-img" alt="like"><spanclass="feedback-form__btn-group_yes-btn">Yes</spanclass="feedback-form__btn-group_yes-btn"></label><input type="radio" name="useful" id="feedback__useful_no" value="false"><label for="feedback__useful_no"><img src="dislike.svg" class="small-img" alt="dislike"><spanclass="feedback-form__btn-group_no-btn">No</spanclass="feedback-form__btn-group_no-btn"></label></div><select name="category"><option disabled="">Please specify why</option><option value="bad_recommendation" selected="">Recommendations did not help me</option><option value="difficult_text">Article is hard to understand</option><option value="no_answer">Didn`t answer my question</option><option value="bad_header">Content does not match the topic</option><option value="other_reason">Other</option></select><input type="submit"></form></div><div class="found_typo"><p style="margin: 0px; margin-top: 16px !important;"><span><b>Found a typo?</b></span> Select it and press <i>Ctrl+Enter</i> to send us feedback</p></div></div>
                            
                     </section>
                 </div>
@@ -226,7 +214,7 @@
                     <input type="checkbox" />
                     <div class="article__arrow"></div>
                     <div class="table-of-contents elma365-right" id="toc2Content">
-                        <h3 class="h3-toc">В этой статье</h3>
+                        <h3 class="h3-toc">In this topic</h3>
                         <nav id="toc2"></nav>
                     </div>
                 </aside>
@@ -237,63 +225,30 @@
         <div class="footer-container">
   <div class="footer-mobile">
     
-      <ul class="footer-mobile__list"><li><a href="https://api.elma365.com/ru/" target="_blank">API</a></li><li><a href="https://tssdk.elma365.com/" target="_blank">TS SDK</a></li><li><a href="https://community.elma365.com/" target="_blank">Community</a></li><li><a href="https://elma-academy.com/ru/elma365" target="_blank">Академия</a></li></ul><ul class="footer-mobile__list"><li><a href="https://elma365.com/ru/help/platform/get-trial.html">Платформа</a></li><li><a href="https://elma365.com/ru/help/ecm/ecm-functions.html">ECM</a></li><li><a href="https://elma365.com/ru/help/service/service-functions.html">Service</a></li><li><a href="https://elma365.com/ru/help/projects/projects-functions.html">Проекты</a></li></ul>
+    <ul class="footer-mobile__list"><li><a href="https://brix365.com/en/" target="_blank">BRIX</a></li><li><a href="https://tssdk.brix365.com/en/latest/" target="_blank">SDK</a></li><li><a href="https://api.brix365.com/en/" target="_blank">API</a></li></ul><ul class="footer-mobile__list"><li><a href="https://brix365.com/en/help/platform/get-trial.html">Platform</a></li><li><a href="https://brix365.com/en/help/ecm/ecm-functions.html">ECM</a></li><li><a href="https://brix365.com/en/help/service/service-functions.html">Service</a></li><li><a href="https://brix365.com/en/help/projects/projects-functions.html">Projects</a></li></ul>
     
     
   </div>
-  <div class="container">
-    <div class="footer-wrap">
-      
-        <div><span class="mobile-question-popup">Отправить фидбэк</span><form method="POST" action class="question__popup question-xs" id="question__popup"><div class="question-wrap"><span class="close"></span><span class="title">Задать вопрос</span><label for="help_question" style="display: none;"></label><textarea name="help_question" id="help_question"></textarea><input type="submit" value="Отправить"></div></form><div class="hidden fade-in question-success-xs">Ваш фидбэк отправлен.</div></div>
-      
-      <div class="footer-flex-b">
-        <div class="footer-top">
-          <span class="footer-copy">&copy; 2025 
-              ELMA365
-            
-            
-          </span>
-          
-            <a href="https://navigator.sk.ru/orn/1122971" target="_blank">
-              <img src="sk-resident.svg" alt="sk icon" class="footer-img" width="117" height="34">
-            </a>
-            
-        </div>
-        <div class="footer-line">
-          
-            <div class="footer-line-copy">
-              <span class="footer-copy">&copy; 2025 
-                  ELMA365
-                
-                
-              </span>
-            </div>
-            
-              <ul class="footer-list">
-                
-                  <li class="footer-item"><a href="https://elma365.com/ru/" target="_blank" class="footer-link" style="color: #0D4A75;"><img src="browse.svg" alt="browse icon" class="footer-img">elma365.com</a></li><li class="footer-item"><a href="https://www.youtube.com/user/ELMABPM" target="_blank" class="footer-link"><img src="yt.svg" alt="youtube icon" class="footer-img"></a></li><li class="footer-item"><a href="https://vk.com/elma_bpm" target="_blank" class="footer-link"><img src="vk.svg" alt="vk icon" class="footer-img"></a></li><li class="footer-item"><a href="https://t.me/elmaday" target="_blank" class="footer-link"><img src="tg.svg" alt="telegram icon" class="footer-img"></a></li><li class="footer-item"><a href="https://dzen.ru/elma" target="_blank" class="footer-link"><img src="dzen.svg" alt="dzen icon" class="footer-img"></a></li>
-                
-                
-                  <li class="footer-item">
-                    <a href="https://navigator.sk.ru/orn/1122971" target="_blank">
-                      <img src="sk-resident.svg" alt="sk icon" class="footer-img" width="117" height="34">
-                    </a>
-                  </li>
-                
-                
-              </ul>
-        </div>
-      </div>
+  <div class="footer-wrap">
+    
+      <div><span class="mobile-question-popup">Send feedback</span><form method="POST" action class="question__popup question-xs" id="question__popup"><div class="question-wrap"><span class="close"></span><span class="title">Ask a question</span><label for="help_question" style="display: none;"></label><textarea name="help_question" id="help_question"></textarea><input type="submit" value="Send"></div></form><div class="hidden fade-in question-success-xs">Sent</div></div>
+    
+    <div class="footer-flex-b">
+      <span class="footer-copy">&copy; 2025 BRIX</span>
+      <ul class="footer-list">
+        
+        <li class="footer-item">
+            <a href="#" class="arrow-top" style="display: block;"></a>
+        </li>
+        
+      </ul>
     </div>
   </div>
-  <a href="#" class="arrow-top"></a>
 </div>
  
     </footer>
-<!--    <script type="text/javascript" src="jquery1.min.js"></script>-->
     <iframe name="hmnavigation" style="display:none!important"></iframe>
-    <!--<script src="./jquery-ui.js"></script> -->
-    <script src="./jquery-ui.min.js"></script>
+    <script src="./jquery-ui.js"></script>
     <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
     <script src="./jquery.tocify.min.js"></script>
     <script src="./TypoReporter.min.js"></script>

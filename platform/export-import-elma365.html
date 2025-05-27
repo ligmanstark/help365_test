@@ -1,20 +1,19 @@
 ﻿<!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 
 <head>
-    <title>Экспорт и импорт структур в ELMA365</title>
+    <title>Export and import structures into BRIX</title>
     <meta name="generator" content="Help+Manual" />
     <meta name="keywords" content="" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="В этой статье рассматриваются особенности экспорта и импорта структур в ELMA365." />
+    <meta name="description" content="This article covers the features of exporting and importing structures in BRIX." />
     <meta name="picture" content="" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Cправка по Low-code платформе ELMA365" />
-    <meta property="og:url" content="https://elma365.com/ru/help" />
-    <meta property="og:image" content="" />
-    <meta property="og:site_name" content="ELMA365" />                                                              
+    <meta property="og:title" content="Full documentation for BRIX365 platform. Low-code developer guide. User guide. Admin guide. Developer guide." />
+    <meta property="og:url" content="https://brix365.com/en/help" />
+    <meta property="og:image" content="" />                                                              
     <link rel="icon" href="favicon.png" type="image/png" />
     
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -24,7 +23,6 @@
     <link rel="stylesheet" href="./article.css" />
     <link rel="stylesheet" href="./glossary.css" />
     <link rel="stylesheet" href="./theme.css" />
-    
    <script type="text/javascript" src="jquery.js"></script>
    <script type="text/javascript" src="helpman_settings.js"></script>
    <script type="text/javascript" src="helpman_topicinit.js"></script>
@@ -36,16 +34,16 @@
 </head>
 
 <body>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-M6ETBEC1R9"></script><script>window.dataLayer=window.dataLayer || []; function gtag(){dataLayer.push(arguments);}gtag('js', new Date()); gtag('config', 'G-M6ETBEC1R9');</script>
+    
     <script>!function(e,t,c,n,r,a,m){e.ym=e.ym||function(){(e.ym.a=e.ym.a||[]).push(arguments)},e.ym.l=1*new Date;for(var s=0;s<document.scripts.length;s++)if(document.scripts[s].src===n)return;a=t.createElement(c),m=t.getElementsByTagName(c)[0],a.async=1,a.src=n,m.parentNode.insertBefore(a,m)}(window,document,"script","https://mc.yandex.ru/metrika/tag.js"),ym(83179930,"init",{clickmap:!0,trackLinks:!0,accurateTrackBounce:!0,webvisor:!0})</script><noscript><div><img alt=""src=https://mc.yandex.ru/watch/83179930 style=position:absolute;left:-9999px></div></noscript> 
     
     ﻿<header class="header elma-365">
   <div class="container">
-    <a class="header__logo" href="https://elma365.com/ru/help">
-      <img src="./logo.svg" alt="header logo">
+    <a class="header__logo" href="https://brix365.com/en/help">
+      <img src="./logo-en.svg" alt="header logo">
     </a>
  <!-- <div class="hero__search-form" id="search-panel">
-   <form class="search-form" onsubmit="ym(83179930,'reachGoal','poisk')">
+   <form class="search-form" onsubmit="ym(83180416,'reachGoal','poisk')">
      <label class="search-form__label">
        <span id="reset-search" class="search__icon"></span>
        <input class="search-form__input" type="text">
@@ -65,7 +63,7 @@
     </div>  
   <div class="header__navi">
         
-        <ul class="header__list"><li><span class="solution-select"><span class="solution-select__selected"></span><svg width="7" height="4" viewBox="0 0 7 4" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L3.5 3.5L6 1" stroke="white" stroke-linecap="round" stroke-linejoin="round"/></svg><ul class="solution-select__list"><li><a class="project-link" href="https://elma365.com/ru/help/platform/get-trial.html">Платформа</a></li><li><a class="project-link" href="https://elma365.com/ru/help/ecm/ecm-functions.html">ECM</a></li><li><a class="project-link" href="https://elma365.com/ru/help/crm/crm_overview.html">CRM</a></li><li><a class="project-link" href="https://elma365.com/ru/help/service/service-functions.html">Service</a></li><li><a class="project-link" href="https://elma365.com/ru/help/projects/projects-functions.html">Проекты</a></li><li><a class="project-link" href="https://elma365.com/ru/help/business_solutions/-elma365-store.html">Бизнес-решения</a></li></ul></span></li><li><a href="https://api.elma365.com/ru/"target="_blank">API</a></li><li><a href="https://tssdk.elma365.com/"target="_blank">SDK</a></li><li><a href="https://community.elma365.com/" target="_blank">Community</a></li><li><a href="https://elma-academy.com/ru/" target="_blank">Академия</a></li><li><a href="https://elma365.com/ru/" target="_blank">Сайт ELMA365</a></li></ul> 
+        <ul class="header__list"><li><span class="solution-select"><span class="solution-select__selected"></span><svg width="7" height="4" viewBox="0 0 7 4" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L3.5 3.5L6 1" stroke="white" stroke-linecap="round" stroke-linejoin="round"/></svg><ul class="solution-select__list"><li><a class="project-link" href="https://brix365.com/en/help/platform/get-trial.html">Platform</a></li><li><a class="project-link" href="https://brix365.com/en/help/ecm/ecm-functions.html">ECM</a></li><li><a class="project-link" href="https://brix365.com/en/help/crm/crm_overview.html">CRM</a></li><li><a class="project-link" href="https://brix365.com/en/help/service/service-functions.html">Service</a></li><li><a class="project-link" href="https://brix365.com/en/help/projects/projects-functions.html">Projects</a></li><li><a class="project-link" href="https://brix365.com/en/help/business_solutions/-elma365-store.html">Business Solutions</a></li></ul></span></li><li><a href="https://api.brix365.com/en/" target="_blank">API</a></li><li><a href="https://tssdk.brix365.com/" target="_blank">SDK</a></li></ul>
         
         
    </div>
@@ -80,8 +78,8 @@
 
         <aside class="sidebar" id="sidebar">
         <div class="sidebar__header">
-                 <a class="header__logo" href="https://elma365.com/ru/help">
-                    <img src="./logo-light.svg">
+                 <a class="header__logo" href="https://brix365.com/en/help">
+                    <img src="./logo-light-en.svg">
                  </a>
                     <span class="sidebar__close elma-365-close" id="close"></span>
             </div>
@@ -94,15 +92,12 @@
             <div class="article-inner">           
                 <div class="content">
                     <header class="article__header">
-                    <div class="article__bread" style="display:flex; gap:10px;">
-                        <span id="subcategory" class="search-res__item-category search-res__item-category_subcategory subcategory article__badge"></span>
                         
-                            <div class="topic__breadcrumbs">     
-                                <p>Архитектура и системные требования / Экспорт и импорт структур в ELMA365</p>
+                            <div class="topic__breadcrumbs">
+                                <p>System architecture and requirements / Export and import structures into BRIX</p>
                             </div>
                         
-                    </div>
-                        <div class="topic__title"><h1 class="p_Heading1"><span class="f_Heading1">Экспорт и импорт структур в ELMA365</span></h1>
+                        <div class="topic__title"><h1 class="p_Heading1"><span class="f_Heading1">Export and import structures into BRIX</span></h1>
 </div>
                     
 </header>
@@ -111,373 +106,379 @@
                             <a href="#h1-article" class="scroll-top"></a>
                         </div>
                         <!-- Placeholder for topic body. -->
-                        <p class="p_Normal">В этой статье рассматриваются особенности экспорта и импорта структур в ELMA365.</p>
-<h2 class="p_Heading2"><span class="f_Heading2">Изоляция</span></h2>
-<p class="p_Normal">Одна из ключевых концепций, обеспечивающих возможность переноса структур между разными компаниями — это изоляция. Она позволяет быть уверенным в том, что структура перенесётся полностью, корректно и со всеми необходимыми ссылками. Например, в результате экспорта раздела мы получим независимый и функциональный раздел, готовый к импорту в другие компании.</p>
-<p class="p_Normal">В интерфейсе системы изоляция проявляет себя в первую очередь в виде ошибок экспорта. Экспорт происходит на тех уровнях, на которых мы его запрашиваем, при этом не упускаются нужные компоненты и не загружаются лишние. Ошибки указывают на то, что мы пытаемся выгрузить что-то нарушающее изоляцию.</p>
-<p class="p_Normal">Изоляция применяется и к системным разделам, например <span style="font-weight: bold;">CRM</span> и <span style="font-weight: bold;">Системные справочники</span>. На них можно ссылаться, не боясь ошибок экспорта, поскольку в процесс заложено, что в другой компании эти разделы тоже присутствуют.</p>
-<p class="p_Normal">Обратите внимание на особенности и ограничения <a href="system-workspaces.html#system-workspace-export" class="topiclink">экспорта системных разделов</a>, а также использования <a href="global-constants.html" class="topiclink">глобальных констант в скриптах</a>.</p>
-<p class="p_Normal">Прежде чем мы перейдём к задачам, которые решает экспорт/импорт, давайте рассмотрим, что можно экспортировать, импортировать и обновлять. </p>
-<h2 class="p_Heading2"><span class="f_Heading2">Типы пакетов</span></h2>
-<p class="p_Normal" style="line-height: 1.57;"><span style="font-size: 15px;">В ELMA365 существует несколько типов выгружаемых и устанавливаемых пакетов. Каждый тип соответствует уровню изоляции:</span></p>
+                        <p class="p_Normal" style="line-height: 1.57; margin: 8px 0 0 0;">This article covers the features of exporting and importing structures in BRIX.</p>
+<h2 class="p_Heading2"><span class="f_Heading2">Isolation</span></h2>
+<p class="p_Normal" style="line-height: 1.57;">Isolation is one of the key concepts for moving structures between companies. Isolation ensures that the structure is transferred completely, correctly, and with all the links intact. For instance, when we export a workspace, we get an independent and functional workspace that can be imported into other companies right away.</p>
+<p class="p_Normal" style="line-height: 1.57;">Whenever there is a threat to isolation, export errors appear. Below we shall see how export is done exactly on the levels where it is required, without leaving anything out or taking more than necessary. Errors show that we are trying to export something that may break the isolation.</p>
+<p class="p_Normal" style="line-height: 1.57;">At the same time, isolation is not broken by built-in workspaces, such as <span style="font-weight: bold;">CRM </span>and <span style="font-weight: bold;">System Apps</span>. You can refer to these workspaces without expecting any export errors because the system knows that these workspaces also exist in the target company where you will later import the workspace.</p>
+<p style="text-align: justify; line-height: 1.20; margin: 7px 0 16px 0;">Note that <span style="color: #0563c1;"><a href="system-workspaces.html#export_built_in" class="topiclink">exporting built-in workspaces</a></span> and using <span style="color: #0563c1;"><a href="global-constants.html" class="topiclink">global constants in scripts</a> </span>have their own features and limitations.</p>
+<p class="p_Normal" style="line-height: 1.57;">Before we move on to the objectives of import and export, let's take a look at what exactly can be exported, imported, and updated.</p>
+<h2 class="p_Heading2"><span class="f_Heading2">Types of packages</span></h2>
+<p class="p_Normal" style="line-height: 1.57;">In BRIX there are several types of exported and imported packages. Each package corresponds to a level of isolation:</p>
 <ol style="list-style-type:decimal">
-<li value="1" style="line-height: 1.57; margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-size: 15px;">Приложение (</span><code><b>namespace.app</b></code><span style="font-size: 15px;">). Атомарный тип пакета. Содержит только одно приложение и всё, что с ним связано.</span></li><li value="2" style="line-height: 1.57; margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-size: 15px;">Раздел (</span><code><b>namespace</b></code><span style="font-size: 15px;">). Набор приложений и процессов. Раздел, как правило, является логической единицей, решающей ряд связанных задач.</span></li><li value="3" style="line-height: 1.57; margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-size: 15px;">Модуль (</span><code><b>namespace</b></code><span style="font-size: 15px;">). Набор виджетов, пользовательских блоков и методов API. В модулях создаются переиспользуемые сущности, которые можно применять в разных приложениях, интерфейсах, процессах. Другой ключевой сценарий использования модулей </span><span style="font-size: 15px; color: #70757a; background-color: #ffffff;">—</span><span style="font-size: 15px;"> это создание интеграций и подключение внешних систем и сервисов.</span></li><li value="4" style="line-height: 1.57; margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-size: 15px;">Решение (</span><code><b>solution</b></code><span style="font-size: 15px;">). Тип пакета для единовременной выгрузки одного или нескольких разделов и модулей.</span></li><li value="5" style="line-height: 1.57; margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-size: 15px;">Конфигурация (</span><code><b>global</b></code><span style="font-size: 15px;">). Все разделы, модули, оргструктура и другие сущности на уровне компании.</span></li></ol>
-<h2 class="p_Heading2"><span class="f_Heading2">Экспортируемые и импортируемые структуры</span></h2>
-<p class="p_Normal">При экспорте, импорте и обновлении любого пакета последовательно проверяются все структуры. Тем не менее, экспорт (и как следствие импорт) всегда происходит на соответствующем уровне изоляции. Например, если вы экспортируете решение, то выгружаются шаблоны документов на уровне приложений и разделов в составе решения. </p>
-<p class="p_Normal">Рассмотрим состав структур при экспорте/импорте:</p>
+<li value="1" style="line-height: 1.57; margin-top: 0; margin-right: 0; margin-bottom: 0;">App (<code><b>namespace.app</b></code>). Atomic type of package. It contains only one app and everything related to this app.</li><li value="2" style="line-height: 1.57; margin-top: 0; margin-right: 0; margin-bottom: 0;">Workspace (<code><b>namespace</b></code>). A set of apps and processes. A workspace is usually a logical unit aimed at solving a specific set of tasks.</li><li value="3" style="line-height: 1.57; margin-top: 0; margin-right: 0; margin-bottom: 0;">Module (<code><b>namespace</b></code>). A set of widgets, custom activities and API methods. In modules, you create reusable entities that can be used in different apps, interfaces, and processes. Another key usage scenario for modules is creating integrations and connecting external systems or services.</li><li value="4" style="line-height: 1.57; margin-top: 0; margin-right: 0; margin-bottom: 0;">Solution (<code><b>solution</b></code>). A package type for exporting one or several workspaces and modules at the same time.</li><li value="5" style="line-height: 1.57; margin-top: 0; margin-right: 0; margin-bottom: 0;">Configuration (<code><b>global</b></code>). All the workspaces, modules, organizational chart, and other objects that belong to the company.</li></ol>
+<h2 class="p_Heading2"><span class="f_Heading2">Exported and imported structures</span></h2>
+<p style="line-height: 1.28; margin: 0 0 11px 0;">When exporting, importing, and updating any package, all structures are consistently checked. Still, export (and, consequently, import) is always performed at a certain level of isolation. For example, if you are exporting a solution, the document templates belonging to the apps and workplaces of this solution are exported. </p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;">Let's take a look at each step and see what it does.</p>
 <ul style="list-style-type:disc">
-<li class="p_Normal"><span style="font-weight: bold;">Шаблоны</span> — шаблоны документов, используемые в процессах для генерации файлов, а также шаблоны листов ознакомления и согласования в составе выгружаемого пакета;</li><li class="p_Normal"><span style="font-weight: bold;">Виджеты</span> — виджеты и страницы, созданные в интерфейсах приложений, разделов, компании, а также формы в составе выгружаемого пакета;</li><li class="p_Normal"><span style="font-weight: bold;">Группы</span> — группы и роли приложения/раздела/компании в составе выгружаемого пакета;</li><li class="p_Normal"><span style="font-weight: bold;">Меню</span> — страницы в составе выгружаемого пакета. </li></ul>
-<p class="p_Normal" style="margin: 0 0 0 34px;"><span style="font-weight: bold;">Важно</span>: под страницами в данном случае подразумеваются не виджеты типа <span style="font-weight: bold;">Страница</span>. Речь идёт о страницах, из которых состоит меню (главное или раздела). Каждое приложение и каждый раздел также имеет свою страницу. Поэтому на данном шаге экспорта/импорта загружается вся структура раздела/решения. Соответственно, если, например, прервать импорт после этого шага (или он прервётся из-за ошибки), раздел будет отображаться в системе, но страницы не будут загружаться, так как не импортированы приложения и виджеты;</p>
+<li style="text-align: justify; line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-weight: bold;">Templates</span>. Document templates used in processes to create files, as well as templates of lists of informed users and approval sheets belonging to the exported package.</li></ul>
 <ul style="list-style-type:disc">
-<li class="p_Normal"><span style="font-weight: bold;">Процессы</span> — бизнес-процессы и пользовательские блоки из модулей в составе выгружаемого пакета;</li><li class="p_Normal"><span style="font-weight: bold;">Оргструктура</span> — экспортируется/импортируется только вместе с конфигурацией;</li><li class="p_Normal"><span style="font-weight: bold;">Нумераторы</span> — нумераторы разделов и приложений в составе выгружаемого пакета. Нумераторы приложений и разделов только импортируются, их нельзя обновить, если они уже настроены в компании;</li><li class="p_Normal"><span style="font-weight: bold;">Приложения</span> — описание приложений, т. е. поля, настройки приложения, например условия отображения, настройки кнопок приложения, а также ссылки на бизнес-процессы, настройки канбан-доски, плиток, таблицы и прочее в составе выгружаемого пакета;</li><li class="p_Normal"><span style="font-weight: bold;">Настройка прав</span> — настройки прав доступа каждого приложения в составе выгружаемого пакета;</li><li class="p_Normal"><span style="font-weight: bold;">Настройки</span> (<span style="font-weight: bold;">Дополнительные настройки</span> при импорте) — список дополнительных параметров и настройки модулей в составе выгружаемого пакета. На момент написания статьи выгрузка значений параметров не предусмотрена;</li><li class="p_Normal"><span style="font-weight: bold;">Расширения</span> (<span style="font-weight: bold;">Модули</span>) — описание модулей и их состава. </li></ul>
-<p class="p_Normal" style="margin: 0 0 0 34px;"><span style="font-weight: bold;">Важно</span>: каждая составляющая модуля (виджеты, пользовательские блоки, процессы) экспортируется и импортируется соответствующим сервисом на соответствующем шаге. Например, пока при импорте шаг <span style="font-weight: bold;">Процессы</span> не будет завершён, в модуле не появятся пользовательские блоки и процессы;</p>
+<li style="text-align: justify; line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-weight: bold;">Widgets</span>.<span style="font-weight: bold;"> </span>Widgets and pages created in the app, workspace, and company interfaces, as well as forms belonging to the exported package.</li></ul>
 <ul style="list-style-type:disc">
-<li class="p_Normal"><span style="font-weight: bold;">Решения</span> — системная информация о версии сервиса <code><b>exchange</b></code> (необходим для обратной совместимости со старыми решениями) и о списке решений в составе пакета. Основная функция — совместимость и история версий;</li><li class="p_Normal"><span style="font-weight: bold;">События</span> (<span style="font-weight: bold;">Системная шина</span> при импорте) — обработчики событий, которые создаются в модулях, выгружаются в составе пакета;</li><li class="p_Normal"><span style="font-weight: bold;">Переносимые сервисы</span> — настройки подключения к переносимым сервисам модуля. Выгружается только настроечная часть. Образы переносимых сервисов не участвуют в переносе;</li><li class="p_Normal"><span style="font-weight: bold;">Локализация</span> — файлы с переводами, загруженные в экспортируемый раздел в составе выгружаемого пакета;</li><li class="p_Normal"><span style="font-weight: bold;">Токены OAuth2/OIDC</span> — шаблоны и уровни доступа к элементам системы. Выданные разрешения не переносятся, т. к. являются частью системы безопасности платформы;</li><li class="p_Normal"><span style="font-weight: bold;">Портал</span> — страницы внешнего портала, а также его настройки брендирования. Портал привязан к разделу и экспортируется вместе с ним в составе выгружаемого пакета;</li><li class="p_Normal"><span style="font-weight: bold;">Отчеты</span> — формы отчётов, созданные на основе приложений и бизнес-процессов (источников отчёта), включая данные по их настройкам, таким как связь между источниками, колонки отчёта;</li><li class="p_Normal"><span style="font-weight: bold;">Контракты</span> — описание контрактов: список полей, настройки источников и т. д.</li></ul>
-<p class="p_Normal" style="margin: 0 0 0 34px;">При экспорте раздела или решения с контрактом, источником которого являются приложения за пределами состава экспорта, пользователь получит предупреждение о выгрузке без приложения-источника.</p>
-<p class="p_Normal" style="margin: 0 0 0 34px;">Импорт такого раздела или решения в случае отсутствия приложений-источников пройдёт без ошибок, но связи контракта с источниками не будет;</p>
+<li style="text-align: justify; line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-weight: bold;">Groups</span>.<span style="font-weight: bold;"> </span>App, workspace, and company groups and roles belonging to the exported package.</li><li style="text-align: justify; line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-weight: bold;">Menu</span>. Pages belonging to the exported package. </li></ul>
+<p style="text-align: justify; line-height: 1.20; margin: 0 0 0 34px;"><span style="font-weight: bold;">Important</span>: In this case, menu pages are meant by “pages“, not widgets of the <span style="font-weight: bold;">Page</span> type. Menu pages are the ones that the main menu or the workspace menu consists of. It is also important to understand that every app and workspace has its own page. Therefore, in this step of the importing process, the entire structure of the workspace or solution is imported. If you interrupt the import after this step (or it is interrupted due to an error), the workspaces will look as if they have been imported completely, but the pages will not load, because the apps and widgets would not have been imported.</p>
 <ul style="list-style-type:disc">
-<li class="p_Normal"><span style="font-weight: bold;">CRM</span> — настройки стадий прогрева, истории активностей и задач CRM. Выгружаются только при экспорте раздела <span style="font-weight: bold;">CRM</span> или конфигурации;</li><li class="p_Normal"><span style="font-weight: bold;">Документооборот</span> — настройки номенклатуры (места регистрации, дела, документопотоки), которые фактически используются в приложениях раздела, решения или конфигурации.</li></ul>
-<p class="p_Normal" style="margin: 0 0 0 34px;">В экспорте/импорте конфигурации также участвуют настройки листов согласования и ознакомления;</p>
+<li style="text-align: justify; line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-weight: bold;">Processes</span>.<span style="font-weight: bold;"> </span>Business processes and custom activities from modules belonging to the exported package.</li><li style="text-align: justify; line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-weight: bold;">Organizational chart</span>. Is only exported and imported with the configuration.</li><li style="text-align: justify; line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-weight: bold;">Counters</span>. Counters of workspaces and apps belonging to the exported package.<span style="font-size: 15px;"> </span>App and workspace counters can only be imported, they cannot be updated if they are already configured in the company.</li><li style="text-align: justify; line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-weight: bold;">Apps</span>. Description of apps, that is, of fields, including their settings (for example, display conditions), settings of app buttons including links to business processes, Kanban board, tiles and table settings, and other settings belonging to the exported package.</li><li style="text-align: justify; line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-weight: bold;">Access permissions</span>. Access permissions for each app in the package.</li><li style="text-align: justify; line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-weight: bold;">Settings (additional import settings)</span>. List of additional parameters and settings of the module belonging to the package. When this article was written, the parameter values were not available for export.</li><li style="text-align: justify; line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-weight: bold;">Extensions (Modules)</span>. Description of modules and their content. </li></ul>
+<p style="line-height: 1.20; margin: 0 0 0 34px;"><span style="font-weight: bold;">Important</span>: Each module component (widgets, custom activities, processes) is exported and imported by a specific service, and at a certain step. For example, when importing a module, only after the <span style="font-weight: bold;">Processes</span> step will custom activities and processes be uploaded.</p>
 <ul style="list-style-type:disc">
-<li class="p_Normal"><span style="font-weight: bold;">Проекты</span> — описание типов проектов, создаваемых в разделе <span style="font-weight: bold;">Администрирование &gt; Типы проектов</span>. Выгружается при экспорте конфигурации, раздела <span style="font-weight: bold;">Проекты</span> и решений, содержащих в своём составе раздел <span style="font-weight: bold;">Проекты</span>;</li></ul>
-<p class="p_Normal" style="text-indent: -1px; margin: 0 0 0 34px;"><span style="font-weight: bold;">Важно</span>: шаблоны проектов (элементы приложения), включённые автоматически при создании типа проекта, при экспорте/импорте структур не переносятся;</p>
+<li style="text-align: justify; line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-weight: bold;">Solutions</span>. System information about the <code><b>exchange</b></code><span style="font-size: 13px;"> </span>service version (it is required for compatibility with older solutions) and the list of solutions within the package. The main function is compatibility and version history.</li><li style="text-align: justify; line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-weight: bold;">Events (import system bus)</span>. Event handlers created in modules belonging to the package.</li><li style="text-align: justify; line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-weight: bold;">Portable services</span>. Settings of connection to the module’s portable services. Only the settings part is exported. Images of portable services are not included in the import.</li><li style="text-align: justify; line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-weight: bold;">Localization</span>. Files with translations uploaded to the exported workspace belonging to the exported package.</li><li style="text-align: justify; line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-weight: bold;">OAuth2/OIDC tokens</span>. Templates and access levels to system items. Granted permissions are not transferred, as they are part of the platform security system.</li><li style="text-align: justify; line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-weight: bold;">Portal</span>. Pages of the external portal, as well as its branding settings. The portal is bound to a workspace and exported together with it as part of a package.</li><li style="text-align: justify; line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-weight: bold;">Reports</span>. Report forms created based on apps and business processes (report sources), including their settings, such as links between sources or report columns.</li><li style="text-align: justify; line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-weight: bold;">Contracts</span>. Contract description: list of fields, source settings, etc.</li></ul>
+<p style="text-align: justify; line-height: 1.20; margin: 0 0 0 34px;">When exporting a workspace or solution with a contract whose source is an app outside the export configuration, the user will receive a warning about uploading without a source app.</p>
+<p style="text-align: justify; line-height: 1.20; margin: 0 0 0 34px;">Import of such a workspace or solution in case of absence of source apps will run without errors, but there will be no links between the contract and the sources.</p>
 <ul style="list-style-type:disc">
-<li class="p_Normal"><span style="font-weight: bold;">Веб-формы</span> — веб-формы приложений в составе выгружаемого пакета.</li></ul>
-<p class="p_Normal">Почему всегда проверяются эти компоненты, даже если в выгружаемом разделе, например, нет оргструктуры? Потому что в экспорте/импорте используется универсальный механизм, но каждый из сервисов индивидуально определяет, нужно ли выгружать определённый тип пакета или нет.</p>
-<p class="p_Normal">Таким образом, результатом экспорта в ELMA365 всегда является файл, который содержит в себе описание настроек того уровня, который пользователь посчитал нужным выгрузить. Соответственно, при импорте загружается ровно то, что было экспортировано.</p>
-<h3 class="p_Heading3"><span class="f_Heading3">Состояния импортированного решения</span></h3>
-<p class="p_Normal">Импортированное решение имеет несколько состояний:</p>
-<p class="p_Normal">1. <span style="font-weight: bold;">Заблокировано</span>.</p>
-<p class="p_Normal">По умолчанию решение заблокировано после импорта. Блокировка подразумевает недоступность определённых частей решения (процессов, виджетов, приложений и т. д.) для работы через интерфейс. </p>
-<p class="p_Normal">Блокировка необходима, чтобы исключить изменение обновляемых частей решения, что впоследствии привело бы к конфликтам при обновлении.</p>
-<p class="p_Normal">Тем не менее, некоторые настройки, например настройки прав доступа, открыты для редактирования даже в заблокированном решении и в то же время обновляемы. Для таких настроек предусмотрен отдельный этап обновления решения, где пользователь может выбрать, какие права доступа обновить.</p>
-<p class="p_Normal">2. <span style="font-weight: bold;">Платное</span>.</p>
-<p class="p_Normal">Решение может быть лицензируемым. Лицензируемое решение необходимо активировать для работы. Если решение не активировано, пользователям будут недоступны разделы решения, а модули будут выключены.</p>
-<p class="p_Normal">Файлы платных решений шифруются и не могут быть распакованы, в том числе через <a href="lowcode-devops-pm.html" class="topiclink">утилиту elma365pm</a>.</p>
-<p class="p_Normal">В зависимости от состояния решения (заблокировано/разблокировано, платное/бесплатное) доступ к экспорту и обновлению разделов, а также управлению модулями различается. Ниже приведены схемы доступа.</p>
-<p class="p_Normal"><span style="font-weight: bold;">Модули</span></p>
-<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0 0 0 0;"><table style="border:none; border-spacing:0;">
+<li style="text-align: justify; line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-weight: bold;">CRM</span>. Settings of nurturing stages, activity log, and CRM tasks. They are exported only when exporting the <span style="font-weight: bold;">CRM</span> workspace or the whole configuration.</li><li style="text-align: justify; line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-weight: bold;">Document flow</span>. Settings of document categorization (offices, folders, and document flows) that are actually used in workspace, solution, or configuration apps.</li></ul>
+<p style="text-align: justify; line-height: 1.20; margin: 0 0 0 34px;">Configuration of export or import also includes the settings of approval sheets and lists of informed users.</p>
+<ul style="list-style-type:disc">
+<li style="text-align: justify; line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-weight: bold;">Projects</span>. Description of project types created in the <span style="font-weight: bold;">Administration &gt; Project Types </span>workspace. It is downloaded when exporting the configuration, the <span style="font-weight: bold;">Projects</span> workspace, and solutions that contain the <span style="font-weight: bold;">Projects</span> workspace.</li></ul>
+<p style="line-height: 1.20; margin: 0 0 0 34px;"><span style="font-weight: bold;">Important</span>: Project templates (app items) included automatically when creating a project type are not transferred when exporting/importing structures.</p>
+<ul style="list-style-type:disc">
+<li style="text-align: justify; line-height: 1.20; margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-weight: bold;">Web forms</span>. App web forms belonging to the uploaded package.</li></ul>
+<p style="line-height: 1.28; margin: 0 0 11px 0;">Why are these components always checked even if the workspace doesn't, for instance, have an organizational chart? Because the export/import uses one single mechanism, and each service decides whether to be included in the package or not.</p>
+<p class="p_Normal" style="line-height: 1.57;">As a result, on export, BRIX always provides a file that contains the description of settings that the user decided to export. During the import of this package, the exact same settings will be imported.</p>
+<h3 class="p_Heading3"><span class="f_Heading3">States of the imported solution</span></h3>
+<p style="text-align: justify; line-height: 1.20; margin: 8px 0 0 0;">An imported solution may have several statuses:</p>
+<p style="text-align: justify; line-height: 1.20; margin: 8px 0 0 0;">1.<span style="font-weight: bold;"> Locked</span></p>
+<p style="text-align: justify; line-height: 1.20; margin: 8px 0 0 0;">By default, a solution is locked after being imported. Locking means that certain parts of the solution (processes, widgets, apps, etc.) are not available in the interface.</p>
+<p style="text-align: justify; line-height: 1.20; margin: 8px 0 0 0;">Locking is necessary to prevent the updated parts of the solution from being changed, which would then lead to errors during updates.</p>
+<p style="text-align: justify; line-height: 1.20; margin: 8px 0 0 0;">However, some settings, such as permissions, can be edited even in a locked solution and are still updatable. For such settings, a separate step is provided where the user can select which access rights to update.</p>
+<p style="text-align: justify; line-height: 1.20; margin: 8px 0 0 0;">2.<span style="font-weight: bold;"> Paid</span></p>
+<p style="text-align: justify; line-height: 1.20; margin: 8px 0 0 0;">A solution can be licensed. In this case, it has to be activated. If the solution is not activated, users will not be able to access its workspaces and modules will be disabled.</p>
+<p style="text-align: justify; line-height: 1.20; margin: 8px 0 0 0;">Files of paid solutions are encrypted and cannot be unpacked, including via the <span style="color: #0563c1;"><a href="lowcode-devops-pm.html" class="topiclink">elma365pm utility</a></span>.</p>
+<p style="text-align: justify; line-height: 1.20; margin: 8px 0 0 0;">Depending on the solution status (locked/unlocked, paid/free), access to exporting and updating workspaces and managing modules differs. The access options are summarized below.</p>
+<p style="text-align: justify; line-height: 1.20; margin: 8px 0 0 0;"><span style="font-weight: bold;">Modules</span></p>
+<p style="text-align: justify; line-height: 1.20; margin: 8px 0 0 0;"><span style="font-size: 13px; color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0 0 0 0;"><table style="border:none; border-spacing:0; border-collapse:collapse;">
 <tr>
-<td style="vertical-align:middle; width:84px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">Платное</p>
+<td style="vertical-align:top; width:84px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">Paid</p>
 </td>
-<td style="vertical-align:middle; width:154px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">Заблокировано</p>
+<td style="vertical-align:top; width:84px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">Locked</p>
 </td>
-<td style="vertical-align:middle; width:171px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">Состояние лицензии</p>
+<td style="vertical-align:top; width:85px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">License</p>
 </td>
-<td style="vertical-align:middle; width:287px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">Разблокировано ключом активации</p>
+<td style="vertical-align:top; width:85px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">Unlocked with activation key</p>
 </td>
-<td style="vertical-align:middle; width:120px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">Управление</p>
+<td style="vertical-align:top; width:85px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">Management</p>
 </td>
-<td style="vertical-align:middle; width:187px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">Экспорт (отдельно)</p>
+<td style="vertical-align:top; width:85px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">Export (separately)</p>
 </td>
-<td style="vertical-align:middle; width:197px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">Обновление (отдельно)</p>
+<td style="vertical-align:top; width:85px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">Upgrade (separately)</p>
 </td>
 </tr>
 <tr>
-<td style="vertical-align:middle; width:84px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">Нет</p>
+<td style="vertical-align:top; width:84px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">No</p>
 </td>
-<td style="vertical-align:middle; width:154px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">Нет</p>
+<td style="vertical-align:top; width:84px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">No</p>
 </td>
-<td style="vertical-align:middle; width:171px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">-</p>
+<td style="vertical-align:top; width:85px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">-</p>
 </td>
-<td style="vertical-align:middle; width:287px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">-</p>
+<td style="vertical-align:top; width:85px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">-</p>
 </td>
-<td style="vertical-align:middle; width:120px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">+</p>
+<td style="vertical-align:top; width:85px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">+</p>
 </td>
-<td style="vertical-align:middle; width:187px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">+</p>
+<td style="vertical-align:top; width:85px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">+</p>
 </td>
-<td style="vertical-align:middle; width:197px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">+</p>
-</td>
-</tr>
-<tr>
-<td style="vertical-align:middle; width:84px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">Нет</p>
-</td>
-<td style="vertical-align:middle; width:154px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">Да</p>
-</td>
-<td style="vertical-align:middle; width:171px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">-</p>
-</td>
-<td style="vertical-align:middle; width:287px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">-</p>
-</td>
-<td style="vertical-align:middle; width:120px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">-</p>
-</td>
-<td style="vertical-align:middle; width:187px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">+</p>
-</td>
-<td style="vertical-align:middle; width:197px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">-</p>
+<td style="vertical-align:top; width:85px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">+</p>
 </td>
 </tr>
 <tr>
-<td style="vertical-align:middle; width:84px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">Да</p>
+<td style="vertical-align:top; width:84px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">No</p>
 </td>
-<td style="vertical-align:middle; width:154px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">Нет</p>
+<td style="vertical-align:top; width:84px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">Yes</p>
 </td>
-<td style="vertical-align:middle; width:171px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">Активно</p>
+<td style="vertical-align:top; width:85px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">-</p>
 </td>
-<td style="vertical-align:middle; width:287px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">Нет</p>
+<td style="vertical-align:top; width:85px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">-</p>
 </td>
-<td style="vertical-align:middle; width:120px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">-</p>
+<td style="vertical-align:top; width:85px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">-</p>
 </td>
-<td style="vertical-align:middle; width:187px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">-</p>
+<td style="vertical-align:top; width:85px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">+</p>
 </td>
-<td style="vertical-align:middle; width:197px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">-</p>
-</td>
-</tr>
-<tr>
-<td style="vertical-align:middle; width:84px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">Да</p>
-</td>
-<td style="vertical-align:middle; width:154px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">Да</p>
-</td>
-<td style="vertical-align:middle; width:171px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">Активно</p>
-</td>
-<td style="vertical-align:middle; width:287px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">Нет</p>
-</td>
-<td style="vertical-align:middle; width:120px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">-</p>
-</td>
-<td style="vertical-align:middle; width:187px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">-</p>
-</td>
-<td style="vertical-align:middle; width:197px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">-</p>
+<td style="vertical-align:top; width:85px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">-</p>
 </td>
 </tr>
 <tr>
-<td style="vertical-align:middle; width:84px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">Да</p>
+<td style="vertical-align:top; width:84px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">Yes</p>
 </td>
-<td style="vertical-align:middle; width:154px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">Нет</p>
+<td style="vertical-align:top; width:84px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">No</p>
 </td>
-<td style="vertical-align:middle; width:171px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">Заморожено</p>
+<td style="vertical-align:top; width:85px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">Active</p>
 </td>
-<td style="vertical-align:middle; width:287px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">Нет</p>
+<td style="vertical-align:top; width:85px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">No</p>
 </td>
-<td style="vertical-align:middle; width:120px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">-</p>
+<td style="vertical-align:top; width:85px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">-</p>
 </td>
-<td style="vertical-align:middle; width:187px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">-</p>
+<td style="vertical-align:top; width:85px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">-</p>
 </td>
-<td style="vertical-align:middle; width:197px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">-</p>
-</td>
-</tr>
-<tr>
-<td style="vertical-align:middle; width:84px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">Да</p>
-</td>
-<td style="vertical-align:middle; width:154px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">Да</p>
-</td>
-<td style="vertical-align:middle; width:171px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">Заморожено</p>
-</td>
-<td style="vertical-align:middle; width:287px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">Нет</p>
-</td>
-<td style="vertical-align:middle; width:120px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">-</p>
-</td>
-<td style="vertical-align:middle; width:187px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">-</p>
-</td>
-<td style="vertical-align:middle; width:197px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">-</p>
+<td style="vertical-align:top; width:85px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">-</p>
 </td>
 </tr>
 <tr>
-<td style="vertical-align:middle; width:84px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">Да</p>
+<td style="vertical-align:top; width:84px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">Yes</p>
 </td>
-<td style="vertical-align:middle; width:154px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">Нет</p>
+<td style="vertical-align:top; width:84px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">Yes</p>
 </td>
-<td style="vertical-align:middle; width:171px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">Активно</p>
+<td style="vertical-align:top; width:85px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">Active</p>
 </td>
-<td style="vertical-align:middle; width:287px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">Да</p>
+<td style="vertical-align:top; width:85px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">No</p>
 </td>
-<td style="vertical-align:middle; width:120px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">+</p>
+<td style="vertical-align:top; width:85px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">-</p>
 </td>
-<td style="vertical-align:middle; width:187px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">-</p>
+<td style="vertical-align:top; width:85px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">-</p>
 </td>
-<td style="vertical-align:middle; width:197px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">-</p>
-</td>
-</tr>
-<tr>
-<td style="vertical-align:middle; width:84px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">Да</p>
-</td>
-<td style="vertical-align:middle; width:154px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">Да</p>
-</td>
-<td style="vertical-align:middle; width:171px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">Активно</p>
-</td>
-<td style="vertical-align:middle; width:287px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">Да</p>
-</td>
-<td style="vertical-align:middle; width:120px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">+</p>
-</td>
-<td style="vertical-align:middle; width:187px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">-</p>
-</td>
-<td style="vertical-align:middle; width:197px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">-</p>
+<td style="vertical-align:top; width:85px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">-</p>
 </td>
 </tr>
 <tr>
-<td style="vertical-align:middle; width:84px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">Да</p>
+<td style="vertical-align:top; width:84px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">Yes</p>
 </td>
-<td style="vertical-align:middle; width:154px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">Нет</p>
+<td style="vertical-align:top; width:84px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">No</p>
 </td>
-<td style="vertical-align:middle; width:171px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">Заморожено</p>
+<td style="vertical-align:top; width:85px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">Frozen</p>
 </td>
-<td style="vertical-align:middle; width:287px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">Да</p>
+<td style="vertical-align:top; width:85px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">No</p>
 </td>
-<td style="vertical-align:middle; width:120px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">-</p>
+<td style="vertical-align:top; width:85px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">-</p>
 </td>
-<td style="vertical-align:middle; width:187px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">-</p>
+<td style="vertical-align:top; width:85px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">-</p>
 </td>
-<td style="vertical-align:middle; width:197px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">-</p>
+<td style="vertical-align:top; width:85px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">-</p>
 </td>
 </tr>
 <tr>
-<td style="vertical-align:middle; width:84px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">Да</p>
+<td style="vertical-align:top; width:84px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">Yes</p>
 </td>
-<td style="vertical-align:middle; width:154px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">Да</p>
+<td style="vertical-align:top; width:84px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">Yes</p>
 </td>
-<td style="vertical-align:middle; width:171px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">Заморожено</p>
+<td style="vertical-align:top; width:85px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">Frozen</p>
 </td>
-<td style="vertical-align:middle; width:287px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">Да</p>
+<td style="vertical-align:top; width:85px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">No</p>
 </td>
-<td style="vertical-align:middle; width:120px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">-</p>
+<td style="vertical-align:top; width:85px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">-</p>
 </td>
-<td style="vertical-align:middle; width:187px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">-</p>
+<td style="vertical-align:top; width:85px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">-</p>
 </td>
-<td style="vertical-align:middle; width:197px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">-</p>
+<td style="vertical-align:top; width:85px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">-</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:84px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">Yes</p>
+</td>
+<td style="vertical-align:top; width:84px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">No</p>
+</td>
+<td style="vertical-align:top; width:85px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">Active</p>
+</td>
+<td style="vertical-align:top; width:85px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">Yes</p>
+</td>
+<td style="vertical-align:top; width:85px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">+</p>
+</td>
+<td style="vertical-align:top; width:85px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">-</p>
+</td>
+<td style="vertical-align:top; width:85px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">-</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:84px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">Yes</p>
+</td>
+<td style="vertical-align:top; width:84px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">Yes</p>
+</td>
+<td style="vertical-align:top; width:85px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">Active</p>
+</td>
+<td style="vertical-align:top; width:85px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">Yes</p>
+</td>
+<td style="vertical-align:top; width:85px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">+</p>
+</td>
+<td style="vertical-align:top; width:85px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">-</p>
+</td>
+<td style="vertical-align:top; width:85px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">-</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:84px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">Yes</p>
+</td>
+<td style="vertical-align:top; width:84px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">No</p>
+</td>
+<td style="vertical-align:top; width:85px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">Frozen</p>
+</td>
+<td style="vertical-align:top; width:85px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">Yes</p>
+</td>
+<td style="vertical-align:top; width:85px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">-</p>
+</td>
+<td style="vertical-align:top; width:85px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">-</p>
+</td>
+<td style="vertical-align:top; width:85px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">-</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:84px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">Yes</p>
+</td>
+<td style="vertical-align:top; width:84px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">Yes</p>
+</td>
+<td style="vertical-align:top; width:85px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">Frozen</p>
+</td>
+<td style="vertical-align:top; width:85px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">Yes</p>
+</td>
+<td style="vertical-align:top; width:85px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">-</p>
+</td>
+<td style="vertical-align:top; width:85px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">-</p>
+</td>
+<td style="vertical-align:top; width:85px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">-</p>
 </td>
 </tr>
 </table>
 </div>
-<p class="p_Normal"><span style="font-weight: bold;">Разделы</span></p>
-<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0 0 0 0;"><table style="border:none; border-spacing:0;">
+<p style="text-align: justify; line-height: 1.20; margin: 8px 0 0 0;"><span style="font-weight: bold;">Workspaces</span></p>
+<p style="text-align: justify; line-height: 1.20; margin: 8px 0 0 0;"><span style="font-size: 13px; color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0; line-height: 1.80; padding: 0 0 0 0; margin: 0 0 0 0;"><table style="width:691px; border:none; border-spacing:0; border-collapse:collapse;">
 <tr>
-<td style="vertical-align:middle; width:82px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">Платное</p>
+<td style="vertical-align:top; width:124px; height:85px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">Paid</p>
 </td>
-<td style="vertical-align:middle; width:155px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">Заблокировано</p>
+<td style="vertical-align:top; width:124px; height:85px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">Locked</p>
 </td>
-<td style="vertical-align:middle; width:172px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">Состояние лицензии</p>
+<td style="vertical-align:top; width:124px; height:85px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">License</p>
 </td>
-<td style="vertical-align:middle; width:286px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">Экспорт (отдельно)</p>
+<td style="vertical-align:top; width:124px; height:85px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">Export (separately)</p>
 </td>
-<td style="vertical-align:middle; width:310px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">Обновление (отдельно)</p>
+<td style="vertical-align:top; width:124px; height:85px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">Upgrade (separately)</p>
 </td>
 </tr>
 <tr>
-<td style="vertical-align:middle; width:82px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">Нет</p>
+<td style="vertical-align:top; width:124px; height:49px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">No</p>
 </td>
-<td style="vertical-align:middle; width:155px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">Нет</p>
+<td style="vertical-align:top; width:124px; height:49px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">No</p>
 </td>
-<td style="vertical-align:middle; width:172px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">-</p>
+<td style="vertical-align:top; width:124px; height:49px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">-</p>
 </td>
-<td style="vertical-align:middle; width:286px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">+</p>
+<td style="vertical-align:top; width:124px; height:49px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">+</p>
 </td>
-<td style="vertical-align:middle; width:310px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">+</p>
-</td>
-</tr>
-<tr>
-<td style="vertical-align:middle; width:82px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">Нет</p>
-</td>
-<td style="vertical-align:middle; width:155px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">Да</p>
-</td>
-<td style="vertical-align:middle; width:172px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">-</p>
-</td>
-<td style="vertical-align:middle; width:286px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">-</p>
-</td>
-<td style="vertical-align:middle; width:310px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">-</p>
+<td style="vertical-align:top; width:124px; height:49px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">+</p>
 </td>
 </tr>
 <tr>
-<td style="vertical-align:middle; width:82px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">Да</p>
+<td style="vertical-align:top; width:124px; height:50px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">No</p>
 </td>
-<td style="vertical-align:middle; width:155px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">Нет</p>
+<td style="vertical-align:top; width:124px; height:50px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">Yes</p>
 </td>
-<td style="vertical-align:middle; width:172px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">Активно</p>
+<td style="vertical-align:top; width:124px; height:50px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">-</p>
 </td>
-<td style="vertical-align:middle; width:286px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">-</p>
+<td style="vertical-align:top; width:124px; height:50px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">-</p>
 </td>
-<td style="vertical-align:middle; width:310px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">-</p>
-</td>
-</tr>
-<tr>
-<td style="vertical-align:middle; width:82px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">Да</p>
-</td>
-<td style="vertical-align:middle; width:155px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">Да</p>
-</td>
-<td style="vertical-align:middle; width:172px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">Активно</p>
-</td>
-<td style="vertical-align:middle; width:286px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">-</p>
-</td>
-<td style="vertical-align:middle; width:310px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">-</p>
+<td style="vertical-align:top; width:124px; height:50px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">-</p>
 </td>
 </tr>
 <tr>
-<td style="vertical-align:middle; width:82px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">Да</p>
+<td style="vertical-align:top; width:124px; height:50px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">Yes</p>
 </td>
-<td style="vertical-align:middle; width:155px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">Нет</p>
+<td style="vertical-align:top; width:124px; height:50px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">No</p>
 </td>
-<td style="vertical-align:middle; width:172px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">Заморожено</p>
+<td style="vertical-align:top; width:124px; height:50px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">Active</p>
 </td>
-<td style="vertical-align:middle; width:286px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">-</p>
+<td style="vertical-align:top; width:124px; height:50px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">-</p>
 </td>
-<td style="vertical-align:middle; width:310px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">-</p>
+<td style="vertical-align:top; width:124px; height:50px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">-</p>
 </td>
 </tr>
 <tr>
-<td style="vertical-align:middle; width:82px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">Да</p>
+<td style="vertical-align:top; width:124px; height:49px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">Yes</p>
 </td>
-<td style="vertical-align:middle; width:155px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">Да</p>
+<td style="vertical-align:top; width:124px; height:49px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">Yes</p>
 </td>
-<td style="vertical-align:middle; width:172px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">Заморожено</p>
+<td style="vertical-align:top; width:124px; height:49px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">Active</p>
 </td>
-<td style="vertical-align:middle; width:286px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">-</p>
+<td style="vertical-align:top; width:124px; height:49px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">-</p>
 </td>
-<td style="vertical-align:middle; width:310px; padding:0; border:none"><p class="p_Normal" style="text-align: center;">-</p>
+<td style="vertical-align:top; width:124px; height:49px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">-</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:124px; height:50px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">Yes</p>
+</td>
+<td style="vertical-align:top; width:124px; height:50px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">No</p>
+</td>
+<td style="vertical-align:top; width:124px; height:50px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">Frozen</p>
+</td>
+<td style="vertical-align:top; width:124px; height:50px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">-</p>
+</td>
+<td style="vertical-align:top; width:124px; height:50px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">-</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:124px; height:50px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">Yes</p>
+</td>
+<td style="vertical-align:top; width:124px; height:50px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">Yes</p>
+</td>
+<td style="vertical-align:top; width:124px; height:50px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">Frozen</p>
+</td>
+<td style="vertical-align:top; width:124px; height:50px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">-</p>
+</td>
+<td style="vertical-align:top; width:124px; height:50px; padding:4px; border:solid thin #000000;"><p style="text-align: justify; line-height: 1.28; margin: 8px 0 11px 0;">-</p>
 </td>
 </tr>
 </table>
 </div>
-<h3 class="p_Heading3"><span class="f_Heading3">Зависимости решений</span></h3>
-<p class="p_Normal">Решение может иметь зависимости от другого решения. Зависимости используются для того, чтобы решения можно было экспортировать и импортировать отдельно друг от друга, но при этом иметь возможность в одном решении ссылаться на структуры другого решения.</p>
-<p class="p_Normal">Зависимости добавляются в процессе экспорта на этапе проверки. Для всех ссылок на другое решение можно добавить зависимость соответствующей кнопкой.</p>
-<p class="p_Normal">При импорте решения, в котором есть зависимости, будет произведена проверка наличия в компании решений, от которых зависит импортируемое. Если требуемые решения отсутствуют, импорт будет невозможен.</p>
-<h2 class="p_Heading2"><span class="f_Heading2">Кейсы</span></h2>
-<p class="p_Normal">Теперь рассмотрим несколько кейсов настройки ELMA365 и переноса результатов работы между компаниями. Для разных целей экспорта/импорта лучше подходят разные типы пакетов. </p>
-<h3 class="p_Heading3"><span class="f_Heading3">Кейс 1. Счёт</span></h3>
-<p class="p_Normal" style="line-height: 1.57; margin: 5px 0 0 0;"><span style="font-size: 15px;">Нужно автоматизировать работу со счетами. Из требований мы знаем, что нужно согласовывать и оплачивать входящие счета. Есть различные назначения платежей, но пользователь не заполняет сам, а выбирает из списка. Счета бывают в разных валютах: рубли, доллары, евро. Счета выставляются разным юрлицам компании и оплачиваются соответственно.</span></p>
-<p class="p_Normal" style="line-height: 1.57;"><span style="font-size: 15px;">Исходя из требований, минимальный набор приложений для решения задачи может быть таким:</span></p>
+<h3 class="p_Heading3"><span class="f_Heading3">Solution dependencies</span></h3>
+<p style="text-align: justify; line-height: 1.20; margin: 8px 0 0 0;">A solution can have dependencies on another solution. They are used so that solutions can be exported and imported separately from each other but still be able to refer to the structures of another solution.</p>
+<p style="text-align: justify; line-height: 1.20; margin: 8px 0 0 0;">Dependencies are added during the export process in the checking step. For all links to another solution, you can add a dependency using the corresponding button.</p>
+<p style="text-align: justify; line-height: 1.20; margin: 8px 0 0 0;">When importing a solution that has dependencies, a check will be performed to determine if the company has solutions on which the imported solution depends. If the required solutions are missing, the import will not be possible.</p>
+<h2 class="p_Heading2"><span class="f_Heading2">Cases</span></h2>
+<p>Now, let’s take a look at several examples of BRIX settings, and how they can be exported. For different export/import objectives, different types of packages are used.</p>
+<h3 class="p_Heading3"><span class="f_Heading3">Case 1. Invoice</span></h3>
+<p class="p_Normal" style="line-height: 1.57; margin: 5px 0 0 0;">Let's say your customer needs to automate invoice management to approve and pay incoming invoices. There are different purposes of payment, which the user does not enter manually, but chooses from a list. The invoices might be in either of the three currencies: rubles, US dollars, and euros. The invoices are issued to different legal entities within the customer's organization, and are paid accordingly. </p>
+<p class="p_Normal" style="line-height: 1.57;">The minimal set of apps for this case would be:</p>
 <ol style="list-style-type:decimal">
-<li value="1" style="line-height: 1.57; margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-size: 15px; font-weight: bold;">Счета</span><span style="font-size: 15px;">.</span></li><li value="2" style="line-height: 1.57; margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-size: 15px; font-weight: bold;">Контрагенты</span><span style="font-size: 15px;">.</span></li><li value="3" style="line-height: 1.57; margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-size: 15px; font-weight: bold;">Назначения платежей</span><span style="font-size: 15px;">.</span></li><li value="4" style="line-height: 1.57; margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-size: 15px; font-weight: bold;">Мои юридические лица</span><span style="font-size: 15px;">.</span></li></ol>
-<p class="p_Normal" style="line-height: 1.57;"><span style="font-size: 15px;">Из указанных приложений два есть в системе всегда: </span><span style="font-size: 15px; font-weight: bold;">CRM &gt; Компании</span><span style="font-size: 15px;">, </span><span style="font-size: 15px; font-weight: bold;">Системные справочники &gt; Мои юридические лица</span><span style="font-size: 15px;">. Для начала можно использовать эти приложения, потому что на них можно ссылаться без нарушения изоляции. </span></p>
-<p class="p_Normal" style="line-height: 1.57;"><span style="font-size: 15px; font-weight: bold;">Счета</span><span style="font-size: 15px;"> и </span><span style="font-size: 15px; font-weight: bold;">Назначения платежей</span><span style="font-size: 15px;"> мы можем поместить в один раздел. Таким образом, в этом кейсе лучше всего работать с разделом и, как следствие, с экспортом, импортом и обновлением именно раздела.</span></p>
-<p class="p_Normal" style="line-height: 1.57;"><span style="font-size: 15px;">Всегда стоит учитывать будущие доработки. Например, могут добавиться новые служебные приложения, или понадобится обращаться в скриптах к приложениям другого раздела. Давайте подробнее разберем этот сценарий.</span></p>
-<p class="p_Normal" style="line-height: 1.57;"><span style="font-size: 15px;">Допустим, находясь в разделе со счетами, нам нужно найти контрагентов или юридические лица.</span></p>
+<li value="1" style="line-height: 1.57; margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-weight: bold;">Invoices</span></li><li value="2" style="line-height: 1.57; margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-weight: bold;">Contractors</span></li><li value="3" style="line-height: 1.57; margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-weight: bold;">Purpose of payment</span></li><li value="4" style="line-height: 1.57; margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-weight: bold;">My legal entities</span></li></ol>
+<p class="p_Normal" style="line-height: 1.57;">Two of these apps are pre-built into the system: the <span style="font-weight: bold;">CRM</span> built-in workspace has the <span style="font-weight: bold;">Companies</span> app for contractors, and the <span style="font-weight: bold;">System Apps</span> workspace has the <span style="font-weight: bold;">My legal entities</span> app for the customer’s legal entities. It is recommended to use these apps in the first place because they can be referenced without damaging the isolation. </p>
+<p class="p_Normal" style="line-height: 1.57;"><span style="font-weight: bold;">Invoices</span> and <span style="font-weight: bold;">Purpose of payment</span> can be placed in one workspace. Therefore, for this case, it is best to work with a workspace that will then be exported, imported, and, in the future, updated.</p>
+<p class="p_Normal" style="line-height: 1.57;">Always keep in mind that there will be future improvements. For example, new service apps might appear, or your scripts will reference apps from a different workspace. Let's take a look at this scenario.</p>
+<p class="p_Normal" style="line-height: 1.57;">Suppose, we need to search for contractors or legal entities from the <span style="font-weight: bold;">Invoices</span> workspace.</p>
 <ol style="list-style-type:decimal">
-<li value="1" style="line-height: 1.57; margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-size: 15px;">Для этого будем использовать метод </span><code><b>search()</b></code><span style="font-size: 15px;">.</span></li><li value="2" style="line-height: 1.57; margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-size: 15px;">Метод </span><code><b>search()</b></code><span style="font-size: 15px; font-family: Courier,monospace;"> </span><span style="font-size: 15px;">доступен из описания приложения.</span></li><li value="3" style="line-height: 1.57; margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-size: 15px;">Описание мы можем получить одним из двух способов:</span></li></ol>
+<li value="1" style="line-height: 1.57; margin-top: 0; margin-right: 0; margin-bottom: 0;">For that, we should use the  <code><b>search()</b></code><span style="font-family: Courier,monospace;"> </span>method.</li><li value="2" style="line-height: 1.57; margin-top: 0; margin-right: 0; margin-bottom: 0;">The <code><b>search()</b></code><span style="font-family: Courier,monospace;"> </span>method is available from the app description.</li><li value="3" style="line-height: 1.57; margin-top: 0; margin-right: 0; margin-bottom: 0;">There are two ways to get the description:</li></ol>
 <ul style="list-style-type:disc">
-<li style="line-height: 1.57; margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-size: 15px;">включив константу </span><code><b>Global</b></code><span style="font-size: 15px;"> и написав команду </span><code><b>Global.ns._clients.app._companies.search()</b></code><span style="font-size: 15px;">.</span></li><li style="line-height: 1.57; margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-size: 15px;">добавив в контекст страницы/приложения/процесса переменную с типом </span><span style="font-size: 15px; font-weight: bold;">Приложение &gt; Компании</span><span style="font-size: 15px;"> и написав команду </span><code><b>Context.fields._companies.app.search()</b></code><span style="font-size: 15px;">.</span></li></ul>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; color: #394149;">Первый способ нарушит изоляцию, хотя мы ссылаемся на системное приложение, потому что мы включили константу</span><span style="font-size: 15px;"> </span><code><b>Global</b></code><span style="font-size: 15px;"> в скриптах, </span><span style="font-size: 15px; color: #394149;">а с ней невозможно экспортировать раздел. Второй способ не будет препятствовать экспорту, потому что константу </span><span style="font-size: 15px;"> </span><code><b>Global</b></code><span style="font-size: 15px;"> в этом случае включать не понадобится.</span></p>
-<p class="p_Normal" style="line-height: 1.57;"><span style="font-size: 15px;">Важно отметить, что, если мы добавляем в контекст приложение, которое не является системным и не входит в раздел, то изоляция будет нарушена. Чтобы исправить ситуацию, необходимо включить то приложение, на которое мы ссылаемся, в состав экспортируемого пакета, то есть в этом кейсе придётся объединить два раздела в решение.</span></p>
-<h3 class="p_Heading3"><span class="f_Heading3">Кейс 2. Счета с особенными требованиями</span></h3>
-<p class="p_Normal" style="line-height: 1.57; margin: 5px 0 0 0;"><span style="font-size: 15px;">В целом задача стоит такая же </span><span style="font-size: 15px; color: #70757a; background-color: #ffffff;">—</span><span style="font-size: 15px;"> автоматизация работы со счетами. Но в этом кейсе нам также важно вести реестр платежей, чтобы оплачивать одновременно несколько счетов. Кроме того, при оформлении заявки на оплату необходимо указывать не только контрагента и организацию, но и тип платежа, НДС, валюту, департамент, учётный период и прочее. С валютами и НДС тоже есть особенность </span><span style="font-size: 15px; color: #70757a; background-color: #ffffff;">—&nbsp;</span><span style="font-size: 15px;">пользователь работает с контрагентами в разных странах, поэтому значения могут быть разными и список значений может меняться.</span></p>
-<p class="p_Normal" style="line-height: 1.57;"><span style="font-size: 15px;">Не углубляясь в детали архитектуры, очевидно, что будет много приложений, которые логически делятся на два раздела: </span><span style="font-size: 15px; font-weight: bold;">Платежи</span><span style="font-size: 15px;"> и </span><span style="font-size: 15px; font-weight: bold;">Справочники</span><span style="font-size: 15px;">. </span></p>
-<p class="p_Normal" style="line-height: 1.57;"><span style="font-size: 15px;">Экспортировать наработки с тестовой компании и импортировать на целевую мы будем решением, т.е. двумя разделами в одном пакете. </span></p>
-<p class="p_Normal" style="line-height: 1.57;"><span style="font-size: 15px;">Решение в этом случае будет особенно гибким, ведь не исключено, что в будущем понадобится интеграция с учётной системой, нужно будет создать свой модуль, который можно будет без проблем добавить в состав решения.</span></p>
-<p class="p_Normal" style="line-height: 1.57;"><span style="font-size: 15px;">Но и в этом кейсе есть нюансы. В приложениях нашего решения мы будем настраивать доступ по группам пользователей, не ссылаясь на оргструктуру, чтобы не нарушать изоляцию. Одним и тем же группам пользователей мы можем давать/запрещать доступ к приложениям в разных разделах. </span></p>
-<p class="p_Normal">Вопрос: где правильнее создать эти группы. Ответ очень прост: не имеет значения, главное — внутри решения (помним про принципы изоляции). </p>
-<p class="p_Normal">Дублировать группы тоже не нужно: раз оба раздела в одном решении, в системе не возникнут ошибки при экспорте. Поэтому создаём группы в том разделе, где это кажется более логичным, и используем их по всему решению.</p>
-<p class="p_Normal">Группы могут быть не только в настройках доступа и зонах ответственности. Также они используются, например, в оповещениях в бизнес-процессах, про которые важно не забывать, и назначать группы во всех процессах на нужном уровне изоляции.</p>
-<h3 class="p_Heading3"><span class="f_Heading3">Кейс 3. Большой проект</span></h3>
-<p class="p_Normal">Часто в компании нужно автоматизировать несколько участков. Для этого создаётся сложная конфигурация.</p>
-<p class="p_Normal">Экспортировать и импортировать можно конфигурацию целиком. Но стоит ли? Давайте разберёмся.</p>
-<p class="p_Normal">Конфигурация на проекте, как правило, делится на контуры, а каждый контур может реализовываться разделом или решением.</p>
-<p class="p_Normal">В зависимости от методологии ведения проекта результат может сдаваться по контурам или целиком. Работать над каждым разделом или решением может отдельный человек или команда, или даже один человек может делать конфигурацию целиком.</p>
-<p class="p_Normal">Почему бы тогда при такой вариативности не пользоваться просто экспортом/импортом конфигурации? </p>
-<p class="p_Normal">Можно, но рекомендуется иметь изолированные разделы, решения и модули. Ведь после реализации могут быть доработки и улучшения. Гораздо удобнее их устанавливать в компанию сразу по мере готовности, не затрагивая то, что находится в работе. Например, доработать определённый раздел, экспортировать и обновить его в компании.</p>
-<p class="p_Normal">Как показывает практика, изоляцию чаще всего будет нарушать использование оргструктуры, глобальных групп, константа <code><b>Global</b></code> в скриптах. Поэтому можно руководствоваться кейсами 1 и 2, чтобы избежать ошибок при экспорте/импорте.</p>
-<p class="p_Normal">Экспорт/импорт — в большей степени инструмент автоматизации цикла разработки и распространения решений. А для того чтобы использовать этот инструмент по максимуму, всегда важно помнить об изоляции.</p>
-<h2 class="p_Heading2"><span class="f_Heading2">Обновление</span></h2>
-<p class="p_Normal">Обновление поддерживается для разделов, решений и модулей. При этом модули и решения всегда только обновляются, т. е. нельзя установить два экземпляра одного и того же модуля или решения.</p>
-<p class="p_Normal">При обновлении происходит сравнение историй каждого сервиса, для которого она ведётся. История изменений ведётся для приложений, страниц, процессов, шаблонов, виджетов, модулей, настроек прав доступа. Для каждого компонента создаётся запись с ID и датой версии при изменении.</p>
-<p class="p_Normal">Во время обновления может возникнуть одна из двух ситуаций:</p>
+<li style="line-height: 1.57;">Enable <code><b>Global</b></code> and write a syntax of the following format: <code><b>Global.ns._clients.app._companies.search()</b></code><span style="font-family: Courier,monospace;">.</span></li><li style="line-height: 1.57;">Add an <span style="font-weight: bold;">App</span> type variable with the <span style="font-weight: bold;">Companies</span> app to the context of a page/app/process. Then use the syntax of the following format: <code><b>Context.fields._companies.app.search()</b></code><span style="font-family: Courier,monospace;">.</span></li></ul>
+<p class="p_Normal" style="line-height: 1.57;">The first option will break the isolation even though we are referencing a <span style="font-family: Inter;">built-in</span> app because we have enabled <code><b>Global</b></code> in scripts, so export will not be available. On the other hand, the second option does not prevent the workspace from being exported because <code><b>Global</b></code> is not enabled.</p>
+<p class="p_Normal" style="line-height: 1.57;">Still, it is important to remember that if we add an app that is not a <span style="font-family: Inter;">built-in</span> app and does not belong to our workspace, to the context, the isolation will be violated. To correct it, you would need to include the referenced app into the export package by combining the two workspaces into a solution.</p>
+<h3 class="p_Heading3"><span class="f_Heading3">Case 2. Specific invoices</span></h3>
+<p class="p_Normal" style="line-height: 1.57; margin: 5px 0 0 0;">The overall situation is the same, we need to automate invoice management. Although, now we also have to implement a payment register in order to pay invoices in bulk. Also, when making a payment request, it is required to specify not only the contractor and the company but also the type of the payment, VAT, currency, department, period, etc. Since the customer works with contractors from different countries, the VAT and currency values can differ.</p>
+<p class="p_Normal" style="line-height: 1.57;">Even without architectural details, it is clear that this case requires a lot of apps that can be logically divided into two workspaces: <span style="font-weight: bold;">Payments</span> and <span style="font-weight: bold;">Custom Objects</span>. </p>
+<p class="p_Normal" style="line-height: 1.57;">In order to export the solution and deploy it in the customer's company, we shall combine the two workspaces in one package. </p>
+<p class="p_Normal" style="line-height: 1.57;">In this case, the combined solution will be very flexible, which is especially convenient for any future integrations with an accounting system, which can be added to the solution as a separate module.</p>
+<p class="p_Normal" style="line-height: 1.57;">Still, there are some details worth mentioning. We shall configure access permissions by user groups without referencing the org chart in order to preserve the isolation. We can provide or deny access to these user groups for each app in a workspace. </p>
+<p class="p_Normal" style="line-height: 1.57;">The question is: where shall we create these groups? The answer is simple. It doesn't really matter as long as they are created within the solution (do not forget about the isolation). </p>
+<p class="p_Normal" style="line-height: 1.57;">There is no need to duplicate the groups. Since both workspaces belong to the same solution, there will be no conflicts during export. Therefore, create groups in the workspace that seems more convenient and logical, and then use them throughout the entire solution.</p>
+<p class="p_Normal" style="line-height: 1.57;">Groups can be used not only for access settings and in swimlanes. They can also be used in notifications in business processes, so keep that in mind, and use the groups on the required isolation level.</p>
+<h3 class="p_Heading3"><span class="f_Heading3">Case 3. Large project</span></h3>
+<p class="p_Normal" style="line-height: 1.57; margin: 5px 0 0 0;">A client usually needs you to automate several activities. An entire team can be working on such a project, creating a rather complex configuration. </p>
+<p class="p_Normal" style="line-height: 1.57;">Yes, you can export and import the whole configuration. Although, is it really necessary? Let's find out.</p>
+<p class="p_Normal" style="line-height: 1.57;">The configuration that you are creating for the customer within this project is usually divided into logical sets of requirements. Each set can be implemented by a workspace or a solution.</p>
+<p class="p_Normal" style="line-height: 1.57;">Depending on how you are managing the project, you can deliver the results to the customer either set by set, or on the whole. Each workspace or solution might be developed by a team or by one person. Even the entire configuration can be done by just one person.</p>
+<p class="p_Normal" style="line-height: 1.57;">Why not simply do a configuration export if there are so many details?</p>
+<p class="p_Normal" style="line-height: 1.57;">You can do it, but we still recommend having isolated workspaces, solutions, and modules. After you have completed the project, there might be some additional development. It is always easier to deliver modifications to the customer as soon as they are ready regardless of other features that might be still in work. For example, you can improve a certain workspace, export it, and import it to the customer's company.</p>
+<p class="p_Normal" style="line-height: 1.57;">According to our experience, isolation is most often violated by using the organizational chart, global groups, and the <code><b>Global</b></code> flag in scripts. Therefore, we recommend you work as described in the first two cases in order to avoid any errors during export/import.</p>
+<p style="text-align: justify; line-height: 1.20; margin: 7px 0 16px 0;">Export/import is more of a tool to automate the solution development and distribution cycle. To use this tool to its maximum potential, it is always important to keep isolation in mind.</p>
+<h2 class="p_Heading2"><span class="f_Heading2">Update</span></h2>
+<p>Updates are supported for workspaces, solutions, and modules. In this case, modules and solutions are always only updated, i.e., you cannot install two instances of the same module or solution.</p>
+<p>During an update, the system compares the history of each updated service. The history is logged for apps, pages, processes, templates, widgets, modules, and access rights settings. For each entity, an entry is created containing the ID and the modification date. </p>
+<p class="p_Normal" style="line-height: 1.57;">An update can go either of the two ways:</p>
 <ol style="list-style-type:decimal">
-<li value="1" class="p_Normal">История в обновлённом пакете новее, чем история в обновляемом пакете, то есть с момента импорта в компанию никаких изменений не вносилось. В этом случае изменения будут установлены без конфликтов.</li><li value="2" class="p_Normal">История в обновлённом пакете и история в обновляемом пакете различаются. На практике это означает, что в исходной компании и на целевой разработка велась параллельно, и возникли конфликты. В этом случае отобразится список компонентов, в которых расхождения в истории были обнаружены, и будет предложено либо отменить обновление, либо заменить обновляемый пакет. Слияния изменений при этом не происходит, полностью устанавливается конфигурация пакета, используемого для обновления.</li></ol>
-<p class="p_Normal">По своей механике обновление не отличается от импорта, но нужно обратить внимание на следующие моменты:</p>
+<li value="1" style="line-height: 1.57; margin-top: 0; margin-right: 0; margin-bottom: 0;">The history in the package with the update is more recent than the history in the package being updated. This means that no changes have been made in the target company. In this case, the update will be installed without any conflicts.</li><li value="2" style="line-height: 1.57; margin-top: 0; margin-right: 0; margin-bottom: 0;">The history in the two packages is not the same. This means that changes have been made in both the target company and company where you created the update. This leads to conflicts. The system will show a list of conflicted entities and will ask you to either cancel the update or replace the updated package. The changes are not merged, the configuration is completely replaced with the update.</li></ol>
+<p class="p_Normal" style="line-height: 1.57;">Basically, the update isn't much different from the import, but keep in mind the following:</p>
 <ul style="list-style-type:disc">
-<li class="p_Normal">при обновлении добавляется новое или изменяется конфликтующее. Ничего не удаляется. Например, если мы удалили поле в исходной компании, а на целевой оно всё еще есть, то при обновлении оно сохранится на целевой.</li><li class="p_Normal">лучше не вносить изменения в целевой компании. Чёткое разделение тестовой компании и компании для конечного пользователя значительно упростит загрузку изменений и поддержку решения в долгосрочной перспективе.</li></ul>
-<h3 class="p_Heading3"><span class="f_Heading3">Мягкое обновление решений</span></h3>
-<p class="p_Normal">Для решений существует опция <a href="update_solution.html#soft-update" class="topiclink">мягкого обновления</a>, т. е. обновления только тех компонентов, для которых не обнаружено конфликтов или ссылок на конфликтующие компоненты.</p>
-<p class="p_Normal">Вместе с конфликтующими компонентами система рекурсивно вычисляет зависимости этих компонентов от других. Это необходимо, чтобы не произошло ситуации, когда при мягком обновлении компонент с конфликтом не обновился, а другие компоненты, ссылающиеся на него, обновились. Такая ситуация может привести к неконсистентности конфигурации.</p>
-<p class="p_Normal">Если решение частично заблокировано, то ссылки на компоненты из заблокированного раздела игнорируются, и компоненты в заблокированном разделе обновляются при мягком обновлении.</p>
-<h2 class="p_Heading2"><span class="f_Heading2">Удаление</span></h2>
-<p class="p_Normal">Удаление — серьёзное действие. Жёстко в ELMA365 практически ничего не удаляется, а лишь помечается удалённым. Тем не менее, при экспорте/импорте можно избавиться от ненужных контекстных переменных, они не выгружаются, если удалены жёстко.</p>
-<p class="p_Normal">Удалённые разделы, приложения и страницы переносятся вместе со всем остальным.</p>
+<li style="line-height: 1.57;">During an update you add something new and change whatever is in a conflict. Nothing is deleted. For example, if you have deleted a field from an app, but in the customer's company this field remains intact, it will not be deleted during the update.</li><li style="line-height: 1.57;">We recommend to not introduce changes directly in the customer's company (production). It is best to distinguish the company where you develop and test new features from the one the customer will actually use. This will make it easier to deploy changes and support the system in the long run.</li></ul>
+<h3 class="p_Heading3"><span class="f_Heading3">Soft update of solutions</span></h3>
+<p style="text-align: justify; line-height: 1.20;">For solutions, there is an option to <span style="color: #0563c1;"><a href="update_solution.html#soft_update" class="topiclink">soft update</a></span>, i.e., update only those components for which no conflicts or links to conflicting components are detected.</p>
+<p style="line-height: 1.20;">Together with the conflicting items, the system recursively calculates the dependencies of these components on other components. This is necessary to avoid a situation where, during a soft update, a component with a conflict is not updated, but other components referencing it are updated. Such a situation can lead to a non-consistent configuration.</p>
+<p style="text-align: justify; line-height: 1.20;">If the solution is partially locked, the links to components in this workspace are ignored and the components in the locked workspace are updated during a soft update.</p>
+<h2 class="p_Heading2"><span class="f_Heading2">Deleting</span></h2>
+<p class="p_Normal" style="line-height: 1.57; margin: 8px 0 0 0;">Deleting something is always risky. Most of the things in BRIX are only marked as deleted without being actually erased. When exporting or importing, you can get rid of unnecessary variables. If they are hard deleted, they will not be exported.</p>
+<p class="p_Normal" style="line-height: 1.57;">The deleted workspaces, apps, and pages will will be exported with the rest of the components.</p>
 
                         <div class="bottom-nav">
                             
@@ -494,7 +495,7 @@
                             
                         </div>
                         <!-- добавляет на страницу строку блок Была ли статья полезной?  -->
-                          <div class="feedback-wrap"><div class="feedback" id="feedback"><span><b>Была ли статья полезной?</b></span><form action="" method="POST" class="feedback-form" id="feedback-form"><div class="feedback__popup feedback__popup-response" id="feedback__popup_thx">Спасибо за ваш отзыв!</div><div id="feedback-success-popup"><div class="wrap"><button type="button" class="feedback-popup-close">×</button><svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_212_2187)"><path d="M22 0.6875C10.2294 0.6875 0.6875 10.2294 0.6875 22C0.6875 33.7706 10.2294 43.3125 22 43.3125C33.7706 43.3125 43.3125 33.7706 43.3125 22C43.3125 10.2294 33.7706 0.6875 22 0.6875ZM22 40.5625C11.8023 40.5625 3.4375 32.3078 3.4375 22C3.4375 11.8024 11.6922 3.4375 22 3.4375C32.1977 3.4375 40.5625 11.6922 40.5625 22C40.5625 32.1976 32.3078 40.5625 22 40.5625ZM34.1713 16.933L18.6613 32.3186C18.257 32.7197 17.604 32.7171 17.203 32.3128L9.82283 24.873C9.42176 24.4686 9.42434 23.8157 9.82867 23.4146L10.5609 22.6884C10.9652 22.2873 11.6181 22.2899 12.0192 22.6942L17.9468 28.6697L31.9926 14.7366C32.3969 14.3356 33.0498 14.3382 33.4509 14.7425L34.1772 15.4747C34.5783 15.879 34.5757 16.532 34.1713 16.933Z" fill="#27AE60"></path></g><defs><clipPath id="clip0_212_2187"><rect width="44" height="44" fill="white"></rect></clipPath></defs></svg><p>Ваш отзыв успешно отправлен!</p><span>Спасибо за обратную связь.</span></div></div><div class="feedback__popup" id="feedback__popup_why"><button type="button" class="feedback-popup-close">×</button><div class="feedback__popup-header">Уточните, почему:</div><input type="radio" name="category" id="bad_recommendation" value="bad_recommendation"><label for="bad_recommendation">Рекомендации не помогли</label><input type="radio" name="category" id="difficult_text" value="difficult_text"><label for="difficult_text">Текст трудно понять</label><input type="radio" name="category" id="no_answer" value="no_answer"><label for="no_answer">Нет ответа на мой вопрос</label><input type="radio" name="category" id="bad_header" value="bad_header"><label for="bad_header">Содержание статьи не соответствует заголовку</label><input type="radio" name="category" id="other_reason" value="other_reason"><label for="other_reason">Другая причина</label></div><div class="feedback__popup" id="feedback__popup-other"><button type="button" class="feedback-popup-close">×</button>   <div class="feedback__popup-header">Расскажите, что вам не понравилось в статье:</div><textarea class="feedback__textarea" name="other" id=""></textarea><input type="submit" class="feedback__other-btn" value="Отправить"></div><div class="feedback-form__btn-group"><input type="radio" name="useful" id="feedback__useful_yes" value="true"><label for="feedback__useful_yes"><img src="like.svg"/><span class="feedback-form__btn-group_yes-btn">Да</span></label><input type="radio" name="useful" id="feedback__useful_no" value="false"><label for="feedback__useful_no"><img src="dislike.svg"/><span class="feedback-form__btn-group_no-btn">Нет</span></label></div><select name="category"><option disabled>Выберите вариант</option><option value="bad_recommendation" selected>Рекомендации не помогли</option><option value="difficult_text">Текст трудно понять</option><option value="no_answer">Нет ответа на мой вопрос</option><option value="bad_header">Содержание статьи не соответствует заголовку</option><option value="other_reason">Другая причина</option></select><input type="submit"></form></div></div>
+                          <div class="feedback" id="feedback"><div class="feedback-help"><span><b>Was this helpful?</b></span><form action="" method="POST" class="feedback-form" id="feedback-form"><div class="feedback__popup feedback__popup-response" id="feedback__popup_thx" style="display: none;">Thanks for your feedback!</div><div class="feedback__popup" id="feedback__popup_why" style="display: none;"><div class="feedback__popup-header">Please specify why:</div><input type="radio" name="category" id="bad_recommendation" value="bad_recommendation"><label for="bad_recommendation">Recommendations did not help me</label><input type="radio" name="category" id="difficult_text" value="difficult_text"><label for="difficult_text">Article is hard to understand</label><input type="radio" name="category" id="no_answer" value="no_answer"><label for="no_answer">Didn`t answer my question</label><input type="radio" name="category" id="bad_header" value="bad_header"><label for="bad_header">Content does not match the topic</label><input type="radio" name="category" id="other_reason" value="other_reason"><label for="other_reason">Other</label></div><div class="feedback__popup" id="feedback__popup-other" style="display: none;"><div class="feedback__popup-header">How we can improve it?</div><textarea class="feedback__textarea" name="other" id=""></textarea><input type="submit" class="feedback__other-btn" value="Submit"></div><div class="feedback-form__btn-group"><input type="radio" name="useful" id="feedback__useful_yes" value="true"><label for="feedback__useful_yes"><img src="like.svg" class="small-img" alt="like"><spanclass="feedback-form__btn-group_yes-btn">Yes</spanclass="feedback-form__btn-group_yes-btn"></label><input type="radio" name="useful" id="feedback__useful_no" value="false"><label for="feedback__useful_no"><img src="dislike.svg" class="small-img" alt="dislike"><spanclass="feedback-form__btn-group_no-btn">No</spanclass="feedback-form__btn-group_no-btn"></label></div><select name="category"><option disabled="">Please specify why</option><option value="bad_recommendation" selected="">Recommendations did not help me</option><option value="difficult_text">Article is hard to understand</option><option value="no_answer">Didn`t answer my question</option><option value="bad_header">Content does not match the topic</option><option value="other_reason">Other</option></select><input type="submit"></form></div><div class="found_typo"><p style="margin: 0px; margin-top: 16px !important;"><span><b>Found a typo?</b></span> Select it and press <i>Ctrl+Enter</i> to send us feedback</p></div></div>
                            
                     </section>
                 </div>
@@ -502,7 +503,7 @@
                     <input type="checkbox" />
                     <div class="article__arrow"></div>
                     <div class="table-of-contents elma365-right" id="toc2Content">
-                        <h3 class="h3-toc">В этой статье</h3>
+                        <h3 class="h3-toc">In this topic</h3>
                         <nav id="toc2"></nav>
                     </div>
                 </aside>
@@ -513,63 +514,30 @@
         <div class="footer-container">
   <div class="footer-mobile">
     
-      <ul class="footer-mobile__list"><li><a href="https://api.elma365.com/ru/" target="_blank">API</a></li><li><a href="https://tssdk.elma365.com/" target="_blank">TS SDK</a></li><li><a href="https://community.elma365.com/" target="_blank">Community</a></li><li><a href="https://elma-academy.com/ru/elma365" target="_blank">Академия</a></li></ul><ul class="footer-mobile__list"><li><a href="https://elma365.com/ru/help/platform/get-trial.html">Платформа</a></li><li><a href="https://elma365.com/ru/help/ecm/ecm-functions.html">ECM</a></li><li><a href="https://elma365.com/ru/help/service/service-functions.html">Service</a></li><li><a href="https://elma365.com/ru/help/projects/projects-functions.html">Проекты</a></li></ul>
+    <ul class="footer-mobile__list"><li><a href="https://brix365.com/en/" target="_blank">BRIX</a></li><li><a href="https://tssdk.brix365.com/en/latest/" target="_blank">SDK</a></li><li><a href="https://api.brix365.com/en/" target="_blank">API</a></li></ul><ul class="footer-mobile__list"><li><a href="https://brix365.com/en/help/platform/get-trial.html">Platform</a></li><li><a href="https://brix365.com/en/help/ecm/ecm-functions.html">ECM</a></li><li><a href="https://brix365.com/en/help/service/service-functions.html">Service</a></li><li><a href="https://brix365.com/en/help/projects/projects-functions.html">Projects</a></li></ul>
     
     
   </div>
-  <div class="container">
-    <div class="footer-wrap">
-      
-        <div><span class="mobile-question-popup">Отправить фидбэк</span><form method="POST" action class="question__popup question-xs" id="question__popup"><div class="question-wrap"><span class="close"></span><span class="title">Задать вопрос</span><label for="help_question" style="display: none;"></label><textarea name="help_question" id="help_question"></textarea><input type="submit" value="Отправить"></div></form><div class="hidden fade-in question-success-xs">Ваш фидбэк отправлен.</div></div>
-      
-      <div class="footer-flex-b">
-        <div class="footer-top">
-          <span class="footer-copy">&copy; 2025 
-              ELMA365
-            
-            
-          </span>
-          
-            <a href="https://navigator.sk.ru/orn/1122971" target="_blank">
-              <img src="sk-resident.svg" alt="sk icon" class="footer-img" width="117" height="34">
-            </a>
-            
-        </div>
-        <div class="footer-line">
-          
-            <div class="footer-line-copy">
-              <span class="footer-copy">&copy; 2025 
-                  ELMA365
-                
-                
-              </span>
-            </div>
-            
-              <ul class="footer-list">
-                
-                  <li class="footer-item"><a href="https://elma365.com/ru/" target="_blank" class="footer-link" style="color: #0D4A75;"><img src="browse.svg" alt="browse icon" class="footer-img">elma365.com</a></li><li class="footer-item"><a href="https://www.youtube.com/user/ELMABPM" target="_blank" class="footer-link"><img src="yt.svg" alt="youtube icon" class="footer-img"></a></li><li class="footer-item"><a href="https://vk.com/elma_bpm" target="_blank" class="footer-link"><img src="vk.svg" alt="vk icon" class="footer-img"></a></li><li class="footer-item"><a href="https://t.me/elmaday" target="_blank" class="footer-link"><img src="tg.svg" alt="telegram icon" class="footer-img"></a></li><li class="footer-item"><a href="https://dzen.ru/elma" target="_blank" class="footer-link"><img src="dzen.svg" alt="dzen icon" class="footer-img"></a></li>
-                
-                
-                  <li class="footer-item">
-                    <a href="https://navigator.sk.ru/orn/1122971" target="_blank">
-                      <img src="sk-resident.svg" alt="sk icon" class="footer-img" width="117" height="34">
-                    </a>
-                  </li>
-                
-                
-              </ul>
-        </div>
-      </div>
+  <div class="footer-wrap">
+    
+      <div><span class="mobile-question-popup">Send feedback</span><form method="POST" action class="question__popup question-xs" id="question__popup"><div class="question-wrap"><span class="close"></span><span class="title">Ask a question</span><label for="help_question" style="display: none;"></label><textarea name="help_question" id="help_question"></textarea><input type="submit" value="Send"></div></form><div class="hidden fade-in question-success-xs">Sent</div></div>
+    
+    <div class="footer-flex-b">
+      <span class="footer-copy">&copy; 2025 BRIX</span>
+      <ul class="footer-list">
+        
+        <li class="footer-item">
+            <a href="#" class="arrow-top" style="display: block;"></a>
+        </li>
+        
+      </ul>
     </div>
   </div>
-  <a href="#" class="arrow-top"></a>
 </div>
  
     </footer>
-<!--    <script type="text/javascript" src="jquery1.min.js"></script>-->
     <iframe name="hmnavigation" style="display:none!important"></iframe>
-    <!--<script src="./jquery-ui.js"></script> -->
-    <script src="./jquery-ui.min.js"></script>
+    <script src="./jquery-ui.js"></script>
     <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
     <script src="./jquery.tocify.min.js"></script>
     <script src="./TypoReporter.min.js"></script>
