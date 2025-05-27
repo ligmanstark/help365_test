@@ -1,20 +1,19 @@
 ﻿<!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 
 <head>
-    <title>Создание и удаление сделок&nbsp;</title>
+    <title>Create or delete a deal</title>
     <meta name="generator" content="Help+Manual" />
     <meta name="keywords" content="" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="В ELMA365 сделки можно создавать вручную и автоматически при помощи веб-форм и API или импортировать из&nbsp;файла формата .xlsx или&nbsp;.csv. Ниже мы опишем каждый из этих способов.&nbsp;" />
+    <meta name="description" content="In&nbsp;BRIX,&nbsp;you can create deals manually, add them automatically using web forms and the provided API, or import them from&nbsp;.xlsx&nbsp;or&nbsp;.csv&nbsp;files. These options are described below." />
     <meta name="picture" content="" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Cправка по Low-code платформе ELMA365" />
-    <meta property="og:url" content="https://elma365.com/ru/help" />
-    <meta property="og:image" content="" />
-    <meta property="og:site_name" content="ELMA365" />                                                              
+    <meta property="og:title" content="Full documentation for BRIX365 platform. Low-code developer guide. User guide. Admin guide. Developer guide." />
+    <meta property="og:url" content="https://brix365.com/en/help" />
+    <meta property="og:image" content="" />                                                              
     <link rel="icon" href="favicon.png" type="image/png" />
     
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -24,7 +23,6 @@
     <link rel="stylesheet" href="./article.css" />
     <link rel="stylesheet" href="./glossary.css" />
     <link rel="stylesheet" href="./theme.css" />
-    
    <script type="text/javascript" src="jquery.js"></script>
    <script type="text/javascript" src="helpman_settings.js"></script>
    <script type="text/javascript" src="helpman_topicinit.js"></script>
@@ -36,16 +34,16 @@
 </head>
 
 <body>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-M6ETBEC1R9"></script><script>window.dataLayer=window.dataLayer || []; function gtag(){dataLayer.push(arguments);}gtag('js', new Date()); gtag('config', 'G-M6ETBEC1R9');</script>
+    
     <script>!function(e,t,c,n,r,a,m){e.ym=e.ym||function(){(e.ym.a=e.ym.a||[]).push(arguments)},e.ym.l=1*new Date;for(var s=0;s<document.scripts.length;s++)if(document.scripts[s].src===n)return;a=t.createElement(c),m=t.getElementsByTagName(c)[0],a.async=1,a.src=n,m.parentNode.insertBefore(a,m)}(window,document,"script","https://mc.yandex.ru/metrika/tag.js"),ym(83179930,"init",{clickmap:!0,trackLinks:!0,accurateTrackBounce:!0,webvisor:!0})</script><noscript><div><img alt=""src=https://mc.yandex.ru/watch/83179930 style=position:absolute;left:-9999px></div></noscript> 
     
     ﻿<header class="header elma-365">
   <div class="container">
-    <a class="header__logo" href="https://elma365.com/ru/help">
-      <img src="./logo.svg" alt="header logo">
+    <a class="header__logo" href="https://brix365.com/en/help">
+      <img src="./logo-en.svg" alt="header logo">
     </a>
  <!-- <div class="hero__search-form" id="search-panel">
-   <form class="search-form" onsubmit="ym(83179930,'reachGoal','poisk')">
+   <form class="search-form" onsubmit="ym(83180416,'reachGoal','poisk')">
      <label class="search-form__label">
        <span id="reset-search" class="search__icon"></span>
        <input class="search-form__input" type="text">
@@ -65,7 +63,7 @@
     </div>  
   <div class="header__navi">
         
-        <ul class="header__list"><li><span class="solution-select"><span class="solution-select__selected"></span><svg width="7" height="4" viewBox="0 0 7 4" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L3.5 3.5L6 1" stroke="white" stroke-linecap="round" stroke-linejoin="round"/></svg><ul class="solution-select__list"><li><a class="project-link" href="https://elma365.com/ru/help/platform/get-trial.html">Платформа</a></li><li><a class="project-link" href="https://elma365.com/ru/help/ecm/ecm-functions.html">ECM</a></li><li><a class="project-link" href="https://elma365.com/ru/help/crm/crm_overview.html">CRM</a></li><li><a class="project-link" href="https://elma365.com/ru/help/service/service-functions.html">Service</a></li><li><a class="project-link" href="https://elma365.com/ru/help/projects/projects-functions.html">Проекты</a></li><li><a class="project-link" href="https://elma365.com/ru/help/business_solutions/-elma365-store.html">Бизнес-решения</a></li></ul></span></li><li><a href="https://api.elma365.com/ru/"target="_blank">API</a></li><li><a href="https://tssdk.elma365.com/"target="_blank">SDK</a></li><li><a href="https://community.elma365.com/" target="_blank">Community</a></li><li><a href="https://elma-academy.com/ru/" target="_blank">Академия</a></li><li><a href="https://elma365.com/ru/" target="_blank">Сайт ELMA365</a></li></ul> 
+        <ul class="header__list"><li><span class="solution-select"><span class="solution-select__selected"></span><svg width="7" height="4" viewBox="0 0 7 4" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L3.5 3.5L6 1" stroke="white" stroke-linecap="round" stroke-linejoin="round"/></svg><ul class="solution-select__list"><li><a class="project-link" href="https://brix365.com/en/help/platform/get-trial.html">Platform</a></li><li><a class="project-link" href="https://brix365.com/en/help/ecm/ecm-functions.html">ECM</a></li><li><a class="project-link" href="https://brix365.com/en/help/crm/crm_overview.html">CRM</a></li><li><a class="project-link" href="https://brix365.com/en/help/service/service-functions.html">Service</a></li><li><a class="project-link" href="https://brix365.com/en/help/projects/projects-functions.html">Projects</a></li><li><a class="project-link" href="https://brix365.com/en/help/business_solutions/-elma365-store.html">Business Solutions</a></li></ul></span></li><li><a href="https://api.brix365.com/en/" target="_blank">API</a></li><li><a href="https://tssdk.brix365.com/" target="_blank">SDK</a></li></ul>
         
         
    </div>
@@ -80,8 +78,8 @@
 
         <aside class="sidebar" id="sidebar">
         <div class="sidebar__header">
-                 <a class="header__logo" href="https://elma365.com/ru/help">
-                    <img src="./logo-light.svg">
+                 <a class="header__logo" href="https://brix365.com/en/help">
+                    <img src="./logo-light-en.svg">
                  </a>
                     <span class="sidebar__close elma-365-close" id="close"></span>
             </div>
@@ -94,15 +92,12 @@
             <div class="article-inner">           
                 <div class="content">
                     <header class="article__header">
-                    <div class="article__bread" style="display:flex; gap:10px;">
-                        <span id="subcategory" class="search-res__item-category search-res__item-category_subcategory subcategory article__badge"></span>
                         
-                            <div class="topic__breadcrumbs">     
-                                <p><a href="360012680899.html">Сделки</a> / Создание и удаление сделок&nbsp;</p>
+                            <div class="topic__breadcrumbs">
+                                <p><a href="360012680899.html">Deals</a> / Create or delete a deal</p>
                             </div>
                         
-                    </div>
-                        <div class="topic__title"><h1 class="p_Heading1" style="text-align: center; margin: 19px 0 19px 0;"><span class="f_Heading1" style="font-size: 32px;">Создание и удаление сделок </span></h1>
+                        <div class="topic__title"><h1 class="p_Heading1"><span class="f_Heading1">Create or delete a deal</span></h1>
 </div>
                     
 </header>
@@ -111,46 +106,46 @@
                             <a href="#h1-article" class="scroll-top"></a>
                         </div>
                         <!-- Placeholder for topic body. -->
-                        <p class="p_Normal" style="margin: 14px 0 0 0;">В ELMA365 сделки можно создавать вручную и автоматически при помощи <a href="360012715039.html" class="topiclink">веб-форм</a> и <a href="https://api.elma365.com/ru/public-api/reference/app/appitemcreate/" target="_blank" class="weblink">API</a> или импортировать из файла формата <span style="font-weight: bold;">.xlsx</span> или <span style="font-weight: bold;">.csv</span>. Ниже мы опишем каждый из этих способов. </p>
-<h2 class="p_Heading2"><a id="create" class="hmanchor"></a><span class="f_Heading2">Создание сделки вручную </span></h2>
-<p class="p_Normal">Вы можете добавить сделку вручную следующим образом:</p>
+                        <p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-family: Inter;">In BRIX, you can create deals manually, add them automatically using</span><span style="font-family: 'Times New Roman',Times,Georgia,serif;"> <a href="360012715039.html" class="topiclink">web forms</a> and the provided <a href="https://api.brix365.com/en/public-api/guides/IntroWebAPI/" target="_blank" class="weblink">API</a>, </span><span style="font-size: 15px; font-family: Inter;">or import them from </span><span style="font-size: 15px; font-family: Inter; font-weight: bold;">.xlsx</span><span style="font-size: 15px; font-family: Inter;"> or </span><span style="font-size: 15px; font-family: Inter; font-weight: bold;">.csv</span><span style="font-size: 15px; font-family: Inter;"> files. These options are described below.</span></p>
+<h2 class="p_Heading2" style="line-height: 1.20; margin: 19px 0 0 0;"><span class="f_Heading2" style="font-size: 24px; font-family: 'Times New Roman',Times,Georgia,serif;">Create a deal manually </span></h2>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-family: Inter;">To add a deal manually, do the following:</span></p>
 <ol style="list-style-type:decimal">
-<li value="1">Откройте приложение <span style="font-weight: bold;">Сделки</span>, выберите нужную <a href="360012693559.html" class="topiclink">воронку</a>, а затем в правом верхнем углу страницы нажмите кнопку <span style="font-weight: bold;">+ Сделка</span>. Если вы выберете этот способ создания, то при желании вы сможете сразу же привязать сделку к контактному лицу. Для этого в окне добавления сделки напротив поля <span style="font-weight: bold;">Контакты</span> нажмите на значок лупы и выберите существующий контакт в появившемся списке. Если вы хотите создать новую запись о контакте, нажмите на кнопку <span style="font-weight: bold;">+ Создать</span> и укажите имя, должность, телефон, адрес электронной почты, аккаунт в Skype и т. д.<span style="font-family: 'Times New Roman',Times,Georgia,serif;"> </span> </li></ol>
-<p class="p_Normal" style="margin: 14px 0 0 36px;"><img alt="create-deal-1" width="1038" height="555" style="margin:0;width:1038px;height:555px;border:none" src="create-deal-1.png"/></p>
-<ol style="list-style-type:decimal">
-<li value="2">На форме создания или редактирования <a href="360012584980.html" class="topiclink">компании</a> нажмите кнопку <span style="font-weight: bold;">+ Создать </span>напротив поля <span style="font-weight: bold;">Сделка</span>. При этом сделка сразу будет привязана к конкретной компании.</li></ol>
-<p style="margin: 0 0 0 36px;"><img alt="create-deal-2" width="950" height="630" style="margin:0;width:950px;height:630px;border:none" src="create-deal-2.png"/></p>
-<ol style="list-style-type:decimal">
-<li value="3">На форме создания или редактирования <a href="360012584960.html" class="topiclink">контакта</a> нажмите кнопку <span style="font-weight: bold;">+ Создать</span> напротив поля <span style="font-weight: bold;">Сделка</span>. При этом сделка сразу будет привязана к конкретному контакту.</li></ol>
-<p class="p_Normal" style="margin: 14px 0 0 36px;"><img alt="create-deal-3" width="948" height="630" style="margin:0;width:948px;height:630px;border:none" src="create-deal-3.png"/></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;">При добавлении сделки достаточно заполнить обязательное поле <span style="font-weight: bold;">Название</span>. По умолчанию сотрудник, который создает сделку, назначается ответственным за нее. Изменить ответственного и указать дополнительную информацию по сделке вы можете позднее в ее <a href="360012596920.html" class="topiclink">карточке</a>.</p>
-<h2 class="p_Heading2"><a id="create_with_api" class="hmanchor"></a><span class="f_Heading2">Создание с помощью API</span></h2>
-<p style="line-height: 1.28;">Каждая сделка — это элемент приложения. При помощи API вы можете добавлять новые элементы в нужную воронку. Параметры запроса можно посмотреть в статье <a href="https://api.elma365.com/ru/public-api/reference/app/appitemcreate/" target="_blank" class="weblink">«Создание элемента приложения»</a>. Больше про Web API читайте в <a href="https://api.elma365.com/ru/" target="_blank" class="weblink">справке по публичному API ELMA365</a>.</p>
-<h2 class="p_Heading2" style="margin: 19px 0 0 0;"><a id="create_with_webform" class="hmanchor"></a><span class="f_Heading2" style="font-size: 24px;">Создание с помощью веб-форм</span></h2>
-<p class="p_Normal" style="margin: 19px 0 0 0;">В ELMA365 вы можете настроить собственные веб-формы с нуля и разместить их на любых страницах вашего сайта. После того как ваши клиенты заполнят форму, данные попадут в раздел <a href="https://elma365.com/ru/products/crm/" target="_blank" class="weblink">CRM</a>, в котором создастся новая сделка. </p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;">В настройках веб-формы вы можете указать <a href="360012693559.html" class="topiclink">воронку</a>, в которую попадет сделка при создании. Подробнее об этом способе создания сделки читайте в статье <a href="360012715039.html" class="topiclink">«Веб-формы»</a>.</p>
-<p class="p_Normal" style="margin: 14px 0 0 0;"><img alt="9.PNG" title="9.PNG" width="372" height="422" style="margin:0;width:372px;height:422px;border:none" src="360010564359-9.png"/><span class="f_ImageCaption"> </span></p>
-<h2 class="p_Heading2"><a id="import" class="hmanchor"></a><span class="f_Heading2">Импорт сделок из файла</span></h2>
-<p>Вы можете быстро добавить большой объем данных в приложения ELMA365 c помощью импорта файла формата <span style="font-weight: bold;">.xlsx</span> или <span style="font-weight: bold;">.csv</span>. Таким образом можно загрузить сделки из одной компании в другую. </p>
-<p>Чтобы начать импорт, перейдите на страницу<span style="color: #394149;"> </span><span style="font-weight: bold;">CRM &gt; Сделки</span>, в правом верхнем углу нажмите на значок<img alt="import-icon" width="17" height="21" style="margin:0;width:17px;height:21px;border:none" src="import-icon.png"/>и выберите <span style="font-weight: bold;">Импорт данных</span>. </p>
-<p><img alt="create-deals-5" width="1036" height="489" style="margin:0;width:1036px;height:489px;border:none" src="create-deals-5.png"/></p>
-<p>В открывшемся окне выберите файл формата <span style="font-weight: bold;">.xlsx</span> или <span style="font-weight: bold;">.csv</span> с локального компьютера или из файлов системы и нажмите <span style="font-weight: bold;">Импортировать</span>. Новые элементы добавятся в приложение.</p>
-<p>Подробнее о том, как выполнить загрузку данных, читайте в статье <a href="360009354059.html" class="topiclink">«Импорт данных»</a>.</p>
-<h2 class="p_Heading2" style="margin: 19px 0 0 0;"><a id="deleta-deal" class="hmanchor"></a><span class="f_Heading2" style="font-size: 24px;">Как удалить сделку</span></h2>
-<p class="p_Normal" style="margin: 19px 0 0 0;">Чтобы сделку можно было удалить, добавьте на её карточку соответствующую кнопку. </p>
+<li value="1" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-size: 15px; font-family: Inter;">Go to the </span><span style="font-size: 15px; font-family: Inter; font-weight: bold;">Deals</span><span style="font-size: 15px; font-family: Inter;"> app and open a</span><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> <a href="360012693559.html" class="topiclink">pipeline</a>. </span><span style="font-size: 15px; font-family: Inter;">In the upper right corner of the page, click </span><span style="font-size: 15px; font-family: Inter; font-weight: bold;">+ Deal</span><span style="font-size: 15px; font-family: Inter;">. When creating a deal with this method, you can immediately link the deal to a contact person. To do that, click the magnifying glass icon in the </span><span style="font-size: 15px; font-family: Inter; font-weight: bold;">Contacts</span><span style="font-size: 15px; font-family: Inter;"> field and select an existing contact from the list. If you want to create a new contact entry, click the </span><span style="font-size: 15px; font-family: Inter; font-weight: bold;">+ Create</span><span style="font-size: 15px; font-family: Inter;"> button to the right of the field and specify the contact’s name, position, phone number, email, Skype, etc.</span></li></ol>
+<p class="p_Normal" style="margin: 0 0 0 34px;"><img alt="create-delete-deal-1" width="1173" height="737" style="margin:0;width:1173px;height:737px;border:none" src="create-delete-deal-1.png"/></p>
+<ol style="list-style-type:decimal" start="2">
+<li value="2" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;">Open the </span><span style="font-size: 15px; font-family: Inter;">creation or editing page of a</span><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> <a href="360012584980.html" class="topiclink">company</a></span><span style="font-size: 15px; font-family: Inter;"> and click the</span><span style="font-size: 15px; font-family: Inter; font-weight: bold;"> +Create</span><span style="font-size: 15px; font-family: Inter;"> button next to the </span><span style="font-size: 15px; font-family: Inter; font-weight: bold;">Deal</span><span style="font-size: 15px; font-family: Inter;"> field. The new deal will be automatically linked with this company.</span></li></ol>
+<p style="line-height: 1.28; margin: 0 0 11px 34px;"><img alt="create-delete-deals-2" width="1019" height="600" style="margin:0;width:1019px;height:600px;border:none" src="create-delete-deals-2.png"/></p>
+<ol style="list-style-type:decimal" start="3">
+<li value="3" style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-family: Inter;">Open the creation or editing form of a <a href="360012584960.html" class="topiclink">contact</a> and click </span><span style="font-family: Inter; font-weight: bold;">+Create </span><span style="font-family: Inter;">next to the</span><span style="font-family: Inter; font-weight: bold;"> Deal </span><span style="font-family: Inter;">field. The new deal will be automatically linked with this contact.</span></li></ol>
+<p style="line-height: 1.20; margin: 0 0 0 34px;"><img alt="create-delete-deals-3" width="1021" height="618" style="margin:0;width:1021px;height:618px;border:none" src="create-delete-deals-3.png"/></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Inter;">When you create a new deal, the only required field is </span><span style="font-size: 15px; font-family: Inter; font-weight: bold;">Name</span><span style="font-size: 15px; font-family: Inter;">. By default, the user who creates the deal is specified in the </span><span style="font-size: 15px; font-family: Inter; font-weight: bold;">Assigned to</span><span style="font-size: 15px; font-family: Inter;"> field. You can change the responsible user and add other information later on the</span><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> <a href="360012596920.html" class="topiclink">deal’s page</a>.</span></p>
+<h2 class="p_Heading2" style="line-height: 1.20; margin: 19px 0 0 0;"><a id="create_with_api" class="hmanchor"></a><span class="f_Heading2" style="font-size: 24px; font-family: 'Times New Roman',Times,Georgia,serif;">Create a deal using the API</span></h2>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-family: Inter;">Each deal is an item of the </span><span style="font-family: Inter; font-weight: bold;">Deals</span><span style="font-family: Inter;"> app. </span><span style="font-size: 15px; font-family: Inter;">Using the API, you can add new items into a pipeline. You can find the request parameters in the</span><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"> <a href="https://api.brix365.com/ru/public-api/reference/app/appitemcreate/" target="_blank" class="weblink">Create app item</a> </span><span style="font-size: 15px; font-family: Inter;">article. Read more about the web API in <a href="https://api.brix365.com/en/" target="_blank" class="weblink">BRIX Public API</a>.</span></p>
+<h2 class="p_Heading2" style="line-height: 1.20; margin: 19px 0 0 0;"><a id="create_with_webform" class="hmanchor"></a><span class="f_Heading2" style="font-size: 24px; font-family: 'Times New Roman',Times,Georgia,serif;">Create a deal using a web form</span></h2>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-family: Inter;">In BRIX, </span><span style="font-size: 15px; font-family: Inter;">you can set up custom web forms from scratch and place them on any page of your website. After a visitor fills out the form, the system automatically sends the data into the <a href="https://brix365.com/en/products/crm/" target="_blank" class="weblink">CRM</a> workspace and creates a new deal. Learn more about creating web forms in the</span> <a href="360012715039.html" class="topiclink">Web forms</a> article.</p>
+<p class="p_Normal"><img alt="create-delete-deal-4" width="466" height="507" style="margin:0;width:466px;height:507px;border:none" src="create-delete-deal-4.png"/></p>
+<h2 class="p_Heading2"><span class="f_Heading2">Import deals from a file</span></h2>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-size: 13px; font-family: Inter; color: #394149;">You can quickly add a large amount of data to BRIX apps by importing it from </span><span style="font-size: 13px; font-family: Inter; font-weight: bold; color: #394149;">.xlsx</span><span style="font-size: 13px; font-family: Inter; color: #394149;"> or </span><span style="font-size: 13px; font-family: Inter; font-weight: bold; color: #394149;">.csv</span><span style="font-size: 13px; font-family: Inter; color: #394149;"> files. For example, you can import deals from one company to another.</span></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 13px; font-family: Inter; color: #394149;">To start the import, go to </span><span style="font-size: 13px; font-family: Inter; font-weight: bold; color: #394149;">CRM &gt; Deals</span><span style="font-size: 13px; font-family: Inter; color: #394149;">. In the upper right corner of the page, click the </span><img alt="three-vert-dots-icon" width="17" height="21" style="margin:0;width:17px;height:21px;border:none" src="three-vert-dots-icon.png"/><span style="font-size: 13px; font-family: Inter; color: #394149;"> icon and select </span><span style="font-size: 13px; font-family: Inter; font-weight: bold; color: #394149;">Data Import</span><span style="font-size: 13px; font-family: Inter; color: #394149;">.</span></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><img alt="create-delete-deals-4" width="980" height="722" style="margin:0;width:980px;height:722px;border:none" src="create-delete-deals-4.png"/></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 13px; font-family: Inter; color: #394149;">In the window that opens, select an </span><span style="font-size: 13px; font-family: Inter; font-weight: bold; color: #394149;">.xlsx</span><span style="font-size: 13px; font-family: Inter; color: #394149;"> or a </span><span style="font-size: 13px; font-family: Inter; font-weight: bold; color: #394149;">.csv</span><span style="font-size: 13px; font-family: Inter; color: #394149;"> file from your PC. You can also use a file uploaded to the system. To do that, click the </span><img alt="three dots" width="25" height="18" style="margin:0;width:25px;height:18px;border:none" src="hmfile_hash_e065907c.png"/><span style="font-size: 13px; font-family: Inter; color: #394149;"> icon on the right and then click </span><span style="font-size: 13px; font-family: Inter; font-weight: bold; color: #394149;">Select from the Files Workspace</span><span style="font-size: 13px; font-family: Inter; color: #394149;">. When you choose a file, click </span><span style="font-size: 13px; font-family: Inter; font-weight: bold; color: #394149;">Import</span><span style="font-size: 13px; font-family: Inter; color: #394149;">. </span></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 13px; font-family: Inter; color: #394149;">Read more about uploading data to the system in the <a href="360009354059.html" class="topiclink">Data import</a> article.</span></p>
+<h2 class="p_Heading2" style="line-height: 1.20; margin: 19px 0 0 0;"><span class="f_Heading2" style="font-size: 24px; font-family: 'Times New Roman',Times,Georgia,serif;">Delete a deal</span></h2>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-family: Inter;">To be able to delete a deal, add the </span><span style="font-family: Inter; font-weight: bold;">Delete</span><span style="font-family: Inter;"> button to the deal</span><span style="font-size: 15px; font-family: Inter;">’</span><span style="font-family: Inter;">s page.</span></p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">начало&nbsp;внимание</span></p>
-<p class="p_Normal">Добавлять кнопки на карточки сделки могут только пользователи, включенные в группу <a href="360006871932.html#administrators" class="topiclink">Администраторы</a>.</p>
+<p style="line-height: 1.20;"><span style="font-family: 'Segoe UI',Tahoma,Verdana,Arial,sans-serif;">Only users included in the <a href="360006871932.html#administrators" class="topiclink">Administrators</a> </span><span style="font-family: Inter;">group can add buttons to the deal</span><span style="font-size: 15px; font-family: Inter;">’</span><span style="font-family: Inter;">s page.</span></p>
 <p class="p_CodeExample" style="page-break-inside: avoid;"><span class="f_CodeExample">конец&nbsp;внимание</span></p>
-<p class="p_Normal" style="margin: 14px 0 0 0;">Откройте карточку просмотра сделки. В левом нижнем углу нажмите на значок шестерёнки.</p>
-<p class="p_Normal" style="margin: 14px 0 0 0;"><img alt="СиУС7" width="579" height="394" style="margin:0;width:579px;height:394px;border:none" src="hmfile_hash_884f1472.png"/></p>
-<p class="p_Normal" style="margin: 14px 0 0 0;">Справа от кнопки <span style="font-weight: bold;">Редактировать </span>отобразится значок <img alt="7.png" title="7.png" width="21" height="20" style="margin:0;width:21px;height:20px;border:none" src="360010216639-7.png"/>.<span style="font-weight: bold;"> </span>Нажмите на него и во всплывающем окне выберите нужный тип кнопки.</p>
-<p class="p_Normal" style="margin: 14px 0 0 0;"><img alt="СиУС6" width="317" height="148" style="margin:0;width:317px;height:148px;border:none" src="hmfile_hash_b5e279b4.png"/></p>
-<p class="p_Normal" style="margin: 14px 0 0 0;">После этого кнопка будет добавлена на форму. Теперь пользователи, обладающие достаточными правами доступа, смогут удалять сделки. Настройка применяется ко всем карточкам сделок во всех воронках продаж. Подробнее про добавление кнопок можно прочитать в статье <a href="360019228531.html" class="topiclink">«Управление кнопками в карточках элемента приложения»</a>.</p>
-<h2 class="p_Heading2" style="margin: 19px 0 0 0;"><span class="f_Heading2" style="font-size: 24px;">Как просматривать удалённые сделки</span></h2>
-<p class="p_Normal" style="margin: 19px 0 0 0;">Удалённые сделки скрываются из воронки. Если вам понадобится просмотреть их, перейдите в нужную воронку, в строке поиска вверху страницы нажмите на значок <span style="font-weight: bold;">Поиска по параметрам</span><img alt="Pipeline_icon" width="23" height="19" style="margin:0;width:23px;height:19px;border:none" src="pipeline_icon.png"/>. В правом верхнем углу открывшегося окна нажмите кнопку <span style="font-weight: bold;">Удаленные</span>.<span class="f_ImageCaption"> </span></p>
-<p class="p_Normal" style="margin: 19px 0 0 0;"><img alt="create-delete-deal-8" width="839" height="462" style="margin:0;width:839px;height:462px;border:none" src="create-delete-deal-8.png"/></p>
-<p style="margin: 14px 0 0 0;"><span style="font-size: 13px; font-family: Inter; color: #394149;">Чтобы просмотреть все удалённые сделки в виде списка, измените способ отображения на <a href="360012597080.html#table" class="topiclink">Таблица</a>.</span></p>
-<p class="p_Normal" style="margin: 14px 0 0 0;"><img alt="СиУС4" width="729" height="233" style="margin:0;width:729px;height:233px;border:none" src="hmfile_hash_5bd65a2e.png"/></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-family: Inter;">Open a deal’s view page. In the bottom left corner, click on the</span> <img alt="Gear-icon" width="25" height="30" style="margin:0;width:25px;height:30px;border:none" src="gear-icon.png"/> icon.</p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;"><img alt="create-delete-deal-6" width="781" height="535" style="margin:0;width:781px;height:535px;border:none" src="create-delete-deal-6.png"/></p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;">&nbsp;</p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-family: Inter;">Next to the </span><span style="font-family: Inter; font-weight: bold;">Edit</span><span style="font-family: Inter;"> button, you will see the</span> <img alt="plus workspace button" width="25" height="25" style="margin:0;width:25px;height:25px;border:none" src="hmfile_hash_31dc88aa.png"/> <span style="font-family: Inter;">icon. Click on it and select the type of button you want to add in the pop-up.</span></p>
+<p class="p_Normal"><img alt="create-delete-deal-7" width="334" height="208" style="margin:0;width:334px;height:208px;border:none" src="create-delete-deal-7.png"/></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-family: Inter;">After that the </span><span style="font-family: Inter; font-weight: bold;">Delete</span><span style="font-family: Inter;"> button will appear on the form. Now users with respective permissions will be able to delete deals. The button will be added to all deals in all pipelines. Read more about button settings in the <a href="360019228531.html" class="topiclink">Manage buttons on app item pages</a> article.</span></p>
+<h2 class="p_Heading2" style="line-height: 1.20; margin: 19px 0 0 0;"><span class="f_Heading2" style="font-size: 24px; font-family: 'Times New Roman',Times,Georgia,serif;">View previously deleted deals</span></h2>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 13px; font-family: Inter; color: #394149;">All deleted deals are hidden from pipelines. If you need to view a deleted deal, go to the pipeline it was in. In the search bar, click the </span><img alt="filter-icon" width="21" height="20" style="margin:0;width:21px;height:20px;border:none" src="filter-icon.png"/><span style="font-size: 13px; font-family: Inter; color: #394149;"> icon. In the top right corner of the search window, click </span><span style="font-size: 13px; font-family: Inter; font-weight: bold; color: #394149;">Removed</span><span style="font-size: 13px; font-family: Inter; color: #394149;">.</span></p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;"><img alt="create-delete-deals-5" width="1032" height="414" style="margin:0;width:1032px;height:414px;border:none" src="create-delete-deals-5.png"/></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-size: 15px; font-family: Inter;">To see all deleted deals as a list, change the view to </span><span style="font-size: 15px; font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;"><a href="360012597080.html#table" class="topiclink">Table</a>.</span></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><img alt="create-delete-deal-9" width="835" height="382" style="margin:0;width:835px;height:382px;border:none" src="create-delete-deal-9.png"/></p>
 
                         <div class="bottom-nav">
                             
@@ -167,7 +162,7 @@
                             
                         </div>
                         <!-- добавляет на страницу строку блок Была ли статья полезной?  -->
-                          <div class="feedback-wrap"><div class="feedback" id="feedback"><span><b>Была ли статья полезной?</b></span><form action="" method="POST" class="feedback-form" id="feedback-form"><div class="feedback__popup feedback__popup-response" id="feedback__popup_thx">Спасибо за ваш отзыв!</div><div id="feedback-success-popup"><div class="wrap"><button type="button" class="feedback-popup-close">×</button><svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_212_2187)"><path d="M22 0.6875C10.2294 0.6875 0.6875 10.2294 0.6875 22C0.6875 33.7706 10.2294 43.3125 22 43.3125C33.7706 43.3125 43.3125 33.7706 43.3125 22C43.3125 10.2294 33.7706 0.6875 22 0.6875ZM22 40.5625C11.8023 40.5625 3.4375 32.3078 3.4375 22C3.4375 11.8024 11.6922 3.4375 22 3.4375C32.1977 3.4375 40.5625 11.6922 40.5625 22C40.5625 32.1976 32.3078 40.5625 22 40.5625ZM34.1713 16.933L18.6613 32.3186C18.257 32.7197 17.604 32.7171 17.203 32.3128L9.82283 24.873C9.42176 24.4686 9.42434 23.8157 9.82867 23.4146L10.5609 22.6884C10.9652 22.2873 11.6181 22.2899 12.0192 22.6942L17.9468 28.6697L31.9926 14.7366C32.3969 14.3356 33.0498 14.3382 33.4509 14.7425L34.1772 15.4747C34.5783 15.879 34.5757 16.532 34.1713 16.933Z" fill="#27AE60"></path></g><defs><clipPath id="clip0_212_2187"><rect width="44" height="44" fill="white"></rect></clipPath></defs></svg><p>Ваш отзыв успешно отправлен!</p><span>Спасибо за обратную связь.</span></div></div><div class="feedback__popup" id="feedback__popup_why"><button type="button" class="feedback-popup-close">×</button><div class="feedback__popup-header">Уточните, почему:</div><input type="radio" name="category" id="bad_recommendation" value="bad_recommendation"><label for="bad_recommendation">Рекомендации не помогли</label><input type="radio" name="category" id="difficult_text" value="difficult_text"><label for="difficult_text">Текст трудно понять</label><input type="radio" name="category" id="no_answer" value="no_answer"><label for="no_answer">Нет ответа на мой вопрос</label><input type="radio" name="category" id="bad_header" value="bad_header"><label for="bad_header">Содержание статьи не соответствует заголовку</label><input type="radio" name="category" id="other_reason" value="other_reason"><label for="other_reason">Другая причина</label></div><div class="feedback__popup" id="feedback__popup-other"><button type="button" class="feedback-popup-close">×</button>   <div class="feedback__popup-header">Расскажите, что вам не понравилось в статье:</div><textarea class="feedback__textarea" name="other" id=""></textarea><input type="submit" class="feedback__other-btn" value="Отправить"></div><div class="feedback-form__btn-group"><input type="radio" name="useful" id="feedback__useful_yes" value="true"><label for="feedback__useful_yes"><img src="like.svg"/><span class="feedback-form__btn-group_yes-btn">Да</span></label><input type="radio" name="useful" id="feedback__useful_no" value="false"><label for="feedback__useful_no"><img src="dislike.svg"/><span class="feedback-form__btn-group_no-btn">Нет</span></label></div><select name="category"><option disabled>Выберите вариант</option><option value="bad_recommendation" selected>Рекомендации не помогли</option><option value="difficult_text">Текст трудно понять</option><option value="no_answer">Нет ответа на мой вопрос</option><option value="bad_header">Содержание статьи не соответствует заголовку</option><option value="other_reason">Другая причина</option></select><input type="submit"></form></div></div>
+                          <div class="feedback" id="feedback"><div class="feedback-help"><span><b>Was this helpful?</b></span><form action="" method="POST" class="feedback-form" id="feedback-form"><div class="feedback__popup feedback__popup-response" id="feedback__popup_thx" style="display: none;">Thanks for your feedback!</div><div class="feedback__popup" id="feedback__popup_why" style="display: none;"><div class="feedback__popup-header">Please specify why:</div><input type="radio" name="category" id="bad_recommendation" value="bad_recommendation"><label for="bad_recommendation">Recommendations did not help me</label><input type="radio" name="category" id="difficult_text" value="difficult_text"><label for="difficult_text">Article is hard to understand</label><input type="radio" name="category" id="no_answer" value="no_answer"><label for="no_answer">Didn`t answer my question</label><input type="radio" name="category" id="bad_header" value="bad_header"><label for="bad_header">Content does not match the topic</label><input type="radio" name="category" id="other_reason" value="other_reason"><label for="other_reason">Other</label></div><div class="feedback__popup" id="feedback__popup-other" style="display: none;"><div class="feedback__popup-header">How we can improve it?</div><textarea class="feedback__textarea" name="other" id=""></textarea><input type="submit" class="feedback__other-btn" value="Submit"></div><div class="feedback-form__btn-group"><input type="radio" name="useful" id="feedback__useful_yes" value="true"><label for="feedback__useful_yes"><img src="like.svg" class="small-img" alt="like"><spanclass="feedback-form__btn-group_yes-btn">Yes</spanclass="feedback-form__btn-group_yes-btn"></label><input type="radio" name="useful" id="feedback__useful_no" value="false"><label for="feedback__useful_no"><img src="dislike.svg" class="small-img" alt="dislike"><spanclass="feedback-form__btn-group_no-btn">No</spanclass="feedback-form__btn-group_no-btn"></label></div><select name="category"><option disabled="">Please specify why</option><option value="bad_recommendation" selected="">Recommendations did not help me</option><option value="difficult_text">Article is hard to understand</option><option value="no_answer">Didn`t answer my question</option><option value="bad_header">Content does not match the topic</option><option value="other_reason">Other</option></select><input type="submit"></form></div><div class="found_typo"><p style="margin: 0px; margin-top: 16px !important;"><span><b>Found a typo?</b></span> Select it and press <i>Ctrl+Enter</i> to send us feedback</p></div></div>
                            
                     </section>
                 </div>
@@ -175,7 +170,7 @@
                     <input type="checkbox" />
                     <div class="article__arrow"></div>
                     <div class="table-of-contents elma365-right" id="toc2Content">
-                        <h3 class="h3-toc">В этой статье</h3>
+                        <h3 class="h3-toc">In this topic</h3>
                         <nav id="toc2"></nav>
                     </div>
                 </aside>
@@ -186,63 +181,30 @@
         <div class="footer-container">
   <div class="footer-mobile">
     
-      <ul class="footer-mobile__list"><li><a href="https://api.elma365.com/ru/" target="_blank">API</a></li><li><a href="https://tssdk.elma365.com/" target="_blank">TS SDK</a></li><li><a href="https://community.elma365.com/" target="_blank">Community</a></li><li><a href="https://elma-academy.com/ru/elma365" target="_blank">Академия</a></li></ul><ul class="footer-mobile__list"><li><a href="https://elma365.com/ru/help/platform/get-trial.html">Платформа</a></li><li><a href="https://elma365.com/ru/help/ecm/ecm-functions.html">ECM</a></li><li><a href="https://elma365.com/ru/help/service/service-functions.html">Service</a></li><li><a href="https://elma365.com/ru/help/projects/projects-functions.html">Проекты</a></li></ul>
+    <ul class="footer-mobile__list"><li><a href="https://brix365.com/en/" target="_blank">BRIX</a></li><li><a href="https://tssdk.brix365.com/en/latest/" target="_blank">SDK</a></li><li><a href="https://api.brix365.com/en/" target="_blank">API</a></li></ul><ul class="footer-mobile__list"><li><a href="https://brix365.com/en/help/platform/get-trial.html">Platform</a></li><li><a href="https://brix365.com/en/help/ecm/ecm-functions.html">ECM</a></li><li><a href="https://brix365.com/en/help/service/service-functions.html">Service</a></li><li><a href="https://brix365.com/en/help/projects/projects-functions.html">Projects</a></li></ul>
     
     
   </div>
-  <div class="container">
-    <div class="footer-wrap">
-      
-        <div><span class="mobile-question-popup">Отправить фидбэк</span><form method="POST" action class="question__popup question-xs" id="question__popup"><div class="question-wrap"><span class="close"></span><span class="title">Задать вопрос</span><label for="help_question" style="display: none;"></label><textarea name="help_question" id="help_question"></textarea><input type="submit" value="Отправить"></div></form><div class="hidden fade-in question-success-xs">Ваш фидбэк отправлен.</div></div>
-      
-      <div class="footer-flex-b">
-        <div class="footer-top">
-          <span class="footer-copy">&copy; 2025 
-              ELMA365
-            
-            
-          </span>
-          
-            <a href="https://navigator.sk.ru/orn/1122971" target="_blank">
-              <img src="sk-resident.svg" alt="sk icon" class="footer-img" width="117" height="34">
-            </a>
-            
-        </div>
-        <div class="footer-line">
-          
-            <div class="footer-line-copy">
-              <span class="footer-copy">&copy; 2025 
-                  ELMA365
-                
-                
-              </span>
-            </div>
-            
-              <ul class="footer-list">
-                
-                  <li class="footer-item"><a href="https://elma365.com/ru/" target="_blank" class="footer-link" style="color: #0D4A75;"><img src="browse.svg" alt="browse icon" class="footer-img">elma365.com</a></li><li class="footer-item"><a href="https://www.youtube.com/user/ELMABPM" target="_blank" class="footer-link"><img src="yt.svg" alt="youtube icon" class="footer-img"></a></li><li class="footer-item"><a href="https://vk.com/elma_bpm" target="_blank" class="footer-link"><img src="vk.svg" alt="vk icon" class="footer-img"></a></li><li class="footer-item"><a href="https://t.me/elmaday" target="_blank" class="footer-link"><img src="tg.svg" alt="telegram icon" class="footer-img"></a></li><li class="footer-item"><a href="https://dzen.ru/elma" target="_blank" class="footer-link"><img src="dzen.svg" alt="dzen icon" class="footer-img"></a></li>
-                
-                
-                  <li class="footer-item">
-                    <a href="https://navigator.sk.ru/orn/1122971" target="_blank">
-                      <img src="sk-resident.svg" alt="sk icon" class="footer-img" width="117" height="34">
-                    </a>
-                  </li>
-                
-                
-              </ul>
-        </div>
-      </div>
+  <div class="footer-wrap">
+    
+      <div><span class="mobile-question-popup">Send feedback</span><form method="POST" action class="question__popup question-xs" id="question__popup"><div class="question-wrap"><span class="close"></span><span class="title">Ask a question</span><label for="help_question" style="display: none;"></label><textarea name="help_question" id="help_question"></textarea><input type="submit" value="Send"></div></form><div class="hidden fade-in question-success-xs">Sent</div></div>
+    
+    <div class="footer-flex-b">
+      <span class="footer-copy">&copy; 2025 BRIX</span>
+      <ul class="footer-list">
+        
+        <li class="footer-item">
+            <a href="#" class="arrow-top" style="display: block;"></a>
+        </li>
+        
+      </ul>
     </div>
   </div>
-  <a href="#" class="arrow-top"></a>
 </div>
  
     </footer>
-<!--    <script type="text/javascript" src="jquery1.min.js"></script>-->
     <iframe name="hmnavigation" style="display:none!important"></iframe>
-    <!--<script src="./jquery-ui.js"></script> -->
-    <script src="./jquery-ui.min.js"></script>
+    <script src="./jquery-ui.js"></script>
     <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
     <script src="./jquery.tocify.min.js"></script>
     <script src="./TypoReporter.min.js"></script>

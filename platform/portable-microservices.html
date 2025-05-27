@@ -1,20 +1,19 @@
 ﻿<!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 
 <head>
-    <title>Переносимые сервисы в модулях</title>
+    <title>Portable services in modules</title>
     <meta name="generator" content="Help+Manual" />
-    <meta name="keywords" content="публичного репозитория Docker&nbsp;Hub,Число" />
+    <meta name="keywords" content="" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Когда возможностей Low-code платформы недостаточно для оптимальной интеграции процессов в&nbsp;существующий информационный ландшафт, мы&nbsp;рекомендуем создавать собственные..." />
+    <meta name="description" content="When the Low-code platform cannot provide the functionality needed for efficient integration of processes into the existing information landscape, it is recommended to create..." />
     <meta name="picture" content="" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Cправка по Low-code платформе ELMA365" />
-    <meta property="og:url" content="https://elma365.com/ru/help" />
-    <meta property="og:image" content="" />
-    <meta property="og:site_name" content="ELMA365" />                                                              
+    <meta property="og:title" content="Full documentation for BRIX365 platform. Low-code developer guide. User guide. Admin guide. Developer guide." />
+    <meta property="og:url" content="https://brix365.com/en/help" />
+    <meta property="og:image" content="" />                                                              
     <link rel="icon" href="favicon.png" type="image/png" />
     
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -24,7 +23,6 @@
     <link rel="stylesheet" href="./article.css" />
     <link rel="stylesheet" href="./glossary.css" />
     <link rel="stylesheet" href="./theme.css" />
-    
    <script type="text/javascript" src="jquery.js"></script>
    <script type="text/javascript" src="helpman_settings.js"></script>
    <script type="text/javascript" src="helpman_topicinit.js"></script>
@@ -36,16 +34,16 @@
 </head>
 
 <body>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-M6ETBEC1R9"></script><script>window.dataLayer=window.dataLayer || []; function gtag(){dataLayer.push(arguments);}gtag('js', new Date()); gtag('config', 'G-M6ETBEC1R9');</script>
+    
     <script>!function(e,t,c,n,r,a,m){e.ym=e.ym||function(){(e.ym.a=e.ym.a||[]).push(arguments)},e.ym.l=1*new Date;for(var s=0;s<document.scripts.length;s++)if(document.scripts[s].src===n)return;a=t.createElement(c),m=t.getElementsByTagName(c)[0],a.async=1,a.src=n,m.parentNode.insertBefore(a,m)}(window,document,"script","https://mc.yandex.ru/metrika/tag.js"),ym(83179930,"init",{clickmap:!0,trackLinks:!0,accurateTrackBounce:!0,webvisor:!0})</script><noscript><div><img alt=""src=https://mc.yandex.ru/watch/83179930 style=position:absolute;left:-9999px></div></noscript> 
     
     ﻿<header class="header elma-365">
   <div class="container">
-    <a class="header__logo" href="https://elma365.com/ru/help">
-      <img src="./logo.svg" alt="header logo">
+    <a class="header__logo" href="https://brix365.com/en/help">
+      <img src="./logo-en.svg" alt="header logo">
     </a>
  <!-- <div class="hero__search-form" id="search-panel">
-   <form class="search-form" onsubmit="ym(83179930,'reachGoal','poisk')">
+   <form class="search-form" onsubmit="ym(83180416,'reachGoal','poisk')">
      <label class="search-form__label">
        <span id="reset-search" class="search__icon"></span>
        <input class="search-form__input" type="text">
@@ -65,7 +63,7 @@
     </div>  
   <div class="header__navi">
         
-        <ul class="header__list"><li><span class="solution-select"><span class="solution-select__selected"></span><svg width="7" height="4" viewBox="0 0 7 4" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L3.5 3.5L6 1" stroke="white" stroke-linecap="round" stroke-linejoin="round"/></svg><ul class="solution-select__list"><li><a class="project-link" href="https://elma365.com/ru/help/platform/get-trial.html">Платформа</a></li><li><a class="project-link" href="https://elma365.com/ru/help/ecm/ecm-functions.html">ECM</a></li><li><a class="project-link" href="https://elma365.com/ru/help/crm/crm_overview.html">CRM</a></li><li><a class="project-link" href="https://elma365.com/ru/help/service/service-functions.html">Service</a></li><li><a class="project-link" href="https://elma365.com/ru/help/projects/projects-functions.html">Проекты</a></li><li><a class="project-link" href="https://elma365.com/ru/help/business_solutions/-elma365-store.html">Бизнес-решения</a></li></ul></span></li><li><a href="https://api.elma365.com/ru/"target="_blank">API</a></li><li><a href="https://tssdk.elma365.com/"target="_blank">SDK</a></li><li><a href="https://community.elma365.com/" target="_blank">Community</a></li><li><a href="https://elma-academy.com/ru/" target="_blank">Академия</a></li><li><a href="https://elma365.com/ru/" target="_blank">Сайт ELMA365</a></li></ul> 
+        <ul class="header__list"><li><span class="solution-select"><span class="solution-select__selected"></span><svg width="7" height="4" viewBox="0 0 7 4" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L3.5 3.5L6 1" stroke="white" stroke-linecap="round" stroke-linejoin="round"/></svg><ul class="solution-select__list"><li><a class="project-link" href="https://brix365.com/en/help/platform/get-trial.html">Platform</a></li><li><a class="project-link" href="https://brix365.com/en/help/ecm/ecm-functions.html">ECM</a></li><li><a class="project-link" href="https://brix365.com/en/help/crm/crm_overview.html">CRM</a></li><li><a class="project-link" href="https://brix365.com/en/help/service/service-functions.html">Service</a></li><li><a class="project-link" href="https://brix365.com/en/help/projects/projects-functions.html">Projects</a></li><li><a class="project-link" href="https://brix365.com/en/help/business_solutions/-elma365-store.html">Business Solutions</a></li></ul></span></li><li><a href="https://api.brix365.com/en/" target="_blank">API</a></li><li><a href="https://tssdk.brix365.com/" target="_blank">SDK</a></li></ul>
         
         
    </div>
@@ -80,8 +78,8 @@
 
         <aside class="sidebar" id="sidebar">
         <div class="sidebar__header">
-                 <a class="header__logo" href="https://elma365.com/ru/help">
-                    <img src="./logo-light.svg">
+                 <a class="header__logo" href="https://brix365.com/en/help">
+                    <img src="./logo-light-en.svg">
                  </a>
                     <span class="sidebar__close elma-365-close" id="close"></span>
             </div>
@@ -94,15 +92,12 @@
             <div class="article-inner">           
                 <div class="content">
                     <header class="article__header">
-                    <div class="article__bread" style="display:flex; gap:10px;">
-                        <span id="subcategory" class="search-res__item-category search-res__item-category_subcategory subcategory article__badge"></span>
                         
-                            <div class="topic__breadcrumbs">     
-                                <p><a href="solutions-building.html">Разработка решений на платформе ELMA365</a> / Переносимые сервисы в модулях</p>
+                            <div class="topic__breadcrumbs">
+                                <p><a href="solutions-building.html">Build solutions in BRIX</a> / Portable services in modules</p>
                             </div>
                         
-                    </div>
-                        <div class="topic__title"><h1 class="p_Heading1"><span class="f_Heading1">Переносимые сервисы в модулях</span></h1>
+                        <div class="topic__title"><h1 class="p_Heading1"><span class="f_Heading1">Portable services in modules</span></h1>
 </div>
                     
 </header>
@@ -111,75 +106,72 @@
                             <a href="#h1-article" class="scroll-top"></a>
                         </div>
                         <!-- Placeholder for topic body. -->
-                        <p class="p_Normal">Когда возможностей Low-code платформы недостаточно для оптимальной интеграции процессов в существующий информационный ландшафт, мы рекомендуем создавать <a href="custom_services.html" class="topiclink">собственные микросервисы</a>. Область применения таких сервисов очень большая и покрывает самые требовательные задачи бизнеса.</p>
-<p class="p_Normal">При установке сервиса независимо от платформы ELMA365 и его самостоятельной поддержке конечный разработчик и администратор могут столкнуться с трудностями в установке и эксплуатации решения.</p>
-<p class="p_Normal">Чтобы упростить и ускорить разработку собственных микросервисов, можно создать переносимый сервис внутри пользовательского модуля.</p>
-<p class="p_Normal">Способ подключения переносимого сервиса выбирается в зависимости от необходимых функциональных возможностей его исполнения и от используемой поставки ELMA365:</p>
+                        <p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-family: Inter;">When the Low-code platform cannot provide the functionality needed for efficient integration of processes into the existing information landscape, it is recommended to create <a href="custom_services.html" class="topiclink">custom microservices</a>. These services can be used in a variety of ways and for the most demanding business needs.</span></p>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;">When installing a service independently of the BRIX platform and supporting it separately, the end developer and administrator may face difficulties in installing and operating the solution.</p>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;">To simplify and speed up the development of your own microservices, you can create a portable service inside a custom module.</p>
+<p class="p_Normal">The connection method of the portable service is selected depending on the required functionality of its execution and on the BRIX edition used:</p>
 <ol style="list-style-type:decimal">
-<li value="1" class="p_Normal">Сервисом может быть <a href="https://www.docker.com/" target="_blank" class="weblink">Docker‑контейнер</a>. Он оборачивается и размещается в отдельном пространстве в среде исполнения Kubernetes. Способ доступен в поставках ELMA365 On‑Premises и SaaS Enterprise.</li><li value="2" class="p_Normal">Cервис функционирует на сторонней площадке с публичным адресом доступа. В этом случае можно только обращаться к сервису с запросами. Такой способ доступен для всех поставок, но используется преимущественно в SaaS Standard.</li></ol>
-<p style="margin: 7px 0 16px 0;"><img alt="portable-microservices-1" width="993" height="457" style="margin:0;width:993px;height:457px;border:none" src="portable-microservices-1.png"/></p>
-<h2 class="p_Heading2"><a id="characteristics" class="hmanchor"></a><span class="f_Heading2">Особенности добавления сервисов в модули</span></h2>
-<p class="p_Normal">Сервисы и контейнеры, которые можно установить в модуль, имеют ряд ограничений и особенностей:</p>
+<li value="1" class="p_Normal">The service can be a <a href="https://www.docker.com/" target="_blank" class="weblink">Docker container</a>. It is installed in a separate space in the Kubernetes environment. The method is available in On-Premises and SaaS Enterprise editions.</li><li value="2" class="p_Normal">The service runs on a third-party website with a public access address. In this case, you can only make requests to the service. This method is available for all versions, but it is used mainly in SaaS Standard.</li></ol>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><img alt="portable-microservices-1" width="756" height="341" style="margin:0;width:756px;height:341px;border:none" src="portable-microservices-1.png"/></p>
+<h2 class="p_Heading2"><span class="f_Heading2">Features of adding services to modules</span></h2>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-family: Inter;">Services and containers that can be installed in a module have a number of special properties and limitations:</span></p>
 <ol style="list-style-type:decimal">
-<li value="1" class="p_Normal">В поставках ELMA365 On‑Premises и SaaS Enterprise поддерживается указание URL‑адреса контейнера. При этом Docker‑образ сервиса не является частью модуля. Это означает, что вы должны предварительно разместить образ своего сервиса в публичном или приватном репозитории в Docker Hub. Также сам образ сервиса не упаковывается при экспорте модуля и не переносится с пакетом <span style="font-weight: bold;">.e365</span>. На данный момент при установке готового модуля с сервисами системе требуется доступ к указанному адресу репозитория для скачивания Docker-образа.</li><li value="2" class="p_Normal">Чтобы модуль с переносимым сервисом можно было использовать в поставке SaaS Standard, нужно указать альтернативный адрес сервиса. Это означает, что предварительно следует обеспечить работу сервиса на сторонней площадке с публичным адресом доступа.</li><li value="3" class="p_Normal">Если в поставках ELMA365 On‑Premises и SaaS Enterprise в настройках модуля указать оба варианта подключения микросервиса, для установки взаимодействия преимущественно используется адрес образа. Подключение через альтернативный адрес применяется при разрыве соединения.</li><li value="4" class="p_Normal">По умолчанию у переносимых сервисов нет лимитов на ресурсы выполнения.</li><li value="5" class="p_Normal">В поставках ELMA365 On‑Premises и SaaS Enterprise можно <a href="configmap.html" class="topiclink">задать параметры развёртывания микросервиса с помощью ConfigMap</a>. Например, ограничить потребление ресурсов, настроить автомасштабирование сервиса и т. д.</li><li value="6" class="p_Normal">Взаимодействие с переносимым сервисом возможно только из серверных скриптов модуля (виджеты, процессы, действия бизнес-процессов, методы API, обработчики событий) и только через HTTP‑запросы. Однако сам сервис может взаимодействовать с любым другим внешним сервисом по любому каналу связи и протоколу взаимодействия.</li></ol>
-<p style="margin: 7px 0 16px 0;">Ознакомиться с дополнительной информацией о переносимых сервисах можно в статьях:</p>
+<li value="1" style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-family: Inter;">On-Premises and SaaS Enterprise editions support specifying a container URL. In this case, the Docker service image is not part of the module. This means that you have to store the image of your service in a public or private Docker Hub repository before adding it. Moreover, the service image is not included in the </span><span style="font-family: Inter; font-weight: bold;">.e365</span><span style="font-family: Inter;"> package when the module is exported, so it cannot be transferred into another company. For the moment, when a ready-to-use module with services is installed, the system needs to have access to the specified repository URL to download the Docker image.</span></li><li value="2" style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-family: Inter;">In order for a module with a portable service to be used in the SaaS Standard edition, an alternative service address should be specified. This means that you should ensure the work of the service on a third-party website with a public access address.</span></li><li value="3" style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-family: Inter;">If the On-Premises and SaaS Enterprise editions include both microservice connection options in the module settings, the image address is predominantly used to set up communication. Connection via an alternative address is used when the connection is disconnected.</span></li><li value="4" style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-family: Inter;">By default, the portable services have no resource limitations.</span></li><li value="5" style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-family: Inter;">In the BRIX On‑Premises and SaaS Enterprise editions, you can <a href="configmap.html" class="topiclink">set microservice deployment parameters using ConfigMap</a>. For example, limit resource consumption, configure autoscaling of the service, etc.</span></li><li value="6" style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="font-family: Inter;">Interaction with the portable service is only available from the module’s server scripts (widgets, processes, business process activities, API methods, event handlers) and only with HTTP requests. But the service itself can interact with any external service by any communication channels and protocols.</span></li></ol>
+<p style="text-indent: -24px; line-height: 1.20; margin: 7px 0 7px 24px;">Additional information about portable services can be found in the following articles:</p>
 <ul style="list-style-type:disc">
-<li style="margin-top: 7px; margin-right: 0; margin-bottom: 16px;"><a href="portable-services.html" class="topiclink">«Настройка переносимого сервиса в модуле»</a> — создание сервиса в пользовательском модуле; </li><li style="margin-top: 7px; margin-right: 0; margin-bottom: 16px;"><a href="enable-portable-services.html" class="topiclink">«Включение переносимых сервисов»</a> — включение переносимых сервисов в ELMA365 Enterprise;</li><li style="margin-top: 7px; margin-right: 0; margin-bottom: 16px;"><a href="development-key-points.html" class="topiclink">«Рекомендации по разработке микросервисов для переносимых сервисов»</a> — разработка собственного микросервиса;</li><li style="margin-top: 7px; margin-right: 0; margin-bottom: 16px;"><a href="configmap.html" class="topiclink">«Настройка параметров переносимых сервисов через ConfigMap»</a> — настройка дополнительных параметров развёртывания микросервиса с помощью ConfigMap.</li></ul>
-<h2 class="p_Heading2"><a id="example-of-use" class="hmanchor"></a><span class="f_Heading2">Пример настройки и использования переносимого сервиса</span></h2>
-<p class="p_Normal">Предположим, что в одном из решений понадобилось генерировать и показывать математические формулы. Пользователи хорошо владеют языком описания формул LaTeX. В решении необходимо реализовать генерацию изображений из формулы LaTeX.</p>
-<p class="p_Normal">Для этого создадим модуль и подключим переносимый сервис. Чтобы этот модуль использовать во всех поставках ELMA365, рассмотрим способы подключения сервиса с помощью: </p>
+<li style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="color: #0000ff;"><a href="portable-services.html" class="topiclink">Configure a portable service in a module</a></span>. Create a service in a custom module.</li><li style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="color: #0000ff;"><a href="enable-portable-services.html" class="topiclink">Enable portable services</a></span>. Enable portable services in BRIX Enterprise.</li><li style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><span style="color: #0000ff;"><a href="development-key-points.html" class="topiclink">Guidelines for developing microservices for portable services</a></span>. Develop your own microservice.</li><li style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 7px;"><a href="configmap.html" class="topiclink">Configure parameters of portable services using ConfigMap</a>. Configure additional microservice deployment parameters using ConfigMap.</li></ul>
+<h2 class="p_Heading2"><span class="f_Heading2">Use case of portable service configuration</span></h2>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;">Suppose you want to use one of your solutions to generate and display mathematical formulas. Users are proficient in the LaTeX markup language. In the solution, it is necessary to implement the generation of images from LaTeX formulas.</p>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-family: Inter;">To do this, let</span><span style="color: #202122; background-color: #ffffff;">’</span><span style="font-family: Inter;">s create a module and connect the portable service. To use this module in all BRIX versions, we will configure two ways to connect the service via: </span></p>
 <ul style="list-style-type:disc">
-<li class="p_Normal"><a href="portable-microservices.html#service-creation" class="topiclink">адреса образа микросервиса в поставках On‑Premises и SaaS Enterprise</a>; </li><li class="p_Normal"><a href="portable-microservices.html#alternative-address" class="topiclink">альтернативного адреса сервиса в поставке SaaS Standard</a>.</li></ul>
-<h3 class="p_Heading3"><a id="service-creation" class="hmanchor"></a><span class="f_Heading3">Настроить адрес образа сервиса в On-Premises и SaaS Enterprise</span></h3>
-<p class="p_Normal">В поставках ELMA365 On‑Premises и SaaS Enterprise можно скачать и установить сервис в виде Docker‑контейнера. Чтобы настроить его загрузку при включении модуля, укажите адрес образа.</p>
-<p class="p_Normal">Для примера рассмотрим <a href="https://github.com/chialab/math-api" target="_blank" class="weblink">готовый контейнер с сервисом генерации изображения по формуле</a>. Его можно собрать самостоятельно из исходного кода и разместить в своём приватном репозитории или использовать готовый из <a href="https://hub.docker.com/r/chialab/math-api" target="_blank" class="weblink">публичного репозитория Docker Hub</a>.</p>
-<p class="p_Normal">Чтобы настроить подключение сервиса:</p>
+<li style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 16px;"><span style="font-family: Inter;">Microservice image address in the On‑Premises and SaaS Enterprise editions.</span></li><li style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 16px;"><span style="font-family: Inter;">Alternative service address in the SaaS Standard edition.</span></li></ul>
+<h3 class="p_Heading3"><span class="f_Heading3">Configure the service image address in On-Premises and SaaS Enterprise</span></h3>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-family: Inter;">In the On‑Premises and SaaS Enterprise editions, you can download and install the service as a Docker container. To configure how the service loads when the module is enabled, add the image address.</span></p>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-family: Inter;">For example, let</span><span style="color: #202122; background-color: #ffffff;">’</span><span style="font-family: Inter;">s take a <a href="https://github.com/chialab/math-api" target="_blank" class="weblink">ready-made container with the service of image generation by formula</a>. You can build this container yourself from source code and place it in your private repository or use a ready-made one from the <a href="https://hub.docker.com/r/chialab/math-api" target="_blank" class="weblink">public Docker Hub repository</a>.</span></p>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-family: Inter;">To configure the service connection, follow these steps:</span></p>
 <ol style="list-style-type:upper-roman">
-<li value="1" class="p_Normal"><a href="create-extention.html" class="topiclink">Создайте пользовательский модуль</a> и перейдите на вкладку <span style="font-weight: bold;">Сервисы</span>.</li><li value="2" class="p_Normal"><a href="portable-services.html#add-portable-microservices" class="topiclink">Добавьте новый сервис</a> и укажите:</li></ol>
+<li value="1" style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 16px;"><span style="font-family: Inter;"><a href="create-extention.html" class="topiclink">Create a custom module</a> and click the </span><span style="font-family: Inter; font-weight: bold;">Services</span><span style="font-family: Inter;"> tab.</span></li><li value="2" style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 16px;"><span style="font-family: Inter;"><a href="portable-services.html#add-service" class="topiclink">Add a new service</a> and specify:</span></li></ol>
 <ul style="list-style-type:disc">
-<li class="p_Normal">имя сервиса;</li><li class="p_Normal">адрес образа, указывающий путь к репозиторию. В зависимости от размещения Docker‑образа можно указать <a href="portable-services.html#image-address-formats" class="topiclink">краткий или полный адрес</a>; </li><li class="p_Normal">данные авторизации, если для доступа к репозиторию с Docker-образом сервиса требуются <a href="portable-services.html#image-address" class="topiclink">логин и токен</a>;</li><li class="p_Normal">порт, через который будет происходить взаимодействие с микросервисом.</li></ul>
+<li style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 16px;"><span style="font-family: Inter;">Service name.</span></li><li style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 16px;"><span style="font-family: Inter;">Image address indicating the path to the repository. Depending on the location of the Docker image, you can specify <a href="portable-services.html#image-address-formats" class="topiclink">short or full address</a>.</span></li><li style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 16px;">Authentication data if <a href="portable-services.html#image-address" class="topiclink">login and token</a> are required to access the repository with the Docker image of the service.</li><li style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 16px;"><span style="font-family: Inter;">The port for communication with the microservice.</span></li></ul>
 <ol style="list-style-type:upper-roman" start="3">
-<li value="3" class="p_Normal">После сохранения заполненных полей откроется окно <span style="font-weight: bold;">Редактирование сервиса</span>, где вы можете <a href="portable-services.html#main-tab" class="topiclink">задать настройки подключения</a> — указать дополнительные порты и количество экземпляров микросервиса. Для этого нажмите значок шестерёнки рядом с опцией <span style="font-weight: bold;">Docker контейнер</span>.<br />
-<img alt="portable-microservices-2" width="597" height="315" style="margin:0;width:597px;height:315px;border:none" src="portable-microservices-2.png"/></li></ol>
-<ol style="list-style-type:upper-roman" start="4">
-<li value="4" class="p_Normal">Сохраните настройки.</li></ol>
-<p class="p_Normal">Теперь при включённом модуле можно <a href="portable-microservices.html#using-service-in-widget" class="topiclink">использовать сервис</a> и обращаться к нему в скриптах.</p>
-<h3 class="p_Heading3"><a id="alternative-address" class="hmanchor"></a><span class="f_Heading3">Настроить альтернативный адрес сервиса в SaaS Standard</span></h3>
-<p class="p_Normal">Такой способ настройки предполагает, что сервис предварительно устанавливается на внешнем хостинге с публичным доступом. При настройке сервиса в модуле указывается альтернативный адрес, чтобы через него направлять запросы на сторонний ресурс, где работает сервис. </p>
-<p class="p_Normal">Этот способ доступен во всех поставках ELMA365, но преимущественно применяется в SaaS Standard, поскольку в этой поставке нельзя скачивать сервис с помощью адреса образа.</p>
-<p class="p_Normal">Чтобы настроить подключение сервиса через альтернативный адрес, выполните следующие шаги:</p>
+<li value="3" style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 16px;"><span style="font-family: Inter;">After saving the parameters, the </span><span style="font-family: Inter; font-weight: bold;">Edit Service</span><span style="font-family: Inter;"> window will open. Here you can <a href="portable-services.html#main-tab" class="topiclink">specify connection settings</a>, such as additional ports and the number of microservice instances. To do this, click the gear icon next to the </span><span style="font-family: Inter; font-weight: bold;">Docker Container</span><span style="font-family: Inter;"> option.</span><br />
+<img alt="portable-microservices-2" width="526" height="353" style="margin:0;width:526px;height:353px;border:none" src="portable-microservices-2.png"/></li><li value="4" style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 16px;">Save the settings.</li></ol>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;">Now with the module enabled, you can <a href="portable-microservices.html#use-service" class="topiclink">use the service</a> and access it in scripts.</p>
+<h3 class="p_Heading3"><span class="f_Heading3">Configure an alternative service address in SaaS Standard</span></h3>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;">This method of configuration assumes that the service is pre-installed on an external hosting with public access. When configuring the service, an alternative address is specified in the module to send requests to the third-party resource where the service is running.</p>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;">This method is available in all BRIX editions, but it is mostly used in SaaS Standard because in this version you cannot download the service using the image address.</p>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;">To configure the service connection via an alternative address, follow the steps below:</p>
 <ol style="list-style-type:upper-roman">
-<li value="1" class="p_Normal"><a href="create-extention.html" class="topiclink">Создайте пользовательский модуль</a> и перейдите на вкладку <span style="font-weight: bold;">Сервисы</span>.</li><li value="2" class="p_Normal">Добавьте сервис и в открывшемся окне заполните его имя.</li><li value="3" class="p_Normal">Затем внесите адрес сторонней площадки, на которой настроена работа сервиса. Его можно указать в строковом представлении или использовать <a href="portable-services.html#alternative-address" class="topiclink">шаблон адреса</a>.</li></ol>
-<p class="p_Normal">В нашем примере применяется следующий шаблон <code><b>{$protocol}{$base_math_url}</b></code>. Для этого в настройках модуля создано два параметра:</p>
+<li value="1" style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 16px;"><a href="create-extention.html" class="topiclink">Create a custom module</a> and click the <span style="font-weight: bold;">Services</span> tab.</li><li value="2" style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 16px;">Add a service and fill in its name in the window that opens.</li><li value="3" style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 16px;">Then enter the address of the third-party website where the service is configured. It can be specified as a string or you can use the <a href="portable-services.html#alternative-address" class="topiclink">address template</a>.</li></ol>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;">In this example, the following template is used: <span style="font-weight: bold;">{$protocol}{$base_math_url}</span>. For this purpose, two parameters are created in the module settings:</p>
 <ul style="list-style-type:disc">
-<li class="p_Normal">протокол адреса сервиса (<code><b>protocol</b></code>) — в этом поле указывается протокол передачи данных, например <span style="font-weight: bold;">https://</span>;</li><li class="p_Normal">имя адреса сервиса (<code><b>base_math_url</b></code>) — в этом поле указывается путь к ресурсу, в котором размещён переносимый сервис, например <span style="font-weight: bold;">example.mathcalculation.com</span>.<br />
-<img alt="portable-microservices-6" width="554" height="317" style="margin:0;width:554px;height:317px;border:none" src="portable-microservices-6.png"/></li></ul>
+<li style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 16px;"><span style="font-weight: bold;">Service address protocol</span> (<code><b>protocol</b></code>). This field specifies the data transfer protocol, for example, <span style="font-weight: bold;">https://</span>.</li><li style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 16px;"><span style="font-weight: bold;">Service address name</span> (<code><b>base_math_url</b></code>). This field specifies the path to the resource where the portable service is located, for example, <span style="font-weight: bold;">example.mathcalculation.com</span>.<br />
+<img alt="portable-microservices-5" width="588" height="293" style="margin:0;width:588px;height:293px;border:none" src="portable-microservices-5.png"/></li></ul>
 <ol style="list-style-type:upper-roman" start="4">
-<li value="4" class="p_Normal">Сохраните настройки. </li></ol>
-<p class="p_Normal">Теперь, когда вы включите модуль и укажете адрес сервиса в его настройках, к сервису можно будет обращаться в пользовательских скриптах.</p>
-<h3 class="p_Heading3"><a id="using-service-in-widget" class="hmanchor"></a><span class="f_Heading3">Использовать сервис в виджете</span></h3>
-<p class="p_Normal">Созданный сервис можно использовать в серверном скрипте виджета для генерации картинки, применив HTTP‑метод <code><b>GET /render</b></code>. Об этом говорится в <a href="https://hub.docker.com/r/chialab/math-api#get-render" class="weblink">описании сервиса</a>. </p>
-<p class="p_Normal">В виджете пользователь указывает формулу в поле типа <a href="360009707032.html" class="topiclink">Строка</a> и желаемую ширину картинки — поле типа <a href="360009707032.html#number" class="topiclink">Число</a>.</p>
-<p class="p_Normal">Пример готового скрипта:</p>
-<p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample">async </span><span class="f_CodeExample" style="font-weight: bold;">function</span><span class="f_CodeExample"> renderImage(): Promise&lt;</span><span class="f_CodeExample" style="font-weight: bold;">void</span><span class="f_CodeExample">&gt; {</span><br />
-<span class="f_CodeExample"> &nbsp; &nbsp;let source = encodeURIComponent(Context.data.formula!);</span><br />
-<span class="f_CodeExample"> &nbsp; &nbsp;let width = encodeURIComponent((Context.data.shirina_kartinki || 400).toString());</span><br />
-<span class="f_CodeExample"> &nbsp; &nbsp;let imgResp = await Namespace.services.math.fetch(`/render?input=latex&amp;inline=1&amp;output=png&amp;source=${source}&amp;width=${width}`, {</span><br />
-<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;headers: {</span><br />
-<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;Accept&quot; : &quot;image/png&quot;</span><br />
-<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;}</span><br />
-<span class="f_CodeExample"> &nbsp; &nbsp;});</span><br />
+<li value="4" style="line-height: 1.20; margin-top: 7px; margin-right: 0; margin-bottom: 16px;">Save the settings.</li></ol>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;">Now with the module enabled, you can <a href="portable-microservices.html#use-service" class="topiclink">use the service</a> and access it in scripts.</p>
+<h3 class="p_Heading3"><a id="use-service" class="hmanchor"></a><span class="f_Heading3">Use the service in a widget</span></h3>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-family: Inter;">Now you can use the service you created in a server script of a widget to generate images. Images can be generated with the </span><code><b>GET /render</b></code><span style="font-family: Inter;"> HTTP method, as specified in the <a href="https://hub.docker.com/r/chialab/math-api#get-render" target="_blank" class="weblink">service’s description</a>.</span></p>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;">In the widget, the user specifies a formula in a field of the <span style="color: #0000ff;"><a href="360009707032.html" class="topiclink">String</a></span> type and the desired width of the image in a field of the <span style="color: #0000ff;"><a href="360009707032.html#number" class="topiclink">Number</a></span> type.</p>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-family: Inter;">Here is an example of a script you can write to use the service:</span></p>
+<p class="p_CodeExample" style="white-space: normal; page-break-inside: avoid;"><span class="f_CodeExample">async function renderImage(): Promise&lt;</span><span class="f_CodeExample" style="font-weight: bold;">void</span><span class="f_CodeExample">&gt; {</span><br />
+<span class="f_CodeExample"> </span><span class="f_CodeExample" style="color: #ffffff;"> &nbsp; </span><span class="f_CodeExample">let source = encodeURIComponent(Context.data.formula!);</span><br />
+<span class="f_CodeExample"> </span><span class="f_CodeExample" style="color: #ffffff;"> &nbsp; </span><span class="f_CodeExample">let width = encodeURIComponent((Context.data.image_width || 400).toString());</span><br />
+<span class="f_CodeExample"> </span><span class="f_CodeExample" style="color: #ffffff;"> &nbsp; </span><span class="f_CodeExample">let imgResp = await Namespace.services.math.fetch(`/render?input=latex&amp;</span><span class="f_CodeExample" style="font-weight: bold;">inline</span><span class="f_CodeExample">=1&amp;output=png&amp;source=${source}&amp;width=${width}`, {</span><br />
+<span class="f_CodeExample"> </span><span class="f_CodeExample" style="color: #ffffff;"> &nbsp; &nbsp; &nbsp; </span><span class="f_CodeExample">headers: {</span><br />
+<span class="f_CodeExample"> </span><span class="f_CodeExample" style="color: #ffffff;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="f_CodeExample">&quot;Accept&quot; : &quot;image/png&quot;</span><br />
+<span class="f_CodeExample"> </span><span class="f_CodeExample" style="color: #ffffff;"> &nbsp; &nbsp; &nbsp; </span><span class="f_CodeExample">}</span><br />
+<span class="f_CodeExample"> </span><span class="f_CodeExample" style="color: #ffffff;"> &nbsp; </span><span class="f_CodeExample">});</span><br />
 <span class="f_CodeExample">&nbsp;</span><br />
-<span class="f_CodeExample"> &nbsp; &nbsp;let buff = await imgResp.arrayBuffer();</span><br />
+<span class="f_CodeExample"> </span><span class="f_CodeExample" style="color: #ffffff;"> &nbsp; </span><span class="f_CodeExample">let buff = await imgResp.arrayBuffer();</span><br />
 <span class="f_CodeExample">&nbsp;</span><br />
-<span class="f_CodeExample"> &nbsp; &nbsp;Context.data.kartinka = await Context.fields.kartinka.create(`render-${Date.now()}.png`, buff);</span><br />
+<span class="f_CodeExample"> </span><span class="f_CodeExample" style="color: #ffffff;"> &nbsp; </span><span class="f_CodeExample">Context.data.formula_image = await Context.fields.formula_image.create(`render-${Date.now()}.png`, buff);</span><br />
 <span class="f_CodeExample">}</span></p>
-<p class="p_Normal">В примере <code><b>Namespace.services.math</b></code> используется для доступа к сервису. Это позволяет вызывать HTTP‑методы сервиса в серверных скриптах TS SDK. Для вызова указывается относительный адрес метода, остальное реализуется возможностями ELMA365.</p>
-<p class="p_Normal">В самом скрипте осуществляется запрос к методу сервиса. В ответе в буфере выдаётся картинка, её необходимо сохранить в виде файла и указать в переменной типа <a href="360009707032.html#file_type" class="topiclink">Файлы.</a> </p>
-<p class="p_Normal">В результате реализован виджет, который можно использовать на любой странице или форме в системе:</p>
-<p class="p_Normal"><img alt="portable-microservices_4" width="413" height="171" style="margin:0;width:413px;height:171px;border:none" src="portable-microservices_4.png"/></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;">Сгенерированная картинка будет выглядеть следующим образом: </p>
-<p class="p_Normal"><img alt="portable-microservices_1" width="383" height="125" style="margin:0;width:383px;height:125px;border:none" src="portable-microservices_1.png"/></p>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-family: Inter;">In this example,  </span><code><b>Namespace.services.math</b></code><span style="font-family: Inter;"> is used to access the service. This allows calling HTTP methods of the service in TS SDK server scripts. The relative address of the method is specified for the invocation, the rest is implemented by BRIX capabilities.</span></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-family: Inter;">In the script itself, a method of the service is called. In the response an image is given in the buffer. It should be saved as a file and specified in a variable of the <a href="360009707032.html#file_type" class="topiclink">Files</a> type.</span></p>
+<p style="line-height: 1.28; margin: 0 0 11px 0;"><img alt="portable-microservices-3" width="424" height="176" style="margin:0;width:424px;height:176px;border:none" src="portable-microservices-3.png"/></p>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><span style="font-family: Inter;">The rendered image will look like this:</span></p>
+<p style="line-height: 1.20; margin: 7px 0 16px 0;"><img alt="portable-microservices-4" width="386" height="126" style="margin:0;width:386px;height:126px;border:none" src="portable-microservices-4.png"/></p>
 
                         <div class="bottom-nav">
                             
@@ -196,7 +188,7 @@
                             
                         </div>
                         <!-- добавляет на страницу строку блок Была ли статья полезной?  -->
-                          <div class="feedback-wrap"><div class="feedback" id="feedback"><span><b>Была ли статья полезной?</b></span><form action="" method="POST" class="feedback-form" id="feedback-form"><div class="feedback__popup feedback__popup-response" id="feedback__popup_thx">Спасибо за ваш отзыв!</div><div id="feedback-success-popup"><div class="wrap"><button type="button" class="feedback-popup-close">×</button><svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_212_2187)"><path d="M22 0.6875C10.2294 0.6875 0.6875 10.2294 0.6875 22C0.6875 33.7706 10.2294 43.3125 22 43.3125C33.7706 43.3125 43.3125 33.7706 43.3125 22C43.3125 10.2294 33.7706 0.6875 22 0.6875ZM22 40.5625C11.8023 40.5625 3.4375 32.3078 3.4375 22C3.4375 11.8024 11.6922 3.4375 22 3.4375C32.1977 3.4375 40.5625 11.6922 40.5625 22C40.5625 32.1976 32.3078 40.5625 22 40.5625ZM34.1713 16.933L18.6613 32.3186C18.257 32.7197 17.604 32.7171 17.203 32.3128L9.82283 24.873C9.42176 24.4686 9.42434 23.8157 9.82867 23.4146L10.5609 22.6884C10.9652 22.2873 11.6181 22.2899 12.0192 22.6942L17.9468 28.6697L31.9926 14.7366C32.3969 14.3356 33.0498 14.3382 33.4509 14.7425L34.1772 15.4747C34.5783 15.879 34.5757 16.532 34.1713 16.933Z" fill="#27AE60"></path></g><defs><clipPath id="clip0_212_2187"><rect width="44" height="44" fill="white"></rect></clipPath></defs></svg><p>Ваш отзыв успешно отправлен!</p><span>Спасибо за обратную связь.</span></div></div><div class="feedback__popup" id="feedback__popup_why"><button type="button" class="feedback-popup-close">×</button><div class="feedback__popup-header">Уточните, почему:</div><input type="radio" name="category" id="bad_recommendation" value="bad_recommendation"><label for="bad_recommendation">Рекомендации не помогли</label><input type="radio" name="category" id="difficult_text" value="difficult_text"><label for="difficult_text">Текст трудно понять</label><input type="radio" name="category" id="no_answer" value="no_answer"><label for="no_answer">Нет ответа на мой вопрос</label><input type="radio" name="category" id="bad_header" value="bad_header"><label for="bad_header">Содержание статьи не соответствует заголовку</label><input type="radio" name="category" id="other_reason" value="other_reason"><label for="other_reason">Другая причина</label></div><div class="feedback__popup" id="feedback__popup-other"><button type="button" class="feedback-popup-close">×</button>   <div class="feedback__popup-header">Расскажите, что вам не понравилось в статье:</div><textarea class="feedback__textarea" name="other" id=""></textarea><input type="submit" class="feedback__other-btn" value="Отправить"></div><div class="feedback-form__btn-group"><input type="radio" name="useful" id="feedback__useful_yes" value="true"><label for="feedback__useful_yes"><img src="like.svg"/><span class="feedback-form__btn-group_yes-btn">Да</span></label><input type="radio" name="useful" id="feedback__useful_no" value="false"><label for="feedback__useful_no"><img src="dislike.svg"/><span class="feedback-form__btn-group_no-btn">Нет</span></label></div><select name="category"><option disabled>Выберите вариант</option><option value="bad_recommendation" selected>Рекомендации не помогли</option><option value="difficult_text">Текст трудно понять</option><option value="no_answer">Нет ответа на мой вопрос</option><option value="bad_header">Содержание статьи не соответствует заголовку</option><option value="other_reason">Другая причина</option></select><input type="submit"></form></div></div>
+                          <div class="feedback" id="feedback"><div class="feedback-help"><span><b>Was this helpful?</b></span><form action="" method="POST" class="feedback-form" id="feedback-form"><div class="feedback__popup feedback__popup-response" id="feedback__popup_thx" style="display: none;">Thanks for your feedback!</div><div class="feedback__popup" id="feedback__popup_why" style="display: none;"><div class="feedback__popup-header">Please specify why:</div><input type="radio" name="category" id="bad_recommendation" value="bad_recommendation"><label for="bad_recommendation">Recommendations did not help me</label><input type="radio" name="category" id="difficult_text" value="difficult_text"><label for="difficult_text">Article is hard to understand</label><input type="radio" name="category" id="no_answer" value="no_answer"><label for="no_answer">Didn`t answer my question</label><input type="radio" name="category" id="bad_header" value="bad_header"><label for="bad_header">Content does not match the topic</label><input type="radio" name="category" id="other_reason" value="other_reason"><label for="other_reason">Other</label></div><div class="feedback__popup" id="feedback__popup-other" style="display: none;"><div class="feedback__popup-header">How we can improve it?</div><textarea class="feedback__textarea" name="other" id=""></textarea><input type="submit" class="feedback__other-btn" value="Submit"></div><div class="feedback-form__btn-group"><input type="radio" name="useful" id="feedback__useful_yes" value="true"><label for="feedback__useful_yes"><img src="like.svg" class="small-img" alt="like"><spanclass="feedback-form__btn-group_yes-btn">Yes</spanclass="feedback-form__btn-group_yes-btn"></label><input type="radio" name="useful" id="feedback__useful_no" value="false"><label for="feedback__useful_no"><img src="dislike.svg" class="small-img" alt="dislike"><spanclass="feedback-form__btn-group_no-btn">No</spanclass="feedback-form__btn-group_no-btn"></label></div><select name="category"><option disabled="">Please specify why</option><option value="bad_recommendation" selected="">Recommendations did not help me</option><option value="difficult_text">Article is hard to understand</option><option value="no_answer">Didn`t answer my question</option><option value="bad_header">Content does not match the topic</option><option value="other_reason">Other</option></select><input type="submit"></form></div><div class="found_typo"><p style="margin: 0px; margin-top: 16px !important;"><span><b>Found a typo?</b></span> Select it and press <i>Ctrl+Enter</i> to send us feedback</p></div></div>
                            
                     </section>
                 </div>
@@ -204,7 +196,7 @@
                     <input type="checkbox" />
                     <div class="article__arrow"></div>
                     <div class="table-of-contents elma365-right" id="toc2Content">
-                        <h3 class="h3-toc">В этой статье</h3>
+                        <h3 class="h3-toc">In this topic</h3>
                         <nav id="toc2"></nav>
                     </div>
                 </aside>
@@ -215,63 +207,30 @@
         <div class="footer-container">
   <div class="footer-mobile">
     
-      <ul class="footer-mobile__list"><li><a href="https://api.elma365.com/ru/" target="_blank">API</a></li><li><a href="https://tssdk.elma365.com/" target="_blank">TS SDK</a></li><li><a href="https://community.elma365.com/" target="_blank">Community</a></li><li><a href="https://elma-academy.com/ru/elma365" target="_blank">Академия</a></li></ul><ul class="footer-mobile__list"><li><a href="https://elma365.com/ru/help/platform/get-trial.html">Платформа</a></li><li><a href="https://elma365.com/ru/help/ecm/ecm-functions.html">ECM</a></li><li><a href="https://elma365.com/ru/help/service/service-functions.html">Service</a></li><li><a href="https://elma365.com/ru/help/projects/projects-functions.html">Проекты</a></li></ul>
+    <ul class="footer-mobile__list"><li><a href="https://brix365.com/en/" target="_blank">BRIX</a></li><li><a href="https://tssdk.brix365.com/en/latest/" target="_blank">SDK</a></li><li><a href="https://api.brix365.com/en/" target="_blank">API</a></li></ul><ul class="footer-mobile__list"><li><a href="https://brix365.com/en/help/platform/get-trial.html">Platform</a></li><li><a href="https://brix365.com/en/help/ecm/ecm-functions.html">ECM</a></li><li><a href="https://brix365.com/en/help/service/service-functions.html">Service</a></li><li><a href="https://brix365.com/en/help/projects/projects-functions.html">Projects</a></li></ul>
     
     
   </div>
-  <div class="container">
-    <div class="footer-wrap">
-      
-        <div><span class="mobile-question-popup">Отправить фидбэк</span><form method="POST" action class="question__popup question-xs" id="question__popup"><div class="question-wrap"><span class="close"></span><span class="title">Задать вопрос</span><label for="help_question" style="display: none;"></label><textarea name="help_question" id="help_question"></textarea><input type="submit" value="Отправить"></div></form><div class="hidden fade-in question-success-xs">Ваш фидбэк отправлен.</div></div>
-      
-      <div class="footer-flex-b">
-        <div class="footer-top">
-          <span class="footer-copy">&copy; 2025 
-              ELMA365
-            
-            
-          </span>
-          
-            <a href="https://navigator.sk.ru/orn/1122971" target="_blank">
-              <img src="sk-resident.svg" alt="sk icon" class="footer-img" width="117" height="34">
-            </a>
-            
-        </div>
-        <div class="footer-line">
-          
-            <div class="footer-line-copy">
-              <span class="footer-copy">&copy; 2025 
-                  ELMA365
-                
-                
-              </span>
-            </div>
-            
-              <ul class="footer-list">
-                
-                  <li class="footer-item"><a href="https://elma365.com/ru/" target="_blank" class="footer-link" style="color: #0D4A75;"><img src="browse.svg" alt="browse icon" class="footer-img">elma365.com</a></li><li class="footer-item"><a href="https://www.youtube.com/user/ELMABPM" target="_blank" class="footer-link"><img src="yt.svg" alt="youtube icon" class="footer-img"></a></li><li class="footer-item"><a href="https://vk.com/elma_bpm" target="_blank" class="footer-link"><img src="vk.svg" alt="vk icon" class="footer-img"></a></li><li class="footer-item"><a href="https://t.me/elmaday" target="_blank" class="footer-link"><img src="tg.svg" alt="telegram icon" class="footer-img"></a></li><li class="footer-item"><a href="https://dzen.ru/elma" target="_blank" class="footer-link"><img src="dzen.svg" alt="dzen icon" class="footer-img"></a></li>
-                
-                
-                  <li class="footer-item">
-                    <a href="https://navigator.sk.ru/orn/1122971" target="_blank">
-                      <img src="sk-resident.svg" alt="sk icon" class="footer-img" width="117" height="34">
-                    </a>
-                  </li>
-                
-                
-              </ul>
-        </div>
-      </div>
+  <div class="footer-wrap">
+    
+      <div><span class="mobile-question-popup">Send feedback</span><form method="POST" action class="question__popup question-xs" id="question__popup"><div class="question-wrap"><span class="close"></span><span class="title">Ask a question</span><label for="help_question" style="display: none;"></label><textarea name="help_question" id="help_question"></textarea><input type="submit" value="Send"></div></form><div class="hidden fade-in question-success-xs">Sent</div></div>
+    
+    <div class="footer-flex-b">
+      <span class="footer-copy">&copy; 2025 BRIX</span>
+      <ul class="footer-list">
+        
+        <li class="footer-item">
+            <a href="#" class="arrow-top" style="display: block;"></a>
+        </li>
+        
+      </ul>
     </div>
   </div>
-  <a href="#" class="arrow-top"></a>
 </div>
  
     </footer>
-<!--    <script type="text/javascript" src="jquery1.min.js"></script>-->
     <iframe name="hmnavigation" style="display:none!important"></iframe>
-    <!--<script src="./jquery-ui.js"></script> -->
-    <script src="./jquery-ui.min.js"></script>
+    <script src="./jquery-ui.js"></script>
     <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
     <script src="./jquery.tocify.min.js"></script>
     <script src="./TypoReporter.min.js"></script>

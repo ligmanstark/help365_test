@@ -1,20 +1,19 @@
 ﻿<!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 
 <head>
-    <title>Изменение элемента</title>
+    <title>Edit App Item</title>
     <meta name="generator" content="Help+Manual" />
     <meta name="keywords" content="" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Блок Изменение элемента используется для редактирования полей в карточке элемента приложения в ходе выполнения бизнес-процесса. Благодаря этому блоку вы можете добавить файл на..." />
+    <meta name="description" content="The Edit App Item activity is used to edit fields on the app item page during the execution of a business process. With this activity, you can add a file to a contract page,..." />
     <meta name="picture" content="" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Cправка по Low-code платформе ELMA365" />
-    <meta property="og:url" content="https://elma365.com/ru/help" />
-    <meta property="og:image" content="" />
-    <meta property="og:site_name" content="ELMA365" />                                                              
+    <meta property="og:title" content="Full documentation for BRIX365 platform. Low-code developer guide. User guide. Admin guide. Developer guide." />
+    <meta property="og:url" content="https://brix365.com/en/help" />
+    <meta property="og:image" content="" />                                                              
     <link rel="icon" href="favicon.png" type="image/png" />
     
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -24,7 +23,6 @@
     <link rel="stylesheet" href="./article.css" />
     <link rel="stylesheet" href="./glossary.css" />
     <link rel="stylesheet" href="./theme.css" />
-    
    <script type="text/javascript" src="jquery.js"></script>
    <script type="text/javascript" src="helpman_settings.js"></script>
    <script type="text/javascript" src="helpman_topicinit.js"></script>
@@ -36,16 +34,16 @@
 </head>
 
 <body>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-M6ETBEC1R9"></script><script>window.dataLayer=window.dataLayer || []; function gtag(){dataLayer.push(arguments);}gtag('js', new Date()); gtag('config', 'G-M6ETBEC1R9');</script>
+    
     <script>!function(e,t,c,n,r,a,m){e.ym=e.ym||function(){(e.ym.a=e.ym.a||[]).push(arguments)},e.ym.l=1*new Date;for(var s=0;s<document.scripts.length;s++)if(document.scripts[s].src===n)return;a=t.createElement(c),m=t.getElementsByTagName(c)[0],a.async=1,a.src=n,m.parentNode.insertBefore(a,m)}(window,document,"script","https://mc.yandex.ru/metrika/tag.js"),ym(83179930,"init",{clickmap:!0,trackLinks:!0,accurateTrackBounce:!0,webvisor:!0})</script><noscript><div><img alt=""src=https://mc.yandex.ru/watch/83179930 style=position:absolute;left:-9999px></div></noscript> 
     
     ﻿<header class="header elma-365">
   <div class="container">
-    <a class="header__logo" href="https://elma365.com/ru/help">
-      <img src="./logo.svg" alt="header logo">
+    <a class="header__logo" href="https://brix365.com/en/help">
+      <img src="./logo-en.svg" alt="header logo">
     </a>
  <!-- <div class="hero__search-form" id="search-panel">
-   <form class="search-form" onsubmit="ym(83179930,'reachGoal','poisk')">
+   <form class="search-form" onsubmit="ym(83180416,'reachGoal','poisk')">
      <label class="search-form__label">
        <span id="reset-search" class="search__icon"></span>
        <input class="search-form__input" type="text">
@@ -65,7 +63,7 @@
     </div>  
   <div class="header__navi">
         
-        <ul class="header__list"><li><span class="solution-select"><span class="solution-select__selected"></span><svg width="7" height="4" viewBox="0 0 7 4" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L3.5 3.5L6 1" stroke="white" stroke-linecap="round" stroke-linejoin="round"/></svg><ul class="solution-select__list"><li><a class="project-link" href="https://elma365.com/ru/help/platform/get-trial.html">Платформа</a></li><li><a class="project-link" href="https://elma365.com/ru/help/ecm/ecm-functions.html">ECM</a></li><li><a class="project-link" href="https://elma365.com/ru/help/crm/crm_overview.html">CRM</a></li><li><a class="project-link" href="https://elma365.com/ru/help/service/service-functions.html">Service</a></li><li><a class="project-link" href="https://elma365.com/ru/help/projects/projects-functions.html">Проекты</a></li><li><a class="project-link" href="https://elma365.com/ru/help/business_solutions/-elma365-store.html">Бизнес-решения</a></li></ul></span></li><li><a href="https://api.elma365.com/ru/"target="_blank">API</a></li><li><a href="https://tssdk.elma365.com/"target="_blank">SDK</a></li><li><a href="https://community.elma365.com/" target="_blank">Community</a></li><li><a href="https://elma-academy.com/ru/" target="_blank">Академия</a></li><li><a href="https://elma365.com/ru/" target="_blank">Сайт ELMA365</a></li></ul> 
+        <ul class="header__list"><li><span class="solution-select"><span class="solution-select__selected"></span><svg width="7" height="4" viewBox="0 0 7 4" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L3.5 3.5L6 1" stroke="white" stroke-linecap="round" stroke-linejoin="round"/></svg><ul class="solution-select__list"><li><a class="project-link" href="https://brix365.com/en/help/platform/get-trial.html">Platform</a></li><li><a class="project-link" href="https://brix365.com/en/help/ecm/ecm-functions.html">ECM</a></li><li><a class="project-link" href="https://brix365.com/en/help/crm/crm_overview.html">CRM</a></li><li><a class="project-link" href="https://brix365.com/en/help/service/service-functions.html">Service</a></li><li><a class="project-link" href="https://brix365.com/en/help/projects/projects-functions.html">Projects</a></li><li><a class="project-link" href="https://brix365.com/en/help/business_solutions/-elma365-store.html">Business Solutions</a></li></ul></span></li><li><a href="https://api.brix365.com/en/" target="_blank">API</a></li><li><a href="https://tssdk.brix365.com/" target="_blank">SDK</a></li></ul>
         
         
    </div>
@@ -80,8 +78,8 @@
 
         <aside class="sidebar" id="sidebar">
         <div class="sidebar__header">
-                 <a class="header__logo" href="https://elma365.com/ru/help">
-                    <img src="./logo-light.svg">
+                 <a class="header__logo" href="https://brix365.com/en/help">
+                    <img src="./logo-light-en.svg">
                  </a>
                     <span class="sidebar__close elma-365-close" id="close"></span>
             </div>
@@ -94,15 +92,12 @@
             <div class="article-inner">           
                 <div class="content">
                     <header class="article__header">
-                    <div class="article__bread" style="display:flex; gap:10px;">
-                        <span id="subcategory" class="search-res__item-category search-res__item-category_subcategory subcategory article__badge"></span>
                         
-                            <div class="topic__breadcrumbs">     
-                                <p>Дизайнер бизнес-процессов &gt; Графические элементы / Изменение элемента</p>
+                            <div class="topic__breadcrumbs">
+                                <p>Business process designer &gt; Graphical elements / Edit App Item</p>
                             </div>
                         
-                    </div>
-                        <div class="topic__title"><h1 class="p_Heading1" style="text-align: center; margin: 19px 0 19px 0;"><span class="f_Heading1" style="font-size: 32px;">Изменение элемента</span></h1>
+                        <div class="topic__title"><h1 class="p_Heading1" style="text-align: center; line-height: 1.20; margin: 19px 0 19px 0;"><span class="f_Heading1" style="font-size: 32px;">Edit App Item</span></h1>
 </div>
                     
 </header>
@@ -111,49 +106,47 @@
                             <a href="#h1-article" class="scroll-top"></a>
                         </div>
                         <!-- Placeholder for topic body. -->
-                        <p class="p_Normal"><img alt="изменение эл-та" width="101" height="82" style="margin:0;width:101px;height:82px;border:none" src="hmfile_hash_4918de7f.png"/>Блок <span style="font-weight: bold;">Изменение элемента</span> используется для редактирования полей в карточке элемента приложения в ходе выполнения бизнес-процесса. Благодаря этому блоку вы можете добавить файл на карточку договора, изменить сумму в заказе или отредактировать даты актов и дополнительных соглашений и т. д. Изменять данные элемента можно вручную или автоматически.</p>
-<h2 class="p_Heading2" style="margin: 19px 0 0 0;"><span class="f_Heading2" style="font-size: 24px;">Использование блока </span></h2>
-<p class="p_Normal">Для примера возьмем приложение <span style="font-weight: bold;">Договоры</span>. Сотрудник создаёт элемент приложения и вносит в поля необходимые данные: сумму договора, сроки оплаты, размер скидки и т. д. При этом поле <span style="font-weight: bold;">Файл договора</span> остаётся пустым, поскольку договор будет сформирован позднее в ходе бизнес‑процесса. </p>
-<p class="p_Normal" style="margin: 14px 0 0 0;"><img alt="edit_app_item_2" width="727" height="483" style="margin:0;width:727px;height:483px;border:none" src="edit_app_item_2.png"/></p>
-<p class="p_Normal">После сохранения элемента приложения запускается бизнес-процесс, в ходе которого финансовый специалист должен согласовать внесенные в поля карточки данные. Далее по этим данным нужно сформировать договор. Это можно сделать с помощью блока <a href="360026720792.html" class="topiclink">Генерация по шаблону</a> или же поставить сотруднику задачу составить договор самостоятельно. Сформированный документ необходимо добавить на карточку в поле <span style="font-weight: bold;">Файл договора</span>. Для этого в бизнес-процессе используется блок <span style="font-weight: bold;">Изменение элемента</span>.</p>
-<h2 class="p_Heading2" style="margin: 19px 0 0 0;"><span class="f_Heading2" style="font-size: 24px;">Настройка блока</span></h2>
-<p class="p_Normal">На <a href="360012265552.html#create_process" class="topiclink">странице процесса</a> на правой панели инструментов нажмите на значок шестерёнки, чтобы открыть вкладку <span style="font-weight: bold;">Системные элементы</span>. Перетащите блок <span style="font-weight: bold;">Изменение элемента</span> на схему и разместите его там, где в ходе процесса потребуется отредактировать значения полей <a href="360016427291.html" class="topiclink">элемента приложения</a>.</p>
-<p class="p_Normal" style="margin: 19px 0 0 0;"><span class="f_ImageCaption"> <img alt="edit_app_item-3" width="730" height="462" style="margin:0;width:730px;height:462px;border:none" src="edit_app_item-3.png"/></span></p>
-<p class="p_Normal">Дважды нажмите на добавленный блок, чтобы открыть окно с настройками. </p>
-<h3 class="p_Heading3"><span class="f_Heading3">Вкладка «Основное» </span></h3>
-<p style="margin: 7px 0 16px 0;"><span style="font-family: Inter;">В открывшемся окне заполните поля:</span></p>
-<p class="p_Normal" style="margin: 14px 0 0 0;"><img alt="edit_app_item_4" width="1040" height="691" style="margin:0;width:1040px;height:691px;border:none" src="edit_app_item_4.png"/></p>
+                        <p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;"><img alt="edit-app-item-1" width="99" height="80" style="margin:0;width:99px;height:80px;border:none" src="edit-app-item-1.png"/>The <span style="font-weight: bold;">Edit App Item</span> activity is used to edit fields on the app item page during the execution of a business process. With this activity, you can add a file to a contract page, change the amount in an order, edit the dates of bills and additional agreements, and so on. You can change the item data manually or automatically.</p>
+<h2 class="p_Heading2" style="line-height: 1.20; margin: 19px 0 0 0;"><span class="f_Heading2" style="font-size: 24px;">How to use the Edit App Item activity</span></h2>
+<p style="line-height: 1.20; margin: 19px 0 0 0;">As an example, let’s take a look at the <span style="font-weight: bold;">Contracts</span> app. An employee creates an app item and enters all the related information, such as the total amount, payment dates, discount percentage, and so on. However, the <span style="font-weight: bold;">Contract file</span> field remains empty because the file will be created later on in the course of the process.</p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;"><img alt="edit-app-item-2" width="642" height="390" style="margin:0;width:642px;height:390px;border:none" src="edit-app-item-2.png"/></p>
+<p style="line-height: 1.20; margin: 14px 0 0 0;">As soon as the employee saves the app item, a business process is launched. In the course of this process, the finance specialist approves the data entered into the app page. Next, according to this data, a contract file needs to be created. This can be done automatically with the help of the <a href="360026720792.html" class="topiclink">Generate from template</a> activity, or the employee could do it manually within the assigned task. The generated document must be added to the app item page in the <span style="font-weight: bold;">Contract file</span> field. To do this, the <span style="font-weight: bold;">Edit App Item</span> activity is used in the business process. </p>
+<h2 class="p_Heading2" style="line-height: 1.20; margin: 19px 0 0 0;"><span class="f_Heading2" style="font-size: 24px;">Set up the Edit App Item activity</span></h2>
+<p class="p_Normal" style="line-height: 1.20; margin: 19px 0 0 0;">Go to the <a href="360012265552.html#create_process" class="topiclink">process page</a> and click the gear icon on the right panel to open the <span style="font-weight: bold;">System elements</span> tab. Drag the <span style="font-weight: bold;">Edit App Item</span> activity to the process diagram and place it where editing an <a href="360016427291.html" class="topiclink">app item</a> will be necessary.</p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;"><img alt="edit-app-item-4" width="712" height="301" style="margin:0;width:712px;height:301px;border:none" src="edit-app-item-4.png"/></p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;">Double-click on the activity to open the settings. </p>
+<h2 class="p_Heading2"><span class="f_Heading2">General tab</span></h2>
+<p class="p_Normal">Fill in the fields in the opened window:</p>
+<p class="p_Normal"><img alt="edit-app-item-5" width="668" height="427" style="margin:0;width:668px;height:427px;border:none" src="edit-app-item-5.png"/></p>
 <ul style="list-style-type:disc">
-<li class="p_Normal"><span style="font-weight: bold;">Название</span><span style="font-weight: bold; color: #ff0000;">*</span> — введите название блока, которое будет отображаться на схеме процесса;</li></ul>
+<li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold;">Name</span><span style="font-weight: bold; color: #ff0000;">*</span>. Enter the name of the activity as it will be shown on<span style="font-size: 15px;"> </span>the process diagram<span style="font-size: 15px;">. </span></li><li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold;">Task name</span>. Enable the <span style="font-weight: bold;">Generate name from template</span> option to add <a href="process_context.html" class="topiclink">context variables</a> to the name that the executor will see in the task list and on the task page.<ul style="list-style-type:circle">
+<li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 0;"><span style="font-weight: bold;">Template</span><span style="font-weight: bold; color: #ff0000;">*</span>. Click the<span style="font-weight: bold;"> {+} </span>icon in the right corner of the field and select a variable. You can also <a href="360007679591.html#conditions-and-functions" class="topiclink">add conditions and functions</a> as you would for an item name template. This will help generate a more informative name.</li></ul></li></ul>
+<p style="text-indent: -1px; line-height: 1.28; margin: 6px 0 11px 60px;">If this option is not used, the text specified in the <span style="font-weight: bold;">Name</span><span style="color: #ff0000;">*</span> field will be displayed in the task list and on the form.</p>
 <ul style="list-style-type:disc">
-<li class="p_Normal"><span style="font-weight: bold;">Название задачи</span> — включите опцию <span style="font-weight: bold;">Формировать название по шаблону</span>, чтобы добавить <a href="process_context.html" class="topiclink">контекстные переменные</a> в название, которое исполнитель увидит в списке задач и в карточке задачи:<ul style="list-style-type:disc">
-<li class="p_Normal"><span style="font-weight: bold;">Шаблон</span><span style="font-weight: bold; color: #ff0000;">*</span> — в правом углу поля нажмите значок <span style="font-weight: bold;">{+}</span> и выберите переменную. Также можно <a href="360007679591.html#conditions_and_functions" class="topiclink">добавить условия и функции</a> для формирования названия элемента по шаблону. Это позволит сгенерировать более информативное название.</li></ul></li></ul>
-<p class="p_Normal" style="margin: 0 0 0 58px;">Если данная опция не используется, то в списке задач и на форме отобразится текст, указанный в поле <span style="font-weight: bold;">Название</span><span style="font-weight: bold; color: #ff0000;">*</span>.</p>
-<ul style="list-style-type:disc">
-<li class="p_Normal"><span style="font-weight: bold;">Переменная</span><span style="font-weight: bold; color: #ff0000;">*</span> — укажите переменную типа <a href="360009707032.html" class="topiclink">Приложение</a> из контекста бизнес-процесса, ссылающуюся на элемент приложения, который необходимо отредактировать. Если переменной в контексте процесса ещё нет, нажмите кнопку <span style="font-weight: bold;">Создать новую переменную</span>.</li></ul>
-<p class="p_Normal" style="margin: 0 0 0 34px;">После указания контекстной переменной появится кнопка <span style="font-weight: bold;">Изменить настройки переменной</span>. Нажмите её, чтобы переименовать или указать дополнительную информацию. Внесённые изменения отобразятся в контексте процесса;</p>
-<ul style="list-style-type:disc">
-<li class="p_Normal"><a id="manually" class="hmanchor"></a><span style="font-weight: bold;">Способ изменения</span> — выберите способ изменения элемента:<ul style="list-style-type:circle">
-<li class="p_Normal"><span style="font-weight: bold;">Вручную</span> — на текущего исполнителя или <a href="360007146071.html" class="topiclink">группу</a> исполнителей, указанных в <a href="360012263032.html" class="topiclink">зоне ответственности</a>, будет назначена задача с формой изменения элемента. Поля заполнятся указанными ранее данными, которые можно отредактировать. Также пользователь сможет отменить изменение элемента, если для блока <a href="360012454020.html#transitions-tab" class="topiclink">настроен соответствующий переход</a>.</li></ul></li></ul>
-<p class="p_Normal" style="margin: 0 0 0 58px;">Если в зоне ответственности указана группа, задача изменения элемента будет назначена всем входящим в эту группу сотрудникам. Как только кто-то начнёт работу по задаче, она исчезнет из списка задач остальных исполнителей;</p>
+<li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold;">Variable</span><span style="font-weight: bold; color: #ff0000;">*</span>. Specify the <a href="360009707032.html#app" class="topiclink">App</a> type variable from the business process context that refers to the app item you wish to edit. If the variable does not yet exist in the process context, click the <span style="font-weight: bold;">Create a new variable</span> button.<br />
+&nbsp;<br />
+When you specify the context variable, you can rename it or add a description. To do this, click the <span style="font-weight: bold;">Change variable settings</span> button. The changes made will be displayed in the context of the process.</li><li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold;">Update type</span>. Specify the way to change the item:<ul style="list-style-type:circle">
+<li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold;">Manually</span>. The user or a <a href="360007146071.html" class="topiclink">group</a> of users specified in the <a href="360012263032.html" class="topiclink">swimlane</a> will be given a task with the form of editing an item. The fields on the page will be filled with the previously specified data, which can be edited. The user can also cancel the editing of an item if a corresponding <a href="360012454020.html#connectors-tab" class="topiclink">connector is configured for the activity</a>.</li></ul></li></ul>
+<p style="line-height: 1.28; margin: 0 0 11px 60px;">If the swimlane with the activity includes a group of users, the task of changing the item will be assigned to all the employees in this group. As soon as someone starts working on the task, it will disappear from the task list of other employees.</p>
 <ul style="list-style-type:disc"><ul style="list-style-type:circle">
-<li class="p_Normal"><span style="font-weight: bold;">Автоматически</span> — элемент изменится без участия исполнителя, а все поля заполнятся данными в соответствии с теми настройками, которые вы указали на вкладке <span style="font-weight: bold;">Значения полей</span>. </li></ul>
-<li class="p_Normal"><span style="font-size: 15px; font-family: Inter; font-weight: bold;">Переназначение </span><span style="font-size: 15px; font-family: Inter;">— опция отображается, если выбран способ изменения </span><span style="font-size: 15px; font-family: Inter; font-weight: bold;">Вручную</span><span style="font-size: 15px; font-family: Inter;">. Включите её, чтобы исполнитель задачи мог переназначить её на другого пользователя;</span></li><li class="p_Normal"><span style="font-size: 15px; font-family: Inter; font-weight: bold;">Оповещение </span><span style="font-size: 15px; font-family: Inter;">— опция отображается, если выбран способ изменения </span><span style="font-size: 15px; font-family: Inter; font-weight: bold;">Вручную</span><span style="font-size: 15px; font-family: Inter;">. Выберите её, чтобы исполнитель задачи получил в </span><span style="font-size: 15px; font-family: Inter; color: #0563c1;"><a href="360014162972.html" class="topiclink">#ленту</a></span><span style="font-size: 15px; font-family: Inter;"> уведомление о её назначении. Чтобы на электронную почту исполнителя отправлялось дополнительное уведомление о задаче, он может включить в настройках профиля </span><span style="font-size: 15px; font-family: Inter; color: #0563c1;"><a href="360016398552.html#task-alerts" class="topiclink">опцию отправки оповещений о новых задачах на email</a></span><span style="font-size: 15px; font-family: Inter;">.</span></li></ul>
-<h3 class="p_Heading3"><span class="f_Heading3">Вкладка «Значения полей» </span></h3>
-<p style="margin: 14px 0 0 0;"><span style="font-family: Inter;">Вкладка появляется после выбора переменной на вкладке </span><span style="font-family: Inter; font-weight: bold;">Основное</span><span style="font-family: Inter;">.</span></p>
-<p class="p_Normal" style="margin: 14px 0 0 0;"><img alt="Изменение элемента_05" width="703" height="319" style="margin:0;width:703px;height:319px;border:none" src="hmfile_hash_8b489ef0.png"/></p>
-<p class="p_Normal">При автоматическом изменении элемента в колонке <span style="font-weight: bold;">Поле Приложения</span> укажите поле, которое необходимо будет изменить. В нашем случае это <span style="font-weight: bold;">Файл договора</span>. В колонке <span style="font-weight: bold;">Переменная</span> <span style="font-weight: bold;">процесса</span> укажите соответствующую переменную процесса. Мы указали переменную <span style="font-weight: bold;">Файл</span>, так как в ней будет храниться <a href="360026720792.html" class="topiclink">созданный по шаблону</a> договор.</p>
-<p class="p_Normal">При изменении элемента <span style="font-weight: bold;">Вручную</span> вы также можете сопоставить поля с переменными. Например, если файл договора всё так же будет генерироваться по шаблону, исполнителю придёт задача изменения элемента, в поле которого будет подставлен сформированный файл. Сотрудник сможет его проверить или заменить, прежде чем сохранить изменения и закрыть задачу. </p>
-<p style="margin: 14px 0 0 0;"><span style="font-family: Inter;">Обратите внимание, сопоставить можно только поля приложения и контекстные переменные процесса одинакового </span><span style="font-family: Inter; color: #0563c1;"><a href="360009707032.html" class="topiclink">типа</a></span><span style="font-family: Inter;">.</span></p>
-<h3 class="p_Heading3"><a id="transitions-tab" class="hmanchor"></a><span class="f_Heading3">Вкладка «Переходы»</span></h3>
-<p class="p_Normal"><img alt="edit-app-item-4" width="944" height="408" style="margin:0;width:944px;height:408px;border:none" src="edit-app-item-4.png"/></p>
-<p style="margin: 14px 0 0 0;"><span style="font-family: Inter;">Вкладка доступна, если выбран способ изменения элемента </span><span style="font-family: Inter; color: #0000ff;"><a href="360012454020.html#manually" class="topiclink">Вручную</a></span><span style="font-family: Inter;">.</span></p>
-<p style="margin: 8px 0 8px 0;"><span style="font-family: Inter;">Здесь можно настроить исходящие </span><span style="font-family: Inter; color: #0563c1;"><a href="360015835331.html" class="topiclink">переходы</a></span><span style="font-family: Inter;"> блока. Они будут отображаться как кнопки в задаче изменения элемента.</span></p>
-<p style="margin: 8px 0 8px 0;"><span style="font-family: Inter;">Обратите внимание, для блока </span><span style="font-family: Inter; font-weight: bold;">Изменение элемента</span><span style="font-family: Inter;"> можно задать только два исходящих перехода: для сохранения изменений и для отмены редактирования элемента. Переход, по которому должны сохраниться изменения в данных элемента, необходимо отметить как переход по умолчанию.</span></p>
-<p style="line-height: 1.28; margin: 0 0 11px 0;"><span style="font-family: Inter;">Также на этой вкладке можно изменить названия кнопок, добавить текст подтверждения, выбрать цвета и т. д. Чтобы перейти к настройкам, нажмите на название перехода. Подробнее читайте в статье</span><span style="font-family: Inter; color: #394149;"> </span><span style="font-family: Inter; color: #0000ff;"><a href="360015835331.html" class="topiclink">«Переходы»</a></span><span style="font-family: Inter; color: #394149;">.</span></p>
-<p class="p_Normal">После того как вы указали все параметры, нажмите <span style="font-weight: bold;">Сохранить</span>. </p>
-<p class="p_Normal">Теперь по ходу процесса, как только данные договора будут согласованы, созданный файл сохранится в переменную, а затем отобразится в поле на карточке элемента.</p>
-<p class="p_Normal" style="margin: 14px 0 0 0;"><img alt="Изменение элемента_06" width="623" height="414" style="margin:0;width:623px;height:414px;border:none" src="hmfile_hash_f3df4eb8.png"/></p>
+<li style="line-height: 1.28; margin-top: 0; margin-right: 0; margin-bottom: 11px;"><span style="font-weight: bold;">Automatically</span>. The item will be created automatically. Item fields will be filled according to the settings specified on the <span style="font-weight: bold;">Field Values</span> tab.</li></ul></li></ul>
+<ul style="list-style-type:disc">
+<li style="line-height: 1.20;"><span style="font-weight: bold;">Reassignment</span>. The option is displayed if the <span style="font-weight: bold;">Manually</span> update type is selected. Enable this option for the task executor to be able to reassign the task to another user.</li><li style="line-height: 1.20;"><span style="font-weight: bold;">Notification</span>. The option is displayed if the <span style="font-weight: bold;">Manually</span> update type is selected. Select it so that the task executor can receive the notification about its assignment to the <a href="360014162972.html" class="topiclink">#Activity stream</a>. To send an additional notification about the task to the executor’s email, they can enable the option to <a href="360016398552.html#task-alerts" class="topiclink">send notifications about new tasks to their email</a> in the profile settings.</li></ul>
+<h2 class="p_Heading2"><span class="f_Heading2">Field Values tab</span></h2>
+<p style="line-height: 1.20; margin: 6px 0 16px 0;">This tab appears after selecting a variable on the <span style="font-weight: bold;">General</span> tab.</p>
+<p class="p_Normal"><img alt="edit-app-item-6" width="631" height="351" style="margin:0;width:631px;height:351px;border:none" src="edit-app-item-6.png"/></p>
+<p style="line-height: 1.20; margin: 14px 0 0 0;">If you selected the <span style="font-weight: bold;">Automatically</span> method, specify the field to be changed in the <span style="font-weight: bold;">App field</span> column. In our case, it is <span style="font-weight: bold;">Contract file</span>. In the <span style="font-weight: bold;">Process variable</span> column, specify the corresponding process variable. We have specified the <span style="font-weight: bold;">File</span> variable because the contract <a href="360026720792.html" class="topiclink">created from a template</a> will be stored in it.</p>
+<p style="line-height: 1.20; margin: 14px 0 0 0;">If you selected the<span style="font-weight: bold;"> Manually </span>method, you can also map fields to variables. For example, if the contract file is still generated from a template, the executor will receive a task of editing the item. The generated file will be stored in the app field you specified in the mapping settings. The employee will be able to check or replace it before saving the changes and closing the task.</p>
+<p style="line-height: 1.20; margin: 14px 0 0 0;">Please note that only app fields and process context variables of the same <a href="360009707032.html" class="topiclink">type</a> can be mapped.</p>
+<h2 class="p_Heading2"><a id="connectors-tab" class="hmanchor"></a><span class="f_Heading2">Connectors tab</span></h2>
+<p class="p_Normal"><img alt="edit-app-item-7" width="654" height="356" style="margin:0;width:654px;height:356px;border:none" src="edit-app-item-7.png"/></p>
+<p style="line-height: 1.20; margin: 14px 0 0 0;">This tab is available when you select the <a href="360019810892.html#360019810892" class="topiclink">Manually</a> item creation method.</p>
+<p style="line-height: 1.20; margin: 14px 0 0 0;">Here you can configure the outgoing <a href="360015835331.html" class="topiclink">connectors</a> of the activity, which will be displayed to the user as buttons in the item editing task.</p>
+<p style="line-height: 1.20; margin: 14px 0 0 0;">Please note that the <span style="font-weight: bold;">Edit App Item</span> can have only two outgoing connectors: to save the item and to cancel its creation. The connector to save the item should be marked as the default one.</p>
+<p style="line-height: 1.20; margin: 14px 0 0 0;">Also, on this tab, you can change button names, add confirmation text, select colors, etc. To go to the settings, click on the connector name. Read more in the <a href="360015835331.html" class="topiclink">Connectors</a> article.</p>
+<p style="line-height: 1.20; margin: 14px 0 0 0;">Once you have specified all the settings, click <span style="font-weight: bold;">Save</span>.</p>
+<p style="line-height: 1.20; margin: 14px 0 0 0;">Now, in the course of the process, as soon as the contract is approved, the created file will be saved to a variable and then displayed in the field on the app item page.</p>
+<p class="p_Normal" style="line-height: 1.20; margin: 14px 0 0 0;"><img alt="eai6" width="669" height="465" style="margin:0;width:669px;height:465px;border:none" src="eai6.png"/></p>
 
                         <div class="bottom-nav">
                             
@@ -170,7 +163,7 @@
                             
                         </div>
                         <!-- добавляет на страницу строку блок Была ли статья полезной?  -->
-                          <div class="feedback-wrap"><div class="feedback" id="feedback"><span><b>Была ли статья полезной?</b></span><form action="" method="POST" class="feedback-form" id="feedback-form"><div class="feedback__popup feedback__popup-response" id="feedback__popup_thx">Спасибо за ваш отзыв!</div><div id="feedback-success-popup"><div class="wrap"><button type="button" class="feedback-popup-close">×</button><svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_212_2187)"><path d="M22 0.6875C10.2294 0.6875 0.6875 10.2294 0.6875 22C0.6875 33.7706 10.2294 43.3125 22 43.3125C33.7706 43.3125 43.3125 33.7706 43.3125 22C43.3125 10.2294 33.7706 0.6875 22 0.6875ZM22 40.5625C11.8023 40.5625 3.4375 32.3078 3.4375 22C3.4375 11.8024 11.6922 3.4375 22 3.4375C32.1977 3.4375 40.5625 11.6922 40.5625 22C40.5625 32.1976 32.3078 40.5625 22 40.5625ZM34.1713 16.933L18.6613 32.3186C18.257 32.7197 17.604 32.7171 17.203 32.3128L9.82283 24.873C9.42176 24.4686 9.42434 23.8157 9.82867 23.4146L10.5609 22.6884C10.9652 22.2873 11.6181 22.2899 12.0192 22.6942L17.9468 28.6697L31.9926 14.7366C32.3969 14.3356 33.0498 14.3382 33.4509 14.7425L34.1772 15.4747C34.5783 15.879 34.5757 16.532 34.1713 16.933Z" fill="#27AE60"></path></g><defs><clipPath id="clip0_212_2187"><rect width="44" height="44" fill="white"></rect></clipPath></defs></svg><p>Ваш отзыв успешно отправлен!</p><span>Спасибо за обратную связь.</span></div></div><div class="feedback__popup" id="feedback__popup_why"><button type="button" class="feedback-popup-close">×</button><div class="feedback__popup-header">Уточните, почему:</div><input type="radio" name="category" id="bad_recommendation" value="bad_recommendation"><label for="bad_recommendation">Рекомендации не помогли</label><input type="radio" name="category" id="difficult_text" value="difficult_text"><label for="difficult_text">Текст трудно понять</label><input type="radio" name="category" id="no_answer" value="no_answer"><label for="no_answer">Нет ответа на мой вопрос</label><input type="radio" name="category" id="bad_header" value="bad_header"><label for="bad_header">Содержание статьи не соответствует заголовку</label><input type="radio" name="category" id="other_reason" value="other_reason"><label for="other_reason">Другая причина</label></div><div class="feedback__popup" id="feedback__popup-other"><button type="button" class="feedback-popup-close">×</button>   <div class="feedback__popup-header">Расскажите, что вам не понравилось в статье:</div><textarea class="feedback__textarea" name="other" id=""></textarea><input type="submit" class="feedback__other-btn" value="Отправить"></div><div class="feedback-form__btn-group"><input type="radio" name="useful" id="feedback__useful_yes" value="true"><label for="feedback__useful_yes"><img src="like.svg"/><span class="feedback-form__btn-group_yes-btn">Да</span></label><input type="radio" name="useful" id="feedback__useful_no" value="false"><label for="feedback__useful_no"><img src="dislike.svg"/><span class="feedback-form__btn-group_no-btn">Нет</span></label></div><select name="category"><option disabled>Выберите вариант</option><option value="bad_recommendation" selected>Рекомендации не помогли</option><option value="difficult_text">Текст трудно понять</option><option value="no_answer">Нет ответа на мой вопрос</option><option value="bad_header">Содержание статьи не соответствует заголовку</option><option value="other_reason">Другая причина</option></select><input type="submit"></form></div></div>
+                          <div class="feedback" id="feedback"><div class="feedback-help"><span><b>Was this helpful?</b></span><form action="" method="POST" class="feedback-form" id="feedback-form"><div class="feedback__popup feedback__popup-response" id="feedback__popup_thx" style="display: none;">Thanks for your feedback!</div><div class="feedback__popup" id="feedback__popup_why" style="display: none;"><div class="feedback__popup-header">Please specify why:</div><input type="radio" name="category" id="bad_recommendation" value="bad_recommendation"><label for="bad_recommendation">Recommendations did not help me</label><input type="radio" name="category" id="difficult_text" value="difficult_text"><label for="difficult_text">Article is hard to understand</label><input type="radio" name="category" id="no_answer" value="no_answer"><label for="no_answer">Didn`t answer my question</label><input type="radio" name="category" id="bad_header" value="bad_header"><label for="bad_header">Content does not match the topic</label><input type="radio" name="category" id="other_reason" value="other_reason"><label for="other_reason">Other</label></div><div class="feedback__popup" id="feedback__popup-other" style="display: none;"><div class="feedback__popup-header">How we can improve it?</div><textarea class="feedback__textarea" name="other" id=""></textarea><input type="submit" class="feedback__other-btn" value="Submit"></div><div class="feedback-form__btn-group"><input type="radio" name="useful" id="feedback__useful_yes" value="true"><label for="feedback__useful_yes"><img src="like.svg" class="small-img" alt="like"><spanclass="feedback-form__btn-group_yes-btn">Yes</spanclass="feedback-form__btn-group_yes-btn"></label><input type="radio" name="useful" id="feedback__useful_no" value="false"><label for="feedback__useful_no"><img src="dislike.svg" class="small-img" alt="dislike"><spanclass="feedback-form__btn-group_no-btn">No</spanclass="feedback-form__btn-group_no-btn"></label></div><select name="category"><option disabled="">Please specify why</option><option value="bad_recommendation" selected="">Recommendations did not help me</option><option value="difficult_text">Article is hard to understand</option><option value="no_answer">Didn`t answer my question</option><option value="bad_header">Content does not match the topic</option><option value="other_reason">Other</option></select><input type="submit"></form></div><div class="found_typo"><p style="margin: 0px; margin-top: 16px !important;"><span><b>Found a typo?</b></span> Select it and press <i>Ctrl+Enter</i> to send us feedback</p></div></div>
                            
                     </section>
                 </div>
@@ -178,7 +171,7 @@
                     <input type="checkbox" />
                     <div class="article__arrow"></div>
                     <div class="table-of-contents elma365-right" id="toc2Content">
-                        <h3 class="h3-toc">В этой статье</h3>
+                        <h3 class="h3-toc">In this topic</h3>
                         <nav id="toc2"></nav>
                     </div>
                 </aside>
@@ -189,63 +182,30 @@
         <div class="footer-container">
   <div class="footer-mobile">
     
-      <ul class="footer-mobile__list"><li><a href="https://api.elma365.com/ru/" target="_blank">API</a></li><li><a href="https://tssdk.elma365.com/" target="_blank">TS SDK</a></li><li><a href="https://community.elma365.com/" target="_blank">Community</a></li><li><a href="https://elma-academy.com/ru/elma365" target="_blank">Академия</a></li></ul><ul class="footer-mobile__list"><li><a href="https://elma365.com/ru/help/platform/get-trial.html">Платформа</a></li><li><a href="https://elma365.com/ru/help/ecm/ecm-functions.html">ECM</a></li><li><a href="https://elma365.com/ru/help/service/service-functions.html">Service</a></li><li><a href="https://elma365.com/ru/help/projects/projects-functions.html">Проекты</a></li></ul>
+    <ul class="footer-mobile__list"><li><a href="https://brix365.com/en/" target="_blank">BRIX</a></li><li><a href="https://tssdk.brix365.com/en/latest/" target="_blank">SDK</a></li><li><a href="https://api.brix365.com/en/" target="_blank">API</a></li></ul><ul class="footer-mobile__list"><li><a href="https://brix365.com/en/help/platform/get-trial.html">Platform</a></li><li><a href="https://brix365.com/en/help/ecm/ecm-functions.html">ECM</a></li><li><a href="https://brix365.com/en/help/service/service-functions.html">Service</a></li><li><a href="https://brix365.com/en/help/projects/projects-functions.html">Projects</a></li></ul>
     
     
   </div>
-  <div class="container">
-    <div class="footer-wrap">
-      
-        <div><span class="mobile-question-popup">Отправить фидбэк</span><form method="POST" action class="question__popup question-xs" id="question__popup"><div class="question-wrap"><span class="close"></span><span class="title">Задать вопрос</span><label for="help_question" style="display: none;"></label><textarea name="help_question" id="help_question"></textarea><input type="submit" value="Отправить"></div></form><div class="hidden fade-in question-success-xs">Ваш фидбэк отправлен.</div></div>
-      
-      <div class="footer-flex-b">
-        <div class="footer-top">
-          <span class="footer-copy">&copy; 2025 
-              ELMA365
-            
-            
-          </span>
-          
-            <a href="https://navigator.sk.ru/orn/1122971" target="_blank">
-              <img src="sk-resident.svg" alt="sk icon" class="footer-img" width="117" height="34">
-            </a>
-            
-        </div>
-        <div class="footer-line">
-          
-            <div class="footer-line-copy">
-              <span class="footer-copy">&copy; 2025 
-                  ELMA365
-                
-                
-              </span>
-            </div>
-            
-              <ul class="footer-list">
-                
-                  <li class="footer-item"><a href="https://elma365.com/ru/" target="_blank" class="footer-link" style="color: #0D4A75;"><img src="browse.svg" alt="browse icon" class="footer-img">elma365.com</a></li><li class="footer-item"><a href="https://www.youtube.com/user/ELMABPM" target="_blank" class="footer-link"><img src="yt.svg" alt="youtube icon" class="footer-img"></a></li><li class="footer-item"><a href="https://vk.com/elma_bpm" target="_blank" class="footer-link"><img src="vk.svg" alt="vk icon" class="footer-img"></a></li><li class="footer-item"><a href="https://t.me/elmaday" target="_blank" class="footer-link"><img src="tg.svg" alt="telegram icon" class="footer-img"></a></li><li class="footer-item"><a href="https://dzen.ru/elma" target="_blank" class="footer-link"><img src="dzen.svg" alt="dzen icon" class="footer-img"></a></li>
-                
-                
-                  <li class="footer-item">
-                    <a href="https://navigator.sk.ru/orn/1122971" target="_blank">
-                      <img src="sk-resident.svg" alt="sk icon" class="footer-img" width="117" height="34">
-                    </a>
-                  </li>
-                
-                
-              </ul>
-        </div>
-      </div>
+  <div class="footer-wrap">
+    
+      <div><span class="mobile-question-popup">Send feedback</span><form method="POST" action class="question__popup question-xs" id="question__popup"><div class="question-wrap"><span class="close"></span><span class="title">Ask a question</span><label for="help_question" style="display: none;"></label><textarea name="help_question" id="help_question"></textarea><input type="submit" value="Send"></div></form><div class="hidden fade-in question-success-xs">Sent</div></div>
+    
+    <div class="footer-flex-b">
+      <span class="footer-copy">&copy; 2025 BRIX</span>
+      <ul class="footer-list">
+        
+        <li class="footer-item">
+            <a href="#" class="arrow-top" style="display: block;"></a>
+        </li>
+        
+      </ul>
     </div>
   </div>
-  <a href="#" class="arrow-top"></a>
 </div>
  
     </footer>
-<!--    <script type="text/javascript" src="jquery1.min.js"></script>-->
     <iframe name="hmnavigation" style="display:none!important"></iframe>
-    <!--<script src="./jquery-ui.js"></script> -->
-    <script src="./jquery-ui.min.js"></script>
+    <script src="./jquery-ui.js"></script>
     <!--script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script-->
     <script src="./jquery.tocify.min.js"></script>
     <script src="./TypoReporter.min.js"></script>
